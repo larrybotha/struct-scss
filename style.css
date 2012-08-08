@@ -35,8 +35,8 @@ custom.css and it will override the style in this file. You have been warned! :)
 
 
 /* =============================================================================
-   HTML5 display definitions
-   ========================================================================== */
+	 HTML5 display definitions
+	 ========================================================================== */
 
 article, aside, details, figcaption, figure, footer, header, hgroup, nav, section { display: block;}
 audio, canvas, video { display: inline-block; *display: inline; *zoom: 1;}
@@ -44,8 +44,8 @@ audio:not([controls]) { display: none;}
 [hidden] { display: none;}
 
 /* =============================================================================
-   &Base
-   ========================================================================== */
+	 &Base
+	 ========================================================================== */
 /*
  * 1. Correct text resizing oddly in IE6/7 when body font-size is set using em units
  * 2. Prevent iOS text size adjust on device orientation change, without disabling user zoom: h5bp.com/g
@@ -73,27 +73,27 @@ body { background: #FFF; font-size: 1em; line-height: 1.5; margin: 0;}
 
 
 /* =============================================================================
-   &Links
-   ========================================================================== */
+	 &Links
+	 ========================================================================== */
 
 a {
-  color: #00e;
-  text-decoration: none;
-  -webkit-transition: color 100ms ease-in;
-     -moz-transition: color 100ms ease-in;
-       -o-transition: color 100ms ease-in;
-      -ms-transition: color 100ms ease-in;
-          transition: color 100ms ease-in;
+	color: #00e;
+	text-decoration: none;
+	-webkit-transition: color 100ms ease-in;
+		 -moz-transition: color 100ms ease-in;
+			 -o-transition: color 100ms ease-in;
+			-ms-transition: color 100ms ease-in;
+					transition: color 100ms ease-in;
 }
 a:visited {}
 a:hover { color: #06e;}
 a:active {
-  color: #06e;
-  -webkit-transition: color 0s;
-     -moz-transition: color 0s;
-       -o-transition: color 0s;
-      -ms-transition: color 0s;
-          transition: color 0s;
+	color: #06e;
+	-webkit-transition: color 0s;
+		 -moz-transition: color 0s;
+			 -o-transition: color 0s;
+			-ms-transition: color 0s;
+					transition: color 0s;
 }
 a:focus { outline: thin dotted;}
 
@@ -102,8 +102,8 @@ a:hover, a:active { outline: 0;}
 
 
 /* =============================================================================
-   &Typography
-   ========================================================================== */
+	 &Typography
+	 ========================================================================== */
 p { hyphens: auto;}
 
 abbr[title] { border-bottom: 1px dotted;}
@@ -138,8 +138,8 @@ sub { bottom: -0.25em;}
 
 
 /* =============================================================================
-   &Lists
-   ========================================================================== */
+	 &Lists
+	 ========================================================================== */
 
 ul, ol { margin: 1em 0; padding: 0 0 0 40px;}
 dd { margin: 0 0 0 40px;}
@@ -147,8 +147,8 @@ nav ul, nav ol { list-style: none; list-style-image: none; margin: 0; padding: 0
 
 
 /* =============================================================================
-   &Embedded content
-   ========================================================================== */
+	 &Embedded content
+	 ========================================================================== */
 
 /*
  * 1. Improve image quality when scaled in IE7: h5bp.com/d
@@ -172,15 +172,15 @@ svg:not(:root) { overflow: hidden;}
 
 
 /* =============================================================================
-   &Figures
-   ========================================================================== */
+	 &Figures
+	 ========================================================================== */
 
 figure { margin: 0;}
 
 
 /* =============================================================================
-   &Forms
-   ========================================================================== */
+	 &Forms
+	 ========================================================================== */
 
 form { margin: 0;}
 fieldset { border: 0; margin: 0; padding: 0;}
@@ -248,45 +248,45 @@ input:valid, textarea:valid {  }
 input:invalid, textarea:invalid { background-color: #f0dddd;}
 
 ::-webkit-input-placeholder { color: #aaa;}
-          :-moz-placeholder { color: #aaa;}
-            :-o-placeholder { color: #aaa;}
-           :-ms-placeholder { color: #aaa;}
+					:-moz-placeholder { color: #aaa;}
+						:-o-placeholder { color: #aaa;}
+					 :-ms-placeholder { color: #aaa;}
 
 focus::-webkit-input-placeholder { color: #CCC;}
-          focus:-moz-placeholder { color: #CCC;}
-            focus:-o-placeholder { color: #CCC;}
-           focus:-ms-placeholder { color: #CCC;}
+					focus:-moz-placeholder { color: #CCC;}
+						focus:-o-placeholder { color: #CCC;}
+					 focus:-ms-placeholder { color: #CCC;}
 
 
 /* =============================================================================
-   &Tables
-   ========================================================================== */
+	 &Tables
+	 ========================================================================== */
 
 table { border-collapse: collapse; border-spacing: 0;}
 td { vertical-align: top;}
 
 
 /* =============================================================================
-   &Chrome Frame Prompt
-   ========================================================================== */
+	 &Chrome Frame Prompt
+	 ========================================================================== */
 
 .chromeframe { margin: 0.2em 0; background: #ccc; color: black; padding: 0.2em 0; }
 
 
 /* =============================================================================
-   &Fonts
-   ========================================================================== */
+	 &Fonts
+	 ========================================================================== */
 @font-face {
-  font-family: "FontAwesome";
-  src: url('font/fontawesome-webfont.eot');
-  src: url('font/fontawesome-webfont.eot?#iefix') format('eot'), url('font/fontawesome-webfont.woff') format('woff'), url('font/fontawesome-webfont.ttf') format('truetype'), url('font/fontawesome-webfont.svg#FontAwesome') format('svg');
-  font-weight: normal;
-  font-style: normal;
+	font-family: "FontAwesome";
+	src: url('font/fontawesome-webfont.eot');
+	src: url('font/fontawesome-webfont.eot?#iefix') format('eot'), url('font/fontawesome-webfont.woff') format('woff'), url('font/fontawesome-webfont.ttf') format('truetype'), url('font/fontawesome-webfont.svg#FontAwesome') format('svg');
+	font-weight: normal;
+	font-style: normal;
 }
 
 /* =============================================================================
-   &Font Sizes - http://mopo.ws/wxg6jV
-   ========================================================================== */
+	 &Font Sizes - http://mopo.ws/wxg6jV
+	 ========================================================================== */
 
 /* 
  * The following styles ensure that font sizes can be reused in markup
@@ -332,88 +332,88 @@ small, .fs-milli { font-size:12px; font-size:0.75rem; /* 12px */ line-height:2; 
 
 
 /* ==|== &colours ========================================================
-  
-   colour    #######
+	
+	 colour    #######
 
-   ========================================================================== */
+	 ========================================================================== */
 
 
 /* ==|== primary styles ========================================================
-  
-  1. SITE STRUCTURE & APPEARANCE
-    1.a Containers & Columns
-    1.b Header
-    1.c Navigation
-    1.d Content
-      1.d.i General Typography
-      1.d.ii Headers
-      1.d.iii Icons
-      1.d.iv Labels
-      1.d.v Alerts
-      1.d.vi Progress Bars
-      1.d.vii Drag and Drop
-    1.e Sidebar
-    1.f Footer
+	
+	1. SITE STRUCTURE & APPEARANCE
+		1.a Containers & Columns
+		1.b Header
+		1.c Navigation
+		1.d Content
+			1.d.i General Typography
+			1.d.ii Headers
+			1.d.iii Icons
+			1.d.iv Labels
+			1.d.v Alerts
+			1.d.vi Progress Bars
+			1.d.vii Drag and Drop
+		1.e Sidebar
+		1.f Footer
 
-  2. POSTS
-    2.a Images
-      2.a.i Wordpress Gallery
-    2.b Pagination
-    2.c Info boxes
+	2. POSTS
+		2.a Images
+			2.a.i Wordpress Gallery
+		2.b Pagination
+		2.c Info boxes
 
-  3. INTERACTION
-    3.a Forms
-    3.b Buttons
-    3.c Wysiwyg
-    
-  4. PAGE SPECIFIC STYLES
-    4.a ...
+	3. INTERACTION
+		3.a Forms
+		3.b Buttons
+		3.c Wysiwyg
+		
+	4. PAGE SPECIFIC STYLES
+		4.a ...
 
-  5. WIDGETS
-    5.a Generic Widgets
-    5.b Specific Widgets
-      5.b.i Widget ...
+	5. WIDGETS
+		5.a Generic Widgets
+		5.b Specific Widgets
+			5.b.i Widget ...
 
-  6. COMMENTS
-    6.a Comments
-    6.b Pingbacks / Trackbacks
-    6.c Comment Form
+	6. COMMENTS
+		6.a Comments
+		6.b Pingbacks / Trackbacks
+		6.c Comment Form
 
-  7. ANIMATIONS
+	7. ANIMATIONS
 
-    GRID AND MEDIA QUERIES
+		GRID AND MEDIA QUERIES
 
-   ========================================================================== */
+	 ========================================================================== */
 
 /* *****************************************************************************
-   1. &SITE STRUCTURE & APPEARANCE
-   ************************************************************************** */
+	 1. &SITE STRUCTURE & APPEARANCE
+	 ************************************************************************** */
 /* =============================================================================
-   1.a &Containers & Columns
-   ========================================================================== */
+	 1.a &Containers & Columns
+	 ========================================================================== */
 
 /* used to set max width of content areas */
 .wrap {
-  margin: 0;
-  padding: 0 1em;
+	margin: 0;
+	padding: 0 1em;
 }
-   
+	 
 /* =============================================================================
-   1.b &Header
-   ========================================================================== */
+	 1.b &Header
+	 ========================================================================== */
 
 
 /* =============================================================================
-   1.c &Navigation
-   ========================================================================== */
+	 1.c &Navigation
+	 ========================================================================== */
 
 /*
  * Nav abstraction - use classes specific to particular nav
  * to differentiate - http://mopo.ws/zadlrO
  */
 .menu {
-  list-style: none;
-  margin-left: 0;
+	list-style: none;
+	margin-left: 0;
 }
 
 .menu > .menu-item { display: inline;}
@@ -423,13 +423,13 @@ small, .fs-milli { font-size:12px; font-size:0.75rem; /* 12px */ line-height:2; 
 
 
 /* =============================================================================
-   1.d &Content
-   ========================================================================== */
+	 1.d &Content
+	 ========================================================================== */
 
 
 /* -----------------------------------------------------------------------------
-   1.d.i General &Typography
-   -------------------------------------------------------------------------- */
+	 1.d.i General &Typography
+	 -------------------------------------------------------------------------- */
 p.error, span.error { color: #CC3333;}
 
 .va-t { vertical-align: top;}
@@ -443,74 +443,74 @@ p.error, span.error { color: #CC3333;}
 
 
 /* -----------------------------------------------------------------------------
-   1.d.ii &Headers
-   -------------------------------------------------------------------------- */
+	 1.d.ii &Headers
+	 -------------------------------------------------------------------------- */
 
 
 /* -----------------------------------------------------------------------------
-   1.d.iii &Icons
-   -------------------------------------------------------------------------- */
+	 1.d.iii &Icons
+	 -------------------------------------------------------------------------- */
 /*  Font Awesome styles
-    ------------------------------------------------------- */
+		------------------------------------------------------- */
 .icon:before, .icon:before {
-  font-family: FontAwesome;
-  font-weight: normal;
-  font-style: normal;
-  display: inline-block;
-  text-decoration: inherit;
+	font-family: FontAwesome;
+	font-weight: normal;
+	font-style: normal;
+	display: inline-block;
+	text-decoration: inherit;
 }
 a .icon, a .icon {
-  display: inline-block;
-  text-decoration: inherit;
+	display: inline-block;
+	text-decoration: inherit;
 }
 /* makes the font 33% larger relative to the icon container */
 .icon-large:before {
-  vertical-align: top;
-  font-size: 1.3333333333333333em;
+	vertical-align: top;
+	font-size: 1.3333333333333333em;
 }
 .btn .icon, .btn .icon {
-  /* keeps button heights with and without icons the same */
-  line-height: .9;
+	/* keeps button heights with and without icons the same */
+	line-height: .9;
 }
 li .icon, li .icon {
-  display: inline-block;
-  width: 1.25em;
-  text-align: center;
+	display: inline-block;
+	width: 1.25em;
+	text-align: center;
 }
 li .icon-large[class^="icon-"], li .icon-large[class*=" icon-"] {
-  /* 1.5 increased font size for icon-large * 1.25 width */
+	/* 1.5 increased font size for icon-large * 1.25 width */
 
-  width: 1.875em;
+	width: 1.875em;
 }
 li.icon, li.icon {
-  margin-left: 0;
-  list-style-type: none;
+	margin-left: 0;
+	list-style-type: none;
 }
 li.icon:before, li.icon:before {
-  text-indent: -2em;
-  text-align: center;
+	text-indent: -2em;
+	text-align: center;
 }
 li.icon.icon-large:before, li.icon.icon-large:before {
-  text-indent: -1.3333333333333333em;
+	text-indent: -1.3333333333333333em;
 }
 
 .icon-anim {
-  -webkit-transform-origin: 50% 42%;
-     -moz-transform-origin: 50% 42%;
-       -o-transform-origin: 50% 42%;
-      -ms-transform-origin: 50% 42%;
-          transform-origin: 50% 42%;
+	-webkit-transform-origin: 50% 42%;
+		 -moz-transform-origin: 50% 42%;
+			 -o-transform-origin: 50% 42%;
+			-ms-transform-origin: 50% 42%;
+					transform-origin: 50% 42%;
 }
 
 .icon-anim-rotate {
-  -webkit-animation: rotate 1s infinite linear;
-  -moz-animation: rotate 1s infinite linear;
-  -o-animation: rotate 1s infinite linear;
-  -ms-animation: rotate 1s infinite linear;
+	-webkit-animation: rotate 1s infinite linear;
+	-moz-animation: rotate 1s infinite linear;
+	-o-animation: rotate 1s infinite linear;
+	-ms-animation: rotate 1s infinite linear;
 }
 
 /*  Font Awesome uses the Unicode Private Use Area (PUA) to ensure screen
-    readers do not read off random characters that represent icons */
+		readers do not read off random characters that represent icons */
 .icon-glass:before                { content: "\f000"; }
 .icon-music:before                { content: "\f001"; }
 .icon-search:before               { content: "\f002"; }
@@ -739,26 +739,26 @@ li.icon.icon-large:before, li.icon.icon-large:before {
 .icon-user-md:before              { content: "\f200"; }
 
 /* -----------------------------------------------------------------------------
-   1.d.iv &Labels
-   -------------------------------------------------------------------------- */
+	 1.d.iv &Labels
+	 -------------------------------------------------------------------------- */
 
 .label {
-  color: #ffffff;
-  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
-  white-space: nowrap;
-  vertical-align: baseline;
-  background-color: #999999;
+	color: #ffffff;
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+	white-space: nowrap;
+	vertical-align: baseline;
+	background-color: #999999;
 
-  padding: 1px 4px 2px;
-  -webkit-border-radius: 3px;
-     -moz-border-radius: 3px;
-          border-radius: 3px;
+	padding: 1px 4px 2px;
+	-webkit-border-radius: 3px;
+		 -moz-border-radius: 3px;
+					border-radius: 3px;
 }
 
 a.label:hover {
-  color: #ffffff;
-  text-decoration: none;
-  cursor: pointer;
+	color: #ffffff;
+	text-decoration: none;
+	cursor: pointer;
 }
 
 .label-important { background-color: #b94a48;}
@@ -773,361 +773,372 @@ a.label:hover {
 .label-inverse[href] { background-color: #1a1a1a;}
 
 /* -----------------------------------------------------------------------------
-   1.d.v &Alerts
-   -------------------------------------------------------------------------- */
+	 1.d.v &Alerts
+	 -------------------------------------------------------------------------- */
 .alert {
-  padding: 8px 35px 8px 14px;
-  margin-bottom: 18px;
-  color: #c09853;
-  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
-  background-color: #fcf8e3;
-  border: 1px solid #fbeed5;
-  -webkit-border-radius: 4px;
-     -moz-border-radius: 4px;
-          border-radius: 4px;
+	padding: 8px 35px 8px 14px;
+	margin-bottom: 18px;
+	color: #c09853;
+	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+	background-color: #fcf8e3;
+	border: 1px solid #fbeed5;
+	-webkit-border-radius: 4px;
+		 -moz-border-radius: 4px;
+					border-radius: 4px;
 }
 
 .alert-heading {
-  color: inherit;
+	color: inherit;
 }
 
+.alert a { 
+	color: inherit;
+	border-bottom: 1px dotted #c09853;
+}
+
+.alert a:hover { border-bottom-style: solid;}
+
 .alert .close {
-  position: relative;
-  top: -2px;
-  right: -21px;
-  line-height: 18px;
+	position: relative;
+	top: -2px;
+	right: -21px;
+	line-height: 18px;
 }
 
 .alert-success {
-  color: #468847;
-  background-color: #dff0d8;
-  border-color: #d6e9c6;
+	color: #468847;
+	background-color: #dff0d8;
+	border-color: #d6e9c6;
 }
+.alert-success a { border-color: #468847;}
 
 .alert-danger,
 .alert-error {
-  color: #b94a48;
-  background-color: #f2dede;
-  border-color: #eed3d7;
+	color: #b94a48;
+	background-color: #f2dede;
+	border-color: #eed3d7;
 }
+.alert-danger a,
+.alert-error a { border-color: #b94a48;}
 
 .alert-info {
-  color: #3a87ad;
-  background-color: #d9edf7;
-  border-color: #bce8f1;
+	color: #3a87ad;
+	background-color: #d9edf7;
+	border-color: #bce8f1;
 }
+.alert-info a { border-color: #3a87ad;}
 
 .alert-block {
-  padding-top: 14px;
-  padding-bottom: 14px;
+	padding-top: 14px;
+	padding-bottom: 14px;
 }
 
 .alert-block > p,
 .alert-block > ul {
-  margin-bottom: 0;
+	margin-bottom: 0;
 }
 
 .alert-block p + p {
-  margin-top: 5px;
+	margin-top: 5px;
 }
 
 .alert .close {
-  position: relative;
-  top: -2px;
-  right: -21px;
-  line-height: 18px;
+	position: relative;
+	top: -2px;
+	right: -21px;
+	line-height: 18px;
 }
 
 button.close {
-  padding: 0;
-  cursor: pointer;
-  background: transparent;
-  border: 0;
-  -webkit-appearance: none;
+	padding: 0;
+	cursor: pointer;
+	background: transparent;
+	border: 0;
+	-webkit-appearance: none;
 }
 
 .close {
-  float: right;
-  font-size: 20px;
-  font-weight: bold;
-  line-height: 18px;
-  color: #000000;
-  text-shadow: 0 1px 0 #ffffff;
-  opacity: 0.2;
-  filter: alpha(opacity=20);
+	float: right;
+	font-size: 20px;
+	font-weight: bold;
+	line-height: 18px;
+	color: #000000;
+	text-shadow: 0 1px 0 #ffffff;
+	opacity: 0.2;
+	filter: alpha(opacity=20);
 }
 
 /* -----------------------------------------------------------------------------
-   1.d.vi &Progress Bars
-   -------------------------------------------------------------------------- */
+	 1.d.vi &Progress Bars
+	 -------------------------------------------------------------------------- */
 .progress {
-  height: 18px;
-  margin-bottom: 18px;
-  overflow: hidden;
-  background-color: #f7f7f7;
-  background-image: -moz-linear-gradient(top, #f5f5f5, #f9f9f9);
-  background-image: -ms-linear-gradient(top, #f5f5f5, #f9f9f9);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#f5f5f5), to(#f9f9f9));
-  background-image: -webkit-linear-gradient(top, #f5f5f5, #f9f9f9);
-  background-image: -o-linear-gradient(top, #f5f5f5, #f9f9f9);
-  background-image: linear-gradient(top, #f5f5f5, #f9f9f9);
-  background-repeat: repeat-x;
-  -webkit-border-radius: 4px;
-     -moz-border-radius: 4px;
-          border-radius: 4px;
-  filter: progid:dximagetransform.microsoft.gradient(startColorstr='#f5f5f5', endColorstr='#f9f9f9', GradientType=0);
-  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
-     -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
-          box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+	height: 18px;
+	margin-bottom: 18px;
+	overflow: hidden;
+	background-color: #f7f7f7;
+	background-image: -moz-linear-gradient(top, #f5f5f5, #f9f9f9);
+	background-image: -ms-linear-gradient(top, #f5f5f5, #f9f9f9);
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#f5f5f5), to(#f9f9f9));
+	background-image: -webkit-linear-gradient(top, #f5f5f5, #f9f9f9);
+	background-image: -o-linear-gradient(top, #f5f5f5, #f9f9f9);
+	background-image: linear-gradient(top, #f5f5f5, #f9f9f9);
+	background-repeat: repeat-x;
+	-webkit-border-radius: 4px;
+		 -moz-border-radius: 4px;
+					border-radius: 4px;
+	filter: progid:dximagetransform.microsoft.gradient(startColorstr='#f5f5f5', endColorstr='#f9f9f9', GradientType=0);
+	-webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+		 -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+					box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 .progress .bar {
-  width: 0;
-  height: 18px;
-  font-size: 12px;
-  color: #ffffff;
-  text-align: center;
-  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
-  background-color: #0e90d2;
-  background-image: -moz-linear-gradient(top, #149bdf, #0480be);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#149bdf), to(#0480be));
-  background-image: -webkit-linear-gradient(top, #149bdf, #0480be);
-  background-image: -o-linear-gradient(top, #149bdf, #0480be);
-  background-image: linear-gradient(top, #149bdf, #0480be);
-  background-image: -ms-linear-gradient(top, #149bdf, #0480be);
-  background-repeat: repeat-x;
-  filter: progid:dximagetransform.microsoft.gradient(startColorstr='#149bdf', endColorstr='#0480be', GradientType=0);
-  -webkit-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
-     -moz-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
-          box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
-  -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
-      -ms-box-sizing: border-box;
-          box-sizing: border-box;
-  -webkit-transition: width 0.6s ease;
-     -moz-transition: width 0.6s ease;
-      -ms-transition: width 0.6s ease;
-       -o-transition: width 0.6s ease;
-          transition: width 0.6s ease;
+	width: 0;
+	height: 18px;
+	font-size: 12px;
+	color: #ffffff;
+	text-align: center;
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+	background-color: #0e90d2;
+	background-image: -moz-linear-gradient(top, #149bdf, #0480be);
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#149bdf), to(#0480be));
+	background-image: -webkit-linear-gradient(top, #149bdf, #0480be);
+	background-image: -o-linear-gradient(top, #149bdf, #0480be);
+	background-image: linear-gradient(top, #149bdf, #0480be);
+	background-image: -ms-linear-gradient(top, #149bdf, #0480be);
+	background-repeat: repeat-x;
+	filter: progid:dximagetransform.microsoft.gradient(startColorstr='#149bdf', endColorstr='#0480be', GradientType=0);
+	-webkit-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
+		 -moz-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
+					box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
+	-webkit-box-sizing: border-box;
+		 -moz-box-sizing: border-box;
+			-ms-box-sizing: border-box;
+					box-sizing: border-box;
+	-webkit-transition: width 0.6s ease;
+		 -moz-transition: width 0.6s ease;
+			-ms-transition: width 0.6s ease;
+			 -o-transition: width 0.6s ease;
+					transition: width 0.6s ease;
 }
 
 .progress-striped .bar {
-  background-color: #149bdf;
-  background-image: -o-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
-  background-image: -webkit-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
-  background-image: -moz-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
-  background-image: -ms-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
-  background-image: -webkit-gradient(linear, 0 100%, 100% 0, color-stop(0.25, rgba(255, 255, 255, 0.15)), color-stop(0.25, transparent), color-stop(0.5, transparent), color-stop(0.5, rgba(255, 255, 255, 0.15)), color-stop(0.75, rgba(255, 255, 255, 0.15)), color-stop(0.75, transparent), to(transparent));
-  background-image: linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
-  -webkit-background-size: 40px 40px;
-     -moz-background-size: 40px 40px;
-       -o-background-size: 40px 40px;
-          background-size: 40px 40px;
+	background-color: #149bdf;
+	background-image: -o-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+	background-image: -webkit-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+	background-image: -moz-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+	background-image: -ms-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+	background-image: -webkit-gradient(linear, 0 100%, 100% 0, color-stop(0.25, rgba(255, 255, 255, 0.15)), color-stop(0.25, transparent), color-stop(0.5, transparent), color-stop(0.5, rgba(255, 255, 255, 0.15)), color-stop(0.75, rgba(255, 255, 255, 0.15)), color-stop(0.75, transparent), to(transparent));
+	background-image: linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+	-webkit-background-size: 40px 40px;
+		 -moz-background-size: 40px 40px;
+			 -o-background-size: 40px 40px;
+					background-size: 40px 40px;
 }
 
 .progress.active .bar {
-  -webkit-animation: progress-bar-stripes 2s linear infinite;
-     -moz-animation: progress-bar-stripes 2s linear infinite;
-      -ms-animation: progress-bar-stripes 2s linear infinite;
-       -o-animation: progress-bar-stripes 2s linear infinite;
-          animation: progress-bar-stripes 2s linear infinite;
+	-webkit-animation: progress-bar-stripes 2s linear infinite;
+		 -moz-animation: progress-bar-stripes 2s linear infinite;
+			-ms-animation: progress-bar-stripes 2s linear infinite;
+			 -o-animation: progress-bar-stripes 2s linear infinite;
+					animation: progress-bar-stripes 2s linear infinite;
 }
 
 .progress-danger .bar {
-  background-color: #dd514c;
-  background-image: -moz-linear-gradient(top, #ee5f5b, #c43c35);
-  background-image: -ms-linear-gradient(top, #ee5f5b, #c43c35);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ee5f5b), to(#c43c35));
-  background-image: -webkit-linear-gradient(top, #ee5f5b, #c43c35);
-  background-image: -o-linear-gradient(top, #ee5f5b, #c43c35);
-  background-image: linear-gradient(top, #ee5f5b, #c43c35);
-  background-repeat: repeat-x;
-  filter: progid:dximagetransform.microsoft.gradient(startColorstr='#ee5f5b', endColorstr='#c43c35', GradientType=0);
+	background-color: #dd514c;
+	background-image: -moz-linear-gradient(top, #ee5f5b, #c43c35);
+	background-image: -ms-linear-gradient(top, #ee5f5b, #c43c35);
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ee5f5b), to(#c43c35));
+	background-image: -webkit-linear-gradient(top, #ee5f5b, #c43c35);
+	background-image: -o-linear-gradient(top, #ee5f5b, #c43c35);
+	background-image: linear-gradient(top, #ee5f5b, #c43c35);
+	background-repeat: repeat-x;
+	filter: progid:dximagetransform.microsoft.gradient(startColorstr='#ee5f5b', endColorstr='#c43c35', GradientType=0);
 }
 
 .progress-danger.progress-striped .bar {
-  background-color: #ee5f5b;
-  background-image: -webkit-gradient(linear, 0 100%, 100% 0, color-stop(0.25, rgba(255, 255, 255, 0.15)), color-stop(0.25, transparent), color-stop(0.5, transparent), color-stop(0.5, rgba(255, 255, 255, 0.15)), color-stop(0.75, rgba(255, 255, 255, 0.15)), color-stop(0.75, transparent), to(transparent));
-  background-image: -webkit-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
-  background-image: -moz-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
-  background-image: -ms-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
-  background-image: -o-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
-  background-image: linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+	background-color: #ee5f5b;
+	background-image: -webkit-gradient(linear, 0 100%, 100% 0, color-stop(0.25, rgba(255, 255, 255, 0.15)), color-stop(0.25, transparent), color-stop(0.5, transparent), color-stop(0.5, rgba(255, 255, 255, 0.15)), color-stop(0.75, rgba(255, 255, 255, 0.15)), color-stop(0.75, transparent), to(transparent));
+	background-image: -webkit-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+	background-image: -moz-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+	background-image: -ms-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+	background-image: -o-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+	background-image: linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
 }
 
 .progress-success .bar {
-  background-color: #5eb95e;
-  background-image: -moz-linear-gradient(top, #62c462, #57a957);
-  background-image: -ms-linear-gradient(top, #62c462, #57a957);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#62c462), to(#57a957));
-  background-image: -webkit-linear-gradient(top, #62c462, #57a957);
-  background-image: -o-linear-gradient(top, #62c462, #57a957);
-  background-image: linear-gradient(top, #62c462, #57a957);
-  background-repeat: repeat-x;
-  filter: progid:dximagetransform.microsoft.gradient(startColorstr='#62c462', endColorstr='#57a957', GradientType=0);
+	background-color: #5eb95e;
+	background-image: -moz-linear-gradient(top, #62c462, #57a957);
+	background-image: -ms-linear-gradient(top, #62c462, #57a957);
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#62c462), to(#57a957));
+	background-image: -webkit-linear-gradient(top, #62c462, #57a957);
+	background-image: -o-linear-gradient(top, #62c462, #57a957);
+	background-image: linear-gradient(top, #62c462, #57a957);
+	background-repeat: repeat-x;
+	filter: progid:dximagetransform.microsoft.gradient(startColorstr='#62c462', endColorstr='#57a957', GradientType=0);
 }
 
 .progress-success.progress-striped .bar {
-  background-color: #62c462;
-  background-image: -webkit-gradient(linear, 0 100%, 100% 0, color-stop(0.25, rgba(255, 255, 255, 0.15)), color-stop(0.25, transparent), color-stop(0.5, transparent), color-stop(0.5, rgba(255, 255, 255, 0.15)), color-stop(0.75, rgba(255, 255, 255, 0.15)), color-stop(0.75, transparent), to(transparent));
-  background-image: -webkit-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
-  background-image: -moz-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
-  background-image: -ms-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
-  background-image: -o-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
-  background-image: linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+	background-color: #62c462;
+	background-image: -webkit-gradient(linear, 0 100%, 100% 0, color-stop(0.25, rgba(255, 255, 255, 0.15)), color-stop(0.25, transparent), color-stop(0.5, transparent), color-stop(0.5, rgba(255, 255, 255, 0.15)), color-stop(0.75, rgba(255, 255, 255, 0.15)), color-stop(0.75, transparent), to(transparent));
+	background-image: -webkit-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+	background-image: -moz-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+	background-image: -ms-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+	background-image: -o-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+	background-image: linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
 }
 
 .progress-info .bar {
-  background-color: #4bb1cf;
-  background-image: -moz-linear-gradient(top, #5bc0de, #339bb9);
-  background-image: -ms-linear-gradient(top, #5bc0de, #339bb9);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#5bc0de), to(#339bb9));
-  background-image: -webkit-linear-gradient(top, #5bc0de, #339bb9);
-  background-image: -o-linear-gradient(top, #5bc0de, #339bb9);
-  background-image: linear-gradient(top, #5bc0de, #339bb9);
-  background-repeat: repeat-x;
-  filter: progid:dximagetransform.microsoft.gradient(startColorstr='#5bc0de', endColorstr='#339bb9', GradientType=0);
+	background-color: #4bb1cf;
+	background-image: -moz-linear-gradient(top, #5bc0de, #339bb9);
+	background-image: -ms-linear-gradient(top, #5bc0de, #339bb9);
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#5bc0de), to(#339bb9));
+	background-image: -webkit-linear-gradient(top, #5bc0de, #339bb9);
+	background-image: -o-linear-gradient(top, #5bc0de, #339bb9);
+	background-image: linear-gradient(top, #5bc0de, #339bb9);
+	background-repeat: repeat-x;
+	filter: progid:dximagetransform.microsoft.gradient(startColorstr='#5bc0de', endColorstr='#339bb9', GradientType=0);
 }
 
 .progress-info.progress-striped .bar {
-  background-color: #5bc0de;
-  background-image: -webkit-gradient(linear, 0 100%, 100% 0, color-stop(0.25, rgba(255, 255, 255, 0.15)), color-stop(0.25, transparent), color-stop(0.5, transparent), color-stop(0.5, rgba(255, 255, 255, 0.15)), color-stop(0.75, rgba(255, 255, 255, 0.15)), color-stop(0.75, transparent), to(transparent));
-  background-image: -webkit-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
-  background-image: -moz-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
-  background-image: -ms-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
-  background-image: -o-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
-  background-image: linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+	background-color: #5bc0de;
+	background-image: -webkit-gradient(linear, 0 100%, 100% 0, color-stop(0.25, rgba(255, 255, 255, 0.15)), color-stop(0.25, transparent), color-stop(0.5, transparent), color-stop(0.5, rgba(255, 255, 255, 0.15)), color-stop(0.75, rgba(255, 255, 255, 0.15)), color-stop(0.75, transparent), to(transparent));
+	background-image: -webkit-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+	background-image: -moz-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+	background-image: -ms-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+	background-image: -o-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+	background-image: linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
 }
 
 .progress-warning .bar {
-  background-color: #faa732;
-  background-image: -moz-linear-gradient(top, #fbb450, #f89406);
-  background-image: -ms-linear-gradient(top, #fbb450, #f89406);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#fbb450), to(#f89406));
-  background-image: -webkit-linear-gradient(top, #fbb450, #f89406);
-  background-image: -o-linear-gradient(top, #fbb450, #f89406);
-  background-image: linear-gradient(top, #fbb450, #f89406);
-  background-repeat: repeat-x;
-  filter: progid:dximagetransform.microsoft.gradient(startColorstr='#fbb450', endColorstr='#f89406', GradientType=0);
+	background-color: #faa732;
+	background-image: -moz-linear-gradient(top, #fbb450, #f89406);
+	background-image: -ms-linear-gradient(top, #fbb450, #f89406);
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#fbb450), to(#f89406));
+	background-image: -webkit-linear-gradient(top, #fbb450, #f89406);
+	background-image: -o-linear-gradient(top, #fbb450, #f89406);
+	background-image: linear-gradient(top, #fbb450, #f89406);
+	background-repeat: repeat-x;
+	filter: progid:dximagetransform.microsoft.gradient(startColorstr='#fbb450', endColorstr='#f89406', GradientType=0);
 }
 
 .progress-warning.progress-striped .bar {
-  background-color: #fbb450;
-  background-image: -webkit-gradient(linear, 0 100%, 100% 0, color-stop(0.25, rgba(255, 255, 255, 0.15)), color-stop(0.25, transparent), color-stop(0.5, transparent), color-stop(0.5, rgba(255, 255, 255, 0.15)), color-stop(0.75, rgba(255, 255, 255, 0.15)), color-stop(0.75, transparent), to(transparent));
-  background-image: -webkit-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
-  background-image: -moz-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
-  background-image: -ms-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
-  background-image: -o-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
-  background-image: linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+	background-color: #fbb450;
+	background-image: -webkit-gradient(linear, 0 100%, 100% 0, color-stop(0.25, rgba(255, 255, 255, 0.15)), color-stop(0.25, transparent), color-stop(0.5, transparent), color-stop(0.5, rgba(255, 255, 255, 0.15)), color-stop(0.75, rgba(255, 255, 255, 0.15)), color-stop(0.75, transparent), to(transparent));
+	background-image: -webkit-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+	background-image: -moz-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+	background-image: -ms-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+	background-image: -o-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+	background-image: linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
 }
 
 @-webkit-keyframes progress-bar-stripes {
-  from {
-    background-position: 40px 0;
-  }
-  to {
-    background-position: 0 0;
-  }
+	from {
+		background-position: 40px 0;
+	}
+	to {
+		background-position: 0 0;
+	}
 }
 
 @-moz-keyframes progress-bar-stripes {
-  from {
-    background-position: 40px 0;
-  }
-  to {
-    background-position: 0 0;
-  }
+	from {
+		background-position: 40px 0;
+	}
+	to {
+		background-position: 0 0;
+	}
 }
 
 @-ms-keyframes progress-bar-stripes {
-  from {
-    background-position: 40px 0;
-  }
-  to {
-    background-position: 0 0;
-  }
+	from {
+		background-position: 40px 0;
+	}
+	to {
+		background-position: 0 0;
+	}
 }
 
 @-o-keyframes progress-bar-stripes {
-  from {
-    background-position: 0 0;
-  }
-  to {
-    background-position: 40px 0;
-  }
+	from {
+		background-position: 0 0;
+	}
+	to {
+		background-position: 40px 0;
+	}
 }
 
 @keyframes progress-bar-stripes {
-  from {
-    background-position: 40px 0;
-  }
-  to {
-    background-position: 0 0;
-  }
+	from {
+		background-position: 40px 0;
+	}
+	to {
+		background-position: 0 0;
+	}
 }
 
 /* -----------------------------------------------------------------------------
-   1.d.vii &Drag and Drop
-   -------------------------------------------------------------------------- */
+	 1.d.vii &Drag and Drop
+	 -------------------------------------------------------------------------- */
 .files-drag-tip {
-  -moz-border-radius: 5px;
-  -webkit-border-radius: 5px;
-  -o-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -khtml-border-radius: 5px;
-  border-radius: 5px;
-  font-size: 11px;
-  font-size: 1.1rem;
-  /*display: none;*/
-  margin: 0 0 0 10px;
-  padding: 6px 10px 1px 10px;
-  min-height: 20px;
-  color: #999;
-  background-color: #F6F6F6;
-  min-width: 190px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-o-border-radius: 5px;
+	-ms-border-radius: 5px;
+	-khtml-border-radius: 5px;
+	border-radius: 5px;
+	font-size: 11px;
+	font-size: 1.1rem;
+	/*display: none;*/
+	margin: 0 0 0 10px;
+	padding: 6px 10px 1px 10px;
+	min-height: 20px;
+	color: #999;
+	background-color: #F6F6F6;
+	min-width: 190px;
 }
 
 /* =============================================================================
-   1.e &Sidebar
-   ========================================================================== */
+	 1.e &Sidebar
+	 ========================================================================== */
 
 
 /* =============================================================================
-   1.f &Footer
-   ========================================================================== */
+	 1.f &Footer
+	 ========================================================================== */
 
 
 /* *****************************************************************************
-   2. &POSTS
-   ************************************************************************** */
+	 2. &POSTS
+	 ************************************************************************** */
 /* =============================================================================
-   2.a &Images
-   ========================================================================== */
+	 2.a &Images
+	 ========================================================================== */
 
 
 /* -----------------------------------------------------------------------------
-   2.a.i Wordpress &Gallery
-   -------------------------------------------------------------------------- */
+	 2.a.i Wordpress &Gallery
+	 -------------------------------------------------------------------------- */
 
 /*
  * 3 column gallery example
  *
-  <div class="gallery gallery-columns-3 ">
-    <dl class="gallery-item">
-      <dt class="gallery-icon">
-        <a href=""><img /></a>
-      </dt>
-      <dd class="wp-caption-text gallery-caption">
-        <h3><a href="#">caption</a></h3>
-      </dd>
-    </dl>
-    <br style="clear: both"><!-- displayed after every 3 items in gallery -->
-  </div>
+	<div class="gallery gallery-columns-3 ">
+		<dl class="gallery-item">
+			<dt class="gallery-icon">
+				<a href=""><img /></a>
+			</dt>
+			<dd class="wp-caption-text gallery-caption">
+				<h3><a href="#">caption</a></h3>
+			</dd>
+		</dl>
+		<br style="clear: both"><!-- displayed after every 3 items in gallery -->
+	</div>
 */
 .gallery {
-  margin: 0 auto;
-  margin-bottom: 32px;
-  margin-bottom: 2rem;
+	margin: 0 auto;
+	margin-bottom: 32px;
+	margin-bottom: 2rem;
 }
 
 .gallery-columns-1 > .gallery-item { width: 100%;}
@@ -1142,183 +1153,183 @@ button.close {
 .ie7 .gallery-columns-5 > .gallery-item { width: 15%;}
 
 .gallery-item { 
-  border: 1px solid #E3E2E2;
-  float: left;
-  margin: 0 .5% 1.2%;
-  padding: 16px;
-  padding: 1rem;
+	border: 1px solid #E3E2E2;
+	float: left;
+	margin: 0 .5% 1.2%;
+	padding: 16px;
+	padding: 1rem;
 }
 
 /*.gallery-icon {}*/
 
 .gallery-caption {
-  font-family: Quattro, Verdana, sans-serif;
-  font-size: 14px; 
-  font-size: .875rem; /* 14px / 16 = .875 */ 
-  margin: 16px 0;
-  margin: 1rem 0;
-  text-transform: uppercase;
+	font-family: Quattro, Verdana, sans-serif;
+	font-size: 14px; 
+	font-size: .875rem; /* 14px / 16 = .875 */ 
+	margin: 16px 0;
+	margin: 1rem 0;
+	text-transform: uppercase;
 }
 
 /* =============================================================================
-   2.b &Pagination
-   ========================================================================== */
+	 2.b &Pagination
+	 ========================================================================== */
 
 
 /* =============================================================================
-   2.c Info boxes
-   ========================================================================== */
+	 2.c Info boxes
+	 ========================================================================== */
 
 
 /* *****************************************************************************
-   3. &INTERACTION
-   ************************************************************************** */
+	 3. &INTERACTION
+	 ************************************************************************** */
 /* =============================================================================
-   3.a &Forms
-   ========================================================================== */
+	 3.a &Forms
+	 ========================================================================== */
 input, textarea {
-  margin-bottom: 1em;
+	margin-bottom: 1em;
 }
 
 .prefix-icon-container {
-  position: relative;
+	position: relative;
 }
 
 .prefix-icon-container > input {
-  padding-left: 1.25em;
+	padding-left: 1.25em;
 }
 
 .prefix-icon-container > .icon {
-  position: absolute;
-  margin-top: .1em;
-  margin-left: .3em;
+	position: absolute;
+	margin-top: .1em;
+	margin-left: .3em;
 }
 
 .suffix-icon-container > .icon {
-  position: relative;
-  margin-top: .1em;
-  margin-left: -1.1em;
+	position: relative;
+	margin-top: .1em;
+	margin-left: -1.1em;
 }
 
 .prefix-icon-block, .suffix-icon-block {
-  vertical-align: top;
-  display: inline-block;
-  width: 1.5em;
-  height: 1.5em;
-  padding: .1em .5em;
-  background: #F2F2F2;
-  border: 1px solid #CCCDCF;
-  line-height: 1.5;
+	vertical-align: top;
+	display: inline-block;
+	width: 1.5em;
+	height: 1.5em;
+	padding: .1em .5em;
+	background: #F2F2F2;
+	border: 1px solid #CCCDCF;
+	line-height: 1.5;
 }
 
 .suffix-icon-block {
-  border-left: 0;
-  border-top-right-radius: 2px;
-  border-bottom-right-radius: 2px;
-  -moz-border-radius-topright: 2px;
-  -moz-border-radius-bottomright: 2px;
-  -webkit-border-top-right-radius: 2px;
-  -webkit-border-bottom-right-radius: 2px;
+	border-left: 0;
+	border-top-right-radius: 2px;
+	border-bottom-right-radius: 2px;
+	-moz-border-radius-topright: 2px;
+	-moz-border-radius-bottomright: 2px;
+	-webkit-border-top-right-radius: 2px;
+	-webkit-border-bottom-right-radius: 2px;
 }
 
 .prefix-icon-block:before,
 .suffix-icon-block:before {
-  position: relative;
-  top: -.1em;
-  left: -.15em;
+	position: relative;
+	top: -.1em;
+	left: -.15em;
 }
 
 .prefix-icon-block:before {
-  left: -.2em;
+	left: -.2em;
 }
 
 
 /* =============================================================================
-   3.b &Buttons
-   ========================================================================== */
+	 3.b &Buttons
+	 ========================================================================== */
 .btn {
-  position: relative;
-  display: inline-block;
-  background-color: #f5f5f5;
-  background-image:     -ms-linear-gradient(top, hsla(0, 0%, 100%, .2), hsla(0, 0%, 90%, .2));
-  background-image: -webkit-linear-gradient(top, hsla(0, 0%, 100%, .2), hsla(0, 0%, 90%, .2));
-  background-image:      -o-linear-gradient(top, hsla(0, 0%, 100%, .2), hsla(0, 0%, 90%, .2));
-  background-image:         linear-gradient(top, hsla(0, 0%, 100%, .2), hsla(0, 0%, 90%, .2));
-  background-image:    -moz-linear-gradient(top, hsla(0, 0%, 100%, .2), hsla(0, 0%, 90%, .2));
-  font-size: 15px;
-  font-size: 1.071rem;
-  font-weight: normal;
-  line-height: 1;
-  color: #000;
-  margin-bottom: 1em;
-  padding: .3em 1em;
-  border: 0;
-  vertical-align: middle;
-  text-align: center;
-  cursor: pointer;
+	position: relative;
+	display: inline-block;
+	background-color: #f5f5f5;
+	background-image:     -ms-linear-gradient(top, hsla(0, 0%, 100%, .2), hsla(0, 0%, 90%, .2));
+	background-image: -webkit-linear-gradient(top, hsla(0, 0%, 100%, .2), hsla(0, 0%, 90%, .2));
+	background-image:      -o-linear-gradient(top, hsla(0, 0%, 100%, .2), hsla(0, 0%, 90%, .2));
+	background-image:         linear-gradient(top, hsla(0, 0%, 100%, .2), hsla(0, 0%, 90%, .2));
+	background-image:    -moz-linear-gradient(top, hsla(0, 0%, 100%, .2), hsla(0, 0%, 90%, .2));
+	font-size: 15px;
+	font-size: 1.071rem;
+	font-weight: normal;
+	line-height: 1;
+	color: #000;
+	margin-bottom: 1em;
+	padding: .3em 1em;
+	border: 0;
+	vertical-align: middle;
+	text-align: center;
+	cursor: pointer;
 
-  border: 1px solid #cccccc;
-  border-color: #e6e6e6 #e6e6e6 #bfbfbf;
-  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+	border: 1px solid #cccccc;
+	border-color: #e6e6e6 #e6e6e6 #bfbfbf;
+	border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
 
-  border-radius: 2px;
+	border-radius: 2px;
 
-  /* android 4.0 requires prefix */
-  -webkit-box-shadow: inset 0 1px 0 hsla(0, 0%, 100%, .2), 0 1px 2px hsla(0, 0%, 90%, .05);
-          box-shadow: inset 0 1px 0 hsla(0, 0%, 100%, .2), 0 1px 2px hsla(0, 0%, 90%, .05);
+	/* android 4.0 requires prefix */
+	-webkit-box-shadow: inset 0 1px 0 hsla(0, 0%, 100%, .2), 0 1px 2px hsla(0, 0%, 90%, .05);
+					box-shadow: inset 0 1px 0 hsla(0, 0%, 100%, .2), 0 1px 2px hsla(0, 0%, 90%, .05);
 
-  -webkit-transition: all 150ms ease-in;
-     -moz-transition: all 150ms ease-in;
-       -o-transition: all 150ms ease-in;
-      -ms-transition: all 150ms ease-in;
-          transition: all 150ms ease-in;
+	-webkit-transition: all 150ms ease-in;
+		 -moz-transition: all 150ms ease-in;
+			 -o-transition: all 150ms ease-in;
+			-ms-transition: all 150ms ease-in;
+					transition: all 150ms ease-in;
 }
 
 .btn-block {
-  display: block;
-  /* required for <button> and <input>*/
-  width: 100%;
+	display: block;
+	/* required for <button> and <input>*/
+	width: 100%;
 }
 
 .btn:hover { 
-  background-color: #ededed;
-  color: #000;
+	background-color: #ededed;
+	color: #000;
 }
 
 .btn:active, .btn-selected, .btn-selected:hover { 
-  background-color: #ededed;
-  color: #000;
-  /* android 4.0 requires prefix */
-  -webkit-box-shadow: inset 0 1px 3px hsla(0, 0%, 0%, .5), 0 1px 2px hsla(0, 0%, 90%, .05);
-          box-shadow: inset 0 1px 3px hsla(0, 0%, 0%, .5), 0 1px 2px hsla(0, 0%, 90%, .05);
+	background-color: #ededed;
+	color: #000;
+	/* android 4.0 requires prefix */
+	-webkit-box-shadow: inset 0 1px 3px hsla(0, 0%, 0%, .5), 0 1px 2px hsla(0, 0%, 90%, .05);
+					box-shadow: inset 0 1px 3px hsla(0, 0%, 0%, .5), 0 1px 2px hsla(0, 0%, 90%, .05);
 
-  -webkit-transition: all 0;
-     -moz-transition: all 0;
-       -o-transition: all 0;
-      -ms-transition: all 0;
-          transition: all 0;
+	-webkit-transition: all 0;
+		 -moz-transition: all 0;
+			 -o-transition: all 0;
+			-ms-transition: all 0;
+					transition: all 0;
 }
 
 .btn-selected { cursor: default;}
 
 .btn[disabled], .btn.disabled { 
-  color: #999; 
-  cursor: default;
+	color: #999; 
+	cursor: default;
 }
 .btn[disabled], .btn.disabled,
 .btn:hover[disabled], .btn.disabled:hover,
 .btn:active[disabled], .btn.disabled:active { 
-  background-color: #fff;
-  box-shadow: none;
+	background-color: #fff;
+	box-shadow: none;
 }
 
 .btn-group { display: inline-block;}
 
 .btn-group > .btn {
-  float: left;
-  margin-right: 0;
-  margin-left: -1px;
-  border-radius: 0;
+	float: left;
+	margin-right: 0;
+	margin-left: -1px;
+	border-radius: 0;
 }
 
 .btn-group > .btn:first-child,
@@ -1326,94 +1337,94 @@ input, textarea {
 .btn-group > .btn:first-child:last-child { border-radius: 2px;}
 
 .btn-group > .btn:first-child {
-  margin-left: 0;
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
+	margin-left: 0;
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 0;
 }
 
 .btn-group > .btn:last-child {
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 0;
 }
 
 /* =============================================================================
-   3.c &Wysiwyg
-   ========================================================================== */
+	 3.c &Wysiwyg
+	 ========================================================================== */
 
 
 /* *****************************************************************************
-   4. &PAGE SPECIFIC STYLES
-   ************************************************************************** */
+	 4. &PAGE SPECIFIC STYLES
+	 ************************************************************************** */
 /* =============================================================================
-   4.a ....
-   ========================================================================== */
+	 4.a ....
+	 ========================================================================== */
 
 
 /* *****************************************************************************
-   5. &WIDGETS
-   ************************************************************************** */
+	 5. &WIDGETS
+	 ************************************************************************** */
 /* =============================================================================
-   5.a Generic Widgets
-   ========================================================================== */
+	 5.a Generic Widgets
+	 ========================================================================== */
 
 
 /* =============================================================================
-   5.b Specific Widgets
-   ========================================================================== */
+	 5.b Specific Widgets
+	 ========================================================================== */
 /* -----------------------------------------------------------------------------
-   5.b.i Widget ...
-   -------------------------------------------------------------------------- */
+	 5.b.i Widget ...
+	 -------------------------------------------------------------------------- */
 
 
 /* *****************************************************************************
-   6. &COMMENTS
-   ************************************************************************** */
+	 6. &COMMENTS
+	 ************************************************************************** */
 /* =============================================================================
-   6.a Comments
-   ========================================================================== */
-
-
-/* =============================================================================
-   6.b &Pingbacks / &Trackbacks
-   ========================================================================== */
+	 6.a Comments
+	 ========================================================================== */
 
 
 /* =============================================================================
-   6.c Comment Form
-   ========================================================================== */
+	 6.b &Pingbacks / &Trackbacks
+	 ========================================================================== */
+
+
+/* =============================================================================
+	 6.c Comment Form
+	 ========================================================================== */
 
 
 /* *****************************************************************************
-   7. &ANIMATIONS
-   ************************************************************************** */
+	 7. &ANIMATIONS
+	 ************************************************************************** */
 @-webkit-keyframes rotate {
-  from { -webkit-transform: rotate(0deg);}
-  to { -webkit-transform: rotate(360deg);}
+	from { -webkit-transform: rotate(0deg);}
+	to { -webkit-transform: rotate(360deg);}
 }
 
 @-moz-keyframes rotate {
-  from { -moz-transform: rotate(0deg);}
-  to { -moz-transform: rotate(360deg);}
+	from { -moz-transform: rotate(0deg);}
+	to { -moz-transform: rotate(360deg);}
 }
 
 @-o-keyframes rotate {
-  from { -o-transform: rotate(0deg);}
-  to { -o-transform: rotate(360deg);}
+	from { -o-transform: rotate(0deg);}
+	to { -o-transform: rotate(360deg);}
 }
 
 @-ms-keyframes rotate {
-  from { -ms-transform: rotate(0deg);}
-  to { -ms-transform: rotate(360deg);}
+	from { -ms-transform: rotate(0deg);}
+	to { -ms-transform: rotate(360deg);}
 }
 
 @keyframes rotate {
-  from { transform: rotate(0deg);}
-  to { transform: rotate(360deg);}
+	from { transform: rotate(0deg);}
+	to { transform: rotate(360deg);}
 }
 
 /* *****************************************************************************
-   &GRID & MEDIA QUERIES
-   ************************************************************************** */
+	 &GRID & MEDIA QUERIES
+	 ************************************************************************** */
 
 /*
  * Gridpak Beta CSS
@@ -1430,23 +1441,23 @@ input, textarea {
  
 /* Reusable column setup */
 .col {
-  border: 0 solid hsla(0,0%,0%,0);
-  border-left-width: 16px;
-  border-left-width: 1rem;
-  float: left;
-  min-height: 100px;
-  background: hsla(0,0%,0%,.1);
-  margin-bottom: 16px;
-  margin-bottom: 1rem;
-  padding: 0;
-  position:  relative;
-  /* already declared at base styles - must be uncommented if not declared */
-  /*-webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
-          box-sizing: border-box;*/
-  -webkit-background-clip: padding-box !important;
-     -moz-background-clip: padding-box !important;
-          background-clip: padding-box !important;
+	border: 0 solid hsla(0,0%,0%,0);
+	border-left-width: 16px;
+	border-left-width: 1rem;
+	float: left;
+	min-height: 100px;
+	background: hsla(0,0%,0%,.1);
+	margin-bottom: 16px;
+	margin-bottom: 1rem;
+	padding: 0;
+	position:  relative;
+	/* already declared at base styles - must be uncommented if not declared */
+	/*-webkit-box-sizing: border-box;
+		 -moz-box-sizing: border-box;
+					box-sizing: border-box;*/
+	-webkit-background-clip: padding-box !important;
+		 -moz-background-clip: padding-box !important;
+					background-clip: padding-box !important;
 }
 
 /* 
@@ -1467,22 +1478,22 @@ Span 2:   100%
  * At base font-size of 16px
  */
  @media screen and (min-width: 0) {
-  
-  .span_1_alpha { width: 50%;}
-  .span_2_alpha {
-    margin-left: 0;
-    width: 100%;
-  }
+	
+	.span_1_alpha { width: 50%;}
+	.span_2_alpha {
+		margin-left: 0;
+		width: 100%;
+	}
 
-  /*
-   * subtract 2.5% from each side of each column to account for IE7
-   * padding and rounding errors.
-   */
-  .ie7 .span_1_alpha { width: 45%;}
-  .ie7 .span_2_alpha {
-    margin-left: 0;
-    width: 95%;
-  }
+	/*
+	 * subtract 2.5% from each side of each column to account for IE7
+	 * padding and rounding errors.
+	 */
+	.ie7 .span_1_alpha { width: 45%;}
+	.ie7 .span_2_alpha {
+		margin-left: 0;
+		width: 95%;
+	}
 }
 
 /* 2. 6 Column Grid 480px ->
@@ -1501,30 +1512,30 @@ Span 6:   100%
  */
 
 @media screen and (min-width: 30em) {  
-  
-  .span_1_beta { width: 16.667%;}
-  .span_2_beta { width: 33.333%;}
-  .span_3_beta { width: 50.0%;}
-  .span_4_beta { width: 66.667%;}
-  .span_5_beta { width: 83.333%;}
-  .span_6_beta {
-    margin-left: 0;
-    width: 100%;
-  }
+	
+	.span_1_beta { width: 16.667%;}
+	.span_2_beta { width: 33.333%;}
+	.span_3_beta { width: 50.0%;}
+	.span_4_beta { width: 66.667%;}
+	.span_5_beta { width: 83.333%;}
+	.span_6_beta {
+		margin-left: 0;
+		width: 100%;
+	}
 
-  /*
-   * subtract 2.5% from each side of each column to account for IE7
-   * padding and rounding errors.
-   */
-  .ie7 .span_1_beta { width: 11.667%;}
-  .ie7 .span_2_beta { width: 28.333%;}
-  .ie7 .span_3_beta { width: 45%;}
-  .ie7 .span_4_beta { width: 61.667%;}
-  .ie7 .span_5_beta { width: 78.333%;}
-  .ie7 .span_6_beta {
-    margin-left: 0;
-    width: 95%;
-  }
+	/*
+	 * subtract 2.5% from each side of each column to account for IE7
+	 * padding and rounding errors.
+	 */
+	.ie7 .span_1_beta { width: 11.667%;}
+	.ie7 .span_2_beta { width: 28.333%;}
+	.ie7 .span_3_beta { width: 45%;}
+	.ie7 .span_4_beta { width: 61.667%;}
+	.ie7 .span_5_beta { width: 78.333%;}
+	.ie7 .span_6_beta {
+		margin-left: 0;
+		width: 95%;
+	}
 }
 
 /* 3. 12 Column Grid 960px ->
@@ -1548,42 +1559,42 @@ Span 12:   100%
  * 960px = 60em
  */
 @media screen and (min-width: 60em) {
-  
-  .span_1_gamma { width: 8.333%;}
-  .span_2_gamma { width: 16.667%;}
-  .span_3_gamma { width: 25.0%;}
-  .span_4_gamma { width: 33.333%;}
-  .span_5_gamma { width: 41.667%;}
-  .span_6_gamma { width: 50.0%;}
-  .span_7_gamma { width: 58.333%;}
-  .span_8_gamma { width: 66.667%;}
-  .span_9_gamma { width: 75.0%;}
-  .span_10_gamma { width: 83.333%;}
-  .span_11_gamma { width: 91.667%;}
-  .span_12_gamma {
-    margin-left: 0;
-    width: 95%;
-  }
+	
+	.span_1_gamma { width: 8.333%;}
+	.span_2_gamma { width: 16.667%;}
+	.span_3_gamma { width: 25.0%;}
+	.span_4_gamma { width: 33.333%;}
+	.span_5_gamma { width: 41.667%;}
+	.span_6_gamma { width: 50.0%;}
+	.span_7_gamma { width: 58.333%;}
+	.span_8_gamma { width: 66.667%;}
+	.span_9_gamma { width: 75.0%;}
+	.span_10_gamma { width: 83.333%;}
+	.span_11_gamma { width: 91.667%;}
+	.span_12_gamma {
+		margin-left: 0;
+		width: 95%;
+	}
 
-  /*
-   * subtract 2.5% from each side of each column to account for IE7
-   * padding and rounding errors.
-   */
-  .ie7 .span_1_gamma { width: 3.333%;}
-  .ie7 .span_2_gamma { width: 11.667%;}
-  .ie7 .span_3_gamma { width: 20%;}
-  .ie7 .span_4_gamma { width: 28.333%;}
-  .ie7 .span_5_gamma { width: 36.667%;}
-  .ie7 .span_6_gamma { width: 45%;}
-  .ie7 .span_7_gamma { width: 53.333%;}
-  .ie7 .span_8_gamma { width: 62.667%;}
-  .ie7 .span_9_gamma { width: 70%;}
-  .ie7 .span_10_gamma { width: 78.333%;}
-  .ie7 .span_11_gamma { width: 86.667%;}
-  .ie7 .span_12_gamma {
-    margin-left: 0;
-    width: 95%;
-  }
+	/*
+	 * subtract 2.5% from each side of each column to account for IE7
+	 * padding and rounding errors.
+	 */
+	.ie7 .span_1_gamma { width: 3.333%;}
+	.ie7 .span_2_gamma { width: 11.667%;}
+	.ie7 .span_3_gamma { width: 20%;}
+	.ie7 .span_4_gamma { width: 28.333%;}
+	.ie7 .span_5_gamma { width: 36.667%;}
+	.ie7 .span_6_gamma { width: 45%;}
+	.ie7 .span_7_gamma { width: 53.333%;}
+	.ie7 .span_8_gamma { width: 62.667%;}
+	.ie7 .span_9_gamma { width: 70%;}
+	.ie7 .span_10_gamma { width: 78.333%;}
+	.ie7 .span_11_gamma { width: 86.667%;}
+	.ie7 .span_12_gamma {
+		margin-left: 0;
+		width: 95%;
+	}
 }
 
 /* 4. 12 Column Grid 1440px ->
@@ -1608,46 +1619,46 @@ Span 12:   100%
  */
 @media screen and (min-width: 90em) {
 
-  .span_1_delta { width: 8.33333333333%;}
-  .span_2_delta { width: 16.6666666667%;}
-  .span_3_delta { width: 25.0%;}
-  .span_4_delta { width: 33.3333333333%;}
-  .span_5_delta { width: 41.6666666667%;}
-  .span_6_delta { width: 50.0%;}
-  .span_7_delta { width: 58.3333333333%;}
-  .span_8_delta { width: 66.6666666667%;}
-  .span_9_delta { width: 75.0%;}
-  .span_10_delta { width: 83.3333333333%;}
-  .span_11_delta { width: 91.6666666667%;}
-  .span_12_delta {
-    margin-left: 0;
-    width: 100%;
-  }
+	.span_1_delta { width: 8.33333333333%;}
+	.span_2_delta { width: 16.6666666667%;}
+	.span_3_delta { width: 25.0%;}
+	.span_4_delta { width: 33.3333333333%;}
+	.span_5_delta { width: 41.6666666667%;}
+	.span_6_delta { width: 50.0%;}
+	.span_7_delta { width: 58.3333333333%;}
+	.span_8_delta { width: 66.6666666667%;}
+	.span_9_delta { width: 75.0%;}
+	.span_10_delta { width: 83.3333333333%;}
+	.span_11_delta { width: 91.6666666667%;}
+	.span_12_delta {
+		margin-left: 0;
+		width: 100%;
+	}
 
-  /*
-   * subtract 2.5% from each side of each column to account for IE7
-   * padding and rounding errors.
-   */
-  .ie7 .span_1_delta { width: 3.333%;}
-  .ie7 .span_2_delta { width: 11.667%;}
-  .ie7 .span_3_delta { width: 20%;}
-  .ie7 .span_4_delta { width: 28.333%;}
-  .ie7 .span_5_delta { width: 36.667%;}
-  .ie7 .span_6_delta { width: 45%;}
-  .ie7 .span_7_delta { width: 53.333%;}
-  .ie7 .span_8_delta { width: 61.667%;}
-  .ie7 .span_9_delta { width: 70%;}
-  .ie7 .span_10_delta { width: 78.333%;}
-  .ie7 .span_11_delta { width: 86.667%;}
-  .ie7 .span_12_delta {
-    margin-left: 0;
-    width: 95%;
-  }
+	/*
+	 * subtract 2.5% from each side of each column to account for IE7
+	 * padding and rounding errors.
+	 */
+	.ie7 .span_1_delta { width: 3.333%;}
+	.ie7 .span_2_delta { width: 11.667%;}
+	.ie7 .span_3_delta { width: 20%;}
+	.ie7 .span_4_delta { width: 28.333%;}
+	.ie7 .span_5_delta { width: 36.667%;}
+	.ie7 .span_6_delta { width: 45%;}
+	.ie7 .span_7_delta { width: 53.333%;}
+	.ie7 .span_8_delta { width: 61.667%;}
+	.ie7 .span_9_delta { width: 70%;}
+	.ie7 .span_10_delta { width: 78.333%;}
+	.ie7 .span_11_delta { width: 86.667%;}
+	.ie7 .span_12_delta {
+		margin-left: 0;
+		width: 95%;
+	}
 }
 
 
 /* ==|== non-semantic helper classes ===========================================
-   ========================================================================== */
+	 ========================================================================== */
 
 /* 
  * For image replacement: http://mopo.ws/wj7fIN
@@ -1684,17 +1695,17 @@ Span 12:   100%
  * .img-block > .img-block-content {}
  */
 .img-block > .img-block-content { 
-  display: table-cell; /* 1 */
-  width: 10000px; /* 2 */
-  *width: auto; /* 3 */
-  *zoom: 1; /* 4 */
+	display: table-cell; /* 1 */
+	width: 10000px; /* 2 */
+	*width: auto; /* 3 */
+	*zoom: 1; /* 4 */
 }
 .img-block .img { float: left; margin-right: 12px; margin-right: 1rem;}
 .img-block .img img { display: block;}
 
 
 /* ==|== WordPress / Helper editor styles ======================================
-   ========================================================================== */
+	 ========================================================================== */
 
 /* Floating & Alignment */
 .fl{ float: left;}
@@ -1710,21 +1721,21 @@ Span 12:   100%
 
 
 /* ==|== print styles ==========================================================
-   Print styles.
-   Inlined to avoid required HTTP connection: h5bp.com/r
-   ========================================================================== */
+	 Print styles.
+	 Inlined to avoid required HTTP connection: h5bp.com/r
+	 ========================================================================== */
  
 @media print {
-  * { background: transparent !important; color: black !important; box-shadow:none !important; text-shadow: none !important; filter:none !important; -ms-filter: none !important; } /* Black prints faster: h5bp.com/s */
-  a, a:visited { text-decoration: underline; }
-  a[href]:after { content: " (" attr(href) ")"; }
-  abbr[title]:after { content: " (" attr(title) ")"; }
-  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; }  /* Don't show links for images, or javascript/internal links */
-  pre, blockquote { border: 1px solid #999; page-break-inside: avoid; }
-  thead { display: table-header-group; } /* h5bp.com/t */
-  tr, img { page-break-inside: avoid; }
-  img { max-width: 100% !important; }
-  @page { margin: 0.5cm; }
-  p, h2, h3 { orphans: 3; widows: 3; }
-  h2, h3 { page-break-after: avoid; }
+	* { background: transparent !important; color: black !important; box-shadow:none !important; text-shadow: none !important; filter:none !important; -ms-filter: none !important; } /* Black prints faster: h5bp.com/s */
+	a, a:visited { text-decoration: underline; }
+	a[href]:after { content: " (" attr(href) ")"; }
+	abbr[title]:after { content: " (" attr(title) ")"; }
+	.ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; }  /* Don't show links for images, or javascript/internal links */
+	pre, blockquote { border: 1px solid #999; page-break-inside: avoid; }
+	thead { display: table-header-group; } /* h5bp.com/t */
+	tr, img { page-break-inside: avoid; }
+	img { max-width: 100% !important; }
+	@page { margin: 0.5cm; }
+	p, h2, h3 { orphans: 3; widows: 3; }
+	h2, h3 { page-break-after: avoid; }
 }
