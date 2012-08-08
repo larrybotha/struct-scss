@@ -1,0 +1,66 @@
+$().ready(function() {
+		
+	// *** TinyMCE ***
+	// function to allow indentation of lists in tinyMCE using tab
+	// key: http://mopo.ws/PI8CTq
+	function fixTinyMCETabIssue(inst) {
+		inst.onKeyDown.add(function(inst, e) {
+			// Firefox uses the e.which event for keypress
+			// While IE and others use e.keyCode, so we look for both
+			if (e.keyCode) code = e.keyCode;
+			else if (e.which) code = e.which;
+			if(code == 9 && !e.altKey && !e.ctrlKey) {
+				// toggle between Indent and Outdent command, depending on if SHIFT is pressed
+				if (e.shiftKey) inst.execCommand('Outdent');
+				else inst.execCommand('Indent');
+				// prevent tab key from leaving editor in some browsers
+				if(e.preventDefault) {
+						e.preventDefault();
+				}
+				return false;
+			}
+		});
+	}	
+
+	$('textarea.tinymce').tinymce({
+		// Location of TinyMCE script
+		script_url : 'js/libs/tiny_mce/tiny_mce.js',
+
+		// General options
+		theme : "advanced",
+		skin : "fixate",
+		plugins : "autoresize,autolink,style,inlinepopups,paste,noneditable,visualchars,nonbreaking,xhtmlxtras,template",
+
+		// Theme options
+		theme_advanced_buttons1 : "removeformat,undo,redo,|,formatselect,|,bold,italic,underline,strikethrough,blockquote,link,unlink,|,bullist,numlist,|,image,",
+		theme_advanced_blockformats : "p,h1,h2,h3",
+		theme_advanced_toolbar_location : "top",
+		theme_advanced_toolbar_align : "left",
+		theme_advanced_statusbar_location : "none",
+		theme_advanced_resizing : false,
+
+		// Example content CSS (should be your site CSS)
+		content_css : "style.css",
+
+		// Drop lists for link/image/media/template dialogs
+		template_external_list_url : "lists/template_list.js",
+		external_link_list_url : "lists/link_list.js",
+		external_image_list_url : "lists/image_list.js",
+		media_external_list_url : "lists/media_list.js",
+
+		// paste plugin settings
+		// paste_auto_cleanup_on_paste : true,
+		// paste_remove_styles_if_webkit: true,
+		paste_remove_styles: true,
+
+		// Replace values for the template plugin
+		template_replace_values : {
+			username : "Some User",
+			staffid : "991234"
+		},
+
+		// Enable tab indents on lists
+		init_instance_callback: fixTinyMCETabIssue
+	});
+// *** TinyMCE ***
+});
