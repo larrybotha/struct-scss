@@ -894,7 +894,7 @@ button.close {
 					box-shadow: inset 0 1px 2px hsla(0, 0%, 0%, .1);
 }
 
-.progress > .bar {
+.progress > .progress-bar {
 	width: 0;
 	height: 18px;
 	font-size: 12px;
@@ -922,7 +922,7 @@ button.close {
 					transition: width 0.6s ease;
 }
 
-.progress-anim > .bar {
+.progress-anim > .progress-bar {
 	-webkit-animation: progress-bar-stripes 2s linear infinite;
 		 -moz-animation: progress-bar-stripes 2s linear infinite;
 			-ms-animation: progress-bar-stripes 2s linear infinite;
@@ -930,19 +930,19 @@ button.close {
 					animation: progress-bar-stripes 2s linear infinite;
 }
 
-.progress-danger > .bar { background-color: #dd514c;}
-.progress-danger.progress-striped > .bar { background-color: #ee5f5b;}
+.progress-danger > .progress-bar { background-color: #dd514c;}
+.progress-danger.progress-striped > .progress-bar { background-color: #ee5f5b;}
 
-.progress-success > .bar { background-color: #5eb95e;}
-.progress-success.progress-striped > .bar {	background-color: #62c462;}
+.progress-success > .progress-bar { background-color: #5eb95e;}
+.progress-success.progress-striped > .progress-bar {	background-color: #62c462;}
 
-.progress-info > .bar { background-color: #4bb1cf;}
-.progress-info.progress-striped > .bar { background-color: #5bc0de;}
+.progress-info > .progress-bar { background-color: #4bb1cf;}
+.progress-info.progress-striped > .progress-bar { background-color: #5bc0de;}
 
-.progress-warning > .bar { background-color: #faa732;}
-.progress-warning.progress-striped > .bar {	background-color: #fbb450;}
+.progress-warning > .progress-bar { background-color: #faa732;}
+.progress-warning.progress-striped > .progress-bar {	background-color: #fbb450;}
 
-.progress-striped > .bar {
+.progress-striped > .progress-bar {
 	background-color: #149bdf;
 	background-image: -webkit-linear-gradient(	-45deg, hsla(0, 0%, 100%, .15) 25%, 
 																							transparent 25%, 
