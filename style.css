@@ -877,7 +877,7 @@ button.close {
 	 -------------------------------------------------------------------------- */
 .progress {
 	height: 18px;
-	margin-bottom: 18px;
+	margin-bottom: 1em;
 	overflow: hidden;
 	background-color: #f7f7f7;
 	background-image: -webkit-linear-gradient(top, #f5f5f5, #f9f9f9);
@@ -894,7 +894,7 @@ button.close {
 					box-shadow: inset 0 1px 2px hsla(0, 0%, 0%, .1);
 }
 
-.progress > .progress-bar {
+.progress-bar {
 	width: 0;
 	height: 18px;
 	font-size: 12px;
@@ -931,18 +931,18 @@ button.close {
 }
 
 .progress-danger > .progress-bar { background-color: #dd514c;}
-.progress-danger.progress-striped > .progress-bar { background-color: #ee5f5b;}
+.progress-danger > .progress-bar-striped { background-color: #ee5f5b;}
 
 .progress-success > .progress-bar { background-color: #5eb95e;}
-.progress-success.progress-striped > .progress-bar {	background-color: #62c462;}
+.progress-success > .progress-bar-striped {	background-color: #62c462;}
 
 .progress-info > .progress-bar { background-color: #4bb1cf;}
-.progress-info.progress-striped > .progress-bar { background-color: #5bc0de;}
+.progress-info > .progress-bar-striped { background-color: #5bc0de;}
 
 .progress-warning > .progress-bar { background-color: #faa732;}
-.progress-warning.progress-striped > .progress-bar {	background-color: #fbb450;}
+.progress-warning > .progress-bar-striped {	background-color: #fbb450;}
 
-.progress-striped > .progress-bar {
+.progress-bar-striped {
 	background-color: #149bdf;
 	background-image: -webkit-linear-gradient(	-45deg, hsla(0, 0%, 100%, .15) 25%, 
 																							transparent 25%, 
