@@ -91,6 +91,10 @@ $().ready(function() {
 		];
 
 		$( "#tags" ).autocomplete({
-			source: availableTags
+			source: availableTags,
+			appendTo: "#autocomplete",
+			open: function(event, ui) {
+				console.log(ui);
+			}
 		});
 });
