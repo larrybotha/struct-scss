@@ -1,6 +1,9 @@
 $().ready(function() {
-		
-	// *** TinyMCE ***
+
+	//	*****************************************************************************
+	//	TinyMCE
+	//	*****************************************************************************
+
 	// function to allow indentation of lists in tinyMCE using tab
 	// key: http://mopo.ws/PI8CTq
 	function fixTinyMCETabIssue(inst) {
@@ -62,39 +65,88 @@ $().ready(function() {
 		// Enable tab indents on lists
 		init_instance_callback: fixTinyMCETabIssue
 	});
-	// *** TinyMCE END ***
 
-	// jQueryUI Autocomplete
-	var availableTags = [
-			"ActionScript",
-			"AppleScript",
-			"Asp",
-			"BASIC",
-			"C",
-			"C++",
-			"Clojure",
-			"COBOL",
-			"ColdFusion",
-			"Erlang",
-			"Fortran",
-			"Groovy",
-			"Haskell",
-			"Java",
-			"JavaScript",
-			"Lisp",
-			"Perl",
-			"PHP",
-			"Python",
-			"Ruby",
-			"Scala",
-			"Scheme"
+
+	//	*****************************************************************************
+	//	jQuery UI Autocomplete
+	//	*****************************************************************************
+
+	//	-----------------------------------------------------------------------------
+	//	Autocomplete1
+	//	-----------------------------------------------------------------------------
+
+	var autocomplete1Data = [
+			"Anna Conda",
+			"Ben Dover",
+			"Craven Moorehead",
+			"Dick Burns",
+			"Earl Lee Riser",
+			"Gene Poole",
+			"Harry Baals",
+			"Ileane Wright",
+			"Jack Knoff",
+			"Kerry Oki",
+			"Lance Boyle",
+			"M. Balmer",
+			"Norma Leigh Lucid",
+			"Ophelia Payne",
+			"Pat Hiscock",
+			"Polly Ester",
+			"Raynor Schein",
+			"Sal A. Mander",
+			"Tanya Hyde",
+			"Viola Solo",
+			"Walter Melon",
+			"X. Benedict"
 		];
 
-		$( "#tags" ).autocomplete({
-			source: availableTags,
-			appendTo: "#autocomplete",
-			open: function(event, ui) {
-				console.log(ui);
-			}
+		$( "#autocomplete1" ).autocomplete({
+			source: autocomplete1Data,
+			appendTo: "#autocomplete1-container"
 		});
+
+	//	-----------------------------------------------------------------------------
+	//	Autocomplete2
+	//	-----------------------------------------------------------------------------
+	var autocomplete2Data = [
+		{
+			value: "jquery",
+			label: "jQuery",
+			desc: "the write less, do more, JavaScript library",
+			icon: "jquery_32x32.png"
+		},
+		{
+			value: "jquery-ui",
+			label: "jQuery UI",
+			desc: "the official user interface library for jQuery",
+			icon: "jqueryui_32x32.png"
+		},
+		{
+			value: "sizzlejs",
+			label: "Sizzle JS",
+			desc: "a pure-JavaScript CSS selector engine",
+			icon: "sizzlejs_32x32.png"
+		}
+	];
+
+	$( "#autocomplete2" ).autocomplete({
+		source: autocomplete2Data,
+		appendTo: "#autocomplete2-container",
+		select: function( event, ui ) {
+			$( "#autocomplete2" ).val( ui.item.label );
+			$( "#autocomplete2-id" ).val( ui.item.value );
+			return false;
+		}
+	})
+	.data( "autocomplete" )._renderItem = function( ul, item ) {
+		return $( "<li></li>" )
+			.data( "item.autocomplete", item )
+			.append(
+				"<a class='img-block cf'>" +
+					"<img class='img' src='http://placekitten.com/20/20'/>" +
+					"<div class='img-block-content'>" +
+						"<span>" + item.label + "</span><br><small>" + item.desc + "</small></div></a>" )
+			.appendTo( ul );
+	};
+	
 });
