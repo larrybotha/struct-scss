@@ -110,32 +110,46 @@ $().ready(function() {
 	//	-----------------------------------------------------------------------------
 	var autocomplete2Data = [
 		{
-			value: "jquery",
-			label: "jQuery",
-			desc: "the write less, do more, JavaScript library",
-			icon: "jquery_32x32.png"
+			value: "catstevens",
+			label: "Cat Stevens",
+			desc: "a formidable description of Cat Stevens O.o"
 		},
 		{
-			value: "jquery-ui",
-			label: "jQuery UI",
-			desc: "the official user interface library for jQuery",
-			icon: "jqueryui_32x32.png"
+			value: "felinegood",
+			label: "Feline Good",
+			desc: "are you feline good too?"
 		},
 		{
-			value: "sizzlejs",
-			label: "Sizzle JS",
-			desc: "a pure-JavaScript CSS selector engine",
-			icon: "sizzlejs_32x32.png"
+			value: "tickletank",
+			label: "Tickle Tank",
+			desc: "getz yo tickle awn"
+		},
+		{
+			value: "atticuskitch",
+			label: "Atticus Kitch",
+			desc: "swings in gardens and such things"
+		},
+		{
+			value: "seriousbulbous",
+			label: "Serious Bulbous",
+			desc: "what is this doing here, fo'real?!"
+		},
+		{
+			value: "zeitgeistkitteh",
+			label: "Zeitgeist Kitteh",
+			desc: "had to get a 'z' in somehow"
 		}
 	];
 
 	$( "#autocomplete2" ).autocomplete({
 		source: autocomplete2Data,
 		appendTo: "#autocomplete2-container",
+		focus: function(event, ui) {
+			return false;
+		},
 		select: function( event, ui ) {
 			$( "#autocomplete2" ).val( ui.item.label );
 			$( "#autocomplete2-id" ).val( ui.item.value );
-			return false;
 		}
 	})
 	.data( "autocomplete" )._renderItem = function( ul, item ) {

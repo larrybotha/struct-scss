@@ -129,7 +129,7 @@ pre { white-space: pre; white-space: pre-wrap; word-wrap: break-word;}
 q { quotes: none;}
 q:before, q:after { content: ""; content: none;}
 
-/*small { font-size: 85%;}*/
+small { font-size: 85%;}
 
 /* Position subscript and superscript content without affecting line-height: h5bp.com/k */
 sub, sup { position: relative; font-size: 75%; line-height: 0; vertical-align: baseline;}
@@ -331,7 +331,7 @@ h6, .fs-zeta    { font-size:16px; font-size:1rem; /* 16px */ line-height:1.5; /*
 /* 
  * Smaller-than-body-copy sizes here. 
  */
-small, .fs-milli { font-size:12px; font-size:0.75rem; /* 12px */ line-height:2; /* 24px */}
+.fs-milli { font-size:12px; font-size:0.75rem; /* 12px */ line-height:2; /* 24px */}
 
 
 /* ==|== &colours ========================================================
@@ -1043,6 +1043,7 @@ button.close {
 .ui-menu .ui-menu-item { border-bottom: 1px solid #eee;}
 .ui-menu .ui-menu-item a {
 	display: block;
+	color: inherit;
 	padding: .4em .5em;
 	line-height: 1.5;
 }
@@ -1057,6 +1058,12 @@ button.close {
 	background-image:         linear-gradient(top, transparent, hsla(0, 0%, 100%, .1));
 }
 
+.ui-menu-item .img-block > .img { 
+	background: transparent url(http://placekitten.com/g/20/20) no-repeat center center;
+	width: 20px;
+	height: 20px;
+	margin-right: .5em;
+}
 
 /* -----------------------------------------------------------------------------
 	 1.d.viii &Drag and Drop
