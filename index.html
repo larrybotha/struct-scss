@@ -20,16 +20,10 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<link rel="stylesheet" href="style.css">
-
-
-	<!-- CSSrefresh ** REMOVE FOR PRODUCTION ** - http://cssrefresh.frebsite.nl/ -->
-	<script type="text/javascript" src="js/cssrefresh.js"></script>
 	
 	<!--[if lte IE 6]>
 		<link rel="stylesheet" href="http://universal-ie6-css.googlecode.com/files/ie6.1.1.css" media="screen, projection">
 	<![endif]-->
-	
-	<!-- More ideas for your <head> here: h5bp.com/d/head-Tips -->
 
 	<!--  <script src="js/libs/modernizr-2.5.2.min.js"></script> -->
 </head>
@@ -204,7 +198,20 @@
 
 				<hr>
 
-				<h1>Autocomplete</h1>
+				<h1 id="hey">Autocomplete</h1>
+
+				<h2>Simple</h2>
+				<div id="autocomplete1-container" class="field">
+					<label for="autocomplete1">Tags: </label>
+					<input id="autocomplete1">
+				</div>
+
+				<h2>Custom Data</h2>
+				<div id="autocomplete2-container" class="field">
+					<label for="autocomplete2">Tags: </label>
+					<input id="autocomplete2">
+					<input type="hidden" id="autocomplete2-id">
+				</div>
 
 				<hr>
 
@@ -362,16 +369,69 @@
 
 				<h1>Progress Bars</h1>
 
+				<h2>Default</h2>
 				<div class="progress">
-					<div class="bar" style="width: 60%;"></div>
+					<div class="progress-bar" style="width: 60%;"></div>
 				</div>
 
-				<div class="progress progress-striped">
-					<div class="bar" style="width: 20%;"></div>
+				<div class="progress">
+					<div class="progress-bar progress-bar-striped" style="width: 20%;"></div>
 				</div>
 
-				<div class="progress progress-striped active">
-					<div class="bar" style="width: 45%"></div>
+				<div class="progress progress-anim">
+					<div class="progress-bar progress-bar-striped" style="width: 45%"></div>
+				</div>
+
+				<h2>Success</h2>
+				<div class="progress progress-success">
+					<div class="progress-bar" style="width: 60%;"></div>
+				</div>
+
+				<div class="progress progress-success">
+					<div class="progress-bar progress-bar-striped" style="width: 20%;"></div>
+				</div>
+
+				<div class="progress progress-success progress-anim">
+					<div class="progress-bar progress-bar-striped" style="width: 45%"></div>
+				</div>
+
+				<h2>Info</h2>
+				<div class="progress progress-info">
+					<div class="progress-bar" style="width: 60%;"></div>
+				</div>
+
+				<div class="progress progress-info">
+					<div class="progress-bar progress-bar-striped" style="width: 20%;"></div>
+				</div>
+
+				<div class="progress progress-info progress-anim">
+					<div class="progress-bar progress-bar-striped" style="width: 45%"></div>
+				</div>
+
+				<h2>Danger</h2>
+				<div class="progress progress-danger">
+					<div class="progress-bar" style="width: 60%;"></div>
+				</div>
+
+				<div class="progress progress-danger">
+					<div class="progress-bar progress-bar-striped" style="width: 20%;"></div>
+				</div>
+
+				<div class="progress progress-danger progress-anim">
+					<div class="progress-bar progress-bar-striped" style="width: 45%"></div>
+				</div>
+
+				<h2>Warning</h2>
+				<div class="progress progress-warning">
+					<div class="progress-bar" style="width: 60%;"></div>
+				</div>
+
+				<div class="progress progress-warning">
+					<div class="progress-bar progress-bar-striped" style="width: 20%;"></div>
+				</div>
+
+				<div class="progress progress-warning progress-anim">
+					<div class="progress-bar progress-bar-striped" style="width: 45%"></div>
 				</div>
 
 				<hr>
@@ -400,25 +460,9 @@
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 	<script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.2.min.js"><\/script>')</script>
 
-	<!-- scripts concatenated and minified via build script -->
-	<!-- <script src="js/plugins.js"></script>
-	<script src="js/script.js"></script> -->
-	<!-- end scripts -->
-
-	<!-- Asynchronous Google Analytics snippet. Change UA-XXXXX-X to be your site's ID.
-			 mathiasbynens.be/notes/async-analytics-snippet -->
-	<!-- <script>
-		var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
-		(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-		g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-		s.parentNode.insertBefore(g,s)}(document,'script'));
-	</script> -->
-
-<!-- TinyMCE -->
+<script type="text/javascript" src="js/libs/jquery-ui-1.8.22.custom.min.js"></script>
 <script type="text/javascript" src="js/libs/tiny_mce/jquery.tinymce.js"></script>
-
 <script type="text/javascript" src="js/main.js"></script>
-
 	
 </body>
 </html>

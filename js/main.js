@@ -1,6 +1,9 @@
 $().ready(function() {
-		
-	// *** TinyMCE ***
+
+	//	*****************************************************************************
+	//	TinyMCE
+	//	*****************************************************************************
+
 	// function to allow indentation of lists in tinyMCE using tab
 	// key: http://mopo.ws/PI8CTq
 	function fixTinyMCETabIssue(inst) {
@@ -62,5 +65,102 @@ $().ready(function() {
 		// Enable tab indents on lists
 		init_instance_callback: fixTinyMCETabIssue
 	});
-// *** TinyMCE ***
+
+
+	//	*****************************************************************************
+	//	jQuery UI Autocomplete
+	//	*****************************************************************************
+
+	//	-----------------------------------------------------------------------------
+	//	Autocomplete1
+	//	-----------------------------------------------------------------------------
+
+	var autocomplete1Data = [
+			"Anna Conda",
+			"Ben Dover",
+			"Craven Moorehead",
+			"Dick Burns",
+			"Earl Lee Riser",
+			"Gene Poole",
+			"Harry Baals",
+			"Ileane Wright",
+			"Jack Knoff",
+			"Kerry Oki",
+			"Lance Boyle",
+			"M. Balmer",
+			"Norma Leigh Lucid",
+			"Ophelia Payne",
+			"Pat Hiscock",
+			"Polly Ester",
+			"Raynor Schein",
+			"Sal A. Mander",
+			"Tanya Hyde",
+			"Viola Solo",
+			"Walter Melon",
+			"X. Benedict"
+		];
+
+		$( "#autocomplete1" ).autocomplete({
+			source: autocomplete1Data,
+			appendTo: "#autocomplete1-container"
+		});
+
+	//	-----------------------------------------------------------------------------
+	//	Autocomplete2
+	//	-----------------------------------------------------------------------------
+	var autocomplete2Data = [
+		{
+			value: "catstevens",
+			label: "Cat Stevens",
+			desc: "a formidable description of Cat Stevens O.o"
+		},
+		{
+			value: "felinegood",
+			label: "Feline Good",
+			desc: "are you feline good too?"
+		},
+		{
+			value: "tickletank",
+			label: "Tickle Tank",
+			desc: "getz yo tickle awn"
+		},
+		{
+			value: "atticuskitch",
+			label: "Atticus Kitch",
+			desc: "swings in gardens and such things"
+		},
+		{
+			value: "seriousbulbous",
+			label: "Serious Bulbous",
+			desc: "what is this doing here, fo'real?!"
+		},
+		{
+			value: "zeitgeistkitteh",
+			label: "Zeitgeist Kitteh",
+			desc: "had to get a 'z' in somehow"
+		}
+	];
+
+	$( "#autocomplete2" ).autocomplete({
+		source: autocomplete2Data,
+		appendTo: "#autocomplete2-container",
+		focus: function(event, ui) {
+			return false;
+		},
+		select: function( event, ui ) {
+			$( "#autocomplete2" ).val( ui.item.label );
+			$( "#autocomplete2-id" ).val( ui.item.value );
+		}
+	})
+	.data( "autocomplete" )._renderItem = function( ul, item ) {
+		return $( "<li></li>" )
+			.data( "item.autocomplete", item )
+			.append(
+				"<a class='img-block cf'>" +
+					"<img class='img' src='http://placekitten.com/20/20'/>" +
+					"<div class='img-block-content'>" +
+						"<span>" + item.label + "</span><br><small>" + item.desc + "</small></div></a>" )
+			.appendTo( ul );
+	};
+	
 });

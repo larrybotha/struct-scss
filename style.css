@@ -129,7 +129,7 @@ pre { white-space: pre; white-space: pre-wrap; word-wrap: break-word;}
 q { quotes: none;}
 q:before, q:after { content: ""; content: none;}
 
-/*small { font-size: 85%;}*/
+small { font-size: 85%;}
 
 /* Position subscript and superscript content without affecting line-height: h5bp.com/k */
 sub, sup { position: relative; font-size: 75%; line-height: 0; vertical-align: baseline;}
@@ -277,9 +277,12 @@ td { vertical-align: top;}
 	 &Fonts
 	 ========================================================================== */
 @font-face {
-	font-family: "FontAwesome";
-	src: url('font/fontawesome-webfont.eot');
-	src: url('font/fontawesome-webfont.eot?#iefix') format('eot'), url('font/fontawesome-webfont.woff') format('woff'), url('font/fontawesome-webfont.ttf') format('truetype'), url('font/fontawesome-webfont.svg#FontAwesome') format('svg');
+	font-family: "FontAwesome-webfont";
+	src: url('font/fontawesome/fontawesome-webfont.eot');
+	src: url('font/fontawesome/fontawesome-webfont.eot?#iefix') format('eot'), 
+			 url('font/fontawesome/fontawesome-webfont.woff') format('woff'), 
+			 url('font/fontawesome/fontawesome-webfont.ttf') format('truetype'), 
+			 url('font/fontawesome/fontawesome-webfont.svg#FontAwesome') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -328,7 +331,7 @@ h6, .fs-zeta    { font-size:16px; font-size:1rem; /* 16px */ line-height:1.5; /*
 /* 
  * Smaller-than-body-copy sizes here. 
  */
-small, .fs-milli { font-size:12px; font-size:0.75rem; /* 12px */ line-height:2; /* 24px */}
+.fs-milli { font-size:12px; font-size:0.75rem; /* 12px */ line-height:2; /* 24px */}
 
 
 /* ==|== &colours ========================================================
@@ -351,7 +354,8 @@ small, .fs-milli { font-size:12px; font-size:0.75rem; /* 12px */ line-height:2; 
 			1.d.iv Labels
 			1.d.v Alerts
 			1.d.vi Progress Bars
-			1.d.vii Drag and Drop
+			1.d.vii Autocomplete
+			1.d.viii Drag and Drop
 		1.e Sidebar
 		1.f Footer
 
@@ -453,7 +457,7 @@ p.error, span.error { color: #CC3333;}
 /*  Font Awesome styles
 		------------------------------------------------------- */
 .icon:before, .icon:before {
-	font-family: FontAwesome;
+	font-family: FontAwesome-webfont;
 	font-weight: normal;
 	font-style: normal;
 	display: inline-block;
@@ -511,232 +515,232 @@ li.icon.icon-large:before, li.icon.icon-large:before {
 
 /*  Font Awesome uses the Unicode Private Use Area (PUA) to ensure screen
 		readers do not read off random characters that represent icons */
-.icon-glass:before                { content: "\f000"; }
-.icon-music:before                { content: "\f001"; }
-.icon-search:before               { content: "\f002"; }
-.icon-envelope:before             { content: "\f003"; }
-.icon-heart:before                { content: "\f004"; }
-.icon-star:before                 { content: "\f005"; }
-.icon-star-empty:before           { content: "\f006"; }
-.icon-user:before                 { content: "\f007"; }
-.icon-film:before                 { content: "\f008"; }
-.icon-th-large:before             { content: "\f009"; }
-.icon-th:before                   { content: "\f00a"; }
-.icon-th-list:before              { content: "\f00b"; }
-.icon-ok:before                   { content: "\f00c"; }
-.icon-remove:before               { content: "\f00d"; }
-.icon-zoom-in:before              { content: "\f00e"; }
+.icon-glass:before              { content: "\f000"; }
+.icon-music:before              { content: "\f001"; }
+.icon-search:before             { content: "\f002"; }
+.icon-envelope:before           { content: "\f003"; }
+.icon-heart:before              { content: "\f004"; }
+.icon-star:before               { content: "\f005"; }
+.icon-star-empty:before         { content: "\f006"; }
+.icon-user:before               { content: "\f007"; }
+.icon-film:before               { content: "\f008"; }
+.icon-th-large:before           { content: "\f009"; }
+.icon-th:before                 { content: "\f00a"; }
+.icon-th-list:before            { content: "\f00b"; }
+.icon-ok:before                 { content: "\f00c"; }
+.icon-remove:before             { content: "\f00d"; }
+.icon-zoom-in:before            { content: "\f00e"; }
 
-.icon-zoom-out:before             { content: "\f010"; }
-.icon-off:before                  { content: "\f011"; }
-.icon-signal:before               { content: "\f012"; }
-.icon-cog:before                  { content: "\f013"; }
-.icon-trash:before                { content: "\f014"; }
-.icon-home:before                 { content: "\f015"; }
-.icon-file:before                 { content: "\f016"; }
-.icon-time:before                 { content: "\f017"; }
-.icon-road:before                 { content: "\f018"; }
-.icon-download-alt:before         { content: "\f019"; }
-.icon-download:before             { content: "\f01a"; }
-.icon-upload:before               { content: "\f01b"; }
-.icon-inbox:before                { content: "\f01c"; }
-.icon-play-circle:before          { content: "\f01d"; }
-.icon-repeat:before               { content: "\f01e"; }
+.icon-zoom-out:before           { content: "\f010"; }
+.icon-off:before                { content: "\f011"; }
+.icon-signal:before             { content: "\f012"; }
+.icon-cog:before                { content: "\f013"; }
+.icon-trash:before              { content: "\f014"; }
+.icon-home:before               { content: "\f015"; }
+.icon-file:before               { content: "\f016"; }
+.icon-time:before               { content: "\f017"; }
+.icon-road:before               { content: "\f018"; }
+.icon-download-alt:before       { content: "\f019"; }
+.icon-download:before           { content: "\f01a"; }
+.icon-upload:before             { content: "\f01b"; }
+.icon-inbox:before              { content: "\f01c"; }
+.icon-play-circle:before        { content: "\f01d"; }
+.icon-repeat:before             { content: "\f01e"; }
 
 /* \f020 doesn't work in Safari. all shifted one down */
-.icon-refresh:before              { content: "\f021"; }
-.icon-list-alt:before             { content: "\f022"; }
-.icon-lock:before                 { content: "\f023"; }
-.icon-flag:before                 { content: "\f024"; }
-.icon-headphones:before           { content: "\f025"; }
-.icon-volume-off:before           { content: "\f026"; }
-.icon-volume-down:before          { content: "\f027"; }
-.icon-volume-up:before            { content: "\f028"; }
-.icon-qrcode:before               { content: "\f029"; }
-.icon-barcode:before              { content: "\f02a"; }
-.icon-tag:before                  { content: "\f02b"; }
-.icon-tags:before                 { content: "\f02c"; }
-.icon-book:before                 { content: "\f02d"; }
-.icon-bookmark:before             { content: "\f02e"; }
-.icon-print:before                { content: "\f02f"; }
+.icon-refresh:before            { content: "\f021"; }
+.icon-list-alt:before           { content: "\f022"; }
+.icon-lock:before               { content: "\f023"; }
+.icon-flag:before               { content: "\f024"; }
+.icon-headphones:before         { content: "\f025"; }
+.icon-volume-off:before         { content: "\f026"; }
+.icon-volume-down:before        { content: "\f027"; }
+.icon-volume-up:before          { content: "\f028"; }
+.icon-qrcode:before             { content: "\f029"; }
+.icon-barcode:before            { content: "\f02a"; }
+.icon-tag:before                { content: "\f02b"; }
+.icon-tags:before               { content: "\f02c"; }
+.icon-book:before               { content: "\f02d"; }
+.icon-bookmark:before           { content: "\f02e"; }
+.icon-print:before              { content: "\f02f"; }
 
-.icon-camera:before               { content: "\f030"; }
-.icon-font:before                 { content: "\f031"; }
-.icon-bold:before                 { content: "\f032"; }
-.icon-italic:before               { content: "\f033"; }
-.icon-text-height:before          { content: "\f034"; }
-.icon-text-width:before           { content: "\f035"; }
-.icon-align-left:before           { content: "\f036"; }
-.icon-align-center:before         { content: "\f037"; }
-.icon-align-right:before          { content: "\f038"; }
-.icon-align-justify:before        { content: "\f039"; }
-.icon-list:before                 { content: "\f03a"; }
-.icon-indent-left:before          { content: "\f03b"; }
-.icon-indent-right:before         { content: "\f03c"; }
-.icon-facetime-video:before       { content: "\f03d"; }
-.icon-picture:before              { content: "\f03e"; }
+.icon-camera:before             { content: "\f030"; }
+.icon-font:before               { content: "\f031"; }
+.icon-bold:before               { content: "\f032"; }
+.icon-italic:before             { content: "\f033"; }
+.icon-text-height:before        { content: "\f034"; }
+.icon-text-width:before         { content: "\f035"; }
+.icon-align-left:before         { content: "\f036"; }
+.icon-align-center:before       { content: "\f037"; }
+.icon-align-right:before        { content: "\f038"; }
+.icon-align-justify:before      { content: "\f039"; }
+.icon-list:before               { content: "\f03a"; }
+.icon-indent-left:before        { content: "\f03b"; }
+.icon-indent-right:before       { content: "\f03c"; }
+.icon-facetime-video:before     { content: "\f03d"; }
+.icon-picture:before            { content: "\f03e"; }
 
-.icon-pencil:before               { content: "\f040"; }
-.icon-map-marker:before           { content: "\f041"; }
-.icon-adjust:before               { content: "\f042"; }
-.icon-tint:before                 { content: "\f043"; }
-.icon-edit:before                 { content: "\f044"; }
-.icon-share:before                { content: "\f045"; }
-.icon-check:before                { content: "\f046"; }
-.icon-move:before                 { content: "\f047"; }
-.icon-step-backward:before        { content: "\f048"; }
-.icon-fast-backward:before        { content: "\f049"; }
-.icon-backward:before             { content: "\f04a"; }
-.icon-play:before                 { content: "\f04b"; }
-.icon-pause:before                { content: "\f04c"; }
-.icon-stop:before                 { content: "\f04d"; }
-.icon-forward:before              { content: "\f04e"; }
+.icon-pencil:before             { content: "\f040"; }
+.icon-map-marker:before         { content: "\f041"; }
+.icon-adjust:before             { content: "\f042"; }
+.icon-tint:before               { content: "\f043"; }
+.icon-edit:before               { content: "\f044"; }
+.icon-share:before              { content: "\f045"; }
+.icon-check:before              { content: "\f046"; }
+.icon-move:before               { content: "\f047"; }
+.icon-step-backward:before      { content: "\f048"; }
+.icon-fast-backward:before      { content: "\f049"; }
+.icon-backward:before           { content: "\f04a"; }
+.icon-play:before               { content: "\f04b"; }
+.icon-pause:before              { content: "\f04c"; }
+.icon-stop:before               { content: "\f04d"; }
+.icon-forward:before            { content: "\f04e"; }
 
-.icon-fast-forward:before         { content: "\f050"; }
-.icon-step-forward:before         { content: "\f051"; }
-.icon-eject:before                { content: "\f052"; }
-.icon-chevron-left:before         { content: "\f053"; }
-.icon-chevron-right:before        { content: "\f054"; }
-.icon-plus-sign:before            { content: "\f055"; }
-.icon-minus-sign:before           { content: "\f056"; }
-.icon-remove-sign:before          { content: "\f057"; }
-.icon-ok-sign:before              { content: "\f058"; }
-.icon-question-sign:before        { content: "\f059"; }
-.icon-info-sign:before            { content: "\f05a"; }
-.icon-screenshot:before           { content: "\f05b"; }
-.icon-remove-circle:before        { content: "\f05c"; }
-.icon-ok-circle:before            { content: "\f05d"; }
-.icon-ban-circle:before           { content: "\f05e"; }
+.icon-fast-forward:before       { content: "\f050"; }
+.icon-step-forward:before       { content: "\f051"; }
+.icon-eject:before              { content: "\f052"; }
+.icon-chevron-left:before       { content: "\f053"; }
+.icon-chevron-right:before      { content: "\f054"; }
+.icon-plus-sign:before          { content: "\f055"; }
+.icon-minus-sign:before         { content: "\f056"; }
+.icon-remove-sign:before        { content: "\f057"; }
+.icon-ok-sign:before            { content: "\f058"; }
+.icon-question-sign:before      { content: "\f059"; }
+.icon-info-sign:before          { content: "\f05a"; }
+.icon-screenshot:before         { content: "\f05b"; }
+.icon-remove-circle:before      { content: "\f05c"; }
+.icon-ok-circle:before          { content: "\f05d"; }
+.icon-ban-circle:before         { content: "\f05e"; }
 
-.icon-arrow-left:before           { content: "\f060"; }
-.icon-arrow-right:before          { content: "\f061"; }
-.icon-arrow-up:before             { content: "\f062"; }
-.icon-arrow-down:before           { content: "\f063"; }
-.icon-share-alt:before            { content: "\f064"; }
-.icon-resize-full:before          { content: "\f065"; }
-.icon-resize-small:before         { content: "\f066"; }
-.icon-plus:before                 { content: "\f067"; }
-.icon-minus:before                { content: "\f068"; }
-.icon-asterisk:before             { content: "\f069"; }
-.icon-exclamation-sign:before     { content: "\f06a"; }
-.icon-gift:before                 { content: "\f06b"; }
-.icon-leaf:before                 { content: "\f06c"; }
-.icon-fire:before                 { content: "\f06d"; }
-.icon-eye-open:before             { content: "\f06e"; }
+.icon-arrow-left:before         { content: "\f060"; }
+.icon-arrow-right:before        { content: "\f061"; }
+.icon-arrow-up:before           { content: "\f062"; }
+.icon-arrow-down:before         { content: "\f063"; }
+.icon-share-alt:before          { content: "\f064"; }
+.icon-resize-full:before        { content: "\f065"; }
+.icon-resize-small:before       { content: "\f066"; }
+.icon-plus:before               { content: "\f067"; }
+.icon-minus:before              { content: "\f068"; }
+.icon-asterisk:before           { content: "\f069"; }
+.icon-exclamation-sign:before   { content: "\f06a"; }
+.icon-gift:before               { content: "\f06b"; }
+.icon-leaf:before               { content: "\f06c"; }
+.icon-fire:before               { content: "\f06d"; }
+.icon-eye-open:before           { content: "\f06e"; }
 
-.icon-eye-close:before            { content: "\f070"; }
-.icon-warning-sign:before         { content: "\f071"; }
-.icon-plane:before                { content: "\f072"; }
-.icon-calendar:before             { content: "\f073"; }
-.icon-random:before               { content: "\f074"; }
-.icon-comment:before              { content: "\f075"; }
-.icon-magnet:before               { content: "\f076"; }
-.icon-chevron-up:before           { content: "\f077"; }
-.icon-chevron-down:before         { content: "\f078"; }
-.icon-retweet:before              { content: "\f079"; }
-.icon-shopping-cart:before        { content: "\f07a"; }
-.icon-folder-close:before         { content: "\f07b"; }
-.icon-folder-open:before          { content: "\f07c"; }
-.icon-resize-vertical:before      { content: "\f07d"; }
-.icon-resize-horizontal:before    { content: "\f07e"; }
+.icon-eye-close:before          { content: "\f070"; }
+.icon-warning-sign:before       { content: "\f071"; }
+.icon-plane:before              { content: "\f072"; }
+.icon-calendar:before           { content: "\f073"; }
+.icon-random:before             { content: "\f074"; }
+.icon-comment:before            { content: "\f075"; }
+.icon-magnet:before             { content: "\f076"; }
+.icon-chevron-up:before         { content: "\f077"; }
+.icon-chevron-down:before       { content: "\f078"; }
+.icon-retweet:before            { content: "\f079"; }
+.icon-shopping-cart:before      { content: "\f07a"; }
+.icon-folder-close:before       { content: "\f07b"; }
+.icon-folder-open:before        { content: "\f07c"; }
+.icon-resize-vertical:before    { content: "\f07d"; }
+.icon-resize-horizontal:before  { content: "\f07e"; }
 
-.icon-bar-chart:before            { content: "\f080"; }
-.icon-twitter-sign:before         { content: "\f081"; }
-.icon-facebook-sign:before        { content: "\f082"; }
-.icon-camera-retro:before         { content: "\f083"; }
-.icon-key:before                  { content: "\f084"; }
-.icon-cogs:before                 { content: "\f085"; }
-.icon-comments:before             { content: "\f086"; }
-.icon-thumbs-up:before            { content: "\f087"; }
-.icon-thumbs-down:before          { content: "\f088"; }
-.icon-star-half:before            { content: "\f089"; }
-.icon-heart-empty:before          { content: "\f08a"; }
-.icon-signout:before              { content: "\f08b"; }
-.icon-linkedin-sign:before        { content: "\f08c"; }
-.icon-pushpin:before              { content: "\f08d"; }
-.icon-external-link:before        { content: "\f08e"; }
+.icon-bar-chart:before          { content: "\f080"; }
+.icon-twitter-sign:before       { content: "\f081"; }
+.icon-facebook-sign:before      { content: "\f082"; }
+.icon-camera-retro:before       { content: "\f083"; }
+.icon-key:before                { content: "\f084"; }
+.icon-cogs:before               { content: "\f085"; }
+.icon-comments:before           { content: "\f086"; }
+.icon-thumbs-up:before          { content: "\f087"; }
+.icon-thumbs-down:before        { content: "\f088"; }
+.icon-star-half:before          { content: "\f089"; }
+.icon-heart-empty:before        { content: "\f08a"; }
+.icon-signout:before            { content: "\f08b"; }
+.icon-linkedin-sign:before      { content: "\f08c"; }
+.icon-pushpin:before            { content: "\f08d"; }
+.icon-external-link:before      { content: "\f08e"; }
 
-.icon-signin:before               { content: "\f090"; }
-.icon-trophy:before               { content: "\f091"; }
-.icon-github-sign:before          { content: "\f092"; }
-.icon-upload-alt:before           { content: "\f093"; }
-.icon-lemon:before                { content: "\f094"; }
-.icon-phone:before                { content: "\f095"; }
-.icon-check-empty:before          { content: "\f096"; }
-.icon-bookmark-empty:before       { content: "\f097"; }
-.icon-phone-sign:before           { content: "\f098"; }
-.icon-twitter:before              { content: "\f099"; }
-.icon-facebook:before             { content: "\f09a"; }
-.icon-github:before               { content: "\f09b"; }
-.icon-unlock:before               { content: "\f09c"; }
-.icon-credit-card:before          { content: "\f09d"; }
-.icon-rss:before                  { content: "\f09e"; }
+.icon-signin:before             { content: "\f090"; }
+.icon-trophy:before             { content: "\f091"; }
+.icon-github-sign:before        { content: "\f092"; }
+.icon-upload-alt:before         { content: "\f093"; }
+.icon-lemon:before              { content: "\f094"; }
+.icon-phone:before              { content: "\f095"; }
+.icon-check-empty:before        { content: "\f096"; }
+.icon-bookmark-empty:before     { content: "\f097"; }
+.icon-phone-sign:before         { content: "\f098"; }
+.icon-twitter:before            { content: "\f099"; }
+.icon-facebook:before           { content: "\f09a"; }
+.icon-github:before             { content: "\f09b"; }
+.icon-unlock:before             { content: "\f09c"; }
+.icon-credit-card:before        { content: "\f09d"; }
+.icon-rss:before                { content: "\f09e"; }
 
-.icon-hdd:before                  { content: "\f0a0"; }
-.icon-bullhorn:before             { content: "\f0a1"; }
-.icon-bell:before                 { content: "\f0a2"; }
-.icon-certificate:before          { content: "\f0a3"; }
-.icon-hand-right:before           { content: "\f0a4"; }
-.icon-hand-left:before            { content: "\f0a5"; }
-.icon-hand-up:before              { content: "\f0a6"; }
-.icon-hand-down:before            { content: "\f0a7"; }
-.icon-circle-arrow-left:before    { content: "\f0a8"; }
-.icon-circle-arrow-right:before   { content: "\f0a9"; }
-.icon-circle-arrow-up:before      { content: "\f0aa"; }
-.icon-circle-arrow-down:before    { content: "\f0ab"; }
-.icon-globe:before                { content: "\f0ac"; }
-.icon-wrench:before               { content: "\f0ad"; }
-.icon-tasks:before                { content: "\f0ae"; }
+.icon-hdd:before                { content: "\f0a0"; }
+.icon-bullhorn:before           { content: "\f0a1"; }
+.icon-bell:before               { content: "\f0a2"; }
+.icon-certificate:before        { content: "\f0a3"; }
+.icon-hand-right:before         { content: "\f0a4"; }
+.icon-hand-left:before          { content: "\f0a5"; }
+.icon-hand-up:before            { content: "\f0a6"; }
+.icon-hand-down:before          { content: "\f0a7"; }
+.icon-circle-arrow-left:before  { content: "\f0a8"; }
+.icon-circle-arrow-right:before { content: "\f0a9"; }
+.icon-circle-arrow-up:before    { content: "\f0aa"; }
+.icon-circle-arrow-down:before  { content: "\f0ab"; }
+.icon-globe:before              { content: "\f0ac"; }
+.icon-wrench:before             { content: "\f0ad"; }
+.icon-tasks:before              { content: "\f0ae"; }
 
-.icon-filter:before               { content: "\f0b0"; }
-.icon-briefcase:before            { content: "\f0b1"; }
-.icon-fullscreen:before           { content: "\f0b2"; }
+.icon-filter:before             { content: "\f0b0"; }
+.icon-briefcase:before          { content: "\f0b1"; }
+.icon-fullscreen:before         { content: "\f0b2"; }
 
-.icon-group:before                { content: "\f0c0"; }
-.icon-link:before                 { content: "\f0c1"; }
-.icon-cloud:before                { content: "\f0c2"; }
-.icon-beaker:before               { content: "\f0c3"; }
-.icon-cut:before                  { content: "\f0c4"; }
-.icon-copy:before                 { content: "\f0c5"; }
-.icon-paper-clip:before           { content: "\f0c6"; }
-.icon-save:before                 { content: "\f0c7"; }
-.icon-sign-blank:before           { content: "\f0c8"; }
-.icon-reorder:before              { content: "\f0c9"; }
-.icon-list-ul:before              { content: "\f0ca"; }
-.icon-list-ol:before              { content: "\f0cb"; }
-.icon-strikethrough:before        { content: "\f0cc"; }
-.icon-underline:before            { content: "\f0cd"; }
-.icon-table:before                { content: "\f0ce"; }
+.icon-group:before              { content: "\f0c0"; }
+.icon-link:before               { content: "\f0c1"; }
+.icon-cloud:before              { content: "\f0c2"; }
+.icon-beaker:before             { content: "\f0c3"; }
+.icon-cut:before                { content: "\f0c4"; }
+.icon-copy:before               { content: "\f0c5"; }
+.icon-paper-clip:before         { content: "\f0c6"; }
+.icon-save:before               { content: "\f0c7"; }
+.icon-sign-blank:before         { content: "\f0c8"; }
+.icon-reorder:before            { content: "\f0c9"; }
+.icon-list-ul:before            { content: "\f0ca"; }
+.icon-list-ol:before            { content: "\f0cb"; }
+.icon-strikethrough:before      { content: "\f0cc"; }
+.icon-underline:before          { content: "\f0cd"; }
+.icon-table:before              { content: "\f0ce"; }
 
-.icon-magic:before                { content: "\f0d0"; }
-.icon-truck:before                { content: "\f0d1"; }
-.icon-pinterest:before            { content: "\f0d2"; }
-.icon-pinterest-sign:before       { content: "\f0d3"; }
-.icon-google-plus-sign:before     { content: "\f0d4"; }
-.icon-google-plus:before          { content: "\f0d5"; }
-.icon-money:before                { content: "\f0d6"; }
-.icon-caret-down:before           { content: "\f0d7"; }
-.icon-caret-up:before             { content: "\f0d8"; }
-.icon-caret-left:before           { content: "\f0d9"; }
-.icon-caret-right:before          { content: "\f0da"; }
-.icon-columns:before              { content: "\f0db"; }
-.icon-sort:before                 { content: "\f0dc"; }
-.icon-sort-down:before            { content: "\f0dd"; }
-.icon-sort-up:before              { content: "\f0de"; }
+.icon-magic:before              { content: "\f0d0"; }
+.icon-truck:before              { content: "\f0d1"; }
+.icon-pinterest:before          { content: "\f0d2"; }
+.icon-pinterest-sign:before     { content: "\f0d3"; }
+.icon-google-plus-sign:before   { content: "\f0d4"; }
+.icon-google-plus:before        { content: "\f0d5"; }
+.icon-money:before              { content: "\f0d6"; }
+.icon-caret-down:before         { content: "\f0d7"; }
+.icon-caret-up:before           { content: "\f0d8"; }
+.icon-caret-left:before         { content: "\f0d9"; }
+.icon-caret-right:before        { content: "\f0da"; }
+.icon-columns:before            { content: "\f0db"; }
+.icon-sort:before               { content: "\f0dc"; }
+.icon-sort-down:before          { content: "\f0dd"; }
+.icon-sort-up:before            { content: "\f0de"; }
 
-.icon-envelope-alt:before         { content: "\f0e0"; }
-.icon-linkedin:before             { content: "\f0e1"; }
-.icon-undo:before                 { content: "\f0e2"; }
-.icon-legal:before                { content: "\f0e3"; }
-.icon-dashboard:before            { content: "\f0e4"; }
-.icon-comment-alt:before          { content: "\f0e5"; }
-.icon-comments-alt:before         { content: "\f0e6"; }
-.icon-bolt:before                 { content: "\f0e7"; }
-.icon-sitemap:before              { content: "\f0e8"; }
-.icon-umbrella:before             { content: "\f0e9"; }
-.icon-paste:before                { content: "\f0ea"; }
+.icon-envelope-alt:before       { content: "\f0e0"; }
+.icon-linkedin:before           { content: "\f0e1"; }
+.icon-undo:before               { content: "\f0e2"; }
+.icon-legal:before              { content: "\f0e3"; }
+.icon-dashboard:before          { content: "\f0e4"; }
+.icon-comment-alt:before        { content: "\f0e5"; }
+.icon-comments-alt:before       { content: "\f0e6"; }
+.icon-bolt:before               { content: "\f0e7"; }
+.icon-sitemap:before            { content: "\f0e8"; }
+.icon-umbrella:before           { content: "\f0e9"; }
+.icon-paste:before              { content: "\f0ea"; }
 
-.icon-user-md:before              { content: "\f200"; }
+.icon-user-md:before            { content: "\f200"; }
 
 /* -----------------------------------------------------------------------------
 	 1.d.iv &Labels
@@ -873,70 +877,52 @@ button.close {
 	 -------------------------------------------------------------------------- */
 .progress {
 	height: 18px;
-	margin-bottom: 18px;
+	margin-bottom: 1em;
 	overflow: hidden;
 	background-color: #f7f7f7;
-	background-image: -moz-linear-gradient(top, #f5f5f5, #f9f9f9);
-	background-image: -ms-linear-gradient(top, #f5f5f5, #f9f9f9);
-	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#f5f5f5), to(#f9f9f9));
 	background-image: -webkit-linear-gradient(top, #f5f5f5, #f9f9f9);
-	background-image: -o-linear-gradient(top, #f5f5f5, #f9f9f9);
-	background-image: linear-gradient(top, #f5f5f5, #f9f9f9);
+	background-image:    -moz-linear-gradient(top, #f5f5f5, #f9f9f9);
+	background-image:      -o-linear-gradient(top, #f5f5f5, #f9f9f9);
+	background-image:     -ms-linear-gradient(top, #f5f5f5, #f9f9f9);
+	background-image:         linear-gradient(top, #f5f5f5, #f9f9f9);
 	background-repeat: repeat-x;
 	-webkit-border-radius: 4px;
 		 -moz-border-radius: 4px;
 					border-radius: 4px;
-	filter: progid:dximagetransform.microsoft.gradient(startColorstr='#f5f5f5', endColorstr='#f9f9f9', GradientType=0);
-	-webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
-		 -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
-					box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+	-webkit-box-shadow: inset 0 1px 2px hsla(0, 0%, 0%, .1);
+		 -moz-box-shadow: inset 0 1px 2px hsla(0, 0%, 0%, .1);
+					box-shadow: inset 0 1px 2px hsla(0, 0%, 0%, .1);
 }
 
-.progress .bar {
+.progress-bar {
 	width: 0;
 	height: 18px;
 	font-size: 12px;
-	color: #ffffff;
+	color: #fff;
 	text-align: center;
 	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
 	background-color: #0e90d2;
-	background-image: -moz-linear-gradient(top, #149bdf, #0480be);
-	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#149bdf), to(#0480be));
-	background-image: -webkit-linear-gradient(top, #149bdf, #0480be);
-	background-image: -o-linear-gradient(top, #149bdf, #0480be);
-	background-image: linear-gradient(top, #149bdf, #0480be);
-	background-image: -ms-linear-gradient(top, #149bdf, #0480be);
+	background-image: -webkit-linear-gradient(top, transparent, hsla(0, 0%, 100%, .1));
+	background-image:    -moz-linear-gradient(top, transparent, hsla(0, 0%, 100%, .1));
+	background-image:      -o-linear-gradient(top, transparent, hsla(0, 0%, 100%, .1));
+	background-image:     -ms-linear-gradient(top, transparent, hsla(0, 0%, 100%, .1));
+	background-image:         linear-gradient(top, transparent, hsla(0, 0%, 100%, .1));
 	background-repeat: repeat-x;
-	filter: progid:dximagetransform.microsoft.gradient(startColorstr='#149bdf', endColorstr='#0480be', GradientType=0);
-	-webkit-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
-		 -moz-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
-					box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
+	-webkit-box-shadow: inset 0 -1px 0 hsla(0, 0%, 0%, .15);
+		 -moz-box-shadow: inset 0 -1px 0 hsla(0, 0%, 0%, .15);
+					box-shadow: inset 0 -1px 0 hsla(0, 0%, 0%, .15);
 	-webkit-box-sizing: border-box;
 		 -moz-box-sizing: border-box;
 			-ms-box-sizing: border-box;
 					box-sizing: border-box;
-	-webkit-transition: width 0.6s ease;
-		 -moz-transition: width 0.6s ease;
-			-ms-transition: width 0.6s ease;
-			 -o-transition: width 0.6s ease;
-					transition: width 0.6s ease;
+	-webkit-transition: width .6s ease;
+		 -moz-transition: width .6s ease;
+			-ms-transition: width .6s ease;
+			 -o-transition: width .6s ease;
+					transition: width .6s ease;
 }
 
-.progress-striped .bar {
-	background-color: #149bdf;
-	background-image: -o-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
-	background-image: -webkit-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
-	background-image: -moz-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
-	background-image: -ms-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
-	background-image: -webkit-gradient(linear, 0 100%, 100% 0, color-stop(0.25, rgba(255, 255, 255, 0.15)), color-stop(0.25, transparent), color-stop(0.5, transparent), color-stop(0.5, rgba(255, 255, 255, 0.15)), color-stop(0.75, rgba(255, 255, 255, 0.15)), color-stop(0.75, transparent), to(transparent));
-	background-image: linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
-	-webkit-background-size: 40px 40px;
-		 -moz-background-size: 40px 40px;
-			 -o-background-size: 40px 40px;
-					background-size: 40px 40px;
-}
-
-.progress.active .bar {
+.progress-anim > .progress-bar {
 	-webkit-animation: progress-bar-stripes 2s linear infinite;
 		 -moz-animation: progress-bar-stripes 2s linear infinite;
 			-ms-animation: progress-bar-stripes 2s linear infinite;
@@ -944,141 +930,143 @@ button.close {
 					animation: progress-bar-stripes 2s linear infinite;
 }
 
-.progress-danger .bar {
-	background-color: #dd514c;
-	background-image: -moz-linear-gradient(top, #ee5f5b, #c43c35);
-	background-image: -ms-linear-gradient(top, #ee5f5b, #c43c35);
-	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ee5f5b), to(#c43c35));
-	background-image: -webkit-linear-gradient(top, #ee5f5b, #c43c35);
-	background-image: -o-linear-gradient(top, #ee5f5b, #c43c35);
-	background-image: linear-gradient(top, #ee5f5b, #c43c35);
-	background-repeat: repeat-x;
-	filter: progid:dximagetransform.microsoft.gradient(startColorstr='#ee5f5b', endColorstr='#c43c35', GradientType=0);
-}
+.progress-danger > .progress-bar { background-color: #dd514c;}
+.progress-danger > .progress-bar-striped { background-color: #ee5f5b;}
 
-.progress-danger.progress-striped .bar {
-	background-color: #ee5f5b;
-	background-image: -webkit-gradient(linear, 0 100%, 100% 0, color-stop(0.25, rgba(255, 255, 255, 0.15)), color-stop(0.25, transparent), color-stop(0.5, transparent), color-stop(0.5, rgba(255, 255, 255, 0.15)), color-stop(0.75, rgba(255, 255, 255, 0.15)), color-stop(0.75, transparent), to(transparent));
-	background-image: -webkit-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
-	background-image: -moz-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
-	background-image: -ms-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
-	background-image: -o-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
-	background-image: linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
-}
+.progress-success > .progress-bar { background-color: #5eb95e;}
+.progress-success > .progress-bar-striped {	background-color: #62c462;}
 
-.progress-success .bar {
-	background-color: #5eb95e;
-	background-image: -moz-linear-gradient(top, #62c462, #57a957);
-	background-image: -ms-linear-gradient(top, #62c462, #57a957);
-	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#62c462), to(#57a957));
-	background-image: -webkit-linear-gradient(top, #62c462, #57a957);
-	background-image: -o-linear-gradient(top, #62c462, #57a957);
-	background-image: linear-gradient(top, #62c462, #57a957);
-	background-repeat: repeat-x;
-	filter: progid:dximagetransform.microsoft.gradient(startColorstr='#62c462', endColorstr='#57a957', GradientType=0);
-}
+.progress-info > .progress-bar { background-color: #4bb1cf;}
+.progress-info > .progress-bar-striped { background-color: #5bc0de;}
 
-.progress-success.progress-striped .bar {
-	background-color: #62c462;
-	background-image: -webkit-gradient(linear, 0 100%, 100% 0, color-stop(0.25, rgba(255, 255, 255, 0.15)), color-stop(0.25, transparent), color-stop(0.5, transparent), color-stop(0.5, rgba(255, 255, 255, 0.15)), color-stop(0.75, rgba(255, 255, 255, 0.15)), color-stop(0.75, transparent), to(transparent));
-	background-image: -webkit-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
-	background-image: -moz-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
-	background-image: -ms-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
-	background-image: -o-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
-	background-image: linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
-}
+.progress-warning > .progress-bar { background-color: #faa732;}
+.progress-warning > .progress-bar-striped {	background-color: #fbb450;}
 
-.progress-info .bar {
-	background-color: #4bb1cf;
-	background-image: -moz-linear-gradient(top, #5bc0de, #339bb9);
-	background-image: -ms-linear-gradient(top, #5bc0de, #339bb9);
-	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#5bc0de), to(#339bb9));
-	background-image: -webkit-linear-gradient(top, #5bc0de, #339bb9);
-	background-image: -o-linear-gradient(top, #5bc0de, #339bb9);
-	background-image: linear-gradient(top, #5bc0de, #339bb9);
-	background-repeat: repeat-x;
-	filter: progid:dximagetransform.microsoft.gradient(startColorstr='#5bc0de', endColorstr='#339bb9', GradientType=0);
-}
-
-.progress-info.progress-striped .bar {
-	background-color: #5bc0de;
-	background-image: -webkit-gradient(linear, 0 100%, 100% 0, color-stop(0.25, rgba(255, 255, 255, 0.15)), color-stop(0.25, transparent), color-stop(0.5, transparent), color-stop(0.5, rgba(255, 255, 255, 0.15)), color-stop(0.75, rgba(255, 255, 255, 0.15)), color-stop(0.75, transparent), to(transparent));
-	background-image: -webkit-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
-	background-image: -moz-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
-	background-image: -ms-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
-	background-image: -o-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
-	background-image: linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
-}
-
-.progress-warning .bar {
-	background-color: #faa732;
-	background-image: -moz-linear-gradient(top, #fbb450, #f89406);
-	background-image: -ms-linear-gradient(top, #fbb450, #f89406);
-	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#fbb450), to(#f89406));
-	background-image: -webkit-linear-gradient(top, #fbb450, #f89406);
-	background-image: -o-linear-gradient(top, #fbb450, #f89406);
-	background-image: linear-gradient(top, #fbb450, #f89406);
-	background-repeat: repeat-x;
-	filter: progid:dximagetransform.microsoft.gradient(startColorstr='#fbb450', endColorstr='#f89406', GradientType=0);
-}
-
-.progress-warning.progress-striped .bar {
-	background-color: #fbb450;
-	background-image: -webkit-gradient(linear, 0 100%, 100% 0, color-stop(0.25, rgba(255, 255, 255, 0.15)), color-stop(0.25, transparent), color-stop(0.5, transparent), color-stop(0.5, rgba(255, 255, 255, 0.15)), color-stop(0.75, rgba(255, 255, 255, 0.15)), color-stop(0.75, transparent), to(transparent));
-	background-image: -webkit-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
-	background-image: -moz-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
-	background-image: -ms-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
-	background-image: -o-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
-	background-image: linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+.progress-bar-striped {
+	background-color: #149bdf;
+	background-image: -webkit-linear-gradient(	-45deg, hsla(0, 0%, 100%, .15) 25%, 
+																							transparent 25%, 
+																							transparent 50%, 
+																							hsla(0, 0%, 100%, .15) 50%, 
+																							hsla(0, 0%, 100%, .15) 75%, 
+																							transparent 75%, 
+																							transparent
+																					 );
+	background-image:    -moz-linear-gradient(	-45deg, 
+																							hsla(0, 0%, 100%, .15) 25%, 
+																							transparent 25%, 
+																							transparent 50%, 
+																							hsla(0, 0%, 100%, .15) 50%, 
+																							hsla(0, 0%, 100%, .15) 75%, 
+																							transparent 75%, 
+																							transparent
+																						);
+	background-image:     -ms-linear-gradient(	-45deg, 
+																							hsla(0, 0%, 100%, .15) 25%, 
+																							transparent 25%, 
+																							transparent 50%, 
+																							hsla(0, 0%, 100%, .15) 50%, 
+																							hsla(0, 0%, 100%, .15) 75%, 
+																							transparent 75%, 
+																							transparent
+																						);
+	background-image:      -o-linear-gradient(	-45deg, 
+																							hsla(0, 0%, 100%, .15) 25%, 
+																							transparent 25%, 
+																							transparent 50%, 
+																							hsla(0, 0%, 100%, .15) 50%, 
+																							hsla(0, 0%, 100%, .15) 75%, 
+																							transparent 75%, 
+																							transparent
+																					 );
+	background-image:         linear-gradient(	-45deg, 
+																							hsla(0, 0%, 100%, .15) 25%, 
+																							transparent 25%, 
+																							transparent 50%, 
+																							hsla(0, 0%, 100%, .15) 50%, 
+																							hsla(0, 0%, 100%, .15) 75%, 
+																							transparent 75%, 
+																							transparent
+																					  );
+	-webkit-background-size: 40px 40px;
+		 -moz-background-size: 40px 40px;
+			 -o-background-size: 40px 40px;
+					background-size: 40px 40px;
 }
 
 @-webkit-keyframes progress-bar-stripes {
-	from {
-		background-position: 40px 0;
-	}
-	to {
-		background-position: 0 0;
-	}
+	from { background-position: 40px 0;}
+	to { background-position: 0 0;}
 }
 
 @-moz-keyframes progress-bar-stripes {
-	from {
-		background-position: 40px 0;
-	}
-	to {
-		background-position: 0 0;
-	}
+	from { background-position: 40px 0;}
+	to { background-position: 0 0;}
 }
 
 @-ms-keyframes progress-bar-stripes {
-	from {
-		background-position: 40px 0;
-	}
-	to {
-		background-position: 0 0;
-	}
+	from { background-position: 40px 0;}
+	to { background-position: 0 0;}
 }
 
 @-o-keyframes progress-bar-stripes {
-	from {
-		background-position: 0 0;
-	}
-	to {
-		background-position: 40px 0;
-	}
+	from { background-position: 0 0;}
+	to { background-position: 40px 0;}
 }
 
 @keyframes progress-bar-stripes {
-	from {
-		background-position: 40px 0;
-	}
-	to {
-		background-position: 0 0;
-	}
+	from { background-position: 40px 0;}
+	to { background-position: 0 0;}
 }
 
 /* -----------------------------------------------------------------------------
-	 1.d.vii &Drag and Drop
+	 1.d.vii &Autocomplete
+	 -------------------------------------------------------------------------- */
+.ui-autocomplete { 
+	position: absolute;
+	cursor: pointer;
+	background: #fff;
+	font-size: .75em;
+	border: 1px solid #b2b2b2;
+	border-bottom-left-radius: 4px;
+	border-bottom-right-radius: 4px;
+}
+
+.ui-menu {
+	list-style:none;
+	padding: 0;
+	margin: 0;
+}
+.ui-menu .ui-menu {
+	margin-top: -3px;
+}
+.ui-menu .ui-menu-item { border-bottom: 1px solid #eee;}
+.ui-menu .ui-menu-item a {
+	display: block;
+	color: inherit;
+	padding: .4em .5em;
+	line-height: 1.5;
+}
+.ui-menu .ui-menu-item a.ui-state-hover,
+.ui-menu .ui-menu-item a.ui-state-active {
+	font-weight: normal;
+	background-color: #e4eef5;
+	background-image: -webkit-linear-gradient(top, transparent, hsla(0, 0%, 100%, .1));
+	background-image:    -moz-linear-gradient(top, transparent, hsla(0, 0%, 100%, .1));
+	background-image:      -o-linear-gradient(top, transparent, hsla(0, 0%, 100%, .1));
+	background-image:     -ms-linear-gradient(top, transparent, hsla(0, 0%, 100%, .1));
+	background-image:         linear-gradient(top, transparent, hsla(0, 0%, 100%, .1));
+}
+
+.ui-menu-item .img-block > .img { 
+	background: transparent url(http://placekitten.com/g/20/20) no-repeat center center;
+	width: 20px;
+	height: 20px;
+	margin-right: .5em;
+}
+
+/* -----------------------------------------------------------------------------
+	 1.d.viii &Drag and Drop
 	 -------------------------------------------------------------------------- */
 .files-drag-tip {
 	-moz-border-radius: 5px;
@@ -1187,6 +1175,10 @@ button.close {
 /* =============================================================================
 	 3.a &Forms
 	 ========================================================================== */
+.field {
+	position: relative;
+}
+
 input, textarea {
 	margin-bottom: 1em;
 }
@@ -1270,7 +1262,7 @@ input, textarea {
 
 	border: 1px solid #cccccc;
 	border-color: #e6e6e6 #e6e6e6 #bfbfbf;
-	border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+	border-color: hsla(0, 0%, 0%, .1) hsla(0, 0%, 0%, .1) rgba(0, 0, 0, 0.25);
 
 	border-radius: 2px;
 
