@@ -150,6 +150,7 @@ $().ready(function() {
 		select: function( event, ui ) {
 			$( "#autocomplete2" ).val( ui.item.label );
 			$( "#autocomplete2-id" ).val( ui.item.value );
+			return false;
 		}
 	})
 	.data( "autocomplete" )._renderItem = function( ul, item ) {
@@ -162,5 +163,37 @@ $().ready(function() {
 						"<span>" + item.label + "</span><br><small>" + item.desc + "</small></div></a>" )
 			.appendTo( ul );
 	};
+
+	//	-----------------------------------------------------------------------------
+	//	Autocomplete3
+	//	-----------------------------------------------------------------------------
+
+	$( "#autocomplete3" ).autocomplete({
+		source: autocomplete2Data,
+		appendTo: "#autocomplete3-container",
+		focus: function(event, ui) {
+			return false;
+		},
+		select: function( event, ui ) {
+			$( "#autocomplete3" ).val("");
+			$( "#autocomplete3-id" ).val( ui.item.value );
+			$( "#autocomplete3-container .token-list-input" ).parent().before("\n<li class='token-list-item token-list-token'>" + ui.item.label + "</li>\n");
+			return false;
+		}
+	})
+	.data( "autocomplete" )._renderItem = function( ul, item ) {
+		return $( "<li></li>" )
+			.data( "item.autocomplete", item )
+			.append(
+				"<a class='img-block cf'>" +
+					"<img class='img' src='http://placekitten.com/20/20'/>" +
+					"<div class='img-block-content'>" +
+						"<span>" + item.label + "</span><br><small>" + item.desc + "</small></div></a>" )
+			.appendTo( ul );
+	};
+
+	$( ".token-list" ).on("click", function(e){
+		$(this).find(".token-list-input").focus();
+	});
 	
 });

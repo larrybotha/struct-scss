@@ -436,6 +436,12 @@ h6, .fs-zeta    { font-size:16px; font-size:1rem; /* 16px */ line-height:1.5; /*
 	 -------------------------------------------------------------------------- */
 p.error, span.error { color: #CC3333;}
 
+.list-reset {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+
 .va-t { vertical-align: top;}
 .va-m { vertical-align: middle;}
 .va-b { vertical-align: bottom;}
@@ -1063,6 +1069,37 @@ button.close {
 	width: 20px;
 	height: 20px;
 	margin-right: .5em;
+}
+
+.token-list {
+	position: relative;
+	display: block;
+	border: 1px inset;
+	cursor: text;
+	padding-left: .25em;
+}
+
+.token-list + .ui-autocomplete {
+	left: 0 !important;
+}
+
+.token-list-input {
+	padding: 0;
+	margin: 0;
+	border: 0;
+	outline: none;
+}
+
+.token-list-item {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.token-list-token {
+	line-height: 1;
+	padding: 2px .25em 1px;
+	border: 1px solid #666;
+	border-radius: 3px;
 }
 
 /* -----------------------------------------------------------------------------
