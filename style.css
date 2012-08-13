@@ -1101,21 +1101,14 @@ a.label:hover {
 	 1.d.viii &Drag and Drop
 	 -------------------------------------------------------------------------- */
 .files-drag-tip {
-	-moz-border-radius: 5px;
-	-webkit-border-radius: 5px;
-	-o-border-radius: 5px;
-	-ms-border-radius: 5px;
-	-khtml-border-radius: 5px;
+	display: inline-block;
 	border-radius: 5px;
 	font-size: 11px;
 	font-size: 1.1rem;
 	/*display: none;*/
-	margin: 0 0 0 10px;
-	padding: 6px 10px 1px 10px;
-	min-height: 20px;
+	padding: .1em 1em;
 	color: #999;
-	background-color: #F6F6F6;
-	min-width: 190px;
+	background-color: #f6f6f6;
 }
 
 /* =============================================================================
