@@ -74,7 +74,6 @@ $().ready(function() {
 	//	-----------------------------------------------------------------------------
 	//	Autocomplete1
 	//	-----------------------------------------------------------------------------
-
 	var autocomplete1Data = [
 			"Anna Conda",
 			"Ben Dover",
@@ -167,7 +166,6 @@ $().ready(function() {
 	//	-----------------------------------------------------------------------------
 	//	Autocomplete3
 	//	-----------------------------------------------------------------------------
-
 	$( "#autocomplete3" ).autocomplete({
 		source: autocomplete2Data,
 		appendTo: "#autocomplete3-container",
@@ -177,7 +175,7 @@ $().ready(function() {
 		select: function( event, ui ) {
 			$( "#autocomplete3" ).val("");
 			$( "#autocomplete3-id" ).val( ui.item.value );
-			$( "#autocomplete3-container .token-list-input" ).parent().before("\n<li class='token-list-item token-list-token'>" + ui.item.label + "</li>\n");
+			$( "#autocomplete3-container .token-list-input" ).parent().before("\n<li class='token-list-item token-list-token'>" + ui.item.label + "<button class='close'>×</button></li>\n");
 			return false;
 		}
 	})
