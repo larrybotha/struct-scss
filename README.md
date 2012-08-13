@@ -1,4 +1,6 @@
 styleguide
 ==========
 
-A base for creating a styleguide of elements that may appear in a website
+A base for creating a styleguide of elements that may appear in a website.
+
+[DEMO](http://larrybotha.github.com/styleguide)
