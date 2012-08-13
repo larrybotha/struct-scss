@@ -848,10 +848,6 @@ a.label:hover {
 	margin-bottom: 0;
 }
 
-.alert-block p + p {
-	margin-top: 5px;
-}
-
 .alert .close {
 	position: relative;
 	top: -2px;
@@ -859,23 +855,21 @@ a.label:hover {
 	line-height: 18px;
 }
 
-button.close {
+.close {
+	display: inline-block;
+	float: right;
+	background: transparent;
+	font-size: 1em;
+	font-weight: bold;
+	line-height: 1;
+	color: #bbb;
+	color: hsla(0, 0%, 0%, .2);
+	text-align: center;
+	text-shadow: 0 1px 0 #fff;
+	margin-left: .5em;
 	padding: 0;
 	cursor: pointer;
-	background: transparent;
 	border: 0;
-	-webkit-appearance: none;
-}
-
-.close {
-	float: right;
-	font-size: 20px;
-	font-weight: bold;
-	line-height: 18px;
-	color: #000000;
-	text-shadow: 0 1px 0 #ffffff;
-	opacity: 0.2;
-	filter: alpha(opacity=20);
 }
 
 /* -----------------------------------------------------------------------------
@@ -1098,29 +1092,23 @@ button.close {
 .token-list-token {
 	line-height: 1;
 	padding: 2px .25em 1px;
-	border: 1px solid #666;
+	border: 1px solid #999;
 	border-radius: 3px;
+	vertical-align: middle;
 }
 
 /* -----------------------------------------------------------------------------
 	 1.d.viii &Drag and Drop
 	 -------------------------------------------------------------------------- */
 .files-drag-tip {
-	-moz-border-radius: 5px;
-	-webkit-border-radius: 5px;
-	-o-border-radius: 5px;
-	-ms-border-radius: 5px;
-	-khtml-border-radius: 5px;
+	display: inline-block;
 	border-radius: 5px;
 	font-size: 11px;
 	font-size: 1.1rem;
 	/*display: none;*/
-	margin: 0 0 0 10px;
-	padding: 6px 10px 1px 10px;
-	min-height: 20px;
+	padding: .1em 1em;
 	color: #999;
-	background-color: #F6F6F6;
-	min-width: 190px;
+	background-color: #f6f6f6;
 }
 
 /* =============================================================================
