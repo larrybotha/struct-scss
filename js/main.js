@@ -194,6 +194,17 @@ $().ready(function() {
 		$(this).find(".token-list-input").focus();
 	});
 
+	$("#autocomplete3").live("keydown", function(e){
+		$this = $(this);
+		if ( $this.parent().prev() && $this.val() === "" && e.keyCode === 8 ) {
+			$this.parent().prev().remove();
+		}
+	});
+
+	//	*****************************************************************************
+	//	.close
+	//	*****************************************************************************
+
 	$(".close").live("click", function(e){
 		$(this).parent().remove();
 	});
