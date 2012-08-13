@@ -101,11 +101,11 @@
 .fixateSkin .mceSplitButtonActive a.mceOpen {border-left:0;}
 
 /* ColorSplitButton */
-.fixateSkin div.mceColorSplitMenu table {background:#FFF; border:1px solid gray}
+.fixateSkin div.mceColorSplitMenu table {background:#fff; border:1px solid gray}
 .fixateSkin .mceColorSplitMenu td {padding:2px}
 .fixateSkin .mceColorSplitMenu a {display:block; width:9px; height:9px; overflow:hidden; border:1px solid #808080}
 .fixateSkin .mceColorSplitMenu td.mceMoreColors {padding:1px 3px 1px 1px}
-.fixateSkin .mceColorSplitMenu a.mceMoreColors {width:100%; height:auto; text-align:center; font-family:Tahoma,Verdana,Arial,Helvetica; font-size:11px; line-height:20px; border:1px solid #FFF}
+.fixateSkin .mceColorSplitMenu a.mceMoreColors {width:100%; height:auto; text-align:center; font-family:Tahoma,Verdana,Arial,Helvetica; font-size:11px; line-height:20px; border:1px solid #fff}
 .fixateSkin .mceColorSplitMenu a.mceMoreColors:hover {border:1px solid #0A246A; background-color:#B6BDD2}
 .fixateSkin a.mceMoreColors:hover {border:1px solid #0A246A}
 .fixateSkin .mceColorPreview {margin-left:2px; width:16px; height:4px; overflow:hidden; background:#9a9b9a}
@@ -115,7 +115,7 @@
 .fixateSkin .mceMenu {position:absolute; left:0; top:0; z-index:1000; border:1px solid #D4D0C8; direction:ltr}
 .fixateSkin .mceNoIcons span.mceIcon {width:0;}
 .fixateSkin .mceNoIcons a .mceText {padding-left: 14px; padding-left: 1rem;}
-.fixateSkin .mceMenu table {background:#FFF}
+.fixateSkin .mceMenu table {background:#fff}
 .fixateSkin .mceMenu a, .fixateSkin .mceMenu span, .fixateSkin .mceMenu {display:block}
 .fixateSkin .mceMenu td {height:20px}
 .fixateSkin .mceMenu a {position:relative;padding:3px 0 4px 0}
@@ -136,7 +136,7 @@
 .fixateSkin .mceMenuItem td, .fixateSkin .mceMenuItem th {line-height: normal}
 
 /* Progress,Resize */
-.fixateSkin .mceBlocker {position:absolute; left:0; top:0; z-index:1000; opacity:0.5; -ms-filter:'alpha(opacity=50)'; filter:alpha(opacity=50); background:#FFF}
+.fixateSkin .mceBlocker {position:absolute; left:0; top:0; z-index:1000; opacity:0.5; -ms-filter:'alpha(opacity=50)'; filter:alpha(opacity=50); background:#fff}
 .fixateSkin .mceProgress {position:absolute; left:0; top:0; z-index:1001; background:url(img/progress.gif) no-repeat; width:32px; height:32px; margin:-16px 0 0 -16px}
 
 /* Rtl */
