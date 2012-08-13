@@ -65,7 +65,7 @@
 .fixateSkin .mceListBox .mceText {padding: .5em 1em; text-align:left; border-right:0; background: transparent; font-family:Tahoma,Verdana,Arial,Helvetica; font-size:11px; line-height:1.5; border:1px solid transparent; border-right:0; overflow:hidden; cursor: pointer;}
 .fixateSkin .mceListBox .mceOpen { padding: .025em .75em; width:9px; margin-right:2px; border:1px solid transparent; border-left:0; cursor: pointer;}
 .fixateSkin .mceListBox .mceOpen:before {
-	font-family: FontAwesome;
+	font-family: FontAwesome-webfont;
   font-weight: normal;
   font-style: normal;
   font-size: 14px;
