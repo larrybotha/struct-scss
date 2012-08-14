@@ -1258,12 +1258,12 @@ input, textarea {
 
 .suffix-icon-block {
 	border-left: 0;
-	border-top-right-radius: 2px;
-	border-bottom-right-radius: 2px;
-	-moz-border-radius-topright: 2px;
-	-moz-border-radius-bottomright: 2px;
-	-webkit-border-top-right-radius: 2px;
+	   -webkit-border-top-right-radius: 2px;
 	-webkit-border-bottom-right-radius: 2px;
+	       -moz-border-radius-topright: 2px;
+	    -moz-border-radius-bottomright: 2px;
+	           border-top-right-radius: 2px;
+	        border-bottom-right-radius: 2px;
 }
 
 .prefix-icon-block:before,
