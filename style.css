@@ -1179,8 +1179,6 @@ a.label:hover {
 	font-family: Quattro, Verdana, sans-serif;
 	font-size: 14px; 
 	font-size: .875rem; /* 14px / 16 = .875 */ 
-	margin: 16px 0;
-	margin: 1rem 0;
 	text-transform: uppercase;
 }
 
