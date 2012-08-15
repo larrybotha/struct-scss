@@ -368,7 +368,8 @@ h6, .fs-zeta    { font-size:16px; font-size:1rem; /* 16px */ line-height:1.5; /*
 	3. INTERACTION
 		3.a Forms
 		3.b Buttons
-		3.c Wysiwyg
+		3.c Paginatoin
+		3.d Wysiwyg
 		
 	4. PAGE SPECIFIC STYLES
 		4.a ...
@@ -1104,7 +1105,7 @@ a.label:hover {
 	font-size: 11px;
 	font-size: 1.1rem;
 	/*display: none;*/
-	padding: .1em 1em;
+	padding: .15em 1em .05em;
 	color: #999;
 	background-color: #f6f6f6;
 }
@@ -1381,8 +1382,25 @@ input, textarea {
 	border-bottom-left-radius: 0;
 }
 
+
 /* =============================================================================
-	 3.c &Wysiwyg
+	 3.c &Pagination
+	 ========================================================================== */
+.page-numbers {
+  float: left;
+  padding: 0 14px;
+  line-height: 34px;
+  text-decoration: none;
+  border: 1px solid #ddd;
+  border-left-width: 0;
+}
+
+.page-numbers:first-child {
+	border-left-width: 1px;
+}
+
+/* =============================================================================
+	 3.d &Wysiwyg
 	 ========================================================================== */
 
 
