@@ -36,16 +36,34 @@
 	<div class="full-header">
 
 		<header class="area-header wrap" role="banner">
+
+			<h1>Navigation</h1>
 			
-			<nav role="navigation">
-				<ul class="primary-nav menu">
-					<li class="menu-item current-menu-item"><a href="#">home</a></li>
-					<li class="menu-item"><a href="#">2</a></li>
-					<li class="menu-item"><a href="#">3</a></li>
-					<li class="menu-item"><a href="#">4</a></li>
-					<li class="menu-item"><a href="#">5</a></li>
-				</ul><!-- .primary-nav -->
-			</nav><!-- .nav end -->
+			<div>
+				<div class="menu-primary ar vam">
+						<label for="menu-collapse-checkbox" class="menu-collapse-button btn"><span class="icon icon-align-justify"></span></label>
+				</div>
+				<input type="checkbox" id="menu-collapse-checkbox" class="hidden menu-collapse-checkbox">
+				<nav class="menu-collapse cf" role="navigation">
+					<ul class="menu-primary menu">
+						<li class="menu-item current-menu-item"><a href="javascript:void(0);">home</a></li>
+						<li class="menu-item">
+							<a href="javascript:void(0);">item 1</a>
+							<ul class="menu sub-menu">
+								<li><a href="javascript:void(0);">item 1 child 1</a></li>
+								<li><a href="javascript:void(0);">item 1 child 2</a></li>
+								<li><a href="javascript:void(0);">item 1 child 3</a></li>
+								<li><a href="javascript:void(0);">item 1 child 4</a></li>
+							</ul>
+						</li>
+						<li class="menu-item"><a href="javascript:void(0);">item 2</a></li>
+						<li class="menu-item"><a href="javascript:void(0);">item 3</a></li>
+						<li class="menu-item"><a href="javascript:void(0);">item 4</a></li>
+					</ul><!-- .menu-primary -->
+				</nav><!-- .menu-collapse -->
+			</div>
+
+			<hr>
 			
 		</header><!-- .area-header end -->
 
@@ -750,10 +768,10 @@
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 	<script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.2.min.js"><\/script>')</script>
 
-<script type="text/javascript" src="js/libs/jquery-ui-1.8.22.custom.min.js"></script>
-<script type="text/javascript" src="js/libs/tiny_mce/jquery.tinymce.js"></script>
-<script type="text/javascript" src="js/gridpak.js"></script>
-<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript" src="js/libs/jquery-ui-1.8.22.custom.min.js"></script>
+	<script type="text/javascript" src="js/libs/tiny_mce/jquery.tinymce.js"></script>
+	<script type="text/javascript" src="js/gridpak.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
 	
 </body>
 </html>
