@@ -44,6 +44,7 @@ $().ready(function() {
 
 		// Example content CSS (should be your site CSS)
 		content_css : "style.css",
+		width: "100%",
 
 		// Drop lists for link/image/media/template dialogs
 		template_external_list_url : "lists/template_list.js",
@@ -218,8 +219,8 @@ $().ready(function() {
 			"background": "#2d2d2d",
 			"color": "#fff",
 			"text-align": "center",
-			"bottom": 2 + "em",
-			"right": 2 + "em",
+			"bottom": 1 + "em",
+			"right": 1 + "em",
 			"margin": "0 auto",
 			"padding": "0 .5em",
 			"border-radius": 0.25 + "em",
