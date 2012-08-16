@@ -36,26 +36,43 @@
 	<div class="full-header">
 
 		<header class="area-header wrap" role="banner">
-		
-			<a href="#" class="logo">
-				<img src="#" width="" height="" alt="" />
-			</a>
+
+			<h1>Navigation</h1>
 			
-			<nav role="navigation">
-				<ul class="primary-nav menu">
-					<li class="menu-item current-menu-item"><a href="#">home</a></li>
-					<li class="menu-item"><a href="#">2</a></li>
-					<li class="menu-item"><a href="#">3</a></li>
-					<li class="menu-item"><a href="#">4</a></li>
-					<li class="menu-item"><a href="#">5</a></li>
-				</ul><!-- .primary-nav -->
-			</nav><!-- .nav end -->
+			<div>
+				<!-- allow screenreaders to skip navigation -->
+				<a class="visuallyhidden" href="#main">skip navigation and go to main content</a>
+
+				<div class="menu-collapse-container ar va-m">
+					<label for="menu-collapse-checkbox" class="menu-collapse-button btn"><span class="visuallyhidden">trigger to expand navigation menu</span><span class="icon icon-align-justify"></span></label>
+				</div>
+				<input type="checkbox" id="menu-collapse-checkbox" class="hidden menu-collapse-checkbox">
+				<nav class="menu-collapse cf" role="navigation">
+					<ul class="menu-primary menu">
+						<li class="menu-item current-menu-item"><a href="javascript:void(0);">home</a></li>
+						<li class="menu-item">
+							<a href="javascript:void(0);">item 1</a>
+							<ul class="menu sub-menu">
+								<li><a href="javascript:void(0);">item 1 child 1</a></li>
+								<li><a href="javascript:void(0);">item 1 child 2</a></li>
+								<li><a href="javascript:void(0);">item 1 child 3</a></li>
+								<li><a href="javascript:void(0);">item 1 child 4</a></li>
+							</ul>
+						</li>
+						<li class="menu-item"><a href="javascript:void(0);">item 2</a></li>
+						<li class="menu-item"><a href="javascript:void(0);">item 3</a></li>
+						<li class="menu-item"><a href="javascript:void(0);">item 4</a></li>
+					</ul><!-- .menu-primary -->
+				</nav><!-- .menu-collapse -->
+			</div>
+
+			<hr>
 			
 		</header><!-- .area-header end -->
 
 	</div><!-- .full-header -->
 	
-	<div class="full-content">
+	<div id="main" class="full-content">
 
 		<div class="area-content wrap">
 		
@@ -187,6 +204,22 @@
 
 				<hr>
 
+				<h2>Pagination</h2>
+				<div class="cf">
+					<div class="page-pagination pagination">
+					  <a class="prev page-numbers" href="javascript:void(0);">&laquo; Previous</a> 
+					  <a class="page-numbers" href="javascript:void(0);">1</a> 
+					  <span class="page-numbers current">2</span> 
+					  <a class="page-numbers" href="javascript:void(0);">3</a> 
+					  <a class="page-numbers" href="javascript:void(0);">4</a> 
+					  <span class="page-numbers dots">...</span> 
+					  <a class="page-numbers" href="javascript:void(0);">6</a> 
+					  <a class="next page-numbers" href="javascript:void(0);">Next &raquo;</a>
+					</div>
+				</div>
+
+				<hr>
+
 				<h1>Labels</h1>
 
 				<p>Lorem ipsum <span class="label label-label">label</span> sit amet, consectetur adipisicing elit.</p>
@@ -241,6 +274,13 @@
 
 				<div>
 					<div>
+						<label for="">label</label>
+					</div>
+					<input class="d-block" type="text" placeholder="full width input">
+				</div>
+
+				<div>
+					<div>
 						 <label for="">label</label>
 					 </div>
 					 <input type="text"><span>.textsuffix.com</span>
@@ -264,38 +304,36 @@
 					<div>
 						 <label for="">label</label>
 					</div>
-					<span class="prefix-icon-container">
+					<div class="prefix-icon-container">
 						<span class="icon icon-link"></span><input type="text">
-					</span>
+					</div>
 				</div>
 
 				<div>
 					<div>
 						 <label for="">label</label>
 					</div>
-					<span class="suffix-icon-container">
+					<div class="suffix-icon-container">
 						<input type="text"><span class="icon icon-link"></span>
-					</span>
+					</div>
 				</div>
 
 				<div>
 					<div>
 						 <label for="">label</label>
 					</div>
-					<span class="prefix-icon-block icon icon-link"></span>
-					<span class="prefix-icon-container">
+					<span class="prefix-icon-block icon icon-link"></span><div class="prefix-icon-container">
 						<span class="prefix-icon icon icon-link"></span><input type="text">
-					</span>
+					</div>
 				</div>
 
 				<div>
 					<div>
 						 <label for="">label</label>
 					</div>
-					<span class="suffix-icon-container">
+					<div class="suffix-icon-container">
 						<input type="text"><span class="icon icon-link"></span>
-					</span>
-					<span class="prefix-icon-block icon icon-link"></span>
+					</div><span class="prefix-icon-block icon icon-link"></span>
 				</div>
 
 				<div>
@@ -303,6 +341,13 @@
 						<label for="">label</label>
 					</div>
 					<textarea name="" id="" cols="30" rows="10" placeholder="placeholder text"></textarea>
+				</div>
+
+				<div>
+					<div>
+						<label for="">label</label>
+					</div>
+					<textarea class="d-block" name="" id="" cols="30" rows="10" placeholder="full width textarea"></textarea>
 				</div>
 
 				<h2>Radios and Checkboxes</h2>
@@ -322,6 +367,260 @@
 						<input type="checkbox" id="checkbox2"> <label for="checkbox2">label</label>
 					</div>
 				</div>
+
+				<hr>
+
+				<h2>Gallery</h2>
+
+				<h3>Gallery 2 Columns</h3>
+				<div class="gallery gallery-columns-2 cf">
+					<dl class="gallery-item">
+						<dt class="gallery-icon">
+							<a href="javascript:void(0);"><img src="http://placekitten.com/700/700" /></a>
+						</dt>
+						<dd class="gallery-caption">
+							<h3><a href="javascript:void(0);">caption</a></h3>
+						</dd>
+					</dl>
+					<dl class="gallery-item">
+						<dt class="gallery-icon">
+							<a href="javascript:void(0);"><img src="http://placekitten.com/700/700" /></a>
+						</dt>
+						<dd class="gallery-caption">
+							<h3><a href="javascript:void(0);">caption</a></h3>
+						</dd>
+					</dl>
+					<br style="clear: both"><!-- displayed after every 2 items in gallery -->
+					<dl class="gallery-item">
+						<dt class="gallery-icon">
+							<a href="javascript:void(0);"><img src="http://placekitten.com/700/700" /></a>
+						</dt>
+						<dd class="gallery-caption">
+							<h3><a href="javascript:void(0);">caption</a></h3>
+						</dd>
+					</dl>
+					<dl class="gallery-item">
+						<dt class="gallery-icon">
+							<a href="javascript:void(0);"><img src="http://placekitten.com/700/700" /></a>
+						</dt>
+						<dd class="gallery-caption">
+							<h3><a href="javascript:void(0);">caption</a></h3>
+						</dd>
+					</dl>
+					<br style="clear: both"><!-- displayed after every 2 items in gallery -->
+				</div>
+
+				<h3>Gallery 3 Columns</h3>
+				<div class="gallery gallery-columns-3 cf">
+					<dl class="gallery-item">
+						<dt class="gallery-icon">
+							<a href="javascript:void(0);"><img src="http://placekitten.com/500/500" /></a>
+						</dt>
+						<dd class="gallery-caption">
+							<h3><a href="javascript:void(0);">caption</a></h3>
+						</dd>
+					</dl>
+					<dl class="gallery-item">
+						<dt class="gallery-icon">
+							<a href="javascript:void(0);"><img src="http://placekitten.com/500/500" /></a>
+						</dt>
+						<dd class="gallery-caption">
+							<h3><a href="javascript:void(0);">caption</a></h3>
+						</dd>
+					</dl>
+					<dl class="gallery-item">
+						<dt class="gallery-icon">
+							<a href="javascript:void(0);"><img src="http://placekitten.com/500/500" /></a>
+						</dt>
+						<dd class="gallery-caption">
+							<h3><a href="javascript:void(0);">caption</a></h3>
+						</dd>
+					</dl>
+					<br style="clear: both"><!-- displayed after every 3 items in gallery -->
+					<dl class="gallery-item">
+						<dt class="gallery-icon">
+							<a href="javascript:void(0);"><img src="http://placekitten.com/500/500" /></a>
+						</dt>
+						<dd class="gallery-caption">
+							<h3><a href="javascript:void(0);">caption</a></h3>
+						</dd>
+					</dl>
+					<dl class="gallery-item">
+						<dt class="gallery-icon">
+							<a href="javascript:void(0);"><img src="http://placekitten.com/500/500" /></a>
+						</dt>
+						<dd class="gallery-caption">
+							<h3><a href="javascript:void(0);">caption</a></h3>
+						</dd>
+					</dl>
+					<dl class="gallery-item">
+						<dt class="gallery-icon">
+							<a href="javascript:void(0);"><img src="http://placekitten.com/500/500" /></a>
+						</dt>
+						<dd class="gallery-caption">
+							<h3><a href="javascript:void(0);">caption</a></h3>
+						</dd>
+					</dl>
+					<br style="clear: both"><!-- displayed after every 3 items in gallery -->
+				</div>
+
+				<h3>Gallery 4 Columns</h3>
+				<div class="gallery gallery-columns-4 cf">
+					<dl class="gallery-item">
+						<dt class="gallery-icon">
+							<a href="javascript:void(0);"><img src="http://placekitten.com/350/350" /></a>
+						</dt>
+						<dd class="gallery-caption">
+							<h3><a href="javascript:void(0);">caption</a></h3>
+						</dd>
+					</dl>
+					<dl class="gallery-item">
+						<dt class="gallery-icon">
+							<a href="javascript:void(0);"><img src="http://placekitten.com/350/350" /></a>
+						</dt>
+						<dd class="gallery-caption">
+							<h3><a href="javascript:void(0);">caption</a></h3>
+						</dd>
+					</dl>
+					<dl class="gallery-item">
+						<dt class="gallery-icon">
+							<a href="javascript:void(0);"><img src="http://placekitten.com/350/350" /></a>
+						</dt>
+						<dd class="gallery-caption">
+							<h3><a href="javascript:void(0);">caption</a></h3>
+						</dd>
+					</dl>
+					<dl class="gallery-item">
+						<dt class="gallery-icon">
+							<a href="javascript:void(0);"><img src="http://placekitten.com/350/350" /></a>
+						</dt>
+						<dd class="gallery-caption">
+							<h3><a href="javascript:void(0);">caption</a></h3>
+						</dd>
+					</dl>
+					<br style="clear: both"><!-- displayed after every 4 items in gallery -->
+					<dl class="gallery-item">
+						<dt class="gallery-icon">
+							<a href="javascript:void(0);"><img src="http://placekitten.com/350/350" /></a>
+						</dt>
+						<dd class="gallery-caption">
+							<h3><a href="javascript:void(0);">caption</a></h3>
+						</dd>
+					</dl>
+					<dl class="gallery-item">
+						<dt class="gallery-icon">
+							<a href="javascript:void(0);"><img src="http://placekitten.com/350/350" /></a>
+						</dt>
+						<dd class="gallery-caption">
+							<h3><a href="javascript:void(0);">caption</a></h3>
+						</dd>
+					</dl>
+					<dl class="gallery-item">
+						<dt class="gallery-icon">
+							<a href="javascript:void(0);"><img src="http://placekitten.com/350/350" /></a>
+						</dt>
+						<dd class="gallery-caption">
+							<h3><a href="javascript:void(0);">caption</a></h3>
+						</dd>
+					</dl>
+					<dl class="gallery-item">
+						<dt class="gallery-icon">
+							<a href="javascript:void(0);"><img src="http://placekitten.com/350/350" /></a>
+						</dt>
+						<dd class="gallery-caption">
+							<h3><a href="javascript:void(0);">caption</a></h3>
+						</dd>
+					</dl>
+					<br style="clear: both"><!-- displayed after every 4 items in gallery -->
+				</div>
+
+				<h3>Gallery 5 Columns</h3>
+				<div class="gallery gallery-columns-5 cf">
+					<dl class="gallery-item">
+						<dt class="gallery-icon">
+							<a href="javascript:void(0);"><img src="http://placekitten.com/250/250" /></a>
+						</dt>
+						<dd class="gallery-caption">
+							<h3><a href="javascript:void(0);">caption</a></h3>
+						</dd>
+					</dl>
+					<dl class="gallery-item">
+						<dt class="gallery-icon">
+							<a href="javascript:void(0);"><img src="http://placekitten.com/250/250" /></a>
+						</dt>
+						<dd class="gallery-caption">
+							<h3><a href="javascript:void(0);">caption</a></h3>
+						</dd>
+					</dl>
+					<dl class="gallery-item">
+						<dt class="gallery-icon">
+							<a href="javascript:void(0);"><img src="http://placekitten.com/250/250" /></a>
+						</dt>
+						<dd class="gallery-caption">
+							<h3><a href="javascript:void(0);">caption</a></h3>
+						</dd>
+					</dl>
+					<dl class="gallery-item">
+						<dt class="gallery-icon">
+							<a href="javascript:void(0);"><img src="http://placekitten.com/250/250" /></a>
+						</dt>
+						<dd class="gallery-caption">
+							<h3><a href="javascript:void(0);">caption</a></h3>
+						</dd>
+					</dl>
+					<dl class="gallery-item">
+						<dt class="gallery-icon">
+							<a href="javascript:void(0);"><img src="http://placekitten.com/250/250" /></a>
+						</dt>
+						<dd class="gallery-caption">
+							<h3><a href="javascript:void(0);">caption</a></h3>
+						</dd>
+					</dl>
+					<br style="clear: both"><!-- displayed after every 5 items in gallery -->
+					<dl class="gallery-item">
+						<dt class="gallery-icon">
+							<a href="javascript:void(0);"><img src="http://placekitten.com/250/250" /></a>
+						</dt>
+						<dd class="gallery-caption">
+							<h3><a href="javascript:void(0);">caption</a></h3>
+						</dd>
+					</dl>
+					<dl class="gallery-item">
+						<dt class="gallery-icon">
+							<a href="javascript:void(0);"><img src="http://placekitten.com/250/250" /></a>
+						</dt>
+						<dd class="gallery-caption">
+							<h3><a href="javascript:void(0);">caption</a></h3>
+						</dd>
+					</dl>
+					<dl class="gallery-item">
+						<dt class="gallery-icon">
+							<a href="javascript:void(0);"><img src="http://placekitten.com/250/250" /></a>
+						</dt>
+						<dd class="gallery-caption">
+							<h3><a href="javascript:void(0);">caption</a></h3>
+						</dd>
+					</dl>
+					<dl class="gallery-item">
+						<dt class="gallery-icon">
+							<a href="javascript:void(0);"><img src="http://placekitten.com/250/250" /></a>
+						</dt>
+						<dd class="gallery-caption">
+							<h3><a href="javascript:void(0);">caption</a></h3>
+						</dd>
+					</dl>
+					<dl class="gallery-item">
+						<dt class="gallery-icon">
+							<a href="javascript:void(0);"><img src="http://placekitten.com/250/250" /></a>
+						</dt>
+						<dd class="gallery-caption">
+							<h3><a href="javascript:void(0);">caption</a></h3>
+						</dd>
+					</dl>
+					<br style="clear: both"><!-- displayed after every 5 items in gallery -->
+				</div>
+
+				<hr>
 
 				<h2>WYSIWYG</h2>
 
@@ -466,13 +765,16 @@
 
 	</div><!-- .full-footer -->
 
+	<div class="display-width"></div>
+
 	<!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 	<script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.2.min.js"><\/script>')</script>
 
-<script type="text/javascript" src="js/libs/jquery-ui-1.8.22.custom.min.js"></script>
-<script type="text/javascript" src="js/libs/tiny_mce/jquery.tinymce.js"></script>
-<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript" src="js/libs/jquery-ui-1.8.22.custom.min.js"></script>
+	<script type="text/javascript" src="js/libs/tiny_mce/jquery.tinymce.js"></script>
+	<script type="text/javascript" src="js/gridpak.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
 	
 </body>
 </html>
