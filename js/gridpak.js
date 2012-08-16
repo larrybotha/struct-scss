@@ -205,7 +205,7 @@ var gridpak = {
         var that = this;
 
         $(document).keyup(function(e) {
-            if (e.keyCode == 71) {
+            if (e.keyCode === 71) {
                 $("#gridpak").toggle();
             }
         });

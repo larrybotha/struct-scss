@@ -1481,7 +1481,6 @@ input, textarea {
 	border-left-width: 1rem;
 	float: left;
 	min-height: 100px;
-	background: hsla(0,0%,0%,.1);
 	margin-bottom: 16px;
 	margin-bottom: 1rem;
 	padding: 0;
