@@ -421,11 +421,18 @@ h6, .fs-zeta    { font-size:16px; font-size:1rem; /* 16px */ line-height:1.5; /*
 	margin-left: 0;
 }
 
-.menu > .menu-item { display: inline;}
+.menu > .menu-item { 
+	position: relative;
+	display: inline;
+}
 
 .menu-item > a { display: inline-block;}
 .ie7 .menu-item > a { zoom: 1;}
 
+.sub-menu {	
+	position: absolute;
+	display: none;
+}
 
 .menu-collapse-container .menu-collapse-button { 
 	background-image:     -ms-linear-gradient(top, hsla(0, 0%, 0%, .2), hsla(0, 0%, 0%, .2));
@@ -435,7 +442,7 @@ h6, .fs-zeta    { font-size:16px; font-size:1rem; /* 16px */ line-height:1.5; /*
 	background-image:    -moz-linear-gradient(top, hsla(0, 0%, 0%, .2), hsla(0, 0%, 0%, .2));
 
 	-webkit-box-shadow: inset 0 1px 0 hsla(0, 0%, 100%, .2), 0 1px 2px hsla(0, 0%, 0%, .05);
-	box-shadow: inset 0 1px 0 hsla(0, 0%, 100%, .2), 0 1px 2px hsla(0, 0%, 0%, .05);
+	        box-shadow: inset 0 1px 0 hsla(0, 0%, 100%, .2), 0 1px 2px hsla(0, 0%, 0%, .05);
 
 	margin: .5em;
 }
@@ -451,12 +458,10 @@ h6, .fs-zeta    { font-size:16px; font-size:1rem; /* 16px */ line-height:1.5; /*
 .menu-collapse { display: none;}
 .menu-collapse-checkbox:checked + .menu-collapse { display: block;}
 
-.menu-primary {
-	background-color: #222;
-}
+.menu-primary, 
+.menu {	background-color: #222;}
 
 .menu-primary .menu-item a {
-	position: relative;
 	display: block;
 	color: #ddd;
 	padding: .5em 1em;
@@ -466,87 +471,27 @@ h6, .fs-zeta    { font-size:16px; font-size:1rem; /* 16px */ line-height:1.5; /*
 
 .menu-primary .menu-item a:hover { background-color: #252525;}
 
-.menu-primary .sub-menu {
-	width: 100%;
-}
-.menu-primary .sub-menu .menu-item {
-	float: none;
-	width: 100%;
-}
+.menu-primary .sub-menu { position: relative;}
 
-.menu-primary .sub-menu .menu-item a {
-	background-color: #333;
-}
+.menu-primary .sub-menu a {	padding-left: 2em;}
 
-.menu-primary .sub-menu {
-	position: relative;
-}
-
-.menu-primary .sub-menu a { padding-left: 2em; }
-
-.sub-menu {
-	display: none;
-}
 .menu-item a:hover + .sub-menu,
-.sub-menu:hover {
-	display: block;
+.sub-menu:hover {	display: block;}
+
+@media all and (min-width: 800px) {
+	.menu-collapse-container { display: none;}
+	.menu-collapse { display: block;}
+
+	.menu-primary .menu-item a { display: inline-block;}
+
+	.menu-primary .sub-menu { position: absolute;}
+
+	.menu-primary .sub-menu a {	
+		min-width: 225px;
+		padding-left: 1em;
+		white-space: nowrap;
+	}
 }
-
-/*@media all and (min-width: 800px) {
-	p {font-size: 100%; margin-bottom: 1.5em; line-height: 1.25em;}	
-	.flexNav-touch .menu-primary,
-	.flexNav-no-touch .menu-primary {
-		display: block;	
-	}
-	.menu-button {
-		display: none;
-	}
-	.menu-primary .menu-item {
-		position: relative;
-		list-style: none;
-		float: left;
-		display: block;	
-		background-color: #333;	
-		width: 20%;		
-	}
-	.flexNav-no-touch .item-with-ul:hover > ul { 
-		opacity: 1;
-		top: 3.1em;	
-		position: absolute;	
-	}	
-	.menu-primary .menu-item a {
-		border-left: 1px solid #000;
-		border-bottom: none;		
-	}
-	.flexNav-no-touch .menu-primary .menu-item .sub-menu {
-		position: absolute; 
-		top: auto;
-		left: 0;
-		opacity: 0;
-		visibility: hidden;
-		height: 1px;
-		z-index: 1;			
-	}
-	.menu-primary .menu-item .sub-menu .menu-item a {
-		border-bottom: none;	
-	}	
-	.flexNav-touch .menu-primary .menu-item ul.sub-menu {
-		position: absolute; 
-		top: auto;
-		left: 0;
-		display: none;
-		z-index: 1;					
-	}	
-
-	.flexNav-no-touch .item-with-ul:hover > ul	 { 
-		visibility: visible;
-		opacity: 1;
-		height: auto;
-		display: block;	
-		border-right: 1px solid #000;
-		border-bottom: 1px solid #000;		
-	}			
-}*/
 
 
 /* =============================================================================

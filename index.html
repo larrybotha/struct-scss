@@ -40,8 +40,11 @@
 			<h1>Navigation</h1>
 			
 			<div>
+				<!-- allow screenreaders to skip navigation -->
+				<a class="visuallyhidden" href="#main">skip navigation and go to main content</a>
+
 				<div class="menu-collapse-container ar va-m">
-					<label for="menu-collapse-checkbox" class="menu-collapse-button btn"><span class="icon icon-align-justify"></span></label>
+					<label for="menu-collapse-checkbox" class="menu-collapse-button btn"><span class="visuallyhidden">trigger to expand navigation menu</span><span class="icon icon-align-justify"></span></label>
 				</div>
 				<input type="checkbox" id="menu-collapse-checkbox" class="hidden menu-collapse-checkbox">
 				<nav class="menu-collapse cf" role="navigation">
@@ -69,7 +72,7 @@
 
 	</div><!-- .full-header -->
 	
-	<div class="full-content">
+	<div id="main" class="full-content">
 
 		<div class="area-content wrap">
 		
