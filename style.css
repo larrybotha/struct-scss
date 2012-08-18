@@ -1185,11 +1185,13 @@ a.label:hover {
 	border-radius: 5px;
 	font-size: 11px;
 	font-size: 1.1rem;
-	/*display: none;*/
+	display: none;
 	padding: .15em 1em .05em;
 	color: #999;
 	background-color: #f6f6f6;
 }
+
+.field:hover .files-drag-tip { display: block;}
 
 /* =============================================================================
 	 1.e &Sidebar
