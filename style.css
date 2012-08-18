@@ -1170,11 +1170,11 @@ a.label:hover {
 }
 
 .token-list-token {
+	vertical-align: middle;
 	line-height: 1;
 	padding: 2px .25em 1px;
-	border: 1px solid #999;
-	border-radius: 3px;
-	vertical-align: middle;
+	border: 1px solid #aaa;
+	border-radius: 2px;
 }
 
 /* -----------------------------------------------------------------------------
