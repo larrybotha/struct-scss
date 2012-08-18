@@ -1182,7 +1182,7 @@ a.label:hover {
 	 -------------------------------------------------------------------------- */
 .files-drag-tip {
 	display: inline-block;
-	border-radius: 5px;
+	border-radius: 2px;
 	font-size: 11px;
 	font-size: 1.1rem;
 	display: none;
