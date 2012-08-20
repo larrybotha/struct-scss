@@ -475,6 +475,8 @@ h6, .fs-zeta    { font-size:16px; font-size:1rem; /* 16px */ line-height:1.5; /*
 
 .menu-primary .sub-menu a {	padding-left: 2em;}
 
+.menu-primary .sub-menu .sub-menu a {	padding-left: 4em;}
+
 .menu-item a:hover + .sub-menu,
 .sub-menu:hover {	display: block;}
 
@@ -482,11 +484,19 @@ h6, .fs-zeta    { font-size:16px; font-size:1rem; /* 16px */ line-height:1.5; /*
 	.menu-collapse-container { display: none;}
 	.menu-collapse { display: block;}
 
+	.menu-primary .menu-item,
 	.menu-primary .menu-item a { display: inline-block;}
 
-	.menu-primary .sub-menu { position: absolute;}
+	.menu-primary .sub-menu { 
+		position: absolute;
+		border-right: 1px solid hsla(0, 0%, 0%, .2);
+		 border-left: 1px solid hsla(0, 0%, 0%, .2);
+	}
 
-	.menu-primary .sub-menu a {	
+	.menu-primary .sub-menu .sub-menu { top: 0; left: 100%;}
+
+	.menu-primary .sub-menu a,
+	.menu-primary .sub-menu .sub-menu a {	
 		min-width: 225px;
 		padding-left: 1em;
 		white-space: nowrap;
@@ -1160,11 +1170,11 @@ a.label:hover {
 }
 
 .token-list-token {
+	vertical-align: middle;
 	line-height: 1;
 	padding: 2px .25em 1px;
-	border: 1px solid #999;
-	border-radius: 3px;
-	vertical-align: middle;
+	border: 1px solid #aaa;
+	border-radius: 2px;
 }
 
 /* -----------------------------------------------------------------------------
@@ -1172,14 +1182,16 @@ a.label:hover {
 	 -------------------------------------------------------------------------- */
 .files-drag-tip {
 	display: inline-block;
-	border-radius: 5px;
+	border-radius: 2px;
 	font-size: 11px;
 	font-size: 1.1rem;
-	/*display: none;*/
+	display: none;
 	padding: .15em 1em .05em;
 	color: #999;
 	background-color: #f6f6f6;
 }
+
+.field:hover .files-drag-tip { display: block;}
 
 /* =============================================================================
 	 1.e &Sidebar
