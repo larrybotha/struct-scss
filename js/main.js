@@ -248,4 +248,18 @@ $().ready(function() {
 
 	displayWinDimensions();
 
+	//	*****************************************************************************
+	//	PowerTip
+	//	*****************************************************************************
+	$('.tooltip').powerTip({ smartPlacement: true});
+
+	// $('.tooltip-n').powerTip({ placement: "n"});
+	// $('.tooltip-s').powerTip({ placement: "s"});
+	// $('.tooltip-w').powerTip({ placement: "w"});
+	// $('.tooltip-e').powerTip({ placement: "e"});
+	// $('.tooltip-nw').powerTip({ placement: "nw"});
+	// $('.tooltip-ne').powerTip({ placement: "ne"});
+	// $('.tooltip-sw').powerTip({ placement: "sw"});
+	// $('.tooltip-se').powerTip({ placement: "se"});
+
 });
