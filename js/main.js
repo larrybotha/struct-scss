@@ -214,6 +214,8 @@ $().ready(function() {
 	//	Show Window Width
 	//	*****************************************************************************
 
+	function displayWinDimensions() {
+
 		var $container = $('.display-width').css({
 			"position": "fixed",
 			"background": "#2d2d2d",
@@ -228,18 +230,22 @@ $().ready(function() {
 			"z-index": 10
 		});
 
-	function writeWinDimension() {
-		var winHeight = $(window).height();
-		var winWidth = $(window).width();
+		function writeWinDimensions() {
+			var winHeight = $(window).height();
+			var winWidth = $(window).width();
 
-		$container.html(winWidth + 'px (\'g\' to toggle grid)');
+			$container.html(winWidth + 'px (\'g\' to toggle grid)');
+		}
+
+		function updateWinDimensions( e ) {
+			writeWinDimensions();
+		}
+
+		writeWinDimensions();
+		$(window).bind("resize", updateWinDimensions);
+
 	}
 
-	function updateWinDimension( e ) {
-		writeWinDimension();
-	}
-
-	writeWinDimension();
-	$(window).bind("resize", updateWinDimension);
+	displayWinDimensions();
 	
 });
