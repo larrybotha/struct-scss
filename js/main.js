@@ -23,7 +23,7 @@ $().ready(function() {
 				return false;
 			}
 		});
-	}	
+	}
 
 	$('textarea.tinymce').tinymce({
 		// Location of TinyMCE script
@@ -247,5 +247,5 @@ $().ready(function() {
 	}
 
 	displayWinDimensions();
-	
+
 });

@@ -2,30 +2,30 @@
 
 /* Reset */
 .fixate, .fixate div, .fixate span, .fixate a {
-	vertical-align:baseline; 
-	text-align:left; 
-	/*position:absolute;*/ 
+	vertical-align:baseline;
+	text-align:left;
+	/*position:absolute;*/
 	border: 0;
-	padding:0; 
-	margin:0; 
-	background:transparent; 
-	font-family:Verdana, Arial; 
-	font-size:14px; 
-	color: #666; 
-	text-decoration:none; 
-	font-weight:normal; 
-	width:auto; 
-	height:auto; 
-	overflow:hidden; 
+	padding:0;
+	margin:0;
+	background:transparent;
+	font-family:Verdana, Arial;
+	font-size:14px;
+	color: #666;
+	text-decoration:none;
+	font-weight:normal;
+	width:auto;
+	height:auto;
+	overflow:hidden;
 	display:block
 }
 
 /* General */
 .fixate {
-	position:absolute; 
-	direction:ltr; 
-	background-color: #f5f5f5; 
-	border: 1px solid #e6e6e6; 
+	position:absolute;
+	direction:ltr;
+	background-color: #f5f5f5;
+	border: 1px solid #e6e6e6;
 	width: auto !important;
 	height: 155px !important;
 }
