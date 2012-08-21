@@ -1084,28 +1084,28 @@ a.label:hover {
 }
 
 @-webkit-keyframes progress-bar-stripes {
-	from { background-position: 40px 0;}
-	to { background-position: 0 0;}
+	0% { background-position: 40px 0;}
+	100% { background-position: 0 0;}
 }
 
 @-moz-keyframes progress-bar-stripes {
-	from { background-position: 40px 0;}
-	to { background-position: 0 0;}
+	0% { background-position: 40px 0;}
+	100% { background-position: 0 0;}
 }
 
 @-ms-keyframes progress-bar-stripes {
-	from { background-position: 40px 0;}
-	to { background-position: 0 0;}
+	0% { background-position: 40px 0;}
+	100% { background-position: 0 0;}
 }
 
 @-o-keyframes progress-bar-stripes {
-	from { background-position: 0 0;}
-	to { background-position: 40px 0;}
+	0% { background-position: 0 0;}
+	100% { background-position: 40px 0;}
 }
 
 @keyframes progress-bar-stripes {
-	from { background-position: 40px 0;}
-	to { background-position: 0 0;}
+	0% { background-position: 40px 0;}
+	100% { background-position: 0 0;}
 }
 
 /* -----------------------------------------------------------------------------
@@ -1603,28 +1603,28 @@ input, textarea {
 	 7. &ANIMATIONS
 	 ************************************************************************** */
 @-webkit-keyframes rotate {
-	from { -webkit-transform: rotate(0deg);}
-	to { -webkit-transform: rotate(360deg);}
+	0% { -webkit-transform: rotate(0deg);}
+	100% { -webkit-transform: rotate(360deg);}
 }
 
 @-moz-keyframes rotate {
-	from { -moz-transform: rotate(0deg);}
-	to { -moz-transform: rotate(360deg);}
+	0% { -moz-transform: rotate(0deg);}
+	100% { -moz-transform: rotate(360deg);}
 }
 
 @-o-keyframes rotate {
-	from { -o-transform: rotate(0deg);}
-	to { -o-transform: rotate(360deg);}
+	0% { -o-transform: rotate(0deg);}
+	100% { -o-transform: rotate(360deg);}
 }
 
 @-ms-keyframes rotate {
-	from { -ms-transform: rotate(0deg);}
-	to { -ms-transform: rotate(360deg);}
+	0% { -ms-transform: rotate(0deg);}
+	100% { -ms-transform: rotate(360deg);}
 }
 
 @keyframes rotate {
-	from { transform: rotate(0deg);}
-	to { transform: rotate(360deg);}
+	0% { transform: rotate(0deg);}
+	100% { transform: rotate(360deg);}
 }
 
 /* *****************************************************************************
