@@ -1,4 +1,4 @@
-$().ready(function() {
+jQuery(function($) {
 
 	//	*****************************************************************************
 	//	TinyMCE
@@ -23,7 +23,7 @@ $().ready(function() {
 				return false;
 			}
 		});
-	}	
+	}
 
 	$('textarea.tinymce').tinymce({
 		// Location of TinyMCE script
@@ -195,20 +195,19 @@ $().ready(function() {
 		$(this).find(".token-list-input").focus();
 	});
 
-	$("#autocomplete3").live("keydown", function(e){
+	$("#autocomplete3").on("keydown", function(e){
 		$this = $(this);
 		if ( $this.parent().prev() && $this.val() === "" && e.keyCode === 8 ) {
 			$this.parent().prev().remove();
 		}
 	});
 
-	//	*****************************************************************************
-	//	.close
-	//	*****************************************************************************
 
-	$(".close").live("click", function(e){
-		$(this).parent().remove();
-	});
+	//	*****************************************************************************
+	//	jQuery UI Date Picker
+	//	*****************************************************************************
+	$("#datepicker").datepicker();
+
 
 	//	*****************************************************************************
 	//	Show Window Width
@@ -247,5 +246,31 @@ $().ready(function() {
 	}
 
 	displayWinDimensions();
-	
+
+	//	*****************************************************************************
+	//	PowerTip
+	//	*****************************************************************************
+
+	$('.tooltip-n').powerTip({ smartPlacement: true, placement: "n"});
+	$('.tooltip-s').powerTip({ smartPlacement: true,  placement: "s"});
+	$('.tooltip-w').powerTip({ smartPlacement: true,  placement: "w"});
+	$('.tooltip-e').powerTip({ smartPlacement: true,  placement: "e"});
+	$('.tooltip-nw').powerTip({ smartPlacement: true,  placement: "nw"});
+	$('.tooltip-ne').powerTip({ smartPlacement: true,  placement: "ne"});
+	$('.tooltip-sw').powerTip({ smartPlacement: true,  placement: "sw"});
+	$('.tooltip-se').powerTip({ smartPlacement: true,  placement: "se"});
+
+	$('.tooltip-mouse').powerTip({ smartPlacement: true, mouseOnToPopup:true});
+
+	//	*****************************************************************************
+	//	.close
+	//	*****************************************************************************
+	$('.token-list').on('click', '.close', function(e) {
+		$(this).parent().fadeOut(function(){
+			$(this).remove();
+		});
+	});
+
+	$('#powerTip, .alert').on('click', '.close', function(e) { $(this).parent().fadeOut(); });
+
 });

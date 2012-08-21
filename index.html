@@ -20,7 +20,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<link rel="stylesheet" href="style.css">
-	
+
 	<!--[if lte IE 6]>
 		<link rel="stylesheet" href="http://universal-ie6-css.googlecode.com/files/ie6.1.1.css" media="screen, projection">
 	<![endif]-->
@@ -32,13 +32,39 @@
 	<!-- Prompt IE 6 users to install Chrome Frame. Remove this if you support IE 6.
 			 chromium.org/developers/how-tos/chrome-frame-getting-started -->
 	<!--[if lte IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
-		
+
 	<div class="full-header">
 
 		<header class="area-header wrap" role="banner">
 
-			<h1>Navigation</h1>
-			
+			<h1>Index</h1>
+
+			<div class="menu-collapse-container ar va-m">
+				<label for="menu-collapse-index" class="menu-collapse-button btn"><span class="visuallyhidden">trigger to expand navigation menu</span><span class="icon icon-align-justify"></span></label>
+			</div>
+			<input type="checkbox" id="menu-collapse-index" class="hidden menu-collapse-checkbox">
+			<nav class="menu-collapse cf" role="navigation">
+				<ul class="menu-primary menu case-u">
+					<li class="menu-item"><a href="#navigation">navigation</a></li>
+					<li class="menu-item"><a href="#headings">headings</a></li>
+					<li class="menu-item"><a href="#buttons">buttons</a></li>
+					<li class="menu-item"><a href="#labels">labels</a></li>
+					<li class="menu-item"><a href="#navigation">navigation</a></li>
+					<li class="menu-item"><a href="#autocomplete">autocomplete</a></li>
+					<li class="menu-item"><a href="#forms">forms</a></li>
+					<li class="menu-item"><a href="#gallery">gallery</a></li>
+					<li class="menu-item"><a href="#wysiwyg">wysiwyg</a></li>
+					<li class="menu-item"><a href="#alerts">alerts</a></li>
+					<li class="menu-item"><a href="#file-drop">file drop</a></li>
+					<li class="menu-item"><a href="#tool-tips">tool tips</a></li>
+					<li class="menu-item"><a href="#progress-bars">progress bars</a></li>
+				</ul>
+			</nav>
+
+			<hr>
+
+			<h1 id="navigaiton">Navigation</h1>
+
 			<div>
 				<!-- allow screenreaders to skip navigation -->
 				<a class="visuallyhidden" href="#main">skip navigation and go to main content</a>
@@ -75,18 +101,18 @@
 			</div>
 
 			<hr>
-			
+
 		</header><!-- .area-header end -->
 
 	</div><!-- .full-header -->
-	
+
 	<div id="main" class="full-content">
 
 		<div class="area-content wrap">
-		
+
 			<div class="content-primary" role="main">
 
-				<h1>Headings</h1>
+				<h1 id="headings">Headings</h1>
 
 				<h1>Heading 1</h1>
 				<h2>Heading 2</h2>
@@ -96,7 +122,7 @@
 
 				<hr>
 
-				<h1>Buttons</h1>
+				<h1 id="buttons">Buttons</h1>
 
 				<h2>Buttons Using anchor tag</h2>
 				<a class="btn btn-primary" href="javascript:void(0);">.btn</a>
@@ -215,20 +241,20 @@
 				<h2>Pagination</h2>
 				<div class="cf">
 					<div class="page-pagination pagination">
-					  <a class="prev page-numbers" href="javascript:void(0);">&laquo; Previous</a> 
-					  <a class="page-numbers" href="javascript:void(0);">1</a> 
-					  <span class="page-numbers current">2</span> 
-					  <a class="page-numbers" href="javascript:void(0);">3</a> 
-					  <a class="page-numbers" href="javascript:void(0);">4</a> 
-					  <span class="page-numbers dots">...</span> 
-					  <a class="page-numbers" href="javascript:void(0);">6</a> 
+					  <a class="prev page-numbers" href="javascript:void(0);">&laquo; Previous</a>
+					  <a class="page-numbers" href="javascript:void(0);">1</a>
+					  <span class="page-numbers current">2</span>
+					  <a class="page-numbers" href="javascript:void(0);">3</a>
+					  <a class="page-numbers" href="javascript:void(0);">4</a>
+					  <span class="page-numbers dots">...</span>
+					  <a class="page-numbers" href="javascript:void(0);">6</a>
 					  <a class="next page-numbers" href="javascript:void(0);">Next &raquo;</a>
 					</div>
 				</div>
 
 				<hr>
 
-				<h1>Labels</h1>
+				<h1 id="labels">Labels</h1>
 
 				<p>Lorem ipsum <span class="label label-label">label</span> sit amet, consectetur adipisicing elit.</p>
 				<p>Lorem ipsum <span class="label label-important">important</span> sit amet, consectetur adipisicing elit.</p>
@@ -239,7 +265,7 @@
 
 				<hr>
 
-				<h1 id="hey">Autocomplete</h1>
+				<h1 id="autocomplete">Autocomplete</h1>
 
 				<h2>Simple</h2>
 				<div id="autocomplete1-container" class="field">
@@ -266,7 +292,7 @@
 
 				<hr>
 
-				<h1>Forms</h1>
+				<h1 id="forms">Forms</h1>
 
 				<h2>Inputs and Textarea</h2>
 				<div>
@@ -305,7 +331,7 @@
 					<div>
 						 <label for="">label</label>
 					 </div>
-					 <span class="prefix-icon-block icon icon-link"></span><input type="text">
+					 <label for="prefixed-input" class="prefix-icon-block icon icon-link"></label><input id="prefixed-input" type="text">
 				</div>
 
 				<div>
@@ -339,7 +365,7 @@
 					<div>
 						 <label for="">label</label>
 					</div>
-					<div class="suffix-icon-container">
+					<div class="prefix-icon-container">
 						<input type="text"><span class="icon icon-link"></span>
 					</div><span class="prefix-icon-block icon icon-link"></span>
 				</div>
@@ -356,6 +382,11 @@
 						<label for="">label</label>
 					</div>
 					<textarea class="d-block" name="" id="" cols="30" rows="10" placeholder="full width textarea"></textarea>
+				</div>
+
+				<h2>Date Picker</h2>
+				<div>
+					<input type="text" id="datepicker"><label class="icon icon-calendar suffix-icon-block" for="datepicker"></label>
 				</div>
 
 				<h2>Radios and Checkboxes</h2>
@@ -378,9 +409,9 @@
 
 				<hr>
 
-				<h2>Gallery</h2>
+				<h1 id="gallery">Gallery</h1>
 
-				<h3>Gallery 2 Columns</h3>
+				<h2>Gallery 2 Columns</h2>
 				<div class="gallery gallery-columns-2 cf">
 					<dl class="gallery-item">
 						<dt class="gallery-icon">
@@ -418,7 +449,7 @@
 					<br style="clear: both"><!-- displayed after every 2 items in gallery -->
 				</div>
 
-				<h3>Gallery 3 Columns</h3>
+				<h2>Gallery 3 Columns</h2>
 				<div class="gallery gallery-columns-3 cf">
 					<dl class="gallery-item">
 						<dt class="gallery-icon">
@@ -472,7 +503,7 @@
 					<br style="clear: both"><!-- displayed after every 3 items in gallery -->
 				</div>
 
-				<h3>Gallery 4 Columns</h3>
+				<h2>Gallery 4 Columns</h2>
 				<div class="gallery gallery-columns-4 cf">
 					<dl class="gallery-item">
 						<dt class="gallery-icon">
@@ -542,7 +573,7 @@
 					<br style="clear: both"><!-- displayed after every 4 items in gallery -->
 				</div>
 
-				<h3>Gallery 5 Columns</h3>
+				<h2>Gallery 5 Columns</h2>
 				<div class="gallery gallery-columns-5 cf">
 					<dl class="gallery-item">
 						<dt class="gallery-icon">
@@ -630,7 +661,7 @@
 
 				<hr>
 
-				<h2>WYSIWYG</h2>
+				<h1 id="wysiwyg">WYSIWYG</h1>
 
 				<!-- Gets replaced with TinyMCE, remember HTML in a textarea should be encoded -->
 				<div>
@@ -646,7 +677,7 @@
 
 				<hr>
 
-				<h1>Alerts</h1>
+				<h1 id="alerts">Alerts</h1>
 				<div class="alert alert-error">
 					<button type="button" class="close" data-dismiss="alert">×</button>
 					<strong>Oh snap!</strong> Change a few things up and try submitting <a href="javascript:void(0);">again</a>.
@@ -670,13 +701,13 @@
 
 				<hr>
 
-				<h1>File Drop</h1>
+				<h1 id="file-drop">File Drop</h1>
 
 				<div class="field cf">
 					<div class="img-block">
 						<a href="#" class="btn img">Add files</a>
 						<div class="img-block-content">
-							<div class="files-drag-tip img-block"> 
+							<div class="files-drag-tip img-block">
 								<span class="img"></span>
 								<span class="img-block-content">Drag 'n drop files here to upload</span>
 							</div>
@@ -686,7 +717,30 @@
 
 				<hr>
 
-				<h1>Progress Bars</h1>
+				<h1 id="tool-tips">Tool Tips</h1>
+				<div class="ac">
+					<div>
+						<button class="btn tooltip tooltip-nw" data-powertip="north west">NW</button>
+						<button class="btn tooltip tooltip-n" data-powertip="north">N</button>
+						<button class="btn tooltip tooltip-ne" data-powertip="north east">NE</button>
+					</div>
+					<div>
+						<button class="btn tooltip tooltip-w" data-powertip="west">W</button>
+						<button class="btn invisible" data-powertip="south">$$$I</button>
+						<button class="btn tooltip tooltip-e" data-powertip="east">E</button>
+					</div>
+					<div>
+						<button class="btn tooltip tooltip-sw" data-powertip="south west">SW</button>
+						<button class="btn tooltip tooltip-s" data-powertip="south">S</button>
+						<button class="btn tooltip tooltip-se" data-powertip="south east">SE</button>
+					</div>
+				</div>
+
+				<button class="btn tooltip tooltip-w tooltip-mouse" data-powertip="&lt;button type='button' class='close'&gt;×&lt;/button&gt; north west">click my tooltip</button>
+
+				<hr>
+
+				<h1 id="progress-bars">Progress Bars</h1>
 
 				<h2>Default</h2>
 				<div class="progress">
@@ -754,23 +808,24 @@
 				</div>
 
 				<hr>
-				
+
+
 			</div><!-- .content-primary end -->
-			
+
 		</div><!-- .area-content end -->
 
 	</div><!-- .full-content -->
-	
+
 	<div class="full-footer">
 
 		<footer class="area-footer wrap" role="contentinfo">
-			
+
 			<img src="" alt="" />
-			
+
 			<div class="footer-mode">
-				
+
 			</div><!-- .footer-mode end -->
-			
+
 		</footer><!-- .area-footer end -->
 
 	</div><!-- .full-footer -->
@@ -778,13 +833,14 @@
 	<div class="display-width"></div>
 
 	<!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-	<script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.2.min.js"><\/script>')</script>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="js/libs/jquery-1.8.0.min.js"><\/script>')</script>
 
-	<script type="text/javascript" src="js/libs/jquery-ui-1.8.22.custom.min.js"></script>
+	<script type="text/javascript" src="js/libs/jquery-ui-1.8.23.custom.min.js"></script>
 	<script type="text/javascript" src="js/libs/tiny_mce/jquery.tinymce.js"></script>
+	<script type="text/javascript" src="js/libs/jquery-powertip/jquery.powertip.js"></script>
 	<script type="text/javascript" src="js/gridpak.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
-	
+
 </body>
 </html>
