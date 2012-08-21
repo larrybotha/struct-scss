@@ -420,6 +420,7 @@ h6, .fs-zeta    { font-size:16px; font-size:1rem; /* 16px */ line-height:1.5; /*
 .menu {
 	list-style: none;
 	margin-left: 0;
+	padding-left: 0;
 }
 
 .menu > .menu-item {
@@ -513,6 +514,11 @@ h6, .fs-zeta    { font-size:16px; font-size:1rem; /* 16px */ line-height:1.5; /*
 	/* required for <button> and <input>*/
 	width: 100%;
 }
+
+.case-u { text-transform: uppercase;}
+.case-l { text-transform: lowercase;}
+.case-n { text-transform: none;}
+.case-c { text-transform: capitalize;}
 
 /* -----------------------------------------------------------------------------
 	 1.d.i General &Typography
