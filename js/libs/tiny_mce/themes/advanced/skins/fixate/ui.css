@@ -29,7 +29,7 @@
 .fixateSkin .mceStatusbar a:hover {text-decoration:underline}
 .fixateSkin table.mceToolbar {margin-left:3px}
 .fixateSkin span.mceIcon, .fixateSkin img.mceIcon {display:block; cursor: pointer;}
-.fixateSkin span.mceIcon:before, .fixateSkin img.mceIcon:before {  
+.fixateSkin span.mceIcon:before, .fixateSkin img.mceIcon:before {
 	font-family: FontAwesome-webfont;
   font-weight: normal;
   font-style: normal;
