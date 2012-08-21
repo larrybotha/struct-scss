@@ -207,7 +207,7 @@ $().ready(function() {
 	//	*****************************************************************************
 
 	$(".close").live("click", function(e){
-		$(this).parent().remove();
+		$(this).parent().hide();
 	});
 
 	//	*****************************************************************************
@@ -260,5 +260,7 @@ $().ready(function() {
 	$('.tooltip-ne').powerTip({ smartPlacement: true,  placement: "ne"});
 	$('.tooltip-sw').powerTip({ smartPlacement: true,  placement: "sw"});
 	$('.tooltip-se').powerTip({ smartPlacement: true,  placement: "se"});
+
+	$('.tooltip-mouse.tooltip-n').powerTip({ smartPlacement: true,  placement: "n", mouseOnToPopup:true});
 
 });
