@@ -251,15 +251,14 @@ $().ready(function() {
 	//	*****************************************************************************
 	//	PowerTip
 	//	*****************************************************************************
-	$('.tooltip').powerTip({ smartPlacement: true});
 
-	// $('.tooltip-n').powerTip({ placement: "n"});
-	// $('.tooltip-s').powerTip({ placement: "s"});
-	// $('.tooltip-w').powerTip({ placement: "w"});
-	// $('.tooltip-e').powerTip({ placement: "e"});
-	// $('.tooltip-nw').powerTip({ placement: "nw"});
-	// $('.tooltip-ne').powerTip({ placement: "ne"});
-	// $('.tooltip-sw').powerTip({ placement: "sw"});
-	// $('.tooltip-se').powerTip({ placement: "se"});
+	$('.tooltip-n').powerTip({ smartPlacement: true, placement: "n"});
+	$('.tooltip-s').powerTip({ smartPlacement: true,  placement: "s"});
+	$('.tooltip-w').powerTip({ smartPlacement: true,  placement: "w"});
+	$('.tooltip-e').powerTip({ smartPlacement: true,  placement: "e"});
+	$('.tooltip-nw').powerTip({ smartPlacement: true,  placement: "nw"});
+	$('.tooltip-ne').powerTip({ smartPlacement: true,  placement: "ne"});
+	$('.tooltip-sw').powerTip({ smartPlacement: true,  placement: "sw"});
+	$('.tooltip-se').powerTip({ smartPlacement: true,  placement: "se"});
 
 });
