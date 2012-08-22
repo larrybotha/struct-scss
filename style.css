@@ -1785,8 +1785,8 @@ input, textarea {
 					background-clip: padding-box !important;
 }
 
-:root .row-ib { margin: 0 -6px 0 -10px;}
-:root .row-ib > .col {
+:root .row-ib-cols { margin: 0 -6px 0 -10px;}
+:root .row-ib-cols > .col {
 	float: none;
 	display: inline-block;
 	vertical-align: top;
