@@ -550,7 +550,7 @@ p.error, span.error { color: #CC3333;}
 /* -----------------------------------------------------------------------------
 	 1.d.iii &Icons
 	 -------------------------------------------------------------------------- */
-/*  Font Awesome styles
+/*  Styling inspired by FontAwesome - http://mopo.ws/ReAOC6
 		------------------------------------------------------- */
 .icon:before, .icon:before {
 	font-family: FontAwesome-webfont;
@@ -1767,6 +1767,10 @@ input, textarea {
 	border-left-width: 16px;
 	border-left-width: 1rem;
 	float: left;
+
+  background: hsla(0,0%,0%,.1);
+
+
 	min-height: 100px;
 	margin-bottom: 16px;
 	margin-bottom: 1rem;
@@ -1779,6 +1783,14 @@ input, textarea {
 	-webkit-background-clip: padding-box !important;
 		 -moz-background-clip: padding-box !important;
 					background-clip: padding-box !important;
+}
+
+:root .row-ib { margin: 0 -6px 0 -10px;}
+:root .row-ib > .col {
+	float: none;
+	display: inline-block;
+	vertical-align: top;
+	margin-left: -6px;
 }
 
 /*
@@ -1894,7 +1906,7 @@ Span 12:   100%
 	.span-11-gamma { width: 91.667%;}
 	.span-12-gamma {
 		margin-left: 0;
-		width: 95%;
+		width: 100%;
 	}
 
 	/*

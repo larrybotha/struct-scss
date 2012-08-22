@@ -122,119 +122,131 @@
 
 				<hr>
 
-				<h1 id="buttons">Buttons</h1>
-
-				<h2>Buttons Using anchor tag</h2>
-				<a class="btn btn-primary" href="javascript:void(0);">.btn</a>
-
-				<a class="btn btn-primary" href="javascript:void(0);"><span class="icon icon-refresh fs-milli"></span> .btn - prefix icon</a>
-				<a class="btn btn-primary" href="javascript:void(0);">.btn - suffix icon <span class="icon icon-refresh fs-milli"></span></a>
-
-				<a class="btn btn-primary disabled" href="javascript:void(0);">.btn .disabled</a>
-				<a class="btn btn-primary" disabled href="javascript:void(0);">.btn [disabled]</a>
-				<a class="btn btn-primary disabled" href="javascript:void(0);"><span class="icon icon-refresh icon-anim icon-anim-rotate"></span></a>
-
-				<a class="btn btn-primary btn-selected" href="javascript:void(0);">.btn .selected</a>
-
-				<a class="btn btn-primary btn-block" href="javascript:void(0);">.btn .btn-block</a>
-
-				<a class="btn btn-primary" href="javascript:void(0);">.btn <span class="fs-alpha va-sub">text size variant</span></a>
-				<a class="btn btn-primary" href="javascript:void(0);"><span class="fs-alpha va-sub">.btn</span> text size variant</a>
-
-				<div>
-					<div class="btn-group cf">
-						<a class="btn btn-primary" href="javascript:void(0);">1</a>
-						<a class="btn btn-primary" href="javascript:void(0);">2</a>
-						<a class="btn btn-primary" href="javascript:void(0);">3</a>
-						<a class="btn btn-primary" href="javascript:void(0);">4</a>
-						<a class="btn btn-primary" href="javascript:void(0);">5</a>
-						<a class="btn btn-primary" href="javascript:void(0);">6</a>
-						<a class="btn btn-primary" href="javascript:void(0);">7</a>
+				<div class="row row-ib-cols cf">
+					<div class="col span-12-delta span-12-gamma span-6-beta span-2-alpha">
+						<h1 id="buttons">Buttons</h1>
 					</div>
 
-					<div class="btn-group cf">
-						<a class="btn btn-primary" href="javascript:void(0);">1</a>
-						<a class="btn btn-primary" href="javascript:void(0);">2</a>
+					<div class="col span-4-delta span-4-gamma span-3-beta span-2-alpha">
+						<h2>Buttons Using anchor tag</h2>
+						<a class="btn btn-primary" href="javascript:void(0);">.btn</a>
+
+						<a class="btn btn-primary" href="javascript:void(0);"><span class="icon icon-refresh fs-milli"></span> .btn - prefix icon</a>
+						<a class="btn btn-primary" href="javascript:void(0);">.btn - suffix icon <span class="icon icon-refresh fs-milli"></span></a>
+
+						<a class="btn btn-primary disabled" href="javascript:void(0);">.btn .disabled</a>
+						<a class="btn btn-primary" disabled href="javascript:void(0);">.btn [disabled]</a>
+						<a class="btn btn-primary disabled" href="javascript:void(0);"><span class="icon icon-refresh icon-anim icon-anim-rotate"></span></a>
+
+						<a class="btn btn-primary btn-selected" href="javascript:void(0);">.btn .selected</a>
+
+						<a class="btn btn-primary d-block" href="javascript:void(0);">.btn .d-block</a>
+
+						<a class="btn btn-primary" href="javascript:void(0);">.btn <span class="fs-alpha va-sub">text size variant</span></a>
+						<a class="btn btn-primary" href="javascript:void(0);"><span class="fs-alpha va-sub">.btn</span> text size variant</a>
+
+						<div>
+							<div class="btn-group cf">
+								<a class="btn btn-primary" href="javascript:void(0);">1</a>
+								<a class="btn btn-primary" href="javascript:void(0);">2</a>
+								<a class="btn btn-primary" href="javascript:void(0);">3</a>
+								<a class="btn btn-primary" href="javascript:void(0);">4</a>
+								<a class="btn btn-primary" href="javascript:void(0);">5</a>
+								<a class="btn btn-primary" href="javascript:void(0);">6</a>
+								<a class="btn btn-primary" href="javascript:void(0);">7</a>
+							</div>
+
+							<div class="btn-group cf">
+								<a class="btn btn-primary" href="javascript:void(0);">1</a>
+								<a class="btn btn-primary" href="javascript:void(0);">2</a>
+							</div>
+
+							<div class="btn-group cf">
+								<a class="btn btn-primary" href="javascript:void(0);">1</a>
+							</div>
+						</div>
 					</div>
 
-					<div class="btn-group cf">
-						<a class="btn btn-primary" href="javascript:void(0);">1</a>
-					</div>
-				</div>
+					<div class="col span-4-delta span-4-gamma span-3-beta span-2-alpha">
+						<h2>Buttons Using button tag</h2>
+						<button class="btn btn-primary">.btn</button>
 
-				<h2>Buttons Using button tag</h2>
-				<button class="btn btn-primary">.btn</button>
+						<button class="btn btn-primary"><span class="icon icon-refresh fs-milli"></span> .btn - prefix icon</button>
+						<button class="btn btn-primary">.btn - suffix icon <span class="icon icon-refresh fs-milli"></span></button>
 
-				<button class="btn btn-primary"><span class="icon icon-refresh fs-milli"></span> .btn - prefix icon</button>
-				<button class="btn btn-primary">.btn - suffix icon <span class="icon icon-refresh fs-milli"></span></button>
+						<button class="btn btn-primary disabled">.btn .disabled</button>
+						<button class="btn btn-primary" disabled>.btn [disabled]</button>
+						<button class="btn btn-primary disabled"><span class="icon icon-refresh"></span></button>
+						<button class="btn btn-primary btn-selected">.btn .selected</button>
 
-				<button class="btn btn-primary disabled">.btn .disabled</button>
-				<button class="btn btn-primary" disabled>.btn [disabled]</button>
-				<button class="btn btn-primary disabled"><span class="icon icon-refresh"></span></button>
-				<button class="btn btn-primary btn-selected">.btn .selected</button>
+						<button class="btn btn-primary d-block">.btn .d-block</button>
 
-				<button class="btn btn-primary btn-block">.btn .btn-block</button>
+						<div>
+							<div class="btn-group cf">
+								<button class="btn btn-primary">1</button>
+								<button class="btn btn-primary">2</button>
+								<button class="btn btn-primary">3</button>
+								<button class="btn btn-primary">4</button>
+								<button class="btn btn-primary">5</button>
+								<button class="btn btn-primary">6</button>
+								<button class="btn btn-primary">7</button>
+							</div>
 
-				<div>
-					<div class="btn-group cf">
-						<button class="btn btn-primary">1</button>
-						<button class="btn btn-primary">2</button>
-						<button class="btn btn-primary">3</button>
-						<button class="btn btn-primary">4</button>
-						<button class="btn btn-primary">5</button>
-						<button class="btn btn-primary">6</button>
-						<button class="btn btn-primary">7</button>
-					</div>
+							<div class="btn-group cf">
+								<button class="btn btn-primary">1</button>
+								<button class="btn btn-primary">2</button>
+							</div>
 
-					<div class="btn-group cf">
-						<button class="btn btn-primary">1</button>
-						<button class="btn btn-primary">2</button>
-					</div>
-
-					<div class="btn-group cf">
-						<button class="btn btn-primary">1</button>
-					</div>
-				</div>
-
-				<h2>Buttons Using label tag</h2>
-				<label class="btn btn-primary">.btn</label>
-
-				<label class="btn btn-primary"><span class="icon icon-refresh fs-milli"></span> .btn - prefix icon</label>
-				<label class="btn btn-primary">.btn - suffix icon <span class="icon icon-refresh fs-milli"></span></label>
-
-				<label class="btn btn-primary disabled">.btn .disabled</label>
-				<label class="btn btn-primary" disabled>.btn [disabled]</label>
-				<label class="btn btn-primary disabled"><span class="icon icon-refresh"></span></label>
-				<label class="btn btn-primary btn-selected">.btn .selected</label>
-
-				<label class="btn btn-primary btn-block">.btn .btn-block</label>
-
-				<div>
-					<div class="btn-group cf">
-						<label class="btn btn-primary">1</label>
-						<label class="btn btn-primary">2</label>
-						<label class="btn btn-primary">3</label>
-						<label class="btn btn-primary">4</label>
-						<label class="btn btn-primary">5</label>
-						<label class="btn btn-primary">6</label>
-						<label class="btn btn-primary">7</label>
+							<div class="btn-group cf">
+								<button class="btn btn-primary">1</button>
+							</div>
+						</div>
 					</div>
 
-					<div class="btn-group cf">
-						<label class="btn btn-primary">1</label>
-						<label class="btn btn-primary">2</label>
+					<div class="col span-4-delta span-4-gamma span-3-beta span-2-alpha">
+						<h2>Buttons Using label tag</h2>
+						<label class="btn btn-primary">.btn</label>
+
+						<label class="btn btn-primary"><span class="icon icon-refresh fs-milli"></span> .btn - prefix icon</label>
+						<label class="btn btn-primary">.btn - suffix icon <span class="icon icon-refresh fs-milli"></span></label>
+
+						<label class="btn btn-primary disabled">.btn .disabled</label>
+						<label class="btn btn-primary" disabled>.btn [disabled]</label>
+						<label class="btn btn-primary disabled"><span class="icon icon-refresh"></span></label>
+						<label class="btn btn-primary btn-selected">.btn .selected</label>
+
+						<label class="btn btn-primary d-block">.btn .d-block</label>
+
+						<div>
+							<div class="btn-group cf">
+								<label class="btn btn-primary">1</label>
+								<label class="btn btn-primary">2</label>
+								<label class="btn btn-primary">3</label>
+								<label class="btn btn-primary">4</label>
+								<label class="btn btn-primary">5</label>
+								<label class="btn btn-primary">6</label>
+								<label class="btn btn-primary">7</label>
+							</div>
+
+							<div class="btn-group cf">
+								<label class="btn btn-primary">1</label>
+								<label class="btn btn-primary">2</label>
+							</div>
+
+							<div class="btn-group cf">
+								<label class="btn btn-primary">1</label>
+							</div>
+						</div>
 					</div>
 
-					<div class="btn-group cf">
-						<label class="btn btn-primary">1</label>
+					<div class="col span-4-delta span-4-gamma span-3-beta span-2-alpha">
+						<h2>Buttons Using submit input tag</h2>
+						<input type="submit" class="btn btn-primary" value=".btn">
+						<input type="submit" class="btn btn-primary disabled" value=".btn .disabled">
+						<input type="submit" class="btn btn-primary" disabled value=".btn [disabled]">
+						<input type="submit" class="btn btn-primary d-block" value=".btn .d-block">
 					</div>
-				</div>
-
-				<h2>Buttons Using submit input tag</h2>
-				<input type="submit" class="btn btn-primary" value=".btn">
-				<input type="submit" class="btn btn-primary disabled" value=".btn .disabled">
-				<input type="submit" class="btn btn-primary" disabled value=".btn [disabled]">
-				<input type="submit" class="btn btn-primary btn-block" value=".btn .btn-block">
+				</div><!-- .row -->
 
 				<hr>
 
