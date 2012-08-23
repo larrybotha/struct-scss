@@ -515,6 +515,7 @@ h6, .fs-zeta    { font-size:16px; font-size:1rem; /* 16px */ line-height:1.5; /*
 	/* required for <button> and <input>*/
 	width: 100%;
 }
+.d-iblock { display: inline-block;}
 
 .case-u { text-transform: uppercase;}
 .case-l { text-transform: lowercase;}
