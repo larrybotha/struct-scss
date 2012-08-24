@@ -618,11 +618,13 @@ li.icon.icon-large:before, li.icon.icon-large:before {
 }
 
 .icon-anim {
-	-webkit-transform-origin: 50% 42%;
-		 -moz-transform-origin: 50% 42%;
-			 -o-transform-origin: 50% 42%;
-			-ms-transform-origin: 50% 42%;
-					transform-origin: 50% 42%;
+	width: 16px;
+	height: 16px;
+	-webkit-transform-origin: 50% 50%;
+		 -moz-transform-origin: 50% 50%;
+			 -o-transform-origin: 50% 50%;
+			-ms-transform-origin: 50% 50%;
+					transform-origin: 50% 50%;
 }
 
 .icon-anim-rotate {
