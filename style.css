@@ -1181,7 +1181,7 @@ a.label:hover {
 .token-list {
 	position: relative;
 	display: block;
-	border: 1px inset;
+	border: 1px solid #ccc;
 	cursor: text;
 	padding-left: .25em;
 }
@@ -1202,8 +1202,9 @@ a.label:hover {
 
 .token-list-token {
 	vertical-align: middle;
+	font-size: 85%;
 	line-height: 1;
-	padding: 2px .25em 1px;
+	padding: .25em .25em;
 	border: 1px solid #aaa;
 	-webkit-border-radius: 2px;
 		 -moz-border-radius: 2px;
@@ -1339,8 +1340,9 @@ a.label:hover {
 .field { position: relative;}
 
 input, textarea {
-	padding: 0 0 0 .1em;
 	margin-bottom: 1em;
+	padding: 0 0 0 .1em;
+	border: 1px solid #ccc;
 }
 
 /*
