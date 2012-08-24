@@ -1338,8 +1338,12 @@ a.label:hover {
 	 ========================================================================== */
 .field { position: relative;}
 
-input, textarea {
-	margin-bottom: 1em;
+input, textarea {	margin-bottom: 1em;}
+
+/* used to normalise inputs with icon prefixes / suffixes*/
+.affix {
+	height: 1.5em;
+	padding: .1em 0;
 }
 
 .prefix-icon-container,
@@ -1358,8 +1362,7 @@ input, textarea {
 	vertical-align: top;
 	display: inline-block;
 	width: 1.5em;
-	padding: .25em 0 .05em;
-	line-height: 1;
+	height: 1.5em;
 	text-align: center;
 }
 
