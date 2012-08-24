@@ -1125,8 +1125,8 @@ a.label:hover {
 }
 
 @-o-keyframes progress-bar-stripes {
-	0% { background-position: 0 0;}
-	100% { background-position: 40px 0;}
+	0% { background-position: 40px 0;}
+	100% { background-position: 0 0;}
 }
 
 @keyframes progress-bar-stripes {
