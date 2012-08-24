@@ -1345,15 +1345,8 @@ input, textarea {
 
 /* used to normalise inputs with icon prefixes / suffixes*/
 .affix {
-	-webkit-box-sizing: content-box;
-		 -moz-box-sizing: content-box;
-					box-sizing: content-box;
 	height: 1.5em;
 	padding: .1em 0;
-}
-
-@-moz-document url-prefix() {
-	.affix { outline: 0; padding-bottom: 0; line-height: 3;}
 }
 
 .prefix-icon-container,
@@ -1369,15 +1362,11 @@ input, textarea {
 .suffix-icon-container > .icon,
 .prefix-icon-block,
 .suffix-icon-block {
-	-webkit-box-sizing: content-box;
-		 -moz-box-sizing: content-box;
-					box-sizing: content-box;
 	vertical-align: top;
 	display: inline-block;
 	width: 1.5em;
 	height: 1.5em;
-	padding: .15em 0;
-	/*line-height: 1.3;*/
+	/*padding: 0;*/
 	text-align: center;
 }
 
