@@ -1338,13 +1338,17 @@ a.label:hover {
 	 ========================================================================== */
 .field { position: relative;}
 
-input, textarea {	margin-bottom: 1em;}
-
-/* used to normalise inputs with icon prefixes / suffixes*/
-.affix {
-	height: 1.5em;
-	padding: .1em 0;
+input, textarea {
+	padding: 0 0 0 .1em;
+	margin-bottom: 1em;
 }
+
+/*
+ * required only if using icon prefixes and suffixes
+ * to address FF's use of !important on line-heights
+ * on inputs - http://mopo.ws/SvxClq
+ */
+input	{	height: 1.75em;}
 
 .prefix-icon-container,
 .suffix-icon-container {
@@ -1361,20 +1365,22 @@ input, textarea {	margin-bottom: 1em;}
 .suffix-icon-block {
 	vertical-align: top;
 	display: inline-block;
-	width: 1.5em;
-	height: 1.5em;
+	width: 1.75em;
+	height: 1.75em;
 	text-align: center;
+	padding-top: .05em;
 }
 
 .prefix-icon-container > .icon,
 .suffix-icon-container > .icon {
 	position: absolute;
-	margin-top: .05em;
+	margin-top: .1em;
+	padding-top: 0;
 }
 
 .suffix-icon-container > .icon {
 	position: relative;
-	margin-left: -1.5em;
+	margin-left: -1.75em;
 }
 
 .prefix-icon-block, .suffix-icon-block {
