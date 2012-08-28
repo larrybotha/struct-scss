@@ -1204,9 +1204,9 @@ a.label:hover {
 
 .token-list-token {
 	vertical-align: middle;
-	font-size: 85%;
+	font-size: 75%;
 	line-height: 1;
-	padding: .25em .25em;
+	padding: .25em .5em;
 	border: 1px solid #aaa;
 	-webkit-border-radius: 2px;
 		 -moz-border-radius: 2px;
@@ -1352,7 +1352,7 @@ input, textarea {
  * to address FF's use of !important on line-heights
  * on inputs - http://mopo.ws/SvxClq
  */
-.input-affixed	{	height: 1.75em;}
+input	{	height: 1.75em;}
 
 .prefix-icon-container,
 .suffix-icon-container {
