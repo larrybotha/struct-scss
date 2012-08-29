@@ -37,11 +37,21 @@ custom.css and it will override the style in this file. You have been warned! :)
 /* =============================================================================
 	 HTML5 display definitions
 	 ========================================================================== */
-
-article, aside, details, figcaption, figure, footer, header, hgroup, nav, section { display: block;}
-audio, canvas, video { display: inline-block; *display: inline; *zoom: 1;}
-audio:not([controls]) { display: none;}
-[hidden] { display: none;}
+/*
+ * 1. Corrects `block` display not defined in IE 8/9.
+ * 2. Corrects `inline-block` display not defined in IE 8/9.
+ * 3. Prevents modern browsers from displaying `audio` without controls.
+ *		Remove excess height in iOS 5 devices.
+ * 4. Addresses styling for `hidden` attribute not present in IE 8/9.
+ *
+ * Apply a natural box layout model to all elements.
+ * Be aware that IE8 and up support box-sizing, IE7 & 6 require polyfill.
+ * Associated jQuery bug - http://mopo.ws/AsGGa2
+ */
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, summary { display: block;} /* 1 */
+audio, canvas, video { display: inline-block;} /* 2 */
+audio:not([controls]) { display: none; height: 0;} /* 3 */
+[hidden] { display: none;} /* 4 */
 
 /* =============================================================================
 	 &Base
@@ -55,11 +65,11 @@ audio:not([controls]) { display: none;}
  * Associated jQuery bug - http://mopo.ws/AsGGa2
  */
 
-* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;}
 
 html { font-size: 100%; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
 
-html, button, input, select, textarea { font-family: Arial, sans-serif; color: #222;}
+html, button, input, select, textarea { font-family: Verdana, sans-serif; color: #222;}
 
 body { background: #FFF; font-size: 1em; line-height: 1.5; margin: 0;}
 
@@ -86,6 +96,8 @@ a {
 					transition: color 100ms ease-in;
 }
 a:visited {}
+a:hover { outline: 0;}
+
 a:hover { color: #06e;}
 a:active {
 	color: #06e;
@@ -118,15 +130,15 @@ hr { display: block; height: 1px; margin: 1em 0; padding: 0; border: 0; border-t
 
 ins { background: #ff9; color: #000; text-decoration: none;}
 
-mark { background: #ff0; color: #000; font-style: italic; font-weight: bold;}
+mark { background: #ff0; color: #000;}
 
 /* Redeclare monospace font family: h5bp.com/j */
-pre, code, kbd, samp { font-family: monospace, serif; _font-family: 'courier new', monospace; font-size: 1em;}
+pre, code, kbd, samp { font-family: monospace, serif; font-size: 1em;}
 
 /* Improve readability of pre-formatted text in all browsers */
 pre { white-space: pre; white-space: pre-wrap; word-wrap: break-word;}
 
-q { quotes: none;}
+q { quotes: "\201C" "\201D" "\2018" "\2019";}
 q:before, q:after { content: ""; content: none;}
 
 small { font-size: 85%;}
@@ -183,25 +195,25 @@ figure { margin: 0;}
 	 ========================================================================== */
 
 form { margin: 0;}
-fieldset { border: 0; margin: 0; padding: 0;}
+fieldset { border: 1px solid #c0c0c0; margin: 0 2px; padding: 0.35em 0.625em 0.75em;}
 
 /* Indicate that 'label' will shift focus to the associated form element */
 label { cursor: pointer;}
 
 /*
- * 1. Correct color not inheriting in IE6/7/8/9
- * 2. Correct alignment displayed oddly in IE6/7
+ * 1. Correct color not inheriting in IE8/9
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
  */
 
-legend { border: 0; *margin-left: -7px; padding: 0; white-space: normal;}
+legend { border: 0; padding: 0;}
 
 /*
- * 1. Correct font-size not inheriting in all browsers
- * 2. Remove margins in FF3/4 S5 Chrome
- * 3. Define consistent vertical alignment display in all browsers
+ * 1. Corrects font family not being inherited in all browsers.
+ * 2. Corrects font size not being inherited in all browsers.
+ * 3. Addresses margins set differently in Firefox 4+, Safari 5, and Chrome
  */
 
-button, input, select, textarea { font-size: 100%; margin: 0; vertical-align: baseline; *vertical-align: middle;}
+button, input, select, textarea { font-family: inherit; /* 1 */ font-size: 100%; /* 2 */ margin: 0; /* 3 */ vertical-align: baseline;}
 
 /*
  * 1. Define line-height as normal to match FF3/4 (set using !important in the UA stylesheet)
@@ -210,12 +222,15 @@ button, input, select, textarea { font-size: 100%; margin: 0; vertical-align: ba
 button, input { line-height: normal;}
 
 /*
- * 1. Display hand cursor for clickable form elements
- * 2. Allow styling of clickable form elements in iOS
- * 3. Correct inner spacing displayed oddly in IE7 (doesn't effect IE6)
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Corrects inability to style clickable `input` types in iOS.
+ * 3. Improves usability and consistency of cursor style between image-type
+ *    `input` and others.
  */
 
-button, input[type="button"], input[type="reset"], input[type="submit"] { cursor: pointer; -webkit-appearance: button;}
+button, html input[type="button"], /* 1 */
+input[type="reset"], input[type="submit"] { -webkit-appearance: button; /* 2 */ cursor: pointer; /* 3 */}
 
 /*
  * Re-set default cursor for disabled elements
@@ -225,11 +240,18 @@ button[disabled], input[disabled], :disabled, .disabled, .unselectable { color: 
 
 /*
  * Consistent box sizing and appearance
+ * 1. Addresses box sizing set to `content-box` in IE 8/9.
+ * 2. Removes excess padding in IE 8/9.
+ * 3. Addresses `appearance` set to `searchfield` in Safari 5 and Chrome.
+ * 4. Addresses `box-sizing` set to `border-box` in Safari 5 and Chrome
+ *    (include `-moz` to future-proof).
+ * 5. Removes inner padding and search cancel button in Safari 5 and Chrome
+ * 		on OS X.
  */
 
-input[type="checkbox"], input[type="radio"] { box-sizing: border-box; padding: 0; *width: 13px; *height: 13px;}
-input[type="search"] { -webkit-appearance: textfield; -moz-box-sizing: content-box; -webkit-box-sizing: content-box; box-sizing: content-box;}
-input[type="search"]::-webkit-search-decoration, input[type="search"]::-webkit-search-cancel-button { -webkit-appearance: none; }
+input[type="checkbox"], input[type="radio"] { box-sizing: border-box; /* 1 */ padding: 0; /* 2 */}
+input[type="search"] { -webkit-appearance: textfield; /* 3 */ -moz-box-sizing: content-box; -webkit-box-sizing: content-box; /* 4 */ box-sizing: content-box;}
+input[type="search"]::-webkit-search-decoration, input[type="search"]::-webkit-search-cancel-button { -webkit-appearance: none;} /* 5 */
 
 /*
  * Remove inner padding and border in FF3/4: h5bp.com/l
@@ -244,7 +266,7 @@ button::-moz-focus-inner, input::-moz-focus-inner { border: 0; padding: 0;}
 
 textarea { overflow: auto; vertical-align: top; resize: vertical;}
 
-input:valid, textarea:valid {  }
+input:valid, textarea:valid { }
 input:invalid, textarea:invalid { background-color: #f0dddd;}
 
 ::-webkit-input-placeholder { color: #aaa;}
@@ -269,20 +291,20 @@ td { vertical-align: top;}
 /* =============================================================================
 	 &Chrome Frame Prompt
 	 ========================================================================== */
-
-.chromeframe { margin: 0.2em 0; background: #ccc; color: black; padding: 0.2em 0; }
+.chromeframe { margin: 0.2em 0; background: #ccc; color: black; padding: 0.2em 0;}
 
 
 /* =============================================================================
 	 &Fonts
 	 ========================================================================== */
+/* base-icon-font built as a subset using icons from FontAwesome and IcoMoon */
 @font-face {
-	font-family: "FontAwesome-webfont";
-	src: url('font/fontawesome/fontawesome-webfont.eot');
-	src: url('font/fontawesome/fontawesome-webfont.eot?#iefix') format('eot'),
-			 url('font/fontawesome/fontawesome-webfont.woff') format('woff'),
-			 url('font/fontawesome/fontawesome-webfont.ttf') format('truetype'),
-			 url('font/fontawesome/fontawesome-webfont.svg#FontAwesome') format('svg');
+	font-family: "base-icon-font";
+	src: url('font/base-icon-font/base-icon-font.eot');
+	src: url('font/base-icon-font/base-icon-font.eot?#iefix') format('eot'),
+			 url('font/base-icon-font/base-icon-font.woff') format('woff'),
+			 url('font/base-icon-font/base-icon-font.ttf') format('truetype'),
+			 url('font/base-icon-font/base-icon-font.svg#FontAwesome') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -296,7 +318,7 @@ td { vertical-align: top;}
  * rather than applying the same font-size value to multiple selectors.
  *
  * All line heights are 24px to ensure a consistent vertical rhythm.
- * Line heights to match line-height set on body.
+ * Line heights should be set to match line-height set on body.
  *
  */
 
@@ -334,7 +356,7 @@ h6, .fs-zeta    { font-size:16px; font-size:1rem; /* 16px */ line-height:1.5; /*
 .fs-milli { font-size:12px; font-size:0.75rem; /* 12px */ line-height:2; /* 24px */}
 
 
-/* ==|== &colours ========================================================
+/* ==|== &colours ==============================================================
 
 	 colour    #######
 
@@ -404,6 +426,8 @@ h6, .fs-zeta    { font-size:16px; font-size:1rem; /* 16px */ line-height:1.5; /*
 	margin: 0;
 	padding: 0 1em;
 }
+
+/*body { padding: 0 1em;}*/
 
 /* =============================================================================
 	 1.b &Header
@@ -515,6 +539,7 @@ h6, .fs-zeta    { font-size:16px; font-size:1rem; /* 16px */ line-height:1.5; /*
 	/* required for <button> and <input>*/
 	width: 100%;
 }
+.d-iblock { display: inline-block;}
 
 .case-u { text-transform: uppercase;}
 .case-l { text-transform: lowercase;}
@@ -550,10 +575,10 @@ p.error, span.error { color: #CC3333;}
 /* -----------------------------------------------------------------------------
 	 1.d.iii &Icons
 	 -------------------------------------------------------------------------- */
-/*  Font Awesome styles
+/*  Styling inspired by FontAwesome - http://mopo.ws/ReAOC6
 		------------------------------------------------------- */
 .icon:before, .icon:before {
-	font-family: FontAwesome-webfont;
+	font-family: base-icon-font;
 	font-weight: normal;
 	font-style: normal;
 	display: inline-block;
@@ -594,260 +619,91 @@ li.icon.icon-large:before, li.icon.icon-large:before {
 	text-indent: -1.3333333333333333em;
 }
 
-.icon-anim {
-	-webkit-transform-origin: 50% 42%;
-		 -moz-transform-origin: 50% 42%;
-			 -o-transform-origin: 50% 42%;
-			-ms-transform-origin: 50% 42%;
-					transform-origin: 50% 42%;
+.icon-anim-rotate {
+	-webkit-transform-origin: 48% 46%;
+		 -moz-transform-origin: 48% 46%;
+			 -o-transform-origin: 48% 46%;
+			-ms-transform-origin: 48% 46%;
+					transform-origin: 48% 46%;
+
+	-webkit-animation	: rotate 1s infinite linear;
+			-moz-animation: rotate 1s infinite linear;
+				-o-animation: rotate 1s infinite linear;
+			 -ms-animation: rotate 1s infinite linear;
 }
 
-.icon-anim-rotate {
-	-webkit-animation: rotate 1s infinite linear;
-	-moz-animation: rotate 1s infinite linear;
-	-o-animation: rotate 1s infinite linear;
-	-ms-animation: rotate 1s infinite linear;
-}
+/* prevent rotating icon from increasing size of button */
+.icon-anim-rotate,
+.btn .icon-anim-rotate { line-height: .8;}
+
+/*
+ * Use the Unicode Private Use Area (PUA) to ensure screen readers do not
+ * read off random characters that represent icons
+ */
+
+/* WEB APPLICATION ICONS U+e0xxx --------------------------------------------- */
+.icon-checkbox-unchecked:before	{ content: "\e000";}
+.icon-checkbox-checked:before		{ content: "\e001";}
+
+.icon-radio-unchecked:before		{ content: "\e010";}
+.icon-radio-checked:before			{ content: "\e011";}
+
+.icon-loader:before 						{ content: "\e020";}
+
+.icon-reorder:before						{ content: "\e030";}
+
+.icon-remove:before							{ content: "\e040";}
+
+.icon-comment:before						{ content: "\e050";}
+
+.icon-calendar:before						{ content: "\e060";}
+
+
+/* TEXT EDITOR ICONS U+e1xxx ------------------------------------------------- */
+.icon-font:before 							{ content: "\e100";}
+.icon-bold:before 							{ content: "\e110";}
+.icon-italic:before 						{ content: "\e120";}
+.icon-underline:before 					{ content: "\e130";}
+.icon-strikethrough:before			{ content: "\e140";}
+
+.icon-link:before 							{ content: "\e150";}
+.icon-unlink:before 						{ content: "\e151";}
+
+.icon-list-ol:before						{ content: "\e160";}
+.icon-list-ul:before						{ content: "\e161";}
+
+.icon-image:before							{ content: "\e170";}
+
+.icon-undo:before								{ content: "\e180";}
+.icon-redo:before								{ content: "\e181";}
+
+
+/* DIRECTIONAL ICONS U+e2xxx ------------------------------------------------- */
+.icon-caret-up:before						{ content: "\e200";}
+.icon-caret-down:before					{ content: "\e201";}
+.icon-caret-right:before				{ content: "\e202";}
+.icon-caret-left:before					{ content: "\e203";}
+
+/* VIDEO / AUDIO ICONS U+e3xxx ----------------------------------------------- */
+
+
+/* SOCIAL ICONS U+e4xxx ------------------------------------------------------- */
+
 
 /*  Font Awesome uses the Unicode Private Use Area (PUA) to ensure screen
 		readers do not read off random characters that represent icons */
-.icon-glass:before              { content: "\f000"; }
-.icon-music:before              { content: "\f001"; }
-.icon-search:before             { content: "\f002"; }
-.icon-envelope:before           { content: "\f003"; }
-.icon-heart:before              { content: "\f004"; }
-.icon-star:before               { content: "\f005"; }
-.icon-star-empty:before         { content: "\f006"; }
-.icon-user:before               { content: "\f007"; }
-.icon-film:before               { content: "\f008"; }
-.icon-th-large:before           { content: "\f009"; }
-.icon-th:before                 { content: "\f00a"; }
-.icon-th-list:before            { content: "\f00b"; }
-.icon-ok:before                 { content: "\f00c"; }
-.icon-remove:before             { content: "\f00d"; }
-.icon-zoom-in:before            { content: "\f00e"; }
 
-.icon-zoom-out:before           { content: "\f010"; }
-.icon-off:before                { content: "\f011"; }
-.icon-signal:before             { content: "\f012"; }
-.icon-cog:before                { content: "\f013"; }
-.icon-trash:before              { content: "\f014"; }
-.icon-home:before               { content: "\f015"; }
-.icon-file:before               { content: "\f016"; }
-.icon-time:before               { content: "\f017"; }
-.icon-road:before               { content: "\f018"; }
-.icon-download-alt:before       { content: "\f019"; }
-.icon-download:before           { content: "\f01a"; }
-.icon-upload:before             { content: "\f01b"; }
-.icon-inbox:before              { content: "\f01c"; }
-.icon-play-circle:before        { content: "\f01d"; }
-.icon-repeat:before             { content: "\f01e"; }
-
-/* \f020 doesn't work in Safari. all shifted one down */
-.icon-refresh:before            { content: "\f021"; }
-.icon-list-alt:before           { content: "\f022"; }
-.icon-lock:before               { content: "\f023"; }
-.icon-flag:before               { content: "\f024"; }
-.icon-headphones:before         { content: "\f025"; }
-.icon-volume-off:before         { content: "\f026"; }
-.icon-volume-down:before        { content: "\f027"; }
-.icon-volume-up:before          { content: "\f028"; }
-.icon-qrcode:before             { content: "\f029"; }
-.icon-barcode:before            { content: "\f02a"; }
-.icon-tag:before                { content: "\f02b"; }
-.icon-tags:before               { content: "\f02c"; }
-.icon-book:before               { content: "\f02d"; }
-.icon-bookmark:before           { content: "\f02e"; }
-.icon-print:before              { content: "\f02f"; }
-
-.icon-camera:before             { content: "\f030"; }
-.icon-font:before               { content: "\f031"; }
-.icon-bold:before               { content: "\f032"; }
-.icon-italic:before             { content: "\f033"; }
-.icon-text-height:before        { content: "\f034"; }
-.icon-text-width:before         { content: "\f035"; }
-.icon-align-left:before         { content: "\f036"; }
-.icon-align-center:before       { content: "\f037"; }
-.icon-align-right:before        { content: "\f038"; }
-.icon-align-justify:before      { content: "\f039"; }
-.icon-list:before               { content: "\f03a"; }
-.icon-indent-left:before        { content: "\f03b"; }
-.icon-indent-right:before       { content: "\f03c"; }
-.icon-facetime-video:before     { content: "\f03d"; }
-.icon-picture:before            { content: "\f03e"; }
-
-.icon-pencil:before             { content: "\f040"; }
-.icon-map-marker:before         { content: "\f041"; }
-.icon-adjust:before             { content: "\f042"; }
-.icon-tint:before               { content: "\f043"; }
-.icon-edit:before               { content: "\f044"; }
-.icon-share:before              { content: "\f045"; }
-.icon-check:before              { content: "\f046"; }
-.icon-move:before               { content: "\f047"; }
-.icon-step-backward:before      { content: "\f048"; }
-.icon-fast-backward:before      { content: "\f049"; }
-.icon-backward:before           { content: "\f04a"; }
-.icon-play:before               { content: "\f04b"; }
-.icon-pause:before              { content: "\f04c"; }
-.icon-stop:before               { content: "\f04d"; }
-.icon-forward:before            { content: "\f04e"; }
-
-.icon-fast-forward:before       { content: "\f050"; }
-.icon-step-forward:before       { content: "\f051"; }
-.icon-eject:before              { content: "\f052"; }
-.icon-chevron-left:before       { content: "\f053"; }
-.icon-chevron-right:before      { content: "\f054"; }
-.icon-plus-sign:before          { content: "\f055"; }
-.icon-minus-sign:before         { content: "\f056"; }
-.icon-remove-sign:before        { content: "\f057"; }
-.icon-ok-sign:before            { content: "\f058"; }
-.icon-question-sign:before      { content: "\f059"; }
-.icon-info-sign:before          { content: "\f05a"; }
-.icon-screenshot:before         { content: "\f05b"; }
-.icon-remove-circle:before      { content: "\f05c"; }
-.icon-ok-circle:before          { content: "\f05d"; }
-.icon-ban-circle:before         { content: "\f05e"; }
-
-.icon-arrow-left:before         { content: "\f060"; }
-.icon-arrow-right:before        { content: "\f061"; }
-.icon-arrow-up:before           { content: "\f062"; }
-.icon-arrow-down:before         { content: "\f063"; }
-.icon-share-alt:before          { content: "\f064"; }
-.icon-resize-full:before        { content: "\f065"; }
-.icon-resize-small:before       { content: "\f066"; }
-.icon-plus:before               { content: "\f067"; }
-.icon-minus:before              { content: "\f068"; }
-.icon-asterisk:before           { content: "\f069"; }
-.icon-exclamation-sign:before   { content: "\f06a"; }
-.icon-gift:before               { content: "\f06b"; }
-.icon-leaf:before               { content: "\f06c"; }
-.icon-fire:before               { content: "\f06d"; }
-.icon-eye-open:before           { content: "\f06e"; }
-
-.icon-eye-close:before          { content: "\f070"; }
-.icon-warning-sign:before       { content: "\f071"; }
-.icon-plane:before              { content: "\f072"; }
-.icon-calendar:before           { content: "\f073"; }
-.icon-random:before             { content: "\f074"; }
-.icon-comment:before            { content: "\f075"; }
-.icon-magnet:before             { content: "\f076"; }
-.icon-chevron-up:before         { content: "\f077"; }
-.icon-chevron-down:before       { content: "\f078"; }
-.icon-retweet:before            { content: "\f079"; }
-.icon-shopping-cart:before      { content: "\f07a"; }
-.icon-folder-close:before       { content: "\f07b"; }
-.icon-folder-open:before        { content: "\f07c"; }
-.icon-resize-vertical:before    { content: "\f07d"; }
-.icon-resize-horizontal:before  { content: "\f07e"; }
-
-.icon-bar-chart:before          { content: "\f080"; }
-.icon-twitter-sign:before       { content: "\f081"; }
-.icon-facebook-sign:before      { content: "\f082"; }
-.icon-camera-retro:before       { content: "\f083"; }
-.icon-key:before                { content: "\f084"; }
-.icon-cogs:before               { content: "\f085"; }
-.icon-comments:before           { content: "\f086"; }
-.icon-thumbs-up:before          { content: "\f087"; }
-.icon-thumbs-down:before        { content: "\f088"; }
-.icon-star-half:before          { content: "\f089"; }
-.icon-heart-empty:before        { content: "\f08a"; }
-.icon-signout:before            { content: "\f08b"; }
-.icon-linkedin-sign:before      { content: "\f08c"; }
-.icon-pushpin:before            { content: "\f08d"; }
-.icon-external-link:before      { content: "\f08e"; }
-
-.icon-signin:before             { content: "\f090"; }
-.icon-trophy:before             { content: "\f091"; }
-.icon-github-sign:before        { content: "\f092"; }
-.icon-upload-alt:before         { content: "\f093"; }
-.icon-lemon:before              { content: "\f094"; }
-.icon-phone:before              { content: "\f095"; }
-.icon-check-empty:before        { content: "\f096"; }
-.icon-bookmark-empty:before     { content: "\f097"; }
-.icon-phone-sign:before         { content: "\f098"; }
-.icon-twitter:before            { content: "\f099"; }
-.icon-facebook:before           { content: "\f09a"; }
-.icon-github:before             { content: "\f09b"; }
-.icon-unlock:before             { content: "\f09c"; }
-.icon-credit-card:before        { content: "\f09d"; }
-.icon-rss:before                { content: "\f09e"; }
-
-.icon-hdd:before                { content: "\f0a0"; }
-.icon-bullhorn:before           { content: "\f0a1"; }
-.icon-bell:before               { content: "\f0a2"; }
-.icon-certificate:before        { content: "\f0a3"; }
-.icon-hand-right:before         { content: "\f0a4"; }
-.icon-hand-left:before          { content: "\f0a5"; }
-.icon-hand-up:before            { content: "\f0a6"; }
-.icon-hand-down:before          { content: "\f0a7"; }
-.icon-circle-arrow-left:before  { content: "\f0a8"; }
-.icon-circle-arrow-right:before { content: "\f0a9"; }
-.icon-circle-arrow-up:before    { content: "\f0aa"; }
-.icon-circle-arrow-down:before  { content: "\f0ab"; }
-.icon-globe:before              { content: "\f0ac"; }
-.icon-wrench:before             { content: "\f0ad"; }
-.icon-tasks:before              { content: "\f0ae"; }
-
-.icon-filter:before             { content: "\f0b0"; }
-.icon-briefcase:before          { content: "\f0b1"; }
-.icon-fullscreen:before         { content: "\f0b2"; }
-
-.icon-group:before              { content: "\f0c0"; }
-.icon-link:before               { content: "\f0c1"; }
-.icon-cloud:before              { content: "\f0c2"; }
-.icon-beaker:before             { content: "\f0c3"; }
-.icon-cut:before                { content: "\f0c4"; }
-.icon-copy:before               { content: "\f0c5"; }
-.icon-paper-clip:before         { content: "\f0c6"; }
-.icon-save:before               { content: "\f0c7"; }
-.icon-sign-blank:before         { content: "\f0c8"; }
-.icon-reorder:before            { content: "\f0c9"; }
-.icon-list-ul:before            { content: "\f0ca"; }
-.icon-list-ol:before            { content: "\f0cb"; }
-.icon-strikethrough:before      { content: "\f0cc"; }
-.icon-underline:before          { content: "\f0cd"; }
-.icon-table:before              { content: "\f0ce"; }
-
-.icon-magic:before              { content: "\f0d0"; }
-.icon-truck:before              { content: "\f0d1"; }
-.icon-pinterest:before          { content: "\f0d2"; }
-.icon-pinterest-sign:before     { content: "\f0d3"; }
-.icon-google-plus-sign:before   { content: "\f0d4"; }
-.icon-google-plus:before        { content: "\f0d5"; }
-.icon-money:before              { content: "\f0d6"; }
-.icon-caret-down:before         { content: "\f0d7"; }
-.icon-caret-up:before           { content: "\f0d8"; }
-.icon-caret-left:before         { content: "\f0d9"; }
-.icon-caret-right:before        { content: "\f0da"; }
-.icon-columns:before            { content: "\f0db"; }
-.icon-sort:before               { content: "\f0dc"; }
-.icon-sort-down:before          { content: "\f0dd"; }
-.icon-sort-up:before            { content: "\f0de"; }
-
-.icon-envelope-alt:before       { content: "\f0e0"; }
-.icon-linkedin:before           { content: "\f0e1"; }
-.icon-undo:before               { content: "\f0e2"; }
-.icon-legal:before              { content: "\f0e3"; }
-.icon-dashboard:before          { content: "\f0e4"; }
-.icon-comment-alt:before        { content: "\f0e5"; }
-.icon-comments-alt:before       { content: "\f0e6"; }
-.icon-bolt:before               { content: "\f0e7"; }
-.icon-sitemap:before            { content: "\f0e8"; }
-.icon-umbrella:before           { content: "\f0e9"; }
-.icon-paste:before              { content: "\f0ea"; }
-
-.icon-user-md:before            { content: "\f200"; }
 
 /* -----------------------------------------------------------------------------
 	 1.d.iv &Labels
 	 -------------------------------------------------------------------------- */
 
 .label {
-	color: #ffffff;
+	color: #fff;
 	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
 	white-space: nowrap;
 	vertical-align: baseline;
-	background-color: #999999;
+	background-color: #999;
 
 	padding: 1px 4px 2px;
 	-webkit-border-radius: 2px;
@@ -1100,8 +956,8 @@ a.label:hover {
 }
 
 @-o-keyframes progress-bar-stripes {
-	0% { background-position: 0 0;}
-	100% { background-position: 40px 0;}
+	0% { background-position: 40px 0;}
+	100% { background-position: 0 0;}
 }
 
 @keyframes progress-bar-stripes {
@@ -1158,7 +1014,7 @@ a.label:hover {
 .token-list {
 	position: relative;
 	display: block;
-	border: 1px inset;
+	border: 1px solid #ccc;
 	cursor: text;
 	padding-left: .25em;
 }
@@ -1179,8 +1035,9 @@ a.label:hover {
 
 .token-list-token {
 	vertical-align: middle;
+	font-size: 75%;
 	line-height: 1;
-	padding: 2px .25em 1px;
+	padding: .25em .5em;
 	border: 1px solid #aaa;
 	-webkit-border-radius: 2px;
 		 -moz-border-radius: 2px;
@@ -1226,7 +1083,6 @@ a.label:hover {
 /* -----------------------------------------------------------------------------
 	 2.a.i Wordpress &Gallery
 	 -------------------------------------------------------------------------- */
-
 /*
  * 3 column gallery example
  *
@@ -1236,7 +1092,7 @@ a.label:hover {
 				<a href=""><img /></a>
 			</dt>
 			<dd class="wp-caption-text gallery-caption">
-				<h3><a href="#">caption</a></h3>
+				caption
 			</dd>
 		</dl>
 		<br style="clear: both"><!-- displayed after every 3 items in gallery -->
@@ -1291,8 +1147,9 @@ a.label:hover {
 .gallery-caption {
 	font-size: 14px;
 	font-size: .875rem; /* 14px / 16 = .875 */
-	text-transform: uppercase;
-	margin: 0;
+	margin-left: 0;
+	padding: 8px 0;
+	padding: .75em 0 0;
 }
 
 .gallery-caption > :last-child { margin-bottom: 0;}
@@ -1317,7 +1174,20 @@ a.label:hover {
 
 input, textarea {
 	margin-bottom: 1em;
+	padding: 0 0 0 .1em;
+	border: 1px solid #ccc;
 }
+
+/*
+ * Required only if using icon prefixes and suffixes.
+ * Addresses FF's use of !important on line-heights
+ * on inputs making normalising difficult - http://mopo.ws/SvxClq
+ *
+ * fix radios and inputs affected by new input height
+ */
+input	{	height: 1.75em;}
+input[type="radio"],
+input[type="checkbox"] { height: auto;}
 
 .prefix-icon-container,
 .suffix-icon-container {
@@ -1334,27 +1204,37 @@ input, textarea {
 .suffix-icon-block {
 	vertical-align: top;
 	display: inline-block;
-	width: 1.5em;
-	padding: .25em 0 .05em;
-	line-height: 1;
+	width: 1.75em;
+	height: 1.75em;
 	text-align: center;
+	padding-top: .05em;
 }
 
 .prefix-icon-container > .icon,
 .suffix-icon-container > .icon {
 	position: absolute;
-	margin-top: .05em;
+	margin-top: .1em;
+	padding-top: 0;
 }
 
 .suffix-icon-container > .icon {
 	position: relative;
-	margin-left: -1.5em;
+	margin-left: -1.75em;
 }
 
 .prefix-icon-block, .suffix-icon-block {
 	background: #f2f2f2;
 	border: 1px solid #ccc;
 }
+
+.radio-custom-label:before,
+.checkbox-custom-label:before { margin-bottom: 1em;}
+
+.radio-custom-label:before { content: "\e010";}
+.checkbox-custom-label:before { content: "\e000"; /* .icon-check-empty - FontAwesome */}
+
+input:checked + label > .radio-custom-label:before { content: "\e011";}
+input:checked + label > .checkbox-custom-label:before { content: "\e001"; /* .icon-check - FontAwesome */}
 
 /* -----------------------------------------------------------------------------
 	 3.a.i &Date Picker
@@ -1371,13 +1251,11 @@ input, textarea {
 }
 
 .ui-datepicker,
-.ui-datepicker a {
-	color: #bbb;
-}
+.ui-datepicker a { color: #bbb;}
 
 .ui-datepicker .ui-datepicker-header {
 	position: relative;
-	padding: .25em 0 .15em;
+	padding: .3em 0 .4em;
 	background-color: #333;
 
 	-webkit-border-radius	: 2px;
@@ -1396,8 +1274,9 @@ input, textarea {
 	cursor: pointer;
 }
 
-.ui-datepicker .ui-datepicker-prev:before, .ui-datepicker .ui-datepicker-next:before {
-	font-family: FontAwesome-webfont;
+.ui-datepicker .ui-datepicker-prev:before,
+.ui-datepicker .ui-datepicker-next:before {
+	font-family: base-icon-font;
 	position: absolute;
 	text-indent: 0;
 	text-align: center;
@@ -1408,51 +1287,34 @@ input, textarea {
 	padding-top: .25em;
 }
 
-.ui-datepicker .ui-datepicker-prev { left:2px; }
-.ui-datepicker .ui-datepicker-prev:before { content: "\f060"; }
-.ui-datepicker .ui-datepicker-next { right:2px; }
-.ui-datepicker .ui-datepicker-next:before { content: "\f061"; }
-.ui-datepicker .ui-datepicker-prev-hover { left:1px; }
-.ui-datepicker .ui-datepicker-next-hover { right:1px; }
-.ui-datepicker .ui-datepicker-prev span, .ui-datepicker .ui-datepicker-next span {
-	display: block;
-	position: absolute;
-	left: 50%;
-	margin-left: -8px;
-	top: 50%;
-	margin-top: -8px;
-}
-.ui-datepicker .ui-datepicker-title {
-	margin: 0 2.3em;
-	line-height: 1.8em;
-	text-align: center;
-}
-.ui-datepicker .ui-datepicker-title select {
-	font-size:1em;
-	margin:1px 0;
-}
-.ui-datepicker select.ui-datepicker-month-year {width: 100%;}
-.ui-datepicker select.ui-datepicker-month,
-.ui-datepicker select.ui-datepicker-year { width: 49%;}
+.ui-datepicker .ui-datepicker-prev { left:2px;}
+.ui-datepicker .ui-datepicker-prev:before { content: "\e203";}
+.ui-datepicker .ui-datepicker-next { right:2px;}
+.ui-datepicker .ui-datepicker-next:before { content: "\e202";}
+.ui-datepicker .ui-datepicker-prev-hover { left:1px;}
+.ui-datepicker .ui-datepicker-next-hover { right:1px;}
+
+.ui-datepicker .ui-datepicker-title { text-align: center;}
+
 .ui-datepicker table {
-	width: 100%;
 	font-size: .9em;
+	width: 100%;
 	border-collapse: collapse;
 	margin:0 0 .4em;
 }
 .ui-datepicker th {
-	padding: .7em .3em;
-	text-align: center;
 	font-weight: bold;
+	text-align: center;
+	padding: .7em .3em;
 	border: 0;
 }
 .ui-datepicker td {
+	padding: 0 1px 3px;
 	border: 0;
-	padding: 1px;
 }
 .ui-datepicker td span, .ui-datepicker td a {
 	display: block;
-	padding: .25em .5em;
+	padding: .4em .5em .3em;
 	text-align: right;
 	text-decoration: none;
 	border: 1px solid #333;
@@ -1460,49 +1322,10 @@ input, textarea {
 
 .ui-datepicker td a:hover { border-color: #444;}
 
-.ui-datepicker td .ui-state-highlight {
-	background: #333;
-}
-
-.ui-datepicker .ui-datepicker-buttonpane {
-	background-image: none;
-	margin: .7em 0 0 0;
-	padding:0 .2em;
-	border-left: 0;
-	border-right: 0;
-	border-bottom: 0;
-}
-.ui-datepicker .ui-datepicker-buttonpane button {
-	float: right;
-	margin: .5em .2em .4em;
-	cursor: pointer;
-	padding: .2em .6em .3em .6em;
-	width:auto;
-	overflow:visible;
-}
-.ui-datepicker .ui-datepicker-buttonpane button.ui-datepicker-current { float:left; }
-
-/* with multiple calendars */
-.ui-datepicker.ui-datepicker-multi { width:auto; }
-.ui-datepicker-multi .ui-datepicker-group { float:left; }
-.ui-datepicker-multi .ui-datepicker-group table {
-	width:95%;
-	margin:0 auto .4em;
-}
-.ui-datepicker-multi-2 .ui-datepicker-group { width:50%; }
-.ui-datepicker-multi-3 .ui-datepicker-group { width:33.3%; }
-.ui-datepicker-multi-4 .ui-datepicker-group { width:25%; }
-.ui-datepicker-multi .ui-datepicker-group-last .ui-datepicker-header { border-left-width:0; }
-.ui-datepicker-multi .ui-datepicker-group-middle .ui-datepicker-header { border-left-width:0; }
-.ui-datepicker-multi .ui-datepicker-buttonpane { clear:left; }
-.ui-datepicker-row-break {
-	clear:both;
-	width:100%;
-	font-size:0;
-}
+.ui-datepicker td .ui-state-highlight { background: #333;}
 
 /* RTL support */
-.ui-datepicker-rtl { direction: rtl; }
+.ui-datepicker-rtl { direction: rtl;}
 .ui-datepicker-rtl .ui-datepicker-prev {
 	right: 2px;
 	left: auto;
@@ -1519,10 +1342,10 @@ input, textarea {
 	left: 1px;
 	right: auto;
 }
-.ui-datepicker-rtl .ui-datepicker-buttonpane { clear:right; }
-.ui-datepicker-rtl .ui-datepicker-buttonpane button { float: left; }
-.ui-datepicker-rtl .ui-datepicker-buttonpane button.ui-datepicker-current { float:right; }
-.ui-datepicker-rtl .ui-datepicker-group { float:right; }
+.ui-datepicker-rtl .ui-datepicker-buttonpane { clear:right;}
+.ui-datepicker-rtl .ui-datepicker-buttonpane button { float: left;}
+.ui-datepicker-rtl .ui-datepicker-buttonpane button.ui-datepicker-current { float:right;}
+.ui-datepicker-rtl .ui-datepicker-group { float:right;}
 .ui-datepicker-rtl .ui-datepicker-group-last .ui-datepicker-header {
 	border-right-width:0;
 	border-left-width:1px;
@@ -1813,6 +1636,14 @@ input, textarea {
  */
 
 /* rows hold columns - should be used with .cf */
+.grid-example .col {
+	padding: .5em 1em;
+	background: #eee;
+	border-radius: 2px;
+	font-family: monospace;
+	text-align: center;
+}
+
 .row { margin-left: -16px;}
 
 .ie8 .row,
@@ -1824,7 +1655,6 @@ input, textarea {
 	border-left-width: 16px;
 	border-left-width: 1rem;
 	float: left;
-	min-height: 100px;
 	margin-bottom: 16px;
 	margin-bottom: 1rem;
 	padding: 0;
@@ -1839,8 +1669,21 @@ input, textarea {
 }
 
 /*
+ * Restrict inline-block cols to modern browsers.
+ * Inline-block columns are useful when floated columns of different heights
+ * prevent subsequent columns from floating to their appropriate positions
+ */
+:root .row-ib-cols { margin: 0 -6px 0 -10px;}
+:root .row-ib-cols > .col {
+	float: none;
+	display: inline-block;
+	vertical-align: top;
+	margin-left: -6px;
+}
+
+/*
  * IE8 doesn't separate columns well without padding.
- * These lines can be removed if using padding in .col
+ * These lines can be removed if already using padding in .col
  */
 .ie8 .col { padding: 0 16px;}
 .ie7 .col { padding: 0 2%;}
@@ -1848,8 +1691,18 @@ input, textarea {
 
 /* 1. 2 Column Grid 0px ->
 ================================================================================
-Span 1:   50%
-Span 2:   100%
+Span 1:   8.33333333333%
+Span 2:   16.6666666667%
+Span 3:   25.0%
+Span 4:   33.3333333333%
+Span 5:   41.6666666667%
+Span 6:   50.0%
+Span 7:   58.3333333333%
+Span 8:   66.6666666667%
+Span 9:   75.0%
+Span 10:  83.3333333333%
+Span 11:  91.6666666667%
+Span 12:  100%
 ============================================================================= */
 
 /*
@@ -1857,8 +1710,18 @@ Span 2:   100%
  */
  @media screen and (min-width: 0) {
 
-	.span_1_alpha { width: 50%;}
-	.span_2_alpha {
+	.span-1-alpha { width: 8.33333333333%;}
+	.span-2-alpha { width: 16.6666666667%;}
+	.span-3-alpha { width: 25.0%;}
+	.span-4-alpha { width: 33.3333333333%;}
+	.span-5-alpha { width: 41.6666666667%;}
+	.span-6-alpha { width: 50.0%;}
+	.span-7-alpha { width: 58.3333333333%;}
+	.span-8-alpha { width: 66.6666666667%;}
+	.span-9-alpha { width: 75.0%;}
+	.span-10-alpha { width: 83.3333333333%;}
+	.span-11-alpha { width: 91.6666666667%;}
+	.span-12-alpha {
 		margin-left: 0;
 		width: 100%;
 	}
@@ -1867,8 +1730,18 @@ Span 2:   100%
 	 * subtract 2.5% from each side of each column to account for IE7
 	 * padding and rounding errors.
 	 */
-	.ie7 .span_1_alpha { width: 45%;}
-	.ie7 .span_2_alpha {
+	.ie7 .span-1-alpha { width: 3.333%;}
+	.ie7 .span-2-alpha { width: 11.667%;}
+	.ie7 .span-3-alpha { width: 20%;}
+	.ie7 .span-4-alpha { width: 28.333%;}
+	.ie7 .span-5-alpha { width: 36.667%;}
+	.ie7 .span-6-alpha { width: 45%;}
+	.ie7 .span-7-alpha { width: 53.333%;}
+	.ie7 .span-8-alpha { width: 62.667%;}
+	.ie7 .span-9-alpha { width: 70%;}
+	.ie7 .span-10-alpha { width: 78.333%;}
+	.ie7 .span-11-alpha { width: 86.667%;}
+	.ie7 .span-12-alpha {
 		margin-left: 0;
 		width: 95%;
 	}
@@ -1876,12 +1749,18 @@ Span 2:   100%
 
 /* 2. 6 Column Grid 480px ->
 ================================================================================
-Span 1:   16.6666666667%
-Span 2:   33.3333333333%
-Span 3:   50.0%
-Span 4:   66.6666666667%
-Span 5:   83.3333333333%
-Span 6:   100%
+Span 1:   8.33333333333%
+Span 2:   16.6666666667%
+Span 3:   25.0%
+Span 4:   33.3333333333%
+Span 5:   41.6666666667%
+Span 6:   50.0%
+Span 7:   58.3333333333%
+Span 8:   66.6666666667%
+Span 9:   75.0%
+Span 10:  83.3333333333%
+Span 11:  91.6666666667%
+Span 12:  100%
 ============================================================================= */
 
 /*
@@ -1891,12 +1770,18 @@ Span 6:   100%
 
 @media screen and (min-width: 30em) {
 
-	.span_1_beta { width: 16.667%;}
-	.span_2_beta { width: 33.333%;}
-	.span_3_beta { width: 50.0%;}
-	.span_4_beta { width: 66.667%;}
-	.span_5_beta { width: 83.333%;}
-	.span_6_beta {
+	.span-1-beta { width: 8.33333333333%;}
+	.span-2-beta { width: 16.6666666667%;}
+	.span-3-beta { width: 25.0%;}
+	.span-4-beta { width: 33.3333333333%;}
+	.span-5-beta { width: 41.6666666667%;}
+	.span-6-beta { width: 50.0%;}
+	.span-7-beta { width: 58.3333333333%;}
+	.span-8-beta { width: 66.6666666667%;}
+	.span-9-beta { width: 75.0%;}
+	.span-10-beta { width: 83.3333333333%;}
+	.span-11-beta { width: 91.6666666667%;}
+	.span-12-beta {
 		margin-left: 0;
 		width: 100%;
 	}
@@ -1905,18 +1790,83 @@ Span 6:   100%
 	 * subtract 2.5% from each side of each column to account for IE7
 	 * padding and rounding errors.
 	 */
-	.ie7 .span_1_beta { width: 11.667%;}
-	.ie7 .span_2_beta { width: 28.333%;}
-	.ie7 .span_3_beta { width: 45%;}
-	.ie7 .span_4_beta { width: 61.667%;}
-	.ie7 .span_5_beta { width: 78.333%;}
-	.ie7 .span_6_beta {
+	.ie7 .span-1-beta { width: 3.333%;}
+	.ie7 .span-2-beta { width: 11.667%;}
+	.ie7 .span-3-beta { width: 20%;}
+	.ie7 .span-4-beta { width: 28.333%;}
+	.ie7 .span-5-beta { width: 36.667%;}
+	.ie7 .span-6-beta { width: 45%;}
+	.ie7 .span-7-beta { width: 53.333%;}
+	.ie7 .span-8-beta { width: 62.667%;}
+	.ie7 .span-9-beta { width: 70%;}
+	.ie7 .span-10-beta { width: 78.333%;}
+	.ie7 .span-11-beta { width: 86.667%;}
+	.ie7 .span-12-beta {
 		margin-left: 0;
 		width: 95%;
 	}
 }
 
-/* 3. 12 Column Grid 960px ->
+/* 3. 12 Column Grid 768px ->
+================================================================================
+Span 1:   8.33333333333%
+Span 2:   16.6666666667%
+Span 3:   25.0%
+Span 4:   33.3333333333%
+Span 5:   41.6666666667%
+Span 6:   50.0%
+Span 7:   58.3333333333%
+Span 8:   66.6666666667%
+Span 9:   75.0%
+Span 10:  83.3333333333%
+Span 11:  91.6666666667%
+Span 12:  100%
+============================================================================= */
+
+/*
+ * At base font-size of 16px
+ * 768px = 48em
+ */
+@media screen and (min-width: 48em) {
+
+	.span-1-gamma { width: 8.333%;}
+	.span-2-gamma { width: 16.667%;}
+	.span-3-gamma { width: 25.0%;}
+	.span-4-gamma { width: 33.333%;}
+	.span-5-gamma { width: 41.667%;}
+	.span-6-gamma { width: 50.0%;}
+	.span-7-gamma { width: 58.333%;}
+	.span-8-gamma { width: 66.667%;}
+	.span-9-gamma { width: 75.0%;}
+	.span-10-gamma { width: 83.333%;}
+	.span-11-gamma { width: 91.667%;}
+	.span-12-gamma {
+		margin-left: 0;
+		width: 100%;
+	}
+
+	/*
+	 * subtract 2.5% from each side of each column to account for IE7
+	 * padding and rounding errors.
+	 */
+	.ie7 .span-1-gamma { width: 3.333%;}
+	.ie7 .span-2-gamma { width: 11.667%;}
+	.ie7 .span-3-gamma { width: 20%;}
+	.ie7 .span-4-gamma { width: 28.333%;}
+	.ie7 .span-5-gamma { width: 36.667%;}
+	.ie7 .span-6-gamma { width: 45%;}
+	.ie7 .span-7-gamma { width: 53.333%;}
+	.ie7 .span-8-gamma { width: 62.667%;}
+	.ie7 .span-9-gamma { width: 70%;}
+	.ie7 .span-10-gamma { width: 78.333%;}
+	.ie7 .span-11-gamma { width: 86.667%;}
+	.ie7 .span-12-gamma {
+		margin-left: 0;
+		width: 95%;
+	}
+}
+
+/* 4. 12 Column Grid 1280px ->
 ================================================================================
 Span 1:   8.33333333333%
 Span 2:   16.6666666667%
@@ -1934,81 +1884,22 @@ Span 12:   100%
 
 /*
  * At base font-size of 16px
- * 960px = 60em
+ * 1280px = 80em
  */
-@media screen and (min-width: 60em) {
+@media screen and (min-width: 80em) {
 
-	.span_1_gamma { width: 8.333%;}
-	.span_2_gamma { width: 16.667%;}
-	.span_3_gamma { width: 25.0%;}
-	.span_4_gamma { width: 33.333%;}
-	.span_5_gamma { width: 41.667%;}
-	.span_6_gamma { width: 50.0%;}
-	.span_7_gamma { width: 58.333%;}
-	.span_8_gamma { width: 66.667%;}
-	.span_9_gamma { width: 75.0%;}
-	.span_10_gamma { width: 83.333%;}
-	.span_11_gamma { width: 91.667%;}
-	.span_12_gamma {
-		margin-left: 0;
-		width: 95%;
-	}
-
-	/*
-	 * subtract 2.5% from each side of each column to account for IE7
-	 * padding and rounding errors.
-	 */
-	.ie7 .span_1_gamma { width: 3.333%;}
-	.ie7 .span_2_gamma { width: 11.667%;}
-	.ie7 .span_3_gamma { width: 20%;}
-	.ie7 .span_4_gamma { width: 28.333%;}
-	.ie7 .span_5_gamma { width: 36.667%;}
-	.ie7 .span_6_gamma { width: 45%;}
-	.ie7 .span_7_gamma { width: 53.333%;}
-	.ie7 .span_8_gamma { width: 62.667%;}
-	.ie7 .span_9_gamma { width: 70%;}
-	.ie7 .span_10_gamma { width: 78.333%;}
-	.ie7 .span_11_gamma { width: 86.667%;}
-	.ie7 .span_12_gamma {
-		margin-left: 0;
-		width: 95%;
-	}
-}
-
-/* 4. 12 Column Grid 1440px ->
-================================================================================
-Span 1:   8.33333333333%
-Span 2:   16.6666666667%
-Span 3:   25.0%
-Span 4:   33.3333333333%
-Span 5:   41.6666666667%
-Span 6:   50.0%
-Span 7:   58.3333333333%
-Span 8:   66.6666666667%
-Span 9:   75.0%
-Span 10:   83.3333333333%
-Span 11:   91.6666666667%
-Span 12:   100%
-============================================================================= */
-
-/*
- * At base font-size of 16px
- * 1440px = 90em
- */
-@media screen and (min-width: 90em) {
-
-	.span_1_delta { width: 8.33333333333%;}
-	.span_2_delta { width: 16.6666666667%;}
-	.span_3_delta { width: 25.0%;}
-	.span_4_delta { width: 33.3333333333%;}
-	.span_5_delta { width: 41.6666666667%;}
-	.span_6_delta { width: 50.0%;}
-	.span_7_delta { width: 58.3333333333%;}
-	.span_8_delta { width: 66.6666666667%;}
-	.span_9_delta { width: 75.0%;}
-	.span_10_delta { width: 83.3333333333%;}
-	.span_11_delta { width: 91.6666666667%;}
-	.span_12_delta {
+	.span-1-delta { width: 8.33333333333%;}
+	.span-2-delta { width: 16.6666666667%;}
+	.span-3-delta { width: 25.0%;}
+	.span-4-delta { width: 33.3333333333%;}
+	.span-5-delta { width: 41.6666666667%;}
+	.span-6-delta { width: 50.0%;}
+	.span-7-delta { width: 58.3333333333%;}
+	.span-8-delta { width: 66.6666666667%;}
+	.span-9-delta { width: 75.0%;}
+	.span-10-delta { width: 83.3333333333%;}
+	.span-11-delta { width: 91.6666666667%;}
+	.span-12-delta {
 		margin-left: 0;
 		width: 100%;
 	}
@@ -2017,18 +1908,18 @@ Span 12:   100%
 	 * subtract 2.5% from each side of each column to account for IE7
 	 * padding and rounding errors.
 	 */
-	.ie7 .span_1_delta { width: 3.333%;}
-	.ie7 .span_2_delta { width: 11.667%;}
-	.ie7 .span_3_delta { width: 20%;}
-	.ie7 .span_4_delta { width: 28.333%;}
-	.ie7 .span_5_delta { width: 36.667%;}
-	.ie7 .span_6_delta { width: 45%;}
-	.ie7 .span_7_delta { width: 53.333%;}
-	.ie7 .span_8_delta { width: 61.667%;}
-	.ie7 .span_9_delta { width: 70%;}
-	.ie7 .span_10_delta { width: 78.333%;}
-	.ie7 .span_11_delta { width: 86.667%;}
-	.ie7 .span_12_delta {
+	.ie7 .span-1-delta { width: 3.333%;}
+	.ie7 .span-2-delta { width: 11.667%;}
+	.ie7 .span-3-delta { width: 20%;}
+	.ie7 .span-4-delta { width: 28.333%;}
+	.ie7 .span-5-delta { width: 36.667%;}
+	.ie7 .span-6-delta { width: 45%;}
+	.ie7 .span-7-delta { width: 53.333%;}
+	.ie7 .span-8-delta { width: 61.667%;}
+	.ie7 .span-9-delta { width: 70%;}
+	.ie7 .span-10-delta { width: 78.333%;}
+	.ie7 .span-11-delta { width: 86.667%;}
+	.ie7 .span-12-delta {
 		margin-left: 0;
 		width: 95%;
 	}
@@ -2043,7 +1934,7 @@ Span 12:   100%
  * Nicholas Gallagher's detailed post on new .ir - http://mopo.ws/wHCSUu
  * Causes issues with em based margins on elements using .ir
  */
-.ir { border:0; font: 0/0 a; text-shadow: none; color: transparent; background-color: transparent; }
+.ir { border:0; font: 0/0 a; text-shadow: none; color: transparent; background-color: transparent;}
 
 /* Hide from both screenreaders and browsers: h5bp.com/u */
 .hidden { display: none !important; visibility: hidden;}
@@ -2104,16 +1995,16 @@ Span 12:   100%
 	 ========================================================================== */
 
 @media print {
-	* { background: transparent !important; color: black !important; box-shadow:none !important; text-shadow: none !important; filter:none !important; -ms-filter: none !important; } /* Black prints faster: h5bp.com/s */
-	a, a:visited { text-decoration: underline; }
-	a[href]:after { content: " (" attr(href) ")"; }
-	abbr[title]:after { content: " (" attr(title) ")"; }
-	.ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; }  /* Don't show links for images, or javascript/internal links */
-	pre, blockquote { border: 1px solid #999; page-break-inside: avoid; }
-	thead { display: table-header-group; } /* h5bp.com/t */
-	tr, img { page-break-inside: avoid; }
-	img { max-width: 100% !important; }
-	@page { margin: 0.5cm; }
-	p, h2, h3 { orphans: 3; widows: 3; }
-	h2, h3 { page-break-after: avoid; }
+	* { background: transparent !important; color: black !important; box-shadow:none !important; text-shadow: none !important; filter:none !important; -ms-filter: none !important;} /* Black prints faster: h5bp.com/s */
+	a, a:visited { text-decoration: underline;}
+	a[href]:after { content: " (" attr(href) ")";}
+	abbr[title]:after { content: " (" attr(title) ")";}
+	.ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content: "";}  /* Don't show links for images, or javascript/internal links */
+	pre, blockquote { border: 1px solid #999; page-break-inside: avoid;}
+	thead { display: table-header-group;} /* h5bp.com/t */
+	tr, img { page-break-inside: avoid;}
+	img { max-width: 100% !important;}
+	@page { margin: 0.5cm;}
+	p, h2, h3 { orphans: 3; widows: 3;}
+	h2, h3 { page-break-after: avoid;}
 }

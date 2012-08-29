@@ -38,39 +38,34 @@
 		<header class="area-header wrap" role="banner">
 
 			<h1>Index</h1>
+			<ul>
+				<li><a href="#navigation">navigation</a></li>
+				<li><a href="#headings">headings</a></li>
+				<li><a href="#buttons">buttons</a></li>
+				<li><a href="#labels">labels</a></li>
+				<li><a href="#navigation">navigation</a></li>
+				<li><a href="#autocomplete">autocomplete</a></li>
+				<li><a href="#forms">forms</a></li>
+				<li><a href="#gallery">gallery</a></li>
+				<li><a href="#wysiwyg">wysiwyg</a></li>
+				<li><a href="#alerts">alerts</a></li>
+				<li><a href="#file-drop">file drop</a></li>
+				<li><a href="#tool-tips">tool tips</a></li>
+				<li><a href="#progress-bars">progress bars</a></li>
+				<li><a href="#grid">grid</a></li>
+			</ul>
 
-			<div class="menu-collapse-container ar va-m">
-				<label for="menu-collapse-index" class="menu-collapse-button btn"><span class="visuallyhidden">trigger to expand navigation menu</span><span class="icon icon-align-justify"></span></label>
-			</div>
-			<input type="checkbox" id="menu-collapse-index" class="hidden menu-collapse-checkbox">
-			<nav class="menu-collapse cf" role="navigation">
-				<ul class="menu-primary menu case-u">
-					<li class="menu-item"><a href="#navigation">navigation</a></li>
-					<li class="menu-item"><a href="#headings">headings</a></li>
-					<li class="menu-item"><a href="#buttons">buttons</a></li>
-					<li class="menu-item"><a href="#labels">labels</a></li>
-					<li class="menu-item"><a href="#navigation">navigation</a></li>
-					<li class="menu-item"><a href="#autocomplete">autocomplete</a></li>
-					<li class="menu-item"><a href="#forms">forms</a></li>
-					<li class="menu-item"><a href="#gallery">gallery</a></li>
-					<li class="menu-item"><a href="#wysiwyg">wysiwyg</a></li>
-					<li class="menu-item"><a href="#alerts">alerts</a></li>
-					<li class="menu-item"><a href="#file-drop">file drop</a></li>
-					<li class="menu-item"><a href="#tool-tips">tool tips</a></li>
-					<li class="menu-item"><a href="#progress-bars">progress bars</a></li>
-				</ul>
-			</nav>
 
 			<hr>
 
-			<h1 id="navigaiton">Navigation</h1>
+			<h1 id="navigation">Navigation</h1>
 
 			<div>
 				<!-- allow screenreaders to skip navigation -->
 				<a class="visuallyhidden" href="#main">skip navigation and go to main content</a>
 
 				<div class="menu-collapse-container ar va-m">
-					<label for="menu-collapse-checkbox" class="menu-collapse-button btn"><span class="visuallyhidden">trigger to expand navigation menu</span><span class="icon icon-align-justify"></span></label>
+					<label for="menu-collapse-checkbox" class="menu-collapse-button btn"><span class="visuallyhidden">trigger to expand navigation menu</span><span class="icon icon-reorder"></span></label>
 				</div>
 				<input type="checkbox" id="menu-collapse-checkbox" class="hidden menu-collapse-checkbox">
 				<nav class="menu-collapse cf" role="navigation">
@@ -122,119 +117,121 @@
 
 				<hr>
 
-				<h1 id="buttons">Buttons</h1>
-
-				<h2>Buttons Using anchor tag</h2>
-				<a class="btn btn-primary" href="javascript:void(0);">.btn</a>
-
-				<a class="btn btn-primary" href="javascript:void(0);"><span class="icon icon-refresh fs-milli"></span> .btn - prefix icon</a>
-				<a class="btn btn-primary" href="javascript:void(0);">.btn - suffix icon <span class="icon icon-refresh fs-milli"></span></a>
-
-				<a class="btn btn-primary disabled" href="javascript:void(0);">.btn .disabled</a>
-				<a class="btn btn-primary" disabled href="javascript:void(0);">.btn [disabled]</a>
-				<a class="btn btn-primary disabled" href="javascript:void(0);"><span class="icon icon-refresh icon-anim icon-anim-rotate"></span></a>
-
-				<a class="btn btn-primary btn-selected" href="javascript:void(0);">.btn .selected</a>
-
-				<a class="btn btn-primary btn-block" href="javascript:void(0);">.btn .btn-block</a>
-
-				<a class="btn btn-primary" href="javascript:void(0);">.btn <span class="fs-alpha va-sub">text size variant</span></a>
-				<a class="btn btn-primary" href="javascript:void(0);"><span class="fs-alpha va-sub">.btn</span> text size variant</a>
-
 				<div>
-					<div class="btn-group cf">
-						<a class="btn btn-primary" href="javascript:void(0);">1</a>
-						<a class="btn btn-primary" href="javascript:void(0);">2</a>
-						<a class="btn btn-primary" href="javascript:void(0);">3</a>
-						<a class="btn btn-primary" href="javascript:void(0);">4</a>
-						<a class="btn btn-primary" href="javascript:void(0);">5</a>
-						<a class="btn btn-primary" href="javascript:void(0);">6</a>
-						<a class="btn btn-primary" href="javascript:void(0);">7</a>
+					<h1 id="buttons">Buttons</h1>
+
+					<h2>Buttons Using anchor tag</h2>
+					<a class="btn btn-primary" href="javascript:void(0);">.btn</a>
+
+					<a class="btn btn-primary" href="javascript:void(0);"><span class="icon icon-loader fs-milli"></span> .btn - prefix icon</a>
+					<a class="btn btn-primary" href="javascript:void(0);">.btn - suffix icon <span class="icon icon-loader icon-anim-rotate fs-milli"></span></a>
+
+					<a class="btn btn-primary disabled" href="javascript:void(0);">.btn .disabled</a>
+					<a class="btn btn-primary" disabled href="javascript:void(0);">.btn [disabled]</a>
+					<a class="btn btn-primary disabled" href="javascript:void(0);"><span class="icon icon-loader icon-anim-rotate"></span></a>
+
+					<a class="btn btn-primary btn-selected" href="javascript:void(0);">.btn .selected</a>
+
+					<a class="btn btn-primary d-block" href="javascript:void(0);">.btn .d-block</a>
+
+					<a class="btn btn-primary" href="javascript:void(0);">.btn <span class="fs-alpha va-sub">text size variant</span></a>
+					<a class="btn btn-primary" href="javascript:void(0);"><span class="fs-alpha va-sub">.btn</span> text size variant</a>
+
+					<div>
+						<div class="btn-group cf">
+							<a class="btn btn-primary" href="javascript:void(0);">1</a>
+							<a class="btn btn-primary" href="javascript:void(0);">2</a>
+							<a class="btn btn-primary" href="javascript:void(0);">3</a>
+							<a class="btn btn-primary" href="javascript:void(0);">4</a>
+							<a class="btn btn-primary" href="javascript:void(0);">5</a>
+							<a class="btn btn-primary" href="javascript:void(0);">6</a>
+							<a class="btn btn-primary" href="javascript:void(0);">7</a>
+						</div>
+
+						<div class="btn-group cf">
+							<a class="btn btn-primary" href="javascript:void(0);">1</a>
+							<a class="btn btn-primary" href="javascript:void(0);">2</a>
+						</div>
+
+						<div class="btn-group cf">
+							<a class="btn btn-primary" href="javascript:void(0);">1</a>
+						</div>
 					</div>
 
-					<div class="btn-group cf">
-						<a class="btn btn-primary" href="javascript:void(0);">1</a>
-						<a class="btn btn-primary" href="javascript:void(0);">2</a>
+					<h2>Buttons Using button tag</h2>
+					<button class="btn btn-primary">.btn</button>
+
+					<button class="btn btn-primary"><span class="icon icon-loader fs-milli"></span> .btn - prefix icon</button>
+					<button class="btn btn-primary">.btn - suffix icon <span class="icon icon-loader fs-milli"></span></button>
+
+					<button class="btn btn-primary disabled">.btn .disabled</button>
+					<button class="btn btn-primary" disabled>.btn [disabled]</button>
+					<button class="btn btn-primary disabled"><span class="icon icon-loader"></span></button>
+					<button class="btn btn-primary btn-selected">.btn .selected</button>
+
+					<button class="btn btn-primary d-block">.btn .d-block</button>
+
+					<div>
+						<div class="btn-group cf">
+							<button class="btn btn-primary">1</button>
+							<button class="btn btn-primary">2</button>
+							<button class="btn btn-primary">3</button>
+							<button class="btn btn-primary">4</button>
+							<button class="btn btn-primary">5</button>
+							<button class="btn btn-primary">6</button>
+							<button class="btn btn-primary">7</button>
+						</div>
+
+						<div class="btn-group cf">
+							<button class="btn btn-primary">1</button>
+							<button class="btn btn-primary">2</button>
+						</div>
+
+						<div class="btn-group cf">
+							<button class="btn btn-primary">1</button>
+						</div>
 					</div>
 
-					<div class="btn-group cf">
-						<a class="btn btn-primary" href="javascript:void(0);">1</a>
-					</div>
-				</div>
+					<h2>Buttons Using label tag</h2>
+					<label class="btn btn-primary">.btn</label>
 
-				<h2>Buttons Using button tag</h2>
-				<button class="btn btn-primary">.btn</button>
+					<label class="btn btn-primary"><span class="icon icon-loader fs-milli"></span> .btn - prefix icon</label>
+					<label class="btn btn-primary">.btn - suffix icon <span class="icon icon-loader fs-milli"></span></label>
 
-				<button class="btn btn-primary"><span class="icon icon-refresh fs-milli"></span> .btn - prefix icon</button>
-				<button class="btn btn-primary">.btn - suffix icon <span class="icon icon-refresh fs-milli"></span></button>
+					<label class="btn btn-primary disabled">.btn .disabled</label>
+					<label class="btn btn-primary" disabled>.btn [disabled]</label>
+					<label class="btn btn-primary disabled"><span class="icon icon-loader"></span></label>
+					<label class="btn btn-primary btn-selected">.btn .selected</label>
 
-				<button class="btn btn-primary disabled">.btn .disabled</button>
-				<button class="btn btn-primary" disabled>.btn [disabled]</button>
-				<button class="btn btn-primary disabled"><span class="icon icon-refresh"></span></button>
-				<button class="btn btn-primary btn-selected">.btn .selected</button>
+					<label class="btn btn-primary d-block">.btn .d-block</label>
 
-				<button class="btn btn-primary btn-block">.btn .btn-block</button>
+					<div>
+						<div class="btn-group cf">
+							<label class="btn btn-primary">1</label>
+							<label class="btn btn-primary">2</label>
+							<label class="btn btn-primary">3</label>
+							<label class="btn btn-primary">4</label>
+							<label class="btn btn-primary">5</label>
+							<label class="btn btn-primary">6</label>
+							<label class="btn btn-primary">7</label>
+						</div>
 
-				<div>
-					<div class="btn-group cf">
-						<button class="btn btn-primary">1</button>
-						<button class="btn btn-primary">2</button>
-						<button class="btn btn-primary">3</button>
-						<button class="btn btn-primary">4</button>
-						<button class="btn btn-primary">5</button>
-						<button class="btn btn-primary">6</button>
-						<button class="btn btn-primary">7</button>
-					</div>
+						<div class="btn-group cf">
+							<label class="btn btn-primary">1</label>
+							<label class="btn btn-primary">2</label>
+						</div>
 
-					<div class="btn-group cf">
-						<button class="btn btn-primary">1</button>
-						<button class="btn btn-primary">2</button>
-					</div>
-
-					<div class="btn-group cf">
-						<button class="btn btn-primary">1</button>
-					</div>
-				</div>
-
-				<h2>Buttons Using label tag</h2>
-				<label class="btn btn-primary">.btn</label>
-
-				<label class="btn btn-primary"><span class="icon icon-refresh fs-milli"></span> .btn - prefix icon</label>
-				<label class="btn btn-primary">.btn - suffix icon <span class="icon icon-refresh fs-milli"></span></label>
-
-				<label class="btn btn-primary disabled">.btn .disabled</label>
-				<label class="btn btn-primary" disabled>.btn [disabled]</label>
-				<label class="btn btn-primary disabled"><span class="icon icon-refresh"></span></label>
-				<label class="btn btn-primary btn-selected">.btn .selected</label>
-
-				<label class="btn btn-primary btn-block">.btn .btn-block</label>
-
-				<div>
-					<div class="btn-group cf">
-						<label class="btn btn-primary">1</label>
-						<label class="btn btn-primary">2</label>
-						<label class="btn btn-primary">3</label>
-						<label class="btn btn-primary">4</label>
-						<label class="btn btn-primary">5</label>
-						<label class="btn btn-primary">6</label>
-						<label class="btn btn-primary">7</label>
+						<div class="btn-group cf">
+							<label class="btn btn-primary">1</label>
+						</div>
 					</div>
 
-					<div class="btn-group cf">
-						<label class="btn btn-primary">1</label>
-						<label class="btn btn-primary">2</label>
-					</div>
-
-					<div class="btn-group cf">
-						<label class="btn btn-primary">1</label>
-					</div>
-				</div>
-
-				<h2>Buttons Using submit input tag</h2>
-				<input type="submit" class="btn btn-primary" value=".btn">
-				<input type="submit" class="btn btn-primary disabled" value=".btn .disabled">
-				<input type="submit" class="btn btn-primary" disabled value=".btn [disabled]">
-				<input type="submit" class="btn btn-primary btn-block" value=".btn .btn-block">
+					<h2>Buttons Using submit input tag</h2>
+					<input type="submit" class="btn btn-primary" value=".btn">
+					<input type="submit" class="btn btn-primary disabled" value=".btn .disabled">
+					<input type="submit" class="btn btn-primary" disabled value=".btn [disabled]">
+					<input type="submit" class="btn btn-primary d-block" value=".btn .d-block">
+				</div><!-- .row -->
 
 				<hr>
 
@@ -296,7 +293,8 @@
 
 				<h2>Inputs and Textarea</h2>
 				<div>
-					<label for="">label</label> <input type="text" value="value text">
+					<label for="">label</label>
+					<input type="text" value="value text">
 				</div>
 
 				<div>
@@ -331,7 +329,7 @@
 					<div>
 						 <label for="">label</label>
 					 </div>
-					 <label for="prefixed-input" class="prefix-icon-block icon icon-link"></label><input id="prefixed-input" type="text">
+					 <label for="prefixed-input" class="prefix-icon-block icon icon-link"></label><input class="input-affixed" id="prefixed-input" type="text">
 				</div>
 
 				<div>
@@ -339,7 +337,7 @@
 						 <label for="">label</label>
 					</div>
 					<div class="prefix-icon-container">
-						<span class="icon icon-link"></span><input type="text">
+						<span class="icon icon-link"></span><input class="input-affixed" type="text">
 					</div>
 				</div>
 
@@ -348,7 +346,7 @@
 						 <label for="">label</label>
 					</div>
 					<div class="suffix-icon-container">
-						<input type="text"><span class="icon icon-link"></span>
+						<input class="input-affixed" type="text"><span class="icon icon-link"></span>
 					</div>
 				</div>
 
@@ -357,7 +355,7 @@
 						 <label for="">label</label>
 					</div>
 					<span class="prefix-icon-block icon icon-link"></span><div class="prefix-icon-container">
-						<span class="prefix-icon icon icon-link"></span><input type="text">
+						<span class="prefix-icon icon icon-link"></span><input class="input-affixed" type="text">
 					</div>
 				</div>
 
@@ -365,23 +363,23 @@
 					<div>
 						 <label for="">label</label>
 					</div>
-					<div class="prefix-icon-container">
-						<input type="text"><span class="icon icon-link"></span>
-					</div><span class="prefix-icon-block icon icon-link"></span>
+					<div class="suffix-icon-container">
+						<input class="input-affixed" type="text"><span class="icon icon-link"></span>
+					</div><span class="suffix-icon-block icon icon-link"></span>
 				</div>
 
 				<div>
 					<div>
 						<label for="">label</label>
 					</div>
-					<textarea name="" id="" cols="30" rows="10" placeholder="placeholder text"></textarea>
+					<textarea name="" id=""span="30" rows="10" placeholder="placeholder text"></textarea>
 				</div>
 
 				<div>
 					<div>
 						<label for="">label</label>
 					</div>
-					<textarea class="d-block" name="" id="" cols="30" rows="10" placeholder="full width textarea"></textarea>
+					<textarea class="d-block" name="" id=""span="30" rows="10" placeholder="full width textarea"></textarea>
 				</div>
 
 				<h2>Date Picker</h2>
@@ -406,19 +404,35 @@
 						<input type="checkbox" id="checkbox2"> <label for="checkbox2">label</label>
 					</div>
 				</div>
+				<div>
+					<div>
+						<input class="visuallyhidden" type="radio" id="radio3" name="radios" checked><label for="radio3"><span class="icon radio-custom-label"></span> custom radio</label>
+					</div>
+					<div>
+						<input class="visuallyhidden" type="radio" id="radio4" name="radios"><label for="radio4"><span class="icon radio-custom-label"></span> custom radio</label>
+					</div>
+				</div>
+				<div>
+					<div>
+						<input class="visuallyhidden" type="checkbox" id="checkbox3" checked><label for="checkbox3"><span class="icon checkbox-custom-label"></span> custom checkbox</label>
+					</div>
+					<div>
+						<input class="visuallyhidden" type="checkbox" id="checkbox4"><label for="checkbox4"><span class="icon checkbox-custom-label"></span> custom checkbox</label>
+					</div>
+				</div>
 
 				<hr>
 
 				<h1 id="gallery">Gallery</h1>
 
-				<h2>Gallery 2 Columns</h2>
+				<h2>Gallery 2spanumns</h2>
 				<div class="gallery gallery-columns-2 cf">
 					<dl class="gallery-item">
 						<dt class="gallery-icon">
 							<a href="javascript:void(0);"><img src="http://placekitten.com/700/700" /></a>
 						</dt>
 						<dd class="gallery-caption">
-							<h3><a href="javascript:void(0);">caption</a></h3>
+							caption
 						</dd>
 					</dl>
 					<dl class="gallery-item">
@@ -426,7 +440,7 @@
 							<a href="javascript:void(0);"><img src="http://placekitten.com/700/700" /></a>
 						</dt>
 						<dd class="gallery-caption">
-							<h3><a href="javascript:void(0);">caption</a></h3>
+							caption
 						</dd>
 					</dl>
 					<br style="clear: both"><!-- displayed after every 2 items in gallery -->
@@ -435,7 +449,7 @@
 							<a href="javascript:void(0);"><img src="http://placekitten.com/700/700" /></a>
 						</dt>
 						<dd class="gallery-caption">
-							<h3><a href="javascript:void(0);">caption</a></h3>
+							caption
 						</dd>
 					</dl>
 					<dl class="gallery-item">
@@ -443,7 +457,7 @@
 							<a href="javascript:void(0);"><img src="http://placekitten.com/700/700" /></a>
 						</dt>
 						<dd class="gallery-caption">
-							<h3><a href="javascript:void(0);">caption</a></h3>
+							caption
 						</dd>
 					</dl>
 					<br style="clear: both"><!-- displayed after every 2 items in gallery -->
@@ -456,7 +470,7 @@
 							<a href="javascript:void(0);"><img src="http://placekitten.com/500/500" /></a>
 						</dt>
 						<dd class="gallery-caption">
-							<h3><a href="javascript:void(0);">caption</a></h3>
+							caption
 						</dd>
 					</dl>
 					<dl class="gallery-item">
@@ -464,7 +478,7 @@
 							<a href="javascript:void(0);"><img src="http://placekitten.com/500/500" /></a>
 						</dt>
 						<dd class="gallery-caption">
-							<h3><a href="javascript:void(0);">caption</a></h3>
+							caption
 						</dd>
 					</dl>
 					<dl class="gallery-item">
@@ -472,7 +486,7 @@
 							<a href="javascript:void(0);"><img src="http://placekitten.com/500/500" /></a>
 						</dt>
 						<dd class="gallery-caption">
-							<h3><a href="javascript:void(0);">caption</a></h3>
+							caption
 						</dd>
 					</dl>
 					<br style="clear: both"><!-- displayed after every 3 items in gallery -->
@@ -481,7 +495,7 @@
 							<a href="javascript:void(0);"><img src="http://placekitten.com/500/500" /></a>
 						</dt>
 						<dd class="gallery-caption">
-							<h3><a href="javascript:void(0);">caption</a></h3>
+							caption
 						</dd>
 					</dl>
 					<dl class="gallery-item">
@@ -489,7 +503,7 @@
 							<a href="javascript:void(0);"><img src="http://placekitten.com/500/500" /></a>
 						</dt>
 						<dd class="gallery-caption">
-							<h3><a href="javascript:void(0);">caption</a></h3>
+							caption
 						</dd>
 					</dl>
 					<dl class="gallery-item">
@@ -497,7 +511,7 @@
 							<a href="javascript:void(0);"><img src="http://placekitten.com/500/500" /></a>
 						</dt>
 						<dd class="gallery-caption">
-							<h3><a href="javascript:void(0);">caption</a></h3>
+							caption
 						</dd>
 					</dl>
 					<br style="clear: both"><!-- displayed after every 3 items in gallery -->
@@ -510,7 +524,7 @@
 							<a href="javascript:void(0);"><img src="http://placekitten.com/350/350" /></a>
 						</dt>
 						<dd class="gallery-caption">
-							<h3><a href="javascript:void(0);">caption</a></h3>
+							caption
 						</dd>
 					</dl>
 					<dl class="gallery-item">
@@ -518,7 +532,7 @@
 							<a href="javascript:void(0);"><img src="http://placekitten.com/350/350" /></a>
 						</dt>
 						<dd class="gallery-caption">
-							<h3><a href="javascript:void(0);">caption</a></h3>
+							caption
 						</dd>
 					</dl>
 					<dl class="gallery-item">
@@ -526,7 +540,7 @@
 							<a href="javascript:void(0);"><img src="http://placekitten.com/350/350" /></a>
 						</dt>
 						<dd class="gallery-caption">
-							<h3><a href="javascript:void(0);">caption</a></h3>
+							caption
 						</dd>
 					</dl>
 					<dl class="gallery-item">
@@ -534,7 +548,7 @@
 							<a href="javascript:void(0);"><img src="http://placekitten.com/350/350" /></a>
 						</dt>
 						<dd class="gallery-caption">
-							<h3><a href="javascript:void(0);">caption</a></h3>
+							caption
 						</dd>
 					</dl>
 					<br style="clear: both"><!-- displayed after every 4 items in gallery -->
@@ -543,7 +557,7 @@
 							<a href="javascript:void(0);"><img src="http://placekitten.com/350/350" /></a>
 						</dt>
 						<dd class="gallery-caption">
-							<h3><a href="javascript:void(0);">caption</a></h3>
+							caption
 						</dd>
 					</dl>
 					<dl class="gallery-item">
@@ -551,7 +565,7 @@
 							<a href="javascript:void(0);"><img src="http://placekitten.com/350/350" /></a>
 						</dt>
 						<dd class="gallery-caption">
-							<h3><a href="javascript:void(0);">caption</a></h3>
+							caption
 						</dd>
 					</dl>
 					<dl class="gallery-item">
@@ -559,7 +573,7 @@
 							<a href="javascript:void(0);"><img src="http://placekitten.com/350/350" /></a>
 						</dt>
 						<dd class="gallery-caption">
-							<h3><a href="javascript:void(0);">caption</a></h3>
+							caption
 						</dd>
 					</dl>
 					<dl class="gallery-item">
@@ -567,7 +581,7 @@
 							<a href="javascript:void(0);"><img src="http://placekitten.com/350/350" /></a>
 						</dt>
 						<dd class="gallery-caption">
-							<h3><a href="javascript:void(0);">caption</a></h3>
+							caption
 						</dd>
 					</dl>
 					<br style="clear: both"><!-- displayed after every 4 items in gallery -->
@@ -580,7 +594,7 @@
 							<a href="javascript:void(0);"><img src="http://placekitten.com/250/250" /></a>
 						</dt>
 						<dd class="gallery-caption">
-							<h3><a href="javascript:void(0);">caption</a></h3>
+							caption
 						</dd>
 					</dl>
 					<dl class="gallery-item">
@@ -588,7 +602,7 @@
 							<a href="javascript:void(0);"><img src="http://placekitten.com/250/250" /></a>
 						</dt>
 						<dd class="gallery-caption">
-							<h3><a href="javascript:void(0);">caption</a></h3>
+							caption
 						</dd>
 					</dl>
 					<dl class="gallery-item">
@@ -596,7 +610,7 @@
 							<a href="javascript:void(0);"><img src="http://placekitten.com/250/250" /></a>
 						</dt>
 						<dd class="gallery-caption">
-							<h3><a href="javascript:void(0);">caption</a></h3>
+							caption
 						</dd>
 					</dl>
 					<dl class="gallery-item">
@@ -604,7 +618,7 @@
 							<a href="javascript:void(0);"><img src="http://placekitten.com/250/250" /></a>
 						</dt>
 						<dd class="gallery-caption">
-							<h3><a href="javascript:void(0);">caption</a></h3>
+							caption
 						</dd>
 					</dl>
 					<dl class="gallery-item">
@@ -612,7 +626,7 @@
 							<a href="javascript:void(0);"><img src="http://placekitten.com/250/250" /></a>
 						</dt>
 						<dd class="gallery-caption">
-							<h3><a href="javascript:void(0);">caption</a></h3>
+							caption
 						</dd>
 					</dl>
 					<br style="clear: both"><!-- displayed after every 5 items in gallery -->
@@ -621,7 +635,7 @@
 							<a href="javascript:void(0);"><img src="http://placekitten.com/250/250" /></a>
 						</dt>
 						<dd class="gallery-caption">
-							<h3><a href="javascript:void(0);">caption</a></h3>
+							caption
 						</dd>
 					</dl>
 					<dl class="gallery-item">
@@ -629,7 +643,7 @@
 							<a href="javascript:void(0);"><img src="http://placekitten.com/250/250" /></a>
 						</dt>
 						<dd class="gallery-caption">
-							<h3><a href="javascript:void(0);">caption</a></h3>
+							caption
 						</dd>
 					</dl>
 					<dl class="gallery-item">
@@ -637,7 +651,7 @@
 							<a href="javascript:void(0);"><img src="http://placekitten.com/250/250" /></a>
 						</dt>
 						<dd class="gallery-caption">
-							<h3><a href="javascript:void(0);">caption</a></h3>
+							caption
 						</dd>
 					</dl>
 					<dl class="gallery-item">
@@ -645,7 +659,7 @@
 							<a href="javascript:void(0);"><img src="http://placekitten.com/250/250" /></a>
 						</dt>
 						<dd class="gallery-caption">
-							<h3><a href="javascript:void(0);">caption</a></h3>
+							caption
 						</dd>
 					</dl>
 					<dl class="gallery-item">
@@ -653,7 +667,7 @@
 							<a href="javascript:void(0);"><img src="http://placekitten.com/250/250" /></a>
 						</dt>
 						<dd class="gallery-caption">
-							<h3><a href="javascript:void(0);">caption</a></h3>
+							caption
 						</dd>
 					</dl>
 					<br style="clear: both"><!-- displayed after every 5 items in gallery -->
@@ -665,7 +679,7 @@
 
 				<!-- Gets replaced with TinyMCE, remember HTML in a textarea should be encoded -->
 				<div>
-					<textarea id="" name="" rows="15" cols="80" style="width: 80%" class="tinymce">
+					<textarea id="" name="" rows="15"span="80" style="width: 80%" class="tinymce">
 						&lt;p&gt;
 							This is some example text that you can edit inside the &lt;strong&gt;TinyMCE editor&lt;/strong&gt;.
 						&lt;/p&gt;
@@ -809,6 +823,68 @@
 
 				<hr>
 
+				<h1 id="grid">Grid</h1>
+				<p>Press 'g' to compare the grid with an overlay.</p>
+				<div class="grid-example">
+					<div class="row row-ib-cols cf">
+						<div class="col span-2-delta span-3-gamma span-6-beta span-12-alpha">
+							12&rarr;6&rarr;3&rarr;2
+						</div>
+						<div class="col span-2-delta span-3-gamma span-6-beta span-12-alpha">
+							12&rarr;6&rarr;3&rarr;2
+						</div>
+						<div class="col span-2-delta span-3-gamma span-6-beta span-12-alpha">
+							12&rarr;6&rarr;3&rarr;2
+						</div>
+						<div class="col span-2-delta span-3-gamma span-6-beta span-12-alpha">
+							12&rarr;6&rarr;3&rarr;2
+						</div>
+						<div class="col span-2-delta span-3-gamma span-6-beta span-12-alpha">
+							12&rarr;6&rarr;3&rarr;2
+						</div>
+						<div class="col span-2-delta span-3-gamma span-6-beta span-12-alpha">
+							12&rarr;6&rarr;3&rarr;2
+						</div>
+					</div>
+					<div class="row cf">
+						<div class="col span-1-delta span-2-gamma span-6-beta span-12-alpha">
+							12&rarr;6&rarr;4&rarr;1
+						</div>
+						<div class="col span-1-delta span-2-gamma span-6-beta span-12-alpha">
+							12&rarr;6&rarr;4&rarr;1
+						</div>
+						<div class="col span-1-delta span-2-gamma span-6-beta span-12-alpha">
+							12&rarr;6&rarr;4&rarr;1
+						</div>
+						<div class="col span-1-delta span-2-gamma span-6-beta span-12-alpha">
+							12&rarr;6&rarr;4&rarr;1
+						</div>
+						<div class="col span-1-delta span-2-gamma span-6-beta span-12-alpha">
+							12&rarr;6&rarr;4&rarr;1
+						</div>
+						<div class="col span-1-delta span-2-gamma span-6-beta span-12-alpha">
+							12&rarr;6&rarr;4&rarr;1
+						</div>
+						<div class="col span-1-delta span-2-gamma span-6-beta span-12-alpha">
+							12&rarr;6&rarr;4&rarr;1
+						</div>
+						<div class="col span-1-delta span-2-gamma span-6-beta span-12-alpha">
+							12&rarr;6&rarr;4&rarr;1
+						</div>
+						<div class="col span-1-delta span-2-gamma span-6-beta span-12-alpha">
+							12&rarr;6&rarr;4&rarr;1
+						</div>
+						<div class="col span-1-delta span-2-gamma span-6-beta span-12-alpha">
+							12&rarr;6&rarr;4&rarr;1
+						</div>
+						<div class="col span-1-delta span-2-gamma span-6-beta span-12-alpha">
+							12&rarr;6&rarr;4&rarr;1
+						</div>
+						<div class="col span-1-delta span-2-gamma span-6-beta span-12-alpha">
+							12&rarr;6&rarr;4&rarr;1
+						</div>
+					</div>
+				</div>
 
 			</div><!-- .content-primary end -->
 
@@ -819,8 +895,6 @@
 	<div class="full-footer">
 
 		<footer class="area-footer wrap" role="contentinfo">
-
-			<img src="" alt="" />
 
 			<div class="footer-mode">
 
