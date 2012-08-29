@@ -291,7 +291,6 @@ td { vertical-align: top;}
 /* =============================================================================
 	 &Chrome Frame Prompt
 	 ========================================================================== */
-
 .chromeframe { margin: 0.2em 0; background: #ccc; color: black; padding: 0.2em 0;}
 
 
@@ -319,7 +318,7 @@ td { vertical-align: top;}
  * rather than applying the same font-size value to multiple selectors.
  *
  * All line heights are 24px to ensure a consistent vertical rhythm.
- * Line heights to match line-height set on body.
+ * Line heights should be set to match line-height set on body.
  *
  */
 
@@ -357,7 +356,7 @@ h6, .fs-zeta    { font-size:16px; font-size:1rem; /* 16px */ line-height:1.5; /*
 .fs-milli { font-size:12px; font-size:0.75rem; /* 12px */ line-height:2; /* 24px */}
 
 
-/* ==|== &colours ========================================================
+/* ==|== &colours ==============================================================
 
 	 colour    #######
 
@@ -427,6 +426,8 @@ h6, .fs-zeta    { font-size:16px; font-size:1rem; /* 16px */ line-height:1.5; /*
 	margin: 0;
 	padding: 0 1em;
 }
+
+/*body { padding: 0 1em;}*/
 
 /* =============================================================================
 	 1.b &Header
@@ -1635,6 +1636,13 @@ input:checked + label > .checkbox-custom-label:before { content: "\e001"; /* .ic
  */
 
 /* rows hold columns - should be used with .cf */
+.grid-example .col {
+	padding: .5em;
+	background: #eee;
+	border-radius: 2px;
+	text-align: center;
+}
+
 .row { margin-left: -16px;}
 
 .ie8 .row,
@@ -1646,7 +1654,6 @@ input:checked + label > .checkbox-custom-label:before { content: "\e001"; /* .ic
 	border-left-width: 16px;
 	border-left-width: 1rem;
 	float: left;
-	min-height: 100px;
 	margin-bottom: 16px;
 	margin-bottom: 1rem;
 	padding: 0;
@@ -1660,6 +1667,11 @@ input:checked + label > .checkbox-custom-label:before { content: "\e001"; /* .ic
 					background-clip: padding-box !important;
 }
 
+/*
+ * Restrict inline-block cols to modern browsers.
+ * Inline-block columns are useful when floated columns of different heights
+ * prevent subsequent columns from floating to their appropriate positions
+ */
 :root .row-ib-cols { margin: 0 -6px 0 -10px;}
 :root .row-ib-cols > .col {
 	float: none;
@@ -1670,7 +1682,7 @@ input:checked + label > .checkbox-custom-label:before { content: "\e001"; /* .ic
 
 /*
  * IE8 doesn't separate columns well without padding.
- * These lines can be removed if using padding in .col
+ * These lines can be removed if already using padding in .col
  */
 .ie8 .col { padding: 0 16px;}
 .ie7 .col { padding: 0 2%;}
@@ -1687,8 +1699,18 @@ Span 2:   100%
  */
  @media screen and (min-width: 0) {
 
-	.span-1-alpha { width: 50%;}
-	.span-2-alpha {
+	.span-1-alpha { width: 8.33333333333%;}
+	.span-2-alpha { width: 16.6666666667%;}
+	.span-3-alpha { width: 25.0%;}
+	.span-4-alpha { width: 33.3333333333%;}
+	.span-5-alpha { width: 41.6666666667%;}
+	.span-6-alpha { width: 50.0%;}
+	.span-7-alpha { width: 58.3333333333%;}
+	.span-8-alpha { width: 66.6666666667%;}
+	.span-9-alpha { width: 75.0%;}
+	.span-10-alpha { width: 83.3333333333%;}
+	.span-11-alpha { width: 91.6666666667%;}
+	.span-12-alpha {
 		margin-left: 0;
 		width: 100%;
 	}
@@ -1697,8 +1719,18 @@ Span 2:   100%
 	 * subtract 2.5% from each side of each column to account for IE7
 	 * padding and rounding errors.
 	 */
-	.ie7 .span-1-alpha { width: 45%;}
-	.ie7 .span-2-alpha {
+	.ie7 .span-1-alpha { width: 3.333%;}
+	.ie7 .span-2-alpha { width: 11.667%;}
+	.ie7 .span-3-alpha { width: 20%;}
+	.ie7 .span-4-alpha { width: 28.333%;}
+	.ie7 .span-5-alpha { width: 36.667%;}
+	.ie7 .span-6-alpha { width: 45%;}
+	.ie7 .span-7-alpha { width: 53.333%;}
+	.ie7 .span-8-alpha { width: 62.667%;}
+	.ie7 .span-9-alpha { width: 70%;}
+	.ie7 .span-10-alpha { width: 78.333%;}
+	.ie7 .span-11-alpha { width: 86.667%;}
+	.ie7 .span-12-alpha {
 		margin-left: 0;
 		width: 95%;
 	}
@@ -1721,12 +1753,18 @@ Span 6:   100%
 
 @media screen and (min-width: 30em) {
 
-	.span-1-beta { width: 16.667%;}
-	.span-2-beta { width: 33.333%;}
-	.span-3-beta { width: 50.0%;}
-	.span-4-beta { width: 66.667%;}
-	.span-5-beta { width: 83.333%;}
-	.span-6-beta {
+	.span-1-beta { width: 8.33333333333%;}
+	.span-2-beta { width: 16.6666666667%;}
+	.span-3-beta { width: 25.0%;}
+	.span-4-beta { width: 33.3333333333%;}
+	.span-5-beta { width: 41.6666666667%;}
+	.span-6-beta { width: 50.0%;}
+	.span-7-beta { width: 58.3333333333%;}
+	.span-8-beta { width: 66.6666666667%;}
+	.span-9-beta { width: 75.0%;}
+	.span-10-beta { width: 83.3333333333%;}
+	.span-11-beta { width: 91.6666666667%;}
+	.span-12-beta {
 		margin-left: 0;
 		width: 100%;
 	}
@@ -1735,12 +1773,18 @@ Span 6:   100%
 	 * subtract 2.5% from each side of each column to account for IE7
 	 * padding and rounding errors.
 	 */
-	.ie7 .span-1-beta { width: 11.667%;}
-	.ie7 .span-2-beta { width: 28.333%;}
-	.ie7 .span-3-beta { width: 45%;}
-	.ie7 .span-4-beta { width: 61.667%;}
-	.ie7 .span-5-beta { width: 78.333%;}
-	.ie7 .span-6-beta {
+	.ie7 .span-1-beta { width: 3.333%;}
+	.ie7 .span-2-beta { width: 11.667%;}
+	.ie7 .span-3-beta { width: 20%;}
+	.ie7 .span-4-beta { width: 28.333%;}
+	.ie7 .span-5-beta { width: 36.667%;}
+	.ie7 .span-6-beta { width: 45%;}
+	.ie7 .span-7-beta { width: 53.333%;}
+	.ie7 .span-8-beta { width: 62.667%;}
+	.ie7 .span-9-beta { width: 70%;}
+	.ie7 .span-10-beta { width: 78.333%;}
+	.ie7 .span-11-beta { width: 86.667%;}
+	.ie7 .span-12-beta {
 		margin-left: 0;
 		width: 95%;
 	}
