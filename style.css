@@ -1313,7 +1313,6 @@ a.label:hover {
 /* -----------------------------------------------------------------------------
 	 2.a.i Wordpress &Gallery
 	 -------------------------------------------------------------------------- */
-
 /*
  * 3 column gallery example
  *
@@ -1378,8 +1377,9 @@ a.label:hover {
 .gallery-caption {
 	font-size: 14px;
 	font-size: .875rem; /* 14px / 16 = .875 */
-	text-transform: uppercase;
-	margin: 0;
+	margin-left: 0;
+	padding: 8px 0;
+	padding: .75em 0 0;
 }
 
 .gallery-caption > :last-child { margin-bottom: 0;}
