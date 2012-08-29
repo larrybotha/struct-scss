@@ -3,8 +3,11 @@
 .fixateSkin a:hover, .fixateSkin a:link, .fixateSkin a:visited, .fixateSkin a:active {text-decoration:none; font-weight:normal; cursor:default; color:#000}
 .fixateSkin table td {vertical-align:middle}
 
+/* required to remove scrollbars in FF from dialog container */
+.fixate[role="dialog"] { overflow: hidden !important;}
+
 /* Containers */
-.fixateSkin table {direction:ltr;background:transparent}
+.fixateSkin table {direction:ltr; background:transparent}
 .fixateSkin iframe {display:block; padding: 0 1em;}
 .fixateSkin .mceToolbar {height:26px}
 .fixateSkin .mceLeft {text-align:left}
@@ -30,10 +33,11 @@
 .fixateSkin table.mceToolbar {margin-left:3px}
 .fixateSkin span.mceIcon, .fixateSkin img.mceIcon {display:block; cursor: pointer;}
 .fixateSkin span.mceIcon:before, .fixateSkin img.mceIcon:before {
-	font-family: FontAwesome-webfont;
+	font-family: base-icon-font;
   font-weight: normal;
   font-style: normal;
   font-size: 14px;
+  font-size: 1rem;
   display: inline-block;
   line-height: 1.5;
   width: 2em;
@@ -63,21 +67,26 @@
 /* ListBox */
 .fixateSkin .mceListBox, .fixateSkin .mceListBox a {display:block;}
 .fixateSkin .mceListBox .mceText {padding: .5em 1em; text-align:left; border-right:0; background: transparent; font-family:Tahoma,Verdana,Arial,Helvetica; font-size:11px; line-height:1.5; border:1px solid transparent; border-right:0; overflow:hidden; cursor: pointer;}
-.fixateSkin .mceListBox .mceOpen { padding: .025em .75em; width:9px; margin-right:2px; border:1px solid transparent; border-left:0; cursor: pointer;}
+.fixateSkin .mceListBox .mceOpen {
+  padding: .1em .75em;
+  width:9px;
+  border:1px solid transparent;
+  border-left:0;
+  cursor: pointer;
+}
 .fixateSkin .mceListBox .mceOpen:before {
-	font-family: FontAwesome-webfont;
+  font-family: base-icon-font;
   font-weight: normal;
   font-style: normal;
   font-size: 14px;
-  content: "\f0d7"; /* .icon-caret-down - FontAwesome */
+  font-size: .85rem;
+  content: "\e201"; /* .icon-caret-down */
   display: inline-block;
-  line-height: 1.5;
   width: 2em;
-  padding: .3em 0 .1em;
   text-align: center;
   text-decoration: inherit;
-  vertical-align: bottom;
   margin-left: -1.25em;
+  vertical-align: middle;
 }
 .fixateSkin table.mceListBoxEnabled:hover .mceText, .fixateSkin .mceListBoxHover .mceText, .fixateSkin .mceListBoxSelected .mceText,
 .fixateSkin table.mceListBoxEnabled:hover .mceOpen, .fixateSkin .mceListBoxHover .mceOpen, .fixateSkin .mceListBoxSelected .mceOpen {border-color: #ddd; background:#fff;}
@@ -157,29 +166,29 @@
 
 /* Theme */
 /*.fixateSkin span.mce_bold {background-position:0 0}*/
-.fixateSkin span.mce_bold:before { content: '\f032'; /* .icon-bold */}
-.fixateSkin span.mce_italic:before { content: '\f033'; /* .icon-italic */}
-.fixateSkin span.mce_underline:before { content: '\f0cd'; /* .icon-underline */}
-.fixateSkin span.mce_strikethrough:before { content: '\f0cc'; /* .icon-strikethrough */}
-.fixateSkin span.mce_undo:before { content: '\f0e2'; /* .icon-undo */}
-.fixateSkin span.mce_redo:before { content: '\f01e'; /* .icon-repeat */}
+.fixateSkin span.mce_bold:before { content: '\e110'; /* .icon-bold */}
+.fixateSkin span.mce_italic:before { content: '\e120'; /* .icon-italic */}
+.fixateSkin span.mce_underline:before { content: '\e130'; /* .icon-underline */}
+.fixateSkin span.mce_strikethrough:before { content: '\e140'; /* .icon-strikethrough */}
+.fixateSkin span.mce_undo:before { content: '\e180'; /* .icon-undo */}
+.fixateSkin span.mce_redo:before { content: '\e181'; /* .icon-repeat */}
 /*.fixateSkin span.mce_cleanup:before { content: '';}*/
-.fixateSkin span.mce_bullist:before { content: '\f0ca'; /* .icon-list-ul */}
-.fixateSkin span.mce_numlist:before { content: '\f0cb'; /* .icon-list-ol */}
-.fixateSkin span.mce_justifyleft:before { content: '\f036'; /* .icon-align-left */}
-.fixateSkin span.mce_justifyright:before { content: '\f038'; /* .icon-align-right */}
-.fixateSkin span.mce_justifycenter:before { content: '\f037'; /* .icon-icon-align-center */}
-.fixateSkin span.mce_justifyfull:before { content: '\f039'; /* .icon-align-justify */}
-/*.fixateSkin span.mce_anchor:before { content: '';}*/
-/*.fixateSkin span.mce_indent:before { content: '';}
+.fixateSkin span.mce_bullist:before { content: '\e161'; /* .icon-list-ul */}
+.fixateSkin span.mce_numlist:before { content: '\e160'; /* .icon-list-ol */}
+/*.fixateSkin span.mce_justifyleft:before { content: '';}
+.fixateSkin span.mce_justifyright:before { content: '';}
+.fixateSkin span.mce_justifycenter:before { content: '';}
+.fixateSkin span.mce_justifyfull:before { content: '';}
+.fixateSkin span.mce_anchor:before { content: '';}
+.fixateSkin span.mce_indent:before { content: '';}
 .fixateSkin span.mce_outdent:before { content: '';}*/
-.fixateSkin span.mce_link:before { content: '\f0c1'; /* .icon-link */}
-.fixateSkin span.mce_unlink:before { content: '\f0c1/'; /* .icon-link */ letter-spacing: -.6em; text-indent: -.75em;}
+.fixateSkin span.mce_link:before { content: '\e150'; /* .icon-link */}
+.fixateSkin span.mce_unlink:before { content: '\e151'; /* .icon-link */}
 /*.fixateSkin span.mce_sub:before { content: '';}
 .fixateSkin span.mce_sup:before { content: '';}*/
-.fixateSkin span.mce_removeformat:before { content: '\f00d'; /* .icon-remove */}
+.fixateSkin span.mce_removeformat:before { content: '\e040'; /* .icon-remove */}
 /*.fixateSkin span.mce_newdocument:before { content: '';}*/
-.fixateSkin span.mce_image:before { content: '\f03e'; /* .icon-picture */}
+.fixateSkin span.mce_image:before { content: '\e170'; /* .icon-image */}
 /*.fixateSkin span.mce_help:before { content: '';}
 .fixateSkin span.mce_code:before { content: '';}*/
 /*.fixateSkin span.mce_hr:before { content: '';}*/
@@ -188,14 +197,14 @@
 .fixateSkin span.mce_paste:before { content: '';}
 .fixateSkin span.mce_copy:before { content: '';}
 .fixateSkin span.mce_cut:before { content: '';}*/
-.fixateSkin span.mce_blockquote:before { content: '\f0e5';  /* .icon-comment-alt */}
+.fixateSkin span.mce_blockquote:before { content: '\e050';  /* .icon-comment-alt */}
 /*.fixateSkin .mce_forecolor span.mceAction:before { content: '';}
 .fixateSkin .mce_backcolor span.mceAction:before { content: '';}
 .fixateSkin span.mce_forecolorpicker:before { content: '';}
 .fixateSkin span.mce_backcolorpicker:before { content: '';}*/
 
 /* Plugins */
-.fixateSkin span.mce_advhr {background-position:-0px -20px}
+/*.fixateSkin span.mce_advhr {background-position:-0px -20px}
 .fixateSkin span.mce_ltr {background-position:-20px -20px}
 .fixateSkin span.mce_rtl {background-position:-40px -20px}
 .fixateSkin span.mce_emotions {background-position:-60px -20px}
@@ -247,4 +256,4 @@
 .fixateSkin span.mce_pagebreak {background-position:0 -40px}
 .fixateSkin span.mce_restoredraft {background-position:-20px -40px}
 .fixateSkin span.mce_spellchecker {background-position:-540px -20px}
-.fixateSkin span.mce_visualblocks {background-position: -40px -40px}
+.fixateSkin span.mce_visualblocks {background-position: -40px -40px}*/

@@ -298,13 +298,24 @@ td { vertical-align: top;}
 /* =============================================================================
 	 &Fonts
 	 ========================================================================== */
-@font-face {
+/*@font-face {
 	font-family: "FontAwesome-webfont";
 	src: url('font/fontawesome/fontawesome-webfont.eot');
 	src: url('font/fontawesome/fontawesome-webfont.eot?#iefix') format('eot'),
 			 url('font/fontawesome/fontawesome-webfont.woff') format('woff'),
 			 url('font/fontawesome/fontawesome-webfont.ttf') format('truetype'),
 			 url('font/fontawesome/fontawesome-webfont.svg#FontAwesome') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}*/
+
+@font-face {
+	font-family: "base-icon-font";
+	src: url('font/base-icon-font/base-icon-font.eot');
+	src: url('font/base-icon-font/base-icon-font.eot?#iefix') format('eot'),
+			 url('font/base-icon-font/base-icon-font.woff') format('woff'),
+			 url('font/base-icon-font/base-icon-font.ttf') format('truetype'),
+			 url('font/base-icon-font/base-icon-font.svg#FontAwesome') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -576,7 +587,8 @@ p.error, span.error { color: #CC3333;}
 /*  Styling inspired by FontAwesome - http://mopo.ws/ReAOC6
 		------------------------------------------------------- */
 .icon:before, .icon:before {
-	font-family: FontAwesome-webfont;
+	/*font-family: FontAwesome-webfont;*/
+	font-family: base-icon-font;
 	font-weight: normal;
 	font-style: normal;
 	display: inline-block;
@@ -617,26 +629,75 @@ li.icon.icon-large:before, li.icon.icon-large:before {
 	text-indent: -1.3333333333333333em;
 }
 
-.icon-anim {
-	width: 16px;
-	height: 16px;
-	-webkit-transform-origin: 50% 50%;
-		 -moz-transform-origin: 50% 50%;
-			 -o-transform-origin: 50% 50%;
-			-ms-transform-origin: 50% 50%;
-					transform-origin: 50% 50%;
+.icon-anim-rotate {
+	-webkit-transform-origin: 48% 46%;
+		 -moz-transform-origin: 48% 46%;
+			 -o-transform-origin: 48% 46%;
+			-ms-transform-origin: 48% 46%;
+					transform-origin: 48% 46%;
+
+	-webkit-animation	: rotate 1s infinite linear;
+			-moz-animation: rotate 1s infinite linear;
+				-o-animation: rotate 1s infinite linear;
+			 -ms-animation: rotate 1s infinite linear;
 }
 
-.icon-anim-rotate {
-	-webkit-animation: rotate 1s infinite linear;
-	-moz-animation: rotate 1s infinite linear;
-	-o-animation: rotate 1s infinite linear;
-	-ms-animation: rotate 1s infinite linear;
-}
+/* prevent rotating icon from increasing size of button */
+.icon-anim-rotate,
+.btn .icon-anim-rotate { line-height: .8;}
+
+/* WEB APPLICATION ICONS U+e0xxx --------------------------------------------- */
+.icon-checkbox-unchecked:before	{ content: "\e000";}
+.icon-checkbox-checked:before		{ content: "\e001";}
+
+.icon-radio-unchecked:before		{ content: "\e010";}
+.icon-radio-checked:before			{ content: "\e011";}
+
+.icon-loader:before 						{ content: "\e020";}
+
+.icon-reorder:before						{ content: "\e030";}
+
+.icon-remove:before							{ content: "\e040";}
+
+.icon-comment:before						{ content: "\e050";}
+
+.icon-calendar:before						{ content: "\e060";}
+
+
+/* TEXT EDITOR ICONS U+e1xxx ------------------------------------------------- */
+.icon-font:before 							{ content: "\e100";}
+.icon-bold:before 							{ content: "\e110";}
+.icon-italic:before 						{ content: "\e120";}
+.icon-underline:before 					{ content: "\e130";}
+.icon-strikethrough:before			{ content: "\e140";}
+
+.icon-link:before 							{ content: "\e150";}
+.icon-unlink:before 						{ content: "\e151";}
+
+.icon-list-ol:before						{ content: "\e160";}
+.icon-list-ul:before						{ content: "\e161";}
+
+.icon-image:before							{ content: "\e170";}
+
+.icon-undo:before								{ content: "\e180";}
+.icon-redo:before								{ content: "\e181";}
+
+
+/* DIRECTIONAL ICONS U+e2xxx ------------------------------------------------- */
+.icon-caret-up:before						{ content: "\e200";}
+.icon-caret-down:before					{ content: "\e201";}
+.icon-caret-right:before				{ content: "\e202";}
+.icon-caret-left:before					{ content: "\e203";}
+
+/* VIDEO / AUDIO ICONS U+e3xxx ----------------------------------------------- */
+
+
+/* SOCIAL ICONS U+e4xxx ------------------------------------------------------- */
+
 
 /*  Font Awesome uses the Unicode Private Use Area (PUA) to ensure screen
 		readers do not read off random characters that represent icons */
-.icon-glass:before              { content: "\f000";}
+/*.icon-glass:before              { content: "\f000";}
 .icon-music:before              { content: "\f001";}
 .icon-search:before             { content: "\f002";}
 .icon-envelope:before           { content: "\f003";}
@@ -666,10 +727,10 @@ li.icon.icon-large:before, li.icon.icon-large:before {
 .icon-upload:before             { content: "\f01b";}
 .icon-inbox:before              { content: "\f01c";}
 .icon-play-circle:before        { content: "\f01d";}
-.icon-repeat:before             { content: "\f01e";}
+.icon-repeat:before             { content: "\f01e";}*/
 
 /* \f020 doesn't work in Safari. all shifted one down */
-.icon-refresh:before            { content: "\f021";}
+/*.icon-refresh:before            { content: "\f021";}
 .icon-list-alt:before           { content: "\f022";}
 .icon-lock:before               { content: "\f023";}
 .icon-flag:before               { content: "\f024";}
@@ -861,7 +922,7 @@ li.icon.icon-large:before, li.icon.icon-large:before {
 .icon-umbrella:before           { content: "\f0e9";}
 .icon-paste:before              { content: "\f0ea";}
 
-.icon-user-md:before            { content: "\f200";}
+.icon-user-md:before            { content: "\f200";}*/
 
 /* -----------------------------------------------------------------------------
 	 1.d.iv &Labels
@@ -1351,8 +1412,12 @@ input, textarea {
  * required only if using icon prefixes and suffixes
  * to address FF's use of !important on line-heights
  * on inputs - http://mopo.ws/SvxClq
+ *
+ * fix radios and inputs affected by new input height
  */
 input	{	height: 1.75em;}
+input[type="radio"],
+input[type="checkbox"] { height: auto;}
 
 .prefix-icon-container,
 .suffix-icon-container {
@@ -1392,11 +1457,14 @@ input	{	height: 1.75em;}
 	border: 1px solid #ccc;
 }
 
-.radio-custom-label:before { content: "";}
-.checkbox-custom-label:before { content: "\f096"; /* .icon-check-empty - FontAwesome */}
+.radio-custom-label:before,
+.checkbox-custom-label:before { margin-bottom: 1em;}
 
-input:checked + label > .radio-custom-label:before { content: "";}
-input:checked + label > .checkbox-custom-label:before { content: "\f046"; /* .icon-check - FontAwesome */}
+.radio-custom-label:before { content: "\e010";}
+.checkbox-custom-label:before { content: "\e000"; /* .icon-check-empty - FontAwesome */}
+
+input:checked + label > .radio-custom-label:before { content: "\e011";}
+input:checked + label > .checkbox-custom-label:before { content: "\e001"; /* .icon-check - FontAwesome */}
 
 /* -----------------------------------------------------------------------------
 	 3.a.i &Date Picker
@@ -1438,7 +1506,7 @@ input:checked + label > .checkbox-custom-label:before { content: "\f046"; /* .ic
 
 .ui-datepicker .ui-datepicker-prev:before,
 .ui-datepicker .ui-datepicker-next:before {
-	font-family: FontAwesome-webfont;
+	font-family: base-icon-font;
 	position: absolute;
 	text-indent: 0;
 	text-align: center;
@@ -1450,9 +1518,9 @@ input:checked + label > .checkbox-custom-label:before { content: "\f046"; /* .ic
 }
 
 .ui-datepicker .ui-datepicker-prev { left:2px;}
-.ui-datepicker .ui-datepicker-prev:before { content: "\f060";}
+.ui-datepicker .ui-datepicker-prev:before { content: "\e203";}
 .ui-datepicker .ui-datepicker-next { right:2px;}
-.ui-datepicker .ui-datepicker-next:before { content: "\f061";}
+.ui-datepicker .ui-datepicker-next:before { content: "\e202";}
 .ui-datepicker .ui-datepicker-prev-hover { left:1px;}
 .ui-datepicker .ui-datepicker-next-hover { right:1px;}
 
