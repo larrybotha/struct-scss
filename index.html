@@ -37,11 +37,15 @@
 
 		<header class="area-header wrap" role="banner">
 
-			<h1>Index</h1>
+			<h1>Table Of Contents</h1>
 			<ul>
 				<li><a href="#navigation">navigation</a></li>
+				<li><a href="#links">links</a></li>
+				<li><a href="#lists">lists</a></li>
+				<li><a href="#horizontal-rules">horizontal rules</a></li>
 				<li><a href="#headings">headings</a></li>
 				<li><a href="#buttons">buttons</a></li>
+				<li><a href="#pagination">pagination</a></li>
 				<li><a href="#labels">labels</a></li>
 				<li><a href="#navigation">navigation</a></li>
 				<li><a href="#autocomplete">autocomplete</a></li>
@@ -107,147 +111,241 @@
 
 			<div class="content-primary" role="main">
 
+				<h1 id="links">Links</h1>
+				<div class="row cf">
+					<div class="col span-12-alpha span-6-beta span-6-gamma span-6-delta">
+						<a href="javascript:void(0);">default link</a>
+					</div>
+					<div class="col span-12-alpha span-6-beta span-6-gamma span-6-delta">
+						<textarea class="d-block ff-mono" rows="2"><a href="http://example.com">default link</a></textarea>
+						<a class="fr" href="#">back to top</a>
+					</div>
+				</div>
+
+				<hr>
+
+				<h1 id="lists">Lists</h1>
+				<h2>Unordered Lists</h2>
+				<div class="row cf">
+					<div class="col span-12-alpha span-6-beta span-6-gamma span-6-delta">
+						<ul>
+							<li>item 1</li>
+							<li>item 2</li>
+							<li>item 3</li>
+							<li>item 4</li>
+						</ul>
+					</div>
+
+					<div class="col span-12-alpha span-6-beta span-6-gamma span-6-delta">
+						<br>
+						<textarea rows="7" class="d-block ff-mono"><ul>&#13;&#09;<li>item 1</li>&#13;&#09;<li>item 2</li>&#13;&#09;<li>item 3</li>&#13;&#09;<li>item 4</li>&#13;</ul></textarea>
+						<a class="fr" href="#">back to top</a>
+					</div>
+				</div>
+
+				<h2>Ordered Lists</h2>
+				<div class="row cf">
+					<div class="col span-12-alpha span-6-beta span-6-gamma span-6-delta">
+						<ol>
+							<li>item 1</li>
+							<li>item 2</li>
+							<li>item 3</li>
+							<li>item 4</li>
+						</ol>
+					</div>
+
+					<div class="col span-12-alpha span-6-beta span-6-gamma span-6-delta">
+						<br>
+						<textarea rows="7" class="d-block ff-mono"><ol>&#13;&#09;<li>item 1</li>&#13;&#09;<li>item 2</li>&#13;&#09;<li>item 3</li>&#13;&#09;<li>item 4</li>&#13;</ol></textarea>
+						<a class="fr" href="#">back to top</a>
+					</div>
+				</div>
+
+				<hr>
+
+				<h1 id="horizontal-rules">Horizontal Rules</h1>
+
+				<div class="row cf">
+					<div class="col span-12-alpha span-6-beta span-6-gamma span-6-delta">
+						<hr>
+					</div>
+
+					<div class="col span-12-alpha span-6-beta span-6-gamma span-6-delta">
+						<textarea rows="2" class="d-block ff-mono"><hr></textarea>
+						<a class="fr" href="#">back to top</a>
+					</div>
+				</div>
+
+				<hr>
+
 				<h1 id="headings">Headings</h1>
 
-				<h1>Heading 1</h1>
-				<h2>Heading 2</h2>
-				<h3>Heading 3</h3>
-				<h4>Heading 4</h4>
-				<h5>Heading 5</h5>
+				<div class="row cf">
+					<div class="col span-12-alpha span-6-beta span-6-gamma span-6-delta">
+						<h1>Heading 1</h1>
+						<h2>Heading 2</h2>
+						<h3>Heading 3</h3>
+						<h4>Heading 4</h4>
+						<h5>Heading 5</h5>
+					</div>
+
+					<div class="col span-12-alpha span-6-beta span-6-gamma span-6-delta">
+						<br><br>
+						<textarea rows="7" class="d-block ff-mono"><h1>heading 1</h1>&#13;<h2>heading 2</h2>&#13;<h3>heading 3</h3>&#13;<h4>heading 4</h4>&#13;<h5>heading 5</h5></textarea>
+						<a class="fr" href="#">back to top</a>
+					</div>
+				</div>
 
 				<hr>
 
 				<div>
 					<h1 id="buttons">Buttons</h1>
 
-					<h2>Buttons Using anchor tag</h2>
-					<a class="btn btn-primary" href="javascript:void(0);">.btn</a>
+					<div class="row cf">
+						<div class="col span-12-alpha span-6-beta span-6-gamma span-6-delta">
+							<h2>Buttons Using anchor tag</h2>
+							<a class="btn btn-primary" href="javascript:void(0);">.btn</a>
 
-					<a class="btn btn-primary" href="javascript:void(0);"><span class="icon icon-loader fs-milli"></span> .btn - prefix icon</a>
-					<a class="btn btn-primary" href="javascript:void(0);">.btn - suffix icon <span class="icon icon-loader icon-anim-rotate fs-milli"></span></a>
+							<a class="btn btn-primary" href="javascript:void(0);"><span class="icon icon-loader fs-milli"></span> .btn - prefix icon</a>
+							<a class="btn btn-primary" href="javascript:void(0);">.btn - suffix icon <span class="icon icon-loader icon-anim-rotate fs-milli"></span></a>
 
-					<a class="btn btn-primary disabled" href="javascript:void(0);">.btn .disabled</a>
-					<a class="btn btn-primary" disabled href="javascript:void(0);">.btn [disabled]</a>
-					<a class="btn btn-primary disabled" href="javascript:void(0);"><span class="icon icon-loader icon-anim-rotate"></span></a>
+							<a class="btn btn-primary disabled" href="javascript:void(0);">.btn .disabled</a>
+							<a class="btn btn-primary" disabled href="javascript:void(0);">.btn [disabled]</a>
+							<a class="btn btn-primary disabled" href="javascript:void(0);"><span class="icon icon-loader icon-anim-rotate"></span></a>
 
-					<a class="btn btn-primary btn-selected" href="javascript:void(0);">.btn .selected</a>
+							<a class="btn btn-primary btn-selected" href="javascript:void(0);">.btn .selected</a>
 
-					<a class="btn btn-primary d-block" href="javascript:void(0);">.btn .d-block</a>
+							<a class="btn btn-primary d-block" href="javascript:void(0);">.btn .d-block</a>
 
-					<a class="btn btn-primary" href="javascript:void(0);">.btn <span class="fs-alpha va-sub">text size variant</span></a>
-					<a class="btn btn-primary" href="javascript:void(0);"><span class="fs-alpha va-sub">.btn</span> text size variant</a>
+							<a class="btn btn-primary" href="javascript:void(0);">.btn <span class="fs-alpha va-sub">text size variant</span></a>
+							<a class="btn btn-primary" href="javascript:void(0);"><span class="fs-alpha va-sub">.btn</span> text size variant</a>
 
-					<div>
-						<div class="btn-group cf">
-							<a class="btn btn-primary" href="javascript:void(0);">1</a>
-							<a class="btn btn-primary" href="javascript:void(0);">2</a>
-							<a class="btn btn-primary" href="javascript:void(0);">3</a>
-							<a class="btn btn-primary" href="javascript:void(0);">4</a>
-							<a class="btn btn-primary" href="javascript:void(0);">5</a>
-							<a class="btn btn-primary" href="javascript:void(0);">6</a>
-							<a class="btn btn-primary" href="javascript:void(0);">7</a>
-						</div>
+							<div>
+								<div class="btn-group cf">
+									<a class="btn btn-primary" href="javascript:void(0);">1</a>
+									<a class="btn btn-primary" href="javascript:void(0);">2</a>
+									<a class="btn btn-primary" href="javascript:void(0);">3</a>
+									<a class="btn btn-primary" href="javascript:void(0);">4</a>
+									<a class="btn btn-primary" href="javascript:void(0);">5</a>
+									<a class="btn btn-primary" href="javascript:void(0);">6</a>
+									<a class="btn btn-primary" href="javascript:void(0);">7</a>
+								</div>
 
-						<div class="btn-group cf">
-							<a class="btn btn-primary" href="javascript:void(0);">1</a>
-							<a class="btn btn-primary" href="javascript:void(0);">2</a>
-						</div>
+								<div class="btn-group cf">
+									<a class="btn btn-primary" href="javascript:void(0);">1</a>
+									<a class="btn btn-primary" href="javascript:void(0);">2</a>
+								</div>
 
-						<div class="btn-group cf">
-							<a class="btn btn-primary" href="javascript:void(0);">1</a>
-						</div>
-					</div>
+								<div class="btn-group cf">
+									<a class="btn btn-primary" href="javascript:void(0);">1</a>
+								</div>
+							</div>
 
-					<h2>Buttons Using button tag</h2>
-					<button class="btn btn-primary">.btn</button>
+							<h2>Buttons Using button tag</h2>
+							<button class="btn btn-primary">.btn</button>
 
-					<button class="btn btn-primary"><span class="icon icon-loader fs-milli"></span> .btn - prefix icon</button>
-					<button class="btn btn-primary">.btn - suffix icon <span class="icon icon-loader fs-milli"></span></button>
+							<button class="btn btn-primary"><span class="icon icon-loader fs-milli"></span> .btn - prefix icon</button>
+							<button class="btn btn-primary">.btn - suffix icon <span class="icon icon-loader fs-milli"></span></button>
 
-					<button class="btn btn-primary disabled">.btn .disabled</button>
-					<button class="btn btn-primary" disabled>.btn [disabled]</button>
-					<button class="btn btn-primary disabled"><span class="icon icon-loader"></span></button>
-					<button class="btn btn-primary btn-selected">.btn .selected</button>
+							<button class="btn btn-primary disabled">.btn .disabled</button>
+							<button class="btn btn-primary" disabled>.btn [disabled]</button>
+							<button class="btn btn-primary disabled"><span class="icon icon-loader"></span></button>
+							<button class="btn btn-primary btn-selected">.btn .selected</button>
 
-					<button class="btn btn-primary d-block">.btn .d-block</button>
+							<button class="btn btn-primary d-block">.btn .d-block</button>
 
-					<div>
-						<div class="btn-group cf">
-							<button class="btn btn-primary">1</button>
-							<button class="btn btn-primary">2</button>
-							<button class="btn btn-primary">3</button>
-							<button class="btn btn-primary">4</button>
-							<button class="btn btn-primary">5</button>
-							<button class="btn btn-primary">6</button>
-							<button class="btn btn-primary">7</button>
-						</div>
+							<div>
+								<div class="btn-group cf">
+									<button class="btn btn-primary">1</button>
+									<button class="btn btn-primary">2</button>
+									<button class="btn btn-primary">3</button>
+									<button class="btn btn-primary">4</button>
+									<button class="btn btn-primary">5</button>
+									<button class="btn btn-primary">6</button>
+									<button class="btn btn-primary">7</button>
+								</div>
 
-						<div class="btn-group cf">
-							<button class="btn btn-primary">1</button>
-							<button class="btn btn-primary">2</button>
-						</div>
+								<div class="btn-group cf">
+									<button class="btn btn-primary">1</button>
+									<button class="btn btn-primary">2</button>
+								</div>
 
-						<div class="btn-group cf">
-							<button class="btn btn-primary">1</button>
-						</div>
-					</div>
+								<div class="btn-group cf">
+									<button class="btn btn-primary">1</button>
+								</div>
+							</div>
 
-					<h2>Buttons Using label tag</h2>
-					<label class="btn btn-primary">.btn</label>
+							<h2>Buttons Using label tag</h2>
+							<label class="btn btn-primary">.btn</label>
 
-					<label class="btn btn-primary"><span class="icon icon-loader fs-milli"></span> .btn - prefix icon</label>
-					<label class="btn btn-primary">.btn - suffix icon <span class="icon icon-loader fs-milli"></span></label>
+							<label class="btn btn-primary"><span class="icon icon-loader fs-milli"></span> .btn - prefix icon</label>
+							<label class="btn btn-primary">.btn - suffix icon <span class="icon icon-loader fs-milli"></span></label>
 
-					<label class="btn btn-primary disabled">.btn .disabled</label>
-					<label class="btn btn-primary" disabled>.btn [disabled]</label>
-					<label class="btn btn-primary disabled"><span class="icon icon-loader"></span></label>
-					<label class="btn btn-primary btn-selected">.btn .selected</label>
+							<label class="btn btn-primary disabled">.btn .disabled</label>
+							<label class="btn btn-primary" disabled>.btn [disabled]</label>
+							<label class="btn btn-primary disabled"><span class="icon icon-loader"></span></label>
+							<label class="btn btn-primary btn-selected">.btn .selected</label>
 
-					<label class="btn btn-primary d-block">.btn .d-block</label>
+							<label class="btn btn-primary d-block">.btn .d-block</label>
 
-					<div>
-						<div class="btn-group cf">
-							<label class="btn btn-primary">1</label>
-							<label class="btn btn-primary">2</label>
-							<label class="btn btn-primary">3</label>
-							<label class="btn btn-primary">4</label>
-							<label class="btn btn-primary">5</label>
-							<label class="btn btn-primary">6</label>
-							<label class="btn btn-primary">7</label>
-						</div>
+							<div>
+								<div class="btn-group cf">
+									<label class="btn btn-primary">1</label>
+									<label class="btn btn-primary">2</label>
+									<label class="btn btn-primary">3</label>
+									<label class="btn btn-primary">4</label>
+									<label class="btn btn-primary">5</label>
+									<label class="btn btn-primary">6</label>
+									<label class="btn btn-primary">7</label>
+								</div>
 
-						<div class="btn-group cf">
-							<label class="btn btn-primary">1</label>
-							<label class="btn btn-primary">2</label>
-						</div>
+								<div class="btn-group cf">
+									<label class="btn btn-primary">1</label>
+									<label class="btn btn-primary">2</label>
+								</div>
 
-						<div class="btn-group cf">
-							<label class="btn btn-primary">1</label>
-						</div>
-					</div>
+								<div class="btn-group cf">
+									<label class="btn btn-primary">1</label>
+								</div>
+							</div>
 
-					<h2>Buttons Using submit input tag</h2>
-					<input type="submit" class="btn btn-primary" value=".btn">
-					<input type="submit" class="btn btn-primary disabled" value=".btn .disabled">
-					<input type="submit" class="btn btn-primary" disabled value=".btn [disabled]">
-					<input type="submit" class="btn btn-primary d-block" value=".btn .d-block">
-				</div><!-- .row -->
+							<h2>Buttons Using submit input tag</h2>
+							<input type="submit" class="btn btn-primary" value=".btn">
+							<input type="submit" class="btn btn-primary disabled" value=".btn .disabled">
+							<input type="submit" class="btn btn-primary" disabled value=".btn [disabled]">
+							<input type="submit" class="btn btn-primary d-block" value=".btn .d-block">
+						</div><!-- .col -->
+
+						<div class="col span-12-alpha span-6-beta span-6-gamma span-6-delta">
+							<br>
+							<textarea rows="30" class="d-block ff-mono"><a class="btn" href="http://link.com">button text</a>&#13;&#13;<a class="btn" href="http://link.com">&#13;&#09;<span class="icon icon-[name]"></span> button text&#13;</a>&#13;&#13;<a class="btn" href="http://link.com">&#13;&#09;button text <span class="icon icon-[name]"></span>&#13;</a>&#13;&#13;<a class="btn disabled" href="http://link.com">button text</a>&#13;&#13;<a class="btn" disabled href="http://link.com">button text</a>&#13;&#13;<a class="btn" href="http://link.com">&#13;&#09;<span class="icon icon-[name]"></span>&#13;</a>&#13;&#13;<a class="btn selected" href="http://link.com">button text</a>&#13;&#13;<a class="btn d-block" href="http://link.com">button text</a>&#13;&#13;<div class="btn-group cf">&#13;&#09;<a class="btn" href="http://link.com">button text</a>&#13;&#09;<a class="btn" href="http://link.com">button text</a>&#13;&#09;<a class="btn" href="http://link.com">button text</a>&#13;</div></textarea>
+							<a class="fr" href="#">back to top</a>
+						</div><!-- .col -->
+
+					</div><!-- .row -->
 
 				<hr>
 
-				<h2>Pagination</h2>
-				<div class="cf">
-					<div class="page-pagination pagination">
-					  <a class="prev page-numbers" href="javascript:void(0);">&laquo; Previous</a>
-					  <a class="page-numbers" href="javascript:void(0);">1</a>
-					  <span class="page-numbers current">2</span>
-					  <a class="page-numbers" href="javascript:void(0);">3</a>
-					  <a class="page-numbers" href="javascript:void(0);">4</a>
-					  <span class="page-numbers dots">...</span>
-					  <a class="page-numbers" href="javascript:void(0);">6</a>
-					  <a class="next page-numbers" href="javascript:void(0);">Next &raquo;</a>
+				<h1 id="pagination">Pagination</h1>
+				<div class="row cf">
+					<div class="col span-12-alpha span-6-beta span-6-gamma span-6-delta">
+							<div class="page-pagination pagination">
+							  <a class="prev page-numbers" href="javascript:void(0);">&laquo; Prev</a>
+							  <a class="page-numbers" href="javascript:void(0);">1</a>
+							  <span class="page-numbers current">2</span>
+							  <a class="page-numbers" href="javascript:void(0);">3</a>
+							  <a class="page-numbers" href="javascript:void(0);">4</a>
+							  <span class="page-numbers dots">...</span>
+							  <a class="page-numbers" href="javascript:void(0);">6</a>
+							  <a class="next page-numbers" href="javascript:void(0);">Next &raquo;</a>
+						</div>
+					</div><!-- .col -->
+
+					<div class="col span-12-alpha span-6-beta span-6-gamma span-6-delta">
+						<textarea rows="12" class="d-block ff-mono"><div class="page-pagination pagination">&#13;&#09;<a class="prev page-numbers" href="http://link.com">&laquo; Prev</a>&#13;&#09;<a class="page-numbers" href="http://link.com">1</a>&#13;&#09;<span class="page-numbers current">2</span>&#13;&#09;<a class="page-numbers" href="http://link.com">3</a>&#13;&#09;<a class="page-numbers" href="http://link.com">4</a>&#13;&#09;<span class="page-numbers dots">...</span>&#13;&#09;<a class="page-numbers" href="http://link.com">6</a>&#13;&#09;<a class="next page-numbers" href="http://link.com">Next &raquo;</a>&#13;</div></textarea>
+						<a class="fr" href="#">back to top</a>
 					</div>
-				</div>
+				</div><!-- .row -->
 
 				<hr>
 

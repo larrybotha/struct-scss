@@ -546,6 +546,8 @@ h6, .fs-zeta    { font-size:16px; font-size:1rem; /* 16px */ line-height:1.5; /*
 .case-n { text-transform: none;}
 .case-c { text-transform: capitalize;}
 
+.ff-mono { font-family: monospace;}
+
 /* -----------------------------------------------------------------------------
 	 1.d.i General &Typography
 	 -------------------------------------------------------------------------- */
@@ -595,7 +597,7 @@ a .icon, a .icon {
 }
 .btn .icon, .btn .icon {
 	/* keeps button heights with and without icons the same */
-	line-height: .9;
+	line-height: .8;
 }
 li .icon, li .icon {
 	display: inline-block;
@@ -631,10 +633,6 @@ li.icon.icon-large:before, li.icon.icon-large:before {
 				-o-animation: rotate 1s infinite linear;
 			 -ms-animation: rotate 1s infinite linear;
 }
-
-/* prevent rotating icon from increasing size of button */
-.icon-anim-rotate,
-.btn .icon-anim-rotate { line-height: .8;}
 
 /*
  * Use the Unicode Private Use Area (PUA) to ensure screen readers do not
