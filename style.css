@@ -1641,6 +1641,7 @@ input:checked + label > .checkbox-custom-label:before { content: "\e001"; /* .ic
 	background: #eee;
 	border-radius: 2px;
 	font-family: monospace;
+	text-align: center;
 }
 
 .row { margin-left: -16px;}
