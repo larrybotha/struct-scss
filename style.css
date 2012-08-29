@@ -1409,9 +1409,9 @@ input, textarea {
 }
 
 /*
- * required only if using icon prefixes and suffixes
- * to address FF's use of !important on line-heights
- * on inputs - http://mopo.ws/SvxClq
+ * Required only if using icon prefixes and suffixes.
+ * Addresses FF's use of !important on line-heights
+ * on inputs making normalising difficult - http://mopo.ws/SvxClq
  *
  * fix radios and inputs affected by new input height
  */
