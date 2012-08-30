@@ -459,6 +459,7 @@ h6, .fs-zeta    { font-size:16px; font-size:1rem; /* 16px */ line-height:1.5; /*
 .sub-menu {
 	position: absolute;
 	display: none;
+	z-index: 100;
 }
 
 .menu-collapse-container .menu-collapse-button {
