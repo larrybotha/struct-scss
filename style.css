@@ -1694,7 +1694,7 @@ input:checked + label > .checkbox-custom-label:before { content: "\e001"; /* .ic
 .ie7 .col { padding: 0 2%;}
 
 
-/* 1. 2 Column Grid 0px ->
+/* 1. 2 Column Grid - &vpalpha 0px ->
 ================================================================================
 Span 1:   8.33333333333%
 Span 2:   16.6666666667%
@@ -1715,18 +1715,18 @@ Span 12:  100%
  */
  @media screen and (min-width: 0) {
 
-	.span-1-alpha { width: 8.33333333333%;}
-	.span-2-alpha { width: 16.6666666667%;}
-	.span-3-alpha { width: 25.0%;}
-	.span-4-alpha { width: 33.3333333333%;}
-	.span-5-alpha { width: 41.6666666667%;}
-	.span-6-alpha { width: 50.0%;}
-	.span-7-alpha { width: 58.3333333333%;}
-	.span-8-alpha { width: 66.6666666667%;}
-	.span-9-alpha { width: 75.0%;}
-	.span-10-alpha { width: 83.3333333333%;}
-	.span-11-alpha { width: 91.6666666667%;}
-	.span-12-alpha {
+	.span-1-vpalpha { width: 8.33333333333%;}
+	.span-2-vpalpha { width: 16.6666666667%;}
+	.span-3-vpalpha { width: 25.0%;}
+	.span-4-vpalpha { width: 33.3333333333%;}
+	.span-5-vpalpha { width: 41.6666666667%;}
+	.span-6-vpalpha { width: 50.0%;}
+	.span-7-vpalpha { width: 58.3333333333%;}
+	.span-8-vpalpha { width: 66.6666666667%;}
+	.span-9-vpalpha { width: 75.0%;}
+	.span-10-vpalpha { width: 83.3333333333%;}
+	.span-11-vpalpha { width: 91.6666666667%;}
+	.span-12-vpalpha {
 		margin-left: 0;
 		width: 100%;
 	}
@@ -1735,24 +1735,24 @@ Span 12:  100%
 	 * subtract 2.5% from each side of each column to account for IE7
 	 * padding and rounding errors.
 	 */
-	.ie7 .span-1-alpha { width: 3.333%;}
-	.ie7 .span-2-alpha { width: 11.667%;}
-	.ie7 .span-3-alpha { width: 20%;}
-	.ie7 .span-4-alpha { width: 28.333%;}
-	.ie7 .span-5-alpha { width: 36.667%;}
-	.ie7 .span-6-alpha { width: 45%;}
-	.ie7 .span-7-alpha { width: 53.333%;}
-	.ie7 .span-8-alpha { width: 62.667%;}
-	.ie7 .span-9-alpha { width: 70%;}
-	.ie7 .span-10-alpha { width: 78.333%;}
-	.ie7 .span-11-alpha { width: 86.667%;}
-	.ie7 .span-12-alpha {
+	.ie7 .span-1-vpalpha { width: 3.333%;}
+	.ie7 .span-2-vpalpha { width: 11.667%;}
+	.ie7 .span-3-vpalpha { width: 20%;}
+	.ie7 .span-4-vpalpha { width: 28.333%;}
+	.ie7 .span-5-vpalpha { width: 36.667%;}
+	.ie7 .span-6-vpalpha { width: 45%;}
+	.ie7 .span-7-vpalpha { width: 53.333%;}
+	.ie7 .span-8-vpalpha { width: 62.667%;}
+	.ie7 .span-9-vpalpha { width: 70%;}
+	.ie7 .span-10-vpalpha { width: 78.333%;}
+	.ie7 .span-11-vpalpha { width: 86.667%;}
+	.ie7 .span-12-vpalpha {
 		margin-left: 0;
 		width: 95%;
 	}
 }
 
-/* 2. 6 Column Grid 480px ->
+/* 2. 6 Column Grid - &vpbeta - 480px ->
 ================================================================================
 Span 1:   8.33333333333%
 Span 2:   16.6666666667%
@@ -1775,18 +1775,18 @@ Span 12:  100%
 
 @media screen and (min-width: 30em) {
 
-	.span-1-beta { width: 8.33333333333%;}
-	.span-2-beta { width: 16.6666666667%;}
-	.span-3-beta { width: 25.0%;}
-	.span-4-beta { width: 33.3333333333%;}
-	.span-5-beta { width: 41.6666666667%;}
-	.span-6-beta { width: 50.0%;}
-	.span-7-beta { width: 58.3333333333%;}
-	.span-8-beta { width: 66.6666666667%;}
-	.span-9-beta { width: 75.0%;}
-	.span-10-beta { width: 83.3333333333%;}
-	.span-11-beta { width: 91.6666666667%;}
-	.span-12-beta {
+	.span-1-vpbeta { width: 8.33333333333%;}
+	.span-2-vpbeta { width: 16.6666666667%;}
+	.span-3-vpbeta { width: 25.0%;}
+	.span-4-vpbeta { width: 33.3333333333%;}
+	.span-5-vpbeta { width: 41.6666666667%;}
+	.span-6-vpbeta { width: 50.0%;}
+	.span-7-vpbeta { width: 58.3333333333%;}
+	.span-8-vpbeta { width: 66.6666666667%;}
+	.span-9-vpbeta { width: 75.0%;}
+	.span-10-vpbeta { width: 83.3333333333%;}
+	.span-11-vpbeta { width: 91.6666666667%;}
+	.span-12-vpbeta {
 		margin-left: 0;
 		width: 100%;
 	}
@@ -1795,24 +1795,24 @@ Span 12:  100%
 	 * subtract 2.5% from each side of each column to account for IE7
 	 * padding and rounding errors.
 	 */
-	.ie7 .span-1-beta { width: 3.333%;}
-	.ie7 .span-2-beta { width: 11.667%;}
-	.ie7 .span-3-beta { width: 20%;}
-	.ie7 .span-4-beta { width: 28.333%;}
-	.ie7 .span-5-beta { width: 36.667%;}
-	.ie7 .span-6-beta { width: 45%;}
-	.ie7 .span-7-beta { width: 53.333%;}
-	.ie7 .span-8-beta { width: 62.667%;}
-	.ie7 .span-9-beta { width: 70%;}
-	.ie7 .span-10-beta { width: 78.333%;}
-	.ie7 .span-11-beta { width: 86.667%;}
-	.ie7 .span-12-beta {
+	.ie7 .span-1-vpbeta { width: 3.333%;}
+	.ie7 .span-2-vpbeta { width: 11.667%;}
+	.ie7 .span-3-vpbeta { width: 20%;}
+	.ie7 .span-4-vpbeta { width: 28.333%;}
+	.ie7 .span-5-vpbeta { width: 36.667%;}
+	.ie7 .span-6-vpbeta { width: 45%;}
+	.ie7 .span-7-vpbeta { width: 53.333%;}
+	.ie7 .span-8-vpbeta { width: 62.667%;}
+	.ie7 .span-9-vpbeta { width: 70%;}
+	.ie7 .span-10-vpbeta { width: 78.333%;}
+	.ie7 .span-11-vpbeta { width: 86.667%;}
+	.ie7 .span-12-vpbeta {
 		margin-left: 0;
 		width: 95%;
 	}
 }
 
-/* 3. 12 Column Grid 768px ->
+/* 3. 12 Column Grid - &vpgamma - 768px ->
 ================================================================================
 Span 1:   8.33333333333%
 Span 2:   16.6666666667%
@@ -1834,18 +1834,18 @@ Span 12:  100%
  */
 @media screen and (min-width: 48em) {
 
-	.span-1-gamma { width: 8.333%;}
-	.span-2-gamma { width: 16.667%;}
-	.span-3-gamma { width: 25.0%;}
-	.span-4-gamma { width: 33.333%;}
-	.span-5-gamma { width: 41.667%;}
-	.span-6-gamma { width: 50.0%;}
-	.span-7-gamma { width: 58.333%;}
-	.span-8-gamma { width: 66.667%;}
-	.span-9-gamma { width: 75.0%;}
-	.span-10-gamma { width: 83.333%;}
-	.span-11-gamma { width: 91.667%;}
-	.span-12-gamma {
+	.span-1-vpgamma { width: 8.333%;}
+	.span-2-vpgamma { width: 16.667%;}
+	.span-3-vpgamma { width: 25.0%;}
+	.span-4-vpgamma { width: 33.333%;}
+	.span-5-vpgamma { width: 41.667%;}
+	.span-6-vpgamma { width: 50.0%;}
+	.span-7-vpgamma { width: 58.333%;}
+	.span-8-vpgamma { width: 66.667%;}
+	.span-9-vpgamma { width: 75.0%;}
+	.span-10-vpgamma { width: 83.333%;}
+	.span-11-vpgamma { width: 91.667%;}
+	.span-12-vpgamma {
 		margin-left: 0;
 		width: 100%;
 	}
@@ -1854,24 +1854,24 @@ Span 12:  100%
 	 * subtract 2.5% from each side of each column to account for IE7
 	 * padding and rounding errors.
 	 */
-	.ie7 .span-1-gamma { width: 3.333%;}
-	.ie7 .span-2-gamma { width: 11.667%;}
-	.ie7 .span-3-gamma { width: 20%;}
-	.ie7 .span-4-gamma { width: 28.333%;}
-	.ie7 .span-5-gamma { width: 36.667%;}
-	.ie7 .span-6-gamma { width: 45%;}
-	.ie7 .span-7-gamma { width: 53.333%;}
-	.ie7 .span-8-gamma { width: 62.667%;}
-	.ie7 .span-9-gamma { width: 70%;}
-	.ie7 .span-10-gamma { width: 78.333%;}
-	.ie7 .span-11-gamma { width: 86.667%;}
-	.ie7 .span-12-gamma {
+	.ie7 .span-1-vpgamma { width: 3.333%;}
+	.ie7 .span-2-vpgamma { width: 11.667%;}
+	.ie7 .span-3-vpgamma { width: 20%;}
+	.ie7 .span-4-vpgamma { width: 28.333%;}
+	.ie7 .span-5-vpgamma { width: 36.667%;}
+	.ie7 .span-6-vpgamma { width: 45%;}
+	.ie7 .span-7-vpgamma { width: 53.333%;}
+	.ie7 .span-8-vpgamma { width: 62.667%;}
+	.ie7 .span-9-vpgamma { width: 70%;}
+	.ie7 .span-10-vpgamma { width: 78.333%;}
+	.ie7 .span-11-vpgamma { width: 86.667%;}
+	.ie7 .span-12-vpgamma {
 		margin-left: 0;
 		width: 95%;
 	}
 }
 
-/* 4. 12 Column Grid 1280px ->
+/* 4. 12 Column Grid - &vpdelta - 1280px ->
 ================================================================================
 Span 1:   8.33333333333%
 Span 2:   16.6666666667%
@@ -1893,18 +1893,18 @@ Span 12:   100%
  */
 @media screen and (min-width: 80em) {
 
-	.span-1-delta { width: 8.33333333333%;}
-	.span-2-delta { width: 16.6666666667%;}
-	.span-3-delta { width: 25.0%;}
-	.span-4-delta { width: 33.3333333333%;}
-	.span-5-delta { width: 41.6666666667%;}
-	.span-6-delta { width: 50.0%;}
-	.span-7-delta { width: 58.3333333333%;}
-	.span-8-delta { width: 66.6666666667%;}
-	.span-9-delta { width: 75.0%;}
-	.span-10-delta { width: 83.3333333333%;}
-	.span-11-delta { width: 91.6666666667%;}
-	.span-12-delta {
+	.span-1-vpdelta { width: 8.33333333333%;}
+	.span-2-vpdelta { width: 16.6666666667%;}
+	.span-3-vpdelta { width: 25.0%;}
+	.span-4-vpdelta { width: 33.3333333333%;}
+	.span-5-vpdelta { width: 41.6666666667%;}
+	.span-6-vpdelta { width: 50.0%;}
+	.span-7-vpdelta { width: 58.3333333333%;}
+	.span-8-vpdelta { width: 66.6666666667%;}
+	.span-9-vpdelta { width: 75.0%;}
+	.span-10-vpdelta { width: 83.3333333333%;}
+	.span-11-vpdelta { width: 91.6666666667%;}
+	.span-12-vpdelta {
 		margin-left: 0;
 		width: 100%;
 	}
@@ -1913,18 +1913,18 @@ Span 12:   100%
 	 * subtract 2.5% from each side of each column to account for IE7
 	 * padding and rounding errors.
 	 */
-	.ie7 .span-1-delta { width: 3.333%;}
-	.ie7 .span-2-delta { width: 11.667%;}
-	.ie7 .span-3-delta { width: 20%;}
-	.ie7 .span-4-delta { width: 28.333%;}
-	.ie7 .span-5-delta { width: 36.667%;}
-	.ie7 .span-6-delta { width: 45%;}
-	.ie7 .span-7-delta { width: 53.333%;}
-	.ie7 .span-8-delta { width: 61.667%;}
-	.ie7 .span-9-delta { width: 70%;}
-	.ie7 .span-10-delta { width: 78.333%;}
-	.ie7 .span-11-delta { width: 86.667%;}
-	.ie7 .span-12-delta {
+	.ie7 .span-1-vpdelta { width: 3.333%;}
+	.ie7 .span-2-vpdelta { width: 11.667%;}
+	.ie7 .span-3-vpdelta { width: 20%;}
+	.ie7 .span-4-vpdelta { width: 28.333%;}
+	.ie7 .span-5-vpdelta { width: 36.667%;}
+	.ie7 .span-6-vpdelta { width: 45%;}
+	.ie7 .span-7-vpdelta { width: 53.333%;}
+	.ie7 .span-8-vpdelta { width: 61.667%;}
+	.ie7 .span-9-vpdelta { width: 70%;}
+	.ie7 .span-10-vpdelta { width: 78.333%;}
+	.ie7 .span-11-vpdelta { width: 86.667%;}
+	.ie7 .span-12-vpdelta {
 		margin-left: 0;
 		width: 95%;
 	}
