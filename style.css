@@ -1648,7 +1648,7 @@ input:checked + label > .checkbox-custom-label:before { content: "\e001"; /* .ic
 	text-align: center;
 }
 
-.row { margin-left: -16px;}
+.row { margin-left: -14px;}
 
 .ie8 .row,
 .ie7 .row { margin-left: 0;}
@@ -1656,10 +1656,10 @@ input:checked + label > .checkbox-custom-label:before { content: "\e001"; /* .ic
 /* Reusable column setup */
 .col {
 	border: 0 solid hsla(0,0%,0%,0);
-	border-left-width: 16px;
+	border-left-width: 14px;
 	border-left-width: 1rem;
 	float: left;
-	margin-bottom: 16px;
+	margin-bottom: 14px;
 	margin-bottom: 1rem;
 	padding: 0;
 	position:  relative;
@@ -1689,7 +1689,7 @@ input:checked + label > .checkbox-custom-label:before { content: "\e001"; /* .ic
  * IE8 doesn't separate columns well without padding.
  * These lines can be removed if already using padding in .col
  */
-.ie8 .col { padding: 0 16px;}
+.ie8 .col { padding: 0 14px;}
 .ie7 .col { padding: 0 2%;}
 
 
