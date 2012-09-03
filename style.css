@@ -602,7 +602,7 @@ a .icon, a .icon {
 }
 .btn .icon, .btn .icon {
 	/* keeps button heights with and without icons the same */
-	line-height: .8;
+	line-height: .5;
 }
 li .icon, li .icon {
 	display: inline-block;
@@ -627,11 +627,11 @@ li.icon.icon-large:before, li.icon.icon-large:before {
 }
 
 .icon-anim-rotate {
-	-webkit-transform-origin: 48% 46%;
-		 -moz-transform-origin: 48% 46%;
-			 -o-transform-origin: 48% 46%;
-			-ms-transform-origin: 48% 46%;
-					transform-origin: 48% 46%;
+	-webkit-transform-origin: 49% 38%;
+		 -moz-transform-origin: 49% 38%;
+			 -o-transform-origin: 49% 38%;
+			-ms-transform-origin: 49% 38%;
+					transform-origin: 49% 38%;
 
 	-webkit-animation	: rotate 1s infinite linear;
 			-moz-animation: rotate 1s infinite linear;
