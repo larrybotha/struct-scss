@@ -304,11 +304,11 @@ td { vertical-align: top;}
 /* base-icon-font built as a subset using icons from FontAwesome and IcoMoon */
 @font-face {
 	font-family: "base-icon-font";
-	src: url('fonts/base-icon-font/base-icon-font.eot');
-	src: url('fonts/base-icon-font/base-icon-font.eot?#iefix') format('eot'),
-			 url('fonts/base-icon-font/base-icon-font.woff') format('woff'),
-			 url('fonts/base-icon-font/base-icon-font.ttf') format('truetype'),
-			 url('fonts/base-icon-font/base-icon-font.svg#FontAwesome') format('svg');
+	src: url('fnt/base-icon-font/base-icon-font.eot');
+	src: url('fnt/base-icon-font/base-icon-font.eot?#iefix') format('eot'),
+			 url('fnt/base-icon-font/base-icon-font.woff') format('woff'),
+			 url('fnt/base-icon-font/base-icon-font.ttf') format('truetype'),
+			 url('fnt/base-icon-font/base-icon-font.svg#FontAwesome') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
