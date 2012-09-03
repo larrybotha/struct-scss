@@ -1379,7 +1379,6 @@ input:checked + label > .checkbox-custom-label:before { content: "\e001"; /* .ic
 	color: #000;
 	margin-bottom: 1em;
 	padding: .3em 1em;
-	border: 0;
 	vertical-align: middle;
 	text-align: center;
 	cursor: pointer;
