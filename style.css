@@ -67,7 +67,7 @@ audio:not([controls]) { display: none; height: 0;} /* 3 */
 
 * { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;}
 
-html { font-size: 100%; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
+html { font-size: 87.5%; /* 14px */ -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
 
 html, button, input, select, textarea { font-family: Verdana, sans-serif; color: #222;}
 
@@ -335,29 +335,29 @@ fieldset,
 p,
 table,
 pre,
-hr { margin-top:24px; margin-top:1.5rem; margin-bottom:24px; margin-bottom:1.5rem;}
+hr { margin-top:16px; margin-top:1rem; margin-bottom:16px; margin-bottom:1rem;}
 
 /*
  * Massive type
  */
-.fs-giga { font-size:80px; font-size:5rem; /* 80px */ line-height:1.2; /* 96px */}
-.fs-mega { font-size:64px; font-size:4rem; /* 64px */ line-height:1.125; /* 72px */}
-.fs-kilo { font-size:48px; font-size:3rem; /* 48px */ line-height:1; /* 48px */}
+.fs-giga { font-size: 80px; font-size: 5.714rem; line-height: 1;}
+.fs-mega { font-size: 56px; font-size: 4rem; line-height: 1;}
+.fs-kilo { font-size: 44px; font-size: 3.143rem; line-height: 1;}
 
 /*
  * Define headings and their associated classes here.
  */
-h1, .fs-alpha   { font-size:32px; font-size:2rem; /* 32px */ line-height:1.5; /* 48px */}
-h2, .fs-beta    { font-size:1.5em; /* 24px */ line-height:1; /* 24px */}
-h3, .fs-gamma   { font-size:20px; font-size:1.25rem; /* 20px */ line-height:1.2; /* 24px */}
-h4, .fs-delta   { font-size:18px; font-size:1.125rem; /* 18px */ line-height:1.333;  /* 24px */}
-h5, .fs-epsilon { font-size:16px; font-size:1rem; /* 16px */ line-height:1.5; /* 24px */}
-h6, .fs-zeta    { font-size:16px; font-size:1rem; /* 16px */ line-height:1.5; /* 24px */}
+h1, .fs-alpha   { font-size: 32px; font-size: 2.286rem; line-height: 1;}
+h2, .fs-beta    { font-size: 28px; font-size: 2em; line-height: 1;}
+h3, .fs-gamma   { font-size: 24px; font-size: 1.714rem; line-height: 1;}
+h4, .fs-delta   { font-size: 20px; font-size: 1.429rem; line-height: 1; }
+h5, .fs-epsilon { font-size: 18px; font-size: 1.286rem; line-height: 1;}
+h6, .fs-zeta    { font-size: 16px; font-size: 1.143rem; line-height: 1;}
 
 /*
  * Smaller-than-body-copy sizes here.
  */
-.fs-milli { font-size:12px; font-size:0.75rem; /* 12px */ line-height:2; /* 24px */}
+.fs-milli { font-size:12px; font-size:0.857rem; line-height:1;}
 
 
 /* ==|== &colours ==============================================================
@@ -1025,6 +1025,7 @@ a.label:hover {
 .token-list + .ui-autocomplete { left: 0 !important;}
 
 .token-list-input {
+	background-color: transparent;
 	padding: 0;
 	margin: 0;
 	border: 0;
@@ -1182,7 +1183,7 @@ input, textarea {
 }
 
 /*
- * Required only if using icon prefixes and suffixes.
+ * Required only if using icon prefix and suffix blocks.
  * Addresses FF's use of !important on line-heights
  * on inputs making normalising difficult - http://mopo.ws/SvxClq
  *
@@ -1228,6 +1229,7 @@ input[type="checkbox"] { height: auto;}
 .prefix-icon-block, .suffix-icon-block {
 	background: #f2f2f2;
 	border: 1px solid #ccc;
+	margin-top: -1px;
 }
 
 .radio-custom-label:before,
