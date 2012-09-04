@@ -1174,7 +1174,7 @@ a.label:hover {
 /* =============================================================================
 	 3.a &Forms
 	 ========================================================================== */
-.field { position: relative;}
+.field, .field-label { position: relative;}
 
 input, textarea {
 	margin-bottom: 1em;
