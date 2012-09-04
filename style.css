@@ -1232,14 +1232,14 @@ input[type="checkbox"] { height: auto;}
 	margin-top: -1px;
 }
 
-.radio-custom-label:before,
-.checkbox-custom-label:before { margin-bottom: 1em;}
+.radio-custom:before,
+.checkbox-custom:before { margin-bottom: .5em;}
 
-.radio-custom-label:before { content: "\e010";}
-.checkbox-custom-label:before { content: "\e000"; /* .icon-check-empty - FontAwesome */}
+.radio-custom:before { content: "\e010";}
+.checkbox-custom:before { content: "\e000"; /* .icon-check-empty - FontAwesome */}
 
-input:checked + label > .radio-custom-label:before { content: "\e011";}
-input:checked + label > .checkbox-custom-label:before { content: "\e001"; /* .icon-check - FontAwesome */}
+input:checked + label > .radio-custom:before { content: "\e011";}
+input:checked + label > .checkbox-custom:before { content: "\e001"; /* .icon-check - FontAwesome */}
 
 /* -----------------------------------------------------------------------------
 	 3.a.i &Date Picker
