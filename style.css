@@ -254,7 +254,7 @@ button[disabled], input[disabled], :disabled, .disabled, .unselectable { color: 
  */
 
 input[type="checkbox"], input[type="radio"] { box-sizing: border-box; /* 1 */ padding: 0; /* 2 */}
-input[type="search"] { -webkit-appearance: textfield; /* 3 */ -moz-box-sizing: content-box; -webkit-box-sizing: content-box; /* 4 */ box-sizing: content-box;}
+input[type="search"] { -webkit-appearance: textfield; /* 3 */ -moz-box-sizing: border-box; -webkit-box-sizing: border-box; /* 4 */ box-sizing: content-box;}
 input[type="search"]::-webkit-search-decoration, input[type="search"]::-webkit-search-cancel-button { -webkit-appearance: none;} /* 5 */
 
 /*
