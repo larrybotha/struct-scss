@@ -19,9 +19,12 @@
 	<!-- Mobile viewport optimized: h5bp.com/viewport -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<link rel="stylesheet" href="style.css">
+	<!--[if ! lte IE 7]><!-->
+		<!-- must be symlinked from theme's directory -->
+		<link rel="stylesheet" href="style.css">
+	<!--<![endif]-->
 
-	<!--[if lte IE 6]>
+	<!--[if lte IE 7]>
 		<link rel="stylesheet" href="http://universal-ie6-css.googlecode.com/files/ie6.1.1.css" media="screen, projection">
 	<![endif]-->
 

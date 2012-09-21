@@ -3,49 +3,42 @@
 
 
 /* TEAM */
+	Ms: Alison Hugo
 	Site: http://fixate.it
 	Location: Johannesburg, South Africa
 
-	Ms: Alison Hugo
 	Ms: Cassandra Zamparini
+	Site: http://fixate.it
+	Location: Johannesburg, South Africa
+
 	Mr: Larry Botha
+	Site: http://fixate.it
+	Location: Johannesburg, South Africa
+
 	Mr: Stan Bondi
+	Site: http://fixate.it
+	Location: Johannesburg, South Africa
 
 /* SITE */
 	Standards: HTML5, CSS3, PHP, Apache
 	Components: Wordpress, Modernizr, jQuery
-	Software: Illustrator, Photoshop, Sublime Text 2
+	Software: Illustrator, Sublime Text 2
 
 
-									.........      .........
-								.dnmmmmmmmnd. .d0nmmmmmmmno
-								kmmmmmmmmmmmnxommmmmmmmmmmwl
-								kmmmmmmmmmmmmmmmmmmmmmmmmmmx
-								kmmmmmmmmmmmmmmmmmmmmmmmmmmx
-								kmmmmmmmmmmmmmmmmmmmmmmmmmmd
-								,kmmmmmmmmmmmmmmmmmmmmmmmmk
-								 owmmmmmmmmmmmmmmmmmmmmmm0,
-									dwmmmmmmmmmmmmmmmmmmmmk.
-									 .0mmmmmmmmmmmmmmmmmwx.
-										.dnmmmmmmmmmmmmmmno
-											.ommmmmmmmmmmmo.
-											 .cxmmmmmmmmxl.
-													:xmmmmxc
-														xmmx;
-
-
-
-									odxkkOkxdo     odxkOkxdo
-								xKNMMMMMMMMNKkdOXWMMMMMMMWN0d
-						 ldXMMMMMMMMMMMMMMWMMMMMMMMMMMMMWOo
-						 dNMMMMMMMWWWMMMMMMMMMMMWWMMMMMMMWxl
-						l0WMMMMMNOdodkNMMMMMMMXxood0WMMMWkl
-						oXMMMMMWkl   lkWMMMMMNo    lXMMWOl
-						oKMMMMMWx     xWMMMMMKl    lKMMWd
-						lKMMMMMWx     xWMMMMMKl    lKMMWo
-						lKMMMMMWx     xWMMMMMKl    lKMMWk
-						lKMMMMMWx     xWMMMMMKl    lKMMMXo
-						lKMMMMMWx     xWMMMMMKl    lKMMMMXd
-						lKMMMMMWx     xWMMMMMKl    lKMMMMMNx
-						lKMMMMMWx     xWMMMMMKl    lKMMMMMWO
-						lOKKKKKKo     dKKKKKKOl    lOKKKKKKx
+           ,ooooooooooooooooodc
+           oXXXXXXXXXXXXXXXXXNO.
+           oXXXKOxxxxxxxxxxxxxl
+           oXXXO;
+           oXXXO;
+           oXXXO;
+           oXXXO:..........
+         ,o0XXXXK0000000000l
+        .o0XXXXXXXXXXXXXXXNd
+          .xXXXKdcccccccccc'
+           oXXXO;
+           oXXXO;
+           oXXXO;
+           oXXXO;
+           oXXXO;
+           l0KKk,
+           .....
