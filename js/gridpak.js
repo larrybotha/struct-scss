@@ -48,7 +48,7 @@ var gridpak = {
 					min_width: 0,
 					col_num: 12,
 					gutter_type: 'px',
-					gutter_width: 16,
+					gutter_width: 14,
 					padding_type: 'px',
 					padding_width: 0,
 					upper: 479
@@ -58,7 +58,7 @@ var gridpak = {
 					min_width: 480,
 					col_num: 12,
 					gutter_type: 'px',
-					gutter_width: 16,
+					gutter_width: 14,
 					padding_type: 'px',
 					padding_width: 0,
 					upper: 959
@@ -68,7 +68,7 @@ var gridpak = {
 					min_width: 768,
 					col_num: 12,
 					gutter_type: 'px',
-					gutter_width: 16,
+					gutter_width: 14,
 					padding_type: 'px',
 					padding_width: 0,
 					upper: 1439
@@ -78,7 +78,7 @@ var gridpak = {
 					min_width: 1280,
 					col_num: 12,
 					gutter_type: 'px',
-					gutter_width: 16,
+					gutter_width: 14,
 					padding_type: 'px',
 					padding_width: 0,
 					upper: false
