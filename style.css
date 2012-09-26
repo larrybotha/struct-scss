@@ -1,9 +1,9 @@
 /*
 Theme Name: Your Theme Name
 Theme URI: http://...
-Description: A Wordpress theme designed by <a href="http://tadaa.co.za/page/services">Tadaa</a> and developed by <a href="http://themousepotatowebsite.co.za">Mouse Potato</a>
-Author: Tadaa
-Author URI: http://tadaa.co.za/page/services
+Description: A Wordpress theme <a href="http://fixate.it/design">designed</a> and <a href="http://fixate.it/development">developed</a> by Fixate
+Author: Fixate
+Author URI: http://fixate.it
 Version: 1.0
 .
 Any general information, license statements, plugin requirements, or any other information you
@@ -20,6 +20,74 @@ the custom.css file to add your styles. You can copy a style from this file and 
 custom.css and it will override the style in this file. You have been warned! :)
 
 */
+
+/* ==|== &colours ==============================================================
+
+	 colour													#
+
+	 ========================================================================== */
+
+/* ==|== &INDEX ================================================================
+
+	1. BASE STYLES
+		1.a Normalize
+			1.a.i HTML5 display definitions
+			1.a.ii Base
+			1.a.iii Links
+			1.a.iv Typography
+			1.a.v Lists
+			1.a.vi Embedded content
+			1.a.vii Figures
+			1.a.viii Forms
+			1.a.ix Tables
+			1.a.x Chrome Frame Prompt
+		1.b Fonts
+
+	2. BLOCKS
+		2.a Main Structure
+			2.a.i Header
+			2.a.ii Primary Content
+			2.a.iii Secondary Content
+			2.a.iv Footer
+		2.b Media Block
+		2.c Navigation
+		2.d Buttons
+		2.e Forms
+			2.e.i Date Picker
+			2.e.ii Autocomplete
+			2.e.iii Wysiwyg
+		2.f Icons
+		2.h Alerts
+		2.g Labels
+		2.i Gallery
+		2.j Pagination
+		2.k Comments
+			2.k.i Comment
+			2.k.ii Pingbacks / Trackbacks
+			2.k.iii Comment Form
+		2.l Widgets
+		2.m Progress Bars
+		2.n Drag & Drop
+		2.o Tool Tips
+
+	3. GENERAL STYLING
+		3.a Typography
+			3.a.i Headers
+			3.a.ii Lists
+			3.a.iii Horizontal Rules
+			3.a.iv Typography Modifiers
+		3.b Backgrounds & Borders
+		3.c Layout
+			3.c.i Layout Modifiers
+		3.d Helpers
+
+	4. ANIMATIONS
+
+	5. GRID AND MEDIA QUERIES
+
+	5. PRINT STYLES
+
+	 ========================================================================== */
 
 /*
  * HTML5 ✰ Boilerplate
@@ -122,15 +190,36 @@ abbr[title] { border-bottom: 1px dotted;}
 
 b, strong { font-weight: bold;}
 
+i { font-style: normal;}
+
 blockquote {
-	margin: 1em 0;
-	padding: 0 40px;
-	border-left: 4px solid #ccc;
+	position: relative;
+	padding: 0 1em;
+}
+
+blockquote:before,
+blockquote:after {
+	position: absolute;
+	font-family: "Times New Roman";
+	font-size: 6em;
+	color: #e9eeed;
+}
+
+blockquote:before {
+	content: "\201c";
+	left: -.35em;
+	top: -.425em;
+}
+
+blockquote:after {
+	content: "\201d";
+	right: -.35em;
+	bottom: -.85em;
 }
 
 dfn { font-style: italic;}
 
-hr { display: block; height: 1px; margin: 1em 0; padding: 0; border: 0; border-top: 1px solid #ccc;}
+hr { display: block; height:	 1px; margin: 1em 0; padding: 0; border: 0; border-top: 1px solid #ccc;}
 
 ins { background: #ff9; color: #000; text-decoration: none;}
 
@@ -270,8 +359,8 @@ button::-moz-focus-inner, input::-moz-focus-inner { border: 0; padding: 0;}
 
 textarea { overflow: auto; vertical-align: top; resize: vertical;}
 
-input:valid, textarea:valid { }
-input:invalid, textarea:invalid { background-color: #f0dddd;}
+/*input:valid, textarea:valid {}
+input:invalid, textarea:invalid {}*/
 
 ::-webkit-input-placeholder { color: #aaa;}
 					:-moz-placeholder { color: #aaa;}
@@ -313,135 +402,59 @@ td { vertical-align: top;}
 	font-style: normal;
 }
 
-/* =============================================================================
-	 &Font Sizes - http://mopo.ws/wxg6jV
-	 ========================================================================== */
-
-/*
- * The following styles ensure that font sizes can be reused in markup
- * rather than applying the same font-size value to multiple selectors.
- *
- * All line heights are 24px to ensure a consistent vertical rhythm.
- * Line heights should be set to match line-height set on body.
- *
- */
-
-/*
- * Common margin-bottom for vertical rhythm.
- */
-h1, h2, h3, h4, h5, h6,
-ul, ol, dl,
-fieldset,
-p,
-table,
-pre,
-hr { margin-top:16px; margin-top:1rem; margin-bottom:16px; margin-bottom:1rem;}
-
-/*
- * Massive type
- */
-.fs-giga { font-size: 80px; font-size: 5.714rem; line-height: 1;}
-.fs-mega { font-size: 56px; font-size: 4rem; line-height: 1;}
-.fs-kilo { font-size: 44px; font-size: 3.143rem; line-height: 1;}
-
-/*
- * Define headings and their associated classes here.
- */
-h1, .fs-alpha   { font-size: 32px; font-size: 2.286rem; line-height: 1;}
-h2, .fs-beta    { font-size: 28px; font-size: 2em; line-height: 1;}
-h3, .fs-gamma   { font-size: 24px; font-size: 1.714rem; line-height: 1;}
-h4, .fs-delta   { font-size: 20px; font-size: 1.429rem; line-height: 1; }
-h5, .fs-epsilon { font-size: 18px; font-size: 1.286rem; line-height: 1;}
-h6, .fs-zeta    { font-size: 16px; font-size: 1.143rem; line-height: 1;}
-
-/*
- * Smaller-than-body-copy sizes here.
- */
-.fs-milli { font-size:12px; font-size:0.857rem; line-height:1;}
-
-
-/* ==|== &colours ==============================================================
-
-	 colour    #######
-
-	 ========================================================================== */
-
-
-/* ==|== primary styles ========================================================
-
-	1. SITE STRUCTURE & APPEARANCE
-		1.a Containers & Columns
-		1.b Header
-		1.c Navigation
-		1.d Content
-			1.d.i General Typography
-			1.d.ii Headers
-			1.d.iii Icons
-			1.d.iv Labels
-			1.d.v Alerts
-			1.d.vi Progress Bars
-			1.d.vii Autocomplete
-			1.d.viii Drag and Drop
-		1.e Sidebar
-		1.f Footer
-
-	2. POSTS
-		2.a Images
-			2.a.i Wordpress Gallery
-		2.b Pagination
-		2.c Info boxes
-
-	3. INTERACTION
-		3.a Forms
-			3.a.1 Date Picker
-		3.b Buttons
-		3.c Paginatoin
-		3.d Wysiwyg
-		3.e Tool Tips
-
-	4. PAGE SPECIFIC STYLES
-		4.a ...
-
-	5. WIDGETS
-		5.a Generic Widgets
-		5.b Specific Widgets
-			5.b.i Widget ...
-
-	6. COMMENTS
-		6.a Comments
-		6.b Pingbacks / Trackbacks
-		6.c Comment Form
-
-	7. ANIMATIONS
-
-		GRID AND MEDIA QUERIES
-
-	 ========================================================================== */
-
 /* *****************************************************************************
-	 1. &SITE STRUCTURE & APPEARANCE
+	 2. &BLOCKS
 	 ************************************************************************** */
 /* =============================================================================
-	 1.a &Containers & Columns
+	 2.a &Main Structure
 	 ========================================================================== */
+/* -----------------------------------------------------------------------------
+	 2.a.i Header
+	 -------------------------------------------------------------------------- */
 
-/* used to set max width of content areas */
-.wrap {
-	margin: 0;
-	padding: 0 1em;
+
+/* -----------------------------------------------------------------------------
+	 2.a.ii Primary Content
+	 -------------------------------------------------------------------------- */
+
+
+/* -----------------------------------------------------------------------------
+	 2.a.iii Secondary Content
+	 -------------------------------------------------------------------------- */
+
+
+/* -----------------------------------------------------------------------------
+	 2.a.iv Footer
+	 -------------------------------------------------------------------------- */
+
+
+/* =============================================================================
+	 2.b &Media Block
+	 ========================================================================== */
+/*
+ * media object - http://mopo.ws/GJYch3
+ * .mblock and .mblock-beta should always be used in conjunction with
+ * .cf
+ *
+ * Improvements by Nicholas Gallagher - http://jsfiddle.net/necolas/rZvEF/
+ *
+ * .mblock {}
+ * .mblock > .mblock-alpha {}
+ */
+.mblock:before, .mblock:after { content: ""; display: table; height:0;}
+.mblock:after { clear: both;}
+
+.mblock > .mblock-beta {
+	display: table-cell; /* 1 */
+	width: 10000px; /* 2 */
 }
-
-/*body { padding: 0 1em;}*/
-
-/* =============================================================================
-	 1.b &Header
-	 ========================================================================== */
+.mblock .mblock-alpha { float: left; margin-right: 12px; margin-right: 1rem;}
+.mblock .mblock-alpha img { display: block;}
 
 
 /* =============================================================================
-	 1.c &Navigation
+	 2.c &Navigation
 	 ========================================================================== */
-
 /*
  * Nav abstraction - use classes specific to particular nav
  * to differentiate - http://mopo.ws/zadlrO
@@ -535,644 +548,117 @@ h6, .fs-zeta    { font-size: 16px; font-size: 1.143rem; line-height: 1;}
 	}
 }
 
-
 /* =============================================================================
-	 1.d &Content
+	 2.d &Buttons
 	 ========================================================================== */
-.d-block {
-	display: block;
-	/* required for <button> and <input>*/
-	width: 100%;
-}
-.d-iblock { display: inline-block;}
-
-.case-u { text-transform: uppercase;}
-.case-l { text-transform: lowercase;}
-.case-n { text-transform: none;}
-.case-c { text-transform: capitalize;}
-
-.ff-mono { font-family: monospace;}
-
-/* -----------------------------------------------------------------------------
-	 1.d.i General &Typography
-	 -------------------------------------------------------------------------- */
-p.error, span.error { color: #CC3333;}
-
-.list-reset {
-	list-style-type: none;
-	padding: 0;
-	margin: 0;
-}
-
-.va-t { vertical-align: top;}
-.va-m { vertical-align: middle;}
-.va-b { vertical-align: bottom;}
-.va-bl { vertical-align: baseline;}
-.va-sup { vertical-align: super;}
-.va-sub { vertical-align: sub;}
-.va-tt { vertical-align: text-top;}
-.va-tb { vertical-align: text-bottom;}
-
-
-/* -----------------------------------------------------------------------------
-	 1.d.ii &Headers
-	 -------------------------------------------------------------------------- */
-
-
-/* -----------------------------------------------------------------------------
-	 1.d.iii &Icons
-	 -------------------------------------------------------------------------- */
-/*  Styling inspired by FontAwesome - http://mopo.ws/ReAOC6
-		------------------------------------------------------- */
-.icon:before, .icon:before {
-	font-family: base-icon-font;
+.btn {
+	position: relative;
+	display: inline-block;
+	background-color: #f5f5f5;
+	background-image:     -ms-linear-gradient(top, hsla(0, 0%, 100%, .2), hsla(0, 0%, 90%, .2));
+	background-image: -webkit-linear-gradient(top, hsla(0, 0%, 100%, .2), hsla(0, 0%, 90%, .2));
+	background-image:      -o-linear-gradient(top, hsla(0, 0%, 100%, .2), hsla(0, 0%, 90%, .2));
+	background-image:         linear-gradient(top, hsla(0, 0%, 100%, .2), hsla(0, 0%, 90%, .2));
+	background-image:    -moz-linear-gradient(top, hsla(0, 0%, 100%, .2), hsla(0, 0%, 90%, .2));
+	font-size: 15px;
+	font-size: 1.071rem;
 	font-weight: normal;
-	font-style: normal;
-	display: inline-block;
-	text-decoration: inherit;
-}
-a .icon, a .icon {
-	display: inline-block;
-	text-decoration: inherit;
-}
-/* makes the font 33% larger relative to the icon container */
-.icon-large:before {
-	vertical-align: top;
-	font-size: 1.3333333333333333em;
-}
-.btn .icon, .btn .icon {
-	/* keeps button heights with and without icons the same */
-	line-height: .5;
-}
-li .icon, li .icon {
-	display: inline-block;
-	width: 1.25em;
-	text-align: center;
-}
-li .icon-large[class^="icon-"], li .icon-large[class*=" icon-"] {
-	/* 1.5 increased font size for icon-large * 1.25 width */
-
-	width: 1.875em;
-}
-li.icon, li.icon {
-	margin-left: 0;
-	list-style-type: none;
-}
-li.icon:before, li.icon:before {
-	text-indent: -2em;
-	text-align: center;
-}
-li.icon.icon-large:before, li.icon.icon-large:before {
-	text-indent: -1.3333333333333333em;
-}
-
-.icon-anim-rotate {
-	-webkit-transform-origin: 49% 38%;
-		 -moz-transform-origin: 49% 38%;
-			 -o-transform-origin: 49% 38%;
-			-ms-transform-origin: 49% 38%;
-					transform-origin: 49% 38%;
-
-	-webkit-animation	: rotate 1s infinite linear;
-			-moz-animation: rotate 1s infinite linear;
-				-o-animation: rotate 1s infinite linear;
-			 -ms-animation: rotate 1s infinite linear;
-}
-
-/*
- * Use the Unicode Private Use Area (PUA) to ensure screen readers do not
- * read off random characters that represent icons
- */
-
-/* WEB APPLICATION ICONS U+e0xxx --------------------------------------------- */
-.icon-checkbox-unchecked:before	{ content: "\e000";}
-.icon-checkbox-checked:before		{ content: "\e001";}
-
-.icon-radio-unchecked:before		{ content: "\e010";}
-.icon-radio-checked:before			{ content: "\e011";}
-
-.icon-loader:before 						{ content: "\e020";}
-
-.icon-reorder:before						{ content: "\e030";}
-
-.icon-remove:before							{ content: "\e040";}
-
-.icon-comment:before						{ content: "\e050";}
-
-.icon-calendar:before						{ content: "\e060";}
-
-
-/* TEXT EDITOR ICONS U+e1xxx ------------------------------------------------- */
-.icon-font:before 							{ content: "\e100";}
-.icon-bold:before 							{ content: "\e110";}
-.icon-italic:before 						{ content: "\e120";}
-.icon-underline:before 					{ content: "\e130";}
-.icon-strikethrough:before			{ content: "\e140";}
-
-.icon-link:before 							{ content: "\e150";}
-.icon-unlink:before 						{ content: "\e151";}
-
-.icon-list-ol:before						{ content: "\e160";}
-.icon-list-ul:before						{ content: "\e161";}
-
-.icon-image:before							{ content: "\e170";}
-
-.icon-undo:before								{ content: "\e180";}
-.icon-redo:before								{ content: "\e181";}
-
-
-/* DIRECTIONAL ICONS U+e2xxx ------------------------------------------------- */
-.icon-caret-up:before						{ content: "\e200";}
-.icon-caret-down:before					{ content: "\e201";}
-.icon-caret-right:before				{ content: "\e202";}
-.icon-caret-left:before					{ content: "\e203";}
-
-/* VIDEO / AUDIO ICONS U+e3xxx ----------------------------------------------- */
-
-
-/* SOCIAL ICONS U+e4xxx ------------------------------------------------------- */
-
-
-/*  Font Awesome uses the Unicode Private Use Area (PUA) to ensure screen
-		readers do not read off random characters that represent icons */
-
-
-/* -----------------------------------------------------------------------------
-	 1.d.iv &Labels
-	 -------------------------------------------------------------------------- */
-
-.label {
-	color: #fff;
-	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
-	white-space: nowrap;
-	vertical-align: baseline;
-	background-color: #999;
-
-	padding: 1px 4px 2px;
-	-webkit-border-radius: 2px;
-		 -moz-border-radius: 2px;
-					border-radius: 2px;
-}
-
-a.label:hover {
-	color: #ffffff;
-	text-decoration: none;
-	cursor: pointer;
-}
-
-.label-important { background-color: #b94a48;}
-.label-important[href] { background-color: #953b39;}
-.label-warning { background-color: #f89406;}
-.label-warning[href] { background-color: #c67605;}
-.label-success { background-color: #468847;}
-.label-success[href] { background-color: #356635;}
-.label-info { background-color: #3a87ad;}
-.label-info[href] { background-color: #2d6987;}
-.label-inverse { background-color: #333333;}
-.label-inverse[href] { background-color: #1a1a1a;}
-
-/* -----------------------------------------------------------------------------
-	 1.d.v &Alerts
-	 -------------------------------------------------------------------------- */
-.alert {
-	padding: 8px 35px 8px 14px;
-	margin-bottom: 18px;
-	color: #c09853;
-	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
-	background-color: #fcf8e3;
-	border: 1px solid #fbeed5;
-	-webkit-border-radius: 2px;
-		 -moz-border-radius: 2px;
-					border-radius: 2px;
-}
-
-.alert-heading {
-	color: inherit;
-}
-
-.alert a {
-	color: inherit;
-	border-bottom: 1px dotted #c09853;
-}
-
-.alert a:hover { border-bottom-style: solid;}
-
-.alert .close {
-	position: relative;
-	top: -2px;
-	right: -21px;
-	line-height: 18px;
-}
-
-.alert-success {
-	color: #468847;
-	background-color: #dff0d8;
-	border-color: #d6e9c6;
-}
-.alert-success a { border-color: #468847;}
-
-.alert-danger,
-.alert-error {
-	color: #b94a48;
-	background-color: #f2dede;
-	border-color: #eed3d7;
-}
-.alert-danger a,
-.alert-error a { border-color: #b94a48;}
-
-.alert-info {
-	color: #3a87ad;
-	background-color: #d9edf7;
-	border-color: #bce8f1;
-}
-.alert-info a { border-color: #3a87ad;}
-
-.alert-block {
-	padding-top: 14px;
-	padding-bottom: 14px;
-}
-
-.alert-block > p,
-.alert-block > ul {
-	margin-bottom: 0;
-}
-
-.alert .close {
-	position: relative;
-	top: -2px;
-	right: -21px;
-	line-height: 18px;
-}
-
-.close {
-	display: inline-block;
-	float: right;
-	background: transparent;
-	font-size: 1em;
-	font-weight: bold;
 	line-height: 1;
-	color: #bbb;
-	color: hsla(0, 0%, 0%, .2);
-	text-align: center;
-	text-shadow: 0 1px 0 #fff;
-	margin-left: .5em;
-	padding: 0;
-	cursor: pointer;
-	border: 0;
-}
-
-/* -----------------------------------------------------------------------------
-	 1.d.vi &Progress Bars
-	 -------------------------------------------------------------------------- */
-.progress {
-	height: 18px;
+	color: #000;
 	margin-bottom: 1em;
-	overflow: hidden;
-	background-color: #f7f7f7;
-	background-image: -webkit-linear-gradient(top, #f5f5f5, #f9f9f9);
-	background-image:    -moz-linear-gradient(top, #f5f5f5, #f9f9f9);
-	background-image:      -o-linear-gradient(top, #f5f5f5, #f9f9f9);
-	background-image:     -ms-linear-gradient(top, #f5f5f5, #f9f9f9);
-	background-image:         linear-gradient(top, #f5f5f5, #f9f9f9);
-	background-repeat: repeat-x;
-	-webkit-border-radius: 2px;
-		 -moz-border-radius: 2px;
-					border-radius: 2px;
-	-webkit-box-shadow: inset 0 1px 2px hsla(0, 0%, 0%, .1);
-		 -moz-box-shadow: inset 0 1px 2px hsla(0, 0%, 0%, .1);
-					box-shadow: inset 0 1px 2px hsla(0, 0%, 0%, .1);
-}
-
-.progress-bar {
-	width: 0;
-	height: 18px;
-	font-size: 12px;
-	color: #fff;
+	padding: .3em 1em;
+	vertical-align: middle;
 	text-align: center;
-	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
-	background-color: #0e90d2;
-	background-image: -webkit-linear-gradient(top, transparent, hsla(0, 0%, 100%, .1));
-	background-image:    -moz-linear-gradient(top, transparent, hsla(0, 0%, 100%, .1));
-	background-image:      -o-linear-gradient(top, transparent, hsla(0, 0%, 100%, .1));
-	background-image:     -ms-linear-gradient(top, transparent, hsla(0, 0%, 100%, .1));
-	background-image:         linear-gradient(top, transparent, hsla(0, 0%, 100%, .1));
-	background-repeat: repeat-x;
-	-webkit-box-shadow: inset 0 -1px 0 hsla(0, 0%, 0%, .15);
-		 -moz-box-shadow: inset 0 -1px 0 hsla(0, 0%, 0%, .15);
-					box-shadow: inset 0 -1px 0 hsla(0, 0%, 0%, .15);
-	-webkit-box-sizing: border-box;
-		 -moz-box-sizing: border-box;
-			-ms-box-sizing: border-box;
-					box-sizing: border-box;
-	-webkit-transition: width .6s ease;
-		 -moz-transition: width .6s ease;
-			-ms-transition: width .6s ease;
-			 -o-transition: width .6s ease;
-					transition: width .6s ease;
-}
-
-.progress-anim > .progress-bar {
-	-webkit-animation: progress-bar-stripes 2s linear infinite;
-		 -moz-animation: progress-bar-stripes 2s linear infinite;
-			-ms-animation: progress-bar-stripes 2s linear infinite;
-			 -o-animation: progress-bar-stripes 2s linear infinite;
-					animation: progress-bar-stripes 2s linear infinite;
-}
-
-.progress-danger > .progress-bar { background-color: #dd514c;}
-.progress-danger > .progress-bar-striped { background-color: #ee5f5b;}
-
-.progress-success > .progress-bar { background-color: #5eb95e;}
-.progress-success > .progress-bar-striped {	background-color: #62c462;}
-
-.progress-info > .progress-bar { background-color: #4bb1cf;}
-.progress-info > .progress-bar-striped { background-color: #5bc0de;}
-
-.progress-warning > .progress-bar { background-color: #faa732;}
-.progress-warning > .progress-bar-striped {	background-color: #fbb450;}
-
-.progress-bar-striped {
-	background-color: #149bdf;
-	background-image: -webkit-linear-gradient(	-45deg, hsla(0, 0%, 100%, .15) 25%,
-																							transparent 25%,
-																							transparent 50%,
-																							hsla(0, 0%, 100%, .15) 50%,
-																							hsla(0, 0%, 100%, .15) 75%,
-																							transparent 75%,
-																							transparent
-																					 );
-	background-image:    -moz-linear-gradient(	-45deg,
-																							hsla(0, 0%, 100%, .15) 25%,
-																							transparent 25%,
-																							transparent 50%,
-																							hsla(0, 0%, 100%, .15) 50%,
-																							hsla(0, 0%, 100%, .15) 75%,
-																							transparent 75%,
-																							transparent
-																						);
-	background-image:     -ms-linear-gradient(	-45deg,
-																							hsla(0, 0%, 100%, .15) 25%,
-																							transparent 25%,
-																							transparent 50%,
-																							hsla(0, 0%, 100%, .15) 50%,
-																							hsla(0, 0%, 100%, .15) 75%,
-																							transparent 75%,
-																							transparent
-																						);
-	background-image:      -o-linear-gradient(	-45deg,
-																							hsla(0, 0%, 100%, .15) 25%,
-																							transparent 25%,
-																							transparent 50%,
-																							hsla(0, 0%, 100%, .15) 50%,
-																							hsla(0, 0%, 100%, .15) 75%,
-																							transparent 75%,
-																							transparent
-																					 );
-	background-image:         linear-gradient(	-45deg,
-																							hsla(0, 0%, 100%, .15) 25%,
-																							transparent 25%,
-																							transparent 50%,
-																							hsla(0, 0%, 100%, .15) 50%,
-																							hsla(0, 0%, 100%, .15) 75%,
-																							transparent 75%,
-																							transparent
-																						);
-	-webkit-background-size: 40px 40px;
-		 -moz-background-size: 40px 40px;
-			 -o-background-size: 40px 40px;
-					background-size: 40px 40px;
-}
-
-@-webkit-keyframes progress-bar-stripes {
-	0% { background-position: 40px 0;}
-	100% { background-position: 0 0;}
-}
-
-@-moz-keyframes progress-bar-stripes {
-	0% { background-position: 40px 0;}
-	100% { background-position: 0 0;}
-}
-
-@-ms-keyframes progress-bar-stripes {
-	0% { background-position: 40px 0;}
-	100% { background-position: 0 0;}
-}
-
-@-o-keyframes progress-bar-stripes {
-	0% { background-position: 40px 0;}
-	100% { background-position: 0 0;}
-}
-
-@keyframes progress-bar-stripes {
-	0% { background-position: 40px 0;}
-	100% { background-position: 0 0;}
-}
-
-/* -----------------------------------------------------------------------------
-	 1.d.vii &Autocomplete
-	 -------------------------------------------------------------------------- */
-.ui-autocomplete {
-	position: absolute;
 	cursor: pointer;
-	background: #fff;
-	font-size: .75em;
-	border: 1px solid #b2b2b2;
-	border-bottom-left-radius: 4px;
-	border-bottom-right-radius: 4px;
-}
 
-.ui-menu {
-	list-style:none;
-	padding: 0;
-	margin: 0;
-}
-.ui-menu .ui-menu {
-	margin-top: -3px;
-}
-.ui-menu .ui-menu-item { border-bottom: 1px solid #eee;}
-.ui-menu .ui-menu-item a {
-	display: block;
-	color: inherit;
-	padding: .4em .5em;
-	line-height: 1.5;
-}
-.ui-menu .ui-menu-item a.ui-state-hover,
-.ui-menu .ui-menu-item a.ui-state-active {
-	font-weight: normal;
-	background-color: #e4eef5;
-	background-image: -webkit-linear-gradient(top, transparent, hsla(0, 0%, 100%, .1));
-	background-image:    -moz-linear-gradient(top, transparent, hsla(0, 0%, 100%, .1));
-	background-image:      -o-linear-gradient(top, transparent, hsla(0, 0%, 100%, .1));
-	background-image:     -ms-linear-gradient(top, transparent, hsla(0, 0%, 100%, .1));
-	background-image:         linear-gradient(top, transparent, hsla(0, 0%, 100%, .1));
-}
+	border: 1px solid #cccccc;
+	border-color: #e6e6e6 #e6e6e6 #bfbfbf;
+	border-color: hsla(0, 0%, 0%, .1) hsla(0, 0%, 0%, .1) rgba(0, 0, 0, 0.25);
 
-.ui-menu-item .img-block > .img {
-	background: transparent url(http://placekitten.com/g/20/20) no-repeat center center;
-	width: 20px;
-	height: 20px;
-	margin-right: .5em;
-}
-
-.token-list {
-	position: relative;
-	display: block;
-	border: 1px solid #ccc;
-	cursor: text;
-	padding-left: .25em;
-}
-
-.token-list + .ui-autocomplete { left: 0 !important;}
-
-.token-list-input {
-	background-color: transparent;
-	padding: 0;
-	margin: 0;
-	border: 0;
-	outline: none;
-}
-
-.token-list-item {
-	display: inline-block;
-	vertical-align: middle;
-}
-
-.token-list-token {
-	vertical-align: middle;
-	font-size: 75%;
-	line-height: 1;
-	padding: .25em .5em;
-	border: 1px solid #aaa;
 	-webkit-border-radius: 2px;
 		 -moz-border-radius: 2px;
 					border-radius: 2px;
+
+	/* android 4.0 requires prefix */
+	-webkit-box-shadow: inset 0 1px 0 hsla(0, 0%, 100%, .2), 0 1px 2px hsla(0, 0%, 90%, .05);
+					box-shadow: inset 0 1px 0 hsla(0, 0%, 100%, .2), 0 1px 2px hsla(0, 0%, 90%, .05);
+
+	-webkit-transition: all 150ms ease-in;
+		 -moz-transition: all 150ms ease-in;
+			 -o-transition: all 150ms ease-in;
+			-ms-transition: all 150ms ease-in;
+					transition: all 150ms ease-in;
 }
 
-/* -----------------------------------------------------------------------------
-	 1.d.viii &Drag and Drop
-	 -------------------------------------------------------------------------- */
-.files-drag-tip {
-	display: inline-block;
-	display: none;
-	background-color: #f6f6f6;
-	font-size: 11px;
-	font-size: 1.1rem;
+.btn:hover {
+	background-color: #ededed;
+	color: #000;
+}
+
+.btn:active, .btn-selected, .btn-selected:hover {
+	background-color: #ededed;
+	color: #000;
+	/* android 4.0 requires prefix */
+	-webkit-box-shadow: inset 0 1px 3px hsla(0, 0%, 0%, .5), 0 1px 2px hsla(0, 0%, 90%, .05);
+					box-shadow: inset 0 1px 3px hsla(0, 0%, 0%, .5), 0 1px 2px hsla(0, 0%, 90%, .05);
+
+	-webkit-transition: all 0;
+		 -moz-transition: all 0;
+			 -o-transition: all 0;
+			-ms-transition: all 0;
+					transition: all 0;
+}
+
+.btn-selected { cursor: default;}
+
+.btn[disabled], .btn.disabled {
 	color: #999;
-	padding: .15em 1em .05em;
+	cursor: default;
+}
+.btn[disabled], .btn.disabled,
+.btn:hover[disabled], .btn.disabled:hover,
+.btn:active[disabled], .btn.disabled:active {
+	background-color: #fff;
+	box-shadow: none;
+}
+
+.btn-group { display: inline-block;}
+
+.btn-group > .btn {
+	float: left;
+	margin-right: 0;
+	margin-left: -1px;
+	-webkit-border-radius: 0;
+		 -moz-border-radius: 0;
+					border-radius: 0;
+}
+
+.btn-group > .btn:first-child,
+.btn-group > .btn:last-child,
+.btn-group > .btn:first-child:last-child {
 	-webkit-border-radius: 2px;
 		 -moz-border-radius: 2px;
 					border-radius: 2px;
 }
 
-.field:hover .files-drag-tip { display: block;}
-
-/* =============================================================================
-	 1.e &Sidebar
-	 ========================================================================== */
-
-
-/* =============================================================================
-	 1.f &Footer
-	 ========================================================================== */
-
-
-/* *****************************************************************************
-	 2. &POSTS
-	 ************************************************************************** */
-/* =============================================================================
-	 2.a &Images
-	 ========================================================================== */
-
-
-/* -----------------------------------------------------------------------------
-	 2.a.i Wordpress &Gallery
-	 -------------------------------------------------------------------------- */
-/*
- * 3 column gallery example
- *
-	<div class="gallery gallery-columns-3 ">
-		<dl class="gallery-item">
-			<dt class="gallery-icon">
-				<a href=""><img /></a>
-			</dt>
-			<dd class="wp-caption-text gallery-caption">
-				caption
-			</dd>
-		</dl>
-		<br style="clear: both"><!-- displayed after every 3 items in gallery -->
-	</div>
-*/
-.gallery {
-	margin: 0 auto;
-	margin-bottom: 32px;
-	margin-bottom: 2rem;
-}
-
-.gallery-item {
-	float: left;
-	border: 1px solid #E3E2E2;
-	margin: 0 .5% 1%;
-	padding: 16px;
-	padding: 1rem;
-}
-
-.gallery-columns-1 > .gallery-item {
-	width: 100%;
+.btn-group > .btn:first-child {
 	margin-left: 0;
-	margin-right: 0;
-}
-.gallery-columns-2 > .gallery-item { width: 49.5%;}
-.gallery-columns-3 > .gallery-item { width: 32.65%;}
-.gallery-columns-4 > .gallery-item { width: 24.25%;}
-.gallery-columns-5 > .gallery-item { width: 19.2%;}
-
-.gallery-columns-2 > .gallery-item:nth-of-type(2n + 1),
-.gallery-columns-3 > .gallery-item:nth-of-type(3n + 1),
-.gallery-columns-4 > .gallery-item:nth-of-type(4n + 1),
-.gallery-columns-5 > .gallery-item:nth-of-type(5n + 1) { margin-left: 0;}
-
-.gallery-columns-2 > .gallery-item:nth-of-type(2n),
-.gallery-columns-3 > .gallery-item:nth-of-type(3n),
-.gallery-columns-4 > .gallery-item:nth-of-type(4n),
-.gallery-columns-5 > .gallery-item:nth-of-type(5n) { margin-right: 0;}
-
-.ie8 .gallery-columns-2 > .gallery-item { width: 49%;}
-.ie8 .gallery-columns-3 > .gallery-item { width: 32.3%;}
-.ie8 .gallery-columns-4 > .gallery-item { width: 24%;}
-.ie8 .gallery-columns-5 > .gallery-item { width: 19%;}
-
-.ie7 .gallery-columns-2 > .gallery-item { width: 45%;}
-.ie7 .gallery-columns-3 > .gallery-item { width: 28.3%;}
-.ie7 .gallery-columns-4 > .gallery-item { width: 20%;}
-.ie7 .gallery-columns-5 > .gallery-item { width: 15%;}
-
-/*.gallery-icon {}*/
-
-.gallery-caption {
-	font-size: 14px;
-	font-size: .875rem; /* 14px / 16 = .875 */
-	margin-left: 0;
-	padding: 8px 0;
-	padding: .75em 0 0;
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 0;
 }
 
-.gallery-caption > :last-child { margin-bottom: 0;}
+.btn-group > .btn:last-child {
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 0;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	 &mButtons
+	 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
 
 /* =============================================================================
-	 2.b &Pagination
-	 ========================================================================== */
-
-
-/* =============================================================================
-	 2.c &Info boxes
-	 ========================================================================== */
-
-
-/* *****************************************************************************
-	 3. &INTERACTION
-	 ************************************************************************** */
-/* =============================================================================
-	 3.a &Forms
+	 2.e &Forms
 	 ========================================================================== */
 .field, .field-label { position: relative;}
 
@@ -1242,7 +728,7 @@ input:checked + label > .radio-custom:before { content: "\e011";}
 input:checked + label > .checkbox-custom:before { content: "\e001"; /* .icon-check - FontAwesome */}
 
 /* -----------------------------------------------------------------------------
-	 3.a.i &Date Picker
+	 2.e.i &Date Picker
 	 -------------------------------------------------------------------------- */
 .ui-datepicker {
 	display: none;
@@ -1360,113 +846,419 @@ input:checked + label > .checkbox-custom:before { content: "\e001"; /* .icon-che
 	border-left-width:1px;
 }
 
-/* =============================================================================
-	 3.b &Buttons
-	 ========================================================================== */
-.btn {
-	position: relative;
-	display: inline-block;
-	background-color: #f5f5f5;
-	background-image:     -ms-linear-gradient(top, hsla(0, 0%, 100%, .2), hsla(0, 0%, 90%, .2));
-	background-image: -webkit-linear-gradient(top, hsla(0, 0%, 100%, .2), hsla(0, 0%, 90%, .2));
-	background-image:      -o-linear-gradient(top, hsla(0, 0%, 100%, .2), hsla(0, 0%, 90%, .2));
-	background-image:         linear-gradient(top, hsla(0, 0%, 100%, .2), hsla(0, 0%, 90%, .2));
-	background-image:    -moz-linear-gradient(top, hsla(0, 0%, 100%, .2), hsla(0, 0%, 90%, .2));
-	font-size: 15px;
-	font-size: 1.071rem;
-	font-weight: normal;
-	line-height: 1;
-	color: #000;
-	margin-bottom: 1em;
-	padding: .3em 1em;
-	vertical-align: middle;
-	text-align: center;
+/* -----------------------------------------------------------------------------
+	 2.e.ii &Autocomplete
+	 -------------------------------------------------------------------------- */
+.ui-autocomplete {
+	position: absolute;
 	cursor: pointer;
+	background: #fff;
+	font-size: .75em;
+	border: 1px solid #b2b2b2;
+	border-bottom-left-radius: 4px;
+	border-bottom-right-radius: 4px;
+}
 
-	border: 1px solid #cccccc;
-	border-color: #e6e6e6 #e6e6e6 #bfbfbf;
-	border-color: hsla(0, 0%, 0%, .1) hsla(0, 0%, 0%, .1) rgba(0, 0, 0, 0.25);
+.ui-menu {
+	list-style:none;
+	padding: 0;
+	margin: 0;
+}
+.ui-menu .ui-menu {
+	margin-top: -3px;
+}
+.ui-menu .ui-menu-item { border-bottom: 1px solid #eee;}
+.ui-menu .ui-menu-item a {
+	display: block;
+	color: inherit;
+	padding: .4em .5em;
+	line-height: 1.5;
+}
+.ui-menu .ui-menu-item a.ui-state-hover,
+.ui-menu .ui-menu-item a.ui-state-active {
+	font-weight: normal;
+	background-color: #e4eef5;
+	background-image: -webkit-linear-gradient(top, transparent, hsla(0, 0%, 100%, .1));
+	background-image:    -moz-linear-gradient(top, transparent, hsla(0, 0%, 100%, .1));
+	background-image:      -o-linear-gradient(top, transparent, hsla(0, 0%, 100%, .1));
+	background-image:     -ms-linear-gradient(top, transparent, hsla(0, 0%, 100%, .1));
+	background-image:         linear-gradient(top, transparent, hsla(0, 0%, 100%, .1));
+}
 
+.ui-menu-item .img-block > .img {
+	background: transparent url(http://placekitten.com/g/20/20) no-repeat center center;
+	width: 20px;
+	height: 20px;
+	margin-right: .5em;
+}
+
+.token-list {
+	position: relative;
+	display: block;
+	border: 1px solid #ccc;
+	cursor: text;
+	padding-left: .25em;
+}
+
+.token-list + .ui-autocomplete { left: 0 !important;}
+
+.token-list-input {
+	background-color: transparent;
+	padding: 0;
+	margin: 0;
+	border: 0;
+	outline: none;
+}
+
+.token-list-item {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.token-list-token {
+	vertical-align: middle;
+	font-size: 75%;
+	line-height: 1;
+	padding: .25em .5em;
+	border: 1px solid #aaa;
 	-webkit-border-radius: 2px;
 		 -moz-border-radius: 2px;
 					border-radius: 2px;
-
-	/* android 4.0 requires prefix */
-	-webkit-box-shadow: inset 0 1px 0 hsla(0, 0%, 100%, .2), 0 1px 2px hsla(0, 0%, 90%, .05);
-					box-shadow: inset 0 1px 0 hsla(0, 0%, 100%, .2), 0 1px 2px hsla(0, 0%, 90%, .05);
-
-	-webkit-transition: all 150ms ease-in;
-		 -moz-transition: all 150ms ease-in;
-			 -o-transition: all 150ms ease-in;
-			-ms-transition: all 150ms ease-in;
-					transition: all 150ms ease-in;
 }
 
-.btn:hover {
-	background-color: #ededed;
-	color: #000;
-}
-
-.btn:active, .btn-selected, .btn-selected:hover {
-	background-color: #ededed;
-	color: #000;
-	/* android 4.0 requires prefix */
-	-webkit-box-shadow: inset 0 1px 3px hsla(0, 0%, 0%, .5), 0 1px 2px hsla(0, 0%, 90%, .05);
-					box-shadow: inset 0 1px 3px hsla(0, 0%, 0%, .5), 0 1px 2px hsla(0, 0%, 90%, .05);
-
-	-webkit-transition: all 0;
-		 -moz-transition: all 0;
-			 -o-transition: all 0;
-			-ms-transition: all 0;
-					transition: all 0;
-}
-
-.btn-selected { cursor: default;}
-
-.btn[disabled], .btn.disabled {
-	color: #999;
-	cursor: default;
-}
-.btn[disabled], .btn.disabled,
-.btn:hover[disabled], .btn.disabled:hover,
-.btn:active[disabled], .btn.disabled:active {
-	background-color: #fff;
-	box-shadow: none;
-}
-
-.btn-group { display: inline-block;}
-
-.btn-group > .btn {
-	float: left;
-	margin-right: 0;
-	margin-left: -1px;
-	-webkit-border-radius: 0;
-		 -moz-border-radius: 0;
-					border-radius: 0;
-}
-
-.btn-group > .btn:first-child,
-.btn-group > .btn:last-child,
-.btn-group > .btn:first-child:last-child {
-	-webkit-border-radius: 2px;
-		 -moz-border-radius: 2px;
-					border-radius: 2px;
-}
-
-.btn-group > .btn:first-child {
-	margin-left: 0;
-	border-top-right-radius: 0;
-	border-bottom-right-radius: 0;
-}
-
-.btn-group > .btn:last-child {
-	border-top-left-radius: 0;
-	border-bottom-left-radius: 0;
-}
+/* -----------------------------------------------------------------------------
+	 2.e.iii &Wysiwyg
+	 -------------------------------------------------------------------------- */
 
 
 /* =============================================================================
-	 3.c &Pagination
+	 2.f &Icons
+	 ========================================================================== */
+/*  Styling inspired by FontAwesome - http://mopo.ws/ReAOC6
+		------------------------------------------------------- */
+.icon:before, .icon:before {
+	font-family: base-icon-font;
+	font-weight: normal;
+	font-style: normal;
+	display: inline-block;
+	text-decoration: inherit;
+}
+a .icon, a .icon {
+	display: inline-block;
+	text-decoration: inherit;
+}
+/* makes the font 33% larger relative to the icon container */
+.icon-large:before {
+	vertical-align: top;
+	font-size: 1.3333333333333333em;
+}
+.btn .icon, .btn .icon {
+	/* keeps button heights with and without icons the same */
+	line-height: .5;
+}
+li .icon, li .icon {
+	display: inline-block;
+	width: 1.25em;
+	text-align: center;
+}
+li .icon-large[class^="icon-"], li .icon-large[class*=" icon-"] {
+	/* 1.5 increased font size for icon-large * 1.25 width */
+
+	width: 1.875em;
+}
+li.icon, li.icon {
+	margin-left: 0;
+	list-style-type: none;
+}
+li.icon:before, li.icon:before {
+	text-indent: -2em;
+	text-align: center;
+}
+li.icon.icon-large:before, li.icon.icon-large:before {
+	text-indent: -1.3333333333333333em;
+}
+
+.icon-anim-rotate {
+	-webkit-transform-origin: 49% 38%;
+		 -moz-transform-origin: 49% 38%;
+			 -o-transform-origin: 49% 38%;
+			-ms-transform-origin: 49% 38%;
+					transform-origin: 49% 38%;
+
+	-webkit-animation	: rotate 1s infinite linear;
+			-moz-animation: rotate 1s infinite linear;
+				-o-animation: rotate 1s infinite linear;
+			 -ms-animation: rotate 1s infinite linear;
+}
+
+/*
+ * Use the Unicode Private Use Area (PUA) to ensure screen readers do not
+ * read off random characters that represent icons
+ */
+
+/* WEB APPLICATION ICONS U+e0xxx --------------------------------------------- */
+.icon-checkbox-unchecked:before	{ content: "\e000";}
+.icon-checkbox-checked:before		{ content: "\e001";}
+
+.icon-radio-unchecked:before		{ content: "\e010";}
+.icon-radio-checked:before			{ content: "\e011";}
+
+.icon-loader:before 						{ content: "\e020";}
+
+.icon-reorder:before						{ content: "\e030";}
+
+.icon-remove:before							{ content: "\e040";}
+
+.icon-comment:before						{ content: "\e050";}
+
+.icon-calendar:before						{ content: "\e060";}
+
+
+/* TEXT EDITOR ICONS U+e1xxx ------------------------------------------------- */
+.icon-font:before 							{ content: "\e100";}
+.icon-bold:before 							{ content: "\e110";}
+.icon-italic:before 						{ content: "\e120";}
+.icon-underline:before 					{ content: "\e130";}
+.icon-strikethrough:before			{ content: "\e140";}
+
+.icon-link:before 							{ content: "\e150";}
+.icon-unlink:before 						{ content: "\e151";}
+
+.icon-list-ol:before						{ content: "\e160";}
+.icon-list-ul:before						{ content: "\e161";}
+
+.icon-image:before							{ content: "\e170";}
+
+.icon-undo:before								{ content: "\e180";}
+.icon-redo:before								{ content: "\e181";}
+
+
+/* DIRECTIONAL ICONS U+e2xxx ------------------------------------------------- */
+.icon-caret-up:before						{ content: "\e200";}
+.icon-caret-down:before					{ content: "\e201";}
+.icon-caret-right:before				{ content: "\e202";}
+.icon-caret-left:before					{ content: "\e203";}
+
+/* VIDEO / AUDIO ICONS U+e3xxx ----------------------------------------------- */
+
+
+/* SOCIAL ICONS U+e4xxx ------------------------------------------------------- */
+.icon-facebook:before { content: "\e400";}
+.icon-twitter:before { content: "\e410";}
+
+
+/* =============================================================================
+	 2.g &Alerts
+	 ========================================================================== */
+.alert {
+	padding: 8px 35px 8px 14px;
+	margin-bottom: 18px;
+	color: #c09853;
+	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+	background-color: #fcf8e3;
+	border: 1px solid #fbeed5;
+	-webkit-border-radius: 2px;
+		 -moz-border-radius: 2px;
+					border-radius: 2px;
+}
+
+.alert-heading {
+	color: inherit;
+}
+
+.alert a {
+	color: inherit;
+	border-bottom: 1px dotted #c09853;
+}
+
+.alert a:hover { border-bottom-style: solid;}
+
+.alert .close {
+	position: relative;
+	top: -2px;
+	right: -21px;
+	line-height: 18px;
+}
+
+.alert-block {
+	padding-top: 14px;
+	padding-bottom: 14px;
+}
+
+.alert-block > p,
+.alert-block > ul {
+	margin-bottom: 0;
+}
+
+.alert .close {
+	position: relative;
+	top: -2px;
+	right: -21px;
+	line-height: 18px;
+}
+
+.close {
+	display: inline-block;
+	float: right;
+	background: transparent;
+	font-size: 1em;
+	font-weight: bold;
+	line-height: 1;
+	color: #bbb;
+	color: hsla(0, 0%, 0%, .2);
+	text-align: center;
+	text-shadow: 0 1px 0 #fff;
+	margin-left: .5em;
+	padding: 0;
+	cursor: pointer;
+	border: 0;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	 &mAlerts
+	 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+.alert-success {
+	color: #468847;
+	background-color: #dff0d8;
+	border-color: #d6e9c6;
+}
+.alert-success a { border-color: #468847;}
+
+.alert-danger,
+.alert-error {
+	color: #b94a48;
+	background-color: #f2dede;
+	border-color: #eed3d7;
+}
+.alert-danger a,
+.alert-error a { border-color: #b94a48;}
+
+.alert-info {
+	color: #3a87ad;
+	background-color: #d9edf7;
+	border-color: #bce8f1;
+}
+.alert-info a { border-color: #3a87ad;}
+
+
+/* =============================================================================
+	 2.h &Labels
+	 ========================================================================== */
+.label {
+	color: #fff;
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+	white-space: nowrap;
+	vertical-align: baseline;
+	background-color: #999;
+
+	padding: 1px 4px 2px;
+	-webkit-border-radius: 2px;
+		 -moz-border-radius: 2px;
+					border-radius: 2px;
+}
+
+a.label:hover {
+	color: #ffffff;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	 &mLabels
+	 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+.label-important { background-color: #b94a48;}
+.label-important[href] { background-color: #953b39;}
+
+.label-warning { background-color: #f89406;}
+.label-warning[href] { background-color: #c67605;}
+
+.label-success { background-color: #468847;}
+.label-success[href] { background-color: #356635;}
+
+.label-info { background-color: #3a87ad;}
+.label-info[href] { background-color: #2d6987;}
+
+.label-inverse { background-color: #333333;}
+.label-inverse[href] { background-color: #1a1a1a;}
+
+
+/* =============================================================================
+	 2.i &Gallery
+	 ========================================================================== */
+/*
+ * 3 column gallery example
+ *
+	<div class="gallery gallery-columns-3 ">
+		<dl class="gallery-item">
+			<dt class="gallery-icon">
+				<a href=""><img /></a>
+			</dt>
+			<dd class="wp-caption-text gallery-caption">
+				caption
+			</dd>
+		</dl>
+		<br style="clear: both"><!-- displayed after every 3 items in gallery -->
+	</div>
+*/
+.gallery {
+	margin: 0 auto;
+	margin-bottom: 32px;
+	margin-bottom: 2rem;
+}
+
+.gallery-item {
+	float: left;
+	border: 1px solid #E3E2E2;
+	margin: 0 .5% 1%;
+	padding: 16px;
+	padding: 1rem;
+}
+
+.gallery-columns-1 > .gallery-item {
+	width: 100%;
+	margin-left: 0;
+	margin-right: 0;
+}
+.gallery-columns-2 > .gallery-item { width: 49.5%;}
+.gallery-columns-3 > .gallery-item { width: 32.65%;}
+.gallery-columns-4 > .gallery-item { width: 24.25%;}
+.gallery-columns-5 > .gallery-item { width: 19.2%;}
+
+.gallery-columns-2 > .gallery-item:nth-of-type(2n + 1),
+.gallery-columns-3 > .gallery-item:nth-of-type(3n + 1),
+.gallery-columns-4 > .gallery-item:nth-of-type(4n + 1),
+.gallery-columns-5 > .gallery-item:nth-of-type(5n + 1) { margin-left: 0;}
+
+.gallery-columns-2 > .gallery-item:nth-of-type(2n),
+.gallery-columns-3 > .gallery-item:nth-of-type(3n),
+.gallery-columns-4 > .gallery-item:nth-of-type(4n),
+.gallery-columns-5 > .gallery-item:nth-of-type(5n) { margin-right: 0;}
+
+.ie8 .gallery-columns-2 > .gallery-item { width: 49%;}
+.ie8 .gallery-columns-3 > .gallery-item { width: 32.3%;}
+.ie8 .gallery-columns-4 > .gallery-item { width: 24%;}
+.ie8 .gallery-columns-5 > .gallery-item { width: 19%;}
+
+.ie7 .gallery-columns-2 > .gallery-item { width: 45%;}
+.ie7 .gallery-columns-3 > .gallery-item { width: 28.3%;}
+.ie7 .gallery-columns-4 > .gallery-item { width: 20%;}
+.ie7 .gallery-columns-5 > .gallery-item { width: 15%;}
+
+/*.gallery-icon {}*/
+
+.gallery-caption {
+	font-size: 14px;
+	font-size: .875rem; /* 14px / 16 = .875 */
+	margin-left: 0;
+	padding: 8px 0;
+	padding: .75em 0 0;
+}
+
+.gallery-caption > :last-child { margin-bottom: 0;}
+
+
+/* =============================================================================
+	 2.j &Pagination
 	 ========================================================================== */
 .page-numbers {
 	float: left;
@@ -1481,13 +1273,189 @@ input:checked + label > .checkbox-custom:before { content: "\e001"; /* .icon-che
 	border-left-width: 1px;
 }
 
+
 /* =============================================================================
-	 3.d &Wysiwyg
+	 2.k &Comments
 	 ========================================================================== */
 
 
 /* =============================================================================
-	 3.e &Tool Tips
+	 2.l &Widgets
+	 ========================================================================== */
+
+
+/* =============================================================================
+	 2.m &Progress Bars
+	 ========================================================================== */
+.progress {
+	height: 18px;
+	margin-bottom: 1em;
+	overflow: hidden;
+	background-color: #f7f7f7;
+	background-image: -webkit-linear-gradient(top, #f5f5f5, #f9f9f9);
+	background-image:    -moz-linear-gradient(top, #f5f5f5, #f9f9f9);
+	background-image:      -o-linear-gradient(top, #f5f5f5, #f9f9f9);
+	background-image:     -ms-linear-gradient(top, #f5f5f5, #f9f9f9);
+	background-image:         linear-gradient(top, #f5f5f5, #f9f9f9);
+	background-repeat: repeat-x;
+	-webkit-border-radius: 2px;
+		 -moz-border-radius: 2px;
+					border-radius: 2px;
+	-webkit-box-shadow: inset 0 1px 2px hsla(0, 0%, 0%, .1);
+		 -moz-box-shadow: inset 0 1px 2px hsla(0, 0%, 0%, .1);
+					box-shadow: inset 0 1px 2px hsla(0, 0%, 0%, .1);
+}
+
+.progress-bar {
+	width: 0;
+	height: 18px;
+	font-size: 12px;
+	color: #fff;
+	text-align: center;
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+	background-color: #0e90d2;
+	background-image: -webkit-linear-gradient(top, transparent, hsla(0, 0%, 100%, .1));
+	background-image:    -moz-linear-gradient(top, transparent, hsla(0, 0%, 100%, .1));
+	background-image:      -o-linear-gradient(top, transparent, hsla(0, 0%, 100%, .1));
+	background-image:     -ms-linear-gradient(top, transparent, hsla(0, 0%, 100%, .1));
+	background-image:         linear-gradient(top, transparent, hsla(0, 0%, 100%, .1));
+	background-repeat: repeat-x;
+	-webkit-box-shadow: inset 0 -1px 0 hsla(0, 0%, 0%, .15);
+		 -moz-box-shadow: inset 0 -1px 0 hsla(0, 0%, 0%, .15);
+					box-shadow: inset 0 -1px 0 hsla(0, 0%, 0%, .15);
+	-webkit-box-sizing: border-box;
+		 -moz-box-sizing: border-box;
+			-ms-box-sizing: border-box;
+					box-sizing: border-box;
+	-webkit-transition: width .6s ease;
+		 -moz-transition: width .6s ease;
+			-ms-transition: width .6s ease;
+			 -o-transition: width .6s ease;
+					transition: width .6s ease;
+}
+
+.progress-anim > .progress-bar {
+	-webkit-animation: progress-bar-stripes 2s linear infinite;
+		 -moz-animation: progress-bar-stripes 2s linear infinite;
+			-ms-animation: progress-bar-stripes 2s linear infinite;
+			 -o-animation: progress-bar-stripes 2s linear infinite;
+					animation: progress-bar-stripes 2s linear infinite;
+}
+
+.progress-bar-striped {
+	background-color: #149bdf;
+	background-image: -webkit-linear-gradient(	-45deg, hsla(0, 0%, 100%, .15) 25%,
+																							transparent 25%,
+																							transparent 50%,
+																							hsla(0, 0%, 100%, .15) 50%,
+																							hsla(0, 0%, 100%, .15) 75%,
+																							transparent 75%,
+																							transparent
+																					 );
+	background-image:    -moz-linear-gradient(	-45deg,
+																							hsla(0, 0%, 100%, .15) 25%,
+																							transparent 25%,
+																							transparent 50%,
+																							hsla(0, 0%, 100%, .15) 50%,
+																							hsla(0, 0%, 100%, .15) 75%,
+																							transparent 75%,
+																							transparent
+																						);
+	background-image:     -ms-linear-gradient(	-45deg,
+																							hsla(0, 0%, 100%, .15) 25%,
+																							transparent 25%,
+																							transparent 50%,
+																							hsla(0, 0%, 100%, .15) 50%,
+																							hsla(0, 0%, 100%, .15) 75%,
+																							transparent 75%,
+																							transparent
+																						);
+	background-image:      -o-linear-gradient(	-45deg,
+																							hsla(0, 0%, 100%, .15) 25%,
+																							transparent 25%,
+																							transparent 50%,
+																							hsla(0, 0%, 100%, .15) 50%,
+																							hsla(0, 0%, 100%, .15) 75%,
+																							transparent 75%,
+																							transparent
+																					 );
+	background-image:         linear-gradient(	-45deg,
+																							hsla(0, 0%, 100%, .15) 25%,
+																							transparent 25%,
+																							transparent 50%,
+																							hsla(0, 0%, 100%, .15) 50%,
+																							hsla(0, 0%, 100%, .15) 75%,
+																							transparent 75%,
+																							transparent
+																						);
+	-webkit-background-size: 40px 40px;
+		 -moz-background-size: 40px 40px;
+			 -o-background-size: 40px 40px;
+					background-size: 40px 40px;
+}
+
+@-webkit-keyframes progress-bar-stripes {
+	0% { background-position: 40px 0;}
+	100% { background-position: 0 0;}
+}
+
+@-moz-keyframes progress-bar-stripes {
+	0% { background-position: 40px 0;}
+	100% { background-position: 0 0;}
+}
+
+@-ms-keyframes progress-bar-stripes {
+	0% { background-position: 40px 0;}
+	100% { background-position: 0 0;}
+}
+
+@-o-keyframes progress-bar-stripes {
+	0% { background-position: 40px 0;}
+	100% { background-position: 0 0;}
+}
+
+@keyframes progress-bar-stripes {
+	0% { background-position: 40px 0;}
+	100% { background-position: 0 0;}
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	 &mProgress Bars
+	 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+.progress-danger > .progress-bar { background-color: #dd514c;}
+.progress-danger > .progress-bar-striped { background-color: #ee5f5b;}
+
+.progress-success > .progress-bar { background-color: #5eb95e;}
+.progress-success > .progress-bar-striped {	background-color: #62c462;}
+
+.progress-info > .progress-bar { background-color: #4bb1cf;}
+.progress-info > .progress-bar-striped { background-color: #5bc0de;}
+
+.progress-warning > .progress-bar { background-color: #faa732;}
+.progress-warning > .progress-bar-striped {	background-color: #fbb450;}
+
+
+/* =============================================================================
+	 2.n &Drag & Drop
+	 ========================================================================== */
+.files-drag-tip {
+	display: inline-block;
+	display: none;
+	background-color: #f6f6f6;
+	font-size: 11px;
+	font-size: 1.1rem;
+	color: #999;
+	padding: .15em 1em .05em;
+	-webkit-border-radius: 2px;
+		 -moz-border-radius: 2px;
+					border-radius: 2px;
+}
+
+.field:hover .files-drag-tip { display: block;}
+
+
+/* =============================================================================
+	 2.o &Tool Tips
 	 ========================================================================== */
 /* PowerTip Plugin */
 #powerTip {
@@ -1559,49 +1527,163 @@ input:checked + label > .checkbox-custom:before { content: "\e001"; /* .icon-che
 
 
 /* *****************************************************************************
-	 4. &PAGE SPECIFIC STYLES
+	 3. &gSTYLING
 	 ************************************************************************** */
 /* =============================================================================
-	 4.a ....
+	 3.a &Typography
 	 ========================================================================== */
+/*
+ * The following styles ensure that font sizes can be reused in markup
+ * rather than applying the same font-size value to multiple selectors.
+ *
+ * All line heights are 24px to ensure a consistent vertical rhythm.
+ * Line heights should be set to match line-height set on body.
+ *
+ */
+
+/*
+ * Common margin-bottom for vertical rhythm.
+ */
+h1, h2, h3, h4, h5, h6,
+ul, ol, dl,
+fieldset,
+p,
+table,
+pre,
+hr { margin-top:16px; margin-top:1rem; margin-bottom:16px; margin-bottom:1rem;}
+
+/*
+ * Massive type
+ */
+.fs-giga { font-size: 80px; font-size: 5.714rem; line-height: 1;}
+.fs-mega { font-size: 56px; font-size: 4rem; line-height: 1;}
+.fs-kilo { font-size: 44px; font-size: 3.143rem; line-height: 1;}
+
+/*
+ * Define headings and their associated classes here.
+ */
+h1, .fs-alpha   { font-size: 32px; font-size: 2.286rem; line-height: 1;}
+h2, .fs-beta    { font-size: 28px; font-size: 2em; line-height: 1;}
+h3, .fs-gamma   { font-size: 24px; font-size: 1.714rem; line-height: 1;}
+h4, .fs-delta   { font-size: 20px; font-size: 1.429rem; line-height: 1; }
+h5, .fs-epsilon { font-size: 18px; font-size: 1.286rem; line-height: 1;}
+h6, .fs-zeta    { font-size: 16px; font-size: 1.143rem; line-height: 1;}
+
+/*
+ * Smaller-than-body-copy sizes here.
+ */
+.fs-milli { font-size:12px; font-size:0.857rem; line-height:1;}
+.fs-micro { font-size: 10px; font-size: 0.625rem;}
 
 
-/* *****************************************************************************
-	 5. &WIDGETS
-	 ************************************************************************** */
-/* =============================================================================
-	 5.a Generic Widgets
-	 ========================================================================== */
-
-
-/* =============================================================================
-	 5.b Specific Widgets
-	 ========================================================================== */
 /* -----------------------------------------------------------------------------
-	 5.b.i Widget ...
+	 3.a.i &Headers
+	 -------------------------------------------------------------------------- */
+h1, h2, h3, h4, h5, h6 { line-height: 1;}
+
+
+/* -----------------------------------------------------------------------------
+	 3.a.ii &Lists
+	 -------------------------------------------------------------------------- */
+.list-reset {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+
+
+/* -----------------------------------------------------------------------------
+	 3.a.iii &Horizontal Rules
 	 -------------------------------------------------------------------------- */
 
 
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	 3.a.iv &mTypography
+	 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+.error { color: #CC3333;}
+
+/* font-family modifiers */
+.ff-mono { font-family: monospace;}
+
+/* case modifiers */
+.case-u { text-transform: uppercase;}
+.case-l { text-transform: lowercase;}
+.case-n { text-transform: none;}
+.case-c { text-transform: capitalize;}
+
+
+/* ==|== WordPress / Helper editor styles ======================================
+	 ========================================================================== */
+/* Floating & Alignment */
+.fl{ float: left;}
+.fr{ float: right;}
+.al{ text-align: left;}
+.ac{ text-align: center;}
+.ar{ text-align: right;}
+
+/* Alignment (post images) */
+.aligncenter { display: block; margin-left: auto; margin-right: auto;}
+.alignleft { display: inline; float: left; margin: 5px 15px 5px 0;}
+.alignright { display: inline; float: right; margin: 5px 0 5px 15px;}
+
+
+/* =============================================================================
+	 3.b &Backgrounds & Borders
+	 ========================================================================== */
+
+
+/* =============================================================================
+	 3.c &Layout
+	 ========================================================================== */
+/* use to set max width of content areas */
+.wrap {
+	margin: 0;
+	padding: 0 1em;
+}
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	 3.a.iv &mLayout
+	 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* display level modifiers */
+.d-block {
+	display: block;
+	/* required for <button> and <input>*/
+	width: 100%;
+}
+.d-iblock { display: inline-block;}
+
+
+/* =============================================================================
+	 3.d &Helpers
+	 ========================================================================== */
+/*
+ * For image replacement: http://mopo.ws/wj7fIN
+ * Nicholas Gallagher's detailed post on new .ir - http://mopo.ws/wHCSUu
+ * Causes issues with em based margins on elements using .ir
+ */
+.ir { border:0; font: 0/0 a; text-shadow: none; color: transparent; background-color: transparent;}
+
+/* Hide from both screenreaders and browsers: h5bp.com/u */
+.hidden { display: none !important; visibility: hidden;}
+
+/* Hide only visually, but have it available for screenreaders: h5bp.com/v */
+.visuallyhidden { position: absolute; clip: rect(0 0 0 0); width: 1px; height: 1px; margin: -1px; overflow: hidden; padding: 0; border: 0;}
+
+/* Extends the .visuallyhidden class to allow the element to be focusable when navigated to via the keyboard: h5bp.com/p */
+.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus { position: static; clip: auto; width: auto; height: auto; margin: 0; overflow: visible;}
+
+/* Hide visually and from screenreaders, but maintain layout */
+.invisible { visibility: hidden;}
+
+/* Clearfix for containing floats: h5bp.com/q */
+.cf:before, .cf:after { content: ""; display: table; height:0;}
+.cf:after { clear: both;}
+.cf { *zoom: 1;}
+
+
 /* *****************************************************************************
-	 6. &COMMENTS
-	 ************************************************************************** */
-/* =============================================================================
-	 6.a Comments
-	 ========================================================================== */
-
-
-/* =============================================================================
-	 6.b &Pingbacks / &Trackbacks
-	 ========================================================================== */
-
-
-/* =============================================================================
-	 6.c Comment Form
-	 ========================================================================== */
-
-
-/* *****************************************************************************
-	 7. &ANIMATIONS
+	 4. &ANIMATIONS
 	 ************************************************************************** */
 @-webkit-keyframes rotate {
 	0% { -webkit-transform: rotate(0deg);}
@@ -1628,10 +1710,10 @@ input:checked + label > .checkbox-custom:before { content: "\e001"; /* .icon-che
 	100% { transform: rotate(360deg);}
 }
 
-/* *****************************************************************************
-	 &GRID & MEDIA QUERIES
-	 ************************************************************************** */
 
+/* *****************************************************************************
+	 5. &GRID & MEDIA QUERIES
+	 ************************************************************************** */
 /*
  * Gridpak Beta CSS
  *
@@ -1677,7 +1759,7 @@ input:checked + label > .checkbox-custom:before { content: "\e001"; /* .icon-che
  * Inline-block columns are useful when floated columns of different heights
  * prevent subsequent columns from floating to their appropriate positions
  */
-:root .row-ib-cols { margin: 0 -6px 0 -8px;}
+:root .row-ib-cols { margin: 0 -8px 0 -8px;}
 :root .row-ib-cols > .col {
 	float: none;
 	display: inline-block;
@@ -1930,74 +2012,9 @@ Span 12:   100%
 }
 
 
-/* ==|== non-semantic helper classes ===========================================
+/* =============================================================================
+	 &PRINT STYLES - Inlined to avoid required HTTP connection: h5bp.com/r
 	 ========================================================================== */
-
-/*
- * For image replacement: http://mopo.ws/wj7fIN
- * Nicholas Gallagher's detailed post on new .ir - http://mopo.ws/wHCSUu
- * Causes issues with em based margins on elements using .ir
- */
-.ir { border:0; font: 0/0 a; text-shadow: none; color: transparent; background-color: transparent;}
-
-/* Hide from both screenreaders and browsers: h5bp.com/u */
-.hidden { display: none !important; visibility: hidden;}
-
-/* Hide only visually, but have it available for screenreaders: h5bp.com/v */
-.visuallyhidden { position: absolute; clip: rect(0 0 0 0); width: 1px; height: 1px; margin: -1px; overflow: hidden; padding: 0; border: 0;}
-
-/* Extends the .visuallyhidden class to allow the element to be focusable when navigated to via the keyboard: h5bp.com/p */
-.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus { position: static; clip: auto; width: auto; height: auto; margin: 0; overflow: visible;}
-
-/* Hide visually and from screenreaders, but maintain layout */
-.invisible { visibility: hidden;}
-
-/* Clearfix for containing floats: h5bp.com/q */
-.cf:before, .cf:after { content: ""; display: table; height:0;}
-.cf:after { clear: both;}
-.cf { *zoom: 1;}
-
-/*
- * media object - http://mopo.ws/GJYch3
- * .img-block and .img-block-content should always be used in conjunction with
- * .group
- *
- * Improvements by Nicholas Gallagher - http://jsfiddle.net/necolas/rZvEF/
- *
- * .img-block {}
- * .img-block > .img-block-content {}
- */
-.img-block > .img-block-content {
-	display: table-cell; /* 1 */
-	width: 10000px; /* 2 */
-	*width: auto; /* 3 */
-	*zoom: 1; /* 4 */
-}
-.img-block .img { float: left; margin-right: 12px; margin-right: 1rem;}
-.img-block .img img { display: block;}
-
-
-/* ==|== WordPress / Helper editor styles ======================================
-	 ========================================================================== */
-
-/* Floating & Alignment */
-.fl{ float: left;}
-.fr{ float: right;}
-.ac{ text-align: center;}
-.ar{ text-align: right;}
-
-/* Alignment (post images) */
-.aligncenter { display: block; margin-left: auto; margin-right: auto;}
-.alignleft { display: inline; float: left; margin: 5px 15px 5px 0;}
-.alignright { display: inline; float: right; margin: 5px 0 5px 15px;}
-
-
-
-/* ==|== print styles ==========================================================
-	 Print styles.
-	 Inlined to avoid required HTTP connection: h5bp.com/r
-	 ========================================================================== */
-
 @media print {
 	* { background: transparent !important; color: black !important; box-shadow:none !important; text-shadow: none !important; filter:none !important; -ms-filter: none !important;} /* Black prints faster: h5bp.com/s */
 	a, a:visited { text-decoration: underline;}

@@ -157,9 +157,9 @@ jQuery(function($) {
 		return $( "<li></li>" )
 			.data( "item.autocomplete", item )
 			.append(
-				"<a class='img-block cf'>" +
-					"<img class='img' src='http://placekitten.com/20/20'/>" +
-					"<div class='img-block-content'>" +
+				"<a class='mblock cf'>" +
+					"<img class='mblock-alpha' src='http://placekitten.com/20/20'/>" +
+					"<div class='mblock-beta'>" +
 						"<span>" + item.label + "</span><br><small>" + item.desc + "</small></div></a>" )
 			.appendTo( ul );
 	};
@@ -184,9 +184,9 @@ jQuery(function($) {
 		return $( "<li></li>" )
 			.data( "item.autocomplete", item )
 			.append(
-				"<a class='img-block cf'>" +
-					"<img class='img' src='http://placekitten.com/20/20'/>" +
-					"<div class='img-block-content'>" +
+				"<a class='mblock cf'>" +
+					"<img class='mblock-alpha' src='http://placekitten.com/20/20'/>" +
+					"<div class='mblock-beta'>" +
 						"<span>" + item.label + "</span><br><small>" + item.desc + "</small></div></a>" )
 			.appendTo( ul );
 	};

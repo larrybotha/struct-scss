@@ -34,7 +34,9 @@
 
 	<!-- Prompt IE 6 users to install Chrome Frame. Remove this if you support IE 6.
 			 chromium.org/developers/how-tos/chrome-frame-getting-started -->
-	<!--[if lte IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
+	<!--[if lte IE 7]><div class="chromeframe alert alert-danger wrap">Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a better browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site, and the rest of the internet.</div><![endif]-->
+
+	<div class="chromeframe alert alert-danger wrap">Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</div>
 
 	<div class="full-header">
 
@@ -61,7 +63,6 @@
 				<li><a href="#progress-bars">progress bars</a></li>
 				<li><a href="#grid">grid</a></li>
 			</ul>
-
 
 			<hr>
 
@@ -173,7 +174,12 @@
 				<div class="row cf">
 					<div class="col span-12-vpalpha span-6-vpbeta span-6-vpgamma span-6-vpdelta">
 						<blockquote>
-							This is a blockquote!
+							This is a blockquote! Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+							quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+							consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+							cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+							proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 						</blockquote>
 					</div>
 
@@ -901,12 +907,12 @@
 				<h1 id="file-drop">File Drop</h1>
 
 				<div class="field cf">
-					<div class="img-block">
-						<a href="#" class="btn img">Add files</a>
-						<div class="img-block-content">
-							<div class="files-drag-tip img-block">
-								<span class="img"></span>
-								<span class="img-block-content">Drag 'n drop files here to upload</span>
+					<div class="mblock">
+						<a href="#" class="btn mblock-alpha">Add files</a>
+						<div class="mblock-beta">
+							<div class="files-drag-tip mblock">
+								<span class="mblock-alpha"></span>
+								<span class="mblock-beta">Drag 'n drop files here to upload</span>
 							</div>
 						</div>
 					</div>
