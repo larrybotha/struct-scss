@@ -1,0 +1,3 @@
+@mixin transition ($val...) {
+	@include prefixer(transition, $val, $moz: true, $o: true);
+}

@@ -140,13 +140,29 @@ audio:not([controls]) { display: none; height: 0;} /* 3 */
  * Associated jQuery bug - http://mopo.ws/AsGGa2
  */
 
-* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;}
+* {
+	@include box-sizing(border-box);
+}
 
-html { font-size: 87.5%; /* 14px */ -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
+html {
+	// set desired font size in /var/_units.scss
+	font-size: fix8-set-base-font-size(); /* #{$unit-base} */
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+}
 
-html, button, input, select, textarea { font-family: Verdana, sans-serif; color: $clr-default;}
+html, button, input, select, textarea {
+	font-family: Verdana,
+	sans-serif;
+	color: $clr-default;
+}
 
-body { background: $clr-ntrl-min; background-image: url($bg-img-alpha); font-size: 1em; line-height: 1.5; margin: 0;}
+body {
+	background: $clr-ntrl-min;
+	font-size: 1em;
+	line-height: 1.5;
+	margin: 0;
+}
 
 /*
  * Remove text-shadow in selection highlight: h5bp.com/i
@@ -164,11 +180,7 @@ body { background: $clr-ntrl-min; background-image: url($bg-img-alpha); font-siz
 a {
 	color: #00e;
 	text-decoration: none;
-	-webkit-transition: color 100ms ease-in;
-		 -moz-transition: color 100ms ease-in;
-			 -o-transition: color 100ms ease-in;
-			-ms-transition: color 100ms ease-in;
-					transition: color 100ms ease-in;
+	@include transition(all 100ms ease-in-out);
 }
 a:visited {}
 a:hover { outline: 0;}
@@ -176,11 +188,7 @@ a:hover { outline: 0;}
 a:hover { color: #06e;}
 a:active {
 	color: #06e;
-	-webkit-transition: color 0s;
-		 -moz-transition: color 0s;
-			 -o-transition: color 0s;
-			-ms-transition: color 0s;
-					transition: color 0s;
+	@include transition(all 0ms);
 }
 a:focus { outline: thin dotted;}
 
