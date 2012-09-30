@@ -2,7 +2,11 @@
 	"folders":
 	[
 		{
-			"path": "/Users/andrehugo/Sites/styleguide"
+			"path": "../"
 		}
-	]
+	],
+	"settings":
+	{
+		"build_on_save": 0
+	}
 }
