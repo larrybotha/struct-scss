@@ -1,0 +1,35 @@
+@mixin animation($val...) {
+	@include prefixer(animation, $val, $moz: true, $o: true);
+}
+
+@mixin animation-name($val...) {
+	@include prefixer(animation-name, $val, $moz: true, $o: true);
+}
+
+@mixin animation-duration($val...) {
+	@include prefixer(animation-duration, $val, $moz: true, $o: true);
+}
+
+@mixin animation-timing-function($val...) {
+	@include prefixer(animation-timing-function, $val, $moz: true, $o: true);
+}
+
+@mixin animation-iteration-count($val...) {
+	@include prefixer(animation-iteration-count, $val, $moz: true, $o: true);
+}
+
+@mixin animation-direction($val...) {
+	@include prefixer(animation-direction, $val, $moz: true, $o: true);
+}
+
+@mixin animation-play-state($val...) {
+	@include prefixer(animation-play-state, $val, $moz: true, $o: true);
+}
+
+@mixin animation-delay($val...) {
+	@include prefixer(animation-delay, $val, $moz: true, $o: true);
+}
+
+@mixin animation-fill-mode($val...) {
+	@include prefixer(animation-fill-mode, $val, $moz: true, $o: true);
+}
