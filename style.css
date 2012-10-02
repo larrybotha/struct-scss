@@ -2303,12 +2303,9 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 1rem;
   padding: 0;
   position: relative;
-  /* already declared at base styles - must be uncommented if not declared */
-  /*-webkit-box-sizing: border-box;
-  	 -moz-box-sizing: border-box;
-  				box-sizing: border-box;*/
   -webkit-background-clip: padding-box !important;
   -moz-background-clip: padding-box !important;
+  -o-background-clip: padding-box !important;
   background-clip: padding-box !important;
 }
 
@@ -2318,14 +2315,14 @@ h1, h2, h3, h4, h5, h6 {
  * prevent subsequent columns from floating to their appropriate positions
  */
 :root .row-ib-cols {
-  margin: 0 -8.4px 0 -8.4px;
+  margin: 0 -8px 0 -8px;
 }
 
 :root .row-ib-cols > .col {
   float: none;
   display: inline-block;
   vertical-align: top;
-  margin-left: -8.4px;
+  margin-left: -6px;
 }
 
 /*

@@ -1721,13 +1721,9 @@ h1, h2, h3, h4, h5, h6 { line-height: 1;}
 	margin-bottom: 1rem;
 	padding: 0;
 	position:  relative;
-	/* already declared at base styles - must be uncommented if not declared */
-	/*-webkit-box-sizing: border-box;
-		 -moz-box-sizing: border-box;
-					box-sizing: border-box;*/
-	-webkit-background-clip: padding-box !important;
-		 -moz-background-clip: padding-box !important;
-					background-clip: padding-box !important;
+	// already declared at base styles - must be uncommented if not declared
+	// @include box-sizing(border-box);
+	@include background-clip(padding-box !important);
 }
 
 /*
@@ -1735,12 +1731,12 @@ h1, h2, h3, h4, h5, h6 { line-height: 1;}
  * Inline-block columns are useful when floated columns of different heights
  * prevent subsequent columns from floating to their appropriate positions
  */
-:root .row-ib-cols { margin: 0 (-$unit-default-px * .6) 0 (-$unit-default-px * .6);}
+:root .row-ib-cols { margin: 0 -8px 0 -8px;}
 :root .row-ib-cols > .col {
 	float: none;
 	display: inline-block;
 	vertical-align: top;
-	margin-left: (-$unit-default-px * .6);
+	margin-left: -6px;
 }
 
 /*
