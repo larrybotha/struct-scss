@@ -9,11 +9,11 @@ $clr-omega	: #fe57a1; // hot pink!
 
 // neutrals
 $clr-ntrl-min	: #fff;													// white
-$clr-ntrl-90	: darken($clr-ntrl-min, 90%);
-$clr-ntrl-80	: darken($clr-ntrl-min, 80%);
-$clr-ntrl-50	: darken($clr-ntrl-min, 50%);
-$clr-ntrl-20	: darken($clr-ntrl-min, 20%);
 $clr-ntrl-10	: darken($clr-ntrl-min, 10%);
+$clr-ntrl-20	: darken($clr-ntrl-min, 20%);
+$clr-ntrl-50	: darken($clr-ntrl-min, 50%);
+$clr-ntrl-80	: darken($clr-ntrl-min, 80%);
+$clr-ntrl-90	: darken($clr-ntrl-min, 90%);
 $clr-ntrl-max	: darken($clr-ntrl-min, 100%); 	// black
 
 // success colours
