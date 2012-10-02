@@ -1,0 +1,5 @@
+// function to allow base font size on html tag to be set from style.scss
+
+@function fix8-get-base-font-size() {
+	@return percentage($unit-base / $unit_useragent-base);
+}
