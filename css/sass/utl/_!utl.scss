@@ -1,7 +1,8 @@
+@import "func/base-font-size";
+
 @import "animation";
-@import "background-image";
-@import "background-size";
-@import "base-font-size";
+@import "background";
+@import "border-radius";
 @import "box-shadow";
 @import "box-sizing";
 @import "font-face";
@@ -9,3 +10,4 @@
 @import "prefixer";
 @import "transform";
 @import "transition";
+@import "user-select";

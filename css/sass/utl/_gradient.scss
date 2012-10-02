@@ -7,9 +7,9 @@
 //                    );;
 
 @mixin gradient($prop, $type, $val) {
-  #{$prop}: -webkit-#{$type}-gradient($val);
-  #{$prop}:    -moz-#{$type}-gradient($val);
-  #{$prop}:     -ms-#{$type}-gradient($val);
-  #{$prop}:      -o-#{$type}-gradient($val);
-  #{$prop}:         #{$type}-gradient($val);
+	#{$prop}: -webkit-#{$type}-gradient($val);
+	#{$prop}:    -moz-#{$type}-gradient($val);
+	#{$prop}:     -ms-#{$type}-gradient($val);
+	#{$prop}:      -o-#{$type}-gradient($val);
+	#{$prop}:         #{$type}-gradient($val);
 }

@@ -1,3 +1,0 @@
-@mixin background-size($val...) {
-	@include prefixer(background-size, $val, $moz: true, $o: true, $ms: true);
-}

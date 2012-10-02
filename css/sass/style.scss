@@ -918,10 +918,10 @@ input:checked + label > .checkbox-custom:before { content: "\e001"; /* .icon-che
 	background-color: #e4eef5;
 
 	@include gradient(background-image, linear,
-									 		( top,
-									 			transparent,
-									 			hsla(0, 0%, 100%, .1)
-									 		)
+											( top,
+												transparent,
+												hsla(0, 0%, 100%, .1)
+											)
 										);
 }
 
