@@ -1,0 +1,3 @@
+@function fix8-get-base-font-size() {
+	@return percentage($unit-base / $unit_useragent-base);
+}
