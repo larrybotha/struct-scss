@@ -873,6 +873,11 @@ input, textarea {
   border: 1px solid #cccccc;
 }
 
+input[type="radio"],
+input[type="checkbox"] {
+  border: none;
+}
+
 /*
  * Required only if using icon prefix and suffix blocks.
  * Addresses FF's use of !important on line-heights

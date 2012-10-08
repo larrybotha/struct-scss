@@ -710,6 +710,9 @@ input, textarea {
 	border: 1px solid $clr-ntrl-20;
 }
 
+input[type="radio"],
+input[type="checkbox"] { border: none;}
+
 /*
  * Required only if using icon prefix and suffix blocks.
  * Addresses FF's use of !important on line-heights
