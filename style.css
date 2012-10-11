@@ -2316,7 +2316,7 @@ h1, h2, h3, h4, h5, h6 {
 .grid-example .col {
   padding: 7px 14px;
   padding: .5rem 1rem;
-  background: #eee;
+  background: rgba(45, 45, 45, 0.1);
   border-radius: 2px;
   font-family: monospace;
   text-align: center;
