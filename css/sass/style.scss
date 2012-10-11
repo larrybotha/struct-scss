@@ -1717,7 +1717,7 @@ h1, h2, h3, h4, h5, h6 { font-weight: normal;}
 .grid-example .col {
 	padding: ($unit-default-px * .5) $unit-default-px;
 	padding: .5rem 1rem;
-	background: #eee;
+	background: transparentize($clr-default, .9);
 	border-radius: 2px;
 	font-family: monospace;
 	text-align: center;
