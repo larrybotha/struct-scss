@@ -2178,7 +2178,12 @@ h1, h2, h3, h4, h5, h6 {
 /* display level modifiers */
 .d-block {
   display: block;
-  /* required for <button> and <input>*/
+}
+
+/* required for <button>, <input>, and <textarea>*/
+input.d-block,
+textarea.d-block,
+button.d-block {
   width: 100%;
 }
 

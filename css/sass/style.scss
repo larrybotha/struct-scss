@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
-@import "var/!var";
-@import "utl/!utl";
+@import "variables/!variables";
+@import "utilities/!utilities";
 /*
 Theme Name: Your Theme Name
 Theme URI: http://...
@@ -1638,11 +1638,13 @@ h1, h2, h3, h4, h5, h6 { font-weight: normal;}
 	 3.a.iv &mLayout
 	 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 /* display level modifiers */
-.d-block {
-	display: block;
-	/* required for <button> and <input>*/
-	width: 100%;
-}
+.d-block { display: block;}
+
+/* required for <button>, <input>, and <textarea>*/
+input.d-block,
+textarea.d-block,
+button.d-block { width: 100%;}
+
 .d-iblock { display: inline-block;}
 
 
