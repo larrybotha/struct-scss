@@ -1751,11 +1751,15 @@ button.d-block { width: 100%;}
  * prevent subsequent columns from floating to their appropriate positions
  */
 :root .row-ib-cols { margin: 0 -8px 0 -8px;}
+
+/*
+ * vertical align should be set on a per column basis to prevent specificity
+ * issues when attempting to use different alignment values
+ */
 :root .row-ib-cols > .col {
 	float: none;
 	display: inline-block;
-	vertical-align: top;
-	margin-left: -6px;
+	margin-left: -4px;
 }
 
 /*
