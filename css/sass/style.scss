@@ -243,6 +243,14 @@ mark { background: #ff0; color: $clr-ntrl-max;}
 /* Redeclare monospace font family: h5bp.com/j */
 pre, code, kbd, samp { font-family: monospace, serif; font-size: 1em;}
 
+kbd {
+	font-size: 85%;
+	padding: .25em .5em;
+	border: 1px solid $clr-ntrl-10;
+	border-radius: 2px;
+	vertical-align: middle;
+}
+
 /* Improve readability of pre-formatted text in all browsers */
 pre { white-space: pre; white-space: pre-wrap; word-wrap: break-word;}
 
@@ -638,20 +646,21 @@ td { vertical-align: top;}
 							)
 						);
 
-	font-size: 15px;
-	font-size: 1.071rem;
+	font-size: $unit-default-px;
+	font-size: 1rem;
 	font-weight: normal;
 	line-height: 1;
 	color: $clr-ntrl-max;
-	margin-bottom: 1em;
-	padding: .3em 1em;
+	margin-bottom: $unit-default-px;
+	margin-bottom: 1rem;
+	padding: .45em 1em .4em;
 	vertical-align: middle;
 	text-align: center;
 	cursor: pointer;
 
 	border: 1px solid $clr-ntrl-20;
-	border-color: #e6e6e6 #e6e6e6 #bfbfbf;
-	border-color: hsla(0, 0%, 0%, .1) hsla(0, 0%, 0%, .1) rgba(0, 0, 0, 0.25);
+	border-color: $clr-ntrl-10 $clr-ntrl-10 $clr-ntrl-20;
+	border-color: hsla(0, 0%, 0%, .1) hsla(0, 0%, 0%, .1) hsla(0, 0%, 0%, .25);
 
 	border-radius: 2px;
 
@@ -1264,15 +1273,16 @@ a.label:hover {
 */
 .gallery {
 	margin: 0 auto;
-	margin-bottom: 32px;
+	margin-bottom: 2 * $unit-default-px;
 	margin-bottom: 2rem;
 }
 
 .gallery-item {
 	float: left;
 	border: 1px solid #E3E2E2;
-	margin: 0 .5% 1%;
-	padding: 16px;
+	margin: 0 .5% $unit-default-px;
+	margin: 0 .5% 1rem;
+	padding: $unit-default-px;
 	padding: 1rem;
 }
 
@@ -1306,7 +1316,7 @@ a.label:hover {
 .ie7 .gallery-columns-4 > .gallery-item { width: 20%;}
 .ie7 .gallery-columns-5 > .gallery-item { width: 15%;}
 
-/*.gallery-icon {}*/
+// .gallery-icon {}
 
 .gallery-caption {
 	font-size: 14px;
