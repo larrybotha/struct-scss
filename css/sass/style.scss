@@ -731,22 +731,30 @@ td { vertical-align: top;}
 .field, .field-label { position: relative;}
 
 input, textarea {
-	margin-bottom: 1em;
-	padding: 0 0 0 .1em;
+	margin-bottom: 1 * $unit-default-px;
+	margin-bottom: 1rem;
+	padding: 0 0 0 .25em;
 	border: 1px solid $clr-ntrl-20;
 }
+
+textarea { padding-top: .25em;}
 
 input[type="radio"],
 input[type="checkbox"] { border: none;}
 
 /*
  * Required only if using icon prefix and suffix blocks.
+ * Adjust padding on inputs and textareas above if not using
+ * suffix blocks.
  * Addresses FF's use of !important on line-heights
  * on inputs making normalising difficult - http://mopo.ws/SvxClq
  *
  * fix radios and inputs affected by new input height
  */
-input	{	height: 1.75em;}
+input	{
+	height: 2 * $unit-default-px;
+	height: 2rem;
+}
 input[type="radio"],
 input[type="checkbox"] { height: auto;}
 
@@ -765,28 +773,26 @@ input[type="checkbox"] { height: auto;}
 .suffix-icon-block {
 	vertical-align: top;
 	display: inline-block;
-	width: 1.75em;
-	height: 1.75em;
 	text-align: center;
-	padding-top: .05em;
+	padding: .2em .45em .075em;
 }
 
 .prefix-icon-container > .icon,
 .suffix-icon-container > .icon {
 	position: absolute;
-	margin-top: .1em;
+	margin-top: .3em;
 	padding-top: 0;
 }
 
 .suffix-icon-container > .icon {
 	position: relative;
-	margin-left: -1.75em;
+	margin-left: -2em;
 }
 
 .prefix-icon-block, .suffix-icon-block {
 	background: $clr-ntrl-10;
 	border: 1px solid $clr-ntrl-20;
-	margin-top: -1px;
+	// margin-top: -1px;
 }
 
 .radio-custom:before,
