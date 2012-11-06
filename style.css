@@ -293,6 +293,14 @@ pre, code, kbd, samp {
   font-size: 1em;
 }
 
+kbd {
+  font-size: 85%;
+  padding: .25em .5em;
+  border: 1px solid #e6e6e6;
+  border-radius: 2px;
+  vertical-align: middle;
+}
+
 /* Improve readability of pre-formatted text in all browsers */
 pre {
   white-space: pre;
@@ -807,18 +815,19 @@ td {
   background-image: -ms-linear-gradient(top, rgba(255, 255, 255, 0.2), rgba(230, 230, 230, 0.2));
   background-image: -o-linear-gradient(top, rgba(255, 255, 255, 0.2), rgba(230, 230, 230, 0.2));
   background-image: linear-gradient(top, rgba(255, 255, 255, 0.2), rgba(230, 230, 230, 0.2));
-  font-size: 15px;
-  font-size: 1.071rem;
+  font-size: 14px;
+  font-size: 1rem;
   font-weight: normal;
   line-height: 1;
   color: black;
-  margin-bottom: 1em;
-  padding: .3em 1em;
+  margin-bottom: 14px;
+  margin-bottom: 1rem;
+  padding: .45em 1em .4em;
   vertical-align: middle;
   text-align: center;
   cursor: pointer;
   border: 1px solid #cccccc;
-  border-color: #e6e6e6 #e6e6e6 #bfbfbf;
+  border-color: #e6e6e6 #e6e6e6 #cccccc;
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
   border-radius: 2px;
   /* android 4.0 requires prefix */
@@ -903,9 +912,14 @@ td {
 }
 
 input, textarea {
-  margin-bottom: 1em;
-  padding: 0 0 0 .1em;
+  margin-bottom: 14px;
+  margin-bottom: 1rem;
+  padding: 0 0 0 .25em;
   border: 1px solid #cccccc;
+}
+
+textarea {
+  padding-top: .25em;
 }
 
 input[type="radio"],
@@ -915,13 +929,16 @@ input[type="checkbox"] {
 
 /*
  * Required only if using icon prefix and suffix blocks.
+ * Adjust padding on inputs and textareas above if not using
+ * suffix blocks.
  * Addresses FF's use of !important on line-heights
  * on inputs making normalising difficult - http://mopo.ws/SvxClq
  *
  * fix radios and inputs affected by new input height
  */
 input {
-  height: 1.75em;
+  height: 28px;
+  height: 2rem;
 }
 
 input[type="radio"],
@@ -949,28 +966,25 @@ input[type="checkbox"] {
 .suffix-icon-block {
   vertical-align: top;
   display: inline-block;
-  width: 1.75em;
-  height: 1.75em;
   text-align: center;
-  padding-top: .05em;
+  padding: .2em .45em .075em;
 }
 
 .prefix-icon-container > .icon,
 .suffix-icon-container > .icon {
   position: absolute;
-  margin-top: .1em;
+  margin-top: .3em;
   padding-top: 0;
 }
 
 .suffix-icon-container > .icon {
   position: relative;
-  margin-left: -1.75em;
+  margin-left: -2em;
 }
 
 .prefix-icon-block, .suffix-icon-block {
   background: #e6e6e6;
   border: 1px solid #cccccc;
-  margin-top: -1px;
 }
 
 .radio-custom:before,
@@ -1614,15 +1628,16 @@ a.label:hover {
 */
 .gallery {
   margin: 0 auto;
-  margin-bottom: 32px;
+  margin-bottom: 28px;
   margin-bottom: 2rem;
 }
 
 .gallery-item {
   float: left;
   border: 1px solid #E3E2E2;
-  margin: 0 .5% 1%;
-  padding: 16px;
+  margin: 0 0.5% 14px;
+  margin: 0 .5% 1rem;
+  padding: 14px;
   padding: 1rem;
 }
 
@@ -1694,7 +1709,6 @@ a.label:hover {
   width: 15%;
 }
 
-/*.gallery-icon {}*/
 .gallery-caption {
   font-size: 14px;
   font-size: .875rem;
