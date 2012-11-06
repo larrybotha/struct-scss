@@ -48,25 +48,26 @@ custom.css and it will override the style in this file. You have been warned! :)
 			2.a.iii Secondary Content
 			2.a.iv Footer
 		2.b Media Block
-		2.c Navigation
-		2.d Buttons
-		2.e Forms
-			2.e.i Date Picker
-			2.e.ii Autocomplete
-			2.e.iii Wysiwyg
-		2.f Icons
+		2.c Flex Video
+		2.d Navigation
+		2.e Buttons
+		2.f Forms
+			2.f.i Date Picker
+			2.f.ii Autocomplete
+			2.f.iii Wysiwyg
+		2.g Icons
 		2.h Alerts
-		2.g Labels
-		2.i Gallery
-		2.j Pagination
-		2.k Comments
-			2.k.i Comment
-			2.k.ii Pingbacks / Trackbacks
-			2.k.iii Comment Form
-		2.l Widgets
-		2.m Progress Bars
-		2.n Drag & Drop
-		2.o Tool Tips
+		2.i Labels
+		2.j Gallery
+		2.k Pagination
+		2.l Comments
+			2.l.i Comment
+			2.l.ii Pingbacks / Trackbacks
+			2.l.iii Comment Form
+		2.m Widgets
+		2.n Progress Bars
+		2.o Drag & Drop
+		2.p Tool Tips
 
 	3. GENERAL STYLING
 		3.a Typography
@@ -633,7 +634,41 @@ td {
 }
 
 /* =============================================================================
-	 2.c &Navigation
+	 2.c &Flex Video - http://mopo.ws/TuyaHd
+	 ========================================================================== */
+.flex-video {
+  position: relative;
+  padding-top: 25px;
+  padding-bottom: 67.5%;
+  /* 4:3; */
+  height: 0;
+  margin-bottom: 14px;
+  margin-bottom: 1rem;
+  overflow: hidden;
+}
+
+.flex-video-widescreen {
+  padding-bottom: 57.25%;
+  /* 16:9; */
+}
+
+.flex-video-vimeo {
+  padding-top: 0;
+}
+
+.flex-video iframe,
+.flex-video object,
+.flex-video embed,
+.flex-video video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* =============================================================================
+	 2.d &Navigation
 	 ========================================================================== */
 /*
  * Nav abstraction - use classes specific to particular nav
@@ -761,7 +796,7 @@ td {
   }
 }
 /* =============================================================================
-	 2.d &Buttons
+	 2.e &Buttons
 	 ========================================================================== */
 .btn {
   position: relative;
@@ -861,7 +896,7 @@ td {
 	 &mButtons
 	 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 /* =============================================================================
-	 2.e &Forms
+	 2.f &Forms
 	 ========================================================================== */
 .field, .field-label {
   position: relative;
@@ -962,7 +997,7 @@ input:checked + label > .checkbox-custom:before {
 }
 
 /* -----------------------------------------------------------------------------
-	 2.e.i &Date Picker
+	 2.f.i &Date Picker
 	 -------------------------------------------------------------------------- */
 .ui-datepicker {
   display: none;
@@ -1124,7 +1159,7 @@ input:checked + label > .checkbox-custom:before {
 }
 
 /* -----------------------------------------------------------------------------
-	 2.e.ii &Autocomplete
+	 2.f.ii &Autocomplete
 	 -------------------------------------------------------------------------- */
 .ui-autocomplete {
   position: absolute;
@@ -1210,10 +1245,10 @@ input:checked + label > .checkbox-custom:before {
 }
 
 /* -----------------------------------------------------------------------------
-	 2.e.iii &Wysiwyg
+	 2.f.iii &Wysiwyg
 	 -------------------------------------------------------------------------- */
 /* =============================================================================
-	 2.f &Icons
+	 2.g &Icons
 	 ========================================================================== */
 /*  Styling inspired by FontAwesome - http://mopo.ws/ReAOC6
 		------------------------------------------------------- */
@@ -1396,7 +1431,7 @@ li.icon.icon-large:before, li.icon.icon-large:before {
 }
 
 /* =============================================================================
-	 2.g &Alerts
+	 2.h &Alerts
 	 ========================================================================== */
 .alert {
   background-color: #f7f1e8;
@@ -1498,7 +1533,7 @@ li.icon.icon-large:before, li.icon.icon-large:before {
 }
 
 /* =============================================================================
-	 2.h &Labels
+	 2.i &Labels
 	 ========================================================================== */
 .label {
   color: white;
@@ -1560,7 +1595,7 @@ a.label:hover {
 }
 
 /* =============================================================================
-	 2.i &Gallery
+	 2.j &Gallery
 	 ========================================================================== */
 /*
  * 3 column gallery example
@@ -1674,7 +1709,7 @@ a.label:hover {
 }
 
 /* =============================================================================
-	 2.j &Pagination
+	 2.k &Pagination
 	 ========================================================================== */
 .page-numbers {
   float: left;
@@ -1690,13 +1725,13 @@ a.label:hover {
 }
 
 /* =============================================================================
-	 2.k &Comments
+	 2.l &Comments
 	 ========================================================================== */
 /* =============================================================================
-	 2.l &Widgets
+	 2.m &Widgets
 	 ========================================================================== */
 /* =============================================================================
-	 2.m &Progress Bars
+	 2.n &Progress Bars
 	 ========================================================================== */
 .progress {
   height: 18px;
@@ -1833,7 +1868,7 @@ a.label:hover {
 }
 
 /* =============================================================================
-	 2.n &Drag & Drop
+	 2.o &Drag & Drop
 	 ========================================================================== */
 .files-drag-tip {
   display: inline-block;
@@ -1851,7 +1886,7 @@ a.label:hover {
 }
 
 /* =============================================================================
-	 2.o &Tool Tips
+	 2.p &Tool Tips
 	 ========================================================================== */
 /* PowerTip Plugin */
 #powerTip {
@@ -2173,7 +2208,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-	 3.a.iv &mLayout
+	 &mLayout
 	 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 /* display level modifiers */
 .d-block {
