@@ -545,7 +545,7 @@ td { vertical-align: top;}
 	padding-left: 0;
 }
 
-.menu > .menu-item {
+.menu-item {
 	position: relative;
 	display: inline;
 }
@@ -767,41 +767,47 @@ input	{
 input[type="radio"],
 input[type="checkbox"] { height: auto;}
 
-.prefix-icon-container,
-.suffix-icon-container {
+.input-prefix-container,
+.input-suffix-container {
 	position: relative;
 	display: inline-block;
+	margin-bottom: $unit-default-px;
+	margin-bottom: 1rem;
 }
 
-.prefix-icon-container > input { padding-left: 1.5em;}
-.suffix-icon-container > input { padding-right: 1.5em;}
+.input-suffix-container > input,
+.input-prefix-container > input {
+	display: block;
+	width: 100%;
+	margin-bottom: 0;
+}
 
-.prefix-icon-container > .icon,
-.suffix-icon-container > .icon,
-.prefix-icon-block,
-.suffix-icon-block {
+.input-prefix-container > input { padding-left: 1.5em;}
+.input-suffix-container > input { padding-right: 1.5em;}
+
+.input-prefix-container > .input-prefix-in,
+.input-suffix-container > .input-suffix-in,
+.input-prefix-ex,
+.input-suffix-ex {
 	vertical-align: top;
 	display: inline-block;
 	text-align: center;
 	padding: .2em .45em .075em;
 }
 
-.prefix-icon-container > .icon,
-.suffix-icon-container > .icon {
+.input-prefix-container > .input-prefix-in,
+.input-suffix-container > .input-suffix-in {
 	position: absolute;
-	margin-top: .3em;
+	top: 50%;
+	margin-top: -.7em;
 	padding-top: 0;
 }
 
-.suffix-icon-container > .icon {
-	position: relative;
-	margin-left: -2em;
-}
+.input-suffix-container > .input-suffix-in { right: 0;}
 
-.prefix-icon-block, .suffix-icon-block {
+.input-prefix-ex, .input-suffix-ex {
 	background: $clr-ntrl-10;
 	border: 1px solid $clr-ntrl-20;
-	// margin-top: -1px;
 }
 
 .radio-custom:before,
@@ -1705,7 +1711,8 @@ button.d-block { width: 100%;}
 .hidden { display: none !important; visibility: hidden;}
 
 /* Hide only visually, but have it available for screenreaders: h5bp.com/v */
-.visuallyhidden { position: absolute; clip: rect(0 0 0 0); width: 1px; height: 1px; margin: -1px; overflow: hidden; padding: 0; border: 0;}
+:root .visuallyhidden { position: absolute; clip: rect(0 0 0 0); width: 1px; height: 1px; margin: -1px; overflow: hidden; padding: 0; border: 0;}
+.ie8 .visuallyhidden-ie8 { position: absolute; clip: rect(0 0 0 0); width: 1px; height: 1px; margin: -1px; overflow: hidden; padding: 0; border: 0;}
 
 /* Extends the .visuallyhidden class to allow the element to be focusable when navigated to via the keyboard: h5bp.com/p */
 .visuallyhidden.focusable:active, .visuallyhidden.focusable:focus { position: static; clip: auto; width: auto; height: auto; margin: 0; overflow: visible;}

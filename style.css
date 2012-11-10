@@ -688,7 +688,7 @@ td {
   padding-left: 0;
 }
 
-.menu > .menu-item {
+.menu-item {
   position: relative;
   display: inline;
 }
@@ -946,43 +946,52 @@ input[type="checkbox"] {
   height: auto;
 }
 
-.prefix-icon-container,
-.suffix-icon-container {
+.input-prefix-container,
+.input-suffix-container {
   position: relative;
   display: inline-block;
+  margin-bottom: 14px;
+  margin-bottom: 1rem;
 }
 
-.prefix-icon-container > input {
+.input-suffix-container > input,
+.input-prefix-container > input {
+  display: block;
+  width: 100%;
+  margin-bottom: 0;
+}
+
+.input-prefix-container > input {
   padding-left: 1.5em;
 }
 
-.suffix-icon-container > input {
+.input-suffix-container > input {
   padding-right: 1.5em;
 }
 
-.prefix-icon-container > .icon,
-.suffix-icon-container > .icon,
-.prefix-icon-block,
-.suffix-icon-block {
+.input-prefix-container > .input-prefix-in,
+.input-suffix-container > .input-suffix-in,
+.input-prefix-ex,
+.input-suffix-ex {
   vertical-align: top;
   display: inline-block;
   text-align: center;
   padding: .2em .45em .075em;
 }
 
-.prefix-icon-container > .icon,
-.suffix-icon-container > .icon {
+.input-prefix-container > .input-prefix-in,
+.input-suffix-container > .input-suffix-in {
   position: absolute;
-  margin-top: .3em;
+  top: 50%;
+  margin-top: -0.7em;
   padding-top: 0;
 }
 
-.suffix-icon-container > .icon {
-  position: relative;
-  margin-left: -2em;
+.input-suffix-container > .input-suffix-in {
+  right: 0;
 }
 
-.prefix-icon-block, .suffix-icon-block {
+.input-prefix-ex, .input-suffix-ex {
   background: #e6e6e6;
   border: 1px solid #cccccc;
 }
@@ -2264,7 +2273,18 @@ button.d-block {
 }
 
 /* Hide only visually, but have it available for screenreaders: h5bp.com/v */
-.visuallyhidden {
+:root .visuallyhidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  border: 0;
+}
+
+.ie8 .visuallyhidden-ie8 {
   position: absolute;
   clip: rect(0 0 0 0);
   width: 1px;
