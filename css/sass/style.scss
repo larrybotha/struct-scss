@@ -1289,10 +1289,8 @@ a.label:hover {
 .gallery-item {
 	float: left;
 	border: 1px solid #E3E2E2;
-	margin: 0 .5% $unit-default-px;
-	margin: 0 .5% 1rem;
-	padding: $unit-default-px;
-	padding: 1rem;
+	@include px-and-rem(margin, 0, .5%, 1);
+	@include px-and-rem(padding, 1);
 }
 
 .gallery-columns-1 > .gallery-item {

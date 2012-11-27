@@ -1,0 +1,33 @@
+// Example:
+//  @include px-and-rem(margin, 2);
+
+@function fix8_unit_to_px($num) {
+	@if unitless($num) {
+		@if $num == 0 { @return $num}
+		@else { @return $num * $unit-default-px};
+	} @else { @return $num};
+}
+
+@function fix8_unit_to_rem($num) {
+	@if unitless($num) {
+		@if $num == 0 { @return $num}
+		@else { @return $num+rem};
+	} @else { @return $num};
+}
+
+@mixin px-and-rem($prop, $val...) {
+	$n: length($val);
+	$i: 1;
+
+	$px-list: ();
+	$rem-list: ();
+
+	@while $i <= $n {
+		$px-list: append($px-list, fix8_unit_to_px(nth($val, $i)));
+		$rem-list: append($rem-list, fix8_unit_to_rem(nth($val, $i)));
+		$i: $i + 1;
+	}
+
+	#{$prop}: $px-list;
+	#{$prop}: $rem-list;
+}
