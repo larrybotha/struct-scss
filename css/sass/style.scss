@@ -1707,7 +1707,9 @@ button.d-block { width: 100%;}
  * Nicholas Gallagher's detailed post on new .ir - http://mopo.ws/wHCSUu
  * Causes issues with em based margins on elements using .ir
  */
-.ir { border:0; font: 0/0 a; text-shadow: none; color: transparent; background-color: transparent;}
+.ir { background-color: transparent; border: 0; overflow: hidden;}
+
+.ir:before { content: ""; display: block; width: 0; height: 150%;}
 
 /* Hide from both screenreaders and browsers: h5bp.com/u */
 .hidden { display: none !important; visibility: hidden;}
