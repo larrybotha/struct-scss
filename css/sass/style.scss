@@ -112,7 +112,7 @@ custom.css and it will override the style in this file. You have been warned! :)
 /* 
  * Ensure IE10 respects viewport width when in 'snap' mode - http://mopo.ws/WmFbcL
  */
-@media (max-width: 400px) {
+@media (max-width: 25em) {
 	@-ms-viewport {	width: 320px;}
 }
 
