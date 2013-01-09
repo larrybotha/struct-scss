@@ -2,9 +2,9 @@
 /*
 Theme Name: Your Theme Name
 Theme URI: http://...
-Description: A Wordpress theme <a href="http://fixate.it/design">designed</a> and <a href="http://fixate.it/development">developed</a> by Fixate
-Author: Fixate
-Author URI: http://fixate.it
+Description: A Wordpress theme <a href="http://...">designed</a> and <a href="http://...">developed</a> by ...
+Author: ...
+Author URI: http://...
 Version: 1.0
 .
 Any general information, license statements, plugin requirements, or any other information you
@@ -98,6 +98,17 @@ custom.css and it will override the style in this file. You have been warned! :)
  *
  * ==|== normalize ==========================================================
  */
+/* =============================================================================
+	 CSS Device Adaptation
+	 ========================================================================== */
+/* 
+ * Ensure IE10 respects viewport width when in 'snap' mode - http://mopo.ws/WmFbcL
+ */
+@media (max-width: 25em) {
+  @-ms-viewport {
+    width: 320px;
+}
+}
 /* =============================================================================
 	 HTML5 display definitions
 	 ========================================================================== */
@@ -2263,11 +2274,16 @@ button.d-block {
  * Causes issues with em based margins on elements using .ir
  */
 .ir {
-  border: 0;
-  font: 0/0 a;
-  text-shadow: none;
-  color: transparent;
   background-color: transparent;
+  border: 0;
+  overflow: hidden;
+}
+
+.ir:before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 150%;
 }
 
 /* Hide from both screenreaders and browsers: h5bp.com/u */
