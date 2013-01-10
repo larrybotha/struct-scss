@@ -109,7 +109,7 @@ custom.css and it will override the style in this file. You have been warned! :)
 /* =============================================================================
 	 CSS Device Adaptation
 	 ========================================================================== */
-/* 
+/*
  * Ensure IE10 respects viewport width when in 'snap' mode - http://mopo.ws/WmFbcL
  */
 @media (max-width: 25em) {
@@ -1813,7 +1813,7 @@ button.d-block { width: 100%;}
  * Inline-block columns are useful when floated columns of different heights
  * prevent subsequent columns from floating to their appropriate positions
  */
-:root .row-ib-cols { margin: 0 -8px 0 -8px;}
+:root .row-ib-cols { margin: 0 -8px 0 -9px;}
 
 /*
  * vertical align should be set on a per column basis to prevent specificity
@@ -1822,7 +1822,7 @@ button.d-block { width: 100%;}
 :root .row-ib-cols > .col {
 	float: none;
 	display: inline-block;
-	margin-left: -4px;
+	margin-left: -5px;
 }
 
 /*
