@@ -101,7 +101,7 @@ custom.css and it will override the style in this file. You have been warned! :)
 /* =============================================================================
 	 CSS Device Adaptation
 	 ========================================================================== */
-/* 
+/*
  * Ensure IE10 respects viewport width when in 'snap' mode - http://mopo.ws/WmFbcL
  */
 @media (max-width: 25em) {
@@ -2448,7 +2448,7 @@ button.d-block {
  * prevent subsequent columns from floating to their appropriate positions
  */
 :root .row-ib-cols {
-  margin: 0 -8px 0 -8px;
+  margin: 0 -8px 0 -9px;
 }
 
 /*
@@ -2458,7 +2458,7 @@ button.d-block {
 :root .row-ib-cols > .col {
   float: none;
   display: inline-block;
-  margin-left: -4px;
+  margin-left: -5px;
 }
 
 /*
