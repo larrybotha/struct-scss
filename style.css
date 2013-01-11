@@ -2239,7 +2239,8 @@ h1, h2, h3, h4, h5, h6 {
 	 ========================================================================== */
 /* use to set max width of content areas */
 .wrap {
-  margin: 0;
+  max-width: 1280px;
+  margin: 0 auto;
   padding-left: 14px;
   padding-left: 1rem;
   padding-right: 14px;
