@@ -1785,15 +1785,6 @@ button.d-block { width: 100%;}
  */
 
 /* rows hold columns - should be used with .cf */
-.grid-example .col {
-	padding: ($unit-default-px * .5) $unit-default-px;
-	padding: .5rem 1rem;
-	background: transparentize($clr-default, .9);
-	border-radius: 2px;
-	font-family: monospace;
-	text-align: center;
-}
-
 .row { margin-left: -$unit-default-px;}
 
 .ie8 .row,

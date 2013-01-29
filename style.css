@@ -104,11 +104,10 @@ custom.css and it will override the style in this file. You have been warned! :)
 /*
  * Ensure IE10 respects viewport width when in 'snap' mode - http://mopo.ws/WmFbcL
  */
-@media (max-width: 25em) {
-  @-ms-viewport {
-    width: 320px;
+@-ms-viewport {
+  width: device-width;
 }
-}
+
 /* =============================================================================
 	 HTML5 display definitions
 	 ========================================================================== */
@@ -2189,9 +2188,7 @@ h1, h2, h3, h4, h5, h6 {
   vertical-align: text-bottom;
 }
 
-/* ==|== WordPress / Helper editor styles ======================================
-	 ========================================================================== */
-/* Floating & Alignment */
+/* Floating & Alignment Modifiers */
 .fl {
   float: left;
 }
@@ -2212,6 +2209,8 @@ h1, h2, h3, h4, h5, h6 {
   text-align: right;
 }
 
+/* ==|== WordPress / Helper editor styles ======================================
+	 ========================================================================== */
 /* Alignment (post images) */
 .aligncenter {
   display: block;
@@ -2229,6 +2228,18 @@ h1, h2, h3, h4, h5, h6 {
   display: inline;
   float: right;
   margin: 5px 0 5px 14px;
+}
+
+/* Image Captions */
+.wp-caption {
+  max-width: 100%;
+}
+
+.wp-caption-text {
+  margin: 7px 0 21px;
+  margin: 0.5rem 0 1.5rem;
+  font-style: italic;
+  color: white;
 }
 
 /* =============================================================================
@@ -2409,15 +2420,6 @@ button.d-block {
  * Created by @erskinedesign
  */
 /* rows hold columns - should be used with .cf */
-.grid-example .col {
-  padding: 7px 14px;
-  padding: .5rem 1rem;
-  background: rgba(45, 45, 45, 0.1);
-  border-radius: 2px;
-  font-family: monospace;
-  text-align: center;
-}
-
 .row {
   margin-left: -14px;
 }
