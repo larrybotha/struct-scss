@@ -112,9 +112,7 @@ custom.css and it will override the style in this file. You have been warned! :)
 /*
  * Ensure IE10 respects viewport width when in 'snap' mode - http://mopo.ws/WmFbcL
  */
-@media (max-width: 25em) {
-	@-ms-viewport {	width: 320px;}
-}
+@-ms-viewport{ width: device-width;}
 
 /* =============================================================================
 	 HTML5 display definitions
@@ -1660,21 +1658,28 @@ h1, h2, h3, h4, h5, h6 { font-weight: normal;}
 .va-tt { vertical-align: text-top;}
 .va-tb { vertical-align: text-bottom;}
 
+/* Floating & Alignment Modifiers */
+.fl { float: left;}
+.fr { float: right;}
+.al { text-align: left;}
+.ac { text-align: center;}
+.ar { text-align: right;}
+
 
 /* ==|== WordPress / Helper editor styles ======================================
 	 ========================================================================== */
-/* Floating & Alignment */
-.fl{ float: left;}
-.fr{ float: right;}
-.al{ text-align: left;}
-.ac{ text-align: center;}
-.ar{ text-align: right;}
-
 /* Alignment (post images) */
 .aligncenter { display: block; margin-left: auto; margin-right: auto;}
 .alignleft { display: inline; float: left; margin: 5px $unit-default-px 5px 0;}
 .alignright { display: inline; float: right; margin: 5px 0 5px $unit-default-px;}
 
+/* Image Captions */
+.wp-caption { max-width: 100%}
+.wp-caption-text {
+	@include	px-and-rem(margin, .5, 0, 1.5);
+	font-style: italic;
+	color: $clr-beta;
+}
 
 /* =============================================================================
 	 3.b &Backgrounds & Borders
