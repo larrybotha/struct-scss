@@ -1282,7 +1282,7 @@ a.label:hover {
 
 
 /* =============================================================================
-	 2.j &Gallery
+	 2.i &Gallery
 	 ========================================================================== */
 /*
  * 3 column gallery example
@@ -1299,17 +1299,38 @@ a.label:hover {
 		<br style="clear: both"><!-- displayed after every 3 items in gallery -->
 	</div>
 */
+
 .gallery {
-	margin: 0 auto;
-	margin-bottom: 2 * $unit-default-px;
-	margin-bottom: 2rem;
+	margin-left: -(1.5 * $unit-default-px);
+	@include px-and-rem(margin-bottom, 1.5);
 }
 
+.ie8 .gallery { margin-left: 0;}
+
 .gallery-item {
+	position: relative;
 	float: left;
-	border: 1px solid #E3E2E2;
-	@include px-and-rem(margin, 0, .5%, 1);
-	@include px-and-rem(padding, 1);
+	@include px-and-rem(margin, 0, 0, 1.5);
+	@include px-and-rem(padding, .75);
+	border: 0 solid hsla(0,0%,0%,0);
+	@include px-and-rem(border-left-width, 1.5);
+}
+
+.gallery-item:before {
+	position: absolute;
+	content: "";
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	border: 1px solid #ccc;
+}
+
+.gallery-item img {	border: 1px solid #ccc;}
+
+.gallery-item a {
+	position: relative;
+	z-index: 1000;
 }
 
 .gallery-columns-1 > .gallery-item {
@@ -1317,10 +1338,10 @@ a.label:hover {
 	margin-left: 0;
 	margin-right: 0;
 }
-.gallery-columns-2 > .gallery-item { width: 49.5%;}
-.gallery-columns-3 > .gallery-item { width: 32.65%;}
-.gallery-columns-4 > .gallery-item { width: 24.25%;}
-.gallery-columns-5 > .gallery-item { width: 19.2%;}
+.gallery-columns-2 > .gallery-item { width: 50%;}
+.gallery-columns-3 > .gallery-item { width: 33.333%;}
+.gallery-columns-4 > .gallery-item { width: 25%;}
+.gallery-columns-5 > .gallery-item { width: 20%;}
 
 .gallery-columns-2 > .gallery-item:nth-of-type(2n + 1),
 .gallery-columns-3 > .gallery-item:nth-of-type(3n + 1),
