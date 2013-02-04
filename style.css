@@ -1631,7 +1631,7 @@ a.label:hover {
 }
 
 /* =============================================================================
-	 2.j &Gallery
+	 2.i &Gallery
 	 ========================================================================== */
 /*
  * 3 column gallery example
@@ -1649,18 +1649,44 @@ a.label:hover {
 	</div>
 */
 .gallery {
-  margin: 0 auto;
-  margin-bottom: 28px;
-  margin-bottom: 2rem;
+  margin-left: -21px;
+  margin-bottom: 21px;
+  margin-bottom: 1.5rem;
+}
+
+.ie8 .gallery {
+  margin-left: 0;
 }
 
 .gallery-item {
+  position: relative;
   float: left;
-  border: 1px solid #E3E2E2;
-  margin: 0 0.5% 14px;
-  margin: 0 0.5% 1rem;
-  padding: 14px;
-  padding: 1rem;
+  margin: 0 0 21px;
+  margin: 0 0 1.5rem;
+  padding: 10.5px;
+  padding: 0.75rem;
+  border: 0 solid rgba(0, 0, 0, 0);
+  border-left-width: 21px;
+  border-left-width: 1.5rem;
+}
+
+.gallery-item:before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 1px solid #ccc;
+}
+
+.gallery-item img {
+  border: 1px solid #ccc;
+}
+
+.gallery-item a {
+  position: relative;
+  z-index: 1000;
 }
 
 .gallery-columns-1 > .gallery-item {
@@ -1670,19 +1696,19 @@ a.label:hover {
 }
 
 .gallery-columns-2 > .gallery-item {
-  width: 49.5%;
+  width: 50%;
 }
 
 .gallery-columns-3 > .gallery-item {
-  width: 32.65%;
+  width: 33.333%;
 }
 
 .gallery-columns-4 > .gallery-item {
-  width: 24.25%;
+  width: 25%;
 }
 
 .gallery-columns-5 > .gallery-item {
-  width: 19.2%;
+  width: 20%;
 }
 
 .gallery-columns-2 > .gallery-item:nth-of-type(2n + 1),
