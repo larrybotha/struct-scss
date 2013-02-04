@@ -171,6 +171,18 @@ body {
 	margin: 0;
 }
 
+// Serve hi-res background to higher px density displays at same size as
+// original background
+// @media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+// only screen and (-o-min-device-pixel-ratio: 3/2),
+// only screen and (min--moz-device-pixel-ratio: 1.5),
+// only screen and (min-device-pixel-ratio: 1.5) {
+// 	body {
+// 		background-image:url(img/[]@2x.png);
+// 		background-size: [width] [height];
+// 	}
+// }
+
 /*
  * Remove text-shadow in selection highlight: h5bp.com/i
  * These selection declarations have to be separate
