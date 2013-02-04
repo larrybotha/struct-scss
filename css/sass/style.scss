@@ -1311,7 +1311,7 @@ a.label:hover {
 	position: relative;
 	float: left;
 	@include px-and-rem(margin, 0, 0, 1.5);
-	@include px-and-rem(padding, .75);
+	@include px-and-rem(padding, 1.5);
 	border: 0 solid hsla(0,0%,0%,0);
 	@include px-and-rem(border-left-width, 1.5);
 }
