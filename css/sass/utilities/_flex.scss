@@ -1,0 +1,10 @@
+@mixin flex-prop($prop, $val) {
+	@include prefixer($prop, $val, webkit, moz, ms);
+}
+
+@mixin display-flex($val) {
+	display: -webkit-#{$val};
+	display: -moz-#{$val};
+	display: -ms-#{$val};
+	display: #{$val};
+}

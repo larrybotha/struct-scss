@@ -123,6 +123,8 @@ custom.css and it will override the style in this file. You have been warned! :)
  * 3. Prevents modern browsers from displaying `audio` without controls.
  *		Remove excess height in iOS 5 devices.
  * 4. Addresses styling for `hidden` attribute not present in IE 8/9.
+ * 5. Default behaviour for touch-based browsing on IE10 devices running
+ * Windows 8
  *
  * Apply a natural box layout model to all elements.
  * Be aware that IE8 and up support box-sizing, IE7 & 6 require polyfill.
@@ -135,6 +137,8 @@ audio, canvas, video { display: inline-block;} /* 2 */
 audio:not([controls]) { display: none; height: 0;} /* 3 */
 
 [hidden] { display: none;} /* 4 */
+
+canvas { -ms-touch-action: double-tap-zoom;} /* 5 */
 
 /* =============================================================================
 	 &Base
