@@ -117,6 +117,8 @@ custom.css and it will override the style in this file. You have been warned! :)
  * 3. Prevents modern browsers from displaying `audio` without controls.
  *		Remove excess height in iOS 5 devices.
  * 4. Addresses styling for `hidden` attribute not present in IE 8/9.
+ * 5. Default behaviour for touch-based browsing on IE10 devices running
+ * Windows 8
  *
  * Apply a natural box layout model to all elements.
  * Be aware that IE8 and up support box-sizing, IE7 & 6 require polyfill.
@@ -143,6 +145,11 @@ audio:not([controls]) {
 }
 
 /* 4 */
+canvas {
+  -ms-touch-action: double-tap-zoom;
+}
+
+/* 5 */
 /* =============================================================================
 	 &Base
 	 ========================================================================== */
@@ -201,6 +208,7 @@ body {
 a {
   color: #00e;
   text-decoration: none;
+  -webkit-transition: all 100ms ease-in-out;
   -moz-transition: all 100ms ease-in-out;
   -o-transition: all 100ms ease-in-out;
   transition: all 100ms ease-in-out;
@@ -213,6 +221,7 @@ a:hover {
 
 a:active {
   color: #06e;
+  -webkit-transition: all 0ms;
   -moz-transition: all 0ms;
   -o-transition: all 0ms;
   transition: all 0ms;
@@ -598,16 +607,16 @@ td {
 	 2.a &Main Structure
 	 ========================================================================== */
 /* -----------------------------------------------------------------------------
-	 2.a.i Header
+	 2.a.i &Header
 	 -------------------------------------------------------------------------- */
 /* -----------------------------------------------------------------------------
-	 2.a.ii Primary Content
+	 2.a.ii &Primary Content
 	 -------------------------------------------------------------------------- */
 /* -----------------------------------------------------------------------------
-	 2.a.iii Secondary Content
+	 2.a.iii &Secondary Content
 	 -------------------------------------------------------------------------- */
 /* -----------------------------------------------------------------------------
-	 2.a.iv Footer
+	 2.a.iv &Footer
 	 -------------------------------------------------------------------------- */
 /* =============================================================================
 	 2.b &Media Block
@@ -834,6 +843,7 @@ td {
   vertical-align: middle;
   text-align: center;
   cursor: pointer;
+  height: auto;
   border: 1px solid #cccccc;
   border-color: #e6e6e6 #e6e6e6 #cccccc;
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
@@ -841,6 +851,7 @@ td {
   /* android 4.0 requires prefix */
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(230, 230, 230, 0.05);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(230, 230, 230, 0.05);
+  -webkit-transition: all 150ms ease-in;
   -moz-transition: all 150ms ease-in;
   -o-transition: all 150ms ease-in;
   transition: all 150ms ease-in;
@@ -857,6 +868,7 @@ td {
   /* android 4.0 requires prefix */
   -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5), 0 1px 2px rgba(230, 230, 230, 0.05);
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5), 0 1px 2px rgba(230, 230, 230, 0.05);
+  -webkit-transition: all 0;
   -moz-transition: all 0;
   -o-transition: all 0;
   transition: all 0;
@@ -1828,6 +1840,7 @@ a.label:hover {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+  -webkit-transition: width 0.6s ease;
   -moz-transition: width 0.6s ease;
   -o-transition: width 0.6s ease;
   transition: width 0.6s ease;
