@@ -84,7 +84,7 @@ custom.css and it will override the style in this file. You have been warned! :)
 
 	5. GRID AND MEDIA QUERIES
 
-	5. PRINT STYLES
+	6. PRINT STYLES
 
 	 ========================================================================== */
 /*
@@ -1669,6 +1669,7 @@ a.label:hover {
 .gallery-item {
   position: relative;
   float: left;
+  text-align: center;
   margin: 0 0 21px;
   margin: 0 0 1.5rem;
   padding: 21px;
@@ -1676,6 +1677,11 @@ a.label:hover {
   border: 0 solid rgba(0, 0, 0, 0);
   border-left-width: 21px;
   border-left-width: 1.5rem;
+}
+
+.ie8 .gallery-item {
+  padding: 0 14px;
+  padding: 0 14px;
 }
 
 .gallery-item:before {
@@ -1748,22 +1754,6 @@ a.label:hover {
 
 .ie8 .gallery-columns-5 > .gallery-item {
   width: 19%;
-}
-
-.ie7 .gallery-columns-2 > .gallery-item {
-  width: 45%;
-}
-
-.ie7 .gallery-columns-3 > .gallery-item {
-  width: 28.3%;
-}
-
-.ie7 .gallery-columns-4 > .gallery-item {
-  width: 20%;
-}
-
-.ie7 .gallery-columns-5 > .gallery-item {
-  width: 15%;
 }
 
 .gallery-caption {

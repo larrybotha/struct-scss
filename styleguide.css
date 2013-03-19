@@ -1,0 +1,9 @@
+@charset "UTF-8";
+.grid-example .col {
+	padding: 8px 16px;
+	padding: .5rem 1rem;
+	background: #ccc;
+	background: hsla(0, 0%, 0%, .15);
+	font-family: monospace;
+	text-align: center;
+}
