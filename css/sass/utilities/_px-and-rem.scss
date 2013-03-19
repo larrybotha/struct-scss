@@ -36,17 +36,27 @@
 // }
 
 @function fix8_unit_to_px($val) {
-	@if unitless($val) {
-		@if $val == 0 { @return $val}
-		@else { @return $val * $unit-default-px};
-	} @else { @return $val};
+  @if $val == auto {
+    @return $val;
+  }
+  @else {
+    @if unitless($val) {
+      @if $val == 0 { @return $val }
+      @else { @return $val * $unit-default-px};
+    } @else { @return $val};
+  }
 }
 
 @function fix8_unit_to_rem($val) {
-	@if unitless($val) {
-		@if $val == 0 { @return $val}
-		@else { @return $val+rem};
-	} @else { @return $val};
+  @if $val == auto {
+    @return $val;
+  }
+  @else {
+    @if unitless($val) {
+      @if $val == 0 { @return $val }
+      @else { @return $val+rem};
+    } @else { @return $val};
+  }
 }
 
 @mixin px-and-rem($prop, $val...) {
