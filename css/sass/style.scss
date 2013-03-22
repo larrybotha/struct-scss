@@ -293,8 +293,7 @@ sub { bottom: -0.25em;}
 	 ========================================================================== */
 
 ul, ol {
-	margin: $unit-default-px 0;
-	margin: 1rem 0;
+	@include px-and-rem(margin, 1);
 	padding: 0 0 0 40px;
 }
 dd { margin: 0 0 0 40px;}
@@ -525,7 +524,7 @@ td { vertical-align: top;}
 	display: table-cell; /* 1 */
 	width: 10000px; /* 2 */
 }
-.mblock .mblock-alpha { float: left; margin-right: 12px; margin-right: 1rem;}
+.mblock .mblock-alpha { float: left; @include px-and-rem(margin-right, 1);}
 .mblock .mblock-alpha img { display: block;}
 
 
@@ -537,8 +536,7 @@ td { vertical-align: top;}
 	padding-top: 25px;
 	padding-bottom: 67.5%; /* 4:3; */
 	height: 0;
-	margin-bottom: $unit-default-px;
-	margin-bottom: 1rem;
+	@include px-and-rem(margin-right, 1);
 	overflow: hidden;
 }
 .flex-video-widescreen { padding-bottom: 57.25%; /* 16:9; */}
@@ -669,13 +667,11 @@ td { vertical-align: top;}
 							)
 						);
 
-	font-size: $unit-default-px;
-	font-size: 1rem;
+	@include px-and-rem(font-size, 1);
 	font-weight: normal;
 	line-height: 1;
 	color: $clr-ntrl-max;
-	margin-bottom: $unit-default-px;
-	margin-bottom: 1rem;
+	@include px-and-rem(margin-bottom, 1);
 	padding: .45em 1em .4em;
 	vertical-align: middle;
 	text-align: center;
@@ -764,8 +760,7 @@ td { vertical-align: top;}
 .field, .field-label { position: relative;}
 
 input, textarea {
-	margin-bottom: 1 * $unit-default-px;
-	margin-bottom: 1rem;
+	@include px-and-rem(margin-bottom, 1);
 	padding: 0 0 0 .25em;
 	border: 1px solid $clr-ntrl-20;
 }
@@ -785,8 +780,7 @@ input[type="checkbox"] { border: none;}
  * fix radios and inputs affected by new input height
  */
 input	{
-	height: 2 * $unit-default-px;
-	height: 2rem;
+	@include px-and-rem(height, 2);
 }
 input[type="radio"],
 input[type="checkbox"] { height: auto;}
@@ -795,8 +789,7 @@ input[type="checkbox"] { height: auto;}
 .input-suffix-container {
 	position: relative;
 	display: inline-block;
-	margin-bottom: $unit-default-px;
-	margin-bottom: 1rem;
+	@include px-and-rem(margin-bottom, 1);
 }
 
 .input-suffix-container > input,
@@ -849,8 +842,7 @@ input:checked + label > .checkbox-custom:before { content: "\e001"; /* .icon-che
 .ui-datepicker {
 	display: none;
 	background-color: #fff;
-	font-size: .75 * $unit-default-px;
-	font-size: .75rem;
+	@include px-and-rem(font-size, .75);
 	padding: 1em 1em .5em;
 	border: 1px solid $clr-ntrl-10;
 	border-radius: 2px;
@@ -892,8 +884,7 @@ input:checked + label > .checkbox-custom:before { content: "\e001"; /* .icon-che
 .ui-datepicker .ui-datepicker-next-hover { right:1px;}
 
 .ui-datepicker .ui-datepicker-title {
-	font-size: $unit-default-px;
-	font-size: 1rem;
+	@include px-and-rem(font-size, 1);
 	text-align: center;
 }
 
@@ -1372,8 +1363,7 @@ a.label:hover {
 // .gallery-icon {}
 
 .gallery-caption {
-	font-size: 14px;
-	font-size: .875rem; /* 14px / 16 = .875 */
+	@include px-and-rem(font-size, .875); /* 14px / 16 = .875 */
 	margin-left: 0;
 	padding: 8px 0;
 	padding: .75em 0 0;
@@ -1517,8 +1507,7 @@ a.label:hover {
 	display: inline-block;
 	display: none;
 	background-color: #f6f6f6;
-	font-size: 11px;
-	font-size: 1.1rem;
+	@include px-and-rem(font-size, .6875); /* 11px / 16 = .6875 */
 	color: #999;
 	padding: .15em 1em .05em;
 	border-radius: 2px;
@@ -1828,11 +1817,9 @@ button.d-block { width: 100%;}
 /* Reusable column setup */
 .col {
 	border: 0 solid hsla(0,0%,0%,0);
-	border-left-width: $unit-default-px;
-	border-left-width: 1rem;
+	@include px-and-rem(border-left-width, 1);
 	float: left;
-	margin-bottom: $unit-default-px;
-	margin-bottom: 1rem;
+	@include px-and-rem(margin-bottom, 1);
 	padding: 0;
 	position:  relative;
 	// already declared at base styles - must be uncommented if not declared
