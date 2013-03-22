@@ -1622,10 +1622,8 @@ p,
 table,
 pre,
 hr {
-	margin-top: $unit-default-px;
-	margin-top:1rem;
-	margin-bottom: $unit-default-px;
-	margin-bottom:1rem;
+	@include px-and-rem(margin-top, 1);
+	@include px-and-rem(margin-bottom, 1);
 }
 
 /*
@@ -1732,10 +1730,8 @@ h1, h2, h3, h4, h5, h6 { font-weight: normal;}
 .wrap {
 	max-width: 1280px;
 	margin: 0 auto;
-	padding-left: $unit-default-px;
-	padding-left: 1rem;
-	padding-right: $unit-default-px;
-	padding-right: 1rem;
+	@include px-and-rem(padding-left, 1);
+	@include px-and-rem(padding-right, 1);
 }
 
 

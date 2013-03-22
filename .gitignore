@@ -1,4 +1,4 @@
 .DS_STORE
-.config.rb
+config.rb
 .sass-cache/
 projects/
