@@ -256,28 +256,12 @@ i {
 }
 
 blockquote {
-  position: relative;
-  padding: 0 1em;
-}
-
-blockquote:before,
-blockquote:after {
-  position: absolute;
-  font-family: "Times New Roman";
-  font-size: 6em;
-  color: #e6e6e6;
-}
-
-blockquote:before {
-  content: "\201c";
-  left: -0.35em;
-  top: -0.425em;
-}
-
-blockquote:after {
-  content: "\201d";
-  right: -0.35em;
-  bottom: -0.85em;
+  margin: 21px;
+  margin: 1.5rem;
+  padding: 0 21px;
+  padding: 0 1.5rem;
+  border-left: 1px solid #2d2d2d;
+  font-style: italic;
 }
 
 dfn {
