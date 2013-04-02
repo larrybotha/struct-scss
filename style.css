@@ -256,12 +256,12 @@ i {
 }
 
 blockquote {
+  font-style: italic;
   margin: 21px;
   margin: 1.5rem;
-  padding: 0 21px;
-  padding: 0 1.5rem;
+  padding: 3.5px 21px;
+  padding: 0.25rem 1.5rem;
   border-left: 1px solid #2d2d2d;
-  font-style: italic;
 }
 
 dfn {
