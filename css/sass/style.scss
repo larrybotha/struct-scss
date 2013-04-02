@@ -231,28 +231,10 @@ b, strong { font-weight: bold;}
 i { font-style: normal;}
 
 blockquote {
-	position: relative;
-	padding: 0 1em;
-}
-
-blockquote:before,
-blockquote:after {
-	position: absolute;
-	font-family: "Times New Roman";
-	font-size: 6em;
-	color: $clr-ntrl-10;
-}
-
-blockquote:before {
-	content: "\201c";
-	left: -.35em;
-	top: -.425em;
-}
-
-blockquote:after {
-	content: "\201d";
-	right: -.35em;
-	bottom: -.85em;
+	@include px-and-rem(margin, 1.5);
+	@include px-and-rem(padding, 0, 1.5);
+	border-left: 1px solid $clr-default;
+	font-style: italic;
 }
 
 dfn { font-style: italic;}
