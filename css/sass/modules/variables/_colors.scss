@@ -1,8 +1,7 @@
 // colours declared here. Any properties needed for font colours, background
 // colours etc. are to be created as mixins under /utl
 
-$clr-default: #2d2d2d; // grey								text default
-$clr-alpha	: #fff;
+$clr-alpha: #2d2d2d; // grey								text default
 $clr-beta		: #fff;
 
 $clr-omega	: #fe57a1; // hot pink!
@@ -42,4 +41,4 @@ $clr-info			: #3a87ad;
 $clr-info-lt	: lighten($clr-info, 20%);
 $clr-info-ltr	: lighten($clr-info, 40%);
 $clr-info-ltst: lighten($clr-info, 45%);
-$clr-info-dk	: darken($clr-danger, 10%);
+$clr-info-dk	: darken($clr-info, 10%);
