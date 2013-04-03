@@ -38,7 +38,7 @@ Do not include the index.html for this styleguide in your production code - this
 ## css/
 ## fnt/
 ## style.css
-# create symlinks in your styleguide for all the moved folders and files
+# create symlinks in your styleguide fodler for all the moved folders and files
 # do it
 
 h4. License

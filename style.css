@@ -585,25 +585,25 @@ td {
 }
 
 /* *****************************************************************************
-	 2. &BLOCKS
+	 &BLOCKS
 	 ************************************************************************** */
 /* =============================================================================
-	 2.a &Main Structure
+	 &Main Structure
 	 ========================================================================== */
 /* -----------------------------------------------------------------------------
-	 2.a.i &Header
+	 &Header
 	 -------------------------------------------------------------------------- */
 /* -----------------------------------------------------------------------------
-	 2.a.ii &Primary Content
+	 &Primary Content
 	 -------------------------------------------------------------------------- */
 /* -----------------------------------------------------------------------------
-	 2.a.iii &Secondary Content
+	 &Secondary Content
 	 -------------------------------------------------------------------------- */
 /* -----------------------------------------------------------------------------
-	 2.a.iv &Footer
+	 &Footer
 	 -------------------------------------------------------------------------- */
 /* =============================================================================
-	 2.b &Media Block
+	 &Media Block
 	 ========================================================================== */
 /*
  * media object - http://mopo.ws/GJYch3
@@ -643,7 +643,7 @@ td {
 }
 
 /* =============================================================================
-	 2.c &Flex Video - http://mopo.ws/TuyaHd
+	 &Flex Video - http://mopo.ws/TuyaHd
 	 ========================================================================== */
 .flex-video {
   position: relative;
@@ -677,7 +677,7 @@ td {
 }
 
 /* =============================================================================
-	 2.d &Navigation
+	 &Navigation
 	 ========================================================================== */
 /*
  * Nav abstraction - use classes specific to particular nav
@@ -805,50 +805,39 @@ td {
   }
 }
 /* =============================================================================
-	 2.e &Buttons
+	 &Buttons
 	 ========================================================================== */
 .btn {
   position: relative;
   display: inline-block;
-  background-color: #f5f5f5;
-  background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.2), rgba(230, 230, 230, 0.2));
-  background-image: -moz-linear-gradient(top, rgba(255, 255, 255, 0.2), rgba(230, 230, 230, 0.2));
-  background-image: -ms-linear-gradient(top, rgba(255, 255, 255, 0.2), rgba(230, 230, 230, 0.2));
-  background-image: -o-linear-gradient(top, rgba(255, 255, 255, 0.2), rgba(230, 230, 230, 0.2));
-  background-image: linear-gradient(top, rgba(255, 255, 255, 0.2), rgba(230, 230, 230, 0.2));
+  background-color: #7ab5d3;
   font-size: 14px;
   font-size: 1rem;
   font-weight: normal;
+  color: #2d2d2d;
+  text-align: center;
   line-height: 1;
-  color: black;
+  vertical-align: middle;
+  height: auto;
   margin-bottom: 14px;
   margin-bottom: 1rem;
-  padding: .45em 1em .4em;
-  vertical-align: middle;
-  text-align: center;
-  cursor: pointer;
-  height: auto;
-  border: 1px solid #cccccc;
-  border-color: #e6e6e6 #e6e6e6 #cccccc;
-  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
-  border-radius: 2px;
-  /* android 4.0 requires prefix */
-  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(230, 230, 230, 0.05);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(230, 230, 230, 0.05);
+  padding: .5em 1em;
+  border: 0;
   -webkit-transition: all 150ms ease-in;
   -moz-transition: all 150ms ease-in;
   -o-transition: all 150ms ease-in;
   transition: all 150ms ease-in;
+  cursor: pointer;
 }
 
 .btn:hover {
-  background-color: #ededed;
-  color: black;
+  background-color: #c7e0ec;
+  color: #2d2d2d;
 }
 
 .btn:active, .btn-selected, .btn-selected:hover {
-  background-color: #ededed;
-  color: black;
+  background-color: #3a87ad;
+  color: #2d2d2d;
   /* android 4.0 requires prefix */
   -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5), 0 1px 2px rgba(230, 230, 230, 0.05);
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5), 0 1px 2px rgba(230, 230, 230, 0.05);
@@ -863,14 +852,14 @@ td {
 }
 
 .btn[disabled], .btn.disabled {
-  color: #999;
+  color: gray;
   cursor: default;
 }
 
 .btn[disabled], .btn.disabled,
 .btn:hover[disabled], .btn.disabled:hover,
 .btn:active[disabled], .btn.disabled:active {
-  background-color: white;
+  background-color: #c7e0ec;
   -webkit-box-shadow: none;
   box-shadow: none;
 }
@@ -883,31 +872,19 @@ td {
   float: left;
   margin-right: 0;
   margin-left: -1px;
-  border-radius: 0;
-}
-
-.btn-group > .btn:first-child,
-.btn-group > .btn:last-child,
-.btn-group > .btn:first-child:last-child {
-  border-radius: 2px;
+  border-left: 1px solid #c7e0ec;
 }
 
 .btn-group > .btn:first-child {
   margin-left: 0;
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
-}
-
-.btn-group > .btn:last-child {
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
+  border: 0;
 }
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 	 &mButtons
 	 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 /* =============================================================================
-	 2.f &Forms
+	 &Forms
 	 ========================================================================== */
 .field, .field-label {
   position: relative;
@@ -1022,7 +999,7 @@ input:checked + label > .checkbox-custom:before {
 }
 
 /* -----------------------------------------------------------------------------
-	 2.f.i &Date Picker
+	 &Date Picker
 	 -------------------------------------------------------------------------- */
 .ui-datepicker {
   display: none;
@@ -1187,7 +1164,7 @@ input:checked + label > .checkbox-custom:before {
 }
 
 /* -----------------------------------------------------------------------------
-	 2.f.ii &Autocomplete
+	 &Autocomplete
 	 -------------------------------------------------------------------------- */
 .ui-autocomplete {
   position: absolute;
@@ -1273,10 +1250,10 @@ input:checked + label > .checkbox-custom:before {
 }
 
 /* -----------------------------------------------------------------------------
-	 2.f.iii &Wysiwyg
+	 &Wysiwyg
 	 -------------------------------------------------------------------------- */
 /* =============================================================================
-	 2.g &Icons
+	 &Icons
 	 ========================================================================== */
 /*  Styling inspired by FontAwesome - http://mopo.ws/ReAOC6
 		------------------------------------------------------- */
@@ -1459,7 +1436,7 @@ li.icon.icon-large:before, li.icon.icon-large:before {
 }
 
 /* =============================================================================
-	 2.h &Alerts
+	 &Alerts
 	 ========================================================================== */
 .alert {
   background-color: #f7f1e8;
@@ -1468,7 +1445,6 @@ li.icon.icon-large:before, li.icon.icon-large:before {
   margin-bottom: 18px;
   padding: 8px 35px 8px 14px;
   border: 1px solid #f0e6d6;
-  border-radius: 2px;
 }
 
 .alert-heading {
@@ -1561,7 +1537,7 @@ li.icon.icon-large:before, li.icon.icon-large:before {
 }
 
 /* =============================================================================
-	 2.i &Labels
+	 &Labels
 	 ========================================================================== */
 .label {
   color: white;
@@ -1623,7 +1599,7 @@ a.label:hover {
 }
 
 /* =============================================================================
-	 2.i &Gallery
+	 &Gallery
 	 ========================================================================== */
 /*
  * 3 column gallery example
@@ -1754,7 +1730,7 @@ a.label:hover {
 }
 
 /* =============================================================================
-	 2.k &Pagination
+	 &Pagination
 	 ========================================================================== */
 .page-numbers {
   float: left;
@@ -1770,17 +1746,18 @@ a.label:hover {
 }
 
 /* =============================================================================
-	 2.l &Comments
+	 &Comments
 	 ========================================================================== */
 /* =============================================================================
-	 2.m &Widgets
+	 &Widgets
 	 ========================================================================== */
 /* =============================================================================
-	 2.n &Progress Bars
+	 &Progress Bars
 	 ========================================================================== */
 .progress {
   height: 18px;
-  margin-bottom: 1em;
+  margin-bottom: 14px;
+  margin-bottom: 1rem;
   overflow: hidden;
   background-color: #e6e6e6;
   background-image: -webkit-linear-gradient(top, whitesmoke, #f9f9f9);
@@ -1789,7 +1766,6 @@ a.label:hover {
   background-image: -o-linear-gradient(top, whitesmoke, #f9f9f9);
   background-image: linear-gradient(top, whitesmoke, #f9f9f9);
   background-repeat: repeat-x;
-  border-radius: 2px;
   -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
 }
@@ -1914,7 +1890,7 @@ a.label:hover {
 }
 
 /* =============================================================================
-	 2.o &Drag & Drop
+	 &Drag & Drop
 	 ========================================================================== */
 .files-drag-tip {
   display: inline-block;
@@ -1925,7 +1901,6 @@ a.label:hover {
   /* 11px / 16 = .6875 */
   color: #999;
   padding: .15em 1em .05em;
-  border-radius: 2px;
 }
 
 .field:hover .files-drag-tip {
@@ -1933,7 +1908,7 @@ a.label:hover {
 }
 
 /* =============================================================================
-	 2.p &Tool Tips
+	 &Tool Tips
 	 ========================================================================== */
 /* PowerTip Plugin */
 #powerTip {
@@ -1944,7 +1919,6 @@ a.label:hover {
   font-size: .75rem;
   color: white;
   padding: .25em 1em;
-  border-radius: 2px;
   white-space: nowrap;
   cursor: default;
   z-index: 2;
@@ -2013,10 +1987,10 @@ a.label:hover {
 }
 
 /* *****************************************************************************
-	 3. &gSTYLING
+	 &gSTYLING
 	 ************************************************************************** */
 /* =============================================================================
-	 3.a &Typography
+	 &Typography
 	 ========================================================================== */
 /*
  * The following styles ensure that font sizes can be reused in markup
@@ -2118,14 +2092,14 @@ h6, .fs-zeta {
 }
 
 /* -----------------------------------------------------------------------------
-	 3.a.i &Headers
+	 &Headers
 	 -------------------------------------------------------------------------- */
 h1, h2, h3, h4, h5, h6 {
   font-weight: normal;
 }
 
 /* -----------------------------------------------------------------------------
-	 3.a.ii &Lists
+	 ii &Lists
 	 -------------------------------------------------------------------------- */
 .list-reset {
   list-style-type: none;
@@ -2134,10 +2108,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* -----------------------------------------------------------------------------
-	 3.a.iii &Horizontal Rules
+	 &Horizontal Rules
 	 -------------------------------------------------------------------------- */
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-	 3.a.iv &mTypography
+	 &mTypography
 	 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 .error {
   color: #CC3333;
@@ -2253,10 +2227,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* =============================================================================
-	 3.b &Backgrounds & Borders
+	 &Backgrounds & Borders
 	 ========================================================================== */
 /* =============================================================================
-	 3.c &Layout
+	 &Layout
 	 ========================================================================== */
 /* use to set max width of content areas */
 .wrap {
@@ -2288,7 +2262,7 @@ button.d-block {
 }
 
 /* =============================================================================
-	 3.d &Helpers
+	 &Helpers
 	 ========================================================================== */
 /*
  * For image replacement: http://mopo.ws/wj7fIN
@@ -2368,7 +2342,7 @@ button.d-block {
 }
 
 /* *****************************************************************************
-	 4. &ANIMATIONS
+	 &ANIMATIONS
 	 ************************************************************************** */
 @-webkit-keyframes rotate {
   0% {
@@ -2421,7 +2395,7 @@ button.d-block {
 }
 
 /* *****************************************************************************
-	 5. &GRID & MEDIA QUERIES
+	 &GRID & MEDIA QUERIES
 	 ************************************************************************** */
 /*
  * Gridpak Beta CSS

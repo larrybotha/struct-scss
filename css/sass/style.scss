@@ -1,7 +1,6 @@
 @charset "UTF-8";
 
-@import "variables/!variables";
-@import "utilities/!utilities";
+@import "modules/!modules";
 /*
 Theme Name: Your Theme Name
 Theme URI: http://...
@@ -165,7 +164,7 @@ html {
 
 html, button, input, select, textarea {
 	font-family: Arial,	sans-serif;
-	color: $clr-default;
+	color: $clr-alpha;
 }
 
 body {
@@ -234,7 +233,7 @@ blockquote {
 	font-style: italic;
 	@include px-and-rem(margin, 1.5);
 	@include px-and-rem(padding, .25, 1.5);
-	border-left: 1px solid $clr-default;
+	border-left: 1px solid $clr-alpha;
 }
 
 dfn { font-style: italic;}
@@ -461,33 +460,33 @@ td { vertical-align: top;}
 @include font-face($font-omega, $font-omega-filename, $font-omega-path, $weight: normal, $style: normal);
 
 /* *****************************************************************************
-	 2. &BLOCKS
+	 &BLOCKS
 	 ************************************************************************** */
 /* =============================================================================
-	 2.a &Main Structure
+	 &Main Structure
 	 ========================================================================== */
 /* -----------------------------------------------------------------------------
-	 2.a.i &Header
+	 &Header
 	 -------------------------------------------------------------------------- */
 
 
 /* -----------------------------------------------------------------------------
-	 2.a.ii &Primary Content
+	 &Primary Content
 	 -------------------------------------------------------------------------- */
 
 
 /* -----------------------------------------------------------------------------
-	 2.a.iii &Secondary Content
+	 &Secondary Content
 	 -------------------------------------------------------------------------- */
 
 
 /* -----------------------------------------------------------------------------
-	 2.a.iv &Footer
+	 &Footer
 	 -------------------------------------------------------------------------- */
 
 
 /* =============================================================================
-	 2.b &Media Block
+	 &Media Block
 	 ========================================================================== */
 /*
  * media object - http://mopo.ws/GJYch3
@@ -511,7 +510,7 @@ td { vertical-align: top;}
 
 
 /* =============================================================================
-	 2.c &Flex Video - http://mopo.ws/TuyaHd
+	 &Flex Video - http://mopo.ws/TuyaHd
 	 ========================================================================== */
 .flex-video {
 	position: relative;
@@ -536,7 +535,7 @@ td { vertical-align: top;}
 
 
 /* =============================================================================
-	 2.d &Navigation
+	 &Navigation
 	 ========================================================================== */
 /*
  * Nav abstraction - use classes specific to particular nav
@@ -600,7 +599,7 @@ td { vertical-align: top;}
 	border-bottom: 1px solid hsla(0, 0%, 0%, .2);
 }
 
-.menu-primary .menu-item a:hover { background-color: $clr-default;}
+.menu-primary .menu-item a:hover { background-color: $clr-alpha;}
 
 .menu-primary .sub-menu { position: relative;}
 
@@ -635,54 +634,34 @@ td { vertical-align: top;}
 }
 
 /* =============================================================================
-	 2.e &Buttons
+	 &Buttons
 	 ========================================================================== */
 .btn {
 	position: relative;
 	display: inline-block;
-	background-color: #f5f5f5;
-
-	@include gradient(background-image, linear,
-							( top,
-								hsla(0, 0%, 100%, .2),
-								hsla(0, 0%, 90%, .2)
-							)
-						);
-
+	background-color: $clr-info-lt;
 	@include px-and-rem(font-size, 1);
 	font-weight: normal;
-	line-height: 1;
-	color: $clr-ntrl-max;
-	@include px-and-rem(margin-bottom, 1);
-	padding: .45em 1em .4em;
-	vertical-align: middle;
+	color: $clr-alpha;
 	text-align: center;
-	cursor: pointer;
+	line-height: 1;
+	vertical-align: middle;
 	height: auto; // ensure heights set on inputs do not affect submit buttons
-
-	border: 1px solid $clr-ntrl-20;
-	border-color: $clr-ntrl-10 $clr-ntrl-10 $clr-ntrl-20;
-	border-color: hsla(0, 0%, 0%, .1) hsla(0, 0%, 0%, .1) hsla(0, 0%, 0%, .25);
-
-	border-radius: 2px;
-
-	/* android 4.0 requires prefix */
-	@include box-shadow(
-							inset 0 1px 0 hsla(0, 0%, 100%, .2),
-							0 1px 2px hsla(0, 0%, 90%, .05)
-						);
-
+	@include px-and-rem(margin-bottom, 1);
+	padding: .5em 1em;
+	border: 0;
 	@include transition(all 150ms ease-in);
+	cursor: pointer;
 }
 
 .btn:hover {
-	background-color: #ededed;
-	color: $clr-ntrl-max;
+	background-color: $clr-info-ltr;
+	color: $clr-alpha;
 }
 
 .btn:active, .btn-selected, .btn-selected:hover {
-	background-color: #ededed;
-	color: $clr-ntrl-max;
+	background-color: $clr-info;
+	color: $clr-alpha;
 	/* android 4.0 requires prefix */
 	@include box-shadow(
 							inset 0 1px 3px hsla(0, 0%, 0%, .5),
@@ -695,13 +674,13 @@ td { vertical-align: top;}
 .btn-selected { cursor: default;}
 
 .btn[disabled], .btn.disabled {
-	color: #999;
+	color: $clr-ntrl-50;
 	cursor: default;
 }
 .btn[disabled], .btn.disabled,
 .btn:hover[disabled], .btn.disabled:hover,
 .btn:active[disabled], .btn.disabled:active {
-	background-color: $clr-ntrl-min;
+	background-color: $clr-info-ltr;
 	@include box-shadow(none);
 }
 
@@ -711,25 +690,14 @@ td { vertical-align: top;}
 	float: left;
 	margin-right: 0;
 	margin-left: -1px;
-	border-radius: 0;
-}
-
-.btn-group > .btn:first-child,
-.btn-group > .btn:last-child,
-.btn-group > .btn:first-child:last-child {
-	border-radius: 2px;
+	border-left: 1px solid $clr-info-ltr;
 }
 
 .btn-group > .btn:first-child {
 	margin-left: 0;
-	border-top-right-radius: 0;
-	border-bottom-right-radius: 0;
+	border: 0;
 }
 
-.btn-group > .btn:last-child {
-	border-top-left-radius: 0;
-	border-bottom-left-radius: 0;
-}
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 	 &mButtons
@@ -737,7 +705,7 @@ td { vertical-align: top;}
 
 
 /* =============================================================================
-	 2.f &Forms
+	 &Forms
 	 ========================================================================== */
 .field, .field-label { position: relative;}
 
@@ -819,208 +787,22 @@ input:checked + label > .radio-custom:before { content: "\e011";}
 input:checked + label > .checkbox-custom:before { content: "\e001"; /* .icon-check - FontAwesome */}
 
 /* -----------------------------------------------------------------------------
-	 2.f.i &Date Picker
+	 &Date Picker
 	 -------------------------------------------------------------------------- */
-.ui-datepicker {
-	display: none;
-	background-color: #fff;
-	@include px-and-rem(font-size, .75);
-	padding: 1em 1em .5em;
-	border: 1px solid $clr-ntrl-10;
-	border-radius: 2px;
-}
-
-.ui-datepicker .ui-datepicker-header {
-	position: relative;
-	padding: .3em 0 .4em;
-	border-radius: 2px;
-}
-
-.ui-datepicker .ui-datepicker-prev, .ui-datepicker .ui-datepicker-next {
-	position:absolute;
-	text-indent: -100em;
-	top: 2px;
-	width: 1.8em;
-	height: 1.8em;
-	cursor: pointer;
-}
-
-.ui-datepicker .ui-datepicker-prev:before,
-.ui-datepicker .ui-datepicker-next:before {
-	font-family: base-icon-font;
-	position: absolute;
-	text-indent: 0;
-	text-align: center;
-	top: 20%;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	padding: .25em;
-}
-
-.ui-datepicker .ui-datepicker-prev { left:2px;}
-.ui-datepicker .ui-datepicker-prev:before { content: "\e203";}
-.ui-datepicker .ui-datepicker-next { right:2px;}
-.ui-datepicker .ui-datepicker-next:before { content: "\e202";}
-.ui-datepicker .ui-datepicker-prev-hover { left:1px;}
-.ui-datepicker .ui-datepicker-next-hover { right:1px;}
-
-.ui-datepicker .ui-datepicker-title {
-	@include px-and-rem(font-size, 1);
-	text-align: center;
-}
-
-.ui-datepicker table {
-	font-size: .9em;
-	width: 100%;
-	border-collapse: collapse;
-	margin:0 0 .4em;
-}
-
-.ui-datepicker thead { letter-spacing: 1px;}
-
-.ui-datepicker th {
-	font-weight: bold;
-	text-align: center;
-	padding: .7em .3em;
-	border: 0;
-}
-.ui-datepicker td {
-	padding: 0 1px 3px;
-	border: 0;
-}
-.ui-datepicker td span, .ui-datepicker td a {
-	display: block;
-	padding: .75em .75em .5em;
-	text-align: right;
-	text-decoration: none;
-	border: 1px solid $clr-ntrl-10;
-}
-
-.ui-datepicker td a:hover { border-color: $clr-ntrl-20;}
-
-.ui-datepicker td .ui-state-highlight { background: $clr-ntrl-10;}
-
-.ui-datepicker .ui-datepicker-current-day a { border-color: $clr-ntrl-20;}
-
-/* RTL support */
-.ui-datepicker-rtl { direction: rtl;}
-.ui-datepicker-rtl .ui-datepicker-prev {
-	right: 2px;
-	left: auto;
-}
-.ui-datepicker-rtl .ui-datepicker-next {
-	left: 2px;
-	right: auto;
-}
-.ui-datepicker-rtl .ui-datepicker-prev:hover {
-	right: 1px;
-	left: auto;
-}
-.ui-datepicker-rtl .ui-datepicker-next:hover {
-	left: 1px;
-	right: auto;
-}
-.ui-datepicker-rtl .ui-datepicker-buttonpane { clear:right;}
-.ui-datepicker-rtl .ui-datepicker-buttonpane button { float: left;}
-.ui-datepicker-rtl .ui-datepicker-buttonpane button.ui-datepicker-current { float:right;}
-.ui-datepicker-rtl .ui-datepicker-group { float:right;}
-.ui-datepicker-rtl .ui-datepicker-group-last .ui-datepicker-header {
-	border-right-width:0;
-	border-left-width:1px;
-}
-.ui-datepicker-rtl .ui-datepicker-group-middle .ui-datepicker-header {
-	border-right-width:0;
-	border-left-width:1px;
-}
+@import "vendor/jquery-ui-datepicker";
 
 /* -----------------------------------------------------------------------------
-	 2.f.ii &Autocomplete
+	 &Autocomplete
 	 -------------------------------------------------------------------------- */
-.ui-autocomplete {
-	position: absolute;
-	cursor: pointer;
-	background: $clr-ntrl-min;
-	font-size: .75em;
-	border: 1px solid #b2b2b2;
-	border-bottom-left-radius: 4px;
-	border-bottom-right-radius: 4px;
-}
-
-.ui-menu {
-	list-style:none;
-	padding: 0;
-	margin: 0;
-}
-.ui-menu .ui-menu {
-	margin-top: -3px;
-}
-.ui-menu .ui-menu-item { border-bottom: 1px solid #eee;}
-.ui-menu .ui-menu-item a {
-	display: block;
-	color: inherit;
-	padding: .4em .5em;
-	line-height: 1.5;
-}
-.ui-menu .ui-menu-item a.ui-state-hover,
-.ui-menu .ui-menu-item a.ui-state-active {
-	font-weight: normal;
-	background-color: #e4eef5;
-
-	@include gradient(background-image, linear,
-											( top,
-												transparent,
-												hsla(0, 0%, 100%, .1)
-											)
-										);
-}
-
-.ui-menu-item .img-block > .img {
-	background: transparent url(http://placekitten.com/g/20/20) no-repeat center center;
-	width: 20px;
-	height: 20px;
-	margin-right: .5em;
-}
-
-.token-list {
-	position: relative;
-	display: block;
-	border: 1px solid $clr-ntrl-20;
-	cursor: text;
-	padding-left: .25em;
-}
-
-.token-list + .ui-autocomplete { left: 0 !important;}
-
-.token-list-input {
-	background-color: transparent;
-	padding: 0;
-	margin: 0;
-	border: 0;
-	outline: none;
-}
-
-.token-list-item {
-	display: inline-block;
-	vertical-align: middle;
-}
-
-.token-list-token {
-	vertical-align: middle;
-	font-size: 75%;
-	line-height: 1;
-	padding: .25em .5em;
-	border: 1px solid #aaa;
-	border-radius: 2px;
-}
+@import "vendor/jquery-ui-autocomplete";
 
 /* -----------------------------------------------------------------------------
-	 2.f.iii &Wysiwyg
+	 &Wysiwyg
 	 -------------------------------------------------------------------------- */
 
 
 /* =============================================================================
-	 2.g &Icons
+	 &Icons
 	 ========================================================================== */
 /*  Styling inspired by FontAwesome - http://mopo.ws/ReAOC6
 		------------------------------------------------------- */
@@ -1129,7 +911,7 @@ li.icon.icon-large:before, li.icon.icon-large:before {
 
 
 /* =============================================================================
-	 2.h &Alerts
+	 &Alerts
 	 ========================================================================== */
 .alert {
 	background-color: $clr-warning-ltst;
@@ -1138,7 +920,6 @@ li.icon.icon-large:before, li.icon.icon-large:before {
 	margin-bottom: 18px;
 	padding: 8px 35px 8px 14px;
 	border: 1px solid $clr-warning-ltr;
-	border-radius: 2px;
 }
 
 .alert-heading {
@@ -1221,7 +1002,7 @@ li.icon.icon-large:before, li.icon.icon-large:before {
 
 
 /* =============================================================================
-	 2.i &Labels
+	 &Labels
 	 ========================================================================== */
 .label {
 	color: $clr-ntrl-min;
@@ -1260,7 +1041,7 @@ a.label:hover {
 
 
 /* =============================================================================
-	 2.i &Gallery
+	 &Gallery
 	 ========================================================================== */
 /*
  * 3 column gallery example
@@ -1355,7 +1136,7 @@ a.label:hover {
 
 
 /* =============================================================================
-	 2.k &Pagination
+	 &Pagination
 	 ========================================================================== */
 .page-numbers {
 	float: left;
@@ -1372,28 +1153,27 @@ a.label:hover {
 
 
 /* =============================================================================
-	 2.l &Comments
+	 &Comments
 	 ========================================================================== */
 
 
 /* =============================================================================
-	 2.m &Widgets
+	 &Widgets
 	 ========================================================================== */
 
 
 /* =============================================================================
-	 2.n &Progress Bars
+	 &Progress Bars
 	 ========================================================================== */
 .progress {
 	height: 18px;
-	margin-bottom: 1em;
+	@include px-and-rem(margin-bottom, 1);
 	overflow: hidden;
 	background-color: $clr-ntrl-10;
 
 	@include gradient(background-image, linear, (top, #f5f5f5, #f9f9f9));
 
 	background-repeat: repeat-x;
-	border-radius: 2px;
 	@include box-shadow(inset 0 1px 2px hsla(0, 0%, 0%, .1));
 }
 
@@ -1483,7 +1263,7 @@ a.label:hover {
 
 
 /* =============================================================================
-	 2.o &Drag & Drop
+	 &Drag & Drop
 	 ========================================================================== */
 .files-drag-tip {
 	display: inline-block;
@@ -1492,14 +1272,13 @@ a.label:hover {
 	@include px-and-rem(font-size, .6875); /* 11px / 16 = .6875 */
 	color: #999;
 	padding: .15em 1em .05em;
-	border-radius: 2px;
 }
 
 .field:hover .files-drag-tip { display: block;}
 
 
 /* =============================================================================
-	 2.p &Tool Tips
+	 &Tool Tips
 	 ========================================================================== */
 /* PowerTip Plugin */
 #powerTip {
@@ -1510,7 +1289,6 @@ a.label:hover {
 	font-size: .75rem;
 	color: $clr-ntrl-min;
 	padding: .25em 1em;
-	border-radius: 2px;
 	white-space: nowrap;
 	cursor: default;
 	z-index: 2;
@@ -1569,10 +1347,10 @@ a.label:hover {
 
 
 /* *****************************************************************************
-	 3. &gSTYLING
+	 &gSTYLING
 	 ************************************************************************** */
 /* =============================================================================
-	 3.a &Typography
+	 &Typography
 	 ========================================================================== */
 /*
  * The following styles ensure that font sizes can be reused in markup
@@ -1622,13 +1400,13 @@ h6, .fs-zeta    { font-size: 16px; font-size: 1.143rem; line-height: 1;}
 
 
 /* -----------------------------------------------------------------------------
-	 3.a.i &Headers
+	 &Headers
 	 -------------------------------------------------------------------------- */
 h1, h2, h3, h4, h5, h6 { font-weight: normal;}
 
 
 /* -----------------------------------------------------------------------------
-	 3.a.ii &Lists
+	 ii &Lists
 	 -------------------------------------------------------------------------- */
 .list-reset {
 	list-style-type: none;
@@ -1638,12 +1416,12 @@ h1, h2, h3, h4, h5, h6 { font-weight: normal;}
 
 
 /* -----------------------------------------------------------------------------
-	 3.a.iii &Horizontal Rules
+	 &Horizontal Rules
 	 -------------------------------------------------------------------------- */
 
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-	 3.a.iv &mTypography
+	 &mTypography
 	 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 .error { color: #CC3333;}
 
@@ -1690,12 +1468,12 @@ h1, h2, h3, h4, h5, h6 { font-weight: normal;}
 }
 
 /* =============================================================================
-	 3.b &Backgrounds & Borders
+	 &Backgrounds & Borders
 	 ========================================================================== */
 
 
 /* =============================================================================
-	 3.c &Layout
+	 &Layout
 	 ========================================================================== */
 /* use to set max width of content areas */
 .wrap {
@@ -1721,7 +1499,7 @@ button.d-block { width: 100%;}
 
 
 /* =============================================================================
-	 3.d &Helpers
+	 &Helpers
 	 ========================================================================== */
 /*
  * For image replacement: http://mopo.ws/wj7fIN
@@ -1752,7 +1530,7 @@ button.d-block { width: 100%;}
 
 
 /* *****************************************************************************
-	 4. &ANIMATIONS
+	 &ANIMATIONS
 	 ************************************************************************** */
 @-webkit-keyframes rotate {
 	0% { -webkit-transform: rotate(0deg);}
@@ -1781,7 +1559,7 @@ button.d-block { width: 100%;}
 
 
 /* *****************************************************************************
-	 5. &GRID & MEDIA QUERIES
+	 &GRID & MEDIA QUERIES
 	 ************************************************************************** */
 /*
  * Gridpak Beta CSS
@@ -2036,17 +1814,4 @@ Col 12:   100%
 /* =============================================================================
 	 &PRINT STYLES - Inlined to avoid required HTTP connection: h5bp.com/r
 	 ========================================================================== */
-@media print {
-	* { background: transparent !important; color: black !important; box-shadow:none !important; text-shadow: none !important; filter:none !important; -ms-filter: none !important;} /* Black prints faster: h5bp.com/s */
-	a, a:visited { text-decoration: underline;}
-	a[href]:after { content: " (" attr(href) ")";}
-	abbr[title]:after { content: " (" attr(title) ")";}
-	.ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content: "";}  /* Don't show links for images, or javascript/internal links */
-	pre, blockquote { border: 1px solid #999; page-break-inside: avoid;}
-	thead { display: table-header-group;} /* h5bp.com/t */
-	tr, img { page-break-inside: avoid;}
-	img { max-width: 100% !important;}
-	@page { margin: 0.5cm;}
-	p, h2, h3 { orphans: 3; widows: 3;}
-	h2, h3 { page-break-after: avoid;}
-}
+@import "partials/print";
