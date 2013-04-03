@@ -16,7 +16,7 @@ This styleguide contains many elements you may not require in a project - be sur
 
 Some of the main features:
 
-# built with Sass - with some useful "utilities":https://github.com/larrybotha/styleguide/tree/master/css/sass/utilities
+# built with Sass - with some useful "utilities":https://github.com/larrybotha/styleguide/tree/master/css/sass/utilities 
 ## styles, utilities, and variable have all been separated
 # indexed styles for fast reference and better organisation
 # based on "H5BP":http://html5boilerplate.com/ and "normalize.css":http://necolas.github.com/normalize.css/
@@ -33,12 +33,12 @@ h2. Usage
 
 Do not include the index.html for this styleguide in your production code - this file is a reference for the project, and does not belong with a live site. Additionally, you should move all project assets to the location from which you will be developing the project to prevent duplication of your assets. The following would make for a good workflow:
 
-# move all project assets to your project file:
+# move all project assets to your project folders:
 ## img/
 ## css/
 ## fnt/
 ## style.css
-# create symlinks for all the moved folders and files
+# create symlinks in your styleguide for all the moved folders and files
 # do it
 
 h4. License
