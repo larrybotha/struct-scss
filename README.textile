@@ -1,6 +1,6 @@
 h1. Styleguide
 
-"Demo":(http://larrybotha.github.com/styleguide)
+"Demo":http://larrybotha.github.com/styleguide
 
 This is a base for creating a styleguide of elements that may appear in a website. Some elements and styles are inspired by Twitter Bootstrap. Many of them have been cleaned, namespaced, and made more modular.
 
@@ -38,7 +38,7 @@ Do not include the index.html for this styleguide in your production code - this
 ## css/
 ## fnt/
 ## style.css
-# create symlinks in your styleguide fodler for all the moved folders and files
+# create symlinks in your styleguide folder for all the moved folders and files
 # do it
 
 h4. License
