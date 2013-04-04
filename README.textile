@@ -1,6 +1,6 @@
 h1. Styleguide
 
-"Demo":(http://larrybotha.github.com/styleguide)
+"Demo":http://larrybotha.github.com/styleguide
 
 This is a base for creating a styleguide of elements that may appear in a website. Some elements and styles are inspired by Twitter Bootstrap. Many of them have been cleaned, namespaced, and made more modular.
 
