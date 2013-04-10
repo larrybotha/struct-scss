@@ -1441,6 +1441,15 @@ h1, h2, h3, h4, h5, h6 { font-weight: normal;}
 .ac { text-align: center;}
 .ar { text-align: right;}
 
+/* truncating text / ellipsis */
+.truncate {
+	display: block;
+	text-overflow: ellipsis;
+	width: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
 
 /* ==|== WordPress / Helper editor styles ======================================
 	 ========================================================================== */
