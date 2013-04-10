@@ -1487,6 +1487,24 @@ button.d-block { width: 100%;}
 
 .d-iblock { display: inline-block;}
 
+.d-table,
+.d-itable {
+	height: 100%;
+}
+
+.d-table-full { width: 100%;}
+
+.d-table { display: table;}
+.ie8 .d-table-ie,
+.ie9 .d-table-ie { display: table;}
+
+.d-itable {	display: inline-table;}
+
+.d-table-inner {
+	display: table-cell;
+	vertical-align: middle;
+}
+
 
 /* =============================================================================
 	 &Helpers
