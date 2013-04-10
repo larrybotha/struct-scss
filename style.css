@@ -2184,6 +2184,15 @@ h1, h2, h3, h4, h5, h6 {
   text-align: right;
 }
 
+/* truncating text / ellipsis */
+.truncate {
+  display: block;
+  text-overflow: ellipsis;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
 /* ==|== WordPress / Helper editor styles ======================================
 	 ========================================================================== */
 /* Alignment (post images) */
@@ -2250,6 +2259,33 @@ button.d-block {
 
 .d-iblock {
   display: inline-block;
+}
+
+.d-table,
+.d-itable {
+  height: 100%;
+}
+
+.d-table-full {
+  width: 100%;
+}
+
+.d-table {
+  display: table;
+}
+
+.ie8 .d-table-ie,
+.ie9 .d-table-ie {
+  display: table;
+}
+
+.d-itable {
+  display: inline-table;
+}
+
+.d-table-inner {
+  display: table-cell;
+  vertical-align: middle;
 }
 
 /* =============================================================================
