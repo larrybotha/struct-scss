@@ -39,9 +39,9 @@
 		$i: $i + 1;
 	}
 
-	#{$prop}: fix8_prepend-vendor(-webkit-, $grad-list);
-	#{$prop}: fix8_prepend-vendor(-moz-, $grad-list);
-	#{$prop}: fix8_prepend-vendor(-ms-, $grad-list);
-	#{$prop}: fix8_prepend-vendor(-o-, $grad-list);
+	#{$prop}: fix8_prepend_vendor(-webkit-, $grad-list);
+	#{$prop}: fix8_prepend_vendor(-moz-, $grad-list);
+	#{$prop}: fix8_prepend_vendor(-ms-, $grad-list);
+	#{$prop}: fix8_prepend_vendor(-o-, $grad-list);
 	#{$prop}: $grad-list;
 }
