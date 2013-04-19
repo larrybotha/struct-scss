@@ -700,11 +700,11 @@ td {
 }
 
 .menu-collapse-container .menu-collapse-button {
-  background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
-  background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
-  background-image: -ms-linear-gradient(top, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
-  background-image: -o-linear-gradient(top, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
-  background-image: linear-gradient(top, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+  background-image: -webkit-linear-gradient(180deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+  background-image: -moz-linear-gradient(180deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+  background-image: -ms-linear-gradient(180deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+  background-image: -o-linear-gradient(180deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
   margin: .5em;
@@ -1192,11 +1192,11 @@ input:checked + label > .checkbox-custom:before {
 .ui-menu .ui-menu-item a.ui-state-active {
   font-weight: normal;
   background-color: #e4eef5;
-  background-image: -webkit-linear-gradient(top, transparent, rgba(255, 255, 255, 0.1));
-  background-image: -moz-linear-gradient(top, transparent, rgba(255, 255, 255, 0.1));
-  background-image: -ms-linear-gradient(top, transparent, rgba(255, 255, 255, 0.1));
-  background-image: -o-linear-gradient(top, transparent, rgba(255, 255, 255, 0.1));
-  background-image: linear-gradient(top, transparent, rgba(255, 255, 255, 0.1));
+  background-image: -webkit-linear, -webkit-top, transparent, rgba(255, 255, 255, 0.1);
+  background-image: -moz-linear, -moz-top, transparent, rgba(255, 255, 255, 0.1);
+  background-image: -ms-linear, -ms-top, transparent, rgba(255, 255, 255, 0.1);
+  background-image: -o-linear, -o-top, transparent, rgba(255, 255, 255, 0.1);
+  background-image: linear, top, transparent, rgba(255, 255, 255, 0.1);
 }
 
 .ui-menu-item .img-block > .img {
@@ -1751,11 +1751,11 @@ a.label:hover {
   margin-bottom: 1rem;
   overflow: hidden;
   background-color: #e6e6e6;
-  background-image: -webkit-linear-gradient(top, whitesmoke, #f9f9f9);
-  background-image: -moz-linear-gradient(top, whitesmoke, #f9f9f9);
-  background-image: -ms-linear-gradient(top, whitesmoke, #f9f9f9);
-  background-image: -o-linear-gradient(top, whitesmoke, #f9f9f9);
-  background-image: linear-gradient(top, whitesmoke, #f9f9f9);
+  background-image: -webkit-linear-gradient(180deg, whitesmoke, #f9f9f9);
+  background-image: -moz-linear-gradient(180deg, whitesmoke, #f9f9f9);
+  background-image: -ms-linear-gradient(180deg, whitesmoke, #f9f9f9);
+  background-image: -o-linear-gradient(180deg, whitesmoke, #f9f9f9);
+  background-image: linear-gradient(180deg, whitesmoke, #f9f9f9);
   background-repeat: repeat-x;
   -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
@@ -1770,11 +1770,11 @@ a.label:hover {
   text-align: center;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
   background-color: #fe57a1;
-  background-image: -webkit-linear-gradient(top, transparent, rgba(255, 255, 255, 0.1));
-  background-image: -moz-linear-gradient(top, transparent, rgba(255, 255, 255, 0.1));
-  background-image: -ms-linear-gradient(top, transparent, rgba(255, 255, 255, 0.1));
-  background-image: -o-linear-gradient(top, transparent, rgba(255, 255, 255, 0.1));
-  background-image: linear-gradient(top, transparent, rgba(255, 255, 255, 0.1));
+  background-image: -webkit-linear-gradient(180deg, transparent, rgba(255, 255, 255, 0.1));
+  background-image: -moz-linear-gradient(180deg, transparent, rgba(255, 255, 255, 0.1));
+  background-image: -ms-linear-gradient(180deg, transparent, rgba(255, 255, 255, 0.1));
+  background-image: -o-linear-gradient(180deg, transparent, rgba(255, 255, 255, 0.1));
+  background-image: linear-gradient(180deg, transparent, rgba(255, 255, 255, 0.1));
   background-repeat: repeat-x;
   -webkit-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
   box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
