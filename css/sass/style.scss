@@ -696,11 +696,9 @@ td { vertical-align: top;}
 
 input, textarea {
 	@include px-and-rem(margin-bottom, 1);
-	padding: 0 0 0 .25em;
+	padding: .25em;
 	border: 1px solid $clr-ntrl-20;
 }
-
-textarea { padding-top: .25em;}
 
 input[type="radio"],
 input[type="checkbox"] { border: none;}
