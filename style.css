@@ -884,12 +884,8 @@ td {
 input, textarea {
   margin-bottom: 14px;
   margin-bottom: 1rem;
-  padding: 0 0 0 .25em;
+  padding: .25em;
   border: 1px solid #cccccc;
-}
-
-textarea {
-  padding-top: .25em;
 }
 
 input[type="radio"],
