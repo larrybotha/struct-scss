@@ -45,11 +45,11 @@ might want to share.
 		2.b Media Block
 		2.c Flex Video
 		2.d Navigation
-		2.e Buttons
-		2.f Forms
-			2.f.i Date Picker
-			2.f.ii Autocomplete
-			2.f.iii Wysiwyg
+		2.e Forms
+			2.e.i Date Picker
+			2.e.ii Autocomplete
+			2.e.iii Wysiwyg
+		2.f Buttons
 		2.g Icons
 		2.h Alerts
 		2.i Labels
@@ -618,76 +618,6 @@ td { vertical-align: top;}
 	}
 }
 
-/* =============================================================================
-	 &Buttons
-	 ========================================================================== */
-.btn {
-	position: relative;
-	display: inline-block;
-	background-color: $clr-info-lt;
-	@include px-and-rem(font-size, 1);
-	font-weight: normal;
-	color: $clr-alpha;
-	text-align: center;
-	line-height: 1;
-	vertical-align: middle;
-	height: auto; // ensure heights set on inputs do not affect submit buttons
-	@include px-and-rem(margin-bottom, 1);
-	padding: .5em 1em;
-	border: 0;
-	@include transition(all 150ms ease-in);
-	cursor: pointer;
-}
-
-.btn:hover {
-	background-color: $clr-info-ltr;
-	color: $clr-alpha;
-}
-
-.btn:active, .btn-selected, .btn-selected:hover {
-	background-color: $clr-info;
-	color: $clr-alpha;
-	/* android 4.0 requires prefix */
-	@include box-shadow(
-							inset 0 1px 3px hsla(0, 0%, 0%, .5),
-							0 1px 2px hsla(0, 0%, 90%, .05)
-						);
-
-	@include transition(all 0);
-}
-
-.btn-selected { cursor: default;}
-
-.btn[disabled], .btn.disabled {
-	color: $clr-ntrl-50;
-	cursor: default;
-}
-.btn[disabled], .btn.disabled,
-.btn:hover[disabled], .btn.disabled:hover,
-.btn:active[disabled], .btn.disabled:active {
-	background-color: $clr-info-ltr;
-	@include box-shadow(none);
-}
-
-.btn-group { display: inline-block;}
-
-.btn-group > .btn {
-	float: left;
-	margin-right: 0;
-	margin-left: -1px;
-	border-left: 1px solid $clr-info-ltr;
-}
-
-.btn-group > .btn:first-child {
-	margin-left: 0;
-	border: 0;
-}
-
-
-/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-	 &mButtons
-	 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-
 
 /* =============================================================================
 	 &Forms
@@ -782,6 +712,77 @@ input:checked + label > .checkbox-custom:before { content: "\e001"; /* .icon-che
 /* -----------------------------------------------------------------------------
 	 &Wysiwyg
 	 -------------------------------------------------------------------------- */
+
+
+/* =============================================================================
+	 &Buttons
+	 ========================================================================== */
+.btn {
+	position: relative;
+	display: inline-block;
+	background-color: $clr-info-lt;
+	@include px-and-rem(font-size, 1);
+	font-weight: normal;
+	color: $clr-alpha;
+	text-align: center;
+	line-height: 1;
+	vertical-align: middle;
+	height: auto; // ensure heights set on inputs do not affect submit buttons
+	@include px-and-rem(margin-bottom, 1);
+	padding: .5em 1em;
+	border: 0;
+	@include transition(all 150ms ease-in);
+	cursor: pointer;
+}
+
+.btn:hover {
+	background-color: $clr-info-ltr;
+	color: $clr-alpha;
+}
+
+.btn:active, .btn-selected, .btn-selected:hover {
+	background-color: $clr-info;
+	color: $clr-alpha;
+	/* android 4.0 requires prefix */
+	@include box-shadow(
+							inset 0 1px 3px hsla(0, 0%, 0%, .5),
+							0 1px 2px hsla(0, 0%, 90%, .05)
+						);
+
+	@include transition(all 0);
+}
+
+.btn-selected { cursor: default;}
+
+.btn[disabled], .btn.disabled {
+	color: $clr-ntrl-50;
+	cursor: default;
+}
+.btn[disabled], .btn.disabled,
+.btn:hover[disabled], .btn.disabled:hover,
+.btn:active[disabled], .btn.disabled:active {
+	background-color: $clr-info-ltr;
+	@include box-shadow(none);
+}
+
+.btn-group { display: inline-block;}
+
+.btn-group > .btn {
+	float: left;
+	margin-right: 0;
+	margin-left: -1px;
+	border-left: 1px solid $clr-info-ltr;
+}
+
+.btn-group > .btn:first-child {
+	margin-left: 0;
+	border: 0;
+}
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	 &mButtons
+	 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 
 /* =============================================================================
