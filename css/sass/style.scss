@@ -1457,7 +1457,9 @@ h1, h2, h3, h4, h5, h6 { font-weight: normal;}
 /* =============================================================================
 	 &Backgrounds & Borders
 	 ========================================================================== */
-
+.bgc-alpha-dk { background-color: $clr-alpha-dk}
+.bgc-alpha		{ background-color: $clr-alpha}
+.bgc-alpha-lt { background-color: $clr-alpha-lt}
 
 /* =============================================================================
 	 &Layout
