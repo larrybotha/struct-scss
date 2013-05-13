@@ -791,7 +791,7 @@ input:checked + label > .checkbox-custom:before { content: "\e001"; /* .icon-che
 /*  Styling inspired by FontAwesome - http://mopo.ws/ReAOC6
 		------------------------------------------------------- */
 .icon:before, .icon:before {
-	font-family: base-icon-font;
+	font-family: $font-omega-stack;
 	font-weight: normal;
 	font-style: normal;
 	display: inline-block;

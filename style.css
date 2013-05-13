@@ -1243,7 +1243,7 @@ input:checked + label > .checkbox-custom:before {
 /*  Styling inspired by FontAwesome - http://mopo.ws/ReAOC6
 		------------------------------------------------------- */
 .icon:before, .icon:before {
-  font-family: base-icon-font;
+  font-family: "base-icon-font";
   font-weight: normal;
   font-style: normal;
   display: inline-block;
