@@ -631,7 +631,10 @@ input, textarea {
 }
 
 input[type="radio"],
-input[type="checkbox"] { border: none;}
+input[type="checkbox"] {
+	cursor: pointer;
+	border: none;
+}
 
 /*
  * Required only if using icon prefix and suffix blocks.

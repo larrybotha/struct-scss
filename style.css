@@ -810,6 +810,7 @@ input, textarea {
 
 input[type="radio"],
 input[type="checkbox"] {
+  cursor: pointer;
   border: none;
 }
 
