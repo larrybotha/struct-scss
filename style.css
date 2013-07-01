@@ -29,7 +29,6 @@ might want to share.
 			1.a.vii Figures
 			1.a.viii Forms
 			1.a.ix Tables
-			1.a.x Chrome Frame Prompt
 		1.b Fonts
 
 	2. BLOCKS
@@ -554,16 +553,6 @@ td {
 }
 
 /* =============================================================================
-	 &Chrome Frame Prompt
-	 ========================================================================== */
-.chromeframe {
-  margin: 0.2em 0;
-  background: #cccccc;
-  color: black;
-  padding: 0.2em 0;
-}
-
-/* =============================================================================
 	 &Fonts
 	 ========================================================================== */
 /* base-icon-font built as a subset using icons from FontAwesome and IcoMoon */
@@ -703,6 +692,7 @@ td {
   background-image: -webkit-linear-gradient(180deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
   background-image: -moz-linear-gradient(180deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
   background-image: -o-linear-gradient(180deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+  background-image: -ms-linear-gradient(180deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
   background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
@@ -1112,6 +1102,7 @@ input:checked + label > .checkbox-custom:before {
   background-image: -webkit-linear, -webkit-top, transparent, rgba(255, 255, 255, 0.1);
   background-image: -moz-linear, -moz-top, transparent, rgba(255, 255, 255, 0.1);
   background-image: -o-linear, -o-top, transparent, rgba(255, 255, 255, 0.1);
+  background-image: -ms-linear, -ms-top, transparent, rgba(255, 255, 255, 0.1);
   background-image: linear, top, transparent, rgba(255, 255, 255, 0.1);
 }
 
@@ -1749,6 +1740,7 @@ a.label:hover {
   background-image: -webkit-linear-gradient(180deg, whitesmoke, #f9f9f9);
   background-image: -moz-linear-gradient(180deg, whitesmoke, #f9f9f9);
   background-image: -o-linear-gradient(180deg, whitesmoke, #f9f9f9);
+  background-image: -ms-linear-gradient(180deg, whitesmoke, #f9f9f9);
   background-image: linear-gradient(180deg, whitesmoke, #f9f9f9);
   background-repeat: repeat-x;
   -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
@@ -1767,6 +1759,7 @@ a.label:hover {
   background-image: -webkit-linear-gradient(180deg, transparent, rgba(255, 255, 255, 0.1));
   background-image: -moz-linear-gradient(180deg, transparent, rgba(255, 255, 255, 0.1));
   background-image: -o-linear-gradient(180deg, transparent, rgba(255, 255, 255, 0.1));
+  background-image: -ms-linear-gradient(180deg, transparent, rgba(255, 255, 255, 0.1));
   background-image: linear-gradient(180deg, transparent, rgba(255, 255, 255, 0.1));
   background-repeat: repeat-x;
   -webkit-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
@@ -1792,6 +1785,7 @@ a.label:hover {
   background-image: -webkit-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
   background-image: -moz-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
   background-image: -o-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: -ms-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
   background-image: linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
   -webkit-background-size: 40px 40px;
   -moz-background-size: 40px 40px;
