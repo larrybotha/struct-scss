@@ -16,7 +16,7 @@
 	<meta name="description" content="A styleguide for more robust development of a website. This styleguide is useful in creating and testing site elements before building the actual site.">
 
 	<!-- Mobile viewport optimized: h5bp.com/viewport -->
-	<meta name="viewport" content="width=device-width">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<!--[if ! lte IE 7]><!-->
 		<!-- must be symlinked from theme's directory -->
@@ -36,9 +36,7 @@
 </head>
 <body>
 
-	<!-- Prompt IE 6 users to install Chrome Frame. Remove this if you support IE 6.
-			 chromium.org/developers/how-tos/chrome-frame-getting-started -->
-	<!--[if lte IE 8]><div class="alert alert-danger">Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</div><![endif]-->
+	<!--[if lte IE 8]><div class="alert alert-danger">Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a modern browser</a> to experience this site.</div><![endif]-->
 
 	<a href="https://github.com/larrybotha/styleguide"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" alt="Fork me on GitHub"></a>
 
@@ -112,7 +110,7 @@
 
 				<div>
 					<!-- allow screenreaders to skip navigation -->
-					<a class="visuallyhidden" href="#main">skip navigation and go to main content</a>
+					<a class="visuallyhidden visuallyhidden-ie8" href="#main">skip navigation and go to main content</a>
 
 					<div class="menu-collapse-container ar va-m">
 						<label for="menu-collapse-checkbox" class="menu-collapse-button btn"><span class="visuallyhidden">trigger to expand navigation menu</span><span class="icon icon-reorder"></span></label>

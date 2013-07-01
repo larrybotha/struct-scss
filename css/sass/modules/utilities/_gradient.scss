@@ -42,5 +42,6 @@
 	#{$prop}: fix8_prepend_vendor(-webkit-, $grad-list);
 	#{$prop}: fix8_prepend_vendor(-moz-, $grad-list);
 	#{$prop}: fix8_prepend_vendor(-o-, $grad-list);
+	#{$prop}: fix8_prepend_vendor(-ms-, $grad-list);
 	#{$prop}: $grad-list;
 }
