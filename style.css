@@ -917,7 +917,7 @@ input:checked + label > .checkbox-custom:before {
 
 .ui-datepicker .ui-datepicker-prev, .ui-datepicker .ui-datepicker-next {
   position: absolute;
-  text-indent: -100em;
+  text-indent: -1000em;
   top: 2px;
   width: 1.8em;
   height: 1.8em;
