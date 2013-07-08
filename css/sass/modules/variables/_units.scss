@@ -6,6 +6,3 @@ $unit-base: 14;
 $unit-default-px	: $unit-base + 0px;
 $unit-default-rem	: 1rem;
 $unit-default-em	: 1em;
-
-// NB: this is not configurable - it is the default as set by UA's
-$unit-useragent-base: 16;
