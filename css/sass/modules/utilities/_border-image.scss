@@ -1,3 +1,3 @@
 @mixin border-image($val) {
-	@include prefixer(border-radius, $val, $moz: true));
+	@include prefixer(border-image, $val, $moz: true));
 }
