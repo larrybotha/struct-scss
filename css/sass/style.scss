@@ -36,34 +36,35 @@ might want to share.
 		1.b Fonts
 
 	2. BLOCKS
-		2.a Main Structure
-			2.a.i Header
-			2.a.ii Primary Content
-			2.a.iii Secondary Content
-			2.a.iv Footer
-		2.b Media Block
-		2.c Flex Video
-		2.d Navigation
-		2.e Forms
-			2.e.i Date Picker
-			2.e.ii Autocomplete
-			2.e.iii Wysiwyg
-		2.f Buttons
-		2.g Icons
-		2.h Alerts
-		2.i Labels
-		2.j Gallery
-		2.k Pagination
-		2.l Comments
-			2.l.i Comment
-			2.l.ii Pingbacks / Trackbacks
-			2.l.iii Comment Form
-		2.m Widgets
-		2.n Progress Bars
-		2.o Drag & Drop
-		2.p Tool Tips
+		2.a Grid
+		2.b Main Structure
+			2.b.i Header
+			2.b.ii Primary Content
+			2.b.iii Secondary Content
+			2.b.iv Footer
+		2.c Media Block
+		2.d Flex Video
+		2.e Navigation
+		2.f Forms
+			2.f.i Date Picker
+			2.f.ii Autocomplete
+			2.f.iii Wysiwyg
+		2.g Buttons
+		2.h Icons
+		2.i Alerts
+		2.j Labels
+		2.k Gallery
+		2.l Pagination
+		2.m Comments
+			2.m.i Comment
+			2.m.ii Pingbacks / Trackbacks
+			2.m.iii Comment Form
+		2.n Widgets
+		2.o Progress Bars
+		2.p Drag & Drop
+		2.q Tool Tips
 
-	3. GENERAL STYLING
+	3. MODIFIERS
 		3.a Typography
 			3.a.i Headers
 			3.a.ii Lists
@@ -76,7 +77,7 @@ might want to share.
 
 	4. ANIMATIONS
 
-	5. GRID AND MEDIA QUERIES
+	5. MEDIA QUERIES
 
 	6. PRINT STYLES
 
@@ -441,9 +442,108 @@ td { vertical-align: top;}
 /* base-icon-font built as a subset using icons from FontAwesome and IcoMoon */
 @include font-face($font-omega, $font-omega-filename, $font-omega-path, $weight: normal, $style: normal);
 
+
 /* *****************************************************************************
 	 &BLOCKS
 	 ************************************************************************** */
+
+/* ============================================================================
+	 &GRID
+	 ========================================================================= */
+/*
+ * Gridpak Beta CSS
+ *
+ * Generator - http: //gridpak.com/
+ * Created by @erskinedesign
+ */
+
+/* rows hold columns - should be used with .cf */
+.row { margin-left: -$unit-default-px;}
+
+.ie8 .row,
+.ie7 .row { margin-left: 0;}
+
+/* Reusable column setup */
+.col {
+	border: 0 solid hsla(0,0%,0%,0);
+	@include px-and-rem(border-left-width, 1);
+	float: left;
+	@include px-and-rem(margin-bottom, 1);
+	padding: 0;
+	position:  relative;
+	// already declared at base styles - must be uncommented if not declared
+	// @include box-sizing(border-box);
+	@include background-clip(padding-box !important);
+}
+
+/*
+ * Restrict inline-block cols to modern browsers.
+ * Inline-block columns are useful when floated columns of different heights
+ * prevent subsequent columns from floating to their appropriate positions
+ */
+:root .row-ib-cols { margin: 0 -8px 0 -9px;}
+
+/*
+ * vertical align should be set on a per column basis to prevent specificity
+ * issues when attempting to use different alignment values
+ */
+:root .row-ib-cols > .col {
+	float: none;
+	display: inline-block;
+	margin-left: -5px;
+}
+
+/*
+ * IE8 doesn't separate columns well without padding.
+ * These lines can be removed if already using padding in .col
+ */
+.ie8 .col { padding: 0 $unit-default-px;}
+.ie7 .col { padding: 0 2%;}
+
+/*
+ * IE8 and IE7 should not be served media queries, even with a
+ * tool such as respond.js. IE8 and IE7 should be served the
+ * desktop version of the grid, but should do so without
+ * interfering with modern browsers.
+ */
+
+/*
+ * subtract 2.5% from each side of each column to account for IE7
+ * padding and rounding errors.
+ */
+.ie7 .col-1-ie7 { width: 3.333%;}
+.ie7 .col-2-ie7 { width: 11.667%;}
+.ie7 .col-3-ie7 { width: 20%;}
+.ie7 .col-4-ie7 { width: 28.333%;}
+.ie7 .col-5-ie7 { width: 36.667%;}
+.ie7 .col-6-ie7 { width: 45%;}
+.ie7 .col-7-ie7 { width: 53.333%;}
+.ie7 .col-8-ie7 { width: 62.667%;}
+.ie7 .col-9-ie7 { width: 70%;}
+.ie7 .col-10-ie7 { width: 78.333%;}
+.ie7 .col-11-ie7 { width: 86.667%;}
+.ie7 .col-12-ie7 {
+	margin-left: 0;
+	width: 95%;
+}
+
+.ie8 .col-1-ie8 { width: 8.333%;}
+.ie8 .col-2-ie8 { width: 16.667%;}
+.ie8 .col-3-ie8 { width: 25.0%;}
+.ie8 .col-4-ie8 { width: 33.333%;}
+.ie8 .col-5-ie8 { width: 41.667%;}
+.ie8 .col-6-ie8 { width: 50.0%;}
+.ie8 .col-7-ie8 { width: 58.333%;}
+.ie8 .col-8-ie8 { width: 66.667%;}
+.ie8 .col-9-ie8 { width: 75.0%;}
+.ie8 .col-10-ie8 { width: 83.333%;}
+.ie8 .col-11-ie8 { width: 91.667%;}
+.ie8 .col-12-ie8 {
+	margin-left: 0;
+	width: 100%;
+}
+
+
 /* =============================================================================
 	 &Main Structure
 	 ========================================================================== */
@@ -514,6 +614,8 @@ td { vertical-align: top;}
 	width: 100%;
 	height: 100%;
 }
+
+// For ratio'd divs take a look at http://www.mademyday.de/css-height-equals-width-with-pure-css.html
 
 
 /* =============================================================================
@@ -1561,122 +1663,29 @@ button.d-block { width: 100%;}
 
 
 /* *****************************************************************************
-	 &GRID & MEDIA QUERIES
+	 &MEDIA QUERIES
 	 ************************************************************************** */
-/*
- * Gridpak Beta CSS
- *
- * Generator - http: //gridpak.com/
- * Created by @erskinedesign
- */
-
-/* rows hold columns - should be used with .cf */
-.row { margin-left: -$unit-default-px;}
-
-.ie8 .row,
-.ie7 .row { margin-left: 0;}
-
-/* Reusable column setup */
-.col {
-	border: 0 solid hsla(0,0%,0%,0);
-	@include px-and-rem(border-left-width, 1);
-	float: left;
-	@include px-and-rem(margin-bottom, 1);
-	padding: 0;
-	position:  relative;
-	// already declared at base styles - must be uncommented if not declared
-	// @include box-sizing(border-box);
-	@include background-clip(padding-box !important);
-}
-
-/*
- * Restrict inline-block cols to modern browsers.
- * Inline-block columns are useful when floated columns of different heights
- * prevent subsequent columns from floating to their appropriate positions
- */
-:root .row-ib-cols { margin: 0 -8px 0 -9px;}
-
-/*
- * vertical align should be set on a per column basis to prevent specificity
- * issues when attempting to use different alignment values
- */
-:root .row-ib-cols > .col {
-	float: none;
-	display: inline-block;
-	margin-left: -5px;
-}
-
-/*
- * IE8 doesn't separate columns well without padding.
- * These lines can be removed if already using padding in .col
- */
-.ie8 .col { padding: 0 $unit-default-px;}
-.ie7 .col { padding: 0 2%;}
-
-/*
- * IE8 and IE7 should not be served media queries, even with a
- * tool such as respond.js. IE8 and IE7 should be served the
- * desktop version of the grid, but should do so without
- * interfering with modern browsers.
- */
-
-/*
- * subtract 2.5% from each side of each column to account for IE7
- * padding and rounding errors.
- */
-.ie7 .col-1-ie7 { width: 3.333%;}
-.ie7 .col-2-ie7 { width: 11.667%;}
-.ie7 .col-3-ie7 { width: 20%;}
-.ie7 .col-4-ie7 { width: 28.333%;}
-.ie7 .col-5-ie7 { width: 36.667%;}
-.ie7 .col-6-ie7 { width: 45%;}
-.ie7 .col-7-ie7 { width: 53.333%;}
-.ie7 .col-8-ie7 { width: 62.667%;}
-.ie7 .col-9-ie7 { width: 70%;}
-.ie7 .col-10-ie7 { width: 78.333%;}
-.ie7 .col-11-ie7 { width: 86.667%;}
-.ie7 .col-12-ie7 {
-	margin-left: 0;
-	width: 95%;
-}
-
-.ie8 .col-1-ie8 { width: 8.333%;}
-.ie8 .col-2-ie8 { width: 16.667%;}
-.ie8 .col-3-ie8 { width: 25.0%;}
-.ie8 .col-4-ie8 { width: 33.333%;}
-.ie8 .col-5-ie8 { width: 41.667%;}
-.ie8 .col-6-ie8 { width: 50.0%;}
-.ie8 .col-7-ie8 { width: 58.333%;}
-.ie8 .col-8-ie8 { width: 66.667%;}
-.ie8 .col-9-ie8 { width: 75.0%;}
-.ie8 .col-10-ie8 { width: 83.333%;}
-.ie8 .col-11-ie8 { width: 91.667%;}
-.ie8 .col-12-ie8 {
-	margin-left: 0;
-	width: 100%;
-}
-
-/* 1. 2 Column Grid - &vpalpha 0px ->
-================================================================================
-Col 1:   8.33333333333%
-Col 2:   16.6666666667%
-Col 3:   25.0%
-Col 4:   33.3333333333%
-Col 5:   41.6666666667%
-Col 6:   50.0%
-Col 7:   58.3333333333%
-Col 8:   66.6666666667%
-Col 9:   75.0%
-Col 10:  83.3333333333%
-Col 11:  91.6666666667%
-Col 12:  100%
-============================================================================= */
-
-/*
- * At base font-size of #{$unit-default-px}
- */
  @media screen and (min-width: 0) {
 
+	/* **************************************************************************
+	 &GRID - vpalpha
+	 ***************************************************************************/
+
+	/* 1. 12 Column Grid - &vpalpha 0px ->
+	=============================================================================
+	Col 1:   8.33333333333%
+	Col 2:   16.6666666667%
+	Col 3:   25.0%
+	Col 4:   33.3333333333%
+	Col 5:   41.6666666667%
+	Col 6:   50.0%
+	Col 7:   58.3333333333%
+	Col 8:   66.6666666667%
+	Col 9:   75.0%
+	Col 10:  83.3333333333%
+	Col 11:  91.6666666667%
+	Col 12:  100%
+	========================================================================== */
 	.col-1-vpalpha { width: 8.33333333333%;}
 	.col-2-vpalpha { width: 16.6666666667%;}
 	.col-3-vpalpha { width: 25.0%;}
@@ -1694,21 +1703,7 @@ Col 12:  100%
 	}
 }
 
-/* 2. 6 Column Grid - &vpbeta - 480px ->
-================================================================================
-Col 1:   8.33333333333%
-Col 2:   16.6666666667%
-Col 3:   25.0%
-Col 4:   33.3333333333%
-Col 5:   41.6666666667%
-Col 6:   50.0%
-Col 7:   58.3333333333%
-Col 8:   66.6666666667%
-Col 9:   75.0%
-Col 10:  83.3333333333%
-Col 11:  91.6666666667%
-Col 12:  100%
-============================================================================= */
+
 
 /*
  * At base font-size of #{$unit-default-px}
@@ -1717,6 +1712,25 @@ Col 12:  100%
 
 @media screen and (min-width: 30em) {
 
+	/* **************************************************************************
+	 &GRID - vpbeta
+	 ***************************************************************************/
+
+	/* 2. 12 Column Grid - &vpbeta - 480px ->
+	=============================================================================
+	Col 1:   8.33333333333%
+	Col 2:   16.6666666667%
+	Col 3:   25.0%
+	Col 4:   33.3333333333%
+	Col 5:   41.6666666667%
+	Col 6:   50.0%
+	Col 7:   58.3333333333%
+	Col 8:   66.6666666667%
+	Col 9:   75.0%
+	Col 10:  83.3333333333%
+	Col 11:  91.6666666667%
+	Col 12:  100%
+	========================================================================== */
 	.col-1-vpbeta { width: 8.33333333333%;}
 	.col-2-vpbeta { width: 16.6666666667%;}
 	.col-3-vpbeta { width: 25.0%;}
@@ -1734,21 +1748,7 @@ Col 12:  100%
 	}
 }
 
-/* 3. 12 Column Grid - &vpgamma - 768px ->
-================================================================================
-Col 1:   8.33333333333%
-Col 2:   16.6666666667%
-Col 3:   25.0%
-Col 4:   33.3333333333%
-Col 5:   41.6666666667%
-Col 6:   50.0%
-Col 7:   58.3333333333%
-Col 8:   66.6666666667%
-Col 9:   75.0%
-Col 10:  83.3333333333%
-Col 11:  91.6666666667%
-Col 12:  100%
-============================================================================= */
+
 
 /*
  * At base font-size of #{$unit-default-px}
@@ -1756,6 +1756,25 @@ Col 12:  100%
  */
 @media screen and (min-width: 48em) {
 
+	/* **************************************************************************
+	 &GRID - vpgamma
+	 ***************************************************************************/
+
+	/* 3. 12 Column Grid - &vpgamma - 768px ->
+	=============================================================================
+	Col 1:   8.33333333333%
+	Col 2:   16.6666666667%
+	Col 3:   25.0%
+	Col 4:   33.3333333333%
+	Col 5:   41.6666666667%
+	Col 6:   50.0%
+	Col 7:   58.3333333333%
+	Col 8:   66.6666666667%
+	Col 9:   75.0%
+	Col 10:  83.3333333333%
+	Col 11:  91.6666666667%
+	Col 12:  100%
+	========================================================================== */
 	.col-1-vpgamma { width: 8.333%;}
 	.col-2-vpgamma { width: 16.667%;}
 	.col-3-vpgamma { width: 25.0%;}
@@ -1773,21 +1792,6 @@ Col 12:  100%
 	}
 }
 
-/* 4. 12 Column Grid - &vpdelta - 1280px ->
-================================================================================
-Col 1:   8.33333333333%
-Col 2:   16.6666666667%
-Col 3:   25.0%
-Col 4:   33.3333333333%
-Col 5:   41.6666666667%
-Col 6:   50.0%
-Col 7:   58.3333333333%
-Col 8:   66.6666666667%
-Col 9:   75.0%
-Col 10:   83.3333333333%
-Col 11:   91.6666666667%
-Col 12:   100%
-============================================================================= */
 
 /*
  * At base font-size of #{$unit-default-px}
@@ -1795,6 +1799,25 @@ Col 12:   100%
  */
 @media screen and (min-width: 80em) {
 
+	/* **************************************************************************
+	 &GRID - vpdelta
+	 ***************************************************************************/
+
+	/* 4. 12 Column Grid - &vpdelta - 1280px ->
+	=============================================================================
+	Col 1:   8.33333333333%
+	Col 2:   16.6666666667%
+	Col 3:   25.0%
+	Col 4:   33.3333333333%
+	Col 5:   41.6666666667%
+	Col 6:   50.0%
+	Col 7:   58.3333333333%
+	Col 8:   66.6666666667%
+	Col 9:   75.0%
+	Col 10:   83.3333333333%
+	Col 11:   91.6666666667%
+	Col 12:   100%
+	========================================================================== */
 	.col-1-vpdelta { width: 8.33333333333%;}
 	.col-2-vpdelta { width: 16.6666666667%;}
 	.col-3-vpdelta { width: 25.0%;}
