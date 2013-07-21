@@ -45,7 +45,6 @@
         options: {
           port: 9000,
           hostname: '0.0.0.0',
-          base: 'styleguide',
           keepalive: true
         },
         middleware: function(connect, options) {
@@ -57,10 +56,10 @@
         dist: {
           options: {
             quiet: false,
-            cacheLocation: 'css/scss/.sass-cache'
+            cacheLocation: 'css/sass/.sass-cache'
           },
           files: {
-            'style.css': 'css/scss/style.scss'
+            'style.css': 'css/sass/style.scss'
           }
         }
       },
@@ -71,7 +70,7 @@
           tasks: ['jshint']
         },
         css: {
-          files: ['css/scss/**/*.scss'],
+          files: ['css/sass/**/*.scss'],
           tasks: ['sass']
         },
         styleguide: {
