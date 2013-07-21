@@ -2,3 +2,7 @@
 config.rb
 .sass-cache/
 projects/
+
+# ignore grunt files
+node_modules
+npm-debug.log
