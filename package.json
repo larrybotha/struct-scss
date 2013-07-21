@@ -4,16 +4,8 @@
   "devDependencies": {
     "grunt": "~0.4.1",
     "grunt-contrib-sass": "~0.4.1",
-    "grunt-contrib-uglify": "~0.2.2",
     "grunt-contrib-watch": "~0.5.1",
     "grunt-contrib-jshint": "~0.6.0",
     "grunt-contrib-connect": "~0.3.0"
-  },
-  "path": {
-    "scss": "src/wp-content/themes/{%= theme_folder %}/css/sass",
-    "img": "src/wp-content/themes/{%= theme_folder %}/img",
-    "js": "src/wp-content/themes/{%= theme_folder %}/js",
-    "theme": "src/wp-content/themes/{%= theme_folder %}",
-    "theme_parent": "src/wp-content/themes"
   }
 }

@@ -11,6 +11,8 @@
   'use strict';
   module.exports = function(grunt) {
 
+    var pkg = grunt.file.readJSON('package.json');
+
     // Load dependancies
     var dep, dependencies, _i, _len;
 
@@ -23,21 +25,12 @@
       grunt.loadNpmTasks(dep);
     }
 
-
     grunt.initConfig({
-      pkg: grunt.file.readJSON('package.json'),
-      // Minify js
-      uglify: {
-        dist: {
-          options: {
-            banner: '/*! <%= pkg.name %> <%= grunt.template.today("dd-mm-yyyy") %> */\n'
-          },
-          files: { '<%= pkg.path.js %>/main.min.js': ['<%= pkg.path.js %>/main.js'] }
-        }
-      },
+
+      pkg: pkg,
       // Run js through jshint
       jshint: {
-        files: ['gruntfile.js', 'styleguide/styleguide-js/main.js', '<%= pkg.path.js %>/main.js'],
+        files: ['gruntfile.js', 'styleguide-js/main.js', 'js/main.js'],
         options: {
           globals: {
             jQuery: true,
@@ -64,10 +57,10 @@
         dist: {
           options: {
             quiet: false,
-            cacheLocation: '<%= pkg.path.scss %>/.sass-cache'
+            cacheLocation: 'css/scss/.sass-cache'
           },
           files: {
-            '<%= pkg.path.theme %>/style.css': '<%= pkg.path.scss %>/style.scss'
+            'style.css': 'css/scss/style.scss'
           }
         }
       },
@@ -78,27 +71,19 @@
           tasks: ['jshint']
         },
         css: {
-          files: ['<%= pkg.path.scss %>/**/*.scss'],
+          files: ['css/scss/**/*.scss'],
           tasks: ['sass']
         },
         styleguide: {
-          files: ['styleguide/styleguide-js/main.js', '<%= pkg.path.js %>/main.js'],
+          files: ['styleguide-js/main.js', 'js/main.js'],
           tasks: ['jshint']
         }
       }
     });
 
-    // grunt.loadNpmTasks('grunt-contrib-uglify');
-    // grunt.loadNpmTasks('grunt-contrib-jshint');
-    // grunt.loadNpmTasks('grunt-contrib-sass');
-    // grunt.loadNpmTasks('grunt-contrib-watch');
-    // grunt.loadNpmTasks('grunt-contrib-connect');
-
     grunt.registerTask('server', ['connect']);
 
-    grunt.registerTask('test', ['sass', 'jshint']);
-
-    grunt.registerTask('default', ['sass', 'jshint', 'uglify']);
+    grunt.registerTask('default', ['sass', 'jshint']);
 
   };
 }());
