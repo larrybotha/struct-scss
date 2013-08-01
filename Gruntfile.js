@@ -63,6 +63,12 @@
           }
         }
       },
+      // Execute shell commands
+      shell: {
+        kss: {
+          command: 'kss-node css/sass / --init --sass css/sass/style.scss'
+        }
+      },
       // Watch for changes to files
       watch: {
         gruntfile: {
@@ -83,6 +89,8 @@
         }
       }
     });
+
+    grunt.registerTask('kss', ['shell:kss']);
 
     grunt.registerTask('server', ['connect']);
 
