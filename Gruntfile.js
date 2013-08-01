@@ -76,6 +76,10 @@
         styleguide: {
           files: ['styleguide-js/main.js', 'js/main.js'],
           tasks: ['jshint']
+        },
+        kss: {
+          files: ['css/sass/**/docs/**/*.scss'],
+          tasks: ['shell:kss']
         }
       }
     });
