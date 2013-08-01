@@ -1,0 +1,16 @@
+/*
+Button defaults
+
+Markup:
+<a class="btn {$modifiers}" href="#">anchor</a>
+<button class="btn {$modifiers}">button</button>
+<label class="btn {$modifiers}">label</label>
+<input class="btn {$modifiers}" type="submit" value="submit">
+
+:hover					- hover state
+:active					- active state
+.btn-selected		- selected state
+.disabled				- disabled with class
+
+Styleguide 1.1
+*/

@@ -814,7 +814,8 @@ input:checked + label > .checkbox-custom:before { content: "\e001"; /* .icon-che
 /* =============================================================================
 	 &Buttons
 	 ========================================================================== */
-@import 'docs/docs-buttons';
+@import 'docs/buttons/docs-!buttons';
+@import 'docs/buttons/docs-buttons-default';
 .btn {
 	position: relative;
 	display: inline-block;
@@ -863,6 +864,7 @@ input:checked + label > .checkbox-custom:before { content: "\e001"; /* .icon-che
 	@include box-shadow(none);
 }
 
+@import 'docs/buttons/docs-buttons-group';
 .btn-group { display: inline-block;}
 
 .btn-group > .btn {
