@@ -14,23 +14,15 @@
 	box-shadow: inset -15px 0px 15px -15px rgba(45, 45, 45, 0.25);
 }
 
-// #kss-header h1 {
-//   font-size:1.5em;
-//   margin-top:5/3em;
-//   margin-left:4/3em;
-// }
-
 #kss-main, #kss-nav {
-	position:absolute;
-	top:0;
-	left:0;
+	position: relative;
+  float: left;
 }
 
 #kss-main {
 	padding-left:2.5em;
 	width:80%;
 	max-width:980px;
-	left:20%;
 }
 
 .kss-mod-list {
@@ -45,13 +37,14 @@
 
 .kss-mod-example {
   padding-bottom:20px;
-         
          display:block;
   &>td { display:block; }
 }
 
 .kss-markup {
   margin-bottom:40px;
+  padding: 0 1.5em;
+  border: 1px solid #eee;
 }
 
 .kss-depth-1 > h1 { font-size: 2.5em * 0.950; }
