@@ -35,12 +35,25 @@
         <hgroup><h1>kss-node Styleguide</h1></hgroup>
       </header>
       <aside>
-        <nav><ul>
-          <li><a href="index.html">0.0: Overview</a></li>
-          {{#eachRoot}}
-            <li><a href="section-{{reference}}.html">{{reference}}.0: {{header}}</a></li>
-          {{/eachRoot}}
-        </ul></nav>
+        <nav>
+          <ul class="kss-menu" data-kss-ref="{{rootNumber}}">
+            <li class="kss-menu-item"><a href="./"><span class="kss-ref">0</span> <span class="kss-name">Overview</span></a></li>
+            {{#eachRoot}}
+            <li class="kss-menu-item"><a href="section-{{reference}}.html"><span class="kss-ref">{{reference}}</span> <span class="kss-name">{{header}}</span></a></li>
+            {{/eachRoot}}
+          </ul>
+          {{#if overview}}
+          {{else}}
+          <ul class="kss-menu-child">
+            {{#eachSection rootNumber}}
+            {{#whenDepth 1}}
+            {{else}}
+            <li class="kss-menu-item"><a href="#section-{{reference}}"><span class="kss-ref">{{reference}}</span> <span class="kss-name">{{header}}</span></a></li>
+            {{/whenDepth}}
+            {{/eachSection}}
+          </ul>
+          {{/if}}
+        </nav>
       </aside>
     </div>
     <div role="main" id="kss-main">
@@ -61,36 +74,44 @@
             {{#whenDepth 1}}
               <h1 class="kss-title"><span class="kss-ref">{{ reference }}.</span> {{ header }}</h1>
             {{else}}
-             <section class="kss-depth-{{ refDepth }}">
-              <h2 class="kss-title"><span class="kss-ref">{{ reference }}</span> - {{ header }}</h2>
+             <section id="section-{{reference}}" class="kss-depth-{{ refDepth }}">
+              <h2 class="kss-title"><span class="kss-ref">{{ reference }}</span> {{ header }}</h2>
             {{/whenDepth}}
               {{#ifAny markup modifiers}}
-                  <div class="kss-box">{{html description}}</div>
-                  <table class="kss-mod-list">
-                    <tr class="kss-mod-desc-group">
-                      <td class="kss-mod-desc"><p>Default styling</p></td>
-                      <td class="kss-mod-name"></td>
-                    </tr>
-                    <tr class="kss-mod-example">
-                      <td colspan="2">{{modifierMarkup}}</td>
-                    </tr>
-                  {{#eachModifier}}
-                    <tr class="kss-mod-desc-group">
-                      <td class="kss-mod-desc">{{html description}}</td>
-                      <td class="kss-mod-name"><p>{{name}}</p></td>
-                    </tr>
-                    <tr class="kss-mod-example">
-                      <td colspan="2">{{modifierMarkup}}</td>
-                    </tr>
-                  {{/eachModifier}}
-                  </table>
-                  <div class="kss-markup">
-                    <pre class="prettyprint lang-html">{{markup}}</pre>
+              {{#if description}}
+              <div class="kss-description">
+                {{html description}}
+              </div>
+              {{/if}}
+              <div class="kss-modifier-block">
+                <div class="kss-modifier kss-modifier-original">
+                  <div class="kss-modifier-example">
+                    {{modifierMarkup}}
                   </div>
+                </div>
+                {{#eachModifier}}
+                <div class="kss-modifier">
+                  <div class="kss-modifier-head">
+                    <div class="kss-modifier-name">{{name}}</div>
+                    <div class="kss-modifier-description">
+                      {{html description}}
+                    </div>
+                  </div>
+                  <div class="kss-modifier-example">
+                    {{modifierMarkup}}
+                  </div>
+                </div>
+                {{/eachModifier}}
+                <div class="kss-markup">
+                  <pre><code data-language="html">{{markup}}</code></pre>
+                </div>
+              </div>
               {{else}}
-                  {{#if description}}
-                    {{html description}}
-                  {{/if}}
+              {{#if description}}
+              <div class="kss-description">
+                {{html description}}
+              </div>
+              {{/if}}
               {{/ifAny}}
             {{#whenDepth 1}} {{else}}
               </section>
@@ -99,13 +120,10 @@
         {{/if}}
       </article>
     </div>
-    <footer>
-      {{#if argv.xdemo}}<a href="http://github.com/hughsk/kss-node"><img id="kss-github" style="position: absolute; top: 0; right: 0; border: 0;" src="https://a248.e.akamai.net/assets.github.com/img/30f550e0d38ceb6ef5b81500c64d970b7fb0f028/687474703a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6f72616e67655f6666373630302e706e67" alt="Fork me on GitHub"></a>{{/if}}
-    </footer>
     <!-- SCRIPTS -->
     <script src="public/kss.js"></script>
     <script src="public/prettify.js"></script>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
     <script>
       $(document).ready(function(){
         var sidebarAdjust = function() {
