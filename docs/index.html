@@ -35,12 +35,16 @@
         <hgroup><h1>kss-node Styleguide</h1></hgroup>
       </header>
       <aside>
-        <nav><ul>
-          <li><a href="index.html">0.0: Overview</a></li>
+        <nav>
+          <ul class="kss-menu" data-kss-ref="0">
+            <li class="kss-menu-item"><a href="./"><span class="kss-ref">0</span> <span class="kss-name">Overview</span></a></li>
+            
+            <li class="kss-menu-item"><a href="section-1.html"><span class="kss-ref">1</span> <span class="kss-name">Buttons</span></a></li>
+            
+          </ul>
           
-            <li><a href="section-1.html">1.0: Button</a></li>
           
-        </ul></nav>
+        </nav>
       </aside>
     </div>
     <div role="main" id="kss-main">
@@ -52,13 +56,10 @@
         
       </article>
     </div>
-    <footer>
-      
-    </footer>
     <!-- SCRIPTS -->
     <script src="public/kss.js"></script>
     <script src="public/prettify.js"></script>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
     <script>
       $(document).ready(function(){
         var sidebarAdjust = function() {
