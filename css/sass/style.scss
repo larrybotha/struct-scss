@@ -814,23 +814,7 @@ input:checked + label > .checkbox-custom:before { content: "\e001"; /* .icon-che
 /* =============================================================================
 	 &Buttons
 	 ========================================================================== */
-
-/*
-Button
-
-Buttons description
-
-Markup:
-<a class="btn {$modifiers}" href="#">buttont text</a>
-<button class="btn {$modifiers}" href="#">buttont text</button>
-
-:hover					- some stuff
-:active					- more stuff
-.btn-selected		- other stuff
-
-Styleguide 1
-
- */
+@import 'docs/docs-buttons';
 .btn {
 	position: relative;
 	display: inline-block;
