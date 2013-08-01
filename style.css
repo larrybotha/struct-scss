@@ -521,7 +521,7 @@ td {
 
 /* Reusable column setup */
 .col {
-  border: 0 solid rgba(0, 0, 0, 0);
+  border: 0 solid transparent;
   border-left-width: 14px;
   border-left-width: 1rem;
   float: left;
@@ -1179,7 +1179,7 @@ input:checked + label > .checkbox-custom:before {
   cursor: default; }
 
 .btn[disabled], .btn.disabled {
-  color: gray;
+  color: grey;
   cursor: default; }
 
 .btn[disabled], .btn.disabled,
@@ -1439,7 +1439,7 @@ li.icon.icon-large:before, li.icon.icon-large:before {
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
   white-space: nowrap;
   vertical-align: baseline;
-  background-color: gray;
+  background-color: grey;
   padding: 1px 4px 2px;
   border-radius: 2px; }
 
@@ -1515,7 +1515,7 @@ a.label:hover {
   margin: 0 0 1.5rem;
   padding: 21px;
   padding: 1.5rem;
-  border: 0 solid rgba(0, 0, 0, 0);
+  border: 0 solid transparent;
   border-left-width: 21px;
   border-left-width: 1.5rem; }
 
