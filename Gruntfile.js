@@ -45,7 +45,8 @@
         options: {
           port: 9000,
           hostname: '0.0.0.0',
-          keepalive: true
+          keepalive: true,
+          base: 'docs'
         },
         middleware: function(connect, options) {
           return connect.static(options.base);
@@ -61,12 +62,28 @@
           files: {
             'style.css': 'css/sass/style.scss'
           }
+        },
+        dev: {
+          options: {
+            quiet: false,
+            cacheLocation: 'css/sass/.sass-cache',
+            style: 'expanded'
+          },
+          files: {
+            'css/style.doc.css': 'css/sass/style.scss'
+          }
         }
       },
       // Execute shell commands
       shell: {
         kss: {
-          command: 'kss-node css/sass / --init --sass css/sass/style.scss'
+          command: [
+            'rm -rf docs',
+            'kss-node css/sass/docs docs --css css/style.doc.css --template styleguide-template'
+          ].join('&&'),
+          options: {
+            stdout: true
+          }
         }
       },
       // Watch for changes to files
@@ -85,12 +102,12 @@
         },
         kss: {
           files: ['css/sass/**/docs/**/*.scss'],
-          tasks: ['shell:kss']
+          tasks: ['sass:dev', 'shell:kss']
         }
       }
     });
 
-    grunt.registerTask('kss', ['shell:kss']);
+    grunt.registerTask('kss', ['sass:dev', 'shell:kss']);
 
     grunt.registerTask('server', ['connect']);
 

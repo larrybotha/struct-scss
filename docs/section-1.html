@@ -37,70 +37,87 @@
       <aside>
         <nav><ul>
           <li><a href="index.html">0.0: Overview</a></li>
-          {{#eachRoot}}
-            <li><a href="section-{{reference}}.html">{{reference}}.0: {{header}}</a></li>
-          {{/eachRoot}}
+          
+            <li><a href="section-1.html">1.0: Button</a></li>
+          
         </ul></nav>
       </aside>
     </div>
     <div role="main" id="kss-main">
       <article id="kss-content">
-        {{#if overview}}
-          {{html overview}}
-        {{else}}
+        
 
-          {{!
-            Find each section, in order.
-            If there's no markup or modifiers supplied, use a Markdown-only
-            layout instead.
-
-            The "root" element comes first in this loop, and can be detected using
-            the "#whenDepth 1" block as seen below.
-          }}
-          {{#eachSection rootNumber}}
-            {{#whenDepth 1}}
-              <h1 class="kss-title"><span class="kss-ref">{{ reference }}.</span> {{ header }}</h1>
-            {{else}}
-             <section class="kss-depth-{{ refDepth }}">
-              <h2 class="kss-title"><span class="kss-ref">{{ reference }}</span> - {{ header }}</h2>
-            {{/whenDepth}}
-              {{#ifAny markup modifiers}}
-                  <div class="kss-box">{{html description}}</div>
+          
+          
+            
+              <h1 class="kss-title"><span class="kss-ref">1.</span> Button</h1>
+            
+              
+                
+                  <div class="kss-box"></div>
+                
                   <table class="kss-mod-list">
                     <tr class="kss-mod-desc-group">
                       <td class="kss-mod-desc"><p>Default styling</p></td>
                       <td class="kss-mod-name"></td>
                     </tr>
                     <tr class="kss-mod-example">
-                      <td colspan="2">{{modifierMarkup}}</td>
+                      <td colspan="2"><a class="btn {$modifiers}" href="#">button text</a>
+<button class="btn {$modifiers}">button text</button></td>
                     </tr>
-                  {{#eachModifier}}
+                  
                     <tr class="kss-mod-desc-group">
-                      <td class="kss-mod-desc">{{html description}}</td>
-                      <td class="kss-mod-name"><p>{{name}}</p></td>
+                      <td class="kss-mod-desc"></td>
+                      <td class="kss-mod-name"><p>:hover</p></td>
                     </tr>
                     <tr class="kss-mod-example">
-                      <td colspan="2">{{modifierMarkup}}</td>
+                      <td colspan="2"><a class="btn pseudo-class-hover" href="#">button text</a>
+<button class="btn pseudo-class-hover">button text</button></td>
                     </tr>
-                  {{/eachModifier}}
+                  
+                    <tr class="kss-mod-desc-group">
+                      <td class="kss-mod-desc"><p>more stuff</p>
+</td>
+                      <td class="kss-mod-name"><p>:active</p></td>
+                    </tr>
+                    <tr class="kss-mod-example">
+                      <td colspan="2"><a class="btn pseudo-class-active" href="#">button text</a>
+<button class="btn pseudo-class-active">button text</button></td>
+                    </tr>
+                  
+                    <tr class="kss-mod-desc-group">
+                      <td class="kss-mod-desc"><p>other stuffs</p>
+</td>
+                      <td class="kss-mod-name"><p>.btn-selected</p></td>
+                    </tr>
+                    <tr class="kss-mod-example">
+                      <td colspan="2"><a class="btn btn-selected" href="#">button text</a>
+<button class="btn btn-selected">button text</button></td>
+                    </tr>
+                  
+                    <tr class="kss-mod-desc-group">
+                      <td class="kss-mod-desc"><p>other stuffs</p>
+</td>
+                      <td class="kss-mod-name"><p>disabled</p></td>
+                    </tr>
+                    <tr class="kss-mod-example">
+                      <td colspan="2"><a class="btn disabled" href="#">button text</a>
+<button class="btn disabled">button text</button></td>
+                    </tr>
+                  
                   </table>
                   <div class="kss-markup">
-                    <pre class="prettyprint lang-html">{{markup}}</pre>
+                    <pre class="prettyprint lang-html">&lt;a class=&quot;btn {$modifiers}&quot; href=&quot;#&quot;&gt;button text&lt;/a&gt;
+&lt;button class=&quot;btn {$modifiers}&quot;&gt;button text&lt;/button&gt;</pre>
                   </div>
-              {{else}}
-                  {{#if description}}
-                    {{html description}}
-                  {{/if}}
-              {{/ifAny}}
-            {{#whenDepth 1}} {{else}}
-              </section>
-            {{/whenDepth}}
-          {{/eachSection}}
-        {{/if}}
+              
+             
+          
+        
       </article>
     </div>
     <footer>
-      {{#if argv.xdemo}}<a href="http://github.com/hughsk/kss-node"><img id="kss-github" style="position: absolute; top: 0; right: 0; border: 0;" src="https://a248.e.akamai.net/assets.github.com/img/30f550e0d38ceb6ef5b81500c64d970b7fb0f028/687474703a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6f72616e67655f6666373630302e706e67" alt="Fork me on GitHub"></a>{{/if}}
+      
     </footer>
     <!-- SCRIPTS -->
     <script src="public/kss.js"></script>
@@ -130,13 +147,8 @@
       });
     </script>
 
-    {{! This won't be included in the demo page }}
-    {{#if argv.xdemo}}
-      <script type="text/javascript">
-      var _gaq = _gaq || []; _gaq.push(['_setAccount', 'UA-12249588-4']); _gaq.push(['_trackPageview']);
-      (function() { var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true; ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s); })();
-      </script>
-    {{/if}}
+    
+    
   </div>
 </body>
 </html>
