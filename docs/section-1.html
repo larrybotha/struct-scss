@@ -35,12 +35,34 @@
         <hgroup><h1>kss-node Styleguide</h1></hgroup>
       </header>
       <aside>
-        <nav><ul>
-          <li><a href="index.html">0.0: Overview</a></li>
+        <nav>
+          <ul class="kss-menu" data-kss-ref="1">
+            <li class="kss-menu-item"><a href="./"><span class="kss-ref">0</span> <span class="kss-name">Overview</span></a></li>
+            
+            <li class="kss-menu-item"><a href="section-1.html"><span class="kss-ref">1</span> <span class="kss-name">Buttons</span></a></li>
+            
+          </ul>
           
-            <li><a href="section-1.html">1.0: Button</a></li>
+          <ul class="kss-menu-child">
+            
+            
+            
+            
+            
+            <li class="kss-menu-item"><a href="#section-1.1"><span class="kss-ref">1.1</span> <span class="kss-name">Button defaults</span></a></li>
+            
+            
+            
+            <li class="kss-menu-item"><a href="#section-1.2"><span class="kss-ref">1.2</span> <span class="kss-name">Disabled buttons</span></a></li>
+            
+            
+            
+            <li class="kss-menu-item"><a href="#section-1.3"><span class="kss-ref">1.3</span> <span class="kss-name">Button groups</span></a></li>
+            
+            
+          </ul>
           
-        </ul></nav>
+        </nav>
       </aside>
     </div>
     <div role="main" id="kss-main">
@@ -50,79 +72,194 @@
           
           
             
-              <h1 class="kss-title"><span class="kss-ref">1.</span> Button</h1>
+              <h1 class="kss-title"><span class="kss-ref">1.</span> Buttons</h1>
             
               
-                
-                  <div class="kss-box"></div>
-                
-                  <table class="kss-mod-list">
-                    <tr class="kss-mod-desc-group">
-                      <td class="kss-mod-desc"><p>Default styling</p></td>
-                      <td class="kss-mod-name"></td>
-                    </tr>
-                    <tr class="kss-mod-example">
-                      <td colspan="2"><a class="btn {$modifiers}" href="#">button text</a>
-<button class="btn {$modifiers}">button text</button></td>
-                    </tr>
-                  
-                    <tr class="kss-mod-desc-group">
-                      <td class="kss-mod-desc"></td>
-                      <td class="kss-mod-name"><p>:hover</p></td>
-                    </tr>
-                    <tr class="kss-mod-example">
-                      <td colspan="2"><a class="btn pseudo-class-hover" href="#">button text</a>
-<button class="btn pseudo-class-hover">button text</button></td>
-                    </tr>
-                  
-                    <tr class="kss-mod-desc-group">
-                      <td class="kss-mod-desc"><p>more stuff</p>
-</td>
-                      <td class="kss-mod-name"><p>:active</p></td>
-                    </tr>
-                    <tr class="kss-mod-example">
-                      <td colspan="2"><a class="btn pseudo-class-active" href="#">button text</a>
-<button class="btn pseudo-class-active">button text</button></td>
-                    </tr>
-                  
-                    <tr class="kss-mod-desc-group">
-                      <td class="kss-mod-desc"><p>other stuffs</p>
-</td>
-                      <td class="kss-mod-name"><p>.btn-selected</p></td>
-                    </tr>
-                    <tr class="kss-mod-example">
-                      <td colspan="2"><a class="btn btn-selected" href="#">button text</a>
-<button class="btn btn-selected">button text</button></td>
-                    </tr>
-                  
-                    <tr class="kss-mod-desc-group">
-                      <td class="kss-mod-desc"><p>other stuffs</p>
-</td>
-                      <td class="kss-mod-name"><p>disabled</p></td>
-                    </tr>
-                    <tr class="kss-mod-example">
-                      <td colspan="2"><a class="btn disabled" href="#">button text</a>
-<button class="btn disabled">button text</button></td>
-                    </tr>
-                  
-                  </table>
-                  <div class="kss-markup">
-                    <pre class="prettyprint lang-html">&lt;a class=&quot;btn {$modifiers}&quot; href=&quot;#&quot;&gt;button text&lt;/a&gt;
-&lt;button class=&quot;btn {$modifiers}&quot;&gt;button text&lt;/button&gt;</pre>
-                  </div>
+              
+              <div class="kss-description">
+                <p>Button styles are tested to work against a number of different elements for consistent and predictable styling:
+
+</p>
+<ul>
+    <li>anchor tags</li>
+    <li>button tags</li>
+    <li>label tags</li>
+    <li>inputs as submits</li>
+</ul>
+              </div>
+              
               
              
+          
+            
+             <section id="section-1.1" class="kss-depth-2">
+              <h2 class="kss-title"><span class="kss-ref">1.1</span> Button defaults</h2>
+            
+              
+              
+              <div class="kss-modifier-block">
+                <div class="kss-modifier kss-modifier-original">
+                  <div class="kss-modifier-example">
+                    <a class="btn {$modifiers}" href="#">anchor</a>
+<button class="btn {$modifiers}">button</button>
+<label class="btn {$modifiers}">label</label>
+<input class="btn {$modifiers}" type="submit" value="submit">
+                  </div>
+                </div>
+                
+                <div class="kss-modifier">
+                  <div class="kss-modifier-head">
+                    <div class="kss-modifier-name">:hover</div>
+                    <div class="kss-modifier-description">
+                      <p>hover state</p>
+
+                    </div>
+                  </div>
+                  <div class="kss-modifier-example">
+                    <a class="btn pseudo-class-hover" href="#">anchor</a>
+<button class="btn pseudo-class-hover">button</button>
+<label class="btn pseudo-class-hover">label</label>
+<input class="btn pseudo-class-hover" type="submit" value="submit">
+                  </div>
+                </div>
+                
+                <div class="kss-modifier">
+                  <div class="kss-modifier-head">
+                    <div class="kss-modifier-name">:active</div>
+                    <div class="kss-modifier-description">
+                      <p>active state</p>
+
+                    </div>
+                  </div>
+                  <div class="kss-modifier-example">
+                    <a class="btn pseudo-class-active" href="#">anchor</a>
+<button class="btn pseudo-class-active">button</button>
+<label class="btn pseudo-class-active">label</label>
+<input class="btn pseudo-class-active" type="submit" value="submit">
+                  </div>
+                </div>
+                
+                <div class="kss-modifier">
+                  <div class="kss-modifier-head">
+                    <div class="kss-modifier-name">.btn-selected</div>
+                    <div class="kss-modifier-description">
+                      <p>selected state</p>
+
+                    </div>
+                  </div>
+                  <div class="kss-modifier-example">
+                    <a class="btn btn-selected" href="#">anchor</a>
+<button class="btn btn-selected">button</button>
+<label class="btn btn-selected">label</label>
+<input class="btn btn-selected" type="submit" value="submit">
+                  </div>
+                </div>
+                
+                <div class="kss-modifier">
+                  <div class="kss-modifier-head">
+                    <div class="kss-modifier-name">.disabled</div>
+                    <div class="kss-modifier-description">
+                      <p>disabled with class</p>
+
+                    </div>
+                  </div>
+                  <div class="kss-modifier-example">
+                    <a class="btn disabled" href="#">anchor</a>
+<button class="btn disabled">button</button>
+<label class="btn disabled">label</label>
+<input class="btn disabled" type="submit" value="submit">
+                  </div>
+                </div>
+                
+                <div class="kss-markup">
+                  <pre><code data-language="html">&lt;a class=&quot;btn {$modifiers}&quot; href=&quot;#&quot;&gt;anchor&lt;/a&gt;
+&lt;button class=&quot;btn {$modifiers}&quot;&gt;button&lt;/button&gt;
+&lt;label class=&quot;btn {$modifiers}&quot;&gt;label&lt;/label&gt;
+&lt;input class=&quot;btn {$modifiers}&quot; type=&quot;submit&quot; value=&quot;submit&quot;&gt;</code></pre>
+                </div>
+              </div>
+              
+            
+              </section>
+            
+          
+            
+             <section id="section-1.2" class="kss-depth-2">
+              <h2 class="kss-title"><span class="kss-ref">1.2</span> Disabled buttons</h2>
+            
+              
+              
+              <div class="kss-modifier-block">
+                <div class="kss-modifier kss-modifier-original">
+                  <div class="kss-modifier-example">
+                    <a disabled class="btn" href="#">anchor [disabled]</a>
+<a class="btn disabled " href="#">anchor .disabled</a>
+<br>
+<button disabled class="btn">button [disabled]</button>
+<button class="btn disabled ">button .disabled</button>
+<br>
+<label disabled class="btn">label [disabled]</label>
+<label class="btn disabled ">label .disabled</label>
+<br>
+<input disabled class="btn" type="submit" value="submit [disabled]">
+<input class="btn disabled " type="submit" value="submit .disabled">
+                  </div>
+                </div>
+                
+                <div class="kss-markup">
+                  <pre><code data-language="html">&lt;a disabled class=&quot;btn&quot; href=&quot;#&quot;&gt;anchor [disabled]&lt;/a&gt;
+&lt;a class=&quot;btn disabled &quot; href=&quot;#&quot;&gt;anchor .disabled&lt;/a&gt;
+&lt;br&gt;
+&lt;button disabled class=&quot;btn&quot;&gt;button [disabled]&lt;/button&gt;
+&lt;button class=&quot;btn disabled &quot;&gt;button .disabled&lt;/button&gt;
+&lt;br&gt;
+&lt;label disabled class=&quot;btn&quot;&gt;label [disabled]&lt;/label&gt;
+&lt;label class=&quot;btn disabled &quot;&gt;label .disabled&lt;/label&gt;
+&lt;br&gt;
+&lt;input disabled class=&quot;btn&quot; type=&quot;submit&quot; value=&quot;submit [disabled]&quot;&gt;
+&lt;input class=&quot;btn disabled &quot; type=&quot;submit&quot; value=&quot;submit .disabled&quot;&gt;</code></pre>
+                </div>
+              </div>
+              
+            
+              </section>
+            
+          
+            
+             <section id="section-1.3" class="kss-depth-2">
+              <h2 class="kss-title"><span class="kss-ref">1.3</span> Button groups</h2>
+            
+              
+              
+              <div class="kss-modifier-block">
+                <div class="kss-modifier kss-modifier-original">
+                  <div class="kss-modifier-example">
+                    <div class="btn-group cf">
+	<a class="btn btn-primary" href="javascript:void(0);">1</a>
+	<a class="btn btn-primary" href="javascript:void(0);">2</a>
+</div>
+                  </div>
+                </div>
+                
+                <div class="kss-markup">
+                  <pre><code data-language="html">&lt;div class=&quot;btn-group cf&quot;&gt;
+	&lt;a class=&quot;btn btn-primary&quot; href=&quot;javascript:void(0);&quot;&gt;1&lt;/a&gt;
+	&lt;a class=&quot;btn btn-primary&quot; href=&quot;javascript:void(0);&quot;&gt;2&lt;/a&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+              </div>
+              
+            
+              </section>
+            
           
         
       </article>
     </div>
-    <footer>
-      
-    </footer>
     <!-- SCRIPTS -->
     <script src="public/kss.js"></script>
     <script src="public/prettify.js"></script>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
     <script>
       $(document).ready(function(){
         var sidebarAdjust = function() {
