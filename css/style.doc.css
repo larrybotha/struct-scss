@@ -1428,8 +1428,20 @@ Button groups
 
 Markup:
 <div class="btn-group cf">
-  <a class="btn btn-primary" href="javascript:void(0);">1</a>
-  <a class="btn btn-primary" href="javascript:void(0);">2</a>
+  <label class="btn btn-primary">1</label>
+  <label class="btn btn-primary">2</label>
+  <label class="btn btn-primary">3</label>
+  <label class="btn btn-primary">4</label>
+  <label class="btn btn-primary">5</label>
+  <label class="btn btn-primary">6</label>
+  <label class="btn btn-primary">7</label>
+</div>
+<div class="btn-group cf">
+  <label class="btn btn-primary">1</label>
+  <label class="btn btn-primary">2</label>
+</div>
+<div class="btn-group cf">
+  <label class="btn btn-primary">1</label>
 </div>
 
 Styleguide 10.3
