@@ -73,56 +73,49 @@
 
 							{{#eachSection rootNumber}}
 								{{#whenDepth 1}}
-									<h1 class="kss-title"><span class="kss-ref">{{ reference }}.</span> {{ header }}</h1>
+									<h1 class="kss-title kss-mb-beta"><span class="kss-ref">{{ reference }}.</span> {{ header }}</h1>
 								{{else}}
 								 <section id="section-{{reference}}" class="kss-depth-{{ refDepth }}">
 									<h{{ refDepth }} class="kss-title"><span class="kss-ref">{{ reference }}</span> {{ header }}</h{{ refDepth }}>
 								{{/whenDepth}}
 									{{#ifAny markup modifiers}}
-									{{#if description}}
-									<div class="kss-description">
-										{{html description}}
-									</div>
-									{{/if}}
-									<div class="kss-modifier-block">
-										<div class="kss-modifier kss-modifier-original">
-											<div class="kss-modifier-example">
-												{{modifierMarkup}}
-											</div>
+										{{#if description}}
+										<div class="kss-description">
+											{{html description}}
 										</div>
-										{{#eachModifier}}
-										<div class="kss-modifier">
-											<div class="kss-modifier-head kss-row cf">
-												<div class="kss-col kss-col-8-vpalpha kss-col-8-ie8 kss-mb-none">
+										{{/if}}
+										<div class="kss-modifier-block kss-mb-beta">
+											<div class="kss-modifier kss-modifier-original">
+												<div class="kss-modifier-example">
+													{{modifierMarkup}}
+												</div>
+											</div>
+											{{#eachModifier}}
+											<div class="kss-modifier">
+												{{#if description}}
+												<div class="kss-modifier-head">
 													<div class="kss-modifier-description">
-														{{#if description}}
-															{{html description}}
-														{{else}}
-															&nbsp;
-														{{/if}}
+														{{html description}}
 													</div>
 												</div>
-												<div class="kss-col kss-col-4-vpalpha kss-col-4-ie8 kss-mb-none">
-													<p class="kss-ar kss-mb-none">
-														<kbd class="kss-modifier-name">{{name}}</kbd>
-													</p>
+												{{/if}}
+												<hr class="kss-hr">
+												<div class="kss-modifier-example">
+													<kbd class="kss-modifier-name fr">{{name}}</kbd>
+													{{modifierMarkup}}
 												</div>
 											</div>
-											<div class="kss-modifier-example">
-												{{modifierMarkup}}
-											</div>
+											{{/eachModifier}}
 										</div>
-										{{/eachModifier}}
-										<div class="kss-markup kss-mt-gamma">
+										<div class="kss-markup">
 											<pre><code data-language="html">{{markup}}</code></pre>
 										</div>
-									</div>
-									{{else}}
-									{{#if description}}
-									<div class="kss-description">
-										{{html description}}
-									</div>
-									{{/if}}
+										{{else}}
+										{{#if description}}
+										<div class="kss-description kss-mb-beta">
+											{{html description}}
+										</div>
+										{{/if}}
 									{{/ifAny}}
 								{{#whenDepth 1}} {{else}}
 									</section>

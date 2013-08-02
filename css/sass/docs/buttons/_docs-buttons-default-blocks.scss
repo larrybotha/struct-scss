@@ -1,0 +1,23 @@
+/*
+Full Width Buttons
+
+<ul>
+  <li>.d-block</li>
+</ul>
+
+Markup:
+<div class="kss-row cf">
+  <div class="kss-col kss-col-6-vpalpha kss-col-6-ie8">
+    <a class="btn {$modifiers} d-block" href="javascript:void(0)">anchor</a>
+    <button class="btn {$modifiers} d-block">button</button>
+    <label class="btn {$modifiers} d-block">label</label>
+    <input class="btn {$modifiers} d-block" type="submit" value="submit">
+  </div>
+</div>
+
+:hover				- 
+:active				- 
+.btn-selected	- 
+
+Styleguide 10.1.1
+*/
