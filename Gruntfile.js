@@ -82,7 +82,8 @@
             'kss-node css/sass/docs docs --css css/style.doc.css --template styleguide-template',
             'cd docs/public',
             'ln -s ../../img img',
-            'ln -s ../../fnt fnt'
+            'ln -s ../../fnt fnt',
+            'ln -s ../../js js'
           ].join('&&'),
           options: {
             stdout: true
