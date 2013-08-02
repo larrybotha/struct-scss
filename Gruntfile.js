@@ -79,7 +79,10 @@
         kss: {
           command: [
             'rm -rf docs',
-            'kss-node css/sass/docs docs --css css/style.doc.css --template styleguide-template'
+            'kss-node css/sass/docs docs --css css/style.doc.css --template styleguide-template',
+            'cd docs/public',
+            'ln -s ../../img img',
+            'ln -s ../../fnt fnt'
           ].join('&&'),
           options: {
             stdout: true
