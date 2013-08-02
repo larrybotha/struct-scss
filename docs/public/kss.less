@@ -6,8 +6,6 @@
 	padding: 0 1.5em;
 }
 
-.kss-nav { padding-right: 2.5em;}
-
 .kss-menu {
 	padding:0;
 	list-style-type:none;
@@ -53,7 +51,6 @@
 /* ==========================================================================
  KSS Grid
  ========================================================================= */
-
 .kss-row { margin-left: -2.5em;}
 
 /* Reusable column setup */
@@ -67,6 +64,15 @@
 	-webkit-background-clip: padding-box !important;
 	-moz-background-clip: padding-box !important;
 	background-clip: padding-box !important;
+}
+
+// style project columns differently to kss columns
+.kss .col {
+	padding: .5em 1em;
+	background: #ccc;
+	background: hsla(0, 0%, 0%, .15);
+	font-family: monospace;
+	text-align: center;
 }
 
 .ie8 .kss-col-1-ie8 { width: 8.333%;}
@@ -292,6 +298,8 @@ li.L9 { background: #eee }
 	 &vpgamma - 768px (48em) and up
 	 ========================================================================== */
 @media screen and (min-width: 48em) {
+
+	.kss-nav { padding-right: 2.5em;}
 
 	/* ==========================================================================
 	 &Grid - vpgamma
