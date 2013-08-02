@@ -3,158 +3,154 @@
 <!--[if IE 9]>    <html class="no-js ie9 oldie" lang="en"> <![endif]-->
 <!--[if gt IE 9]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
 <head>
-  <meta charset="utf-8">
+	<meta charset="utf-8">
 
-  <title>KSS: Living Styleguide</title>
-  <meta name="description" content="">
-  <meta name="generator" content="kss-node" />
+	<title>Living Styleguide</title>
+	<meta name="description" content="">
+	<meta name="generator" content="kss-node" />
 
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!--[if ! lte IE 7]><!-->
-  <link rel="stylesheet" href="public/kss.css">
-  <link rel="stylesheet" href="public/style.css">
-  <!--<![endif]-->
+	<!--[if ! lte IE 7]><!-->
+	<link rel="stylesheet" href="public/kss.css">
+	<link rel="stylesheet" href="public/style.css">
+	<!--<![endif]-->
 
-  <!--[if lte IE 7]>
-    <link rel="stylesheet" href="http://universal-ie6-css.googlecode.com/files/ie6.1.1.css" media="screen, projection">
-  <![endif]-->
+	<!--[if lte IE 7]>
+		<link rel="stylesheet" href="http://universal-ie6-css.googlecode.com/files/ie6.1.1.css" media="screen, projection">
+	<![endif]-->
 
-  <!--[if lt IE 9]>
-    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-  <![endif]-->
+	<!--[if lt IE 9]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
 
 </head>
 <body>
 
-  <!--[if lte IE 8]><div class="alert alert-danger">Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a modern browser</a> to experience this site.</div><![endif]-->
+	<!--[if lte IE 8]><div class="alert alert-danger">Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a modern browser</a> to experience this site.</div><![endif]-->
 
-  <div id="kss-wrapper">
-    <div id="kss-nav">
-      <header id="kss-header">
-        <hgroup><h1>kss-node Styleguide</h1></hgroup>
-      </header>
-      <aside>
-        <nav>
-          <ul class="kss-menu" data-kss-ref="{{rootNumber}}">
-            <li class="kss-menu-item"><a href="./"><span class="kss-ref">0</span> <span class="kss-name">Overview</span></a></li>
-            {{#eachRoot}}
-            <li class="kss-menu-item"><a href="section-{{reference}}.html"><span class="kss-ref">{{reference}}</span> <span class="kss-name">{{header}}</span></a></li>
-            {{/eachRoot}}
-          </ul>
-          {{#if overview}}
-          {{else}}
-          <ul class="kss-menu-child">
-            {{#eachSection rootNumber}}
-            {{#whenDepth 1}}
-            {{else}}
-            <li class="kss-menu-item"><a href="#section-{{reference}}"><span class="kss-ref">{{reference}}</span> <span class="kss-name">{{header}}</span></a></li>
-            {{/whenDepth}}
-            {{/eachSection}}
-          </ul>
-          {{/if}}
-        </nav>
-      </aside>
-    </div>
-    <div role="main" id="kss-main">
-      <article id="kss-content">
-        {{#if overview}}
-          {{html overview}}
-        {{else}}
+	<div class="kss-wrap">
+		<div class="kss-row cf">
+			<div class="kss-col kss-col-12-vpalpha kss-col-4-vpgamma kss-col-3-vpdelta kss-col-3-ie8">
+				<div id="kss-nav" class="kss-nav cf">
+					<h1>[Project] Styleguide</h1>
+					<aside>
+						<nav class="kss-nav">
+							<ul class="kss-menu kss-row cf" data-kss-ref="{{rootNumber}}">
+								<li class="kss-menu-item kss-col kss-col-6-vpalpha kss-col-4-vpbeta kss-col-12-vpgamma kss-col-12-ie8">
+									<a href="./">
+										<span class="kss-ref">0.</span> <span class="kss-name">Overview</span>
+									</a>
+								</li>
+								{{#eachRoot}}
+								<li class="kss-menu-item kss-menu-item kss-col kss-col-6-vpalpha kss-col-4-vpbeta kss-col-12-vpgamma kss-col-12-ie8">
+									<a href="section-{{reference}}.html">
+										<span class="kss-ref">{{reference}}.</span> <span class="kss-name">{{header}}</span>
+									</a>
+								</li>
+								{{/eachRoot}}
+							</ul>
+						</nav>
+					</aside>
+				</div>
+			</div><!-- .kss-col -->
 
-          {{!
-            Find each section, in order.
-            If there's no markup or modifiers supplied, use a Markdown-only
-            layout instead.
+			<div class="kss-col kss-col-12-vpalpha kss-col-8-vpgamma kss-col-9-vpdelta kss-col-9-ie8">
+				<div role="main" id="kss-main" class="kss-main">
+					<article id="kss-content">
+						{{#if overview}}
+							{{html overview}}
+						{{else}}
 
-            The "root" element comes first in this loop, and can be detected using
-            the "#whenDepth 1" block as seen below.
-          }}
-          {{#eachSection rootNumber}}
-            {{#whenDepth 1}}
-              <h1 class="kss-title"><span class="kss-ref">{{ reference }}.</span> {{ header }}</h1>
-            {{else}}
-             <section id="section-{{reference}}" class="kss-depth-{{ refDepth }}">
-              <h2 class="kss-title"><span class="kss-ref">{{ reference }}</span> {{ header }}</h2>
-            {{/whenDepth}}
-              {{#ifAny markup modifiers}}
-              {{#if description}}
-              <div class="kss-description">
-                {{html description}}
-              </div>
-              {{/if}}
-              <div class="kss-modifier-block">
-                <div class="kss-modifier kss-modifier-original">
-                  <div class="kss-modifier-example">
-                    {{modifierMarkup}}
-                  </div>
-                </div>
-                {{#eachModifier}}
-                <div class="kss-modifier">
-                  <div class="kss-modifier-head">
-                    <div class="kss-modifier-name">{{name}}</div>
-                    <div class="kss-modifier-description">
-                      {{html description}}
-                    </div>
-                  </div>
-                  <div class="kss-modifier-example">
-                    {{modifierMarkup}}
-                  </div>
-                </div>
-                {{/eachModifier}}
-                <div class="kss-markup">
-                  <pre><code data-language="html">{{markup}}</code></pre>
-                </div>
-              </div>
-              {{else}}
-              {{#if description}}
-              <div class="kss-description">
-                {{html description}}
-              </div>
-              {{/if}}
-              {{/ifAny}}
-            {{#whenDepth 1}} {{else}}
-              </section>
-            {{/whenDepth}}
-          {{/eachSection}}
-        {{/if}}
-      </article>
-    </div>
-    <!-- SCRIPTS -->
-    <script src="public/kss.js"></script>
-    <script src="public/prettify.js"></script>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-    <script>
-      $(document).ready(function(){
-        var sidebarAdjust = function() {
-          // Match footer/body height
-          var height = Math.max($(window).height(), $('#kss-main').height());
+							{{!
+								Find each section, in order.
+								If there's no markup or modifiers supplied, use a Markdown-only
+								layout instead.
 
-          if ($(window).width() <= 768) {
-            $('#kss-main, #kss-nav').height('auto');
-          } else {
-            $('#kss-main, #kss-nav').height(height);
-          }
-        };
+								The "root" element comes first in this loop, and can be detected using
+								the "#whenDepth 1" block as seen below.
+							}}
 
-        $(window).resize(sidebarAdjust);
-        $(window).scroll(sidebarAdjust);
-        sidebarAdjust();
+							{{#eachSection rootNumber}}
+								{{#whenDepth 1}}
+									<h1 class="kss-title"><span class="kss-ref">{{ reference }}.</span> {{ header }}</h1>
+								{{else}}
+								 <section id="section-{{reference}}" class="kss-depth-{{ refDepth }}">
+									<h{{ refDepth }} class="kss-title"><span class="kss-ref">{{ reference }}</span> {{ header }}</h{{ refDepth }}>
+								{{/whenDepth}}
+									{{#ifAny markup modifiers}}
+									{{#if description}}
+									<div class="kss-description">
+										{{html description}}
+									</div>
+									{{/if}}
+									<div class="kss-modifier-block">
+										{{#if modifiers}}
+										{{else}}
+										<div class="kss-modifier kss-modifier-original">
+											<div class="kss-modifier-example">
+												{{modifierMarkup}}
+											</div>
+										</div>
+										{{/if}}
+										{{#eachModifier}}
+										<div class="kss-modifier">
+											<div class="kss-modifier-head kss-row cf">
+												<div class="kss-col kss-col-9-vpalpha kss-col-9-ie8 kss-mb-none">
+													<div class="kss-modifier-description">
+														{{#if description}}
+															{{html description}}
+														{{else}}
+															&nbsp;
+														{{/if}}
+													</div>
+												</div>
+												<div class="kss-col kss-col-3-vpalpha kss-col-3-ie8 kss-mb-none">
+													<p class="kss-ar kss-mb-none">
+														<kbd class="kss-modifier-name">{{name}}</kbd>
+													</p>
+												</div>
+											</div>
+											<div class="kss-modifier-example">
+												{{modifierMarkup}}
+											</div>
+										</div>
+										{{/eachModifier}}
+										<div class="kss-markup kss-mt-gamma">
+											<pre><code data-language="html">{{markup}}</code></pre>
+										</div>
+									</div>
+									{{else}}
+									{{#if description}}
+									<div class="kss-description">
+										{{html description}}
+									</div>
+									{{/if}}
+									{{/ifAny}}
+								{{#whenDepth 1}} {{else}}
+									</section>
+								{{/whenDepth}}
+							{{/eachSection}}
+						{{/if}}
+					</article>
+				</div>
+			</div><!-- .kss-col -->
 
-        // Ensure code blocks are highlighted properly...
-        $('pre>code').addClass('prettyprint');
-        prettyPrint();
+		</div><!-- .kss-row -->
+	</div>
 
-      });
-    </script>
+	<!-- SCRIPTS -->
+	<script src="public/kss.js"></script>
+	<script src="public/prettify.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script>
+		$(document).ready(function(){
 
-    {{! This won't be included in the demo page }}
-    {{#if argv.xdemo}}
-      <script type="text/javascript">
-      var _gaq = _gaq || []; _gaq.push(['_setAccount', 'UA-12249588-4']); _gaq.push(['_trackPageview']);
-      (function() { var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true; ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s); })();
-      </script>
-    {{/if}}
-  </div>
+			// Ensure code blocks are highlighted properly...
+			$('pre>code').addClass('prettyprint');
+			prettyPrint();
+
+		});
+	</script>
 </body>
 </html>
