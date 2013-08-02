@@ -1340,7 +1340,7 @@ Button styles are tested to work against a number of different elements for cons
 	<li>inputs as submits</li>
 </ul>
 
-Styleguide 1
+Styleguide 9
 */
 /*
 Button defaults
@@ -1356,7 +1356,7 @@ Markup:
 .btn-selected		- selected state
 .disabled				- disabled with class
 
-Styleguide 1.1
+Styleguide 9.1
 */
 .btn {
   position: relative;
@@ -1420,11 +1420,11 @@ Button groups
 
 Markup:
 <div class="btn-group cf">
-	<a class="btn btn-primary" href="javascript:void(0);">1</a>
-	<a class="btn btn-primary" href="javascript:void(0);">2</a>
+  <a class="btn btn-primary" href="javascript:void(0);">1</a>
+  <a class="btn btn-primary" href="javascript:void(0);">2</a>
 </div>
 
-Styleguide 1.3
+Styleguide 9.3
 */
 .btn-group {
   display: inline-block;

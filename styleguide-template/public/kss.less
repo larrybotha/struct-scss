@@ -1,58 +1,140 @@
-@import 'markdown';
+.prettyprint { font-size: 75%;}
 
-#kss-nav {
-	width:20%;
-	background-color:#eee;
-
-	nav>ul {
-		padding:0;
-		margin:2em;
-    margin-top:2.5em;
-		list-style-type:none;
-	}
-
-	box-shadow: inset -15px 0px 15px -15px rgba(45, 45, 45, 0.25);
+.kss-wrap {
+	max-width: 1280px;
+	margin: 0 auto;
+	padding: 0 1.5em;
 }
 
-#kss-main, #kss-nav {
-	position: relative;
-  float: left;
+.kss-nav { padding-right: 2.5em;}
+
+.kss-menu {
+	padding:0;
+	list-style-type:none;
 }
 
-#kss-main {
-	padding-left:2.5em;
-	width:80%;
-	max-width:980px;
+.kss-menu > li {
+	padding-top: .5em;
+	margin-bottom: .5em;
+}
+
+.kss-menu-child {
+	font-size: 90%;
+	font-style: italic;
+}
+
+.kss-menu-child > li {
+	padding-top: 0;
+	margin-bottom: 0;
 }
 
 .kss-mod-list {
-  width:100%;
+	width:100%;
 }
 
 .kss-mod-name {
-  text-align:right;
-  width:20%;
-  font-size:0.75em;
+	text-align:right;
+	width:20%;
+	font-size:0.75em;
 }
 
 .kss-mod-example {
-  padding-bottom:20px;
-         display:block;
-  &>td { display:block; }
+	padding-bottom:20px;
+				 display:block;
 }
 
 .kss-markup {
-  margin-bottom:40px;
-  padding: 0 1.5em;
-  border: 1px solid #eee;
+	margin-bottom:40px;
+	padding: 0 1.5em;
+	border: 1px solid #eee;
 }
 
-.kss-depth-1 > h1 { font-size: 2.5em * 0.950; }
-.kss-depth-2 > h1 { font-size: 2.5em * 0.900; }
-.kss-depth-3 > h1 { font-size: 2.5em * 0.850; }
-.kss-depth-4 > h1 { font-size: 2.5em * 0.800; }
-.kss-depth-5 > h1 { font-size: 2.5em * 0.750; }
-.kss-depth-6 > h1 { font-size: 2.5em * 0.700; }
+
+/* ==========================================================================
+ KSS Grid
+ ========================================================================= */
+
+.kss-row { margin-left: -2.5em;}
+
+/* Reusable column setup */
+.kss-col {
+	border: 0 solid hsla(0,0%,0%,0);
+	border-left-width: 2.5em;
+	float: left;
+	margin-bottom: 2.5em;
+	padding: 0;
+	position:  relative;
+	-webkit-background-clip: padding-box !important;
+	-moz-background-clip: padding-box !important;
+	background-clip: padding-box !important;
+}
+
+.ie8 .kss-col-1-ie8 { width: 8.333%;}
+.ie8 .kss-col-2-ie8 { width: 16.667%;}
+.ie8 .kss-col-3-ie8 { width: 25.0%;}
+.ie8 .kss-col-4-ie8 { width: 33.333%;}
+.ie8 .kss-col-5-ie8 { width: 41.667%;}
+.ie8 .kss-col-6-ie8 { width: 50.0%;}
+.ie8 .kss-col-7-ie8 { width: 58.333%;}
+.ie8 .kss-col-8-ie8 { width: 66.667%;}
+.ie8 .kss-col-9-ie8 { width: 75.0%;}
+.ie8 .kss-col-10-ie8 { width: 83.333%;}
+.ie8 .kss-col-11-ie8 { width: 91.667%;}
+.ie8 .kss-col-12-ie8 {
+	margin-left: 0;
+	width: 100%;
+}
+
+
+
+
+/* =============================================================================
+	 &Typography
+	 ========================================================================== */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	 &mTypography
+	 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* Floating & Alignment Modifiers */
+.kss-fl { float: left;}
+.kss-fr { float: right;}
+.kss-al { text-align: left;}
+.kss-ac { text-align: center;}
+.kss-ar { text-align: right;}
+
+
+
+
+/* =============================================================================
+	 &Layout
+	 ========================================================================== */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	 &mLayout
+	 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+.kss-flex-square-outer {
+	position: relative;
+	display: block;
+	padding-bottom: 100%;
+	height: 0;
+	overflow: hidden;
+}
+
+.kss-flex-square-inner {
+	position: absolute;
+	color: #fff;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	padding: 1em;
+}
+
+/* margin modifiers */
+.kss-mb-none { margin-bottom: 0;}
+
+.kss-mt-gamma { margin-top: 3.5em;}
+
+
+
 
 // ------------------------------------------------------------------------------
 //   @group prettyprint.js styling
@@ -63,31 +145,31 @@
 .pln { color: #000 }  /* plain text */
 
 @media screen {
-  .str { color: #080 }  /* string content */
-  .kwd { color: #008 }  /* a keyword */
-  .com { color: #800 }  /* a comment */
-  .typ { color: #606 }  /* a type name */
-  .lit { color: #066 }  /* a literal value */
-  /* punctuation, lisp open bracket, lisp close bracket */
-  .pun, .opn, .clo { color: #660 }
-  .tag { color: #008 }  /* a markup tag name */
-  .atn { color: #606 }  /* a markup attribute name */
-  .atv { color: #080 }  /* a markup attribute value */
-  .dec, .var { color: #606 }  /* a declaration; a variable name */
-  .fun { color: red }  /* a function name */
+	.str { color: #080 }  /* string content */
+	.kwd { color: #008 }  /* a keyword */
+	.com { color: #800 }  /* a comment */
+	.typ { color: #606 }  /* a type name */
+	.lit { color: #066 }  /* a literal value */
+	/* punctuation, lisp open bracket, lisp close bracket */
+	.pun, .opn, .clo { color: #660 }
+	.tag { color: #008 }  /* a markup tag name */
+	.atn { color: #606 }  /* a markup attribute name */
+	.atv { color: #080 }  /* a markup attribute value */
+	.dec, .var { color: #606 }  /* a declaration; a variable name */
+	.fun { color: red }  /* a function name */
 }
 
 /* Use higher contrast and text-weight for printable form. */
 @media print, projection {
-  .str { color: #060 }
-  .kwd { color: #006; font-weight: bold }
-  .com { color: #600; font-style: italic }
-  .typ { color: #404; font-weight: bold }
-  .lit { color: #044 }
-  .pun, .opn, .clo { color: #440 }
-  .tag { color: #006; font-weight: bold }
-  .atn { color: #404 }
-  .atv { color: #060 }
+	.str { color: #060 }
+	.kwd { color: #006; font-weight: bold }
+	.com { color: #600; font-style: italic }
+	.typ { color: #404; font-weight: bold }
+	.lit { color: #044 }
+	.pun, .opn, .clo { color: #440 }
+	.tag { color: #006; font-weight: bold }
+	.atn { color: #404 }
+	.atv { color: #060 }
 }
 
 /* Put a border around prettyprinted code snippets. */
@@ -110,45 +192,192 @@ li.L5,
 li.L7,
 li.L9 { background: #eee }
 
-// ------------------------------------------------------------------------------
-//   @group Mobile/Tablet Styling
-// ------------------------------------------------------------------------------
-@media screen and (max-width: 768px) {
-  #kss-main {
-    position:static;
-    width:90%;
-    margin:0 auto;
-    padding-left:0;
-  }
 
-  #kss-nav {
-    position:static;
-    display:block;
-    width:auto;
-    margin:0;
-    background:0;
-    box-shadow:none;
-    border-bottom:1px solid #ddd;
-    nav>ul {
-      margin-top:0.5em;
-      margin-bottom:0.5em;
 
-      &>li {
-        display:inline-block;
-        padding-right:1.5em;
-      }
-    }
-  }
+/* *****************************************************************************
+	 &MEDIA QUERIES
+	 ************************************************************************** */
+/* =============================================================================
+	 &vpalpha - 0px and up
+	 ========================================================================== */
+ @media screen and (min-width: 0) {
 
-  #kss-header>hgroup>h1 {
-    margin-top:0;
-    margin-bottom:0;
-  }
+	/* ==========================================================================
+	 &Grid - vpalpha
+	 ========================================================================= */
+	.kss-col-1-vpalpha { width: 8.33333333333%;}
+	.kss-col-2-vpalpha { width: 16.6666666667%;}
+	.kss-col-3-vpalpha { width: 25.0%;}
+	.kss-col-4-vpalpha { width: 33.3333333333%;}
+	.kss-col-5-vpalpha { width: 41.6666666667%;}
+	.kss-col-6-vpalpha { width: 50.0%;}
+	.kss-col-7-vpalpha { width: 58.3333333333%;}
+	.kss-col-8-vpalpha { width: 66.6666666667%;}
+	.kss-col-9-vpalpha { width: 75.0%;}
+	.kss-col-10-vpalpha { width: 83.3333333333%;}
+	.kss-col-11-vpalpha { width: 91.6666666667%;}
+	.kss-col-12-vpalpha {
+		margin-left: 0;
+		width: 100%;
+	}
+
+	/* =============================================================================
+	 &Typography - vpalpha
+	 ========================================================================== */
+	/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		 &mTypography - vpalpha
+		 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+	/* Floating & Alignment Modifiers */
+	.kss-fl-vpalpha { float: left;}
+	.kss-fr-vpalpha { float: right;}
+	.kss-al-vpalpha { text-align: left;}
+	.kss-ac-vpalpha { text-align: center;}
+	.kss-ar-vpalpha { text-align: right;}
+
+
+	/* =============================================================================
+	 &Layout - vpalpha
+	 ========================================================================== */
+	/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		 &mLayout - vpalpha
+		 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+
 }
 
-@media screen and (max-width: 640px) {
-  #kss-github {
-    display:none;
-  }
+
+
+/* =============================================================================
+	 &vpbeta - 480px (30em) and up
+	 ========================================================================== */
+@media screen and (min-width: 30em) {
+
+	/* ==========================================================================
+	 &Grid - vpbeta
+	 ========================================================================= */
+	.kss-col-1-vpbeta { width: 8.33333333333%;}
+	.kss-col-2-vpbeta { width: 16.6666666667%;}
+	.kss-col-3-vpbeta { width: 25.0%;}
+	.kss-col-4-vpbeta { width: 33.3333333333%;}
+	.kss-col-5-vpbeta { width: 41.6666666667%;}
+	.kss-col-6-vpbeta { width: 50.0%;}
+	.kss-col-7-vpbeta { width: 58.3333333333%;}
+	.kss-col-8-vpbeta { width: 66.6666666667%;}
+	.kss-col-9-vpbeta { width: 75.0%;}
+	.kss-col-10-vpbeta { width: 83.3333333333%;}
+	.kss-col-11-vpbeta { width: 91.6666666667%;}
+	.kss-col-12-vpbeta {
+		margin-left: 0;
+		width: 100%;
+	}
+
+	/* =============================================================================
+	 &Typography - vpbeta
+	 ========================================================================== */
+	/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		 &mTypography - vpbeta
+		 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+	/* Floating & Alignment Modifiers */
+	.kss-fl-vpbeta { float: left;}
+	.kss-fr-vpbeta { float: right;}
+	.kss-al-vpbeta { text-align: left;}
+	.kss-ac-vpbeta { text-align: center;}
+	.kss-ar-vpbeta { text-align: right;}
+
 }
+
+
+
+/* =============================================================================
+	 &vpgamma - 768px (48em) and up
+	 ========================================================================== */
+@media screen and (min-width: 48em) {
+
+	/* ==========================================================================
+	 &Grid - vpgamma
+	 ========================================================================= */
+	.kss-col-1-vpgamma { width: 8.333%;}
+	.kss-col-2-vpgamma { width: 16.667%;}
+	.kss-col-3-vpgamma { width: 25.0%;}
+	.kss-col-4-vpgamma { width: 33.333%;}
+	.kss-col-5-vpgamma { width: 41.667%;}
+	.kss-col-6-vpgamma { width: 50.0%;}
+	.kss-col-7-vpgamma { width: 58.333%;}
+	.kss-col-8-vpgamma { width: 66.667%;}
+	.kss-col-9-vpgamma { width: 75.0%;}
+	.kss-col-10-vpgamma { width: 83.333%;}
+	.kss-col-11-vpgamma { width: 91.667%;}
+	.kss-col-12-vpgamma {
+		margin-left: 0;
+		width: 100%;
+	}
+
+
+
+	/* =============================================================================
+	 &Typography - vpgamma
+	 ========================================================================== */
+	/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		 &mTypography - vpgamma
+		 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+	/* Floating & Alignment Modifiers */
+	.kss-fl-vpgamma { float: left;}
+	.kss-fr-vpgamma { float: right;}
+	.kss-al-vpgamma { text-align: left;}
+	.kss-ac-vpgamma { text-align: center;}
+	.kss-ar-vpgamma { text-align: right;}
+
+
+
+	/* =============================================================================
+	 &Layout - vpgamma
+	 ========================================================================== */
+	/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		 &mLayout - vpgamma
+		 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+
+}
+
+
+/* =============================================================================
+	 &vpdelta - 1280px (80em) and up
+	 ========================================================================== */
+@media screen and (min-width: 80em) {
+
+	/* ==========================================================================
+	 &Grid - vpdelta
+	 ========================================================================= */
+	.kss-col-1-vpdelta { width: 8.33333333333%;}
+	.kss-col-2-vpdelta { width: 16.6666666667%;}
+	.kss-col-3-vpdelta { width: 25.0%;}
+	.kss-col-4-vpdelta { width: 33.3333333333%;}
+	.kss-col-5-vpdelta { width: 41.6666666667%;}
+	.kss-col-6-vpdelta { width: 50.0%;}
+	.kss-col-7-vpdelta { width: 58.3333333333%;}
+	.kss-col-8-vpdelta { width: 66.6666666667%;}
+	.kss-col-9-vpdelta { width: 75.0%;}
+	.kss-col-10-vpdelta { width: 83.3333333333%;}
+	.kss-col-11-vpdelta { width: 91.6666666667%;}
+	.kss-col-12-vpdelta {
+		margin-left: 0;
+		width: 100%;
+	}
+
+
+	/* =============================================================================
+	 &Typography - vpdelta
+	 ========================================================================== */
+	/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		 &mTypography - vpdelta
+		 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+	/* Floating & Alignment Modifiers */
+	.kss-fl-vpdelta { float: left;}
+	.kss-fr-vpdelta { float: right;}
+	.kss-al-vpdelta { text-align: left;}
+	.kss-ac-vpdelta { text-align: center;}
+	.kss-ar-vpdelta { text-align: right;}
+
+}
+
 // @end
