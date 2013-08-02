@@ -1,18 +1,23 @@
 /*
 Disabled buttons
 
+<ul>
+	<li>.disabled</li>
+	<li>[disabled]</li>
+</ul>
+
 Markup:
-<a disabled class="btn" href="#">anchor [disabled]</a>
-<a class="btn disabled " href="#">anchor .disabled</a>
+<a disabled class="btn" href="javascript:void(0);">anchor [disabled]</a>
+<a class="btn disabled" href="javascript:void(0);">anchor .disabled</a>
 <br>
 <button disabled class="btn">button [disabled]</button>
-<button class="btn disabled ">button .disabled</button>
+<button class="btn disabled">button .disabled</button>
 <br>
 <label disabled class="btn">label [disabled]</label>
-<label class="btn disabled ">label .disabled</label>
+<label class="btn disabled">label .disabled</label>
 <br>
 <input disabled class="btn" type="submit" value="submit [disabled]">
-<input class="btn disabled " type="submit" value="submit .disabled">
+<input class="btn disabled" type="submit" value="submit .disabled">
 
 Styleguide 10.2
 */

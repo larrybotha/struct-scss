@@ -1334,10 +1334,10 @@ Buttons
 Button styles are tested to work against a number of different elements for consistent and predictable styling:
 
 <ul>
-	<li>anchor tags</li>
-	<li>button tags</li>
-	<li>label tags</li>
-	<li>inputs as submits</li>
+  <li>anchor tags</li>
+  <li>button tags</li>
+  <li>label tags</li>
+  <li>inputs as submits</li>
 </ul>
 
 Styleguide 10
@@ -1345,16 +1345,24 @@ Styleguide 10
 /*
 Button defaults
 
-Markup:
-<a class="btn {$modifiers}" href="#">anchor</a>
-<button class="btn {$modifiers}">button</button>
-<label class="btn {$modifiers}">label</label>
-<input class="btn {$modifiers}" type="submit" value="submit">
+<ul>
+  <li>.btn-selected</li>
+  <li>.disabled</li>
+</ul>
 
-:hover					- hover state
-:active					- active state
-.btn-selected		- selected state
-.disabled				- disabled with class
+Markup:
+<div class="kss-row cf">
+  <div class="kss-col kss-col-6-alpha kss-col-6-ie8">
+    <a class="btn {$modifiers}" href="javascript:void(0)">anchor</a>
+    <button class="btn {$modifiers}">button</button>
+    <label class="btn {$modifiers}">label</label>
+    <input class="btn {$modifiers}" type="submit" value="submit">
+  </div>
+</div>
+
+:hover				- 
+:active				- 
+.btn-selected	- 
 
 Styleguide 10.1
 */
