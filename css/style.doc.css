@@ -2552,6 +2552,7 @@ button.d-block {
   overflow: hidden;
   padding: 0;
   border: 0;
+  visibility: hidden;
 }
 
 .ie8 .visuallyhidden-ie8 {
@@ -2563,6 +2564,7 @@ button.d-block {
   overflow: hidden;
   padding: 0;
   border: 0;
+  visibility: visible;
 }
 
 /* Extends the .visuallyhidden class to allow the element to be focusable when navigated to via the keyboard: h5bp.com/p */
