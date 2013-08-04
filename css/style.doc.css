@@ -1239,87 +1239,35 @@ input:checked + label > .checkbox-custom:before {
 /* -----------------------------------------------------------------------------
 	 &Autocomplete
 	 -------------------------------------------------------------------------- */
-.ui-autocomplete {
-  position: absolute;
-  cursor: pointer;
-  background: white;
-  font-size: .75em;
-  border: 1px solid #b2b2b2;
-  border-bottom-left-radius: 4px;
-  border-bottom-right-radius: 4px;
-}
-
-.ui-menu {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.ui-menu .ui-menu {
-  margin-top: -3px;
-}
-
-.ui-menu .ui-menu-item {
-  border-bottom: 1px solid #eee;
-}
-
-.ui-menu .ui-menu-item a {
-  display: block;
-  color: inherit;
-  padding: .4em .5em;
-  line-height: 1.5;
-}
-
-.ui-menu .ui-menu-item a.ui-state-hover,
-.ui-menu .ui-menu-item a.ui-state-active {
-  font-weight: normal;
-  background-color: #e4eef5;
-  background-image: -webkit-linear, -webkit-top, transparent, rgba(255, 255, 255, 0.1);
-  background-image: -moz-linear, -moz-top, transparent, rgba(255, 255, 255, 0.1);
-  background-image: -o-linear, -o-top, transparent, rgba(255, 255, 255, 0.1);
-  background-image: -ms-linear, -ms-top, transparent, rgba(255, 255, 255, 0.1);
-  background-image: linear, top, transparent, rgba(255, 255, 255, 0.1);
-}
-
-.ui-menu-item .img-block > .img {
-  background: transparent url(http://placekitten.com/g/20/20) no-repeat center center;
-  width: 20px;
-  height: 20px;
-  margin-right: .5em;
-}
-
-.token-list {
-  position: relative;
-  display: block;
-  border: 1px solid #cccccc;
-  cursor: text;
-  padding-left: .25em;
-}
-
-.token-list + .ui-autocomplete {
-  left: 0 !important;
-}
-
-.token-list-input {
-  background-color: transparent;
-  padding: 0;
-  margin: 0;
-  border: 0;
+.tt-hint {
+  width: 100%;
+  color: #999;
+  border: 1px solid #024e6a;
+  border-radius: 8px;
   outline: none;
 }
 
-.token-list-item {
-  display: inline-block;
-  vertical-align: middle;
+.tt-dropdown-menu {
+  min-width: 100%;
+  margin-top: 12px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
 
-.token-list-token {
-  vertical-align: middle;
-  font-size: 75%;
-  line-height: 1;
-  padding: .25em .5em;
-  border: 1px solid #aaa;
-  border-radius: 2px;
+.tt-suggestion {
+  padding: 8px 20px;
+  line-height: 18px;
+}
+
+.tt-suggestion + .tt-suggestion {
+  border-top: 1px solid #ccc;
+}
+
+.twitter-typeahead .tt-suggestion.tt-is-under-cursor {
+  color: #03739c;
 }
 
 /* -----------------------------------------------------------------------------

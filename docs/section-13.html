@@ -455,22 +455,21 @@
 											<div class="kss-modifier kss-modifier-original">
 												<div class="kss-modifier-example">
 													<h2>Simple</h2>
-<div id="autocomplete1-container" class="field">
-  <label for="autocomplete1">Tags: </label>
-  <input id="autocomplete1">
+<div class="field">
+  <label for="typehead-1">Tags: </label>
+  <input class="typeahead-1">
 </div>
 <h2>Custom Data</h2>
-<div id="autocomplete2-container" class="field">
-  <label for="autocomplete2">Tags: </label>
-  <input id="autocomplete2">
-  <input type="hidden" id="autocomplete2-id">
+<div class="field">
+  <label for="typehead-2">Tags: </label>
+  <input class="typeahead-2">
 </div>
 <h2>Custom Data With Tokens</h2>
-<div id="autocomplete3-container" class="field">
-  <input type="hidden" id="autocomplete3-id">
+<div class="field">
+  <input type="hidden" id="typehead3-id">
   <ul class="token-list list-reset">
     <li class="token-list-item">
-      <input class="token-list-input" placeholder="type your search here" id="autocomplete3">
+      <input class="token-list-input typeahead-3" placeholder="type your search here" id="typeahead-1"">
     </li>
   </ul>
 </div>
@@ -480,22 +479,21 @@
 										</div>
 										<div class="kss-markup">
 											<pre><code data-language="html">&lt;h2&gt;Simple&lt;/h2&gt;
-&lt;div id=&quot;autocomplete1-container&quot; class=&quot;field&quot;&gt;
-  &lt;label for=&quot;autocomplete1&quot;&gt;Tags: &lt;/label&gt;
-  &lt;input id=&quot;autocomplete1&quot;&gt;
+&lt;div class=&quot;field&quot;&gt;
+  &lt;label for=&quot;typehead-1&quot;&gt;Tags: &lt;/label&gt;
+  &lt;input class=&quot;typeahead-1&quot;&gt;
 &lt;/div&gt;
 &lt;h2&gt;Custom Data&lt;/h2&gt;
-&lt;div id=&quot;autocomplete2-container&quot; class=&quot;field&quot;&gt;
-  &lt;label for=&quot;autocomplete2&quot;&gt;Tags: &lt;/label&gt;
-  &lt;input id=&quot;autocomplete2&quot;&gt;
-  &lt;input type=&quot;hidden&quot; id=&quot;autocomplete2-id&quot;&gt;
+&lt;div class=&quot;field&quot;&gt;
+  &lt;label for=&quot;typehead-2&quot;&gt;Tags: &lt;/label&gt;
+  &lt;input class=&quot;typeahead-2&quot;&gt;
 &lt;/div&gt;
 &lt;h2&gt;Custom Data With Tokens&lt;/h2&gt;
-&lt;div id=&quot;autocomplete3-container&quot; class=&quot;field&quot;&gt;
-  &lt;input type=&quot;hidden&quot; id=&quot;autocomplete3-id&quot;&gt;
+&lt;div class=&quot;field&quot;&gt;
+  &lt;input type=&quot;hidden&quot; id=&quot;typehead3-id&quot;&gt;
   &lt;ul class=&quot;token-list list-reset&quot;&gt;
     &lt;li class=&quot;token-list-item&quot;&gt;
-      &lt;input class=&quot;token-list-input&quot; placeholder=&quot;type your search here&quot; id=&quot;autocomplete3&quot;&gt;
+      &lt;input class=&quot;token-list-input typeahead-3&quot; placeholder=&quot;type your search here&quot; id=&quot;typeahead-1&quot;&quot;&gt;
     &lt;/li&gt;
   &lt;/ul&gt;
 &lt;/div&gt;</code></pre>
@@ -515,13 +513,15 @@
 
 	<!-- SCRIPTS -->
 	<script src="public/kss.js"></script>
-	<script src="public/prettify.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.js" type="text/javascript"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/hogan.js/2.0.0/hogan.js" type="text/javascript"></script>
 
 	<!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 	<script>window.jQuery || document.write('<script src="js/libs/jquery-1.8.3.min.js"><\/script>')</script>
 
 	<script type="text/javascript" src="public/js/libs/jquery-ui-1.8.23.custom.min.js"></script>
+	<script type="text/javascript" src="public/js/libs/typeahead/typeahead.js"></script>
 	<script type="text/javascript" src="public/js/libs/tiny_mce/jquery.tinymce.js"></script>
 	<script type="text/javascript" src="public/js/libs/jquery-powertip/jquery.powertip.js"></script>
 	<script type="text/javascript" src="public/js/gridpak.js"></script>
@@ -529,8 +529,8 @@
 	<script>
 		$(document).ready(function(){
 
+			$('pre > code').addClass('prettyprint');
 			// Ensure code blocks are highlighted properly...
-			$('pre>code').addClass('prettyprint');
 			prettyPrint();
 
 		});
