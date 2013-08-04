@@ -804,7 +804,7 @@ input:checked + label > .checkbox-custom:before { content: "\e001"; /* .icon-che
 /* -----------------------------------------------------------------------------
 	 &Autocomplete
 	 -------------------------------------------------------------------------- */
-@import "vendor/jquery-ui-autocomplete";
+@import "vendor/typeahead";
 
 /* -----------------------------------------------------------------------------
 	 &Wysiwyg
