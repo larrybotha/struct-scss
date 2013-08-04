@@ -3,18 +3,18 @@ Autocomplete
 
 Markup:
 <h2>Simple</h2>
-<div id="autocomplete1-container" class="field">
+<div class="field">
   <label for="autocomplete1">Tags: </label>
   <input id="autocomplete1">
 </div>
 <h2>Custom Data</h2>
-<div id="autocomplete2-container" class="field">
+<div class="field">
   <label for="autocomplete2">Tags: </label>
   <input id="autocomplete2">
   <input type="hidden" id="autocomplete2-id">
 </div>
 <h2>Custom Data With Tokens</h2>
-<div id="autocomplete3-container" class="field">
+<div class="field">
   <input type="hidden" id="autocomplete3-id">
   <ul class="token-list list-reset">
     <li class="token-list-item">
