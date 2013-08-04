@@ -83,7 +83,8 @@
             'cd docs/public',
             'ln -s ../../img img',
             'ln -s ../../fnt fnt',
-            'ln -s ../../js js'
+            'ln -s ../../js js',
+            'ln -s ../../data data'
           ].join('&&'),
           options: {
             stdout: true
