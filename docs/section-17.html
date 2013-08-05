@@ -36,7 +36,7 @@
 					<h1>[Project] Styleguide</h1>
 					<aside>
 						<nav>
-							<ul class="kss-menu kss-row cf" data-kss-ref="4">
+							<ul class="kss-menu kss-row cf" data-kss-ref="17">
 								<li class="kss-menu-item kss-col kss-col-6-vpalpha kss-col-4-vpbeta kss-col-12-vpgamma kss-col-12-ie8">
 									<a href="./">
 										<span class="kss-ref">0.</span> <span class="kss-name">Overview</span>
@@ -160,20 +160,54 @@
 
 							
 								
-									<h1 class="kss-title kss-mb-beta"><span class="kss-ref">4.</span> Links</h1>
+									<h1 class="kss-title kss-mb-beta"><span class="kss-ref">17.</span> Tool Tips</h1>
 								
 									
 										
 										<div class="kss-modifier-block kss-mb-beta">
 											<div class="kss-modifier kss-modifier-original">
 												<div class="kss-modifier-example">
-													<a href="javascript:void(0);">default link</a>
+													<div class="ac">
+  <div>
+    <button class="btn tooltip tooltip-nw" data-powertip="north west">NW</button>
+    <button class="btn tooltip tooltip-n" data-powertip="north">N</button>
+    <button class="btn tooltip tooltip-ne" data-powertip="north east">NE</button>
+  </div>
+  <div>
+    <button class="btn tooltip tooltip-w" data-powertip="west">W</button>
+    <button class="btn invisible" data-powertip="south">$$$I</button>
+    <button class="btn tooltip tooltip-e" data-powertip="east">E</button>
+  </div>
+  <div>
+    <button class="btn tooltip tooltip-sw" data-powertip="south west">SW</button>
+    <button class="btn tooltip tooltip-s" data-powertip="south">S</button>
+    <button class="btn tooltip tooltip-se" data-powertip="south east">SE</button>
+  </div>
+</div>
+<button class="btn tooltip tooltip-w tooltip-mouse" data-powertip="&lt;button type='button' class='close'&gt;&times;&lt;/button&gt; north west">click my tooltip</button>
 												</div>
 											</div>
 											
 										</div>
 										<div class="kss-markup">
-											<pre><code data-language="html">&lt;a href=&quot;javascript:void(0);&quot;&gt;default link&lt;/a&gt;</code></pre>
+											<pre><code data-language="html">&lt;div class=&quot;ac&quot;&gt;
+  &lt;div&gt;
+    &lt;button class=&quot;btn tooltip tooltip-nw&quot; data-powertip=&quot;north west&quot;&gt;NW&lt;/button&gt;
+    &lt;button class=&quot;btn tooltip tooltip-n&quot; data-powertip=&quot;north&quot;&gt;N&lt;/button&gt;
+    &lt;button class=&quot;btn tooltip tooltip-ne&quot; data-powertip=&quot;north east&quot;&gt;NE&lt;/button&gt;
+  &lt;/div&gt;
+  &lt;div&gt;
+    &lt;button class=&quot;btn tooltip tooltip-w&quot; data-powertip=&quot;west&quot;&gt;W&lt;/button&gt;
+    &lt;button class=&quot;btn invisible&quot; data-powertip=&quot;south&quot;&gt;$$$I&lt;/button&gt;
+    &lt;button class=&quot;btn tooltip tooltip-e&quot; data-powertip=&quot;east&quot;&gt;E&lt;/button&gt;
+  &lt;/div&gt;
+  &lt;div&gt;
+    &lt;button class=&quot;btn tooltip tooltip-sw&quot; data-powertip=&quot;south west&quot;&gt;SW&lt;/button&gt;
+    &lt;button class=&quot;btn tooltip tooltip-s&quot; data-powertip=&quot;south&quot;&gt;S&lt;/button&gt;
+    &lt;button class=&quot;btn tooltip tooltip-se&quot; data-powertip=&quot;south east&quot;&gt;SE&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;button class=&quot;btn tooltip tooltip-w tooltip-mouse&quot; data-powertip=&quot;&lt;button type=&#x27;button&#x27; class=&#x27;close&#x27;&gt;&times;&lt;/button&gt; north west&quot;&gt;click my tooltip&lt;/button&gt;</code></pre>
 										</div>
 										
 								 
