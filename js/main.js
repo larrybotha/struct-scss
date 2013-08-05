@@ -29,7 +29,7 @@ jQuery(function($) {
 
 	$('textarea.tinymce').tinymce({
 		// Location of TinyMCE script
-		script_url : 'js/libs/tiny_mce/tiny_mce.js',
+		script_url : 'public/js/libs/tiny_mce/tiny_mce.js',
 
 		// General options
 		theme : "advanced",
@@ -45,7 +45,7 @@ jQuery(function($) {
 		theme_advanced_resizing : false,
 
 		// Example content CSS (should be your site CSS)
-		content_css : "style.css",
+		content_css : "public/style.css",
 		width: "100%",
 
 		// Drop lists for link/image/media/template dialogs
@@ -135,7 +135,8 @@ jQuery(function($) {
 
 	$('.typeahead-1').typeahead({
 		name: 'first',
-		local: typeaheadNames
+		// local: typeaheadNames
+		local: 'public/data/names.json'
 	});
 
 	//	-----------------------------------------------------------------------------
@@ -157,36 +158,36 @@ jQuery(function($) {
 	//	-----------------------------------------------------------------------------
 	//	Autocomplete3
 	//	-----------------------------------------------------------------------------
-	$(".typeahead-3").typeahead({
-		name: 'third',
-		local: typeaheadNamesAges,
-		template: [
-			'<span>{{name}}, {{age}}<br>',
-			'<span>{{email}}</span>'
-		].join(''),
-		engine: Hogan
-		})
-	.data("autocomplete")._renderItem = function(ul, item) {
-		return $("<li></li>")
-			.data("item.autocomplete", item)
-			.append(
-				"<a class='mblock cf'>" +
-					"<img class='mblock-alpha' src='http://placekitten.com/20/20'/>" +
-					"<div class='mblock-beta'>" +
-						"<span>" + item.label + "</span><br><small>" + item.desc + "</small></div></a>")
-			.appendTo(ul);
-	};
+	// $(".typeahead-3").typeahead({
+	// 	name: 'third',
+	// 	local: typeaheadNamesAges,
+	// 	template: [
+	// 		'<span>{{name}}, {{age}}<br>',
+	// 		'<span>{{email}}</span>'
+	// 	].join(''),
+	// 	engine: Hogan
+	// 	})
+	// .data("autocomplete")._renderItem = function(ul, item) {
+	// 	return $("<li></li>")
+	// 		.data("item.autocomplete", item)
+	// 		.append(
+	// 			"<a class='mblock cf'>" +
+	// 				"<img class='mblock-alpha' src='http://placekitten.com/20/20'/>" +
+	// 				"<div class='mblock-beta'>" +
+	// 					"<span>" + item.label + "</span><br><small>" + item.desc + "</small></div></a>")
+	// 		.appendTo(ul);
+	// };
 
-	$(".token-list").on("click", function(e){
-		$(this).find(".token-list-input").focus();
-	});
+	// $(".token-list").on("click", function(e){
+	// 	$(this).find(".token-list-input").focus();
+	// });
 
-	$("#autocomplete3").on("keydown", function(e){
-		$this = $(this);
-		if ($this.parent().prev() && $this.val() === "" && e.keyCode === 8) {
-			$this.parent().prev().remove();
-		}
-	});
+	// $("#autocomplete3").on("keydown", function(e){
+	// 	$this = $(this);
+	// 	if ($this.parent().prev() && $this.val() === "" && e.keyCode === 8) {
+	// 		$this.parent().prev().remove();
+	// 	}
+	// });
 
 
 	//	*****************************************************************************
