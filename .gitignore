@@ -1,0 +1,6 @@
+.DS_STORE
+config.rb
+.sass-cache/
+projects/
+
+node_modules/
