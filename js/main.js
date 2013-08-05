@@ -1,5 +1,7 @@
 jQuery(function($) {
 
+	'use strict';
+
 	//	*****************************************************************************
 	//	TinyMCE
 	//	*****************************************************************************
@@ -27,7 +29,7 @@ jQuery(function($) {
 
 	$('textarea.tinymce').tinymce({
 		// Location of TinyMCE script
-		script_url : 'js/libs/tiny_mce/tiny_mce.js',
+		script_url : 'public/js/libs/tiny_mce/tiny_mce.js',
 
 		// General options
 		theme : "advanced",
@@ -43,7 +45,7 @@ jQuery(function($) {
 		theme_advanced_resizing : false,
 
 		// Example content CSS (should be your site CSS)
-		content_css : "style.css",
+		content_css : "public/style.css",
 		width: "100%",
 
 		// Drop lists for link/image/media/template dialogs
@@ -69,144 +71,145 @@ jQuery(function($) {
 
 
 	//	*****************************************************************************
-	//	jQuery UI Autocomplete
+	//	Typeahead Autocomplete
 	//	*****************************************************************************
-
+	var typeaheadNames = [
+				"Jose Bill",
+				"Edwin Joanne",
+				"Joel Alvin",
+				"Jason Wendy",
+				"Catherine Vincent",
+				"Cathy Guy",
+				"Marsha Joan",
+				"Francis Ethel",
+				"Bob Wesley",
+				"Sara Regina",
+			],
+			typeaheadNamesAges = [
+				{
+					"name": "Cynthia Branch",
+					"age": 17,
+					"email": "theodore@davis.ma"
+				}, {
+					"name": "Wesley Teague",
+					"age": 16,
+					"email": "lester@monroe.gr"
+				}, {
+					"name": "Leslie Parsons",
+					"age": 26,
+					"email": "ryan@bolton.si"
+				}, {
+					"name": "Gilbert Klein",
+					"age": 46,
+					"email": "judith@barefoot.hm"
+				}, {
+					"name": "Karl Snow",
+					"age": 3,
+					"email": "martin@carlton.mw"
+				}, {
+					"name": "Harvey Jones",
+					"age": 9,
+					"email": "judy@mckenzie.gb"
+				}, {
+					"name": "Jose Davidson",
+					"age": 28,
+					"email": "alison@barr.rs"
+				}, {
+					"name": "Brett Boyette",
+					"age": 4,
+					"email": "elaine@walsh.pk"
+				}, {
+					"name": "Ted Carver",
+					"age": 39,
+					"email": "gayle@haynes.lr"
+				}, {
+					"name": "Alison Schultz",
+					"age": 22,
+					"email": "katherine@nichols.gn"
+				}
+			];
 	//	-----------------------------------------------------------------------------
 	//	Autocomplete1
 	//	-----------------------------------------------------------------------------
-	var autocomplete1Data = [
-			"Anna Conda",
-			"Ben Dover",
-			"Craven Moorehead",
-			"Dick Burns",
-			"Earl Lee Riser",
-			"Gene Poole",
-			"Harry Baals",
-			"Ileane Wright",
-			"Jack Knoff",
-			"Kerry Oki",
-			"Lance Boyle",
-			"M. Balmer",
-			"Norma Leigh Lucid",
-			"Ophelia Payne",
-			"Pat Hiscock",
-			"Polly Ester",
-			"Raynor Schein",
-			"Sal A. Mander",
-			"Tanya Hyde",
-			"Viola Solo",
-			"Walter Melon",
-			"X. Benedict"
-		];
 
-		$( "#autocomplete1" ).autocomplete({
-			source: autocomplete1Data,
-			appendTo: "#autocomplete1-container"
-		});
+
+	$('.typeahead-1').typeahead({
+		name: 'first',
+		local: typeaheadNames
+	});
 
 	//	-----------------------------------------------------------------------------
-	//	Autocomplete2
+	//	typeahead-2
 	//	-----------------------------------------------------------------------------
-	var autocomplete2Data = [
-		{
-			value: "catstevens",
-			label: "Cat Stevens",
-			desc: "a formidable description of Cat Stevens O.o"
-		},
-		{
-			value: "felinegood",
-			label: "Feline Good",
-			desc: "are you feline good too?"
-		},
-		{
-			value: "tickletank",
-			label: "Tickle Tank",
-			desc: "getz yo tickle awn"
-		},
-		{
-			value: "atticuskitch",
-			label: "Atticus Kitch",
-			desc: "swings in gardens and such things"
-		},
-		{
-			value: "seriousbulbous",
-			label: "Serious Bulbous",
-			desc: "what is this doing here, fo'real?!"
-		},
-		{
-			value: "zeitgeistkitteh",
-			label: "Zeitgeist Kitteh",
-			desc: "had to get a 'z' in somehow"
-		}
-	];
 
-	$( "#autocomplete2" ).autocomplete({
-		source: autocomplete2Data,
-		appendTo: "#autocomplete2-container",
-		focus: function(event, ui) {
-			return false;
-		},
-		select: function( event, ui ) {
-			$( "#autocomplete2" ).val( ui.item.label );
-			$( "#autocomplete2-id" ).val( ui.item.value );
-			return false;
-		}
-	})
-	.data( "autocomplete" )._renderItem = function( ul, item ) {
-		return $( "<li></li>" )
-			.data( "item.autocomplete", item )
-			.append(
-				"<a class='mblock cf'>" +
-					"<img class='mblock-alpha' src='http://placekitten.com/20/20'/>" +
-					"<div class='mblock-beta'>" +
-						"<span>" + item.label + "</span><br><small>" + item.desc + "</small></div></a>" )
-			.appendTo( ul );
-	};
+	$('.typeahead-2').typeahead({
+		name: 'second',
+		valueKey: ['name'],
+		// prefetch: '../data/names-and-ages.json',
+		local: typeaheadNamesAges,
+		template: [
+			'<span>{{name}}, {{age}}<br>',
+			'<span>{{email}}</span>'
+		].join(''),
+		engine: Hogan
+	});
 
 	//	-----------------------------------------------------------------------------
 	//	Autocomplete3
 	//	-----------------------------------------------------------------------------
-	$( "#autocomplete3" ).autocomplete({
-		source: autocomplete2Data,
-		appendTo: "#autocomplete3-container",
-		focus: function(event, ui) {
-			return false;
-		},
-		select: function( event, ui ) {
-			$( "#autocomplete3" ).val("");
-			$( "#autocomplete3-id" ).val( ui.item.value );
-			$( "#autocomplete3-container .token-list-input" ).parent().before("\n<li class='token-list-item token-list-token'>" + ui.item.label + "<button class='close' data-dismiss='token'>×</button></li>\n");
-			return false;
-		}
-	})
-	.data( "autocomplete" )._renderItem = function( ul, item ) {
-		return $( "<li></li>" )
-			.data( "item.autocomplete", item )
-			.append(
-				"<a class='mblock cf'>" +
-					"<img class='mblock-alpha' src='http://placekitten.com/20/20'/>" +
-					"<div class='mblock-beta'>" +
-						"<span>" + item.label + "</span><br><small>" + item.desc + "</small></div></a>" )
-			.appendTo( ul );
-	};
+	// $(".typeahead-3").typeahead({
+	// 	name: 'third',
+	// 	local: typeaheadNamesAges,
+	// 	template: [
+	// 		'<span>{{name}}, {{age}}<br>',
+	// 		'<span>{{email}}</span>'
+	// 	].join(''),
+	// 	engine: Hogan
+	// 	})
+	// .data("autocomplete")._renderItem = function(ul, item) {
+	// 	return $("<li></li>")
+	// 		.data("item.autocomplete", item)
+	// 		.append(
+	// 			"<a class='mblock cf'>" +
+	// 				"<img class='mblock-alpha' src='http://placekitten.com/20/20'/>" +
+	// 				"<div class='mblock-beta'>" +
+	// 					"<span>" + item.label + "</span><br><small>" + item.desc + "</small></div></a>")
+	// 		.appendTo(ul);
+	// };
 
-	$( ".token-list" ).on("click", function(e){
-		$(this).find(".token-list-input").focus();
-	});
+	// $(".token-list").on("click", function(e){
+	// 	$(this).find(".token-list-input").focus();
+	// });
 
-	$("#autocomplete3").on("keydown", function(e){
-		$this = $(this);
-		if ( $this.parent().prev() && $this.val() === "" && e.keyCode === 8 ) {
-			$this.parent().prev().remove();
-		}
-	});
+	// $("#autocomplete3").on("keydown", function(e){
+	// 	$this = $(this);
+	// 	if ($this.parent().prev() && $this.val() === "" && e.keyCode === 8) {
+	// 		$this.parent().prev().remove();
+	// 	}
+	// });
 
 
 	//	*****************************************************************************
 	//	jQuery UI Date Picker
 	//	*****************************************************************************
-	$("#datepicker").datepicker({ dateFormat: "d M, yy" });
+	if ($.fn.datepicker) {
+		$('#datepicker').datepicker({
+			minDate: -20,
+			maxDate: "+1M +10D",
+			dateFormat: 'd M, yy'
+		});
+	}
+
+	//	*****************************************************************************
+		//	Dropzone File Uploads
+		//	*****************************************************************************
+	if ($('.dropzone').length) {
+		Dropzone.autoDiscover = false;
+		var myDropzone = new Dropzone("form.dropzone", {
+			url: "/file/post",
+			addRemoveLinks: true
+		});
+	}
 
 
 	//	*****************************************************************************
@@ -366,7 +369,7 @@ jQuery(function($) {
 			$container.html(winWidth + 'px (\'g\' to toggle grid)');
 		}
 
-		function updateWinDimensions( e ) {
+		function updateWinDimensions(e) {
 			writeWinDimensions();
 		}
 
@@ -409,6 +412,6 @@ jQuery(function($) {
 	$('.no-js').removeClass('no-js');
 
 	// Collapse
-	UICollapse();
+	new UICollapse();
 
 });

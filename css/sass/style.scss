@@ -49,6 +49,7 @@ might want to share.
 			- Date Picker
 			- Autocomplete
 			- Wysiwyg
+			- File Upload
 		- Buttons
 		- Icons
 		- Alerts
@@ -61,7 +62,6 @@ might want to share.
 			- Comment Form
 		- Widgets
 		- Progress Bars
-		- Drag & Drop
 		- Tool Tips
 
 	- MODIFIERS
@@ -804,11 +804,17 @@ input:checked + label > .checkbox-custom:before { content: "\e001"; /* .icon-che
 /* -----------------------------------------------------------------------------
 	 &Autocomplete
 	 -------------------------------------------------------------------------- */
-@import "vendor/jquery-ui-autocomplete";
+@import "vendor/typeahead";
 
 /* -----------------------------------------------------------------------------
 	 &Wysiwyg
 	 -------------------------------------------------------------------------- */
+
+
+/* -----------------------------------------------------------------------------
+	 &File Upload
+	 -------------------------------------------------------------------------- */
+@import "vendor/dropzone";
 
 
 /* =============================================================================
@@ -829,6 +835,7 @@ input:checked + label > .checkbox-custom:before { content: "\e001"; /* .icon-che
 	padding: .5em 1em;
 	border: 0;
 	@include transition(all 150ms ease-in);
+	outline:none;
 	cursor: pointer;
 }
 
@@ -862,6 +869,7 @@ input:checked + label > .checkbox-custom:before { content: "\e001"; /* .icon-che
 	@include box-shadow(none);
 }
 
+@import 'docs/buttons/docs-buttons-group';
 .btn-group { display: inline-block;}
 
 .btn-group > .btn {
@@ -1013,13 +1021,6 @@ li.icon.icon-large:before, li.icon.icon-large:before {
 }
 
 .alert a:hover { border-bottom-style: solid;}
-
-.alert .close {
-	position: relative;
-	top: -2px;
-	right: -21px;
-	line-height: 18px;
-}
 
 .alert-block {
 	padding-top: 14px;
@@ -1338,21 +1339,6 @@ a.label:hover {
 
 
 /* =============================================================================
-	 &Drag & Drop
-	 ========================================================================== */
-.files-drag-tip {
-	display: inline-block;
-	display: none;
-	background-color: #f6f6f6;
-	@include px-and-rem(font-size, .6875); /* 11px / 16 = .6875 */
-	color: #999;
-	padding: .15em 1em .05em;
-}
-
-.field:hover .files-drag-tip { display: block;}
-
-
-/* =============================================================================
 	 &Tool Tips
 	 ========================================================================== */
 /* PowerTip Plugin */
@@ -1618,8 +1604,8 @@ button.d-block { width: 100%;}
 .hidden { display: none !important; visibility: hidden;}
 
 /* Hide only visually, but have it available for screenreaders: h5bp.com/v */
-:root .visuallyhidden { position: absolute; clip: rect(0 0 0 0); width: 1px; height: 1px; margin: -1px; overflow: hidden; padding: 0; border: 0;}
-.ie8 .visuallyhidden-ie8 { position: absolute; clip: rect(0 0 0 0); width: 1px; height: 1px; margin: -1px; overflow: hidden; padding: 0; border: 0;}
+:root .visuallyhidden { position: absolute; clip: rect(0 0 0 0); width: 1px; height: 1px; margin: -1px; overflow: hidden; padding: 0; border: 0; visibility:hidden;}
+.ie8 .visuallyhidden-ie8 { position: absolute; clip: rect(0 0 0 0); width: 1px; height: 1px; margin: -1px; overflow: hidden; padding: 0; border: 0; visibility: visible;}
 
 /* Extends the .visuallyhidden class to allow the element to be focusable when navigated to via the keyboard: h5bp.com/p */
 .visuallyhidden.focusable:active, .visuallyhidden.focusable:focus { position: static; clip: auto; width: auto; height: auto; margin: 0; overflow: visible;}

@@ -1,0 +1,24 @@
+/*
+Button defaults
+
+<ul>
+  <li>.btn-selected</li>
+  <li>.disabled</li>
+</ul>
+
+Markup:
+<div class="kss-row cf">
+  <div class="kss-col kss-col-6-alpha kss-col-6-ie8">
+    <a class="btn {$modifiers}" href="javascript:void(0)">anchor</a>
+    <button class="btn {$modifiers}">button</button>
+    <label class="btn {$modifiers}">label</label>
+    <input class="btn {$modifiers}" type="submit" value="submit">
+  </div>
+</div>
+
+:hover				- 
+:active				- 
+.btn-selected	- 
+
+Styleguide 11.1
+*/

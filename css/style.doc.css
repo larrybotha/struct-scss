@@ -45,6 +45,7 @@ might want to share.
 			- Date Picker
 			- Autocomplete
 			- Wysiwyg
+			- File Upload
 		- Buttons
 		- Icons
 		- Alerts
@@ -57,7 +58,6 @@ might want to share.
 			- Comment Form
 		- Widgets
 		- Progress Bars
-		- Drag & Drop
 		- Tool Tips
 
 	- MODIFIERS
@@ -589,7 +589,7 @@ td {
 
 /* Reusable column setup */
 .col {
-  border: 0 solid rgba(0, 0, 0, 0);
+  border: 0 solid transparent;
   border-left-width: 14px;
   border-left-width: 1rem;
   float: left;
@@ -1035,7 +1035,7 @@ input[type="checkbox"] {
 .input-suffix-container > .input-suffix-in {
   position: absolute;
   top: 50%;
-  margin-top: -0.7em;
+  margin-top: -.7em;
   padding-top: 0;
 }
 
@@ -1239,96 +1239,347 @@ input:checked + label > .checkbox-custom:before {
 /* -----------------------------------------------------------------------------
 	 &Autocomplete
 	 -------------------------------------------------------------------------- */
-.ui-autocomplete {
-  position: absolute;
-  cursor: pointer;
-  background: white;
-  font-size: .75em;
-  border: 1px solid #b2b2b2;
-  border-bottom-left-radius: 4px;
-  border-bottom-right-radius: 4px;
-}
-
-.ui-menu {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.ui-menu .ui-menu {
-  margin-top: -3px;
-}
-
-.ui-menu .ui-menu-item {
-  border-bottom: 1px solid #eee;
-}
-
-.ui-menu .ui-menu-item a {
-  display: block;
-  color: inherit;
-  padding: .4em .5em;
-  line-height: 1.5;
-}
-
-.ui-menu .ui-menu-item a.ui-state-hover,
-.ui-menu .ui-menu-item a.ui-state-active {
-  font-weight: normal;
-  background-color: #e4eef5;
-  background-image: -webkit-linear, -webkit-top, transparent, rgba(255, 255, 255, 0.1);
-  background-image: -moz-linear, -moz-top, transparent, rgba(255, 255, 255, 0.1);
-  background-image: -o-linear, -o-top, transparent, rgba(255, 255, 255, 0.1);
-  background-image: -ms-linear, -ms-top, transparent, rgba(255, 255, 255, 0.1);
-  background-image: linear, top, transparent, rgba(255, 255, 255, 0.1);
-}
-
-.ui-menu-item .img-block > .img {
-  background: transparent url(http://placekitten.com/g/20/20) no-repeat center center;
-  width: 20px;
-  height: 20px;
-  margin-right: .5em;
-}
-
-.token-list {
-  position: relative;
-  display: block;
-  border: 1px solid #cccccc;
-  cursor: text;
-  padding-left: .25em;
-}
-
-.token-list + .ui-autocomplete {
-  left: 0 !important;
-}
-
-.token-list-input {
-  background-color: transparent;
-  padding: 0;
-  margin: 0;
-  border: 0;
+.tt-hint {
+  width: 100%;
+  color: #999;
+  border: 1px solid #024e6a;
+  border-radius: 8px;
   outline: none;
 }
 
-.token-list-item {
-  display: inline-block;
-  vertical-align: middle;
+.tt-dropdown-menu {
+  min-width: 100%;
+  margin-top: 12px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
 
-.token-list-token {
-  vertical-align: middle;
-  font-size: 75%;
-  line-height: 1;
-  padding: .25em .5em;
-  border: 1px solid #aaa;
-  border-radius: 2px;
+.tt-suggestion {
+  padding: 8px 20px;
+  line-height: 18px;
+}
+
+.tt-suggestion + .tt-suggestion {
+  border-top: 1px solid #ccc;
+}
+
+.twitter-typeahead .tt-suggestion.tt-is-under-cursor {
+  color: #03739c;
 }
 
 /* -----------------------------------------------------------------------------
 	 &Wysiwyg
 	 -------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+	 &File Upload
+	 -------------------------------------------------------------------------- */
+.dropzone {
+  padding: 21px;
+  padding: 1.5rem;
+  border: 3px dashed #939393;
+  border-radius: 14px;
+  border-radius: 1rem;
+}
+
+.dz-clickable {
+  cursor: pointer;
+}
+
+.dz-drag-hover {
+  border-color: #868686;
+}
+
+.dz-message {
+  opacity: 1;
+}
+
+.dz-started .dz-message {
+  display: none;
+}
+
+.dz-preview {
+  position: relative;
+  display: inline-block;
+  background: white;
+  margin: 0 14px 14px;
+  margin: 0 1rem 1rem;
+  vertical-align: top;
+  padding: 14px;
+  padding: 1rem;
+}
+
+.dz-preview.dz-file-preview [data-dz-thumbnail] {
+  display: none;
+}
+
+.dz-details {
+  position: relative;
+  background: #ebebeb;
+  width: 100px;
+  height: 100px;
+  margin-bottom: 14px;
+  margin-bottom: 1rem;
+  padding: 14px;
+  padding: 1rem;
+}
+
+.dz-filename, .dz-size {
+  font-size: 11.9px;
+  font-size: 0.85rem;
+  font-style: italic;
+  overflow: hidden;
+}
+
+.dz-details img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100px;
+  height: 100px;
+}
+
+.dz-preview.dz-error .dz-error-mark {
+  display: block;
+}
+
+.dz-preview.dz-success .dz-success-mark {
+  display: block;
+}
+
+.dz-preview:hover .dz-details img {
+  display: none;
+}
+
+.dz-preview .dz-success-mark,
+.dz-preview .dz-error-mark {
+  display: none;
+  position: absolute;
+  width: 28px;
+  width: 2rem;
+  height: 28px;
+  height: 2rem;
+  font-size: 28px;
+  font-size: 2rem;
+  text-align: center;
+  top: -.5em;
+  right: -.5em;
+  -webkit-transition: opacity 0.4s ease-in-out;
+  -moz-transition: opacity 0.4s ease-in-out;
+  -o-transition: opacity 0.4s ease-in-out;
+  transition: opacity 0.4s ease-in-out;
+}
+
+.dz-preview .dz-success-mark {
+  color: #468847;
+}
+
+.dz-preview .dz-error-mark {
+  color: #b94a48;
+}
+
+.dz-preview .dz-error-mark span,
+.dz-preview .dz-success-mark span {
+  display: none;
+}
+
+.dz-success .dz-success-mark span,
+.dz-error .dz-error-mark span {
+  display: block;
+}
+
+.dz-progress {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: .5rem;
+  display: none;
+}
+
+.dz-progress .dz-upload {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  background-color: #8cc657;
+}
+
+.dz-processing .dz-progress {
+  display: block;
+}
+
+.dz-error-message {
+  display: none;
+  position: absolute;
+  background: rgba(245, 245, 245, 0.8);
+  color: #b94a48;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 10.5px;
+  padding: 0.75rem;
+  z-index: 20;
+}
+
+.dz-preview:hover.dz-error .dz-error-message {
+  display: block;
+}
+
+.dropzone.dz-square .dz-default.dz-message {
+  background-position: 0 -123px;
+  width: 268px;
+  margin-left: -134px;
+  height: 174px;
+  margin-top: -87px;
+}
+
+.dropzone.dz-drag-hover .dz-message {
+  opacity: 0.15;
+  filter: alpha(opacity=15);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=15)";
+}
+
+.dropzone.dz-started .dz-message {
+  display: block;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+}
+
+.dz-preview,
+.dropzone-previews .dz-preview {
+  -webkit-box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.16);
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.16);
+  font-size: 14px;
+}
+
+.dz-preview.dz-image-preview:hover .dz-details img {
+  display: block;
+  opacity: 0.1;
+  filter: alpha(opacity=10);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=10)";
+}
+
+.dz-preview.dz-success .dz-success-mark {
+  opacity: 1;
+}
+
+.dz-preview.dz-error .dz-error-mark {
+  opacity: 1;
+}
+
+.dz-preview.dz-error .dz-progress .dz-upload {
+  background: #ee1e2d;
+}
+
+.dz-preview .dz-progress .dz-upload {
+  -webkit-animation: loading 0.4s linear infinite;
+  -moz-animation: loading 0.4s linear infinite;
+  -o-animation: loading 0.4s linear infinite;
+  animation: loading 0.4s linear infinite;
+  -webkit-transition: width 0.3s ease-in-out;
+  -moz-transition: width 0.3s ease-in-out;
+  -o-transition: width 0.3s ease-in-out;
+  transition: width 0.3s ease-in-out;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background-repeat: repeat-x;
+  background-position: 0px -400px;
+}
+
+.dz-preview.dz-success .dz-progress {
+  display: block;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  -webkit-transition: opacity 0.4s ease-in-out;
+  -moz-transition: opacity 0.4s ease-in-out;
+  -o-transition: opacity 0.4s ease-in-out;
+  transition: opacity 0.4s ease-in-out;
+}
+
+.dz-preview .dz-error-message {
+  display: block;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  -webkit-transition: opacity 0.3s ease-in-out;
+  -moz-transition: opacity 0.3s ease-in-out;
+  -o-transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.dz-preview:hover.dz-error .dz-error-message {
+  opacity: 1;
+}
+
+.dz-remove:hover {
+  color: #666;
+}
+
+@-moz-keyframes loading {
+  0% {
+    background-position: 0 -400px;
+  }
+
+  100% {
+    background-position: -7px -400px;
+  }
+}
+
+@-webkit-keyframes loading {
+  0% {
+    background-position: 0 -400px;
+  }
+
+  100% {
+    background-position: -7px -400px;
+  }
+}
+
+@-o-keyframes loading {
+  0% {
+    background-position: 0 -400px;
+  }
+
+  100% {
+    background-position: -7px -400px;
+  }
+}
+
+@-ms-keyframes loading {
+  0% {
+    background-position: 0 -400px;
+  }
+
+  100% {
+    background-position: -7px -400px;
+  }
+}
+
+@keyframes loading {
+  0% {
+    background-position: 0 -400px;
+  }
+
+  100% {
+    background-position: -7px -400px;
+  }
+}
+
 /* =============================================================================
 	 &Buttons
 	 ========================================================================== */
-.btn {
+.btn, .dz-remove {
   position: relative;
   display: inline-block;
   background-color: #7ab5d3;
@@ -1348,15 +1599,16 @@ input:checked + label > .checkbox-custom:before {
   -moz-transition: all 150ms ease-in;
   -o-transition: all 150ms ease-in;
   transition: all 150ms ease-in;
+  outline: none;
   cursor: pointer;
 }
 
-.btn:hover {
+.btn:hover, .dz-remove:hover {
   background-color: #c7e0ec;
   color: #2d2d2d;
 }
 
-.btn:active, .btn-selected, .btn-selected:hover {
+.btn:active, .dz-remove:active, .btn-selected, .btn-selected:hover {
   background-color: #3a87ad;
   color: #2d2d2d;
   /* android 4.0 requires prefix */
@@ -1372,31 +1624,56 @@ input:checked + label > .checkbox-custom:before {
   cursor: default;
 }
 
-.btn[disabled], .btn.disabled {
-  color: gray;
+.btn[disabled], [disabled].dz-remove, .btn.disabled, .disabled.dz-remove {
+  color: grey;
   cursor: default;
 }
 
-.btn[disabled], .btn.disabled,
-.btn:hover[disabled], .btn.disabled:hover,
-.btn:active[disabled], .btn.disabled:active {
+.btn[disabled], [disabled].dz-remove, .btn.disabled, .disabled.dz-remove,
+.btn:hover[disabled],
+.dz-remove:hover[disabled], .btn.disabled:hover, .disabled.dz-remove:hover,
+.btn:active[disabled],
+.dz-remove:active[disabled], .btn.disabled:active, .disabled.dz-remove:active {
   background-color: #c7e0ec;
   -webkit-box-shadow: none;
   box-shadow: none;
 }
 
+/*
+Button groups
+
+Markup:
+<div class="btn-group cf">
+  <label class="btn btn-primary">1</label>
+  <label class="btn btn-primary">2</label>
+  <label class="btn btn-primary">3</label>
+  <label class="btn btn-primary">4</label>
+  <label class="btn btn-primary">5</label>
+  <label class="btn btn-primary">6</label>
+  <label class="btn btn-primary">7</label>
+</div>
+<div class="btn-group cf">
+  <label class="btn btn-primary">1</label>
+  <label class="btn btn-primary">2</label>
+</div>
+<div class="btn-group cf">
+  <label class="btn btn-primary">1</label>
+</div>
+
+Styleguide 11.3
+*/
 .btn-group {
   display: inline-block;
 }
 
-.btn-group > .btn {
+.btn-group > .btn, .btn-group > .dz-remove {
   float: left;
   margin-right: 0;
   margin-left: -1px;
   border-left: 1px solid #c7e0ec;
 }
 
-.btn-group > .btn:first-child {
+.btn-group > .btn:first-child, .btn-group > .dz-remove:first-child {
   margin-left: 0;
   border: 0;
 }
@@ -1428,7 +1705,7 @@ a .icon, a .icon {
   font-size: 1.3333333333333333em;
 }
 
-.btn .icon, .btn .icon {
+.btn .icon, .dz-remove .icon, .btn .icon, .dz-remove .icon {
   /* keeps button heights with and without icons the same */
   line-height: .5;
 }
@@ -1455,7 +1732,7 @@ li.icon:before, li.icon:before {
 }
 
 li.icon.icon-large:before, li.icon.icon-large:before {
-  text-indent: -1.33333em;
+  text-indent: -1.3333333333333333em;
 }
 
 .icon-anim-rotate {
@@ -1612,13 +1889,6 @@ li.icon.icon-large:before, li.icon.icon-large:before {
   border-bottom-style: solid;
 }
 
-.alert .close {
-  position: relative;
-  top: -2px;
-  right: -21px;
-  line-height: 18px;
-}
-
 .alert-block {
   padding-top: 14px;
   padding-bottom: 14px;
@@ -1696,7 +1966,7 @@ li.icon.icon-large:before, li.icon.icon-large:before {
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
   white-space: nowrap;
   vertical-align: baseline;
-  background-color: gray;
+  background-color: grey;
   padding: 1px 4px 2px;
   border-radius: 2px;
 }
@@ -1786,7 +2056,7 @@ a.label:hover {
   margin: 0 0 1.5rem;
   padding: 21px;
   padding: 1.5rem;
-  border: 0 solid rgba(0, 0, 0, 0);
+  border: 0 solid transparent;
   border-left-width: 21px;
   border-left-width: 1.5rem;
 }
@@ -2039,24 +2309,6 @@ a.label:hover {
 .progress-warning > .progress-bar,
 .progress-warning > .progress-bar-striped {
   background-color: #c09853;
-}
-
-/* =============================================================================
-	 &Drag & Drop
-	 ========================================================================== */
-.files-drag-tip {
-  display: inline-block;
-  display: none;
-  background-color: #f6f6f6;
-  font-size: 9.625px;
-  font-size: 0.6875rem;
-  /* 11px / 16 = .6875 */
-  color: #999;
-  padding: .15em 1em .05em;
-}
-
-.field:hover .files-drag-tip {
-  display: block;
 }
 
 /* =============================================================================
@@ -2498,6 +2750,7 @@ button.d-block {
   overflow: hidden;
   padding: 0;
   border: 0;
+  visibility: hidden;
 }
 
 .ie8 .visuallyhidden-ie8 {
@@ -2509,6 +2762,7 @@ button.d-block {
   overflow: hidden;
   padding: 0;
   border: 0;
+  visibility: visible;
 }
 
 /* Extends the .visuallyhidden class to allow the element to be focusable when navigated to via the keyboard: h5bp.com/p */
