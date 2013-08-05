@@ -1288,7 +1288,7 @@ Button styles are tested to work against a number of different elements for cons
   <li>inputs as submits</li>
 </ul>
 
-Styleguide 10
+Styleguide 11
 */
 /*
 Button defaults
@@ -1312,7 +1312,7 @@ Markup:
 :active				- 
 .btn-selected	- 
 
-Styleguide 10.1
+Styleguide 11.1
 */
 .btn {
   position: relative;
@@ -1392,7 +1392,7 @@ Markup:
   <label class="btn btn-primary">1</label>
 </div>
 
-Styleguide 10.3
+Styleguide 11.3
 */
 .btn-group {
   display: inline-block;
