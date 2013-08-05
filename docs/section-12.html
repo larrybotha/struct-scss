@@ -99,25 +99,37 @@
 								
 								<li class="kss-menu-item kss-col kss-col-6-vpalpha kss-col-4-vpbeta kss-col-12-vpgamma kss-col-12-ie8">
 									<a href="section-10.html">
-										<span class="kss-ref">10.</span> <span class="kss-name">Buttons</span>
+										<span class="kss-ref">10.</span> <span class="kss-name">Forms</span>
 									</a>
 								</li>
 								
 								<li class="kss-menu-item kss-col kss-col-6-vpalpha kss-col-4-vpbeta kss-col-12-vpgamma kss-col-12-ie8">
 									<a href="section-11.html">
-										<span class="kss-ref">11.</span> <span class="kss-name">Pagination</span>
+										<span class="kss-ref">11.</span> <span class="kss-name">Buttons</span>
 									</a>
 								</li>
 								
 								<li class="kss-menu-item kss-col kss-col-6-vpalpha kss-col-4-vpbeta kss-col-12-vpgamma kss-col-12-ie8">
 									<a href="section-12.html">
-										<span class="kss-ref">12.</span> <span class="kss-name">Labels</span>
+										<span class="kss-ref">12.</span> <span class="kss-name">Alerts</span>
 									</a>
 								</li>
 								
 								<li class="kss-menu-item kss-col kss-col-6-vpalpha kss-col-4-vpbeta kss-col-12-vpgamma kss-col-12-ie8">
 									<a href="section-13.html">
-										<span class="kss-ref">13.</span> <span class="kss-name">Forms</span>
+										<span class="kss-ref">13.</span> <span class="kss-name">Pagination</span>
+									</a>
+								</li>
+								
+								<li class="kss-menu-item kss-col kss-col-6-vpalpha kss-col-4-vpbeta kss-col-12-vpgamma kss-col-12-ie8">
+									<a href="section-14.html">
+										<span class="kss-ref">14.</span> <span class="kss-name">Gallery</span>
+									</a>
+								</li>
+								
+								<li class="kss-menu-item kss-col kss-col-6-vpalpha kss-col-4-vpbeta kss-col-12-vpgamma kss-col-12-ie8">
+									<a href="section-15.html">
+										<span class="kss-ref">15.</span> <span class="kss-name">Labels</span>
 									</a>
 								</li>
 								
@@ -136,75 +148,52 @@
 
 							
 								
-									<h1 class="kss-title kss-mb-beta"><span class="kss-ref">12.</span> Labels</h1>
+									<h1 class="kss-title kss-mb-beta"><span class="kss-ref">12.</span> Alerts</h1>
 								
 									
-										
-										<div class="kss-description">
-											<ul>
-    <li>.label-important</li>
-    <li>.label-warning</li>
-    <li>.label-success</li>
-    <li>.label-info</li>
-    <li>.label-inverse</li>
-</ul>
-										</div>
 										
 										<div class="kss-modifier-block kss-mb-beta">
 											<div class="kss-modifier kss-modifier-original">
 												<div class="kss-modifier-example">
-													<span class="label {$modifiers}">label</span>
-												</div>
-											</div>
-											
-											<div class="kss-modifier">
-												
-												<hr class="kss-hr">
-												<div class="kss-modifier-example">
-													<kbd class="kss-modifier-name fr">.label-important</kbd>
-													<span class="label label-important">label</span>
-												</div>
-											</div>
-											
-											<div class="kss-modifier">
-												
-												<hr class="kss-hr">
-												<div class="kss-modifier-example">
-													<kbd class="kss-modifier-name fr">.label-warning</kbd>
-													<span class="label label-warning">label</span>
-												</div>
-											</div>
-											
-											<div class="kss-modifier">
-												
-												<hr class="kss-hr">
-												<div class="kss-modifier-example">
-													<kbd class="kss-modifier-name fr">.label-success</kbd>
-													<span class="label label-success">label</span>
-												</div>
-											</div>
-											
-											<div class="kss-modifier">
-												
-												<hr class="kss-hr">
-												<div class="kss-modifier-example">
-													<kbd class="kss-modifier-name fr">.label-info</kbd>
-													<span class="label label-info">label</span>
-												</div>
-											</div>
-											
-											<div class="kss-modifier">
-												
-												<hr class="kss-hr">
-												<div class="kss-modifier-example">
-													<kbd class="kss-modifier-name fr">.label-inverse</kbd>
-													<span class="label label-inverse">label</span>
+													<div class="alert alert-error">
+  <button type="button" class="close" data-dismiss="alert">&times;</button>
+  <strong>Oh snap!</strong> Change a few things up and try submitting <a href="javascript:void(0);">again</a>.
+</div>
+<div class="alert alert-success">
+  <button type="button" class="close" data-dismiss="alert">&times;</button>
+  <strong>Well done!</strong> You successfully read this important alert <a href="javascript:void(0);">message</a>.
+</div>
+<div class="alert alert-info">
+  <button type="button" class="close" data-dismiss="alert">&times;</button>
+  <strong>Heads up!</strong> This alert needs your attention, but it's not super <a href="javascript:void(0);">important</a>.
+</div>
+<div class="alert alert-block">
+  <button type="button" class="close" data-dismiss="alert">&times;</button>
+  <h4 class="alert-heading">Warning!</h4>
+  <p>Best check yo self, you're not looking too good. Nulla vitae elit libero, a pharetra augue. Praesent commodo cursus magna, vel scelerisque nisl <a href="javascript:void(0);">consectetur</a> et.</p>
+</div>
 												</div>
 											</div>
 											
 										</div>
 										<div class="kss-markup">
-											<pre><code data-language="html">&lt;span class=&quot;label {$modifiers}&quot;&gt;label&lt;/span&gt;</code></pre>
+											<pre><code data-language="html">&lt;div class=&quot;alert alert-error&quot;&gt;
+  &lt;button type=&quot;button&quot; class=&quot;close&quot; data-dismiss=&quot;alert&quot;&gt;&times;&lt;/button&gt;
+  &lt;strong&gt;Oh snap!&lt;/strong&gt; Change a few things up and try submitting &lt;a href=&quot;javascript:void(0);&quot;&gt;again&lt;/a&gt;.
+&lt;/div&gt;
+&lt;div class=&quot;alert alert-success&quot;&gt;
+  &lt;button type=&quot;button&quot; class=&quot;close&quot; data-dismiss=&quot;alert&quot;&gt;&times;&lt;/button&gt;
+  &lt;strong&gt;Well done!&lt;/strong&gt; You successfully read this important alert &lt;a href=&quot;javascript:void(0);&quot;&gt;message&lt;/a&gt;.
+&lt;/div&gt;
+&lt;div class=&quot;alert alert-info&quot;&gt;
+  &lt;button type=&quot;button&quot; class=&quot;close&quot; data-dismiss=&quot;alert&quot;&gt;&times;&lt;/button&gt;
+  &lt;strong&gt;Heads up!&lt;/strong&gt; This alert needs your attention, but it&#x27;s not super &lt;a href=&quot;javascript:void(0);&quot;&gt;important&lt;/a&gt;.
+&lt;/div&gt;
+&lt;div class=&quot;alert alert-block&quot;&gt;
+  &lt;button type=&quot;button&quot; class=&quot;close&quot; data-dismiss=&quot;alert&quot;&gt;&times;&lt;/button&gt;
+  &lt;h4 class=&quot;alert-heading&quot;&gt;Warning!&lt;/h4&gt;
+  &lt;p&gt;Best check yo self, you&#x27;re not looking too good. Nulla vitae elit libero, a pharetra augue. Praesent commodo cursus magna, vel scelerisque nisl &lt;a href=&quot;javascript:void(0);&quot;&gt;consectetur&lt;/a&gt; et.&lt;/p&gt;
+&lt;/div&gt;</code></pre>
 										</div>
 										
 								 
