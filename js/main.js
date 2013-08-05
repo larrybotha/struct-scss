@@ -135,8 +135,7 @@ jQuery(function($) {
 
 	$('.typeahead-1').typeahead({
 		name: 'first',
-		// local: typeaheadNames
-		local: 'public/data/names.json'
+		local: typeaheadNames
 	});
 
 	//	-----------------------------------------------------------------------------
@@ -198,6 +197,17 @@ jQuery(function($) {
 			minDate: -20,
 			maxDate: "+1M +10D",
 			dateFormat: 'd M, yy'
+		});
+	}
+
+	//	*****************************************************************************
+		//	Dropzone File Uploads
+		//	*****************************************************************************
+	if ($('.dropzone').length) {
+		Dropzone.autoDiscover = false;
+		var myDropzone = new Dropzone("form.dropzone", {
+			url: "/file/post",
+			addRemoveLinks: true
 		});
 	}
 
