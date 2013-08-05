@@ -49,6 +49,7 @@ might want to share.
 			- Date Picker
 			- Autocomplete
 			- Wysiwyg
+			- File Upload
 		- Buttons
 		- Icons
 		- Alerts
@@ -61,7 +62,6 @@ might want to share.
 			- Comment Form
 		- Widgets
 		- Progress Bars
-		- Drag & Drop
 		- Tool Tips
 
 	- MODIFIERS
@@ -811,11 +811,15 @@ input:checked + label > .checkbox-custom:before { content: "\e001"; /* .icon-che
 	 -------------------------------------------------------------------------- */
 
 
+/* -----------------------------------------------------------------------------
+	 &File Upload
+	 -------------------------------------------------------------------------- */
+@import "vendor/dropzone";
+
+
 /* =============================================================================
 	 &Buttons
 	 ========================================================================== */
-@import 'docs/buttons/docs-!buttons';
-@import 'docs/buttons/docs-buttons-default';
 .btn {
 	position: relative;
 	display: inline-block;
@@ -831,6 +835,7 @@ input:checked + label > .checkbox-custom:before { content: "\e001"; /* .icon-che
 	padding: .5em 1em;
 	border: 0;
 	@include transition(all 150ms ease-in);
+	outline:none;
 	cursor: pointer;
 }
 
@@ -1331,21 +1336,6 @@ a.label:hover {
 
 .progress-warning > .progress-bar,
 .progress-warning > .progress-bar-striped {	background-color: $clr-warning;}
-
-
-/* =============================================================================
-	 &Drag & Drop
-	 ========================================================================== */
-.files-drag-tip {
-	display: inline-block;
-	display: none;
-	background-color: #f6f6f6;
-	@include px-and-rem(font-size, .6875); /* 11px / 16 = .6875 */
-	color: #999;
-	padding: .15em 1em .05em;
-}
-
-.field:hover .files-drag-tip { display: block;}
 
 
 /* =============================================================================
