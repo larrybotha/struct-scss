@@ -98,7 +98,7 @@
           tasks: ['jshint']
         },
         css: {
-          files: ['css/sass/**/*.scss'],
+          files: ['css/sass/**/*.scss', '!css/sass/docs/**/*.scss'],
           tasks: ['sass']
         },
         styleguide: {
@@ -107,12 +107,12 @@
         },
         kss: {
           files: ['css/sass/**/docs/**/*.scss'],
-          tasks: ['sass:dev', 'shell:kss']
+          tasks: ['kss']
         }
       }
     });
 
-    grunt.registerTask('kss', ['sass:dev', 'shell:kss']);
+    grunt.registerTask('kss', ['shell:kss']);
 
     grunt.registerTask('server', ['connect']);
 
