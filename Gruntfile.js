@@ -79,8 +79,8 @@
         kss: {
           command: [
             'rm -rf docs',
-            'kss-node css/sass/docs docs --css css/style.doc.css --template styleguide-template',
-            'cd docs/public',
+            'kss-node css/sass/docs --css style.css --template styleguide-template',
+            'cd public',
             'ln -s ../../img img',
             'ln -s ../../fnt fnt',
             'ln -s ../../js js',
