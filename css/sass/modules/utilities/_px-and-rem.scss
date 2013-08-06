@@ -1,0 +1,77 @@
+// This mixin outputs a property with rem units and a px fallback.
+// Values passed without units are used as multipliers for the final
+// rem and px values, all other units are output without modification.
+// $unit-default-px represents the root value of the document font-size
+// in pixels.
+//
+// i.e. html { font-size: 100%;} // -> 16px
+
+// Usage:
+// @include px-and-rem([property], [multiplier | explicit value] [, ...]);
+
+// Example 1:
+//
+// $unit-default-px: 16px;
+//
+// .margin { @include px-and-rem(margin, 2);}
+//
+// becomes
+//
+// .margin {
+// 	margin: 32px;
+// 	margin: 2rem;
+// }
+
+// Example 2:
+//
+// $unit-default-px: 16px;
+//
+// .padding { @include px-and-rem(padding, 1, 2%, 1.5em);}
+//
+// becomes
+//
+// .padding {
+// 	padding: 16px 2% 1.5em;
+// 	padding: 1rem 2% 1.5em;
+// }
+
+@function fix8_unit_to_px($val) {
+  @if $val == auto {
+    @return $val;
+  }
+  @else {
+    @if unitless($val) {
+      @if $val == 0 { @return $val }
+      @else { @return $val * $unit-default-px};
+    } @else { @return $val};
+  }
+}
+
+@function fix8_unit_to_rem($val) {
+  @if $val == auto {
+    @return $val;
+  }
+  @else {
+    @if unitless($val) {
+      @if $val == 0 { @return $val }
+      @else { @return $val+rem};
+    } @else { @return $val};
+  }
+}
+
+@mixin px-and-rem($prop, $val...) {
+	$n: length($val);
+	$i: 1;
+
+	$px-list: ();
+	$rem-list: ();
+
+	@while $i <= $n {
+		$px-list: append($px-list, fix8_unit_to_px(nth($val, $i)));
+		$rem-list: append($rem-list, fix8_unit_to_rem(nth($val, $i)));
+		$i: $i + 1;
+	}
+
+	#{$prop}: $px-list;
+	#{$prop}: $rem-list;
+}

@@ -1,0 +1,28 @@
+// http://www.standardista.com/css3/css3-background-properties/
+@mixin background-image($val...) {
+	@include prefixer(background-image, $val, $moz: true, $o: true, $ms: true);
+}
+
+@mixin background-repeat($val...) {
+	@include prefixer(background-repeat, $val, $webkit: false);
+}
+
+@mixin background-size($val...) {
+	@include prefixer(background-size, $val, $moz: true, $o: true);
+}
+
+@mixin background-position($val...) {
+	@include prefixer(background-position, $val, $webkit: false);
+}
+
+@mixin background-origin($val...) {
+	@include prefixer(background-origin, $val);
+}
+
+@mixin background-attachment($val...) {
+	@include prefixer(background-attachment, $val, $moz: true, $o: true);
+}
+
+@mixin background-clip($val...) {
+	@include prefixer(background-clip, $val, $moz: true, $o: true);
+}

@@ -1,0 +1,41 @@
+/*
+Inputs And Textareas
+
+Markup:
+<div class="field">
+  <label class="field-label" for="form-example-01">label</label>
+  <input id="form-example-01" type="text" value="value text">
+</div>
+<div class="field">
+  <div>
+    <label class="field-label" for="form-example-02">label</label>
+  </div>
+  <input id="form-example-02" type="text" placeholder="placeholder text">
+</div>
+<div class="field">
+  <div>
+    <label class="field-label" for="form-example-03">label</label>
+  </div>
+  <input id="form-example-03" class="d-block" type="text" placeholder="full width input"></input>
+</div>
+<div class="field">
+  <div>
+     <label class="field-label" for="form-example-04">label</label>
+   </div>
+   <input id="form-example-04" type="text"><span>.textsuffix.com</span>
+</div>
+<div class="field">
+  <div>
+    <label class="field-label" for="form-example-11">label</label>
+  </div>
+  <textarea id="form-example-11" name="" id="" cols="30" rows="10" placeholder="placeholder text"></textarea>
+</div>
+<div class="field">
+  <div>
+    <label class="field-label" for="form-example-12">label</label>
+  </div>
+  <textarea id="form-example-12" class="d-block" cols="60" rows="10" placeholder="full width textarea"></textarea>
+</div>
+
+Styleguide 10.1
+ */
