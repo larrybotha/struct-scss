@@ -106,7 +106,7 @@
           tasks: ['jshint']
         },
         kss: {
-          files: ['css/sass/**/docs/**/*.scss'],
+          files: ['css/sass/**/docs/**/*.scss', 'styleguide/template/**/*.'],
           tasks: ['kss']
         }
       }
