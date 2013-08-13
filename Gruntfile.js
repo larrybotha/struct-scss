@@ -48,7 +48,7 @@
           port: 9000,
           hostname: '0.0.0.0',
           keepalive: true,
-          base: 'docs'
+          base: 'build'
         },
         middleware: function(connect, options) {
           return connect.static(options.base);
@@ -73,7 +73,7 @@
         kss: {
           command: [
             'rm -rf docs',
-            'kss-node kss/docs build --template template',
+            'kss-node kss/docs build --template kss/template',
             'cd build/public',
             'rm style.css',
             'ln -s ../../style.css',
