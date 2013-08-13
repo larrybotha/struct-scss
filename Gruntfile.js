@@ -73,8 +73,8 @@
         kss: {
           command: [
             'rm -rf docs',
-            'kss-node css/sass/docs docs --css style.css --template template',
-            'cd docs/public',
+            'kss-node kss/docs build --template template',
+            'cd build/public',
             'rm style.css',
             'ln -s ../../style.css',
             'ln -s ../../img',
@@ -95,15 +95,15 @@
           tasks: ['jshint']
         },
         css: {
-          files: ['css/sass/**/*.scss', '!css/sass/docs/**/*.scss'],
-          tasks: ['sass']
+          files: ['css/sass/**/*.scss'],
+          tasks: ['sass:dist']
         },
         styleguide: {
           files: ['styleguide-js/main.js', 'js/main.js'],
           tasks: ['jshint']
         },
         kss: {
-          files: ['css/sass/**/docs/**/*.scss', 'styleguide/template/**/*.*'],
+          files: ['kss/docs/**/*.*'],
           tasks: ['kss']
         }
       }
