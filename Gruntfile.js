@@ -28,6 +28,7 @@
     grunt.initConfig({
 
       pkg: pkg,
+
       // Run js through jshint
       jshint: {
         files: ['gruntfile.js', 'styleguide-js/main.js', 'js/main.js'],
@@ -40,6 +41,7 @@
           }
         }
       },
+
       // Run a local server
       connect: {
         options: {
@@ -52,6 +54,7 @@
           return connect.static(options.base);
         }
       },
+
       // Manage Sass compilation
       sass: {
         dist: {
@@ -62,35 +65,29 @@
           files: {
             'style.css': 'css/sass/style.scss'
           }
-        },
-        dev: {
-          options: {
-            quiet: false,
-            cacheLocation: 'css/sass/.sass-cache',
-            style: 'expanded'
-          },
-          files: {
-            'css/style.doc.css': 'css/sass/style.scss'
-          }
         }
       },
+
       // Execute shell commands
       shell: {
         kss: {
           command: [
             'rm -rf docs',
-            'kss-node css/sass/docs docs --css style.css --template styleguide-template',
+            'kss-node css/sass/docs docs --css style.css --template template',
             'cd docs/public',
-            'ln -s ../../img img',
-            'ln -s ../../fnt fnt',
-            'ln -s ../../js js',
-            'ln -s ../../data data'
+            'rm style.css',
+            'ln -s ../../style.css',
+            'ln -s ../../img',
+            'ln -s ../../fnt',
+            'ln -s ../../js',
+            'ln -s ../../data'
           ].join('&&'),
           options: {
             stdout: true
           }
         }
       },
+
       // Watch for changes to files
       watch: {
         gruntfile: {
