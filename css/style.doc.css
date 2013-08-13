@@ -2743,7 +2743,7 @@ button.d-block {
 /* Hide only visually, but have it available for screenreaders: h5bp.com/v */
 :root .visuallyhidden {
   position: absolute;
-  clip: rect(0 0 0 0);
+  clip: rect(0, 0, 0, 0);
   width: 1px;
   height: 1px;
   margin: -1px;
@@ -2755,7 +2755,7 @@ button.d-block {
 
 .ie8 .visuallyhidden-ie8 {
   position: absolute;
-  clip: rect(0 0 0 0);
+  clip: rect(0, 0, 0, 0);
   width: 1px;
   height: 1px;
   margin: -1px;

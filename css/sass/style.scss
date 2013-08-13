@@ -1604,8 +1604,8 @@ button.d-block { width: 100%;}
 .hidden { display: none !important; visibility: hidden;}
 
 /* Hide only visually, but have it available for screenreaders: h5bp.com/v */
-:root .visuallyhidden { position: absolute; clip: rect(0 0 0 0); width: 1px; height: 1px; margin: -1px; overflow: hidden; padding: 0; border: 0; visibility:hidden;}
-.ie8 .visuallyhidden-ie8 { position: absolute; clip: rect(0 0 0 0); width: 1px; height: 1px; margin: -1px; overflow: hidden; padding: 0; border: 0; visibility: visible;}
+:root .visuallyhidden { position: absolute; clip: rect(0, 0, 0, 0); width: 1px; height: 1px; margin: -1px; overflow: hidden; padding: 0; border: 0; visibility:hidden;}
+.ie8 .visuallyhidden-ie8 { position: absolute; clip: rect(0, 0, 0, 0); width: 1px; height: 1px; margin: -1px; overflow: hidden; padding: 0; border: 0; visibility: visible;}
 
 /* Extends the .visuallyhidden class to allow the element to be focusable when navigated to via the keyboard: h5bp.com/p */
 .visuallyhidden.focusable:active, .visuallyhidden.focusable:focus { position: static; clip: auto; width: auto; height: auto; margin: 0; overflow: visible;}
