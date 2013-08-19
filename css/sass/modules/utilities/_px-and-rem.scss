@@ -36,10 +36,11 @@
 // }
 
 @function fix8_unit_to_px($val) {
-  @if $val == auto {
+  @if $val == 'auto' {
     @return $val;
-  }
-  @else {
+  } @else if $val == '!important' {
+    @return $val;
+  } @else {
     @if unitless($val) {
       @if $val == 0 { @return $val }
       @else { @return $val * $unit-default-px};
@@ -48,10 +49,11 @@
 }
 
 @function fix8_unit_to_rem($val) {
-  @if $val == auto {
+  @if $val == 'auto' {
     @return $val;
-  }
-  @else {
+  } @else if $val == '!important' {
+    @return $val;
+  } @else {
     @if unitless($val) {
       @if $val == 0 { @return $val }
       @else { @return $val+rem};

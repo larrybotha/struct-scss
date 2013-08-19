@@ -869,7 +869,6 @@ input:checked + label > .checkbox-custom:before { content: "\e001"; /* .icon-che
 	@include box-shadow(none);
 }
 
-@import 'docs/buttons/docs-buttons-group';
 .btn-group { display: inline-block;}
 
 .btn-group > .btn {
@@ -1586,6 +1585,8 @@ button.d-block { width: 100%;}
 	display: table-cell;
 	vertical-align: middle;
 }
+
+.p-alpha { @include px-and-rem(padding, 1, 2, 3, 4, !important);}
 
 
 /* =============================================================================
