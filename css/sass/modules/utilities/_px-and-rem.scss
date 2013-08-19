@@ -41,8 +41,7 @@
 		@if $val == '!important' { @return $val;}
 
 		@warn "#{$val} is not a valid value";
-	}
-	@else {
+	} @else {
 		@if unitless($val) {
 			@if $val == 0 { @return $val }
 			@else { @return $val * $unit-default-px};
