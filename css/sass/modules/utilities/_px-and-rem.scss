@@ -18,8 +18,8 @@
 // becomes
 //
 // .margin {
-// 	margin: 32px;
-// 	margin: 2rem;
+//  margin: 32px;
+//  margin: 2rem;
 // }
 
 // Example 2:
@@ -31,37 +31,37 @@
 // becomes
 //
 // .padding {
-// 	padding: 16px 2% 1.5em;
-// 	padding: 1rem 2% 1.5em;
+//  padding: 16px 2% 1.5em;
+//  padding: 1rem 2% 1.5em;
 // }
 
 @function fix8_unit_to_px($val) {
-  @if type_of($val) == 'string' {
-    @if $val == 'auto' { @return $val;}
-    @if $val == '!important' { @return $val;}
+	@if type_of($val) == 'string' {
+		@if $val == 'auto' { @return $val;}
+		@if $val == '!important' { @return $val;}
 
-    @warn "#{$val} is not a valid value";
-  }
-  @else {
-    @if unitless($val) {
-      @if $val == 0 { @return $val }
-      @else { @return $val * $unit-default-px};
-    } @else { @return $val};
-  }
+		@warn "#{$val} is not a valid value";
+	}
+	@else {
+		@if unitless($val) {
+			@if $val == 0 { @return $val }
+			@else { @return $val * $unit-default-px};
+		} @else { @return $val};
+	}
 }
 
 @function fix8_unit_to_rem($val) {
-  @if type_of($val) == 'string' {
-    @if $val == 'auto' { @return $val;}
-    @if $val == '!important' { @return $val;}
+	@if type_of($val) == 'string' {
+		@if $val == 'auto' { @return $val;}
+		@if $val == '!important' { @return $val;}
 
-    @warn "#{$val} is not a valid value";
-  } @else {
-    @if unitless($val) {
-      @if $val == 0 { @return $val }
-      @else { @return $val+rem};
-    } @else { @return $val};
-  }
+		@warn "#{$val} is not a valid value";
+	} @else {
+		@if unitless($val) {
+			@if $val == 0 { @return $val }
+			@else { @return $val+rem};
+		} @else { @return $val};
+	}
 }
 
 @mixin px-and-rem($prop, $val...) {
