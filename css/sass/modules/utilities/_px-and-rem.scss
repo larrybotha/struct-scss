@@ -36,11 +36,13 @@
 // }
 
 @function fix8_unit_to_px($val) {
-  @if $val == 'auto' {
-    @return $val;
-  } @else if $val == '!important' {
-    @return $val;
-  } @else {
+  @if type_of($val) == 'string' {
+    @if $val == 'auto' { @return $val;}
+    @if $val == '!important' { @return $val;}
+
+    @warn "#{$val} is not a valid value";
+  }
+  @else {
     @if unitless($val) {
       @if $val == 0 { @return $val }
       @else { @return $val * $unit-default-px};
@@ -49,10 +51,11 @@
 }
 
 @function fix8_unit_to_rem($val) {
-  @if $val == 'auto' {
-    @return $val;
-  } @else if $val == '!important' {
-    @return $val;
+  @if type_of($val) == 'string' {
+    @if $val == 'auto' { @return $val;}
+    @if $val == '!important' { @return $val;}
+
+    @warn "#{$val} is not a valid value";
   } @else {
     @if unitless($val) {
       @if $val == 0 { @return $val }
