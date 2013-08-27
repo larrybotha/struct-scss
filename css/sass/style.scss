@@ -1505,11 +1505,9 @@ h1, h2, h3, h4, h5, h6 { font-weight: normal;}
 .va-tb { vertical-align: text-bottom;}
 
 /* Floating & Alignment Modifiers */
-.fl { float: left;}
-.fr { float: right;}
-.al { text-align: left;}
-.ac { text-align: center;}
-.ar { text-align: right;}
+.ta-l { text-align: left;}
+.ta-c { text-align: center;}
+.ta-r { text-align: right;}
 
 /* truncating text / ellipsis */
 .truncate {
@@ -1585,6 +1583,10 @@ button.d-block { width: 100%;}
 	display: table-cell;
 	vertical-align: middle;
 }
+
+/* float modifiers */
+.fl { float: left;}
+.fr { float: right;}
 
 
 /* =============================================================================

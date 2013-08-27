@@ -2163,19 +2163,13 @@ h1, h2, h3, h4, h5, h6 {
   vertical-align: text-bottom; }
 
 /* Floating & Alignment Modifiers */
-.fl {
-  float: left; }
-
-.fr {
-  float: right; }
-
-.al {
+.ta-l {
   text-align: left; }
 
-.ac {
+.ta-c {
   text-align: center; }
 
-.ar {
+.ta-r {
   text-align: right; }
 
 /* truncating text / ellipsis */
@@ -2274,6 +2268,13 @@ button.d-block {
 .d-table-inner {
   display: table-cell;
   vertical-align: middle; }
+
+/* float modifiers */
+.fl {
+  float: left; }
+
+.fr {
+  float: right; }
 
 /* =============================================================================
 	 &Helpers
