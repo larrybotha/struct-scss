@@ -45,7 +45,7 @@
       // Run a local server
       connect: {
         options: {
-          port: 9000,
+          port: 9090,
           hostname: '0.0.0.0',
           keepalive: true,
           base: 'build'
