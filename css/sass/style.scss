@@ -929,7 +929,7 @@ input:checked + label > .checkbox-custom:before { content: "\e001"; /* .icon-che
 .btn-selected { cursor: default;}
 
 .btn[disabled], .btn.disabled {
-	color: $clr-ntrl-50;
+	color: $clr-alpha-lt;
 	cursor: default;
 }
 .btn[disabled], .btn.disabled,

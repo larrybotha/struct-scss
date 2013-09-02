@@ -1382,7 +1382,7 @@ input:checked + label > .checkbox-custom:before {
   cursor: default; }
 
 .btn[disabled], [disabled].dz-remove, .btn.disabled, .disabled.dz-remove {
-  color: gray;
+  color: #606060;
   cursor: default; }
 
 .btn[disabled], [disabled].dz-remove, .btn.disabled, .disabled.dz-remove,
