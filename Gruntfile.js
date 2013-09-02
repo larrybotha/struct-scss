@@ -28,6 +28,7 @@
     grunt.initConfig({
 
       pkg: pkg,
+
       // Run js through jshint
       jshint: {
         files: ['gruntfile.js', 'styleguide-js/main.js', 'js/main.js'],
@@ -40,18 +41,20 @@
           }
         }
       },
+
       // Run a local server
       connect: {
         options: {
-          port: 9000,
+          port: 9090,
           hostname: '0.0.0.0',
           keepalive: true,
-          base: 'docs'
+          base: 'build'
         },
         middleware: function(connect, options) {
           return connect.static(options.base);
         }
       },
+
       // Manage Sass compilation
       sass: {
         dist: {
@@ -91,6 +94,27 @@
           }
         }
       },
+
+      // Execute shell commands
+      shell: {
+        kss: {
+          command: [
+            'rm -rf docs',
+            'kss-node kss/docs build --template kss/template',
+            'cd build/public',
+            'rm style.css',
+            'ln -s ../../style.css',
+            'ln -s ../../img',
+            'ln -s ../../fnt',
+            'ln -s ../../js',
+            'ln -s ../../data'
+          ].join('&&'),
+          options: {
+            stdout: true
+          }
+        }
+      },
+
       // Watch for changes to files
       watch: {
         gruntfile: {
@@ -99,20 +123,20 @@
         },
         css: {
           files: ['css/sass/**/*.scss'],
-          tasks: ['sass']
+          tasks: ['sass:dist']
         },
         styleguide: {
           files: ['styleguide-js/main.js', 'js/main.js'],
           tasks: ['jshint']
         },
         kss: {
-          files: ['css/sass/**/docs/**/*.scss'],
-          tasks: ['sass:dev', 'shell:kss']
+          files: ['kss/docs/**/*.*'],
+          tasks: ['kss']
         }
       }
     });
 
-    grunt.registerTask('kss', ['sass:dev', 'shell:kss']);
+    grunt.registerTask('kss', ['shell:kss']);
 
     grunt.registerTask('server', ['connect']);
 

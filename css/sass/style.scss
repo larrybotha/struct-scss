@@ -14,11 +14,8 @@ might want to share.
 .
 */
 
-/* ==|== &colours ==============================================================
 
-	 colour													#
 
-	 ========================================================================== */
 
 /* ==|== &INDEX ================================================================
 
@@ -95,6 +92,10 @@ might want to share.
  * ==|== normalize ==========================================================
  */
 
+
+
+
+
 /* =============================================================================
 	 CSS Device Adaptation
 	 ========================================================================== */
@@ -102,6 +103,10 @@ might want to share.
  * Ensure IE10 respects viewport width when in 'snap' mode - http://mopo.ws/WmFbcL
  */
 @-ms-viewport{ width: device-width;}
+
+
+
+
 
 /* =============================================================================
 	 HTML5 display definitions
@@ -128,6 +133,10 @@ audio:not([controls]) { display: none; height: 0;} /* 3 */
 [hidden] { display: none;} /* 4 */
 
 canvas { -ms-touch-action: double-tap-zoom;} /* 5 */
+
+
+
+
 
 /* =============================================================================
 	 &Base
@@ -185,10 +194,12 @@ body {
 ::selection { background: $clr-omega; color: $clr-ntrl-min; text-shadow: none;}
 
 
+
+
+
 /* =============================================================================
 	 &Links
 	 ========================================================================== */
-
 a {
 	color: #00e;
 	text-decoration: none;
@@ -206,6 +217,9 @@ a:focus { outline: thin dotted;}
 
 /* Improve readability when focused and hovered in all browsers: h5bp.com/h */
 a:hover, a:active { outline: 0;}
+
+
+
 
 
 /* =============================================================================
@@ -259,10 +273,12 @@ sup { top: -0.5em;}
 sub { bottom: -0.25em;}
 
 
+
+
+
 /* =============================================================================
 	 &Lists
 	 ========================================================================== */
-
 ul, ol {
 	@include px-and-rem(margin, 1);
 	padding: 0 0 0 40px;
@@ -276,15 +292,16 @@ nav ul, nav ol {
 }
 
 
+
+
+
 /* =============================================================================
 	 &Embedded content
 	 ========================================================================== */
-
 /*
  * 1. Improve image quality when scaled in IE7: h5bp.com/d
  * 2. Remove the gap between images and borders on image containers: h5bp.com/i/440
  */
-
 img {
 	width: auto;
 	height: auto;
@@ -297,27 +314,29 @@ img {
  * Prevent images and embeds from exceeding width of containing element
  * width:; and height:; above apply
  */
-
 img, embed, object, video { max-width: 100%;}
 
 /*
  * Correct overflow not hidden in IE9
  */
-
 svg:not(:root) { overflow: hidden;}
+
+
+
 
 
 /* =============================================================================
 	 &Figures
 	 ========================================================================== */
-
 figure { margin: 0;}
+
+
+
 
 
 /* =============================================================================
 	 &Forms
 	 ========================================================================== */
-
 form { margin: 0;}
 fieldset {
 	border: 1px solid #c0c0c0;
@@ -429,18 +448,27 @@ focus::-webkit-input-placeholder { color: $clr-ntrl-20;}
 					 focus:-ms-placeholder { color: $clr-ntrl-20;}
 
 
+
+
+
 /* =============================================================================
 	 &Tables
 	 ========================================================================== */
-
 table { border-collapse: collapse; border-spacing: 0;}
 td { vertical-align: top;}
+
+
+
+
 
 /* =============================================================================
 	 &Fonts
 	 ========================================================================== */
 /* base-icon-font built as a subset using icons from FontAwesome and IcoMoon */
 @include font-face($font-omega, $font-omega-filename, $font-omega-path, $weight: normal, $style: normal);
+
+
+
 
 
 /* *****************************************************************************
@@ -544,6 +572,9 @@ td { vertical-align: top;}
 }
 
 
+
+
+
 /* =============================================================================
 	 &Main Structure
 	 ========================================================================== */
@@ -552,9 +583,15 @@ td { vertical-align: top;}
 	 -------------------------------------------------------------------------- */
 
 
+
+
+
 /* -----------------------------------------------------------------------------
 	 &Primary Content
 	 -------------------------------------------------------------------------- */
+
+
+
 
 
 /* -----------------------------------------------------------------------------
@@ -562,9 +599,15 @@ td { vertical-align: top;}
 	 -------------------------------------------------------------------------- */
 
 
+
+
+
 /* -----------------------------------------------------------------------------
 	 &Footer
 	 -------------------------------------------------------------------------- */
+
+
+
 
 
 /* =============================================================================
@@ -589,6 +632,9 @@ td { vertical-align: top;}
 }
 .mblock .mblock-alpha { float: left; @include px-and-rem(margin-right, 1);}
 .mblock .mblock-alpha img { display: block;}
+
+
+
 
 
 /* =============================================================================
@@ -616,6 +662,9 @@ td { vertical-align: top;}
 }
 
 // For ratio'd divs take a look at http://www.mademyday.de/css-height-equals-width-with-pure-css.html
+
+
+
 
 
 /* =============================================================================
@@ -713,6 +762,9 @@ td { vertical-align: top;}
 }
 
 
+
+
+
 /* =============================================================================
 	 &Forms
 	 ========================================================================== */
@@ -796,19 +848,34 @@ input[type="checkbox"] { height: auto;}
 input:checked + label > .radio-custom:before { content: "\e011";}
 input:checked + label > .checkbox-custom:before { content: "\e001"; /* .icon-check - FontAwesome */}
 
+
+
+
+
 /* -----------------------------------------------------------------------------
 	 &Date Picker
 	 -------------------------------------------------------------------------- */
 @import "vendor/jquery-ui-datepicker";
+
+
+
+
 
 /* -----------------------------------------------------------------------------
 	 &Autocomplete
 	 -------------------------------------------------------------------------- */
 @import "vendor/typeahead";
 
+
+
+
+
 /* -----------------------------------------------------------------------------
 	 &Wysiwyg
 	 -------------------------------------------------------------------------- */
+
+
+
 
 
 /* -----------------------------------------------------------------------------
@@ -817,16 +884,19 @@ input:checked + label > .checkbox-custom:before { content: "\e001"; /* .icon-che
 @import "vendor/dropzone";
 
 
+
+
+
 /* =============================================================================
 	 &Buttons
 	 ========================================================================== */
 .btn {
 	position: relative;
 	display: inline-block;
-	background-color: $clr-info-lt;
+	background-color: $clr-alpha;
 	@include px-and-rem(font-size, 1);
 	font-weight: normal;
-	color: $clr-alpha;
+	color: $clr-ntrl-min;
 	text-align: center;
 	line-height: 1;
 	vertical-align: middle;
@@ -840,13 +910,13 @@ input:checked + label > .checkbox-custom:before { content: "\e001"; /* .icon-che
 }
 
 .btn:hover {
-	background-color: $clr-info-ltr;
-	color: $clr-alpha;
+	background-color: $clr-alpha-ltr;
+	color: $clr-ntrl-min;
 }
 
 .btn:active, .btn-selected, .btn-selected:hover {
-	background-color: $clr-info;
-	color: $clr-alpha;
+	background-color: $clr-alpha-lt;
+	color: $clr-ntrl-min;
 	/* android 4.0 requires prefix */
 	@include box-shadow(
 							inset 0 1px 3px hsla(0, 0%, 0%, .5),
@@ -865,7 +935,7 @@ input:checked + label > .checkbox-custom:before { content: "\e001"; /* .icon-che
 .btn[disabled], .btn.disabled,
 .btn:hover[disabled], .btn.disabled:hover,
 .btn:active[disabled], .btn.disabled:active {
-	background-color: $clr-info-ltr;
+	background-color: $clr-alpha-ltr;
 	@include box-shadow(none);
 }
 
@@ -876,7 +946,7 @@ input:checked + label > .checkbox-custom:before { content: "\e001"; /* .icon-che
 	float: left;
 	margin-right: 0;
 	margin-left: -1px;
-	border-left: 1px solid $clr-info-ltr;
+	border-left: 1px solid $clr-alpha-ltr;
 }
 
 .btn-group > .btn:first-child {
@@ -885,9 +955,15 @@ input:checked + label > .checkbox-custom:before { content: "\e001"; /* .icon-che
 }
 
 
+
+
+
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 	 &mButtons
 	 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+
+
 
 
 /* =============================================================================
@@ -991,12 +1067,16 @@ li.icon.icon-large:before, li.icon.icon-large:before {
 .icon-caret-right:before				{ content: "\e202";}
 .icon-caret-left:before					{ content: "\e203";}
 
+
 /* VIDEO / AUDIO ICONS U+e3xxx ----------------------------------------------- */
 
 
 /* SOCIAL ICONS U+e4xxx ------------------------------------------------------- */
 .icon-facebook:before { content: "\e400";}
 .icon-twitter:before { content: "\e410";}
+
+
+
 
 
 /* =============================================================================
@@ -1056,6 +1136,10 @@ li.icon.icon-large:before, li.icon.icon-large:before {
 	border: 0;
 }
 
+
+
+
+
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 	 &mAlerts
 	 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
@@ -1083,6 +1167,9 @@ li.icon.icon-large:before, li.icon.icon-large:before {
 .alert-info a { border-color: $clr-info;}
 
 
+
+
+
 /* =============================================================================
 	 &Labels
 	 ========================================================================== */
@@ -1103,6 +1190,10 @@ a.label:hover {
 	cursor: pointer;
 }
 
+
+
+
+
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 	 &mLabels
 	 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
@@ -1120,6 +1211,9 @@ a.label:hover {
 
 .label-inverse { background-color: $clr-ntrl-80;}
 .label-inverse[href] { background-color: $clr-ntrl-90;}
+
+
+
 
 
 /* =============================================================================
@@ -1140,7 +1234,6 @@ a.label:hover {
 		<br style="clear: both"><!-- displayed after every 3 items in gallery -->
 	</div>
 */
-
 .gallery {
 	margin-left: -(1.5 * $unit-default-px);
 	@include px-and-rem(margin-bottom, 1.5);
@@ -1217,6 +1310,9 @@ a.label:hover {
 .gallery-caption > :last-child { margin-bottom: 0;}
 
 
+
+
+
 /* =============================================================================
 	 &Pagination
 	 ========================================================================== */
@@ -1234,14 +1330,23 @@ a.label:hover {
 }
 
 
+
+
+
 /* =============================================================================
 	 &Comments
 	 ========================================================================== */
 
 
+
+
+
 /* =============================================================================
 	 &Widgets
 	 ========================================================================== */
+
+
+
 
 
 /* =============================================================================
@@ -1322,6 +1427,10 @@ a.label:hover {
 	100% { background-position: 0 0;}
 }
 
+
+
+
+
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 	 &mProgress Bars
 	 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
@@ -1336,6 +1445,9 @@ a.label:hover {
 
 .progress-warning > .progress-bar,
 .progress-warning > .progress-bar-striped {	background-color: $clr-warning;}
+
+
+
 
 
 /* =============================================================================
@@ -1407,6 +1519,9 @@ a.label:hover {
 }
 
 
+
+
+
 /* *****************************************************************************
 	 &gSTYLING
 	 ************************************************************************** */
@@ -1460,10 +1575,16 @@ h6, .fs-zeta    { font-size: 16px; font-size: 1.143rem; line-height: 1;}
 .fs-micro { font-size: 10px; font-size: 0.625rem; line-height: 1;}
 
 
+
+
+
 /* -----------------------------------------------------------------------------
 	 &Headers
 	 -------------------------------------------------------------------------- */
 h1, h2, h3, h4, h5, h6 { font-weight: normal;}
+
+
+
 
 
 /* -----------------------------------------------------------------------------
@@ -1476,9 +1597,15 @@ h1, h2, h3, h4, h5, h6 { font-weight: normal;}
 }
 
 
+
+
+
 /* -----------------------------------------------------------------------------
 	 &Horizontal Rules
 	 -------------------------------------------------------------------------- */
+
+
+
 
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -1506,11 +1633,9 @@ h1, h2, h3, h4, h5, h6 { font-weight: normal;}
 .va-tb { vertical-align: text-bottom;}
 
 /* Floating & Alignment Modifiers */
-.fl { float: left;}
-.fr { float: right;}
-.al { text-align: left;}
-.ac { text-align: center;}
-.ar { text-align: right;}
+.ta-l { text-align: left;}
+.ta-c { text-align: center;}
+.ta-r { text-align: right;}
 
 /* truncating text / ellipsis */
 .truncate {
@@ -1520,6 +1645,9 @@ h1, h2, h3, h4, h5, h6 { font-weight: normal;}
 	white-space: nowrap;
 	overflow: hidden;
 }
+
+
+
 
 
 /* ==|== WordPress / Helper editor styles ======================================
@@ -1537,12 +1665,20 @@ h1, h2, h3, h4, h5, h6 { font-weight: normal;}
 	color: $clr-beta;
 }
 
+
+
+
+
 /* =============================================================================
 	 &Backgrounds & Borders
 	 ========================================================================== */
 .bgc-alpha-dk { background-color: $clr-alpha-dk}
 .bgc-alpha		{ background-color: $clr-alpha}
 .bgc-alpha-lt { background-color: $clr-alpha-lt}
+
+
+
+
 
 /* =============================================================================
 	 &Layout
@@ -1554,6 +1690,9 @@ h1, h2, h3, h4, h5, h6 { font-weight: normal;}
 	@include px-and-rem(padding-left, 1);
 	@include px-and-rem(padding-right, 1);
 }
+
+
+
 
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -1587,6 +1726,13 @@ button.d-block { width: 100%;}
 	vertical-align: middle;
 }
 
+/* float modifiers */
+.fl { float: left;}
+.fr { float: right;}
+
+
+
+
 
 /* =============================================================================
 	 &Helpers
@@ -1619,6 +1765,9 @@ button.d-block { width: 100%;}
 .cf { *zoom: 1;}
 
 
+
+
+
 /* *****************************************************************************
 	 &ANIMATIONS
 	 ************************************************************************** */
@@ -1648,14 +1797,17 @@ button.d-block { width: 100%;}
 }
 
 
+
+
+
 /* *****************************************************************************
 	 &MEDIA QUERIES
 	 ************************************************************************** */
 /* =============================================================================
 	 &vpalpha - 0px and up
 	 ========================================================================== */
- @media screen and (min-width: 0) {
 
+@media screen and (min-width: $device-width-alpha) {
 	/* ==========================================================================
 	 &Grid - vpalpha
 	 ========================================================================= */
@@ -1678,11 +1830,13 @@ button.d-block { width: 100%;}
 
 
 
+
+
 /* =============================================================================
 	 &vpbeta - 480px (30em) and up
 	 ========================================================================== */
-@media screen and (min-width: 30em) {
 
+@media screen and (min-width: $device-width-beta) {
 	/* ==========================================================================
 	 &Grid - vpbeta
 	 ========================================================================= */
@@ -1705,11 +1859,13 @@ button.d-block { width: 100%;}
 
 
 
+
+
 /* =============================================================================
 	 &vpgamma - 768px (48em) and up
 	 ========================================================================== */
-@media screen and (min-width: 48em) {
 
+@media screen and (min-width: $device-width-gamma) {
 	/* ==========================================================================
 	 &Grid - vpgamma
 	 ========================================================================= */
@@ -1731,11 +1887,14 @@ button.d-block { width: 100%;}
 }
 
 
+
+
+
 /* =============================================================================
 	 &vpdelta - 1280px (80em) and up
 	 ========================================================================== */
-@media screen and (min-width: 80em) {
 
+@media screen and (min-width: $device-width-delta) {
 	/* ==========================================================================
 	 &Grid - vpdelta
 	 ========================================================================= */
@@ -1757,7 +1916,10 @@ button.d-block { width: 100%;}
 }
 
 
+
+
+
 /* =============================================================================
 	 &PRINT STYLES - Inlined to avoid required HTTP connection: h5bp.com/r
 	 ========================================================================== */
-@import "partials/print";
+@import "blocks/print";

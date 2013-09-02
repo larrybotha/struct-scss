@@ -2,6 +2,7 @@
 config.rb
 .sass-cache/
 projects/
+gh-pages/
 
 # ignore grunt files
 node_modules
