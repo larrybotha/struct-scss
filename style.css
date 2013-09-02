@@ -1343,11 +1343,11 @@ input:checked + label > .checkbox-custom:before {
 .btn, .dz-remove {
   position: relative;
   display: inline-block;
-  background-color: #7ab5d3;
+  background-color: #2d2d2d;
   font-size: 14px;
   font-size: 1rem;
   font-weight: normal;
-  color: #2d2d2d;
+  color: white;
   text-align: center;
   line-height: 1;
   vertical-align: middle;

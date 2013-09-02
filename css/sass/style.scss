@@ -893,10 +893,10 @@ input:checked + label > .checkbox-custom:before { content: "\e001"; /* .icon-che
 .btn {
 	position: relative;
 	display: inline-block;
-	background-color: $clr-info-lt;
+	background-color: $clr-alpha;
 	@include px-and-rem(font-size, 1);
 	font-weight: normal;
-	color: $clr-alpha;
+	color: $clr-ntrl-min;
 	text-align: center;
 	line-height: 1;
 	vertical-align: middle;
@@ -1806,7 +1806,7 @@ button.d-block { width: 100%;}
 	 &vpalpha - 0px and up
 	 ========================================================================== */
 
-@media screen and (min-width: 0) {
+@media screen and (min-width: $device-width-alpha) {
 	/* ==========================================================================
 	 &Grid - vpalpha
 	 ========================================================================= */
@@ -1835,7 +1835,7 @@ button.d-block { width: 100%;}
 	 &vpbeta - 480px (30em) and up
 	 ========================================================================== */
 
-@media screen and (min-width: 30em) {
+@media screen and (min-width: $device-width-beta) {
 	/* ==========================================================================
 	 &Grid - vpbeta
 	 ========================================================================= */
@@ -1864,7 +1864,7 @@ button.d-block { width: 100%;}
 	 &vpgamma - 768px (48em) and up
 	 ========================================================================== */
 
-@media screen and (min-width: 48em) {
+@media screen and (min-width: $device-width-gamma) {
 	/* ==========================================================================
 	 &Grid - vpgamma
 	 ========================================================================= */
@@ -1893,7 +1893,7 @@ button.d-block { width: 100%;}
 	 &vpdelta - 1280px (80em) and up
 	 ========================================================================== */
 
-@media screen and (min-width: 80em) {
+@media screen and (min-width: $device-width-delta) {
 	/* ==========================================================================
 	 &Grid - vpdelta
 	 ========================================================================= */
@@ -1921,4 +1921,4 @@ button.d-block { width: 100%;}
 /* =============================================================================
 	 &PRINT STYLES - Inlined to avoid required HTTP connection: h5bp.com/r
 	 ========================================================================== */
-@import "partials/print";
+@import "blocks/print";
