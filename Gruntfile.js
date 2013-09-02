@@ -77,23 +77,6 @@
           }
         }
       },
-      // Execute shell commands
-      shell: {
-        kss: {
-          command: [
-            'rm -rf docs',
-            'kss-node css/sass/docs docs --css style.css --template styleguide-template',
-            'cd docs/public',
-            'ln -s ../../img img',
-            'ln -s ../../fnt fnt',
-            'ln -s ../../js js',
-            'ln -s ../../data data'
-          ].join('&&'),
-          options: {
-            stdout: true
-          }
-        }
-      },
 
       // Execute shell commands
       shell: {
