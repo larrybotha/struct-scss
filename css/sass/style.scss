@@ -1546,7 +1546,6 @@ p,
 table,
 pre,
 hr {
-	@include px-and-rem(margin-top, 1);
 	@include px-and-rem(margin-bottom, 1);
 }
 
