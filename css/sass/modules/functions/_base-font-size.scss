@@ -1,3 +1,0 @@
-@function fix8-get-base-font-size() {
-	@return percentage($unit-base / 16);// UA base is usually 16px
-}
