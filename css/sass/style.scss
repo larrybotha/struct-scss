@@ -1,6 +1,5 @@
 @charset "UTF-8";
 
-@import "theme/utilities/!utilities";
 /*
 Theme Name: Theme_Name
 Theme URI: theme_url
@@ -14,6 +13,12 @@ might want to share.
 .
 */
 
+/**
+ * Setup
+ */
+@import "vars";
+@import "inuit.css/inuit";
+@import "custom/custom";
 
 
 
@@ -33,13 +38,11 @@ might want to share.
 		- Fonts
 
 	- BLOCKS
-		- Grid
 		- Main Structure
 			- Header
 			- Primary Content
 			- Secondary Content
 			- Footer
-		- Media Block
 		- Flex Video
 		- Navigation
 		- Forms
@@ -855,7 +858,7 @@ input:checked + label > .checkbox-custom:before { content: "\e001"; /* .icon-che
 /* -----------------------------------------------------------------------------
 	 &Date Picker
 	 -------------------------------------------------------------------------- */
-@import "theme/vendor/jquery-ui-datepicker";
+@import "custom/vendor/jquery-ui-datepicker";
 
 
 
@@ -864,7 +867,7 @@ input:checked + label > .checkbox-custom:before { content: "\e001"; /* .icon-che
 /* -----------------------------------------------------------------------------
 	 &Autocomplete
 	 -------------------------------------------------------------------------- */
-@import "theme/vendor/typeahead";
+@import "custom/vendor/typeahead";
 
 
 
@@ -881,7 +884,7 @@ input:checked + label > .checkbox-custom:before { content: "\e001"; /* .icon-che
 /* -----------------------------------------------------------------------------
 	 &File Upload
 	 -------------------------------------------------------------------------- */
-@import "theme/vendor/dropzone";
+@import "custom/vendor/dropzone";
 
 
 
@@ -1920,4 +1923,4 @@ button.d-block { width: 100%;}
 /* =============================================================================
 	 &PRINT STYLES - Inlined to avoid required HTTP connection: h5bp.com/r
 	 ========================================================================== */
-@import "theme/objects/print";
+@import "custom/objects/print";
