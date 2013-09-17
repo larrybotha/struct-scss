@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-@import "modules/!modules";
+@import "theme/utilities/!utilities";
 /*
 Theme Name: Theme_Name
 Theme URI: theme_url
@@ -855,7 +855,7 @@ input:checked + label > .checkbox-custom:before { content: "\e001"; /* .icon-che
 /* -----------------------------------------------------------------------------
 	 &Date Picker
 	 -------------------------------------------------------------------------- */
-@import "vendor/jquery-ui-datepicker";
+@import "theme/vendor/jquery-ui-datepicker";
 
 
 
@@ -864,7 +864,7 @@ input:checked + label > .checkbox-custom:before { content: "\e001"; /* .icon-che
 /* -----------------------------------------------------------------------------
 	 &Autocomplete
 	 -------------------------------------------------------------------------- */
-@import "vendor/typeahead";
+@import "theme/vendor/typeahead";
 
 
 
@@ -881,7 +881,7 @@ input:checked + label > .checkbox-custom:before { content: "\e001"; /* .icon-che
 /* -----------------------------------------------------------------------------
 	 &File Upload
 	 -------------------------------------------------------------------------- */
-@import "vendor/dropzone";
+@import "theme/vendor/dropzone";
 
 
 
@@ -1920,4 +1920,4 @@ button.d-block { width: 100%;}
 /* =============================================================================
 	 &PRINT STYLES - Inlined to avoid required HTTP connection: h5bp.com/r
 	 ========================================================================== */
-@import "blocks/print";
+@import "theme/objects/print";

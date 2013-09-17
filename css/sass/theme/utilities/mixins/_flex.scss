@@ -1,0 +1,12 @@
+@mixin flex-prop($prop, $val) {
+	@include prefixer($prop, $val, webkit, moz, ms);
+}
+
+// http://mopo.ws/Za9avL
+@mixin display-flex($val) {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-#{$val}box;
+	display: -webkit-#{$val};
+	display: #{$val};
+}
