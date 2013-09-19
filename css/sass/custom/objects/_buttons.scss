@@ -57,4 +57,10 @@ if $use-buttons == true {
 
 .btn--selected { cursor: default;}
 
+.btn--full {
+  display: block;
+  width: 100%;
+}
+
+
 }//endif
