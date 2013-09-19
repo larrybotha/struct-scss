@@ -13,7 +13,8 @@ $ALERTS
 
   & a {
     color: inherit;
-    border-bottom: 1px dotted $clr-warning;
+    border-bottom-width: 1px;
+    border-bottom-style: dotted;
   }
 
   & a:hover {
@@ -52,4 +53,30 @@ $ALERTS
 	border: 0;
 }
 
+
+
+
+
+/*------------------------------------*\
+$MODIFIERS
+\*------------------------------------*/
+.alert--success {
+	color: $clr-success;
+	background-color: $clr-success-ltst;
+	border-color: $clr-success-ltr;
 }
+
+.alert--danger,
+.alert--error {
+	color: $clr-danger;
+	background-color: $clr-danger-ltst;
+	border-color: $clr-danger-ltr;
+}
+
+.alert--info {
+	color: $clr-info;
+	background-color: $clr-info-ltst;
+	border-color: $clr-info-ltr;
+}
+
+}//endif
