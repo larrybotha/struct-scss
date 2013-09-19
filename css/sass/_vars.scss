@@ -1,5 +1,5 @@
 /*------------------------------------*\
-VARS.SCSS
+    VARS.SCSS
 \*------------------------------------*/
 /**
  * Any variables you find set in inuit.css’ `_vars.scss` that you do not wish to
@@ -15,7 +15,7 @@ VARS.SCSS
 
 
 /*------------------------------------*\
-$OBJECTS-AND-ABSTRACTIONS
+    $OBJECTS-AND-ABSTRACTIONS
 \*------------------------------------*/
 /**
  * All of inuit.css’ objects and abstractions are initially turned off by
@@ -53,9 +53,9 @@ $use-greybox:       false;
 
 
 /*------------------------------------*\
-$CUSTOM OBJECTS-AND-ABSTRACTIONS
+    $CUSTOM OBJECTS-AND-ABSTRACTIONS
 \*------------------------------------*/
-$use-wordpress:         false;
+$use-buttons:           false; // use either these, or beautons, but not both
 $use-alerts:            false;
 $use-flex-element:      false;
 $use-icons:             false;
@@ -67,13 +67,14 @@ $use-form-file-upload:  false;
 $use-progress-bars:     false;
 $use-tooltips:          false;
 $use-print:             false;
+$use-wordpress:         false;
 
 
 
 
 
 /*------------------------------------*\
-$OVERRIDES
+    $OVERRIDES
 \*------------------------------------*/
 /**
  * Place any variables that should override inuit.css’ defaults here.
@@ -84,7 +85,7 @@ $OVERRIDES
 
 
 /*------------------------------------*\
-$CUSTOM
+    $CUSTOM
 \*------------------------------------*/
 /**
  * Place any of your own variables that sit on top of inuit.css here.

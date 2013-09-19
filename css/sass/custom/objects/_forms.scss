@@ -1,5 +1,5 @@
 /*------------------------------------*\
-$FORMS
+    $FORMS
 \*------------------------------------*/
 .field, .field__label { position: relative;}
 
@@ -22,7 +22,7 @@ input[type="checkbox"] {
 if $use-icons {
 
 /*------------------------------------*\
-$CUSTOM RADIOS & CHECKBOXES
+    $CUSTOM RADIOS & CHECKBOXES
 \*------------------------------------*/
 .radio-custom:before,
 .checkbox-custom:before { margin-bottom: .5em;}
@@ -47,7 +47,7 @@ input:checked + label {
 if $use-form-affixes == true {
 
 /*------------------------------------*\
-$AUTOCOMPLETE
+    $AFFIXES
 \*------------------------------------*/
 @import "form-affixes"
 
@@ -60,7 +60,7 @@ $AUTOCOMPLETE
 if $use-form-autocomplete == true {
 
 /*------------------------------------*\
-$AUTOCOMPLETE
+    $AUTOCOMPLETE
 \*------------------------------------*/
 @import "../vendor/typeahead"
 
@@ -73,7 +73,7 @@ $AUTOCOMPLETE
 if $use-form-datepicker == true {
 
 /*------------------------------------*\
-$DATEPICKER
+    $DATEPICKER
 \*------------------------------------*/
 @import "../vendor/jquery-ui-datepicker"
 
@@ -86,7 +86,7 @@ $DATEPICKER
 if $use-form-file-upload == true {
 
 /*------------------------------------*\
-$FILE UPLOAD
+    $FILE UPLOAD
 \*------------------------------------*/
 @import "../vendor/dropzone"
 
@@ -99,7 +99,7 @@ $FILE UPLOAD
 if $use-form-wysiwyg == true {
 
 /*------------------------------------*\
-$WYSIWYG
+    $WYSIWYG
 \*------------------------------------*/
 
 }//endif

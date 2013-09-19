@@ -1,7 +1,7 @@
 if $use-alerts == true {
 
 /*------------------------------------*\
-$ALERTS
+    $ALERTS
 \*------------------------------------*/
 .alert {
 	background-color: $clr-warning-ltst;
@@ -58,7 +58,7 @@ $ALERTS
 
 
 /*------------------------------------*\
-$MODIFIERS
+    $MODIFIERS
 \*------------------------------------*/
 .alert--success {
 	color: $clr-success;
