@@ -15,43 +15,43 @@ $PROGRESS BARS
 	@include box-shadow(inset 0 1px 2px hsla(0, 0%, 0%, .1));
 }
 
-.progress__bar {
-	width: 0;
-	max-width: 100%;
-	height: 18px;
-	font-size: 12px;
-	color: $clr-ntrl-min;
-	text-align: center;
-	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
-	background-color: $clr-omega;
+  .progress__bar {
+    width: 0;
+    max-width: 100%;
+    height: 18px;
+    font-size: 12px;
+    color: $clr-ntrl-min;
+    text-align: center;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+    background-color: $clr-omega;
 
-	@include gradient(background-image, linear-gradient(180deg, transparent, hsla(0, 0%, 100%, .1)));
-	background-repeat: repeat-x;
+    @include gradient(background-image, linear-gradient(180deg, transparent, hsla(0, 0%, 100%, .1)));
+    background-repeat: repeat-x;
 
-	@include box-shadow(inset 0 -1px 0 hsla(0, 0%, 0%, .15));
-	@include box-sizing(border-box);
-	@include transition(width .6s ease);
-}
+    @include box-shadow(inset 0 -1px 0 hsla(0, 0%, 0%, .15));
+    @include box-sizing(border-box);
+    @include transition(width .6s ease);
+  }
 
-.progress--anim > .progress__bar {
-	@include animation(progress-bar-stripes 2s linear infinite);
-}
+  .progress--anim > .progress__bar {
+    @include animation(progress-bar-stripes 2s linear infinite);
+  }
 
-.progress__bar--striped {
-	background-color: $clr-omega;
-	@include gradient(background-image, linear-gradient(
-																				-45deg,
-																				hsla(0, 0%, 100%, .15) 25%,
-																				transparent 25%,
-																				transparent 50%,
-																				hsla(0, 0%, 100%, .15) 50%,
-																				hsla(0, 0%, 100%, .15) 75%,
-																				transparent 75%,
-																				transparent)
-	);
+  .progress__bar--striped {
+    background-color: $clr-omega;
+    @include gradient(background-image, linear-gradient(
+                                          -45deg,
+                                          hsla(0, 0%, 100%, .15) 25%,
+                                          transparent 25%,
+                                          transparent 50%,
+                                          hsla(0, 0%, 100%, .15) 50%,
+                                          hsla(0, 0%, 100%, .15) 75%,
+                                          transparent 75%,
+                                          transparent)
+    );
 
-	@include background-size(40px 40px);
-}
+    @include background-size(40px 40px);
+  }
 
 
 
@@ -60,17 +60,17 @@ $PROGRESS BARS
 /*------------------------------------*\
 $MODIFIERS
 \*------------------------------------*/
-.progress--success > .progress__bar,
-.progress--success > .progress__bar--striped { background-color: $clr-success;}
+  .progress--success > .progress__bar,
+  .progress--success > .progress__bar--striped { background-color: $clr-success;}
 
-.progress--danger > .progress__bar,
-.progress--danger > .progress__bar--striped { background-color: $clr-danger;}
+  .progress--danger > .progress__bar,
+  .progress--danger > .progress__bar--striped { background-color: $clr-danger;}
 
-.progress--info > .progress__bar,
-.progress--info > .progress__bar--striped { background-color: $clr-info;}
+  .progress--info > .progress__bar,
+  .progress--info > .progress__bar--striped { background-color: $clr-info;}
 
-.progress--warning > .progress__bar,
-.progress--warning > .progress__bar--striped {	background-color: $clr-warning;}
+  .progress--warning > .progress__bar,
+  .progress--warning > .progress__bar--striped { background-color: $clr-warning;}
 
 
 
