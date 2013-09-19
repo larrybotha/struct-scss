@@ -1,0 +1,10 @@
+// Example:
+//  @include drop-shadow(0 1px 4px hsla(0, 0%, 0%, .5));
+
+@mixin drop-shadow($val) {
+	-webkit-filter: drop-shadow($val);
+		 -moz-filter: drop-shadow($val);
+			-ms-filter: drop-shadow($val);
+			 -o-filter: drop-shadow($val);
+					filter: drop-shadow($val);
+}
