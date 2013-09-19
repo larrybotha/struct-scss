@@ -1,3 +1,16 @@
+@if $use-form-datepicker == true {
+
+/*------------------------------------*\
+    $DATEPICKER
+\*------------------------------------*/
+
+
+
+
+
+/*------------------------------------*\
+    $JQUERY UI DATEPICKER
+\*------------------------------------*/
 .ui-datepicker {
 	display: none;
 	background-color: #fff;
@@ -110,3 +123,5 @@
 	border-right-width:0;
 	border-left-width:1px;
 }
+
+}//endif

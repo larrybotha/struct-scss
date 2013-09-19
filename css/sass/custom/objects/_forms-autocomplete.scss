@@ -1,3 +1,16 @@
+@if $use-form-autocomplete == true {
+
+/*------------------------------------*\
+    $AUTOCOMPLETE
+\*------------------------------------*/
+
+
+
+
+
+/*------------------------------------*\
+    $TYPEAHEAD
+\*------------------------------------*/
 .tt-hint {
 	width: 100%;
 	color: #999;
@@ -28,3 +41,6 @@
 .twitter-typeahead .tt-suggestion.tt-is-under-cursor {
 	color: #03739c;
 }
+
+}//endif
+
