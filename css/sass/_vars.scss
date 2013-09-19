@@ -23,7 +23,7 @@
  * and introducing objects and abstractions is as simple as switching the
  * following variables to `true`.
  */
-$use-grids:         false;
+$use-grids: true;
 $use-flexbox:       false;
 $use-columns:       false;
 $use-nav:           false;
@@ -55,19 +55,19 @@ $use-greybox:       false;
 /*------------------------------------*\
     $CUSTOM OBJECTS-AND-ABSTRACTIONS
 \*------------------------------------*/
-$use-buttons:           false; // use either these, or beautons, but not both
-$use-alerts:            false;
-$use-flex-element:      false;
-$use-icons:             false;
-$use-form-affixes:      false;
-$use-form-date-picker:  false;
-$use-form-autocomplete: false;
-$use-form-wysiwyg:      false;
-$use-form-file-upload:  false;
-$use-progress-bars:     false;
-$use-tooltips:          false;
-$use-print:             false;
-$use-wordpress:         false;
+$use-buttons:            false; // use either these, or beautons, but not both
+$use-alerts:             false;
+$use-flex-element:       false;
+$use-icons:              false;
+$use-forms-affixes:      false;
+$use-forms-datepicker:   false;
+$use-forms-autocomplete: false;
+$use-forms-wysiwyg:      false;
+$use-forms-file-upload:  false;
+$use-progress-bars:      false;
+$use-tooltips:           false;
+$use-print:              false;
+$use-wordpress: true;
 
 
 
