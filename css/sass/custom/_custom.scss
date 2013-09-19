@@ -11,7 +11,6 @@
 \*------------------------------------*/
 /**
  * CONTENTS............You’re reading it!
- * WARNING.............Here be dragons!
  * IMPORTS.............Begin importing the sections below
  *
  */
@@ -26,7 +25,7 @@
 /**
  * Import theme mixins and functions
  */
-@import "utilities/!utilities";
+@import "general/utilities/!utilities";
 
 
 
@@ -35,28 +34,36 @@
 /**
  * Extend / override inuit.css base and objects
  */
-@import "inuit-extend"
+@import "inuit-extend";
 
 
 
 
 
 /**
- * Import objects
+ * import objects
  */
-@import "objects/main-structure"
-@import "objects/forms"
-@import "objects/flex-element"
-@import "objects/alerts"
-@import "objects/progress-bars"
-@import "objects/tooltips"
-@import "objects/wordpress"
+@import "objects/main-structure";
+@import "objects/forms";
+@import "objects/flex-element";
+@import "objects/alerts";
+@import "objects/progress-bars";
+@import "objects/tooltips";
+@import "objects/wordpress";
 
 
 
 
 
 /**
- * Import print styles
+ * import helpers
  */
-@import "objects/print"
+@import "general/helpers";
+
+
+
+
+/**
+ * import print styles
+ */
+@import "objects/print";
