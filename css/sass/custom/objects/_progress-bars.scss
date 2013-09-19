@@ -53,27 +53,30 @@ $PROGRESS BARS
 	@include background-size(40px 40px);
 }
 
-@-webkit-keyframes progress-bar-stripes {
-	0% { background-position: 40px 0;}
-	100% { background-position: 0 0;}
-}
 
-@-moz-keyframes progress-bar-stripes {
-	0% { background-position: 40px 0;}
-	100% { background-position: 0 0;}
-}
 
-@-ms-keyframes progress-bar-stripes {
-	0% { background-position: 40px 0;}
-	100% { background-position: 0 0;}
-}
 
-@-o-keyframes progress-bar-stripes {
-	0% { background-position: 40px 0;}
-	100% { background-position: 0 0;}
-}
 
-@keyframes progress-bar-stripes {
+/*------------------------------------*\
+$MODIFIERS
+\*------------------------------------*/
+.progress--success > .progress__bar,
+.progress--success > .progress__bar--striped { background-color: $clr-success;}
+
+.progress--danger > .progress__bar,
+.progress--danger > .progress__bar--striped { background-color: $clr-danger;}
+
+.progress--info > .progress__bar,
+.progress--info > .progress__bar--striped { background-color: $clr-info;}
+
+.progress--warning > .progress__bar,
+.progress--warning > .progress__bar--striped {	background-color: $clr-warning;}
+
+
+
+
+
+@include keyframe(progress-bar-stripes) {
 	0% { background-position: 40px 0;}
 	100% { background-position: 0 0;}
 }
