@@ -1,3 +1,0 @@
-@mixin user-select($val) {
-	@include prefixer(user-select, $val, webkit, moz, ms);
-}
