@@ -3,5 +3,53 @@ if $use-alerts == true {
 /*------------------------------------*\
 $ALERTS
 \*------------------------------------*/
+.alert {
+	background-color: $clr-warning-ltst;
+	color: $clr-warning;
+	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+	margin-bottom: 18px;
+	padding: 8px 35px 8px 14px;
+	border: 1px solid $clr-warning-ltr;
+
+  & a {
+    color: inherit;
+    border-bottom: 1px dotted $clr-warning;
+  }
+
+  & a:hover {
+    border-bottom-style: solid;
+  }
+
+  & p:last-child,
+  & ul:last-child {
+    margin-bottom: 0;
+  }
+
+  & .close {
+	position: relative;
+	top: -2px;
+	right: -21px;
+	line-height: 18px;
+  }
+}
+
+  .alert__heading { color: inherit;}
+
+.close {
+	display: inline-block;
+	float: right;
+	background: transparent;
+	font-size: 1em;
+	font-weight: bold;
+	line-height: 1;
+	color: #bbb;
+	color: hsla(0, 0%, 0%, .2);
+	text-align: center;
+	text-shadow: 0 1px 0 $clr-ntrl-min;
+	margin-left: .5em;
+	padding: 0;
+	cursor: pointer;
+	border: 0;
+}
 
 }
