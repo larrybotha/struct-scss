@@ -1,7 +1,7 @@
 if $use-wordpress == true {
 
 /*------------------------------------*\
-$GALLERY
+    $GALLERY
 \*------------------------------------*/
 @import "wordpress/gallery"
 
@@ -10,7 +10,7 @@ $GALLERY
 
 
 /*------------------------------------*\
-$COMMENTS
+    $COMMENTS
 \*------------------------------------*/
 @import "wordpress/comments"
 
@@ -19,7 +19,7 @@ $COMMENTS
 
 
 /*------------------------------------*\
-$WIDGETS
+    $WIDGETS
 \*------------------------------------*/
 @import "wordpress/widgets"
 
@@ -28,7 +28,7 @@ $WIDGETS
 
 
 /*------------------------------------*\
-$HELPERS
+    $HELPERS
 \*------------------------------------*/
 @import "wordpress/helpers"
 

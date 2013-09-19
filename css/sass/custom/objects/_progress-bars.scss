@@ -1,7 +1,7 @@
 if $use-progress-bars == true {
 
 /*------------------------------------*\
-$PROGRESS BARS
+    $PROGRESS BARS
 \*------------------------------------*/
 .progress {
 	height: 18px;
@@ -58,7 +58,7 @@ $PROGRESS BARS
 
 
 /*------------------------------------*\
-$MODIFIERS
+    $MODIFIERS
 \*------------------------------------*/
   .progress--success > .progress__bar,
   .progress--success > .progress__bar--striped { background-color: $clr-success;}
