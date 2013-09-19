@@ -858,7 +858,7 @@ input:checked + label > .checkbox-custom:before { content: "\e001"; /* .icon-che
 /* -----------------------------------------------------------------------------
 	 &Date Picker
 	 -------------------------------------------------------------------------- */
-@import "custom/vendor/jquery-ui-datepicker";
+// @import "custom/vendor/jquery-ui-datepicker";
 
 
 
@@ -867,7 +867,7 @@ input:checked + label > .checkbox-custom:before { content: "\e001"; /* .icon-che
 /* -----------------------------------------------------------------------------
 	 &Autocomplete
 	 -------------------------------------------------------------------------- */
-@import "custom/vendor/typeahead";
+// @import "custom/vendor/typeahead";
 
 
 
@@ -884,7 +884,7 @@ input:checked + label > .checkbox-custom:before { content: "\e001"; /* .icon-che
 /* -----------------------------------------------------------------------------
 	 &File Upload
 	 -------------------------------------------------------------------------- */
-@import "custom/vendor/dropzone";
+// @import "custom/vendor/dropzone";
 
 
 
@@ -1236,80 +1236,80 @@ a.label:hover {
 		<br style="clear: both"><!-- displayed after every 3 items in gallery -->
 	</div>
 */
-.gallery {
-	margin-left: -(1.5 * $unit-default-px);
-	@include px-and-rem(margin-bottom, 1.5);
-}
+// .gallery {
+//   margin-left: -(1.5 * $unit-default-px);
+//   @include px-and-rem(margin-bottom, 1.5);
+// }
 
-.ie8 .gallery { margin-left: 0;}
+// .ie8 .gallery { margin-left: 0;}
 
-.gallery-item {
-	position: relative;
-	float: left;
-	text-align: center;
-	@include px-and-rem(margin, 0, 0, 1.5);
-	@include px-and-rem(padding, 1.5);
-	border: 0 solid hsla(0,0%,0%,0);
-	@include px-and-rem(border-left-width, 1.5);
-}
+// .gallery-item {
+//   position: relative;
+//   float: left;
+//   text-align: center;
+//   @include px-and-rem(margin, 0, 0, 1.5);
+//   @include px-and-rem(padding, 1.5);
+//   border: 0 solid hsla(0,0%,0%,0);
+//   @include px-and-rem(border-left-width, 1.5);
+// }
 
-.ie8 .gallery-item {
-	@include px-and-rem(padding, 0, $unit-default-px);
-}
+// .ie8 .gallery-item {
+//   @include px-and-rem(padding, 0, $unit-default-px);
+// }
 
-.gallery-item:before {
-	position: absolute;
-	content: "";
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	border: 1px solid #ccc;
-	z-index: -1;
-}
+// .gallery-item:before {
+//   position: absolute;
+//   content: "";
+//   top: 0;
+//   left: 0;
+//   right: 0;
+//   bottom: 0;
+//   border: 1px solid #ccc;
+//   z-index: -1;
+// }
 
-.gallery-item img {	border: 1px solid #ccc;}
+// .gallery-item img {	border: 1px solid #ccc;}
 
-.gallery-item a {
-	position: relative;
-	z-index: 1000;
-}
+// .gallery-item a {
+//   position: relative;
+//   z-index: 1000;
+// }
 
-.gallery-columns-1 > .gallery-item {
-	width: 100%;
-	margin-left: 0;
-	margin-right: 0;
-}
-.gallery-columns-2 > .gallery-item { width: 50%;}
-.gallery-columns-3 > .gallery-item { width: 33.333%;}
-.gallery-columns-4 > .gallery-item { width: 25%;}
-.gallery-columns-5 > .gallery-item { width: 20%;}
+// .gallery-columns-1 > .gallery-item {
+//   width: 100%;
+//   margin-left: 0;
+//   margin-right: 0;
+// }
+// .gallery-columns-2 > .gallery-item { width: 50%;}
+// .gallery-columns-3 > .gallery-item { width: 33.333%;}
+// .gallery-columns-4 > .gallery-item { width: 25%;}
+// .gallery-columns-5 > .gallery-item { width: 20%;}
 
-.gallery-columns-2 > .gallery-item:nth-of-type(2n + 1),
-.gallery-columns-3 > .gallery-item:nth-of-type(3n + 1),
-.gallery-columns-4 > .gallery-item:nth-of-type(4n + 1),
-.gallery-columns-5 > .gallery-item:nth-of-type(5n + 1) { margin-left: 0;}
+// .gallery-columns-2 > .gallery-item:nth-of-type(2n + 1),
+// .gallery-columns-3 > .gallery-item:nth-of-type(3n + 1),
+// .gallery-columns-4 > .gallery-item:nth-of-type(4n + 1),
+// .gallery-columns-5 > .gallery-item:nth-of-type(5n + 1) { margin-left: 0;}
 
-.gallery-columns-2 > .gallery-item:nth-of-type(2n),
-.gallery-columns-3 > .gallery-item:nth-of-type(3n),
-.gallery-columns-4 > .gallery-item:nth-of-type(4n),
-.gallery-columns-5 > .gallery-item:nth-of-type(5n) { margin-right: 0;}
+// .gallery-columns-2 > .gallery-item:nth-of-type(2n),
+// .gallery-columns-3 > .gallery-item:nth-of-type(3n),
+// .gallery-columns-4 > .gallery-item:nth-of-type(4n),
+// .gallery-columns-5 > .gallery-item:nth-of-type(5n) { margin-right: 0;}
 
-.ie8 .gallery-columns-2 > .gallery-item { width: 49%;}
-.ie8 .gallery-columns-3 > .gallery-item { width: 32.3%;}
-.ie8 .gallery-columns-4 > .gallery-item { width: 24%;}
-.ie8 .gallery-columns-5 > .gallery-item { width: 19%;}
+// .ie8 .gallery-columns-2 > .gallery-item { width: 49%;}
+// .ie8 .gallery-columns-3 > .gallery-item { width: 32.3%;}
+// .ie8 .gallery-columns-4 > .gallery-item { width: 24%;}
+// .ie8 .gallery-columns-5 > .gallery-item { width: 19%;}
 
-// .gallery-icon {}
+// // .gallery-icon {}
 
-.gallery-caption {
-	@include px-and-rem(font-size, .875); /* 14px / 16 = .875 */
-	margin-left: 0;
-	padding: 8px 0;
-	padding: .75em 0 0;
-}
+// .gallery-caption {
+//   @include px-and-rem(font-size, .875); /* 14px / 16 = .875 */
+//   margin-left: 0;
+//   padding: 8px 0;
+//   padding: .75em 0 0;
+// }
 
-.gallery-caption > :last-child { margin-bottom: 0;}
+// .gallery-caption > :last-child { margin-bottom: 0;}
 
 
 
@@ -1618,10 +1618,10 @@ h1, h2, h3, h4, h5, h6 { font-weight: normal;}
 .ff-mono { font-family: monospace;}
 
 /* case modifiers */
-.case-u { text-transform: uppercase;}
-.case-l { text-transform: lowercase;}
-.case-n { text-transform: none;}
-.case-c { text-transform: capitalize;}
+.case--upper { text-transform: uppercase;}
+.case--lower { text-transform: lowercase;}
+.case--normal { text-transform: none;}
+.case--capital { text-transform: capitalize;}
 
 /* vertical align modifiers */
 .va-t { vertical-align: top;}
@@ -1633,19 +1633,6 @@ h1, h2, h3, h4, h5, h6 { font-weight: normal;}
 .va-tt { vertical-align: text-top;}
 .va-tb { vertical-align: text-bottom;}
 
-/* Floating & Alignment Modifiers */
-.ta-l { text-align: left;}
-.ta-c { text-align: center;}
-.ta-r { text-align: right;}
-
-/* truncating text / ellipsis */
-.truncate {
-	display: block;
-	text-overflow: ellipsis;
-	width: 100%;
-	white-space: nowrap;
-	overflow: hidden;
-}
 
 
 
@@ -1727,9 +1714,6 @@ button.d-block { width: 100%;}
 	vertical-align: middle;
 }
 
-/* float modifiers */
-.fl { float: left;}
-.fr { float: right;}
 
 
 
@@ -1923,4 +1907,4 @@ button.d-block { width: 100%;}
 /* =============================================================================
 	 &PRINT STYLES - Inlined to avoid required HTTP connection: h5bp.com/r
 	 ========================================================================== */
-@import "custom/objects/print";
+// @import "custom/objects/print";
