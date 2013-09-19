@@ -2,24 +2,26 @@
     $GALLERY
 \*------------------------------------*/
 .gallery {
-	margin-left: -(1.5 * $unit-default-px);
-	@include px-and-rem(margin-bottom, 1.5);
+  @extend .grid;
+	// margin-left: -(1.5 * $unit-default-px);
+	// @include px-and-rem(margin-bottom, 1.5);
 }
 
-.ie8 .gallery { margin-left: 0;}
+// .ie8 .gallery { margin-left: 0;}
 
   .gallery-item {
-    position: relative;
-    float: left;
-    text-align: center;
-    @include px-and-rem(margin, 0, 0, 1.5);
-    @include px-and-rem(padding, 1.5);
-    border: 0 solid hsla(0,0%,0%,0);
-    @include px-and-rem(border-left-width, 1.5);
+    @extend .grid__item;
+    // position: relative;
+    // float: left;
+    // text-align: center;
+    // @include px-and-rem(margin, 0, 0, 1.5);
+    // @include px-and-rem(padding, 1.5);
+    // border: 0 solid hsla(0,0%,0%,0);
+    // @include px-and-rem(border-left-width, 1.5);
 
-    .ie8 & {
-      @include px-and-rem(padding, 0, $unit-default-px);
-    }
+    // .ie8 & {
+    //   @include px-and-rem(padding, 0, $unit-default-px);
+    // }
 
     &:before {
       position: absolute;
@@ -42,31 +44,50 @@
     }
   }
 
+  // @for $i from 1 through 5 {
+  //   .gallery-columns-#{$i} > .gallery-item {
+  //     width: 100% / #{$i};
+
+  //     @if $i == 1 {
+  //       margin-left: 0;
+  //       margin-right: 0;
+  //     }
+  //   }
+  // }
 
   .gallery-columns-1 > .gallery-item {
-    width: 100%;
-    margin-left: 0;
-    margin-right: 0;
+    @extend .one-whole;
+    // width: 100%;
+    // margin-left: 0;
+    // margin-right: 0;
   }
-  .gallery-columns-2 > .gallery-item { width: 50%;}
-  .gallery-columns-3 > .gallery-item { width: 33.333%;}
-  .gallery-columns-4 > .gallery-item { width: 25%;}
-  .gallery-columns-5 > .gallery-item { width: 20%;}
+  .gallery-columns-2 > .gallery-item {
+    @extend .one-half;
+    width: 50%;}
+  .gallery-columns-3 > .gallery-item {
+    @extend .one-third;
+    width: 33.333%;}
+  .gallery-columns-4 > .gallery-item {
+    @extend one-fourth;
+    width: 25%;}
+  .gallery-columns-5 > .gallery-item {
+    @extend .one-fifth;
+    width: 20%;}
 
-  .gallery-columns-2 > .gallery-item:nth-of-type(2n + 1),
-  .gallery-columns-3 > .gallery-item:nth-of-type(3n + 1),
-  .gallery-columns-4 > .gallery-item:nth-of-type(4n + 1),
-  .gallery-columns-5 > .gallery-item:nth-of-type(5n + 1) { margin-left: 0;}
+  // .gallery-columns-2 > .gallery-item:nth-of-type(2n + 1),
+  // .gallery-columns-3 > .gallery-item:nth-of-type(3n + 1),
+  // .gallery-columns-4 > .gallery-item:nth-of-type(4n + 1),
+  // .gallery-columns-5 > .gallery-item:nth-of-type(5n + 1) { margin-left: 0;}
 
-  .gallery-columns-2 > .gallery-item:nth-of-type(2n),
-  .gallery-columns-3 > .gallery-item:nth-of-type(3n),
-  .gallery-columns-4 > .gallery-item:nth-of-type(4n),
-  .gallery-columns-5 > .gallery-item:nth-of-type(5n) { margin-right: 0;}
+  // .gallery-columns-2 > .gallery-item:nth-of-type(2n),
+  // .gallery-columns-3 > .gallery-item:nth-of-type(3n),
+  // .gallery-columns-4 > .gallery-item:nth-of-type(4n),
+  // .gallery-columns-5 > .gallery-item:nth-of-type(5n) { margin-right: 0;}
 
-  .ie8 .gallery-columns-2 > .gallery-item { width: 49%;}
-  .ie8 .gallery-columns-3 > .gallery-item { width: 32.3%;}
-  .ie8 .gallery-columns-4 > .gallery-item { width: 24%;}
-  .ie8 .gallery-columns-5 > .gallery-item { width: 19%;}
+  // .ie8 .gallery-columns-2 > .gallery-item { width: 49%;}
+  // .ie8 .gallery-columns-3 > .gallery-item { width: 32.3%;}
+  // .ie8 .gallery-columns-4 > .gallery-item { width: 24%;}
+  // .ie8 .gallery-columns-5 > .gallery-item { width: 19%;}
 
     // .gallery-icon {}
 
