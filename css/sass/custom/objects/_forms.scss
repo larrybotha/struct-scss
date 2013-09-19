@@ -19,7 +19,7 @@ input[type="checkbox"] {
 
 
 
-if $use-icons {
+@if $use-icons == true {
 
 /*------------------------------------*\
     $CUSTOM RADIOS & CHECKBOXES
@@ -27,16 +27,16 @@ if $use-icons {
 .radio-custom:before,
 .checkbox-custom:before { margin-bottom: .5em;}
 
-/* .icon-check-empty - FontAwesome */
+/* .icon-check-empty */
 .radio-custom:before { content: "\e010";}
 .checkbox-custom:before { content: "\e000";}
 
-/* .icon-check - FontAwesome */
+/* .icon-check */
 input:checked + label {
   & > .radio-custom:before { content: "\e011";}
 }
 input:checked + label {
-  & > .checkbox-custom:before { content: "\e001";
+  & > .checkbox-custom:before { content: "\e001";}
 }
 
 }//endif
@@ -44,62 +44,44 @@ input:checked + label {
 
 
 
-if $use-form-affixes == true {
 
 /*------------------------------------*\
     $AFFIXES
 \*------------------------------------*/
-@import "form-affixes"
-
-}//endif
+@import "forms-affixes";
 
 
 
 
-
-if $use-form-autocomplete == true {
 
 /*------------------------------------*\
     $AUTOCOMPLETE
 \*------------------------------------*/
-@import "../vendor/typeahead"
-
-}//endif
+@import "forms-autocomplete";
 
 
 
 
-
-if $use-form-datepicker == true {
 
 /*------------------------------------*\
     $DATEPICKER
 \*------------------------------------*/
-@import "../vendor/jquery-ui-datepicker"
-
-}//endif
+@import "forms-datepicker";
 
 
 
 
-
-if $use-form-file-upload == true {
 
 /*------------------------------------*\
     $FILE UPLOAD
 \*------------------------------------*/
-@import "../vendor/dropzone"
-
-}//endif
+@import "forms-file-upload";
 
 
 
 
-
-if $use-form-wysiwyg == true {
 
 /*------------------------------------*\
     $WYSIWYG
 \*------------------------------------*/
-
-}//endif
+@import "forms-wysiwyg";

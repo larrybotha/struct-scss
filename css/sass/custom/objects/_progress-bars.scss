@@ -1,4 +1,4 @@
-if $use-progress-bars == true {
+@if $use-progress-bars == true {
 
 /*------------------------------------*\
     $PROGRESS BARS
@@ -81,4 +81,4 @@ if $use-progress-bars == true {
 	100% { background-position: 0 0;}
 }
 
-}
+}//endif
