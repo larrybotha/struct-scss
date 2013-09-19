@@ -1,3 +1,5 @@
+@if $use-wordpress == true {
+
 /*------------------------------------*\
     $GALLERY
 \*------------------------------------*/
@@ -11,7 +13,7 @@
 
   .gallery-item {
     @extend .grid__item;
-    // position: relative;
+    position: relative;
     // float: left;
     // text-align: center;
     // @include px-and-rem(margin, 0, 0, 1.5);
@@ -27,7 +29,7 @@
       position: absolute;
       content: "";
       top: 0;
-      left: 0;
+      left: $base-spacing-unit;
       right: 0;
       bottom: 0;
       border: 1px solid #ccc;
@@ -63,16 +65,20 @@
   }
   .gallery-columns-2 > .gallery-item {
     @extend .one-half;
-    width: 50%;}
+    // width: 50%;
+}
   .gallery-columns-3 > .gallery-item {
     @extend .one-third;
-    width: 33.333%;}
+    // width: 33.333%;
+}
   .gallery-columns-4 > .gallery-item {
-    @extend one-fourth;
-    width: 25%;}
+    @extend .one-quarter;
+    // width: 25%;
+}
   .gallery-columns-5 > .gallery-item {
     @extend .one-fifth;
-    width: 20%;}
+    // width: 20%;
+}
 
   // .gallery-columns-2 > .gallery-item:nth-of-type(2n + 1),
   // .gallery-columns-3 > .gallery-item:nth-of-type(3n + 1),
@@ -99,3 +105,5 @@
 
       & > :last-child { margin-bottom: 0; }
     }
+
+}//endif

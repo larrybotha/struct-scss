@@ -1,9 +1,7 @@
-if $use-wordpress == true {
-
 /*------------------------------------*\
     $GALLERY
 \*------------------------------------*/
-@import "wordpress/gallery"
+@import "wordpress/gallery";
 
 
 
@@ -12,7 +10,7 @@ if $use-wordpress == true {
 /*------------------------------------*\
     $COMMENTS
 \*------------------------------------*/
-@import "wordpress/comments"
+@import "wordpress/comments";
 
 
 
@@ -21,7 +19,7 @@ if $use-wordpress == true {
 /*------------------------------------*\
     $WIDGETS
 \*------------------------------------*/
-@import "wordpress/widgets"
+@import "wordpress/widgets";
 
 
 
@@ -30,6 +28,4 @@ if $use-wordpress == true {
 /*------------------------------------*\
     $HELPERS
 \*------------------------------------*/
-@import "wordpress/helpers"
-
-}//endif
+@import "wordpress/helpers";
