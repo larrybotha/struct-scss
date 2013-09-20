@@ -1,0 +1,25 @@
+/**
+ * Style any number of headings in one fell swoop, e.g.:
+ *
+   .foo{
+     @include headings(1, 3){
+       color:#BADA55;
+     }
+  }
+ *
+ * With thanks to @lar_zzz, @paranoida, @rowanmanning and ultimately
+ * @thierrylemoulec for refining and improving my initial mixin.
+ */
+@mixin headings($from: 1, $to: 6){
+  %base-heading {
+    @content
+  }
+
+  @if $from >= 1 and $to <= 6{
+    @for $i from $from through $to{
+      h#{$i}{
+        @extend %base-heading;
+      }
+    }
+  }
+}
