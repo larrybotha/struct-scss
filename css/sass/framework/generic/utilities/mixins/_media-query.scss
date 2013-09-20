@@ -24,45 +24,45 @@
  *
  * We work out your end points for you:
  */
-$palm-end:              $lap-start - 1px;
-$lap-end:               $desk-start - 1px;
+$palm-end:        $lap-start - 1px;
+$lap-end:         $desk-start - 1px;
 
 @mixin media-query($media-query){
 
-    @if $media-query == palm{
+  @if $media-query == palm{
 
-        @media only screen and (max-width:$palm-end) { @content; }
+    @media only screen and (max-width:$palm-end) { @content; }
 
-    }
+  }
 
-    @if $media-query == lap{
+  @if $media-query == lap{
 
-        @media only screen and (min-width:$lap-start) and (max-width:$lap-end) { @content; }
+    @media only screen and (min-width:$lap-start) and (max-width:$lap-end) { @content; }
 
-    }
+  }
 
-    @if $media-query == lap-and-up{
+  @if $media-query == lap-and-up{
 
-        @media only screen and (min-width:$lap-start) { @content; }
+    @media only screen and (min-width:$lap-start) { @content; }
 
-    }
+  }
 
-    @if $media-query == portable{
+  @if $media-query == portable{
 
-        @media only screen and (max-width:$lap-end) { @content; }
+    @media only screen and (max-width:$lap-end) { @content; }
 
-    }
+  }
 
-    @if $media-query == desk{
+  @if $media-query == desk{
 
-        @media only screen and (min-width:$desk-start) { @content; }
+    @media only screen and (min-width:$desk-start) { @content; }
 
-    }
+  }
 
-    @if $media-query == desk-wide{
+  @if $media-query == desk-wide{
 
-        @media only screen and (min-width: $desk-wide-start) { @content; }
+    @media only screen and (min-width: $desk-wide-start) { @content; }
 
-    }
+  }
 
 }

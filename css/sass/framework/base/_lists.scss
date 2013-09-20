@@ -17,3 +17,9 @@ li{
 /*ul*/.numbered-list{
     list-style-type:decimal;
 }
+
+%list-reset {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
