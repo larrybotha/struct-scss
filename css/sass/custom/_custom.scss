@@ -7,39 +7,8 @@
 
 
 /*------------------------------------*\
-    $CONTENTS
-\*------------------------------------*/
-/**
- * CONTENTS............You’re reading it!
- * IMPORTS.............Begin importing the sections below
- *
- */
-
-
-
-
-
-/*------------------------------------*\
     $IMPORTS
 \*------------------------------------*/
-/**
- * Import theme mixins and functions
- */
-@import "general/utilities/!utilities";
-
-
-
-
-
-/**
- * Extend / override inuit.css base and objects
- */
-@import "inuit-extend";
-
-
-
-
-
 /**
  * import objects
  */
@@ -49,14 +18,12 @@
 
 
 /**
- * import helpers
+ * import vendor styles
  */
-@import "general/helper";
+@import "vendor/!vendor";
 
 
 
 
-/**
- * import print styles
- */
-@import "objects/print";
+
+
