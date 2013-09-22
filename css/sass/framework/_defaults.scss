@@ -178,6 +178,15 @@ $brand-round:    4px!default;
 
 
 /*------------------------------------*\
+  $COLORS
+\*------------------------------------*/
+$selection-color: #fe57a1;
+
+
+
+
+
+/*------------------------------------*\
   $OBJECTS AND ABSTRACTIONS
 \*------------------------------------*/
 /**
@@ -208,7 +217,8 @@ $use-rules:        false!default;
 $use-stats:        false!default;
 $use-greybox:      false!default;
 
-
+$use-ratio-element: false!default;
+$use-custom-radios-checkboxes: false!default; // is dependant $use-icons and icon font
 
 
 
@@ -220,6 +230,6 @@ $use-greybox:      false!default;
  *
  * Assign our `$base-line-height` to a new spacing var for more transparency.
  */
-$line-height-ratio: $base-line-height / $base-font-size;
-$base-spacing-unit: $line-height-ratio!default;
+$base-spacing-unit: $base-line-height!default;
 $half-spacing-unit: $base-spacing-unit / 2!default;
+$line-height-ratio: $base-line-height / $base-font-size;
