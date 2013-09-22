@@ -161,10 +161,6 @@ canvas { -ms-touch-action: double-tap-zoom;} /* 5 */
  * Associated jQuery bug - http://mopo.ws/AsGGa2
  */
 
-* {
-	@include box-sizing(border-box);
-}
-
 html {
 	// set desired font size in /var/_units.scss
 	font-size: fix8-get-base-font-size(); /* #{$unit-base} */
@@ -216,18 +212,28 @@ a {
 	text-decoration: none;
 	@include transition(all 100ms ease-in-out);
 	outline: 0;
-}
-a:visited {}
 
-a:hover {	color: #06e;}
-a:active {
-	color: #06e;
-	@include transition(all 0ms);
-}
-a:focus { outline: thin dotted;}
+  &:visited {}
 
-/* Improve readability when focused and hovered in all browsers: h5bp.com/h */
-a:hover, a:active { outline: 0;}
+  &:hover {
+    color: #06e;
+  }
+
+  &:active {
+    color: #06e;
+    @include transition(all 0);
+  }
+
+  /* Improve readability when focused and hovered in all browsers: h5bp.com/h */
+  &:hover,
+  &:active {
+    outline: 0;
+  }
+
+  &:focus {
+    outline: thin dotted;
+  }
+}
 
 
 
