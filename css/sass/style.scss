@@ -16,8 +16,8 @@ might want to share.
 /**
  * Setup
  */
-@import "vars";
-@import "inuit.css/inuit";
+@import "framework/framework";
+@import "custom/vars";
 @import "custom/custom";
 
 
@@ -27,7 +27,6 @@ might want to share.
 /**
  * Add helpers after custom styles so that the cascade handles the dirty work
  */
-@import "custom/generic/helper";
 
 
 /* ==|== &INDEX ================================================================
@@ -152,33 +151,6 @@ canvas { -ms-touch-action: double-tap-zoom;} /* 5 */
 /* =============================================================================
 	 &Base
 	 ========================================================================== */
-/*
- * 1. Correct text resizing oddly in IE6/7 when body font-size is set using em units
- * 2. Prevent iOS text size adjust on device orientation change, without disabling user zoom: h5bp.com/g
- *
- * Apply a natural box layout model to all elements.
- * Be aware that IE8 and up support box-sizing, IE7 & 6 require polyfill.
- * Associated jQuery bug - http://mopo.ws/AsGGa2
- */
-
-html {
-	// set desired font size in /var/_units.scss
-	font-size: fix8-get-base-font-size(); /* #{$unit-base} */
-	-webkit-text-size-adjust: 100%;
-	-ms-text-size-adjust: 100%;
-}
-
-html, button, input, select, textarea {
-	font-family: Arial,	sans-serif;
-	color: $clr-alpha;
-}
-
-body {
-	background: $clr-ntrl-min;
-	font-size: 1em;
-	line-height: 1.5;
-	margin: 0;
-}
 
 // Serve hi-res background to higher px density displays at same size as
 // original background
@@ -191,15 +163,6 @@ body {
 // 		background-size: [width] [height];
 // 	}
 // }
-
-/*
- * Remove text-shadow in selection highlight: h5bp.com/i
- * These selection declarations have to be separate
- */
-
-::-moz-selection { background: $clr-omega; color: $clr-ntrl-min; text-shadow: none;}
-::selection { background: $clr-omega; color: $clr-ntrl-min; text-shadow: none;}
-
 
 
 
@@ -482,7 +445,7 @@ td { vertical-align: top;}
 	 &Fonts
 	 ========================================================================== */
 /* base-icon-font built as a subset using icons from FontAwesome and IcoMoon */
-@include font-face($font-omega, $font-omega-filename, $font-omega-path, $weight: normal, $style: normal);
+@include font-face($font-icon, $font-icon-filename, $font-icon-path, $weight: normal, $style: normal);
 
 
 
@@ -700,25 +663,6 @@ h1, h2, h3, h4, h5, h6 { font-weight: normal;}
 
 
 
-/* ==|== WordPress / Helper editor styles ======================================
-	 ========================================================================== */
-/* Alignment (post images) */
-.aligncenter { display: block; margin-left: auto; margin-right: auto;}
-.alignleft { display: inline; float: left; margin: 5px $unit-default-px 5px 0;}
-.alignright { display: inline; float: right; margin: 5px 0 5px $unit-default-px;}
-
-/* Image Captions */
-.wp-caption { max-width: 100%}
-.wp-caption-text {
-	@include	px-and-rem(margin, .5, 0, 1.5);
-	font-style: italic;
-	color: $clr-beta;
-}
-
-
-
-
-
 /* =============================================================================
 	 &Backgrounds & Borders
 	 ========================================================================== */
@@ -780,193 +724,15 @@ button.d-block { width: 100%;}
 
 
 
-
-/* =============================================================================
-	 &Helpers
-	 ========================================================================== */
-/*
- * For image replacement: http://mopo.ws/wj7fIN
- * Nicholas Gallagher's detailed post on new .ir - http://mopo.ws/wHCSUu
- * Causes issues with em based margins on elements using .ir
+/**
+ * import helpers
  */
-.ir { background-color: transparent; border: 0; overflow: hidden;}
-
-.ir:before { content: ""; display: block; width: 0; height: 150%;}
-
-/* Hide from both screenreaders and browsers: h5bp.com/u */
-.hidden { display: none !important; visibility: hidden;}
-
-/* Hide only visually, but have it available for screenreaders: h5bp.com/v */
-:root .visuallyhidden { position: absolute; clip: rect(0 0 0 0); width: 1px; height: 1px; margin: -1px; overflow: hidden; padding: 0; border: 0; visibility:hidden;}
-.ie8 .visuallyhidden-ie8 { position: absolute; clip: rect(0 0 0 0); width: 1px; height: 1px; margin: -1px; overflow: hidden; padding: 0; border: 0; visibility: visible;}
-
-/* Extends the .visuallyhidden class to allow the element to be focusable when navigated to via the keyboard: h5bp.com/p */
-.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus { position: static; clip: auto; width: auto; height: auto; margin: 0; overflow: visible;}
-
-/* Hide visually and from screenreaders, but maintain layout */
-.invisible { visibility: hidden;}
-
-/* Clearfix for containing floats: h5bp.com/q */
-.cf:before, .cf:after { content: ""; display: table; height:0;}
-.cf:after { clear: both;}
-.cf { *zoom: 1;}
+@import "../framework/generic/helper";
 
 
 
 
-
-/* *****************************************************************************
-	 &ANIMATIONS
-	 ************************************************************************** */
-@-webkit-keyframes rotate {
-	0% { -webkit-transform: rotate(0deg);}
-	100% { -webkit-transform: rotate(360deg);}
-}
-
-@-moz-keyframes rotate {
-	0% { -moz-transform: rotate(0deg);}
-	100% { -moz-transform: rotate(360deg);}
-}
-
-@-o-keyframes rotate {
-	0% { -o-transform: rotate(0deg);}
-	100% { -o-transform: rotate(360deg);}
-}
-
-@-ms-keyframes rotate {
-	0% { -ms-transform: rotate(0deg);}
-	100% { -ms-transform: rotate(360deg);}
-}
-
-@keyframes rotate {
-	0% { transform: rotate(0deg);}
-	100% { transform: rotate(360deg);}
-}
-
-
-
-
-
-/* *****************************************************************************
-	 &MEDIA QUERIES
-	 ************************************************************************** */
-/* =============================================================================
-	 &vpalpha - 0px and up
-	 ========================================================================== */
-
-@media screen and (min-width: $device-width-alpha) {
-	/* ==========================================================================
-	 &Grid - vpalpha
-	 ========================================================================= */
-	.col-1-vpalpha { width: 8.33333333333%;}
-	.col-2-vpalpha { width: 16.6666666667%;}
-	.col-3-vpalpha { width: 25.0%;}
-	.col-4-vpalpha { width: 33.3333333333%;}
-	.col-5-vpalpha { width: 41.6666666667%;}
-	.col-6-vpalpha { width: 50.0%;}
-	.col-7-vpalpha { width: 58.3333333333%;}
-	.col-8-vpalpha { width: 66.6666666667%;}
-	.col-9-vpalpha { width: 75.0%;}
-	.col-10-vpalpha { width: 83.3333333333%;}
-	.col-11-vpalpha { width: 91.6666666667%;}
-	.col-12-vpalpha {
-		margin-left: 0;
-		width: 100%;
-	}
-}
-
-
-
-
-
-/* =============================================================================
-	 &vpbeta - 480px (30em) and up
-	 ========================================================================== */
-
-@media screen and (min-width: $device-width-beta) {
-	/* ==========================================================================
-	 &Grid - vpbeta
-	 ========================================================================= */
-	.col-1-vpbeta { width: 8.33333333333%;}
-	.col-2-vpbeta { width: 16.6666666667%;}
-	.col-3-vpbeta { width: 25.0%;}
-	.col-4-vpbeta { width: 33.3333333333%;}
-	.col-5-vpbeta { width: 41.6666666667%;}
-	.col-6-vpbeta { width: 50.0%;}
-	.col-7-vpbeta { width: 58.3333333333%;}
-	.col-8-vpbeta { width: 66.6666666667%;}
-	.col-9-vpbeta { width: 75.0%;}
-	.col-10-vpbeta { width: 83.3333333333%;}
-	.col-11-vpbeta { width: 91.6666666667%;}
-	.col-12-vpbeta {
-		margin-left: 0;
-		width: 100%;
-	}
-}
-
-
-
-
-
-/* =============================================================================
-	 &vpgamma - 768px (48em) and up
-	 ========================================================================== */
-
-@media screen and (min-width: $device-width-gamma) {
-	/* ==========================================================================
-	 &Grid - vpgamma
-	 ========================================================================= */
-	.col-1-vpgamma { width: 8.333%;}
-	.col-2-vpgamma { width: 16.667%;}
-	.col-3-vpgamma { width: 25.0%;}
-	.col-4-vpgamma { width: 33.333%;}
-	.col-5-vpgamma { width: 41.667%;}
-	.col-6-vpgamma { width: 50.0%;}
-	.col-7-vpgamma { width: 58.333%;}
-	.col-8-vpgamma { width: 66.667%;}
-	.col-9-vpgamma { width: 75.0%;}
-	.col-10-vpgamma { width: 83.333%;}
-	.col-11-vpgamma { width: 91.667%;}
-	.col-12-vpgamma {
-		margin-left: 0;
-		width: 100%;
-	}
-}
-
-
-
-
-
-/* =============================================================================
-	 &vpdelta - 1280px (80em) and up
-	 ========================================================================== */
-
-@media screen and (min-width: $device-width-delta) {
-	/* ==========================================================================
-	 &Grid - vpdelta
-	 ========================================================================= */
-	.col-1-vpdelta { width: 8.33333333333%;}
-	.col-2-vpdelta { width: 16.6666666667%;}
-	.col-3-vpdelta { width: 25.0%;}
-	.col-4-vpdelta { width: 33.3333333333%;}
-	.col-5-vpdelta { width: 41.6666666667%;}
-	.col-6-vpdelta { width: 50.0%;}
-	.col-7-vpdelta { width: 58.3333333333%;}
-	.col-8-vpdelta { width: 66.6666666667%;}
-	.col-9-vpdelta { width: 75.0%;}
-	.col-10-vpdelta { width: 83.3333333333%;}
-	.col-11-vpdelta { width: 91.6666666667%;}
-	.col-12-vpdelta {
-		margin-left: 0;
-		width: 100%;
-	}
-}
-
-
-
-
-
-/* =============================================================================
-	 &PRINT STYLES - Inlined to avoid required HTTP connection: h5bp.com/r
-	 ========================================================================== */
-// @import "custom/objects/print";
+/**
+ * import print styles
+ */
+@import "../framework/objects/print";
