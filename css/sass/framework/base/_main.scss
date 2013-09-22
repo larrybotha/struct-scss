@@ -2,7 +2,34 @@
     $MAIN
 \*------------------------------------*/
 html{
-    font:#{($base-font-size/16px)*1em}/#{$line-height-ratio} $base-font-family;
+    font:#{($base-font-size/16px)*100%}/#{$line-height-ratio};
     overflow-y:scroll;
     min-height:100%;
+}
+
+html, button, input, select, textarea {
+    font-family: $base-font-family,	sans-serif;
+    color: $base-ui-color;
+}
+
+body {
+    background-color: #fff;
+    font-size: 1em;
+    margin: 0;
+}
+
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection declarations have to be separate
+ */
+
+::-moz-selection {
+    background: $selection-color;
+    color: #fff;
+    text-shadow: none;
+}
+::selection {
+    background: $selection-color;
+    color: #fff;
+    text-shadow: none;
 }
