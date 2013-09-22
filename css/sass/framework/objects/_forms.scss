@@ -19,7 +19,7 @@ input[type="checkbox"] {
 
 
 
-@if $use-icons == true {
+@if $use-custom-radios-checkboxes == true {
 
 /*------------------------------------*\
     $CUSTOM RADIOS & CHECKBOXES
@@ -54,34 +54,3 @@ input:checked + label {
 
 
 
-/*------------------------------------*\
-    $AUTOCOMPLETE
-\*------------------------------------*/
-@import "forms-autocomplete";
-
-
-
-
-
-/*------------------------------------*\
-    $DATEPICKER
-\*------------------------------------*/
-@import "forms-datepicker";
-
-
-
-
-
-/*------------------------------------*\
-    $FILE UPLOAD
-\*------------------------------------*/
-@import "forms-file-upload";
-
-
-
-
-
-/*------------------------------------*\
-    $WYSIWYG
-\*------------------------------------*/
-@import "forms-wysiwyg";
