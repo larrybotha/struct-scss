@@ -4,14 +4,29 @@
     $HELPERS
 \*------------------------------------*/
 /* Alignment (post images) */
-.aligncenter { display: block; margin-left: auto; margin-right: auto;}
-.alignleft { display: inline; float: left; margin: 5px $unit-default-px 5px 0;}
-.alignright { display: inline; float: right; margin: 5px 0 5px $unit-default-px;}
+.aligncenter {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: $base-spacing-unit;
+}
+.alignleft {
+  display: inline;
+  float: left;
+  margin-right: $base-spacing-unit;
+  margin-bottom: $base-spacing-unit;
+}
+.alignright {
+  display: inline;
+  float: right;
+  margin-left: $base-spacing-unit;
+  margin-bottom: $base-spacing-unit;
+}
 
-/* Image Captions */
+/* image captions */
 .wp-caption { max-width: 100%}
 .wp-caption-text {
-	@include	px-and-rem(margin, .5, 0, 1.5);
+	@include px-and-rem(margin, .5, 0, 1.5);
 	font-style: italic;
 	color: $clr-beta;
 }
