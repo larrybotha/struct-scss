@@ -143,6 +143,7 @@
  */
 @import "defaults";
 @import "generic/utilities/!utilities";
+@import "generic/reset";
 @import "generic/normalize";
 @import "generic/clearfix";
 @import "generic/shared";
@@ -201,7 +202,6 @@
 @import "objects/ratio-element";
 @import "objects/alerts";
 @import "objects/progress-bars";
-@import "objects/tooltips";
 @import "objects/wordpress";
 
 
