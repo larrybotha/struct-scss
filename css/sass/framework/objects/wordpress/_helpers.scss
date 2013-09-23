@@ -28,7 +28,6 @@
 .wp-caption-text {
 	@include px-and-rem(margin, .5, 0, 1.5);
 	font-style: italic;
-	color: $clr-beta;
 }
 
 }//endif
