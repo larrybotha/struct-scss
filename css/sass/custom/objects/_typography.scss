@@ -39,16 +39,23 @@ h1, h2, h3, h4, h5, h6 { font-weight: normal;}
 \*------------------------------------*/
 .error { color: $clr-danger;}
 
-/* font-family modifiers */
-.face-mono { font-family: monospace;}
+/**
+ * font-family modifiers
+ */
 
-/* case modifiers */
+
+/**
+ * case modifiers
+ */
 .case--upper   { text-transform: uppercase;}
 .case--lower   { text-transform: lowercase;}
 .case--normal  { text-transform: none;}
 .case--capital { text-transform: capitalize;}
 
-/* vertical align modifiers */
+
+/**
+ * vertical alignment modifiers
+ */
 .valign-t   { vertical-align: top;}
 .valign-m   { vertical-align: middle;}
 .valign-b   { vertical-align: bottom;}
