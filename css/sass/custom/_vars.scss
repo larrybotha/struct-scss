@@ -23,7 +23,7 @@
  * and introducing objects and abstractions is as simple as switching the
  * following variables to `true`.
  */
-$use-grids: true;
+$use-grids:         true;
 $use-flexbox:       false;
 $use-columns:       false;
 $use-nav:           false;
@@ -48,26 +48,15 @@ $use-rules:         false;
 $use-stats:         false;
 $use-greybox:       false;
 
-
-
-
-
-/*------------------------------------*\
-    $CUSTOM OBJECTS-AND-ABSTRACTIONS
-\*------------------------------------*/
-$use-buttons:            false; // use either these, or beautons, but not both
-$use-alerts:             false;
-$use-flex-element:       false;
-$use-icons:              false;
-$use-forms-affixes:      false;
-$use-forms-datepicker:   false;
-$use-forms-autocomplete: false;
-$use-forms-wysiwyg:      false;
-$use-forms-file-upload:  false;
-$use-progress-bars:      false;
-$use-tooltips:           false;
-$use-print:              false;
-$use-wordpress: true;
+$use-buttons:       false; // use either these, or beautons, but not both
+$use-alerts:        false;
+$use-flex-element:  false;
+$use-icons:         false;
+$use-forms-affixes: false;
+$use-progress-bars: false;
+$use-tooltips:      false;
+$use-print:         false;
+$use-wordpress:     false;
 
 
 
@@ -90,6 +79,36 @@ $use-wordpress: true;
 /**
  * Place any of your own variables that sit on top of inuit.css here.
  */
+
+
+
+
+
+/*------------------------------------*\
+    $FONTS
+\*------------------------------------*/
+/**
+ * Icon font
+ *
+ * Dependant on $use-icons being true. These variables are used in the the font-face mixin.
+ */
+$font-icon          : "base-icon-font";
+$font-icon-path     : "fnt/base-icon-font";
+$font-icon-filename : "base-icon-font";
+$font-icon-stack    : $font-icon;
+
+/**
+ * Base font face
+  $font-alpha:           "[font-name]";
+  $font-alpha-path:      "fnt/[path/to/font]";
+  $font-alpha-filename:  "[font-file-name-without-extension]";
+  $font-alpha-stack:     $font-alpha, Arial, sans-serif;
+
+  $font-alpha-filename-i:   " [italic-font-file-name-without-extension]"; // italic
+  $font-alpha-filename-b:   " [bold-font-file-name-without-extension]"; // bold
+  $font-alpha-filename-bi:  " [bold-italic-font-file-name-without-extension]"; // bold-italic
+ */
+
 
 
 
