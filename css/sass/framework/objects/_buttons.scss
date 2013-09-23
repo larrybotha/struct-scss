@@ -1,61 +1,51 @@
-if $use-buttons == true {
+@if $use-buttons == true {
 
 /*------------------------------------*\
     $BUTTONS
 \*------------------------------------*/
-.btn {
+.btn,
+  %btn {
 	position: relative;
 	display: inline-block;
-	background-color: $clr-alpha;
-	@include px-and-rem(font-size, 1);
-	font-weight: normal;
-	color: $clr-ntrl-min;
 	text-align: center;
-	line-height: 1;
+	line-height: 2;
 	vertical-align: middle;
 	height: auto; // ensure heights set on inputs do not affect submit buttons
-	@include px-and-rem(margin-bottom, 1);
-	padding: .5em 1em;
+  margin: 0;
+	padding: 0 1em;
 	border: 0;
-	@include transition(all 150ms ease-in);
-	outline:none;
+  white-space: nowrap;
 	cursor: pointer;
+	@include transition(all 150ms ease-in);
 
+  &,
   &:hover {
-    background-color: $clr-alpha-ltr;
-    color: $clr-ntrl-min;
+    text-decoration: none;
   }
 
   &:active {
-    @extend .btn--selected;
+    @extend %btn--selected;
+  }
+
+  &:active,
+  &:focus{
+    outline:none;
   }
 
   &[disabled],
   &:disabled {
-    color: $clr-alpha-lt;
     cursor: default;
-
-    &,
-    &:hover, &:active {
-      background-color: $clr-alpha-ltr;
-      @include box-shadow(none);
-    }
   }
 }
 
-.btn--selected,
-  .btn--selected:hover {
-	background-color: $clr-alpha-lt;
-	color: $clr-ntrl-min;
-	@include box-shadow(
-							inset 0 1px 3px hsla(0, 0%, 0%, .5),
-							0 1px 2px hsla(0, 0%, 90%, .05)
-						);
-
-	@include transition(all 0);
+%btn--selected,
+  %btn--selected:hover,
+  %btn--selected:active,
+  %btn--selected:focus {
+    @include transition(all 0);
 }
 
-.btn--selected { cursor: default;}
+%btn--selected { cursor: default;}
 
 .btn--full {
   display: block;
