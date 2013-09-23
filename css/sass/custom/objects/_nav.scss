@@ -2,62 +2,65 @@
     $NAVIGATION
 \*------------------------------------*/
 .menu {
-	list-style: none;
-	margin-left: 0;
-	padding-left: 0;
+  @extend %list--reset;
 }
 
 .menu-item {
 	position: relative;
-	display: inline;
+	display: inline-block;
+
+  @include media-query(palm) {
+    display: block;
+  }
 }
 
-.menu-item > a { display: inline-block;}
+.menu-item a {
+	display: block;
+	color: #ddd;
+	padding: .5em 1em;
+}
 
 .sub-menu {
 	position: absolute;
 	display: none;
+  background-color: #fff;
+  @include px-and-rem(padding-top, $base-spacing-unit * .5);
+  @include px-and-rem(padding-bottom, $base-spacing-unit * .5);
+  border: 1px solid $base-ui-color;
 	z-index: 100;
+
+  @include media-query(palm) {
+    position: relative;
+    border: 0;
+  }
 }
 
-.menu-primary,
-.menu {	background-color: #222;}
+.sub-menu a {
+  padding-left: 2em;
 
-.menu-primary .menu-item a {
-	display: block;
-	color: #ddd;
-	padding: .5em 1em;
-	border-top: 1px solid hsla(0, 0%, 100%, .02);
-	border-bottom: 1px solid hsla(0, 0%, 0%, .2);
-}
-
-.menu-primary .menu-item a:hover { background-color: $clr-alpha;}
-
-.menu-primary .sub-menu { position: relative;}
-
-.menu-primary .sub-menu a {	padding-left: 2em;}
-
-.menu-primary .sub-menu .sub-menu a {	padding-left: 4em;}
-
-.menu-item a:hover + .sub-menu,
-.sub-menu:hover {	display: block;}
-
-@media all and (min-width: 800px) {
-	.menu-primary .menu-item,
-	.menu-primary .menu-item a { display: inline-block;}
-
-	.menu-primary .sub-menu {
-		position: absolute;
-		border-right: 1px solid hsla(0, 0%, 0%, .2);
-		 border-left: 1px solid hsla(0, 0%, 0%, .2);
-	}
-
-	.menu-primary .sub-menu .sub-menu { top: 0; left: 100%;}
-
-	.menu-primary .sub-menu a,
-	.menu-primary .sub-menu .sub-menu a {
+  @include media-query(lap-and-up) {
 		min-width: 225px;
 		padding-left: 1em;
 		white-space: nowrap;
-	}
+  }
 }
+
+.sub-menu .sub-menu a {
+  @include media-query(palm) {
+    padding-left: 4em;
+  }
+}
+
+.sub-menu .sub-menu {
+  top: 0;
+  @include px-and-rem(top, -$base-spacing-unit * .75);
+  left: 100%;
+
+  @include media-query(palm) {
+    top: auto;
+    left: auto;
+  }
+}
+
+.menu-item a:hover + .sub-menu,
+.sub-menu:hover {	display: block;}
