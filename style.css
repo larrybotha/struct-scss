@@ -840,7 +840,7 @@ table {
  * Extend the clearfix class with Sass to avoid the `.cf` class appearing over
  * and over in your markup.
  */
-.cf:after, .gallery:after {
+.cf:after {
   content: "";
   display: table;
   clear: both; }
@@ -1654,7 +1654,7 @@ input[type="checkbox"] {
 /**
  * Grid wrapper
  */
-.grid, .grid--rev, .grid--full, .grid--center, .gallery {
+.grid, .grid--rev, .grid--full, .grid--center {
   margin-left: -24px;
   list-style: none;
   margin-bottom: 0; }
@@ -1662,13 +1662,13 @@ input[type="checkbox"] {
 /**
  * Very infrequently occuring grid wrappers as children of grid wrappers.
  */
-.grid > .grid, .grid--rev > .grid, .grid--full > .grid, .grid--center > .grid, .gallery > .grid, .grid > .grid--rev, .grid--rev > .grid--rev, .grid--full > .grid--rev, .grid--center > .grid--rev, .gallery > .grid--rev, .grid > .grid--full, .grid--rev > .grid--full, .grid--full > .grid--full, .grid--center > .grid--full, .gallery > .grid--full, .grid > .grid--center, .grid--rev > .grid--center, .grid--full > .grid--center, .grid--center > .grid--center, .gallery > .grid--center, .grid > .gallery, .grid--rev > .gallery, .grid--full > .gallery, .grid--center > .gallery, .gallery > .gallery {
+.grid > .grid, .grid--rev > .grid, .grid--full > .grid, .grid--center > .grid, .grid > .grid--rev, .grid--rev > .grid--rev, .grid--full > .grid--rev, .grid--center > .grid--rev, .grid > .grid--full, .grid--rev > .grid--full, .grid--full > .grid--full, .grid--center > .grid--full, .grid > .grid--center, .grid--rev > .grid--center, .grid--full > .grid--center, .grid--center > .grid--center {
   margin-left: 0; }
 
 /**
  * Grid
  */
-.grid__item, .gallery-item {
+.grid__item {
   display: inline-block;
   width: 100%;
   padding-left: 24px;
@@ -1680,7 +1680,7 @@ input[type="checkbox"] {
 .grid--rev {
   direction: rtl;
   text-align: right; }
-  .grid--rev > .grid__item, .grid--rev > .gallery-item {
+  .grid--rev > .grid__item {
     direction: ltr;
     text-align: left; }
 
@@ -1689,7 +1689,7 @@ input[type="checkbox"] {
  */
 .grid--full {
   margin-left: 0; }
-  .grid--full > .grid__item, .grid--full > .gallery-item {
+  .grid--full > .grid__item {
     padding-left: 0; }
 
 /**
@@ -1698,74 +1698,57 @@ input[type="checkbox"] {
  */
 .grid--center {
   text-align: center; }
-  .grid--center > .grid__item, .grid--center > .gallery-item {
+  .grid--center > .grid__item {
     text-align: left; }
+
+/*------------------------------------*\
+    $BUTTONS
+\*------------------------------------*/
+.btn, .btn--primary {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  line-height: 2;
+  vertical-align: middle;
+  height: auto;
+  margin: 0;
+  padding: 0 1em;
+  border: 0;
+  white-space: nowrap;
+  cursor: pointer;
+  -webkit-transition: all 150ms ease-in;
+  -moz-transition: all 150ms ease-in;
+  -o-transition: all 150ms ease-in;
+  transition: all 150ms ease-in; }
+  .btn, .btn--primary, .btn:hover, .btn--primary:hover {
+    text-decoration: none; }
+  .btn:active, .btn--primary:active, .btn:focus, .btn--primary:focus {
+    outline: none; }
+  .btn[disabled], [disabled].btn--primary, .btn:disabled, .btn--primary:disabled {
+    cursor: default; }
+
+.btn:active, .btn--primary:active,
+.btn:hover:active,
+.btn--primary:hover:active,
+.btn:active,
+.btn--primary:active,
+.btn:focus:active,
+.btn--primary:focus:active {
+  -webkit-transition: all 0;
+  -moz-transition: all 0;
+  -o-transition: all 0;
+  transition: all 0; }
+
+.btn:active, .btn--primary:active {
+  cursor: default; }
+
+.btn--full {
+  display: block;
+  width: 100%; }
 
 /*------------------------------------*\
     $WORDPRESS STYLES
 \*------------------------------------*/
-/*------------------------------------*\
-    $GALLERY
-\*------------------------------------*/
-.gallery-item {
-  float: left;
-  position: relative; }
-  .gallery-item:before {
-    position: absolute;
-    content: "";
-    top: -1px;
-    left: 23px;
-    right: -1px;
-    bottom: -1px;
-    border: 1px solid #666666;
-    z-index: -1; }
-  .gallery-item a {
-    position: relative;
-    display: block;
-    line-height: 0;
-    z-index: 1000; }
-
-.gallery-caption {
-  font-size: 14px;
-  font-size: 0.875rem;
-  /* 14px / 16 = .875 */
-  font-style: italic;
-  margin: 0;
-  padding: 12px; }
-  .gallery-caption > :last-child {
-    margin-bottom: 0; }
-
-/*------------------------------------*\
-    $HELPERS
-\*------------------------------------*/
-/* Alignment (post images) */
-.aligncenter {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 24px; }
-
-.alignleft {
-  display: inline;
-  float: left;
-  margin-right: 24px;
-  margin-bottom: 24px; }
-
-.alignright {
-  display: inline;
-  float: right;
-  margin-left: 24px;
-  margin-bottom: 24px; }
-
-/* image captions */
-.wp-caption {
-  max-width: 100%; }
-
-.wp-caption-text {
-  margin: 8px 0 24px;
-  margin: 0.5rem 0 1.5rem;
-  font-style: italic; }
-
 /**
  * Style trumps; helper and brand classes
  */
@@ -1783,19 +1766,19 @@ input[type="checkbox"] {
 /**
 * Whole
 */
-.one-whole, .gallery-columns-1 > .gallery-item {
+.one-whole {
   width: 100%; }
 
 /**
 * Halves
 */
-.one-half, .gallery-columns-2 > .gallery-item, .two-quarters, .three-sixths, .four-eighths, .five-tenths, .six-twelfths {
+.one-half, .two-quarters, .three-sixths, .four-eighths, .five-tenths, .six-twelfths {
   width: 50%; }
 
 /**
 * Thirds
 */
-.one-third, .gallery-columns-3 > .gallery-item, .two-sixths, .four-twelfths {
+.one-third, .two-sixths, .four-twelfths {
   width: 33.333%; }
 
 .two-thirds, .four-sixths, .eight-twelfths {
@@ -1804,7 +1787,7 @@ input[type="checkbox"] {
 /**
 * Quarters
 */
-.one-quarter, .gallery-columns-4 > .gallery-item, .two-eighths, .three-twelfths {
+.one-quarter, .two-eighths, .three-twelfths {
   width: 25%; }
 
 .three-quarters, .six-eighths, .nine-twelfths {
@@ -1813,7 +1796,7 @@ input[type="checkbox"] {
 /**
 * Fifths
 */
-.one-fifth, .gallery-columns-5 > .gallery-item, .two-tenths {
+.one-fifth, .two-tenths {
   width: 20%; }
 
 .two-fifths, .four-tenths {
@@ -2544,6 +2527,25 @@ input:checked + label > .checkbox-custom:before {
   font-style: normal; }
 
 /*------------------------------------*\
+    $MAIN STRUCTURE
+\*------------------------------------*/
+/**
+ * This section houses styles for areas of content which are generally found on all
+ * pages.
+ */
+/*------------------------------------*\
+    $HEADER
+\*------------------------------------*/
+/*------------------------------------*\
+    $PRIMARY CONTENT
+\*------------------------------------*/
+/*------------------------------------*\
+    $SECONDARY CONTENT
+\*------------------------------------*/
+/*------------------------------------*\
+    $FOOTER
+\*------------------------------------*/
+/*------------------------------------*\
     $NAVIGATION
 \*------------------------------------*/
 .menu-item {
@@ -2600,24 +2602,18 @@ input:checked + label > .checkbox-custom:before {
   display: block; }
 
 /*------------------------------------*\
-    $MAIN STRUCTURE
+    $BUTTONS
 \*------------------------------------*/
-/**
- * This section houses styles for areas of content which are generally found on all
- * pages.
- */
-/*------------------------------------*\
-    $HEADER
-\*------------------------------------*/
-/*------------------------------------*\
-    $PRIMARY CONTENT
-\*------------------------------------*/
-/*------------------------------------*\
-    $SECONDARY CONTENT
-\*------------------------------------*/
-/*------------------------------------*\
-    $FOOTER
-\*------------------------------------*/
+.btn, .btn--primary {
+  color: white; }
+
+.btn--primary {
+  background-color: #333333; }
+  .btn--primary:hover {
+    background-color: #666666; }
+  .btn--primary:active {
+    background-color: #1a1a1a; }
+
 /*------------------------------------*\
     $TYPOGRAPHY
 \*------------------------------------*/
