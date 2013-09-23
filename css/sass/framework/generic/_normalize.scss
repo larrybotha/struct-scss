@@ -51,6 +51,14 @@ audio:not([controls]) {
   display: none;
 }
 
+/**
+ * 5. Default behaviour for touch-based browsing on IE10 devices running
+ * Windows 8
+ */
+
+canvas { -ms-touch-action: double-tap-zoom;} /* 5 */
+
+
 /* ==========================================================================
    Base
    ========================================================================== */
@@ -171,7 +179,9 @@ samp {
  */
 
 pre {
+  white-space: pre;
   white-space: pre-wrap;
+  word-wrap: break-word;
 }
 
 /*
