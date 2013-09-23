@@ -1,0 +1,48 @@
+/*------------------------------------*\
+    $LAYOUT
+\*------------------------------------*/
+.wrap {
+	max-width: 1280px;
+	margin: 0 auto;
+	@include px-and-rem(padding-left, 1);
+	@include px-and-rem(padding-right, 1);
+}
+
+
+
+
+
+/*------------------------------------*\
+    $MODIFIERS
+\*------------------------------------*/
+/* display level modifiers */
+.display--block {
+  display: block;
+}
+
+input.display--block,
+textarea.display--block,
+button.display--block {
+  width: 100%;
+}
+
+.display--iblock { display: inline-block;}
+
+.display--table { display: table;}
+
+.display--itable {	display: inline-table;}
+
+.display--table,
+.display--itable {
+	height: 100%;
+}
+
+.display--table-full {
+  @extend .display--table;
+  width: 100%;
+}
+
+.display--table__inner {
+	display: table-cell;
+	vertical-align: middle;
+}

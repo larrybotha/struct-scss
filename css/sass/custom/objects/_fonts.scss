@@ -1,0 +1,10 @@
+/*------------------------------------*\
+    $FONTS
+\*------------------------------------*/
+@include font-face(
+  $font-icon,
+  $font-icon-filename,
+  $font-icon-path,
+  $weight: normal,
+  $style: normal
+);

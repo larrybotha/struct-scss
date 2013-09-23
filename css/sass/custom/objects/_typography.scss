@@ -1,0 +1,59 @@
+/*------------------------------------*\
+    $TYPOGRAPHY
+\*------------------------------------*/
+p { hyphens: auto;}
+
+i { font-style: normal;}
+
+blockquote {
+	font-style: italic;
+	@include px-and-rem(margin, 1.5);
+	@include px-and-rem(padding, .25, 1.5);
+	border-left: 1px solid $base-ui-color;
+}
+
+kbd {
+	font-size: 85%;
+	padding: .25em .5em;
+	border: 1px solid $clr-ntrl-10;
+	border-radius: 2px;
+	vertical-align: middle;
+}
+
+
+
+
+
+
+/*------------------------------------*\
+    $HEADERS
+\*------------------------------------*/
+h1, h2, h3, h4, h5, h6 { font-weight: normal;}
+
+
+
+
+
+/*------------------------------------*\
+    $MODIFIERS
+\*------------------------------------*/
+.error { color: $clr-danger;}
+
+/* font-family modifiers */
+.face-mono { font-family: monospace;}
+
+/* case modifiers */
+.case--upper   { text-transform: uppercase;}
+.case--lower   { text-transform: lowercase;}
+.case--normal  { text-transform: none;}
+.case--capital { text-transform: capitalize;}
+
+/* vertical align modifiers */
+.valign-t   { vertical-align: top;}
+.valign-m   { vertical-align: middle;}
+.valign-b   { vertical-align: bottom;}
+.valign-bl  { vertical-align: baseline;}
+.valign-sup { vertical-align: super;}
+.valign-sub { vertical-align: sub;}
+.valign-tt  { vertical-align: text-top;}
+.valign-tb  { vertical-align: text-bottom;}

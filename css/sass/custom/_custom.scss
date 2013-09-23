@@ -10,8 +10,19 @@
     $IMPORTS
 \*------------------------------------*/
 /**
- * import objects
+ * import custom styles
  */
+@import "objects/links";
+@import "objects/rules";
+@import "objects/typography";
+@import "objects/lists";
+@import "objects/forms";
+@import "objects/fonts";
+@import "objects/nav";
+@import "objects/main-structure";
+@import "objects/typography";
+@import "objects/backgrounds";
+@import "objects/layout";
 
 
 

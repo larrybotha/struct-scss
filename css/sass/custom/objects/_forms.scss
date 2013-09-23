@@ -1,0 +1,56 @@
+/*------------------------------------*\
+    $FORMS
+\*------------------------------------*/
+/*input:valid, textarea:valid {}
+input:invalid, textarea:invalid {}*/
+
+::-webkit-input-placeholder { color: #aaa;}
+					:-moz-placeholder { color: #aaa;}
+						:-o-placeholder { color: #aaa;}
+					 :-ms-placeholder { color: #aaa;}
+
+focus::-webkit-input-placeholder { color: $clr-ntrl-20;}
+					focus:-moz-placeholder { color: $clr-ntrl-20;}
+						focus:-o-placeholder { color: $clr-ntrl-20;}
+					 focus:-ms-placeholder { color: $clr-ntrl-20;}
+
+label {
+  cursor: pointer;
+}
+
+textarea {
+  resize: vertical;
+}
+
+
+button, input, select, textarea {
+  vertical-align: baseline;
+}
+
+input, textarea {
+	@include px-and-rem(margin-bottom, 1);
+	padding: .25em;
+	border: 1px solid $base-ui-color;
+}
+
+
+
+
+
+/*------------------------------------*\
+    $CUSTOM RADIOS & CHECKBOXES
+\*------------------------------------*/
+.radio-custom:before,
+.checkbox-custom:before { margin-bottom: .5em;}
+
+/* .icon-check-empty */
+.radio-custom:before { content: "\e010";}
+.checkbox-custom:before { content: "\e000";}
+
+/* .icon-check */
+input:checked + label {
+  & > .radio-custom:before { content: "\e011";}
+}
+input:checked + label {
+  & > .checkbox-custom:before { content: "\e001";}
+}

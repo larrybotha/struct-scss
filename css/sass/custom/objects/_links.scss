@@ -1,0 +1,20 @@
+/*------------------------------------*\
+    $LINKS
+\*------------------------------------*/
+a {
+	color: #00e;
+	text-decoration: none;
+	@include transition(all 100ms ease-in-out);
+	outline: 0;
+
+  &:visited {}
+
+  &:hover {
+    color: #06e;
+  }
+
+  &:active {
+    color: #06e;
+    @include transition(all 0);
+  }
+}
