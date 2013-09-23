@@ -28,6 +28,15 @@
 @import "objects/main-structure";
 @import "objects/nav";
 @import "objects/buttons";
+
+
+
+
+
+/**
+ * Modifier styles - these should always be declared after objects / blocks to
+ * avoid being overridden.
+ */
 @import "objects/typography";
 @import "objects/backgrounds";
 @import "objects/layout";
