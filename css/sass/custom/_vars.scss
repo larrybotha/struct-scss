@@ -50,13 +50,13 @@ $use-greybox:       false;
 
 $use-buttons:       false; // use either these, or beautons, but not both
 $use-alerts:        false;
-$use-flex-element:  false;
+$use-ratio-element: false;
 $use-icons:         false;
 $use-forms-affixes: false;
 $use-progress-bars: false;
 $use-tooltips:      false;
 $use-print:         false;
-$use-wordpress:     false;
+$use-wordpress:     true;
 
 
 
@@ -68,6 +68,7 @@ $use-wordpress:     false;
 /**
  * Place any variables that should override inuit.css’ defaults here.
  */
+$use-responsive: true;
 
 
 
@@ -79,6 +80,8 @@ $use-wordpress:     false;
 /**
  * Place any of your own variables that sit on top of inuit.css here.
  */
+$base-ui-color: #666;
+$brand-color: #333;
 
 
 
