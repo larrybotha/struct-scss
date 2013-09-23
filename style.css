@@ -2614,6 +2614,10 @@ input:checked + label > .checkbox-custom:before {
   .btn--primary:active {
     background-color: #1a1a1a; }
 
+/**
+ * Modifier styles - these should always be declared after objects / blocks to
+ * avoid being overridden.
+ */
 /*------------------------------------*\
     $TYPOGRAPHY
 \*------------------------------------*/
