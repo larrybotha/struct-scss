@@ -2338,14 +2338,12 @@ input[type="checkbox"] {
   .gallery-item:before {
     position: absolute;
     content: "";
-    top: 0;
-    left: 24px;
-    right: 0;
-    bottom: 0;
-    border: 1px solid #ccc;
+    top: -1px;
+    left: 23px;
+    right: -1px;
+    bottom: -1px;
+    border: 1px solid #666666;
     z-index: -1; }
-  .gallery-item img {
-    border: 1px solid #ccc; }
   .gallery-item a {
     position: relative;
     display: block;

@@ -18,16 +18,12 @@
     &:before {
       position: absolute;
       content: "";
-      top: 0;
-      left: $base-spacing-unit;
-      right: 0;
-      bottom: 0;
-      border: 1px solid #ccc;
+      top: -1px;
+      left: $base-spacing-unit - 1px;
+      right: -1px;
+      bottom: -1px;
+      border: 1px solid $base-ui-color;
       z-index: -1;
-    }
-
-    & img {
-      border: 1px solid #ccc;
     }
 
     & a {
