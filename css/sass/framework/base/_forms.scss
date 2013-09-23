@@ -30,6 +30,18 @@ textarea{
 
 
 /**
+ * Radios and Checkboxes
+ *
+ * Make radios and checkboxes appear clickable
+ */
+input[type="radio"],
+input[type="checkbox"] {
+	cursor: pointer;
+	border: none;
+}
+
+
+/**
  * Group sets of form fields in a list, e.g.:
  *
    <ul class=form-fields>
@@ -86,8 +98,7 @@ textarea{
    </li>
  *
  */
-label,
-.label{
+.label--full{
   display:block;
 }
   /**
