@@ -4,11 +4,12 @@
 /**
  * Demo: jsfiddle.net/inuitcss/yMtur
  */
-/**
- * Fluid images.
+/*
+ * Prevent images and embeds from exceeding width of containing element
+ * width:; and height:; above apply
  */
-img{
-    max-width:100%;
+img, embed, object, video {
+  max-width: 100%;
 }
 
 
@@ -71,3 +72,4 @@ img[height]{
 figure > img{
     display:block;
 }
+
