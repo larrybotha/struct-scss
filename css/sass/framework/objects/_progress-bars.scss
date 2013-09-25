@@ -4,7 +4,7 @@
     $PROGRESS BARS
 \*------------------------------------*/
 .progress {
-	height: 18px;
+	height: $base-spacing-unit;
 	@include px-and-rem(margin-bottom, 1);
 	overflow: hidden;
 	background-color: $clr-ntrl-10;
@@ -23,7 +23,7 @@
     color: $clr-ntrl-min;
     text-align: center;
     text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
-    background-color: $clr-omega;
+    background-color: $clr-primary;
 
     @include gradient(background-image, linear-gradient(180deg, transparent, hsla(0, 0%, 100%, .1)));
     background-repeat: repeat-x;
@@ -38,7 +38,7 @@
   }
 
   .progress__bar--striped {
-    background-color: $clr-omega;
+    background-color: $clr-primary;
     @include gradient(background-image, linear-gradient(
                                           -45deg,
                                           hsla(0, 0%, 100%, .15) 25%,
@@ -52,25 +52,6 @@
 
     @include background-size(40px 40px);
   }
-
-
-
-
-
-/*------------------------------------*\
-    $MODIFIERS
-\*------------------------------------*/
-  .progress--success > .progress__bar,
-  .progress--success > .progress__bar--striped { background-color: $clr-success;}
-
-  .progress--danger > .progress__bar,
-  .progress--danger > .progress__bar--striped { background-color: $clr-danger;}
-
-  .progress--info > .progress__bar,
-  .progress--info > .progress__bar--striped { background-color: $clr-info;}
-
-  .progress--warning > .progress__bar,
-  .progress--warning > .progress__bar--striped { background-color: $clr-warning;}
 
 
 
