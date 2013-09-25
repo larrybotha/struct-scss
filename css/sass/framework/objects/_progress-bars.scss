@@ -5,14 +5,14 @@
 \*------------------------------------*/
 .progress {
 	height: $base-spacing-unit;
-	@include px-and-rem(margin-bottom, $line-height-ratio);
+	@include px-and-rem(margin-bottom, $base-spacing-unit / $base-font-size);
 	overflow: hidden;
 	background-color: #f9f9f9;
 }
 
   .progress__bar {
     width: 0;
-    height: $base-spacing-unit;
+    @include px-and-rem(height, $base-spacing-unit / $base-font-size);
     text-align: center;
     background-color: $clr-primary;
     @include box-sizing(border-box);
