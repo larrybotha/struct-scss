@@ -2,19 +2,19 @@
 Case
 
 <ul>
-	<li>.case-u</li>
-	<li>.case-l</li>
-	<li>.case-c</li>
-	<li>.case-n</li>
+  <li>.case-u</li>
+  <li>.case-l</li>
+  <li>.case-c</li>
+  <li>.case-n</li>
 </ul>
 
 Markup:
 <p class="{$modifiers}">lorem ipsum dolor sit amet</p>
 
-.case-u			- 
-.case-l			- 
-.case-c			- 
-.case-n			- 
+.case-upper       - upper case
+.case-lower       - lower case
+.case-capitalise  - capital case
+.case-normal      - normal / no transform on case
 
 Styleguide 9.2
  */
