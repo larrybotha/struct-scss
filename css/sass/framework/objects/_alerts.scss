@@ -8,7 +8,7 @@
 	color: $clr-warning;
 	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
 	margin-bottom: 18px;
-	padding: 8px 35px 8px 14px;
+	padding: $base-spacing-unit * .5;
 	border: 1px solid $clr-warning-ltr;
 
   & a {
@@ -29,8 +29,8 @@
   & .close {
 	position: relative;
 	top: -2px;
-	right: -21px;
-	line-height: 18px;
+	right: .25 * $base-spacing-unit;
+	line-height: 1;
   }
 }
 
