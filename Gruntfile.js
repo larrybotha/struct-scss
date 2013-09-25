@@ -72,7 +72,7 @@
       shell: {
         kss: {
           command: [
-            'rm -rf docs',
+            'rm -rf public/*',
             'kss-node kss/docs build --template kss/template',
             'cd build/public',
             'rm style.css',
