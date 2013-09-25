@@ -1702,51 +1702,6 @@ input[type="checkbox"] {
     text-align: left; }
 
 /*------------------------------------*\
-    $BUTTONS
-\*------------------------------------*/
-.btn, .btn--primary {
-  position: relative;
-  display: inline-block;
-  text-align: center;
-  line-height: 2;
-  vertical-align: middle;
-  height: auto;
-  margin: 0;
-  padding: 0 1em;
-  border: 0;
-  white-space: nowrap;
-  cursor: pointer;
-  -webkit-transition: all 150ms ease-in;
-  -moz-transition: all 150ms ease-in;
-  -o-transition: all 150ms ease-in;
-  transition: all 150ms ease-in; }
-  .btn, .btn--primary, .btn:hover, .btn--primary:hover {
-    text-decoration: none; }
-  .btn:active, .btn--primary:active, .btn:focus, .btn--primary:focus {
-    outline: none; }
-  .btn[disabled], [disabled].btn--primary, .btn:disabled, .btn--primary:disabled {
-    cursor: default; }
-
-.btn:active, .btn--primary:active,
-.btn:hover:active,
-.btn--primary:hover:active,
-.btn:active,
-.btn--primary:active,
-.btn:focus:active,
-.btn--primary:focus:active {
-  -webkit-transition: all 0;
-  -moz-transition: all 0;
-  -o-transition: all 0;
-  transition: all 0; }
-
-.btn:active, .btn--primary:active {
-  cursor: default; }
-
-.btn--full {
-  display: block;
-  width: 100%; }
-
-/*------------------------------------*\
     $WORDPRESS STYLES
 \*------------------------------------*/
 /**
@@ -2424,7 +2379,7 @@ input[type="checkbox"] {
     $LINKS
 \*------------------------------------*/
 a {
-  color: #00e;
+  color: #333333;
   text-decoration: none;
   -webkit-transition: all 100ms ease-in-out;
   -moz-transition: all 100ms ease-in-out;
@@ -2432,9 +2387,9 @@ a {
   transition: all 100ms ease-in-out;
   outline: 0; }
   a:hover {
-    color: #06e; }
+    color: #8c8c8c; }
   a:active {
-    color: #06e;
+    color: #1a1a1a;
     -webkit-transition: all 0;
     -moz-transition: all 0;
     -o-transition: all 0;
@@ -2557,7 +2512,7 @@ input:checked + label > .checkbox-custom:before {
 
 .menu-item a {
   display: block;
-  color: #ddd;
+  color: #333333;
   padding: .5em 1em; }
 
 .sub-menu {
