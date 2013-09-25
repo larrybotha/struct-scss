@@ -4,21 +4,23 @@
     $ALERTS
 \*------------------------------------*/
 .alert {
-	background-color: $clr-warning-ltst;
-	color: $clr-warning;
-	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
-	margin-bottom: 18px;
+	margin-bottom: $base-spacing-unit;
 	padding: $base-spacing-unit * .5;
-	border: 1px solid $clr-warning-ltr;
+	border: 1px solid $clr-primary;
 
   & a {
-    color: inherit;
     border-bottom-width: 1px;
     border-bottom-style: dotted;
-  }
 
-  & a:hover {
-    border-bottom-style: solid;
+    &:hover {
+      border-bottom-style: solid;
+    }
+
+    &,
+    &:hover,
+    &:active {
+      color: inherit;
+    }
   }
 
   & p:last-child,
@@ -51,32 +53,6 @@
 	padding: 0;
 	cursor: pointer;
 	border: 0;
-}
-
-
-
-
-
-/*------------------------------------*\
-    $MODIFIERS
-\*------------------------------------*/
-.alert--success {
-	color: $clr-success;
-	background-color: $clr-success-ltst;
-	border-color: $clr-success-ltr;
-}
-
-.alert--danger,
-.alert--error {
-	color: $clr-danger;
-	background-color: $clr-danger-ltst;
-	border-color: $clr-danger-ltr;
-}
-
-.alert--info {
-	color: $clr-info;
-	background-color: $clr-info-ltst;
-	border-color: $clr-info-ltr;
 }
 
 }//endif
