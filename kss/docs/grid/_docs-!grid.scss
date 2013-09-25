@@ -4,64 +4,25 @@ Grid
 This project uses a 12 column grid.
 
 Markup:
-<div class="row demo-row row-ib-cols cf">
-  <div class="col col-2-vpdelta col-3-vpgamma col-6-vpbeta col-12-vpalpha">
-    12&rarr;6&rarr;3&rarr;
+<div class="grid demo-grid text--center">
+  <div class="grid__item one-quarter desk-one-quarter lap-one-half palm-one-whole">
+    full&rarr;half&rarr;quarter
+  </div><!--
+  --><div class="grid__item one-quarter desk-one-quarter lap-one-half palm-one-whole ">
+    full&rarr;half&rarr;quarter
+  </div><!--
+  --><div class="grid__item one-quarter desk-one-quarter lap-one-half palm-one-whole ">
+    full&rarr;half&rarr;quarter
+  </div><!--
+  --><div class="grid__item one-quarter desk-one-quarter lap-one-half palm-one-whole ">
+    full&rarr;half&rarr;quarter
+  </div><!--
+  --><div class="grid__item one-quarter desk-one-quarter lap-one-half palm-one-whole ">
+    full&rarr;half&rarr;quarter
+  </div><!--
+  --><div class="grid__item one-quarter desk-one-quarter lap-one-half palm-one-whole ">
+    full&rarr;half&rarr;quarter
   </div>
-  <div class="col col-2-vpdelta col-3-vpgamma col-6-vpbeta col-12-vpalpha">
-    12&rarr;6&rarr;3&rarr;
-  </div>
-  <div class="col col-2-vpdelta col-3-vpgamma col-6-vpbeta col-12-vpalpha">
-    12&rarr;6&rarr;3&rarr;
-  </div>
-  <div class="col col-2-vpdelta col-3-vpgamma col-6-vpbeta col-12-vpalpha">
-    12&rarr;6&rarr;3&rarr;
-  </div>
-  <div class="col col-2-vpdelta col-3-vpgamma col-6-vpbeta col-12-vpalpha">
-    12&rarr;6&rarr;3&rarr;
-  </div>
-  <div class="col col-2-vpdelta col-3-vpgamma col-6-vpbeta col-12-vpalpha">
-    12&rarr;6&rarr;3&rarr;
-  </div>
-</div>
-<div class="row demo-row cf">
-  <div class="col col-1-vpdelta col-2-vpgamma col-3-vpbeta col-6-vpalpha">
-    6&rarr;3&rarr;4&rarr;1
-  </div>
-  <div class="col col-1-vpdelta col-2-vpgamma col-3-vpbeta col-6-vpalpha">
-    6&rarr;3&rarr;4&rarr;1
-  </div>
-  <div class="col col-1-vpdelta col-2-vpgamma col-3-vpbeta col-6-vpalpha">
-    6&rarr;3&rarr;4&rarr;1
-  </div>
-  <div class="col col-1-vpdelta col-2-vpgamma col-3-vpbeta col-6-vpalpha">
-    6&rarr;3&rarr;4&rarr;1
-  </div>
-  <div class="col col-1-vpdelta col-2-vpgamma col-3-vpbeta col-6-vpalpha">
-    6&rarr;3&rarr;4&rarr;1
-  </div>
-  <div class="col col-1-vpdelta col-2-vpgamma col-3-vpbeta col-6-vpalpha">
-    6&rarr;3&rarr;4&rarr;1
-  </div>
-  <div class="col col-1-vpdelta col-2-vpgamma col-3-vpbeta col-6-vpalpha">
-    6&rarr;3&rarr;4&rarr;1
-  </div>
-  <div class="col col-1-vpdelta col-2-vpgamma col-3-vpbeta col-6-vpalpha">
-    6&rarr;3&rarr;4&rarr;1
-  </div>
-  <div class="col col-1-vpdelta col-2-vpgamma col-3-vpbeta col-6-vpalpha">
-    6&rarr;3&rarr;4&rarr;1
-  </div>
-  <div class="col col-1-vpdelta col-2-vpgamma col-3-vpbeta col-6-vpalpha">
-    6&rarr;3&rarr;4&rarr;1
-  </div>
-  <div class="col col-1-vpdelta col-2-vpgamma col-3-vpbeta col-6-vpalpha">
-    6&rarr;3&rarr;4&rarr;1
-  </div>
-  <div class="col col-1-vpdelta col-2-vpgamma col-3-vpbeta col-6-vpalpha">
-    6&rarr;3&rarr;4&rarr;1
-  </div>
-</div>
 </div>
 
 Styleguide 1
