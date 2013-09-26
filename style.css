@@ -910,7 +910,8 @@ ul, ol, dd {
     $MAIN
 \*------------------------------------*/
 html {
-  font: 100%/1.5;
+  font-size: 100%;
+  line-height: 1.5;
   overflow-y: scroll;
   min-height: 100%; }
 
