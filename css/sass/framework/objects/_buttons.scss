@@ -36,8 +36,6 @@
 }
 
 %btn--selected {
-  @include transition(all 0);
-
   &:hover,
   &:active,
   &:focus {
