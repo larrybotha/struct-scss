@@ -2,7 +2,7 @@
 Button defaults
 
 <ul>
-  <li>.btn-selected</li>
+  <li>.btn--selected</li>
   <li>.disabled</li>
 </ul>
 
@@ -16,9 +16,9 @@ Markup:
   </div>
 </div>
 
-:hover				- 
-:active				- 
-.btn-selected	- 
+:hover				- hover state
+:active				- active state
+.btn--selected	- selected state
 
 Styleguide 11.1
 */
