@@ -35,11 +35,15 @@
   }
 }
 
-%btn--selected,
-  %btn--selected:hover,
-  %btn--selected:active,
-  %btn--selected:focus {
-    @include transition(all 0);
+%btn--selected {
+  @include transition(all 0);
+
+  &:hover,
+  &:active,
+  &:focus {
+    color: inherit;
+    background-color: inherit;
+  }
 }
 
 %btn--selected { cursor: default;}
