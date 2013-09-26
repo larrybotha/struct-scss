@@ -23,10 +23,6 @@
     text-decoration: none;
   }
 
-  &:active {
-    @extend %btn--selected;
-  }
-
   &:active,
   &:focus{
     outline:none;

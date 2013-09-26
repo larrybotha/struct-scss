@@ -3,6 +3,16 @@
 \*------------------------------------*/
 .btn {
   color: $clr-ntrl-min;
+
+  &[disabled],
+  &:disabled {
+
+    &,
+    &:hover,
+    &:active {
+
+    }
+  }
 }
 
 .btn--primary {
