@@ -26,6 +26,7 @@
   &:active,
   &:focus{
     outline:none;
+    @include transition(0);
   }
 
   &[disabled],
