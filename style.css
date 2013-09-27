@@ -2428,18 +2428,6 @@ input:invalid, textarea:invalid {}*/
   color: #666666;
   text-transform: uppercase; }
 
-focus::-webkit-input-placeholder {
-  color: #cccccc; }
-
-focus:-moz-placeholder {
-  color: #cccccc; }
-
-focus:-o-placeholder {
-  color: #cccccc; }
-
-focus:-ms-placeholder {
-  color: #cccccc; }
-
 label {
   cursor: pointer; }
 

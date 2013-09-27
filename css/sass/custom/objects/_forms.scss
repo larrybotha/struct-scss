@@ -8,19 +8,10 @@ input:invalid, textarea:invalid {}*/
   text-transform: uppercase;
 }
 
-@mixin placeholder-focused() {
-  color: $clr-ntrl-20;
-}
-
 ::-webkit-input-placeholder { @include placeholder();}
 :-moz-placeholder { @include placeholder();}
 :-o-placeholder { @include placeholder();}
 :-ms-placeholder { @include placeholder();}
-
-focus::-webkit-input-placeholder { @include placeholder-focused();}
-focus:-moz-placeholder { @include placeholder-focused();}
-focus:-o-placeholder { @include placeholder-focused();}
-focus:-ms-placeholder { @include placeholder-focused();}
 
 label {
   cursor: pointer;
