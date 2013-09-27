@@ -8,7 +8,6 @@
 	padding-top: 25px;
 	padding-bottom: 67.5%; /* 4:3; */
 	height: 0;
-	@include px-and-rem(margin-right, 1);
 	overflow: hidden;
 
   %ratio-element-inner,
