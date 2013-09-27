@@ -2413,16 +2413,20 @@ a {
 /*input:valid, textarea:valid {}
 input:invalid, textarea:invalid {}*/
 ::-webkit-input-placeholder {
-  color: #aaa; }
+  color: #666666;
+  text-transform: uppercase; }
 
 :-moz-placeholder {
-  color: #aaa; }
+  color: #666666;
+  text-transform: uppercase; }
 
 :-o-placeholder {
-  color: #aaa; }
+  color: #666666;
+  text-transform: uppercase; }
 
 :-ms-placeholder {
-  color: #aaa; }
+  color: #666666;
+  text-transform: uppercase; }
 
 focus::-webkit-input-placeholder {
   color: #cccccc; }

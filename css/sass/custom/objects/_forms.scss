@@ -3,16 +3,24 @@
 \*------------------------------------*/
 /*input:valid, textarea:valid {}
 input:invalid, textarea:invalid {}*/
+@mixin placeholder() {
+  color: $base-ui-color;
+  text-transform: uppercase;
+}
 
-::-webkit-input-placeholder { color: #aaa;}
-					:-moz-placeholder { color: #aaa;}
-						:-o-placeholder { color: #aaa;}
-					 :-ms-placeholder { color: #aaa;}
+@mixin placeholder-focused() {
+  color: $clr-ntrl-20;
+}
 
-focus::-webkit-input-placeholder { color: $clr-ntrl-20;}
-					focus:-moz-placeholder { color: $clr-ntrl-20;}
-						focus:-o-placeholder { color: $clr-ntrl-20;}
-					 focus:-ms-placeholder { color: $clr-ntrl-20;}
+::-webkit-input-placeholder { @include placeholder();}
+:-moz-placeholder { @include placeholder();}
+:-o-placeholder { @include placeholder();}
+:-ms-placeholder { @include placeholder();}
+
+focus::-webkit-input-placeholder { @include placeholder-focused();}
+focus:-moz-placeholder { @include placeholder-focused();}
+focus:-o-placeholder { @include placeholder-focused();}
+focus:-ms-placeholder { @include placeholder-focused();}
 
 label {
   cursor: pointer;
