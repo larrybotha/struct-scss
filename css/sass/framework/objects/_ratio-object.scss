@@ -3,27 +3,28 @@
 /*------------------------------------*\
     $RATIO OBJECT
 \*------------------------------------*/
+/**
+ * An object which scales proportionately
+ *
+ * http://bit.ly/19I8iR8
+ */
 %ratio-object {
 	position: relative;
-	padding-top: 25px;
-	padding-bottom: 67.5%; /* 4:3; */
-	height: 0;
 	overflow: hidden;
 
-  %ratio-object-inner,
-  & iframe,
-  & object,
-  & embed,
-  & video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+  &:before {
+    content: "";
+    display: block;
+    // extend this in your styles as per your objects required ratio
   }
 }
 
-// .flex-video-widescreen { padding-bottom: 57.25%; /* 16:9; */}
-// .flex-video-vimeo { padding-top: 0;}
+%ratio-object-inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
 
 }//endif
