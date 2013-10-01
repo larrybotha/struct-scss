@@ -866,6 +866,8 @@ pre,
 .media,
 .island,
 .islet {
+  margin-top: 24px;
+  margin-top: 1.5rem;
   margin-bottom: 24px;
   margin-bottom: 1.5rem; }
   .islet h1, .islet h2, .islet h3, .islet h4, .islet h5, .islet h6, .islet hgroup, .islet
