@@ -14,14 +14,7 @@ ul,ol,dl,
 blockquote,p,address,
 table,
 fieldset,figure,
-pre,
-/**
- * Objects and abstractions
- */
-%sass-margin-bottom,
-.media,
-.island,
-.islet{
+pre {
     margin-top:$base-spacing-unit;
     margin-top:($base-spacing-unit / $base-font-size)*1rem;
     margin-bottom:$base-spacing-unit;
@@ -31,6 +24,18 @@ pre,
         margin-bottom:$base-spacing-unit / 2;
         margin-bottom:(($base-spacing-unit / $base-font-size) / 2)*1rem;
     }
+}
+
+
+/**
+ * Objects and abstractions
+ */
+%sass-margin-bottom,
+.media,
+.island,
+.islet{
+  margin-bottom:$base-spacing-unit;
+  margin-bottom:($base-spacing-unit / $base-font-size)*1rem;
 }
 
 
