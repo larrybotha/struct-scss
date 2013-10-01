@@ -57,13 +57,61 @@ h1, h2, h3, h4, h5, h6 {
 
 
 /**
+ * Font weights
+ */
+.weight--light      { font-weight:300;}
+.weight--normal     { font-weight:400;}
+.weight--semibold   { font-weight:600;}
+
+
+/**
  * vertical alignment modifiers
  */
-.valign-t   { vertical-align: top;}
-.valign-m   { vertical-align: middle;}
-.valign-b   { vertical-align: bottom;}
-.valign-bl  { vertical-align: baseline;}
-.valign-sup { vertical-align: super;}
-.valign-sub { vertical-align: sub;}
-.valign-tt  { vertical-align: text-top;}
-.valign-tb  { vertical-align: text-bottom;}
+.valign--top    { vertical-align: top;}
+.valign--middle { vertical-align: middle;}
+.valign--bottom { vertical-align: bottom;}
+
+
+/**
+ * Hide from both screenreaders and browsers: h5bp.com/u
+ */
+.hidden { display: none; visibility: hidden;}
+
+/**
+ * Hide content off-screen without resorting to `display:none;`, also provide
+ * breakpoint specific hidden elements.
+ */
+@mixin accessibility{
+  border:0;
+  clip:rect(0 0 0 0);
+  height:1px;
+  margin:-1px;
+  overflow:hidden;
+  padding:0;
+  position: absolute;
+  width:1px;
+}
+.accessibility,
+.visuallyhidden{
+  @include accessibility;
+
+  &.focusable:active, &.focusable:focus {
+    position: static;
+    clip: auto;
+    width: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+ }
+
+}
+@if $responsive{
+  @each $state in palm, lap, lap-and-up, portable, desk, desk-wide{
+    @include media-query(#{$state}){
+      .accessibility--#{$state},
+      .visuallyhidden--#{$state}{
+        @include accessibility;
+     }
+   }
+ }
+}//endif
