@@ -81,6 +81,10 @@ blockquote{
      */
     text-indent:-0.41em;
 
+    p:first-of-type{
+        margin-top:0;
+    }
+
     p:last-of-type{
         margin-bottom:0;
     }
