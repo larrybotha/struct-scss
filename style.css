@@ -309,6 +309,9 @@ might want to share.
 /*------------------------------------*\
     $MIXINS
 \*------------------------------------*/
+/*------------------------------------*\
+    $ACCESSIBILITY
+\*------------------------------------*/
 /**
  * CSS arrows!!! But... before you read on, you might want to grab a coffee...
  *
@@ -840,7 +843,7 @@ table {
  * Extend the clearfix class with Sass to avoid the `.cf` class appearing over
  * and over in your markup.
  */
-.cf:after {
+.cf:before, .cf:after {
   content: "";
   display: table;
   clear: both; }
@@ -861,11 +864,7 @@ ul, ol, dl,
 blockquote, p, address,
 table,
 fieldset, figure,
-pre,
-.form-fields > li,
-.media,
-.island,
-.islet {
+pre {
   margin-top: 24px;
   margin-top: 1.5rem;
   margin-bottom: 24px;
@@ -875,12 +874,19 @@ pre,
   blockquote, .islet p, .islet address, .islet
   table, .islet
   fieldset, .islet figure, .islet
-  pre, .islet .form-fields > li, .islet
-  .media, .islet
-  .island, .islet
-  .islet {
+  pre {
     margin-bottom: 12px;
     margin-bottom: 0.75rem; }
+
+/**
+ * Objects and abstractions
+ */
+.form-fields > li,
+.media,
+.island,
+.islet {
+  margin-bottom: 24px;
+  margin-bottom: 1.5rem; }
 
 /**
  * Doubled up `margin-bottom` helper class.
@@ -1089,6 +1095,8 @@ blockquote {
    * .4em is roughly equal to the width of the opening “ that we wish to hang.
    */
   text-indent: -0.41em; }
+  blockquote p:first-of-type {
+    margin-top: 0; }
   blockquote p:last-of-type {
     margin-bottom: 0; }
 
@@ -1173,14 +1181,8 @@ pre mark {
  * width:; and height:; above apply
  */
 img, embed, object, video {
-  max-width: 100%; }
-
-/**
- * Non-fluid images if you specify `width` and/or `height` attributes.
- */
-img[width],
-img[height] {
-  max-width: none; }
+  max-width: 100%;
+  height: auto; }
 
 /**
  * Rounded images.
@@ -2596,7 +2598,8 @@ kbd {
     $HEADERS
 \*------------------------------------*/
 h1, h2, h3, h4, h5, h6 {
-  font-weight: normal; }
+  font-weight: normal;
+  line-height: 1; }
 
 /*------------------------------------*\
     $MODIFIERS
@@ -2623,32 +2626,126 @@ h1, h2, h3, h4, h5, h6 {
   text-transform: capitalize; }
 
 /**
+ * Font weights
+ */
+.weight--light {
+  font-weight: 300; }
+
+.weight--normal {
+  font-weight: 400; }
+
+.weight--semibold {
+  font-weight: 600; }
+
+/**
  * vertical alignment modifiers
  */
-.valign-t {
+.valign--top {
   vertical-align: top; }
 
-.valign-m {
+.valign--middle {
   vertical-align: middle; }
 
-.valign-b {
+.valign--bottom {
   vertical-align: bottom; }
 
-.valign-bl {
-  vertical-align: baseline; }
+/**
+ * Hide from both screenreaders and browsers: h5bp.com/u
+ */
+.hidden {
+  display: none;
+  visibility: hidden; }
 
-.valign-sup {
-  vertical-align: super; }
+/**
+ * Hide content off-screen without resorting to `display:none;`, also provide
+ * breakpoint specific hidden elements.
+ */
+.accessibility,
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px; }
+  .accessibility.focusable:active, .accessibility.focusable:focus,
+  .visuallyhidden.focusable:active,
+  .visuallyhidden.focusable:focus {
+    position: static;
+    clip: auto;
+    width: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible; }
 
-.valign-sub {
-  vertical-align: sub; }
-
-.valign-tt {
-  vertical-align: text-top; }
-
-.valign-tb {
-  vertical-align: text-bottom; }
-
+@media only screen and (max-width: 480px) {
+  .accessibility--palm,
+  .visuallyhidden--palm {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px; } }
+@media only screen and (min-width: 481px) and (max-width: 1023px) {
+  .accessibility--lap,
+  .visuallyhidden--lap {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px; } }
+@media only screen and (min-width: 481px) {
+  .accessibility--lap-and-up,
+  .visuallyhidden--lap-and-up {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px; } }
+@media only screen and (max-width: 1023px) {
+  .accessibility--portable,
+  .visuallyhidden--portable {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px; } }
+@media only screen and (min-width: 1024px) {
+  .accessibility--desk,
+  .visuallyhidden--desk {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px; } }
+@media only screen and (min-width: 1200px) {
+  .accessibility--desk-wide,
+  .visuallyhidden--desk-wide {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px; } }
 /*------------------------------------*\
     $BACKGROUNDS
 \*------------------------------------*/
@@ -2666,7 +2763,9 @@ h1, h2, h3, h4, h5, h6 {
 /*------------------------------------*\
     $MODIFIERS
 \*------------------------------------*/
-/* display level modifiers */
+/*
+ * Display level modifiers
+ */
 .display--block {
   display: block; }
 
@@ -2696,6 +2795,194 @@ button.display--block {
   vertical-align: middle; }
 
 /**
+ * Add/remove floats
+ */
+.float--right {
+  float: right; }
+
+.float--left {
+  float: left; }
+
+.float--none {
+  float: none; }
+
+/**
+ * Add/remove margins
+ */
+.push {
+  margin: 24px;
+  margin: 24px; }
+
+.push--top {
+  margin-top: 24px;
+  margin-top: 24px; }
+
+.push--right {
+  margin-right: 24px;
+  margin-right: 24px; }
+
+.push--bottom {
+  margin-bottom: 24px;
+  margin-bottom: 24px; }
+
+.push--left {
+  margin-left: 24px;
+  margin-left: 24px; }
+
+.push--ends {
+  margin-top: 24px;
+  margin-top: 24px;
+  margin-bottom: 24px;
+  margin-bottom: 24px; }
+
+.push--sides {
+  margin-right: 24px;
+  margin-right: 24px;
+  margin-left: 24px;
+  margin-left: 24px; }
+
+.push-small {
+  margin: 23.5px;
+  margin: 23.5px; }
+
+.push-small--top {
+  margin-top: 23.5px;
+  margin-top: 23.5px; }
+
+.push-small--right {
+  margin-right: 23.5px;
+  margin-right: 23.5px; }
+
+.push-small--bottom {
+  margin-bottom: 23.5px;
+  margin-bottom: 23.5px; }
+
+.push-small--left {
+  margin-left: 23.5px;
+  margin-left: 23.5px; }
+
+.push-small--ends {
+  margin-top: 23.5px;
+  margin-top: 23.5px;
+  margin-bottom: 23.5px;
+  margin-bottom: 23.5px; }
+
+.push-small--sides {
+  margin-right: 23.5px;
+  margin-right: 23.5px;
+  margin-left: 23.5px;
+  margin-left: 23.5px; }
+
+.flush {
+  margin: 0; }
+
+.flush--top {
+  margin-top: 0; }
+
+.flush--right {
+  margin-right: 0; }
+
+.flush--bottom {
+  margin-bottom: 0; }
+
+.flush--left {
+  margin-left: 0; }
+
+.flush--ends {
+  margin-top: 0;
+  margin-bottom: 0; }
+
+.flush--sides {
+  margin-right: 0;
+  margin-left: 0; }
+
+/**
+ * Add/remove paddings
+ */
+.soft {
+  padding: 24px;
+  padding: 24px; }
+
+.soft--top {
+  padding-top: 24px;
+  padding-top: 24px; }
+
+.soft--right {
+  padding-right: 24px;
+  padding-right: 24px; }
+
+.soft--bottom {
+  padding-bottom: 24px;
+  padding-bottom: 24px; }
+
+.soft--left {
+  padding-left: 24px;
+  padding-left: 24px; }
+
+.soft--ends {
+  padding-top: 24px;
+  padding-top: 24px;
+  padding-bottom: 24px; }
+
+.soft--sides {
+  padding-right: 24px;
+  padding-right: 24px;
+  padding-left: 24px; }
+
+.soft-small {
+  padding: 23.5px;
+  padding: 23.5px; }
+
+.soft-small--top {
+  padding-top: 23.5px;
+  padding-top: 23.5px; }
+
+.soft-small--right {
+  padding-right: 23.5px;
+  padding-right: 23.5px; }
+
+.soft-small--bottom {
+  padding-bottom: 23.5px;
+  padding-bottom: 23.5px; }
+
+.soft-small--left {
+  padding-left: 23.5px;
+  padding-left: 23.5px; }
+
+.soft-small--ends {
+  padding-top: 23.5px;
+  padding-top: 23.5px;
+  padding-bottom: 23.5px; }
+
+.soft-small--sides {
+  padding-right: 23.5px;
+  padding-right: 23.5px;
+  padding-left: 23.5px; }
+
+.hard {
+  padding: 0; }
+
+.hard--top {
+  padding-top: 0; }
+
+.hard--right {
+  padding-right: 0; }
+
+.hard--bottom {
+  padding-bottom: 0; }
+
+.hard--left {
+  padding-left: 0; }
+
+.hard--ends {
+  padding-top: 0;
+  padding-bottom: 0; }
+
+.hard--sides {
+  padding-right: 0;
+  padding-left: 0; }
+
+/**
  * import vendor styles
  */
 /*------------------------------------*\
@@ -2713,346 +3000,6 @@ button.display--block {
 /*------------------------------------*\
     $WYSIWYG
 \*------------------------------------*/
-/**
- * import helpers
- */
-/*------------------------------------*\
-    $HELPER
-\*------------------------------------*/
-/**
- * A series of helper classes to use arbitrarily. Only use a helper class if an
- * element/component doesn’t already have a class to which you could apply this
- * styling, e.g. if you need to float `.main-nav` left then add `float:left;` to
- * that ruleset as opposed to adding the `.float--left` class to the markup.
- *
- * A lot of these classes carry `!important` as you will always want them to win
- * out over other selectors.
- */
-/**
- * Add/remove floats
- */
-.float--right {
-  float: right !important; }
-
-.float--left {
-  float: left !important; }
-
-.float--none {
-  float: none !important; }
-
-/**
- * Text alignment
- */
-.text--left {
-  text-align: left  !important; }
-
-.text--center {
-  text-align: center !important; }
-
-.text--right {
-  text-align: right !important; }
-
-/**
- * Font weights
- */
-.weight--light {
-  font-weight: 300 !important; }
-
-.weight--normal {
-  font-weight: 400 !important; }
-
-.weight--semibold {
-  font-weight: 600 !important; }
-
-/**
- * Add/remove margins
- */
-.push {
-  margin: 24px !important; }
-
-.push--top {
-  margin-top: 24px !important; }
-
-.push--right {
-  margin-right: 24px !important; }
-
-.push--bottom {
-  margin-bottom: 24px !important; }
-
-.push--left {
-  margin-left: 24px !important; }
-
-.push--ends {
-  margin-top: 24px !important;
-  margin-bottom: 24px !important; }
-
-.push--sides {
-  margin-right: 24px !important;
-  margin-left: 24px !important; }
-
-.push-half {
-  margin: 12px !important; }
-
-.push-half--top {
-  margin-top: 12px !important; }
-
-.push-half--right {
-  margin-right: 12px !important; }
-
-.push-half--bottom {
-  margin-bottom: 12px !important; }
-
-.push-half--left {
-  margin-left: 12px !important; }
-
-.push-half--ends {
-  margin-top: 12px !important;
-  margin-bottom: 12px !important; }
-
-.push-half--sides {
-  margin-right: 12px !important;
-  margin-left: 12px !important; }
-
-.flush {
-  margin: 0 !important; }
-
-.flush--top {
-  margin-top: 0 !important; }
-
-.flush--right {
-  margin-right: 0 !important; }
-
-.flush--bottom {
-  margin-bottom: 0 !important; }
-
-.flush--left {
-  margin-left: 0 !important; }
-
-.flush--ends {
-  margin-top: 0 !important;
-  margin-bottom: 0 !important; }
-
-.flush--sides {
-  margin-right: 0 !important;
-  margin-left: 0 !important; }
-
-/**
- * Add/remove paddings
- */
-.soft {
-  padding: 24px !important; }
-
-.soft--top {
-  padding-top: 24px !important; }
-
-.soft--right {
-  padding-right: 24px !important; }
-
-.soft--bottom {
-  padding-bottom: 24px !important; }
-
-.soft--left {
-  padding-left: 24px !important; }
-
-.soft--ends {
-  padding-top: 24px !important;
-  padding-bottom: 24px !important; }
-
-.soft--sides {
-  padding-right: 24px !important;
-  padding-left: 24px !important; }
-
-.soft-half {
-  padding: 12px !important; }
-
-.soft-half--top {
-  padding-top: 12px !important; }
-
-.soft-half--right {
-  padding-right: 12px !important; }
-
-.soft-half--bottom {
-  padding-bottom: 12px !important; }
-
-.soft-half--left {
-  padding-left: 12px !important; }
-
-.soft-half--ends {
-  padding-top: 12px !important;
-  padding-bottom: 12px !important; }
-
-.soft-half--sides {
-  padding-right: 12px !important;
-  padding-left: 12px !important; }
-
-.hard {
-  padding: 0 !important; }
-
-.hard--top {
-  padding-top: 0 !important; }
-
-.hard--right {
-  padding-right: 0 !important; }
-
-.hard--bottom {
-  padding-bottom: 0 !important; }
-
-.hard--left {
-  padding-left: 0 !important; }
-
-.hard--ends {
-  padding-top: 0 !important;
-  padding-bottom: 0 !important; }
-
-.hard--sides {
-  padding-right: 0 !important;
-  padding-left: 0 !important; }
-
-/**
- * Pull items full width of `.island` parents.
- */
-.full-bleed {
-  margin-right: -24px !important;
-  margin-left: -24px !important; }
-  .islet .full-bleed {
-    margin-right: -12px !important;
-    margin-left: -12px !important; }
-
-/**
- * Add a help cursor to any element that gives the user extra information on
- * `:hover`.
- */
-.informative {
-  cursor: help !important; }
-
-/**
- * Mute an object by reducing its opacity.
- */
-.muted {
-  opacity: 0.5 !important;
-  filter: alpha(opacity=50) !important; }
-
-/**
- * Align items to the right where they imply progression/movement forward, e.g.:
- *
-   <p class=proceed><a href=#>Read more...</a></p>
- *
- */
-.proceed {
-  text-align: right !important; }
-
-/**
- * Add a right-angled quote to links that imply movement, e.g.:
- *
-   <a href=# class=go>Read more</a>
- *
- */
-.go:after {
-  content: "\00A0" "\00BB" !important; }
-
-/**
- * Apply capital case to an element (usually a `strong`).
- */
-.caps {
-  text-transform: uppercase !important; }
-
-/**
- * Hide from both screenreaders and browsers: h5bp.com/u
- */
-.hidden {
-  display: none !important;
-  visibility: hidden; }
-
-/**
- * Hide content off-screen without resorting to `display:none;`, also provide
- * breakpoint specific hidden elements.
- */
-.accessibility,
-.visuallyhidden {
-  border: 0 !important;
-  clip: rect(0 0 0 0) !important;
-  height: 1px !important;
-  margin: -1px !important;
-  overflow: hidden !important;
-  padding: 0 !important;
-  position: absolute !important;
-  width: 1px !important; }
-  .accessibility.focusable:active, .accessibility.focusable:focus,
-  .visuallyhidden.focusable:active,
-  .visuallyhidden.focusable:focus {
-    position: static;
-    clip: auto;
-    width: auto;
-    height: auto;
-    margin: 0;
-    overflow: visible; }
-
-@media only screen and (max-width: 480px) {
-  .accessibility--palm,
-  .visuallyhidden--palm {
-    border: 0 !important;
-    clip: rect(0 0 0 0) !important;
-    height: 1px !important;
-    margin: -1px !important;
-    overflow: hidden !important;
-    padding: 0 !important;
-    position: absolute !important;
-    width: 1px !important; } }
-@media only screen and (min-width: 481px) and (max-width: 1023px) {
-  .accessibility--lap,
-  .visuallyhidden--lap {
-    border: 0 !important;
-    clip: rect(0 0 0 0) !important;
-    height: 1px !important;
-    margin: -1px !important;
-    overflow: hidden !important;
-    padding: 0 !important;
-    position: absolute !important;
-    width: 1px !important; } }
-@media only screen and (min-width: 481px) {
-  .accessibility--lap-and-up,
-  .visuallyhidden--lap-and-up {
-    border: 0 !important;
-    clip: rect(0 0 0 0) !important;
-    height: 1px !important;
-    margin: -1px !important;
-    overflow: hidden !important;
-    padding: 0 !important;
-    position: absolute !important;
-    width: 1px !important; } }
-@media only screen and (max-width: 1023px) {
-  .accessibility--portable,
-  .visuallyhidden--portable {
-    border: 0 !important;
-    clip: rect(0 0 0 0) !important;
-    height: 1px !important;
-    margin: -1px !important;
-    overflow: hidden !important;
-    padding: 0 !important;
-    position: absolute !important;
-    width: 1px !important; } }
-@media only screen and (min-width: 1024px) {
-  .accessibility--desk,
-  .visuallyhidden--desk {
-    border: 0 !important;
-    clip: rect(0 0 0 0) !important;
-    height: 1px !important;
-    margin: -1px !important;
-    overflow: hidden !important;
-    padding: 0 !important;
-    position: absolute !important;
-    width: 1px !important; } }
-@media only screen and (min-width: 1200px) {
-  .accessibility--desk-wide,
-  .visuallyhidden--desk-wide {
-    border: 0 !important;
-    clip: rect(0 0 0 0) !important;
-    height: 1px !important;
-    margin: -1px !important;
-    overflow: hidden !important;
-    padding: 0 !important;
-    position: absolute !important;
-    width: 1px !important; } }
 /**
  * import print styles
  */
