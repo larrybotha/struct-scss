@@ -101,14 +101,14 @@ $font-icon-stack    : $font-icon;
 
 /**
  * Base font face
-  $font-alpha:           "[font-name]";
-  $font-alpha-path:      "fnt/[path/to/font]";
-  $font-alpha-filename:  "[font-file-name-without-extension]";
-  $font-alpha-stack:     $font-alpha, Arial, sans-serif;
+  $font-base:           "[font-name]";
+  $font-base-path:      "fnt/[path/to/font]";
+  $font-base-filename:  "[font-file-name-without-extension]";
+  $font-base-stack:     $font-base, Arial, sans-serif;
 
-  $font-alpha-filename-i:   " [italic-font-file-name-without-extension]"; // italic
-  $font-alpha-filename-b:   " [bold-font-file-name-without-extension]"; // bold
-  $font-alpha-filename-bi:  " [bold-italic-font-file-name-without-extension]"; // bold-italic
+  $font-base-filename-i:   "[italic-font-file-name-without-extension]"; // italic
+  $font-base-filename-b:   "[bold-font-file-name-without-extension]"; // bold
+  $font-base-filename-bi:  "[bold-italic-font-file-name-without-extension]"; // bold-italic
  */
 
 
