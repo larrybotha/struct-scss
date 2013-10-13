@@ -2,11 +2,30 @@
     $LAYOUT
 \*------------------------------------*/
 .wrap {
+  @extend .cf;
 	max-width: 1280px;
 	margin: 0 auto;
 	@include px-and-rem(padding-left, 1);
 	@include px-and-rem(padding-right, 1);
 }
+
+
+
+
+
+/*------------------------------------*\
+    $GRID
+\*------------------------------------*/
+/**
+ * vertically align grid items bottom
+ */
+.gw {
+  @extend .grid;
+}
+
+  .g {
+    @extend .grid__item;
+  }
 
 
 
@@ -94,16 +113,16 @@ button.display--block {
 .soft--right    { @include px-and-rem(padding-right,  $base-spacing-unit);}
 .soft--bottom   { @include px-and-rem(padding-bottom, $base-spacing-unit);}
 .soft--left     { @include px-and-rem(padding-left,   $base-spacing-unit);}
-.soft--ends     { @include px-and-rem(padding-top,    $base-spacing-unit); padding-bottom: $base-spacing-unit;}
-.soft--sides    { @include px-and-rem(padding-right,  $base-spacing-unit); padding-left:   $base-spacing-unit;}
+.soft--ends     { @include px-and-rem(padding-top,    $base-spacing-unit); @include px-and-rem(padding-bottom, $base-spacing-unit);}
+.soft--sides    { @include px-and-rem(padding-right,  $base-spacing-unit); @include px-and-rem(padding-left,   $base-spacing-unit);}
 
-.soft-small           { @include px-and-rem(padding,        $base-spacing-unit - .5)       ;}
-.soft-small--top      { @include px-and-rem(padding-top,    $base-spacing-unit - .5)   ;}
-.soft-small--right    { @include px-and-rem(padding-right,  $base-spacing-unit - .5) ;}
+.soft-small           { @include px-and-rem(padding,        $base-spacing-unit - .5);}
+.soft-small--top      { @include px-and-rem(padding-top,    $base-spacing-unit - .5);}
+.soft-small--right    { @include px-and-rem(padding-right,  $base-spacing-unit - .5);}
 .soft-small--bottom   { @include px-and-rem(padding-bottom, $base-spacing-unit - .5);}
-.soft-small--left     { @include px-and-rem(padding-left,   $base-spacing-unit - .5)  ;}
-.soft-small--ends     { @include px-and-rem(padding-top,    $base-spacing-unit - .5)   ; padding-bottom: $base-spacing-unit - .5;}
-.soft-small--sides    { @include px-and-rem(padding-right,  $base-spacing-unit - .5) ; padding-left:     $base-spacing-unit - .5;}
+.soft-small--left     { @include px-and-rem(padding-left,   $base-spacing-unit - .5);}
+.soft-small--ends     { @include px-and-rem(padding-top,    $base-spacing-unit - .5); @include px-and-rem(padding-bottom, $base-spacing-unit - .5);}
+.soft-small--sides    { @include px-and-rem(padding-right,  $base-spacing-unit - .5); @include px-and-rem(padding-left,   $base-spacing-unit - .5);}
 
 .hard           { padding:       0;}
 .hard--top      { padding-top:   0;}
