@@ -56,14 +56,14 @@ might want to share.
  */
 /**
  * Base font face
-  $font-alpha:           "[font-name]";
-  $font-alpha-path:      "fnt/[path/to/font]";
-  $font-alpha-filename:  "[font-file-name-without-extension]";
-  $font-alpha-stack:     $font-alpha, Arial, sans-serif;
+  $font-base:           "[font-name]";
+  $font-base-path:      "fnt/[path/to/font]";
+  $font-base-filename:  "[font-file-name-without-extension]";
+  $font-base-stack:     $font-base, Arial, sans-serif;
 
-  $font-alpha-filename-i:   " [italic-font-file-name-without-extension]"; // italic
-  $font-alpha-filename-b:   " [bold-font-file-name-without-extension]"; // bold
-  $font-alpha-filename-bi:  " [bold-italic-font-file-name-without-extension]"; // bold-italic
+  $font-base-filename-i:   "[italic-font-file-name-without-extension]"; // italic
+  $font-base-filename-b:   "[bold-font-file-name-without-extension]"; // bold
+  $font-base-filename-bi:  "[bold-italic-font-file-name-without-extension]"; // bold-italic
  */
 /*------------------------------------*\
     $COLORS
@@ -178,7 +178,6 @@ might want to share.
  * PUSH................Push classes for manipulating grids
  * PULL................Pull classes for manipulating grids
  * BRAND...............Helper class to apply brand treatment to elements
- * HELPER..............A series of helper classes to use arbitrarily
  * DEBUG...............Enable to add visual flags for debugging purposes
  */
 /*------------------------------------*\
@@ -843,7 +842,7 @@ table {
  * Extend the clearfix class with Sass to avoid the `.cf` class appearing over
  * and over in your markup.
  */
-.cf:before, .cf:after {
+.cf:before, .wrap:before, .cf:after, .wrap:after {
   content: "";
   display: table;
   clear: both; }
@@ -1659,7 +1658,7 @@ input[type="checkbox"] {
 /**
  * Grid wrapper
  */
-.grid, .grid--rev, .grid--full, .grid--center {
+.grid, .grid--rev, .grid--full, .grid--center, .gw {
   margin-left: -24px;
   list-style: none;
   margin-bottom: 0; }
@@ -1667,13 +1666,13 @@ input[type="checkbox"] {
 /**
  * Very infrequently occuring grid wrappers as children of grid wrappers.
  */
-.grid > .grid, .grid--rev > .grid, .grid--full > .grid, .grid--center > .grid, .grid > .grid--rev, .grid--rev > .grid--rev, .grid--full > .grid--rev, .grid--center > .grid--rev, .grid > .grid--full, .grid--rev > .grid--full, .grid--full > .grid--full, .grid--center > .grid--full, .grid > .grid--center, .grid--rev > .grid--center, .grid--full > .grid--center, .grid--center > .grid--center {
+.grid > .grid, .grid--rev > .grid, .grid--full > .grid, .grid--center > .grid, .gw > .grid, .grid > .grid--rev, .grid--rev > .grid--rev, .grid--full > .grid--rev, .grid--center > .grid--rev, .gw > .grid--rev, .grid > .grid--full, .grid--rev > .grid--full, .grid--full > .grid--full, .grid--center > .grid--full, .gw > .grid--full, .grid > .grid--center, .grid--rev > .grid--center, .grid--full > .grid--center, .grid--center > .grid--center, .gw > .grid--center, .grid > .gw, .grid--rev > .gw, .grid--full > .gw, .grid--center > .gw, .gw > .gw {
   margin-left: 0; }
 
 /**
  * Grid
  */
-.grid__item {
+.grid__item, .g {
   display: inline-block;
   width: 100%;
   padding-left: 24px;
@@ -1685,7 +1684,7 @@ input[type="checkbox"] {
 .grid--rev {
   direction: rtl;
   text-align: right; }
-  .grid--rev > .grid__item {
+  .grid--rev > .grid__item, .grid--rev > .g {
     direction: ltr;
     text-align: left; }
 
@@ -1694,7 +1693,7 @@ input[type="checkbox"] {
  */
 .grid--full {
   margin-left: 0; }
-  .grid--full > .grid__item {
+  .grid--full > .grid__item, .grid--full > .g {
     padding-left: 0; }
 
 /**
@@ -1703,7 +1702,7 @@ input[type="checkbox"] {
  */
 .grid--center {
   text-align: center; }
-  .grid--center > .grid__item {
+  .grid--center > .grid__item, .grid--center > .g {
     text-align: left; }
 
 /*------------------------------------*\
@@ -2604,6 +2603,9 @@ h1, h2, h3, h4, h5, h6 {
 /*------------------------------------*\
     $MODIFIERS
 \*------------------------------------*/
+/**
+ * font color modifiers
+ */
 .error {
   color: #b94a48; }
 
@@ -2760,6 +2762,12 @@ h1, h2, h3, h4, h5, h6 {
   padding-right: 16px;
   padding-right: 1rem; }
 
+/*------------------------------------*\
+    $GRID
+\*------------------------------------*/
+/**
+ * vertically align grid items bottom
+ */
 /*------------------------------------*\
     $MODIFIERS
 \*------------------------------------*/
@@ -2922,11 +2930,13 @@ button.display--block {
 .soft--ends {
   padding-top: 24px;
   padding-top: 24px;
+  padding-bottom: 24px;
   padding-bottom: 24px; }
 
 .soft--sides {
   padding-right: 24px;
   padding-right: 24px;
+  padding-left: 24px;
   padding-left: 24px; }
 
 .soft-small {
@@ -2952,11 +2962,13 @@ button.display--block {
 .soft-small--ends {
   padding-top: 23.5px;
   padding-top: 23.5px;
+  padding-bottom: 23.5px;
   padding-bottom: 23.5px; }
 
 .soft-small--sides {
   padding-right: 23.5px;
   padding-right: 23.5px;
+  padding-left: 23.5px;
   padding-left: 23.5px; }
 
 .hard {
