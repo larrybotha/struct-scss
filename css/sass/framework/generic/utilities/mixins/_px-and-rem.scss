@@ -26,7 +26,7 @@
 //
 // $base-font-size: 16px;
 //
-// .padding { @include px-and-rem(padding, 1, 2%, 1.5em);}
+// .padding { @include px-and-rem(padding, 1 2% 1.5em);}
 //
 // becomes
 //
@@ -35,47 +35,36 @@
 //  padding: 1rem 2% 1.5em;
 // }
 
-@function fix8_unit_to_px($val) {
-	@if type_of($val) == 'string' {
-		@if $val == 'auto' { @return $val;}
-		@if $val == '!important' { @return $val;}
+@function fix8_get_px_and_rem_val($val, $get-rem: true) {
+  @if type-of($val) == 'string' {
+    @if $val == 'auto' { @return $val;}
+    @if $val == '!important' { @return $val;}
 
-		@warn "#{$val} is not a valid value";
-	} @else {
-		@if unitless($val) {
-			@if $val == 0 { @return $val }
-			@else { @return $val * $base-font-size};
-		} @else { @return $val};
-	}
+    @warn "#{$val} is not a valid value";
+  } @else {
+    @if unitless($val) {
+      @if $val == 0 { @return $val }
+      @else {
+        @if $get-rem {
+          @return $val+rem
+        } @else {
+          @return $val * $base-font-size;
+        }
+      }
+    } @else { @return $val};
+  }
 }
 
-@function fix8_unit_to_rem($val) {
-	@if type_of($val) == 'string' {
-		@if $val == 'auto' { @return $val;}
-		@if $val == '!important' { @return $val;}
+@mixin px-and-rem($prop, $vals) {
+  $px-list: ();
+  $rem-list: ();
 
-		@warn "#{$val} is not a valid value";
-	} @else {
-		@if unitless($val) {
-			@if $val == 0 { @return $val }
-			@else { @return $val+rem};
-		} @else { @return $val};
-	}
+  @each $val in $vals {
+    $px-list: join($px-list, fix8_get_px_and_rem_val($val, false));
+    $rem-list: join($rem-list, fix8_get_px_and_rem_val($val));
+  }
+
+  #{$prop}: $px-list;
+  #{$prop}: $rem-list;
 }
 
-@mixin px-and-rem($prop, $val...) {
-	$n: length($val);
-	$i: 1;
-
-	$px-list: ();
-	$rem-list: ();
-
-	@while $i <= $n {
-		$px-list: append($px-list, fix8_unit_to_px(nth($val, $i)));
-		$rem-list: append($rem-list, fix8_unit_to_rem(nth($val, $i)));
-		$i: $i + 1;
-	}
-
-	#{$prop}: $px-list;
-	#{$prop}: $rem-list;
-}
