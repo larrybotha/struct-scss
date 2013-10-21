@@ -32,6 +32,11 @@ input, textarea {
 	border: 1px solid $base-ui-color;
 }
 
+input[type="checkbox"],
+input[type="radio"] {
+  margin-bottom: 0;
+}
+
 
 
 
