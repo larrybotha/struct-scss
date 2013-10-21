@@ -37,6 +37,8 @@
 }
 
 %btn--selected {
+  cursor: default;
+
   &:hover,
   &:active,
   &:focus {
@@ -44,8 +46,6 @@
     background-color: inherit;
   }
 }
-
-%btn--selected { cursor: default;}
 
 .btn--full {
   display: block;
