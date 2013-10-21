@@ -9,7 +9,8 @@ a {
 
   &:visited {}
 
-  &:hover {
+  &:hover,
+  &:focus {
     color: $clr-primary-ltr;
   }
 

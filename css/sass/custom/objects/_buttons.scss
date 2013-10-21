@@ -9,6 +9,7 @@
 
     &,
     &:hover,
+    &:focus,
     &:active {
 
     }
@@ -19,7 +20,8 @@
   @extend .btn;
   background-color: $clr-primary;
 
-  &:hover {
+  &:hover,
+  &:focus {
     background-color: $clr-primary-lt;
   }
 

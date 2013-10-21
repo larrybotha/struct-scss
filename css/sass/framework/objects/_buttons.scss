@@ -19,7 +19,8 @@
 	@include transition(all 150ms ease-in);
 
   &,
-  &:hover {
+  &:hover,
+  &:focus {
     text-decoration: none;
   }
 
