@@ -79,8 +79,13 @@ $use-responsive: true;
 /**
  * Place any of your own variables that sit on top of inuit.css here.
  */
-$base-ui-color: #666;
-$brand-color: #333;
+// $base-font-size: 16px;
+// $base-line-height:  24px;
+// $base-spacing-unit: 1.5;
+
+// $base-ui-color: #666;
+// $brand-color: #333;
+// $selection-color: $brand-color;
 
 
 
@@ -111,6 +116,7 @@ $font-icon-stack    : $font-icon;
   $font-base-filename-bi:  "[bold-italic-font-file-name-without-extension]"; // bold-italic
  */
 
+//$base-font-family: $font-base-stack;
 
 
 

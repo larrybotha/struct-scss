@@ -4,8 +4,8 @@
     $ALERTS
 \*------------------------------------*/
 .alert {
-  @include px-and-rem(margin-bottom, $base-spacing-unit / $base-font-size);
-  @include px-and-rem(padding, $base-spacing-unit / $base-font-size);
+  @include px-and-rem(margin-bottom, $base-spacing-unit);
+  @include px-and-rem(padding, $base-spacing-unit);
 	border: 1px solid $clr-primary;
 
   & a {
