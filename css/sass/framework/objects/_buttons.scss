@@ -3,16 +3,14 @@
 /*------------------------------------*\
     $BUTTONS
 \*------------------------------------*/
-.btn,
-  %btn {
+%btn {
 	position: relative;
 	display: inline-block;
 	text-align: center;
-	line-height: 2;
+  line-height: normal; // let's make all browsers match FF's !important
 	vertical-align: middle;
 	height: auto; // ensure heights set on inputs do not affect submit buttons
   margin: 0;
-	padding: 0 1em;
 	border: 0;
   white-space: nowrap;
 	cursor: pointer;
