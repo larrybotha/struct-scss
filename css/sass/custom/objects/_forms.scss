@@ -5,7 +5,6 @@
 input:invalid, textarea:invalid {}*/
 @mixin placeholder() {
   color: $base-ui-color;
-  text-transform: uppercase;
 }
 
 ::-webkit-input-placeholder { @include placeholder();}
