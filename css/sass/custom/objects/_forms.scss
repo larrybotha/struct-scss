@@ -28,7 +28,7 @@ button, input, select, textarea {
 input, textarea {
 	@include px-and-rem(margin-bottom, 1);
   height: auto;         // don't apply heights set to inputs
-  line-height: normal;  // all browsers must use FF !important for consistency
+  line-height: normal;  // all browsers must use FF's UA !important for consistency
 	padding: .25em;
 	border: 1px solid $base-ui-color;
 }
