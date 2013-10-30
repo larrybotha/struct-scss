@@ -39,7 +39,7 @@
  * Grid wrapper
  */
 .grid{
-    margin-left:-$base-spacing-unit;
+    @include px-and-rem(margin-left, -$base-spacing-unit);
     list-style:none;
     margin-bottom:0;
 }
@@ -59,7 +59,7 @@
     .grid__item{
         display:inline-block;
         width:100%;
-        padding-left:$base-spacing-unit;
+        @include px-and-rem(padding-left, $base-spacing-unit);
         vertical-align:top;
         @if $global-border-box == false{
             @include vendor(box-sizing, border-box);
