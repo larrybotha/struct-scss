@@ -2,7 +2,7 @@
     $BUTTONS
 \*------------------------------------*/
 .btn {
-  @extend %btn;
+  @extend %btn !optional;
   color: $clr-ntrl-min;
 
   &[disabled],

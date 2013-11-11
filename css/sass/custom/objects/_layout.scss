@@ -20,11 +20,11 @@
  * vertically align grid items bottom
  */
 .gw {
-  @extend .grid;
+  @extend .grid !optional;
 }
 
   .g {
-    @extend .grid__item;
+    @extend .grid__item !optional;
   }
 
 
