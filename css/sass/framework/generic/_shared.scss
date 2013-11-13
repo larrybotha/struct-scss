@@ -58,6 +58,6 @@ hr{
  * by a consistent amount. Define that amount once, here.
  */
 ul,ol,dd{
-    @include px-and-rem(margin-left, 2 * $base-spacing-unit);
+    margin-left: 1em;
 }
 
