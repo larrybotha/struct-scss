@@ -5,62 +5,74 @@
   @extend %list--reset;
 }
 
-.menu-item {
-	position: relative;
-	display: inline-block;
-
-  @include media-query(palm) {
-    display: block;
-  }
-
-  & a {
-    display: block;
-    color: $clr-primary;
-    padding: .5em 1em;
-  }
-}
-
-.sub-menu {
-	position: absolute;
-	display: none;
-  background-color: #fff;
-  border: 1px solid $base-ui-color;
-	z-index: 100;
-
-  @include media-query(palm) {
-    display: block;
+  .menu__item {
     position: relative;
-    border: 0;
-  }
-
-  & a {
-    min-width: 225px;
-    padding-left: 1em;
-    white-space: nowrap;
+    display: inline-block;
 
     @include media-query(palm) {
-      white-space: normal;
-      min-width: auto;
-      padding-left: 1.5em;
+      display: block;
+    }
+
+    & a {
+      display: block;
+      color: $clr-primary;
+      padding: .5em 1em;
     }
   }
-}
 
-.sub-menu .sub-menu a {
-  @include media-query(palm) {
-    padding-left: 2.5em;
+  .menu__item--current {
+    & a {
+      &,
+      &:hover,
+      &:active {
+
+      }
+    }
   }
-}
 
-.sub-menu .sub-menu {
-  top: 0;
-  left: 100%;
+    .menu__sub {
+      position: absolute;
+      display: none;
+      background-color: #fff;
+      border: 1px solid $base-ui-color;
+      z-index: 100;
 
-  @include media-query(palm) {
-    top: auto;
-    left: auto;
-  }
-}
+      .menu__item a:hover + &,
+      &:hover {
+        display: block;
+      }
 
-.menu-item a:hover + .sub-menu,
-.sub-menu:hover {	display: block;}
+      @include media-query(palm) {
+        display: block;
+        position: relative;
+        border: 0;
+      }
+
+      & a {
+        min-width: 225px;
+        padding-left: 1em;
+        white-space: nowrap;
+
+        @include media-query(palm) {
+          white-space: normal;
+          min-width: auto;
+          padding-left: 1.5em;
+        }
+      }
+    }
+
+      .menu__sub .menu__sub {
+        top: 0;
+        left: 100%;
+
+        @include media-query(palm) {
+          top: auto;
+          left: auto;
+        }
+      }
+
+        .menu__sub .menu__sub a {
+          @include media-query(palm) {
+            padding-left: 2.5em;
+          }
+        }
