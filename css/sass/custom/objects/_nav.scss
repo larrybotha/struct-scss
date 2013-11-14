@@ -37,14 +37,12 @@
 .sub-menu a {
   min-width: 225px;
   padding-left: 1em;
+  white-space: nowrap;
 
   @include media-query(palm) {
+    white-space: normal;
     min-width: auto;
     padding-left: 1.5em;
-  }
-
-  @include media-query(lap-and-up) {
-    white-space: nowrap;
   }
 }
 
