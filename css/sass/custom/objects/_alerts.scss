@@ -3,6 +3,14 @@
 /*------------------------------------*\
     $ALERTS
 \*------------------------------------*/
+$alert-types: success, danger, error, info;
+
+@each $alert-type in $alert-types {
+  .alert--#{$alert-type} {
+    @extend %alert;
+  }
+}
+
 .alert--success {
 	color: $clr-success;
 	border-color: $clr-success-ltr;
