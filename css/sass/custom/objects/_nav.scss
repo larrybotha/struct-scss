@@ -27,7 +27,7 @@
       max-height: 0;
     }
 
-    .menu-toggle--active + .menu-container > & {
+    .is-active + .menu-container > & {
       max-height: 50em;
     }
   }
