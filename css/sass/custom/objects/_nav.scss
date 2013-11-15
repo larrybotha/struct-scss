@@ -1,8 +1,36 @@
 /*------------------------------------*\
     $NAVIGATION
 \*------------------------------------*/
+.menu-toggle {
+  display: none;
+
+  @include media-query(palm) {
+    display: inline-block;
+  }
+}
+
+.menu-container {
+  @include media-query(palm) {
+    overflow: hidden;
+  }
+}
+
 .menu {
   @extend %list--reset;
+
+  // animate menu for mobiles and tablets
+  @include media-query (palm) {
+    @include transition(all 250ms ease-in-out);
+    @include transform(translate3d(0,0,0));
+
+    .menu-container > & {
+      max-height: 0;
+    }
+
+    .menu-toggle--active + .menu-container > & {
+      max-height: 50em;
+    }
+  }
 }
 
   .menu__item {
