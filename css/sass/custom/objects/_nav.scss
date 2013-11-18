@@ -58,7 +58,7 @@
   }
 
   .menu__item--current {
-    & a {
+    & > a {
       &,
       &:hover,
       &:active {
