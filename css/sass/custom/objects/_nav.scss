@@ -27,7 +27,7 @@
       max-height: 0;
     }
 
-    .is-active + .menu-container > & {
+    .is-open.menu-container > & {
       max-height: 50em;
     }
   }
