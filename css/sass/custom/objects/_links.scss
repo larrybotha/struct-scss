@@ -4,7 +4,7 @@
 a {
 	color: $clr-primary;
 	text-decoration: none;
-	@include transition(all 100ms ease-in-out);
+	@include transition(all 150ms ease-in-out);
 	outline: 0;
 
   &:visited {}
