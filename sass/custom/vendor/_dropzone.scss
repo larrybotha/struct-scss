@@ -1,0 +1,226 @@
+@if $use-file-upload == true {
+
+/*------------------------------------*\
+    $FILE UPLOAD
+\*------------------------------------*/
+
+
+
+
+
+/*------------------------------------*\
+    $DROPZONE
+\*------------------------------------*/
+.dropzone {
+	@include px-and-rem(padding, 1.5);
+	border: 3px dashed $clr-alpha-ltst;
+	@include px-and-rem(border-radius, 1);
+}
+
+.dz-clickable { cursor: pointer;}
+
+.dz-drag-hover { border-color: $clr-alpha-ltr;}
+
+.dz-message {	opacity: 1;}
+
+.dz-started .dz-message { display: none;}
+
+.dz-preview {
+	position: relative;
+	display: inline-block;
+	background: $clr-ntrl-min;
+	@include px-and-rem(margin, 0, 1, 1);
+	vertical-align: top;
+	@include px-and-rem(padding, 1);
+}
+
+.dz-preview.dz-file-preview [data-dz-thumbnail] { display: none;}
+
+.dz-details {
+	position: relative;
+	background: #ebebeb;
+	width: 100px;
+	height: 100px;
+	@include px-and-rem(margin-bottom, 1);
+	@include px-and-rem(padding, 1);
+}
+	.dz-filename {
+		@include px-and-rem(font-size, .85);
+		font-style: italic;
+		overflow: hidden;
+	}
+
+	.dz-details img {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100px;
+		height: 100px;
+	}
+
+	.dz-size{
+		@extend .dz-filename;
+	}
+
+.dz-preview.dz-error .dz-error-mark {
+	display: block;
+}
+.dz-preview.dz-success .dz-success-mark {
+	display: block;
+}
+.dz-preview:hover .dz-details img {
+	display: none;
+}
+.dz-preview .dz-success-mark,
+.dz-preview .dz-error-mark {
+	display: none;
+	position: absolute;
+	@include px-and-rem(width, 2);
+	@include px-and-rem(height, 2);
+	@include px-and-rem(font-size, 2);
+	text-align: center;
+	top: -.5em;
+	right: -.5em;
+	@include transition(opacity 0.4s ease-in-out);
+}
+.dz-preview .dz-success-mark { color: $clr-success;}
+.dz-preview .dz-error-mark { color: $clr-danger;}
+
+.dz-preview .dz-error-mark span,
+.dz-preview .dz-success-mark span {
+	display: none;
+}
+
+.dz-success .dz-success-mark span,
+.dz-error .dz-error-mark span { display: block;}
+
+.dz-progress {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: .5rem;
+	display: none;
+}
+.dz-progress .dz-upload {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	width: 0%;
+	background-color: #8cc657;
+}
+
+.dz-processing .dz-progress { display: block;}
+
+.dz-error-message {
+	display: none;
+	position: absolute;
+	background: rgba(245,245,245,0.8);
+	color: $clr-danger;
+	top: 0;
+	left: 0;
+	right: 0;
+	@include px-and-rem(padding, .75);
+	z-index: 20;
+}
+.dz-preview:hover.dz-error .dz-error-message {
+	display: block;
+}
+
+.dropzone.dz-square .dz-default.dz-message {
+	background-position: 0 -123px;
+	width: 268px;
+	margin-left: -134px;
+	height: 174px;
+	margin-top: -87px;
+}
+.dropzone.dz-drag-hover .dz-message {
+	opacity: 0.15;
+	filter: alpha(opacity=15);
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=15)";
+}
+.dropzone.dz-started .dz-message {
+	display: block;
+	opacity: 0;
+	filter: alpha(opacity=0);
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+}
+.dz-preview,
+.dropzone-previews .dz-preview {
+	-webkit-box-shadow: 1px 1px 4px rgba(0,0,0,0.16);
+	box-shadow: 1px 1px 4px rgba(0,0,0,0.16);
+	font-size: 14px;
+}
+.dz-preview.dz-image-preview:hover .dz-details img {
+	display: block;
+	opacity: 0.1;
+	filter: alpha(opacity=10);
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=10)";
+}
+.dz-preview.dz-success .dz-success-mark {
+	opacity: 1;
+}
+.dz-preview.dz-error .dz-error-mark {
+	opacity: 1;
+}
+.dz-preview.dz-error .dz-progress .dz-upload {
+	background: #ee1e2d;
+}
+.dz-preview .dz-progress .dz-upload {
+	@include animation(loading 0.4s linear infinite);
+	@include transition(width 0.3s ease-in-out);
+	-webkit-border-radius: 2px;
+	border-radius: 2px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 0%;
+	height: 100%;
+	background-repeat: repeat-x;
+	background-position: 0px -400px;
+}
+
+.dz-preview.dz-success .dz-progress {
+	display: block;
+	opacity: 0;
+	filter: alpha(opacity=0);
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+	@include transition(opacity 0.4s ease-in-out);
+}
+.dz-preview .dz-error-message {
+	display: block;
+	opacity: 0;
+	filter: alpha(opacity=0);
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+	@include transition(opacity 0.3s ease-in-out);
+}
+.dz-preview:hover.dz-error .dz-error-message {
+	opacity: 1;
+}
+
+.dz-remove {	@extend .btn;}
+.dz-remove:hover {	color: #666;}
+
+@-moz-keyframes loading {
+	0% { background-position: 0 -400px;}
+	100% { background-position: -7px -400px;}
+}
+@-webkit-keyframes loading {
+	0% { background-position: 0 -400px;}
+	100% { background-position: -7px -400px;}
+}
+@-o-keyframes loading {
+	0% { background-position: 0 -400px;}
+	100% { background-position: -7px -400px;}
+}
+@-ms-keyframes loading {
+	0% { background-position: 0 -400px;}
+	100% { background-position: -7px -400px;}
+}
+@keyframes loading {
+	0% { background-position: 0 -400px;}
+	100% { background-position: -7px -400px;}
+}
+
+}//endif

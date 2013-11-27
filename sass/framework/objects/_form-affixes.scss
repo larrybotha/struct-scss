@@ -1,0 +1,69 @@
+@if $use-form-affixes == true {
+
+/*------------------------------------*\
+    $AFFIXES
+\*------------------------------------*/
+input	{
+	@include px-and-rem(height, 2);
+
+  &[type="radio"],
+  &[type="checkbox"] {
+    height: auto;
+  }
+}
+
+%input-affix-container {
+	position: relative;
+	display: inline-block;
+	@include px-and-rem(margin-bottom, 1);
+
+  & > input {
+    display: block;
+    width: 100%;
+    margin-bottom: 0;
+  }
+}
+
+.input-prefix-container,
+.input-suffix-container {
+  @extend %input-affix-container;
+}
+
+.input-prefix-container  {
+  & > input {
+    padding-left: 1.5em;
+  }
+}
+
+.input-suffix-container {
+  & > input {
+    padding-right: 1.5em;
+  }
+}
+
+.input-prefix-container > .input-prefix-in,
+.input-suffix-container > .input-suffix-in,
+.input-prefix-ex,
+.input-suffix-ex {
+	vertical-align: top;
+	display: inline-block;
+	text-align: center;
+	padding: .2em .45em .075em;
+}
+
+.input-prefix-container > .input-prefix-in,
+.input-suffix-container > .input-suffix-in {
+	position: absolute;
+	top: 50%;
+	margin-top: -.7em;
+	padding-top: 0;
+}
+
+.input-suffix-container > .input-suffix-in { right: 0;}
+
+.input-prefix-ex, .input-suffix-ex {
+	background: $clr-ntrl-10;
+	border: 1px solid $clr-ntrl-20;
+}
+
+}//endif

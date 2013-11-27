@@ -1,0 +1,96 @@
+@if $use-icons == true {
+
+/*------------------------------------*\
+    $ICONS
+\*------------------------------------*/
+
+/*
+ * Styling inspired by FontAwesome - http://mopo.ws/ReAOC6
+ */
+.icon {
+  display: inline-block;
+  text-decoration: inherit;
+
+  &:before {
+    font-family: $font-icon-stack;
+    font-weight: normal;
+    font-style: normal;
+    display: inline-block;
+    text-decoration: inherit;
+  }
+
+  .btn & {
+    line-height: .5;
+  }
+}
+
+/*
+ * Use the Unicode Private Use Area (PUA) to ensure screen readers do not
+ * read off random characters that represent icons
+ */
+
+/* WEB APPLICATION ICONS U+e0xxx */
+.icon-checkbox-unchecked:before	{ content: "\e000";}
+.icon-checkbox-checked:before		{ content: "\e001";}
+
+.icon-radio-unchecked:before		{ content: "\e010";}
+.icon-radio-checked:before			{ content: "\e011";}
+
+.icon-loader:before 						{ content: "\e020";}
+
+.icon-reorder:before						{ content: "\e030";}
+
+.icon-remove:before							{ content: "\e040";}
+
+.icon-comment:before						{ content: "\e050";}
+
+.icon-calendar:before						{ content: "\e060";}
+
+
+
+
+
+/* TEXT EDITOR ICONS U+e1xxx */
+.icon-font:before 							{ content: "\e100";}
+.icon-bold:before 							{ content: "\e110";}
+.icon-italic:before 						{ content: "\e120";}
+.icon-underline:before 					{ content: "\e130";}
+.icon-strikethrough:before			{ content: "\e140";}
+
+.icon-link:before 							{ content: "\e150";}
+.icon-unlink:before 						{ content: "\e151";}
+
+.icon-list-ol:before						{ content: "\e160";}
+.icon-list-ul:before						{ content: "\e161";}
+
+.icon-image:before							{ content: "\e170";}
+
+.icon-undo:before								{ content: "\e180";}
+.icon-redo:before								{ content: "\e181";}
+
+
+
+
+
+/* DIRECTIONAL ICONS U+e2xxx */
+.icon-caret-up:before						{ content: "\e200";}
+.icon-caret-down:before					{ content: "\e201";}
+.icon-caret-right:before				{ content: "\e202";}
+.icon-caret-left:before					{ content: "\e203";}
+
+
+
+
+
+/* VIDEO / AUDIO ICONS U+e3xxx */
+
+
+
+
+
+/* SOCIAL ICONS U+e4xxx  */
+.icon-facebook:before { content: "\e400";}
+.icon-twitter:before { content: "\e410";}
+
+}//endif
+

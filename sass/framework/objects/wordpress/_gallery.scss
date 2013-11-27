@@ -1,0 +1,65 @@
+@if $use-wordpress == true {
+
+/*------------------------------------*\
+    $GALLERY
+\*------------------------------------*/
+.gallery {
+  @extend .grid;
+  @extend .cf;
+}
+
+// .ie8 .gallery { margin-left: 0;}
+
+  .gallery-item {
+    @extend .grid__item;
+    float: left;
+    position: relative;
+    margin-top: 0;
+
+    &:before {
+      position: absolute;
+      content: "";
+      top: -1px;
+      left: $base-spacing-unit - 1px;
+      right: -1px;
+      bottom: -1px;
+      border: 1px solid $base-ui-color;
+      z-index: -1;
+    }
+
+    & a {
+      position: relative;
+      display: block;
+      line-height: 0;
+      z-index: 1000;
+    }
+  }
+
+  .gallery-columns-1 > .gallery-item {
+    @extend .one-whole;
+  }
+  .gallery-columns-2 > .gallery-item {
+    @extend .one-half;
+  }
+  .gallery-columns-3 > .gallery-item {
+    @extend .one-third;
+  }
+  .gallery-columns-4 > .gallery-item {
+    @extend .one-quarter;
+  }
+  .gallery-columns-5 > .gallery-item {
+    @extend .one-fifth;
+  }
+
+    // .gallery-icon {}
+
+    .gallery-caption {
+      @include px-and-rem(font-size, .875); /* 14px / 16 = .875 */
+      font-style: italic;
+      margin: 0;
+      padding: $base-spacing-unit * .5;
+
+      & > :last-child { margin-bottom: 0; }
+    }
+
+}//endif

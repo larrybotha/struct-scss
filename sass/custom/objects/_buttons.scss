@@ -1,0 +1,32 @@
+/*------------------------------------*\
+    $BUTTONS
+\*------------------------------------*/
+.btn {
+  @extend %btn !optional;
+  color: $clr-ntrl-min;
+
+  &[disabled],
+  &:disabled {
+
+    &,
+    &:hover,
+    &:focus,
+    &:active {
+
+    }
+  }
+}
+
+.btn--primary {
+  @extend .btn;
+  background-color: $clr-primary;
+
+  &:hover,
+  &:focus {
+    background-color: $clr-primary-lt;
+  }
+
+  &:active {
+    background-color: $clr-primary-dk;
+  }
+}

@@ -1,0 +1,28 @@
+@if $use-wordpress == true {
+
+/*------------------------------------*\
+    $FLEX VIDEO
+\*------------------------------------*/
+/**
+ * Requires $use-ratio-object to be true
+ */
+.flex-video {
+  @extend %ratio-object;
+	padding-top: 25px;
+
+  &:before {
+    padding-top: 67.5%; /* 4:3; */
+  }
+
+  & iframe,
+  & object,
+  & embed,
+  & video {
+    @extend %ratio-object-inner;
+  }
+}
+
+.flex-video-widescreen { padding-bottom: 57.25%; /* 16:9; */}
+.flex-video-vimeo { padding-top: 0;}
+
+}//endif

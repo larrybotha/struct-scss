@@ -1,0 +1,54 @@
+@if $use-buttons == true {
+
+/*------------------------------------*\
+    $BUTTONS
+\*------------------------------------*/
+%btn {
+	position: relative;
+	display: inline-block;
+	text-align: center;
+  line-height: normal; // let's make all browsers match FF's !important
+	vertical-align: middle;
+	height: auto; // ensure heights set on inputs do not affect submit buttons
+  margin: 0;
+	border: 0;
+  white-space: nowrap;
+	cursor: pointer;
+	@include transition(all 150ms ease-in);
+
+  &,
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+
+  &:active,
+  &:focus{
+    outline:none;
+    @include transition(0);
+  }
+
+  &[disabled],
+  &:disabled {
+    cursor: default;
+  }
+}
+
+%btn--selected {
+  cursor: default;
+
+  &:hover,
+  &:active,
+  &:focus {
+    color: inherit;
+    background-color: inherit;
+  }
+}
+
+.btn--full {
+  display: block;
+  width: 100%;
+}
+
+
+}//endif
