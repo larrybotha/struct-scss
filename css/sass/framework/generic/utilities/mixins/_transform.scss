@@ -1,7 +1,0 @@
-@mixin transform($val...) {
-	@include prefixer(transform, $val, $moz: true, $o: true, $ms: true);
-}
-
-@mixin transform-origin($val...) {
-	@include prefixer(transform-origin, $val, $moz: true, $o: true, $ms: true);
-}

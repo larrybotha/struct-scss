@@ -31,7 +31,7 @@
 
       // Run js through jshint
       jshint: {
-        files: ['gruntfile.js', 'styleguide-js/main.js', 'js/main.js'],
+        files: ['gruntfile.js']
         options: {
           globals: {
             jQuery: true,
@@ -42,48 +42,15 @@
         }
       },
 
-      // Run a local server
-      connect: {
-        options: {
-          port: 9090,
-          hostname: '0.0.0.0',
-          keepalive: true,
-          base: 'build'
-        },
-        middleware: function(connect, options) {
-          return connect.static(options.base);
-        }
-      },
-
       // Manage Sass compilation
       sass: {
         dist: {
           options: {
             quiet: false,
-            cacheLocation: 'css/sass/.sass-cache'
+            cacheLocation: 'sass/.sass-cache'
           },
           files: {
-            'style.css': 'css/sass/style.scss'
-          }
-        }
-      },
-
-      // Execute shell commands
-      shell: {
-        kss: {
-          command: [
-            'rm -rf public/*',
-            'kss-node kss/docs build --template kss/template',
-            'cd build/public',
-            'rm style.css',
-            'ln -s ../../style.css',
-            'ln -s ../../img',
-            'ln -s ../../fnt',
-            'ln -s ../../js',
-            'ln -s ../../data'
-          ].join('&&'),
-          options: {
-            stdout: true
+            'style.css': 'sass/style.scss'
           }
         }
       },
@@ -95,23 +62,11 @@
           tasks: ['jshint']
         },
         css: {
-          files: ['css/sass/**/*.scss'],
+          files: ['sass/**/*.scss'],
           tasks: ['sass:dist']
-        },
-        styleguide: {
-          files: ['styleguide-js/main.js', 'js/main.js'],
-          tasks: ['jshint']
-        },
-        kss: {
-          files: ['kss/docs/**/*.*'],
-          tasks: ['kss']
         }
       }
     });
-
-    grunt.registerTask('kss', ['shell:kss']);
-
-    grunt.registerTask('server', ['connect']);
 
     grunt.registerTask('default', ['sass', 'jshint']);
 
