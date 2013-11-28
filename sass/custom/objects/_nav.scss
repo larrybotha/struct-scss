@@ -24,7 +24,9 @@
 .menu {
   @extend %list--reset;
 
-  // animate menu for mobiles and tablets
+  /**
+   * animate menu for mobiles and tablets
+   */
   @include media-query (palm) {
     @include transition(all 250ms ease-in-out);
     @include transform(translate3d(0,0,0));
