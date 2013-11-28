@@ -1,7 +1,10 @@
 /*------------------------------------*\
     $NAVIGATION
 \*------------------------------------*/
-.menu-toggle {
+/**
+ * placeholder for button that toggles nav
+ */
+%menu-toggle {
   display: none;
 
   @include media-query(palm) {
@@ -9,7 +12,10 @@
   }
 }
 
-.menu-container {
+/**
+ * placeholder for menu container used to hide menus on mobile / tablet
+ */
+%menu-container {
   @include media-query(palm) {
     overflow: hidden;
   }
@@ -23,11 +29,11 @@
     @include transition(all 250ms ease-in-out);
     @include transform(translate3d(0,0,0));
 
-    .menu-container > & {
+    %menu-container > & {
       max-height: 0;
     }
 
-    .is-open.menu-container > & {
+    %menu-container.is-open > & {
       max-height: 50em;
     }
   }
