@@ -15,7 +15,8 @@
   &:before {
     content: "";
     display: block;
-    // extend this in your styles as per your object's required ratio
+    // extend this with padding-bottom:; in your styles as per your object's required
+    // ratio
   }
 }
 
