@@ -54,9 +54,21 @@ h1, h2, h3, h4, h5, h6 {
 /**
  * alignment modifiers
  */
-.text--left   { text-align: left;}
-.text--center { text-align: center;}
-.text--right  { text-align: right;}
+%text--left { text-align: left;}
+%text--center { text-align: center;}
+%text--right { text-align: right;}
+
+.text--left,
+.align_left { @extend %text--left;}
+.text--center,
+.align_center { @extend %text--center;}
+.text--right,
+.align_right { @extend %text--right;}
+
+img.align_center {
+  display: block;
+  margin: 0 auto;
+}
 
 
 /**
