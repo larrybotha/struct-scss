@@ -58,11 +58,8 @@ h1, h2, h3, h4, h5, h6 {
 %text--center { text-align: center;}
 %text--right  { text-align: right;}
 
-.text--left,
 .align_left    { @extend %text--left;}
-.text--center,
 .align_center  { @extend %text--center;}
-.text--right,
 .align_right   { @extend %text--right;}
 
 img.align_center {
@@ -74,31 +71,32 @@ img.align_center {
 /**
  * case modifiers
  */
-.case--upper   { text-transform: uppercase;}
-.case--lower   { text-transform: lowercase;}
-.case--normal  { text-transform: none;}
-.case--capital { text-transform: capitalize;}
+%case--upper   { text-transform: uppercase;}
+%case--lower   { text-transform: lowercase;}
+%case--normal  { text-transform: none;}
+%case--capital { text-transform: capitalize;}
 
 
 /**
  * Font weights
  */
-.weight--normal { font-weight: normal;}
-.weight--bold   { font-weight: bold;}
+%weight--normal { font-weight: normal;}
+%weight--bold   { font-weight: bold;}
 
 
 /**
  * vertical alignment modifiers
  */
-.valign--top    { vertical-align: top;}
-.valign--middle { vertical-align: middle;}
-.valign--bottom { vertical-align: bottom;}
+%valign--top    { vertical-align: top;}
+%valign--middle { vertical-align: middle;}
+%valign--bottom { vertical-align: bottom;}
 
 
 /**
  * Hide from both screenreaders and browsers: h5bp.com/u
  */
 .hidden { display: none; visibility: hidden;}
+
 
 /**
  * Hide content off-screen without resorting to `display:none;`, also provide
