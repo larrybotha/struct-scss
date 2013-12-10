@@ -1,0 +1,23 @@
+@if $use-vertical-center == true {
+
+/*------------------------------------*\
+    $VERTICAL CENTER
+\*------------------------------------*/
+/**
+ * An object which will vertically center its contents.
+ *
+ * http://www.hughlashbrooke.com/two-methods-for-vertical-centering-in-css/
+ */
+%vertical-center {
+	display: table;
+	width: 100%;
+	height: 100%; // can be any value
+}
+
+  %vertical-center__inner {
+		display: table-cell;
+		vertical-align: middle;
+  }
+
+}//endif
+
