@@ -23,39 +23,40 @@
  * and introducing objects and abstractions is as simple as switching the
  * following variables to `true`.
  */
-$use-grids:         true;
-$use-flexbox:       false;
-$use-columns:       false;
-$use-nav:           false;
-$use-options:       false;
-$use-pagination:    false;
-$use-breadcrumb:    false;
-$use-media:         false;
-$use-marginalia:    false;
-$use-island:        false;
-$use-block-list:    false;
-$use-matrix:        false;
-$use-split:         false;
-$use-this-or-this:  false;
-$use-link-complex:  false;
-$use-flyout:        false;
-$use-arrows:        false;
-$use-sprite:        false;
-$use-icon-text:     false;
-$use-beautons:      false;
-$use-lozenges:      false;
-$use-rules:         false;
-$use-stats:         false;
-$use-greybox:       false;
+$use-grids:						true;
+$use-flexbox:         false;
+$use-columns:         false;
+$use-nav:             false;
+$use-options:         false;
+$use-pagination:      false;
+$use-breadcrumb:      false;
+$use-media:           false;
+$use-marginalia:      false;
+$use-island:          false;
+$use-block-list:      false;
+$use-matrix:          false;
+$use-split:           false;
+$use-this-or-this:    false;
+$use-link-complex:    false;
+$use-flyout:          false;
+$use-arrows:          false;
+$use-sprite:          false;
+$use-icon-text:       false;
+$use-beautons:        false;
+$use-lozenges:        false;
+$use-rules:           false;
+$use-stats:           false;
+$use-greybox:         false;
 
-$use-buttons:       false; // use either these, or beautons, but not both
-$use-alerts:        false;
-$use-ratio-object:  false;
-$use-icons:         false;
-$use-forms-affixes: false;
-$use-progress-bars: false;
-$use-print:         false;
-$use-wordpress:     false;
+$use-buttons:         false; // use either these, or beautons, but not both
+$use-alerts:          false;
+$use-ratio-object:    false;
+$use-vertical-center: false;
+$use-icons:           false;
+$use-forms-affixes:   false;
+$use-progress-bars:   false;
+$use-print:           false;
+$use-wordpress:       false;
 
 
 
