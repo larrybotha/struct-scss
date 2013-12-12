@@ -77,14 +77,24 @@
 
     .menu__sub {
       position: absolute;
-      display: none;
       background-color: #fff;
       border: 1px solid $base-ui-color;
-      z-index: 100;
+			opacity: 0;
+      z-index: 0;
+			@include transition(opacity 150ms ease-in-out);
+
+			.ie8 & {
+				display: none;
+			}
 
       .menu__item a:hover + &,
       &:hover {
-        display: block;
+				opacity: 1;
+				z-index: 100;
+
+				.ie8 & {
+					display: block;
+				}
       }
 
       @include media-query(palm) {
