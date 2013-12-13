@@ -6,13 +6,13 @@
  * appear in one of 12 locations, thus:
  *
  *     01  02  03
- *  +------------------+
+ *  +-----------------_+
  * 12 |          | 04
  *  |          |
  * 11 |          | 05
  *  |          |
  * 10 |          | 06
- *  +------------------+
+ *  +-----------------_+
  *     09  08  07
  *
  * You pass this position in along with a desired arrow color and optional
@@ -38,7 +38,7 @@
 
   @if $arrow-edge == top{
 
-    @extend %arrow--top;
+    @extend %arrow-_top;
 
     &:before{
       border-bottom-color:$border-color!important;
@@ -49,22 +49,22 @@
     }
 
     @if $arrow-location == left{
-      @extend %arrow--left;
+      @extend %arrow-_left;
     }
 
     @if $arrow-location == center{
-      @extend %arrow--center;
+      @extend %arrow-_center;
     }
 
     @if $arrow-location == right{
-      @extend %arrow--right;
+      @extend %arrow-_right;
     }
 
   }
 
   @if $arrow-edge == right{
 
-    @extend %arrow--far;
+    @extend %arrow-_far;
 
     &:before{
       border-left-color:$border-color!important;
@@ -75,22 +75,22 @@
     }
 
     @if $arrow-location == top{
-      @extend %arrow--upper;
+      @extend %arrow-_upper;
     }
 
     @if $arrow-location == center{
-      @extend %arrow--middle;
+      @extend %arrow-_middle;
     }
 
     @if $arrow-location == bottom{
-      @extend %arrow--lower;
+      @extend %arrow-_lower;
     }
 
   }
 
   @if $arrow-edge == bottom{
 
-    @extend %arrow--bottom;
+    @extend %arrow-_bottom;
 
     &:before{
       border-top-color:$border-color!important;
@@ -101,22 +101,22 @@
     }
 
     @if $arrow-location == left{
-      @extend %arrow--left;
+      @extend %arrow-_left;
     }
 
     @if $arrow-location == center{
-      @extend %arrow--center;
+      @extend %arrow-_center;
     }
 
     @if $arrow-location == right{
-      @extend %arrow--right;
+      @extend %arrow-_right;
     }
 
   }
 
   @if $arrow-edge == left{
 
-    @extend %arrow--near;
+    @extend %arrow-_near;
 
     &:before{
       border-right-color:$border-color!important;
@@ -127,15 +127,15 @@
     }
 
     @if $arrow-location == top{
-      @extend %arrow--upper;
+      @extend %arrow-_upper;
     }
 
     @if $arrow-location == center{
-      @extend %arrow--middle;
+      @extend %arrow-_middle;
     }
 
     @if $arrow-location == bottom{
-      @extend %arrow--lower;
+      @extend %arrow-_lower;
     }
 
   }

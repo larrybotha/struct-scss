@@ -22,7 +22,7 @@
 }
 
 .menu {
-  @extend %list--reset;
+  @extend %list-_reset;
 
   /**
    * animate menu for mobiles and tablets
@@ -65,7 +65,7 @@
     }
   }
 
-  .menu__item--current {
+  .menu__item-_current {
     & > a {
       &,
       &:hover,

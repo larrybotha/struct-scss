@@ -54,14 +54,14 @@ h1, h2, h3, h4, h5, h6 {
 /**
  * alignment modifiers
  */
-%text--left   { text-align: left;}
-%text--center { text-align: center;}
-%text--right  { text-align: right;}
+%text-_left   { text-align: left;}
+%text-_center { text-align: center;}
+%text-_right  { text-align: right;}
 
 // TinyMCE classes
-.align_left    { @extend %text--left;}
-.align_center  { @extend %text--center;}
-.align_right   { @extend %text--right;}
+.align_left    { @extend %text-_left;}
+.align_center  { @extend %text-_center;}
+.align_right   { @extend %text-_right;}
 
 img.align_center {
   display: block;
@@ -72,25 +72,25 @@ img.align_center {
 /**
  * case modifiers
  */
-%case--upper   { text-transform: uppercase;}
-%case--lower   { text-transform: lowercase;}
-%case--normal  { text-transform: none;}
-%case--capital { text-transform: capitalize;}
+%case-_upper   { text-transform: uppercase;}
+%case-_lower   { text-transform: lowercase;}
+%case-_normal  { text-transform: none;}
+%case-_capital { text-transform: capitalize;}
 
 
 /**
  * Font weights
  */
-%weight--normal { font-weight: normal;}
-%weight--bold   { font-weight: bold;}
+%weight-_normal { font-weight: normal;}
+%weight-_bold   { font-weight: bold;}
 
 
 /**
  * vertical alignment modifiers
  */
-%valign--top    { vertical-align: top;}
-%valign--middle { vertical-align: middle;}
-%valign--bottom { vertical-align: bottom;}
+%valign-_top    { vertical-align: top;}
+%valign-_middle { vertical-align: middle;}
+%valign-_bottom { vertical-align: bottom;}
 
 
 /**
@@ -120,8 +120,8 @@ img.align_center {
 @if $responsive{
   @each $state in palm, lap, lap-and-up, portable, desk, desk-wide{
     @include media-query(#{$state}){
-      .accessibility--#{$state},
-      .visuallyhidden--#{$state}{
+      .accessibility-_#{$state},
+      .visuallyhidden-_#{$state}{
         @include accessibility;
      }
    }

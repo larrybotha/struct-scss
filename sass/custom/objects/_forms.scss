@@ -48,8 +48,8 @@ input[type="radio"] {
 /**
  * $use-icons must be set to true for custom radios and checkboxes
  */
-.radio--custom,
-.checkbox--custom {
+.radio-_custom,
+.checkbox-_custom {
   @extend %icon;
 
   &:before {
@@ -58,11 +58,11 @@ input[type="radio"] {
 }
 
 /* .icon-check-empty */
-.radio--custom:before    { content: "\e010";}
-.checkbox--custom:before { content: "\e000";}
+.radio-_custom:before    { content: "\e010";}
+.checkbox-_custom:before { content: "\e000";}
 
 /* .icon-check */
 input:checked + label {
-  & > .radio--custom:before { content: "\e011";}
-  & > .checkbox--custom:before { content: "\e001";}
+  & > .radio-_custom:before { content: "\e011";}
+  & > .checkbox-_custom:before { content: "\e001";}
 }

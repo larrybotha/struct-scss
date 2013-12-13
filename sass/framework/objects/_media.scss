@@ -28,13 +28,13 @@
     /**
      * Reversed image location (right instead of left).
      */
-    .media__img--rev{
+    .media__img-_rev{
         float:right;
         margin-left:$base-spacing-unit;
     }
 
         .media__img img,
-        .media__img--rev img{
+        .media__img-_rev img{
             display:block;
         }
 
@@ -53,7 +53,7 @@
     .islet .media__img{
         margin-right:$half-spacing-unit;
     }
-    .islet .media__img--rev{
+    .islet .media__img-_rev{
         margin-left:$half-spacing-unit;
     }
 

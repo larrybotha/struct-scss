@@ -36,9 +36,9 @@
 
 
 /**
- * `.nav--stacked` extends `.nav` and throws the list into vertical mode, e.g.:
+ * `.nav-_stacked` extends `.nav` and throws the list into vertical mode, e.g.:
  *
-   <ul class="nav  nav--stacked">
+   <ul class="nav  nav-_stacked">
        <li><a href=#>Home</a></li>
        <li><a href=#>About</a></li>
        <li><a href=#>Portfolio</a></li>
@@ -46,7 +46,7 @@
    </ul>
  *
  */
-.nav--stacked{
+.nav-_stacked{
 
     > li{
         display:list-item;
@@ -59,9 +59,9 @@
 
 
 /**
- * `.nav--banner` extends `.nav` and centres the list, e.g.:
+ * `.nav-_banner` extends `.nav` and centres the list, e.g.:
  *
-   <ul class="nav  nav--banner">
+   <ul class="nav  nav-_banner">
        <li><a href=#>Home</a></li>
        <li><a href=#>About</a></li>
        <li><a href=#>Portfolio</a></li>
@@ -69,7 +69,7 @@
    </ul>
  *
  */
-.nav--banner{
+.nav-_banner{
     text-align:center;
 }
 
@@ -77,7 +77,7 @@
 /**
  * Give nav links a big, blocky hit area. Extends `.nav`, e.g.:
  *
-   <ul class="nav  nav--block">
+   <ul class="nav  nav-_block">
        <li><a href=#>Home</a></li>
        <li><a href=#>About</a></li>
        <li><a href=#>Portfolio</a></li>
@@ -85,7 +85,7 @@
    </ul>
  *
  */
-.nav--block{
+.nav-_block{
     line-height:1;
     /**
      * Remove whitespace caused by `inline-block`.
@@ -109,7 +109,7 @@
  * Force a nav to occupy 100% of the available width of its parent. Extends
  * `.nav`, e.g.:
  *
-   <ul class="nav  nav--fit">
+   <ul class="nav  nav-_fit">
        <li><a href=#>Home</a></li>
        <li><a href=#>About</a></li>
        <li><a href=#>Portfolio</a></li>
@@ -118,7 +118,7 @@
  *
  * Thanks to @pimpl for this idea!
  */
-.nav--fit{
+.nav-_fit{
     display:table;
     width:100%;
 
@@ -135,10 +135,10 @@
 /**
  * Make a list of keywords. Extends `.nav`, e.g.:
  *
-   `<ul class="nav  nav--keywords>`
+   `<ul class="nav  nav-_keywords>`
  *
  */
-.nav--keywords{
+.nav-_keywords{
 
     > li{
 
