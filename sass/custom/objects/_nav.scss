@@ -88,6 +88,14 @@
 				display: none;
 			}
 
+			@include media-query(palm) {
+				display: block;
+				position: relative;
+				border: 0;
+				opacity: 1;
+				z-index: 0;
+			}
+
       .menu__item a:hover + &,
 			.menu__item a:focus + &,
       &:hover,
@@ -98,14 +106,6 @@
 				.ie8 & {
 					display: block;
 				}
-      }
-
-      @include media-query(palm) {
-        display: block;
-        position: relative;
-        border: 0;
-				opacity: 1;
-				z-index: 0;
       }
 
       & a {
