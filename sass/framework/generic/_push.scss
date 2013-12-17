@@ -10,89 +10,89 @@
     /**
      * Whole
      */
-    .push-_#{$namespace}one-whole           { left:100%; }
+    .push_-#{$namespace}one-whole           { left:100%; }
 
 
     /**
      * Halves
      */
-    .push-_#{$namespace}one-half            { left:50%; }
+    .push_-#{$namespace}one-half            { left:50%; }
 
 
     /**
      * Thirds
      */
-    .push-_#{$namespace}one-third           { left:33.333%; }
-    .push-_#{$namespace}two-thirds          { left:66.666%; }
+    .push_-#{$namespace}one-third           { left:33.333%; }
+    .push_-#{$namespace}two-thirds          { left:66.666%; }
 
 
     /**
      * Quarters
      */
-    .push-_#{$namespace}one-quarter         { left:25%; }
-    .push-_#{$namespace}two-quarters        { @extend .push-_#{$namespace}one-half; }
-    .push-_#{$namespace}three-quarters      { left:75%; }
+    .push_-#{$namespace}one-quarter         { left:25%; }
+    .push_-#{$namespace}two-quarters        { @extend .push_-#{$namespace}one-half; }
+    .push_-#{$namespace}three-quarters      { left:75%; }
 
 
     /**
      * Fifths
      */
-    .push-_#{$namespace}one-fifth           { left:20%; }
-    .push-_#{$namespace}two-fifths          { left:40%; }
-    .push-_#{$namespace}three-fifths        { left:60%; }
-    .push-_#{$namespace}four-fifths         { left:80%; }
+    .push_-#{$namespace}one-fifth           { left:20%; }
+    .push_-#{$namespace}two-fifths          { left:40%; }
+    .push_-#{$namespace}three-fifths        { left:60%; }
+    .push_-#{$namespace}four-fifths         { left:80%; }
 
 
     /**
      * Sixths
      */
-    .push-_#{$namespace}one-sixth           { left:16.666%; }
-    .push-_#{$namespace}two-sixths          { @extend .push-_#{$namespace}one-third; }
-    .push-_#{$namespace}three-sixths        { @extend .push-_#{$namespace}one-half; }
-    .push-_#{$namespace}four-sixths         { @extend .push-_#{$namespace}two-thirds; }
-    .push-_#{$namespace}five-sixths         { left:83.333%; }
+    .push_-#{$namespace}one-sixth           { left:16.666%; }
+    .push_-#{$namespace}two-sixths          { @extend .push_-#{$namespace}one-third; }
+    .push_-#{$namespace}three-sixths        { @extend .push_-#{$namespace}one-half; }
+    .push_-#{$namespace}four-sixths         { @extend .push_-#{$namespace}two-thirds; }
+    .push_-#{$namespace}five-sixths         { left:83.333%; }
 
 
     /**
      * Eighths
      */
-    .push-_#{$namespace}one-eighth          { left:12.5%; }
-    .push-_#{$namespace}two-eighths         { @extend .push-_#{$namespace}one-quarter; }
-    .push-_#{$namespace}three-eighths       { left:37.5%; }
-    .push-_#{$namespace}four-eighths        { @extend .push-_#{$namespace}one-half; }
-    .push-_#{$namespace}five-eighths        { left:62.5%; }
-    .push-_#{$namespace}six-eighths         { @extend .push-_#{$namespace}three-quarters; }
-    .push-_#{$namespace}seven-eighths       { left:87.5%; }
+    .push_-#{$namespace}one-eighth          { left:12.5%; }
+    .push_-#{$namespace}two-eighths         { @extend .push_-#{$namespace}one-quarter; }
+    .push_-#{$namespace}three-eighths       { left:37.5%; }
+    .push_-#{$namespace}four-eighths        { @extend .push_-#{$namespace}one-half; }
+    .push_-#{$namespace}five-eighths        { left:62.5%; }
+    .push_-#{$namespace}six-eighths         { @extend .push_-#{$namespace}three-quarters; }
+    .push_-#{$namespace}seven-eighths       { left:87.5%; }
 
 
     /**
      * Tenths
      */
-    .push-_#{$namespace}one-tenth           { left:10%; }
-    .push-_#{$namespace}two-tenths          { @extend .push-_#{$namespace}one-fifth; }
-    .push-_#{$namespace}three-tenths        { left:30%; }
-    .push-_#{$namespace}four-tenths         { @extend .push-_#{$namespace}two-fifths; }
-    .push-_#{$namespace}five-tenths         { @extend .push-_#{$namespace}one-half; }
-    .push-_#{$namespace}six-tenths          { @extend .push-_#{$namespace}three-fifths; }
-    .push-_#{$namespace}seven-tenths        { left:70%; }
-    .push-_#{$namespace}eight-tenths        { @extend .push-_#{$namespace}four-fifths; }
-    .push-_#{$namespace}nine-tenths         { left:90%; }
+    .push_-#{$namespace}one-tenth           { left:10%; }
+    .push_-#{$namespace}two-tenths          { @extend .push_-#{$namespace}one-fifth; }
+    .push_-#{$namespace}three-tenths        { left:30%; }
+    .push_-#{$namespace}four-tenths         { @extend .push_-#{$namespace}two-fifths; }
+    .push_-#{$namespace}five-tenths         { @extend .push_-#{$namespace}one-half; }
+    .push_-#{$namespace}six-tenths          { @extend .push_-#{$namespace}three-fifths; }
+    .push_-#{$namespace}seven-tenths        { left:70%; }
+    .push_-#{$namespace}eight-tenths        { @extend .push_-#{$namespace}four-fifths; }
+    .push_-#{$namespace}nine-tenths         { left:90%; }
 
 
     /**
      * Twelfths
      */
-    .push-_#{$namespace}one-twelfth         { left:8.333%; }
-    .push-_#{$namespace}two-twelfths        { @extend .push-_#{$namespace}one-sixth; }
-    .push-_#{$namespace}three-twelfths      { @extend .push-_#{$namespace}one-quarter; }
-    .push-_#{$namespace}four-twelfths       { @extend .push-_#{$namespace}one-third; }
-    .push-_#{$namespace}five-twelfths       { left:41.666% }
-    .push-_#{$namespace}six-twelfths        { @extend .push-_#{$namespace}one-half; }
-    .push-_#{$namespace}seven-twelfths      { left:58.333%; }
-    .push-_#{$namespace}eight-twelfths      { @extend .push-_#{$namespace}two-thirds; }
-    .push-_#{$namespace}nine-twelfths       { @extend .push-_#{$namespace}three-quarters; }
-    .push-_#{$namespace}ten-twelfths        { @extend .push-_#{$namespace}five-sixths; }
-    .push-_#{$namespace}eleven-twelfths     { left:91.666%; }
+    .push_-#{$namespace}one-twelfth         { left:8.333%; }
+    .push_-#{$namespace}two-twelfths        { @extend .push_-#{$namespace}one-sixth; }
+    .push_-#{$namespace}three-twelfths      { @extend .push_-#{$namespace}one-quarter; }
+    .push_-#{$namespace}four-twelfths       { @extend .push_-#{$namespace}one-third; }
+    .push_-#{$namespace}five-twelfths       { left:41.666% }
+    .push_-#{$namespace}six-twelfths        { @extend .push_-#{$namespace}one-half; }
+    .push_-#{$namespace}seven-twelfths      { left:58.333%; }
+    .push_-#{$namespace}eight-twelfths      { @extend .push_-#{$namespace}two-thirds; }
+    .push_-#{$namespace}nine-twelfths       { @extend .push_-#{$namespace}three-quarters; }
+    .push_-#{$namespace}ten-twelfths        { @extend .push_-#{$namespace}five-sixths; }
+    .push_-#{$namespace}eleven-twelfths     { left:91.666%; }
 }
 
 @if $push == true{
@@ -102,7 +102,7 @@
 /**
  * Not a particularly great selector, but the DRYest way to do things.
  */
-[class*="push-_"]{ position:relative; }
+[class*="push_-"]{ position:relative; }
 
 @if $palm-push == true{
 

@@ -71,7 +71,7 @@
 /**
  * Reversed grids
  */
-.grid-_rev{
+.grid_-rev{
     @extend .grid;
     direction:rtl;
     text-align:right;
@@ -86,7 +86,7 @@
 /**
  * Gutterless grids have all the properties of regular grids, minus any spacing.
  */
-.grid-_full{
+.grid_-full{
     @extend .grid;
     margin-left:0;
 
@@ -100,7 +100,7 @@
  * Centered grids align grid items centrally without needing to use push or pull
  * classes.
  */
-.grid-_center{
+.grid_-center{
     @extend .grid;
     text-align:center;
 

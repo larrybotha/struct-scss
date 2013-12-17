@@ -7,11 +7,11 @@
  * Giving an element a class of `.sprite` will throw it into ‘sprite’ mode and apply
  * a background image e.g.:
  *
-   <a class="sprite  sprite-_question-mark">More info&hellip;</a>
+   <a class="sprite  sprite_-question-mark">More info&hellip;</a>
  *
  * or
  *
-   <a href=#><i class="sprite  sprite-_question-mark"></i> Help and FAQ</a>
+   <a href=#><i class="sprite  sprite_-question-mark"></i> Help and FAQ</a>
  *
  * Giving an element a class of `.icon` will throw it into ‘icon’ mode and will
  * not add a background, but should be used for icon fonts and is populated
@@ -26,8 +26,8 @@
    .sprite{
        background-image:url(path/to/your/sprite.png);
    }
-   .sprite-_link{ background-position:0   0  ; }
-   .sprite-_star{ background-position:0 -16px; }
+   .sprite_-link{ background-position:0   0  ; }
+   .sprite_-star{ background-position:0 -16px; }
  *
  * Demo: jsfiddle.net/inuitcss/6TKuS
  *
@@ -91,8 +91,8 @@
 /**
  * Icon size modifiers.
  */
-.icon-_large   { font-size:32px; }
-.icon-_huge    { font-size:64px; }
-.icon-_natural { font-size:inherit; }
+.icon_-large   { font-size:32px; }
+.icon_-huge    { font-size:64px; }
+.icon_-natural { font-size:inherit; }
 
 }//endif

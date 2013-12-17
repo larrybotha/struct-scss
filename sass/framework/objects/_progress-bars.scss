@@ -19,11 +19,11 @@
     @include transition(width .6s ease);
   }
 
-  .progress-_anim > .progress__bar {
+  .progress_-anim > .progress__bar {
     @include animation(progress-bar-stripes 2s linear infinite);
   }
 
-  .progress__bar-_striped {
+  .progress__bar_-striped {
     background-color: $clr-primary;
     @include gradient(background-image, linear-gradient(
                                           -45deg,

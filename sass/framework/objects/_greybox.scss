@@ -7,9 +7,9 @@
  * Quickly throw together greybox wireframes. Use in conjunction with other
  * inuit.css objects to create simple greybox prototypes, e.g.:
  *
-   <div class="island  greybox  greybox-_medium">Header</div>
+   <div class="island  greybox  greybox_-medium">Header</div>
 
-   <ul class="nav  nav-_fit  nav-_block  greybox">
+   <ul class="nav  nav_-fit  nav_-block  greybox">
        <li><a href=#>Home</a></li>
        <li><a href=#>About</a></li>
        <li><a href=#>Portfolio</a></li>
@@ -44,15 +44,15 @@
  * All greyboxes will occupy 100% of their parent’s width, but to alter their
  * heights we apply incrementally larger line-heights:
  */
-.greybox-_small,
-.graybox-_small     { line-height: 2 * $base-line-height; }
-.greybox-_medium,
-.graybox-_medium    { line-height: 4 * $base-line-height; }
-.greybox-_large,
-.graybox-_large     { line-height: 8 * $base-line-height; }
-.greybox-_huge,
-.graybox-_huge      { line-height:16 * $base-line-height; }
-.greybox-_gigantic,
-.graybox-_gigantic  { line-height:32 * $base-line-height; }
+.greybox_-small,
+.graybox_-small     { line-height: 2 * $base-line-height; }
+.greybox_-medium,
+.graybox_-medium    { line-height: 4 * $base-line-height; }
+.greybox_-large,
+.graybox_-large     { line-height: 8 * $base-line-height; }
+.greybox_-huge,
+.graybox_-huge      { line-height:16 * $base-line-height; }
+.greybox_-gigantic,
+.graybox_-gigantic  { line-height:32 * $base-line-height; }
 
 }//endif

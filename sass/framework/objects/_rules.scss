@@ -22,7 +22,7 @@
 /**
  * Dotted rules
  */
-.rule-_dotted{
+.rule_-dotted{
     border-bottom-style:dotted;
 }
 
@@ -30,7 +30,7 @@
 /**
  * Dashed rules
  */
-.rule-_dashed{
+.rule_-dashed{
     border-bottom-style:dashed;
 }
 
@@ -38,7 +38,7 @@
 /**
  * Ornamental rules. Places a § over the rule.
  */
-.rule-_ornament{
+.rule_-ornament{
     position:relative;
 
     &:after{
@@ -54,7 +54,7 @@
     /**
     * Pass in an arbitrary ornament though a data attribute, e.g.:
     *
-      <hr class="rule  rule-_ornament" data-ornament="!">
+      <hr class="rule  rule_-ornament" data-ornament="!">
     *
     */
     &[data-ornament]:after{

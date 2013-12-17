@@ -29,7 +29,7 @@
     }
 
     .marginalia__body,
-    .marginalia__body-_right{
+    .marginalia__body_-right{
         position:absolute;
     }
 
@@ -42,7 +42,7 @@
     /**
      * Align marginalia to the right of the text.
      */
-    .marginalia__body-_right{
+    .marginalia__body_-right{
         left:100%;
         padding-left:$base-spacing-unit;
         text-align:left;

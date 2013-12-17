@@ -17,23 +17,23 @@ img, embed, object, video {
 /**
  * Rounded images.
  */
-.img-_round { border-radius:$brand-round; }
+.img_-round { border-radius:$brand-round; }
 
 
 /**
  * Image placement variations.
  */
-.img-_right{
+.img_-right{
     float:right;
     margin-bottom:$base-spacing-unit;
     margin-left:$base-spacing-unit;
 }
-.img-_left{
+.img_-left{
     float:left;
     margin-right:$base-spacing-unit;
     margin-bottom:$base-spacing-unit;
 }
-.img-_center{
+.img_-center{
     display:block;
     margin-right:auto;
     margin-bottom:$base-spacing-unit;
@@ -47,13 +47,13 @@ img, embed, object, video {
  * Please note, these will not work too nicely with fluid images and will
  * distort when resized below a certain width. Use with caution.
  */
-.img-_short{
+.img_-short{
     height:5 * $base-spacing-unit;
 }
-.img-_medium{
+.img_-medium{
     height:10 * $base-spacing-unit;
 }
-.img-_tall{
+.img_-tall{
     height:15 * $base-spacing-unit;
 }
 

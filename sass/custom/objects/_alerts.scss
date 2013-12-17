@@ -6,23 +6,23 @@
 $alert-types: success, danger, error, info;
 
 @each $alert-type in $alert-types {
-  .alert-_#{$alert-type} {
+  .alert_-#{$alert-type} {
     @extend %alert;
   }
 }
 
-.alert-_success {
+.alert_-success {
 	color: $clr-success;
 	border-color: $clr-success-ltr;
 }
 
-.alert-_danger,
-.alert-_error {
+.alert_-danger,
+.alert_-error {
 	color: $clr-danger;
 	border-color: $clr-danger-ltr;
 }
 
-.alert-_info {
+.alert_-info {
 	color: $clr-info;
 	border-color: $clr-info-ltr;
 }

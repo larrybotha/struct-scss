@@ -10,89 +10,89 @@
     /**
      * Whole
      */
-    .pull-_#{$namespace}one-whole           { right:100%; }
+    .pull_-#{$namespace}one-whole           { right:100%; }
 
 
     /**
      * Halves
      */
-    .pull-_#{$namespace}one-half            { right:50%; }
+    .pull_-#{$namespace}one-half            { right:50%; }
 
 
     /**
      * Thirds
      */
-    .pull-_#{$namespace}one-third           { right:33.333%; }
-    .pull-_#{$namespace}two-thirds          { right:66.666%; }
+    .pull_-#{$namespace}one-third           { right:33.333%; }
+    .pull_-#{$namespace}two-thirds          { right:66.666%; }
 
 
     /**
      * Quarters
      */
-    .pull-_#{$namespace}one-quarter         { right:25%; }
-    .pull-_#{$namespace}two-quarters        { @extend .pull-_#{$namespace}one-half; }
-    .pull-_#{$namespace}three-quarters      { right:75%; }
+    .pull_-#{$namespace}one-quarter         { right:25%; }
+    .pull_-#{$namespace}two-quarters        { @extend .pull_-#{$namespace}one-half; }
+    .pull_-#{$namespace}three-quarters      { right:75%; }
 
 
     /**
      * Fifths
      */
-    .pull-_#{$namespace}one-fifth           { right:20%; }
-    .pull-_#{$namespace}two-fifths          { right:40%; }
-    .pull-_#{$namespace}three-fifths        { right:60%; }
-    .pull-_#{$namespace}four-fifths         { right:80%; }
+    .pull_-#{$namespace}one-fifth           { right:20%; }
+    .pull_-#{$namespace}two-fifths          { right:40%; }
+    .pull_-#{$namespace}three-fifths        { right:60%; }
+    .pull_-#{$namespace}four-fifths         { right:80%; }
 
 
     /**
      * Sixths
      */
-    .pull-_#{$namespace}one-sixth           { right:16.666%; }
-    .pull-_#{$namespace}two-sixths          { @extend .pull-_#{$namespace}one-third; }
-    .pull-_#{$namespace}three-sixths        { @extend .pull-_#{$namespace}one-half; }
-    .pull-_#{$namespace}four-sixths         { @extend .pull-_#{$namespace}two-thirds; }
-    .pull-_#{$namespace}five-sixths         { right:83.333%; }
+    .pull_-#{$namespace}one-sixth           { right:16.666%; }
+    .pull_-#{$namespace}two-sixths          { @extend .pull_-#{$namespace}one-third; }
+    .pull_-#{$namespace}three-sixths        { @extend .pull_-#{$namespace}one-half; }
+    .pull_-#{$namespace}four-sixths         { @extend .pull_-#{$namespace}two-thirds; }
+    .pull_-#{$namespace}five-sixths         { right:83.333%; }
 
 
     /**
      * Eighths
      */
-    .pull-_#{$namespace}one-eighth          { right:12.5%; }
-    .pull-_#{$namespace}two-eighths         { @extend .pull-_#{$namespace}one-quarter; }
-    .pull-_#{$namespace}three-eighths       { right:37.5%; }
-    .pull-_#{$namespace}four-eighths        { @extend .pull-_#{$namespace}one-half; }
-    .pull-_#{$namespace}five-eighths        { right:62.5%; }
-    .pull-_#{$namespace}six-eighths         { @extend .pull-_#{$namespace}three-quarters; }
-    .pull-_#{$namespace}seven-eighths       { right:87.5%; }
+    .pull_-#{$namespace}one-eighth          { right:12.5%; }
+    .pull_-#{$namespace}two-eighths         { @extend .pull_-#{$namespace}one-quarter; }
+    .pull_-#{$namespace}three-eighths       { right:37.5%; }
+    .pull_-#{$namespace}four-eighths        { @extend .pull_-#{$namespace}one-half; }
+    .pull_-#{$namespace}five-eighths        { right:62.5%; }
+    .pull_-#{$namespace}six-eighths         { @extend .pull_-#{$namespace}three-quarters; }
+    .pull_-#{$namespace}seven-eighths       { right:87.5%; }
 
 
     /**
      * Tenths
      */
-    .pull-_#{$namespace}one-tenth           { right:10%; }
-    .pull-_#{$namespace}two-tenths          { @extend .pull-_#{$namespace}one-fifth; }
-    .pull-_#{$namespace}three-tenths        { right:30%; }
-    .pull-_#{$namespace}four-tenths         { @extend .pull-_#{$namespace}two-fifths; }
-    .pull-_#{$namespace}five-tenths         { @extend .pull-_#{$namespace}one-half; }
-    .pull-_#{$namespace}six-tenths          { @extend .pull-_#{$namespace}three-fifths; }
-    .pull-_#{$namespace}seven-tenths        { right:70%; }
-    .pull-_#{$namespace}eight-tenths        { @extend .pull-_#{$namespace}four-fifths; }
-    .pull-_#{$namespace}nine-tenths         { right:90%; }
+    .pull_-#{$namespace}one-tenth           { right:10%; }
+    .pull_-#{$namespace}two-tenths          { @extend .pull_-#{$namespace}one-fifth; }
+    .pull_-#{$namespace}three-tenths        { right:30%; }
+    .pull_-#{$namespace}four-tenths         { @extend .pull_-#{$namespace}two-fifths; }
+    .pull_-#{$namespace}five-tenths         { @extend .pull_-#{$namespace}one-half; }
+    .pull_-#{$namespace}six-tenths          { @extend .pull_-#{$namespace}three-fifths; }
+    .pull_-#{$namespace}seven-tenths        { right:70%; }
+    .pull_-#{$namespace}eight-tenths        { @extend .pull_-#{$namespace}four-fifths; }
+    .pull_-#{$namespace}nine-tenths         { right:90%; }
 
 
     /**
      * Twelfths
      */
-    .pull-_#{$namespace}one-twelfth         { right:8.333%; }
-    .pull-_#{$namespace}two-twelfths        { @extend .pull-_#{$namespace}one-sixth; }
-    .pull-_#{$namespace}three-twelfths      { @extend .pull-_#{$namespace}one-quarter; }
-    .pull-_#{$namespace}four-twelfths       { @extend .pull-_#{$namespace}one-third; }
-    .pull-_#{$namespace}five-twelfths       { right:41.666% }
-    .pull-_#{$namespace}six-twelfths        { @extend .pull-_#{$namespace}one-half; }
-    .pull-_#{$namespace}seven-twelfths      { right:58.333%; }
-    .pull-_#{$namespace}eight-twelfths      { @extend .pull-_#{$namespace}two-thirds; }
-    .pull-_#{$namespace}nine-twelfths       { @extend .pull-_#{$namespace}three-quarters; }
-    .pull-_#{$namespace}ten-twelfths        { @extend .pull-_#{$namespace}five-sixths; }
-    .pull-_#{$namespace}eleven-twelfths     { right:91.666%; }
+    .pull_-#{$namespace}one-twelfth         { right:8.333%; }
+    .pull_-#{$namespace}two-twelfths        { @extend .pull_-#{$namespace}one-sixth; }
+    .pull_-#{$namespace}three-twelfths      { @extend .pull_-#{$namespace}one-quarter; }
+    .pull_-#{$namespace}four-twelfths       { @extend .pull_-#{$namespace}one-third; }
+    .pull_-#{$namespace}five-twelfths       { right:41.666% }
+    .pull_-#{$namespace}six-twelfths        { @extend .pull_-#{$namespace}one-half; }
+    .pull_-#{$namespace}seven-twelfths      { right:58.333%; }
+    .pull_-#{$namespace}eight-twelfths      { @extend .pull_-#{$namespace}two-thirds; }
+    .pull_-#{$namespace}nine-twelfths       { @extend .pull_-#{$namespace}three-quarters; }
+    .pull_-#{$namespace}ten-twelfths        { @extend .pull_-#{$namespace}five-sixths; }
+    .pull_-#{$namespace}eleven-twelfths     { right:91.666%; }
 }
 
 @if $pull == true{
@@ -100,7 +100,7 @@
 /**
  * Not a particularly great selector, but the DRYest way to do things.
  */
-[class*="pull-_"]{ position:relative; }
+[class*="pull_-"]{ position:relative; }
 
 @include pull-setup();
 
