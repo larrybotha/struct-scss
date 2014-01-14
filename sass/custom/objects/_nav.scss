@@ -83,7 +83,10 @@
       border: 1px solid $base-ui-color;
 			opacity: 0;
       z-index: -1;
-			@include transition(opacity 150ms ease-in-out);
+			@include transition(
+				z-index 150ms linear 300ms,
+				opacity 150ms ease-in-out
+			);
 
 			.ie8 & {
 				display: none;
@@ -103,6 +106,7 @@
 			&:focus {
 				opacity: 1;
 				z-index: 100;
+				@include transition(all 150ms ease-in-out);
 
 				.ie8 & {
 					display: block;
