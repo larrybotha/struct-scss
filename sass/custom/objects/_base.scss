@@ -5,3 +5,14 @@
  * This section houses styles for the base elements of the page, generally body and
  * html
  */
+
+
+/**
+ * get 60fps scrolling by disabling pointer events:
+ * http://www.thecssninja.com/javascript/pointer-events-60fps
+ */
+.disable-hover,
+.disable-hover * {
+	pointer-events: none !important;
+}
+
