@@ -42,6 +42,8 @@ input[type="radio"] {
 
 
 
+@if $use-icons == true {
+
 /*------------------------------------*\
     $CUSTOM RADIOS & CHECKBOXES
 \*------------------------------------*/
@@ -66,3 +68,5 @@ input:checked + label {
   & > .radio_-custom:before { content: "\e011";}
   & > .checkbox_-custom:before { content: "\e001";}
 }
+
+} // endif
