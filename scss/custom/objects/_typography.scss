@@ -38,6 +38,46 @@ h1, h2, h3, h4, h5, h6 {
 
 
 /*------------------------------------*\
+		$ICONS
+\*------------------------------------*/
+/*
+ * Enable icons in vars.scss with $use-icons: true;
+ *
+ * Use the Unicode Private Use Area (PUA) to ensure screen readers do not
+ * read off random characters that represent icons
+ */
+
+/* WEB APPLICATION ICONS U+e0xxx */
+$app-icons: (
+menu:     "\e000",
+grid:     "\e010",
+expand:   "\e020",
+close:    "\e030"
+);
+
+@each $icon-name, $icon-uni in $app-icons {
+	.icon-#{$icon-name} {
+		content: "#{$icon-uni}";
+	}
+}
+
+
+
+
+
+/* DIRECTIONAL ICONS U+e2xxx */
+
+
+
+
+
+/* SOCIAL ICONS U+e3xxx */
+
+
+
+
+
+/*------------------------------------*\
     $MODIFIERS
 \*------------------------------------*/
 /**
