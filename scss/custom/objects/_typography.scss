@@ -56,7 +56,7 @@ $app-icons: (
 );
 
 @each $icon-name, $icon-uni in $app-icons {
-	.icon-#{$icon-name} {
+	.icon-#{$icon-name}:before {
 		content: "#{$icon-uni}";
 	}
 }
