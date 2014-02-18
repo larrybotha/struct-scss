@@ -7,6 +7,11 @@
 %menu-toggle {
   display: none;
 
+	// prevent firefox from showing a dotted border
+	&:focus {
+		outline:none;
+	}
+
   @include media-query(palm) {
     display: inline-block;
   }
