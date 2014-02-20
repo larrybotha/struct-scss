@@ -80,54 +80,54 @@ button.display_-block {
 /**
  * Add/remove margins
  */
-.push           { @include px-and-rem(margin,        $base-spacing-unit);}
-.push_-top      { @include px-and-rem(margin-top,    $base-spacing-unit);}
-.push_-right    { @include px-and-rem(margin-right,  $base-spacing-unit);}
-.push_-bottom   { @include px-and-rem(margin-bottom, $base-spacing-unit);}
-.push_-left     { @include px-and-rem(margin-left,   $base-spacing-unit);}
-.push_-ends     { @include px-and-rem(margin-top,    $base-spacing-unit); @include px-and-rem(margin-bottom, $base-spacing-unit);}
-.push_-sides    { @include px-and-rem(margin-right,  $base-spacing-unit); @include px-and-rem(margin-left,  $base-spacing-unit);}
+%push           { @include px-and-rem(margin,        $base-spacing-unit);}
+%push_-top      { @include px-and-rem(margin-top,    $base-spacing-unit);}
+%push_-right    { @include px-and-rem(margin-right,  $base-spacing-unit);}
+%push_-bottom   { @include px-and-rem(margin-bottom, $base-spacing-unit);}
+%push_-left     { @include px-and-rem(margin-left,   $base-spacing-unit);}
+%push_-ends     { @include px-and-rem(margin-top,    $base-spacing-unit); @include px-and-rem(margin-bottom, $base-spacing-unit);}
+%push_-sides    { @include px-and-rem(margin-right,  $base-spacing-unit); @include px-and-rem(margin-left,  $base-spacing-unit);}
 
-.push-small          { @include px-and-rem(margin,        $base-spacing-unit - .5);}
-.push-small_-top     { @include px-and-rem(margin-top,    $base-spacing-unit - .5);}
-.push-small_-right   { @include px-and-rem(margin-right,  $base-spacing-unit - .5);}
-.push-small_-bottom  { @include px-and-rem(margin-bottom, $base-spacing-unit - .5);}
-.push-small_-left    { @include px-and-rem(margin-left,   $base-spacing-unit - .5);}
-.push-small_-ends    { @include px-and-rem(margin-top,    $base-spacing-unit - .5); @include px-and-rem(margin-bottom, $base-spacing-unit - .5);}
-.push-small_-sides   { @include px-and-rem(margin-right,  $base-spacing-unit - .5); @include px-and-rem(margin-left, $base-spacing-unit - .5);}
+%push-small          { @include px-and-rem(margin,        $base-spacing-unit - .5);}
+%push-small_-top     { @include px-and-rem(margin-top,    $base-spacing-unit - .5);}
+%push-small_-right   { @include px-and-rem(margin-right,  $base-spacing-unit - .5);}
+%push-small_-bottom  { @include px-and-rem(margin-bottom, $base-spacing-unit - .5);}
+%push-small_-left    { @include px-and-rem(margin-left,   $base-spacing-unit - .5);}
+%push-small_-ends    { @include px-and-rem(margin-top,    $base-spacing-unit - .5); @include px-and-rem(margin-bottom, $base-spacing-unit - .5);}
+%push-small_-sides   { @include px-and-rem(margin-right,  $base-spacing-unit - .5); @include px-and-rem(margin-left, $base-spacing-unit - .5);}
 
-.flush          { margin:       0;}
-.flush_-top     { margin-top:   0;}
-.flush_-right   { margin-right: 0;}
-.flush_-bottom  { margin-bottom:0;}
-.flush_-left    { margin-left:  0;}
-.flush_-ends    { margin-top:   0; margin-bottom:0;}
-.flush_-sides   { margin-right: 0; margin-left:  0;}
+%flush          { margin:       0;}
+%flush_-top     { margin-top:   0;}
+%flush_-right   { margin-right: 0;}
+%flush_-bottom  { margin-bottom:0;}
+%flush_-left    { margin-left:  0;}
+%flush_-ends    { margin-top:   0; margin-bottom:0;}
+%flush_-sides   { margin-right: 0; margin-left:  0;}
 
 
 /**
  * Add/remove paddings
  */
-.soft           { @include px-and-rem(padding,        $base-spacing-unit);}
-.soft_-top      { @include px-and-rem(padding-top,    $base-spacing-unit);}
-.soft_-right    { @include px-and-rem(padding-right,  $base-spacing-unit);}
-.soft_-bottom   { @include px-and-rem(padding-bottom, $base-spacing-unit);}
-.soft_-left     { @include px-and-rem(padding-left,   $base-spacing-unit);}
-.soft_-ends     { @include px-and-rem(padding-top,    $base-spacing-unit); @include px-and-rem(padding-bottom, $base-spacing-unit);}
-.soft_-sides    { @include px-and-rem(padding-right,  $base-spacing-unit); @include px-and-rem(padding-left,   $base-spacing-unit);}
+%soft           { @include px-and-rem(padding,        $base-spacing-unit);}
+%soft_-top      { @include px-and-rem(padding-top,    $base-spacing-unit);}
+%soft_-right    { @include px-and-rem(padding-right,  $base-spacing-unit);}
+%soft_-bottom   { @include px-and-rem(padding-bottom, $base-spacing-unit);}
+%soft_-left     { @include px-and-rem(padding-left,   $base-spacing-unit);}
+%soft_-ends     { @include px-and-rem(padding-top,    $base-spacing-unit); @include px-and-rem(padding-bottom, $base-spacing-unit);}
+%soft_-sides    { @include px-and-rem(padding-right,  $base-spacing-unit); @include px-and-rem(padding-left,   $base-spacing-unit);}
 
-.soft-small           { @include px-and-rem(padding,        $base-spacing-unit - .5);}
-.soft-small_-top      { @include px-and-rem(padding-top,    $base-spacing-unit - .5);}
-.soft-small_-right    { @include px-and-rem(padding-right,  $base-spacing-unit - .5);}
-.soft-small_-bottom   { @include px-and-rem(padding-bottom, $base-spacing-unit - .5);}
-.soft-small_-left     { @include px-and-rem(padding-left,   $base-spacing-unit - .5);}
-.soft-small_-ends     { @include px-and-rem(padding-top,    $base-spacing-unit - .5); @include px-and-rem(padding-bottom, $base-spacing-unit - .5);}
-.soft-small_-sides    { @include px-and-rem(padding-right,  $base-spacing-unit - .5); @include px-and-rem(padding-left,   $base-spacing-unit - .5);}
+%soft-small           { @include px-and-rem(padding,        $base-spacing-unit - .5);}
+%soft-small_-top      { @include px-and-rem(padding-top,    $base-spacing-unit - .5);}
+%soft-small_-right    { @include px-and-rem(padding-right,  $base-spacing-unit - .5);}
+%soft-small_-bottom   { @include px-and-rem(padding-bottom, $base-spacing-unit - .5);}
+%soft-small_-left     { @include px-and-rem(padding-left,   $base-spacing-unit - .5);}
+%soft-small_-ends     { @include px-and-rem(padding-top,    $base-spacing-unit - .5); @include px-and-rem(padding-bottom, $base-spacing-unit - .5);}
+%soft-small_-sides    { @include px-and-rem(padding-right,  $base-spacing-unit - .5); @include px-and-rem(padding-left,   $base-spacing-unit - .5);}
 
-.hard           { padding:       0;}
-.hard_-top      { padding-top:   0;}
-.hard_-right    { padding-right: 0;}
-.hard_-bottom   { padding-bottom:0;}
-.hard_-left     { padding-left:  0;}
-.hard_-ends     { padding-top:   0; padding-bottom:0;}
-.hard_-sides    { padding-right: 0; padding-left:  0;}
+%hard           { padding:       0;}
+%hard_-top      { padding-top:   0;}
+%hard_-right    { padding-right: 0;}
+%hard_-bottom   { padding-bottom:0;}
+%hard_-left     { padding-left:  0;}
+%hard_-ends     { padding-top:   0; padding-bottom:0;}
+%hard_-sides    { padding-right: 0; padding-left:  0;}
