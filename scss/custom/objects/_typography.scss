@@ -103,6 +103,18 @@ $app-icons: (
 .align_center  { @extend %text_-center;}
 .align_right   { @extend %text_-right;}
 
+img.align-left {
+	float:left;
+	@include px-and-rem(margin-right, 1);
+	@include px-and-rem(margin-bottom, 1);
+}
+
+img.align-right {
+	float:right;
+	@include px-and-rem(margin-left, 1);
+	@include px-and-rem(margin-bottom, 1);
+}
+
 img.align_center {
   display: block;
   margin: 0 auto;
