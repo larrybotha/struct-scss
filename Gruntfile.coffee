@@ -28,7 +28,7 @@ module.exports = (grunt) ->
 		sass:
 			options:
 				quiet: false,
-				cacheLocation: '<%= pkg.path.scss %>/.sass-cache'
+				cacheLocation: 'scss/.sass-cache'
 			dist:
 				files:
 					'style.css': 'scss/style.scss'
