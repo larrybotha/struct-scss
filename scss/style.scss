@@ -17,7 +17,7 @@ might want to share.
  * Setup
  */
 @import "custom/vars";
-@import "framework/framework";
+@import "core/framework";
 @import "custom/custom";
 
 
@@ -27,4 +27,4 @@ might want to share.
 /**
  * import print styles
  */
-@import "framework/objects/print";
+@import "core/objects/print";

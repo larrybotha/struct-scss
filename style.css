@@ -356,6 +356,23 @@ might want to share.
  * twitter.com/redclov3r/status/250301539321798657
  */
 /**
+ * This mixin allows for vendor prefixing of gradients, and allows for multiple
+ * backgrounds. It also allows you to define with which property you would like
+ * to apply your gradients.
+ * i.e. background / background-image / etc.
+ *
+ * It supports both the old and new syntaxes - but be warned - using the official
+ * 'to [direction]' syntax will result in browsers supporting only the old webkit
+ * syntax not rendering a gradient at all.
+ *
+ * https: *developer.mozilla.org/en-US/docs/CSS/Tutorials/Using_CSS_gradients
+
+ * Example:
+   @include gradient(background,
+ 	  									linear-gradient(180deg, transparent, hsla(0, 0%, 100%, .1) 10px 10px)
+                     );
+ */
+/**
  * Style any number of headings in one fell swoop, e.g.:
  *
    .foo{
@@ -899,16 +916,17 @@ pre {
  * treatment regarding vertical rhythm.
  */
 hr {
-  margin-bottom: 22px;
-  margin-bottom: 1.375rem; }
+  margin-top: 24px;
+  margin-top: 1.5rem;
+  margin-bottom: 24px;
+  margin-bottom: 1.5rem; }
 
 /**
  * Where `margin-left` is concerned we want to try and indent certain elements
  * by a consistent amount. Define that amount once, here.
  */
 ul, ol, dd {
-  margin-left: 48px;
-  margin-left: 3rem; }
+  margin-left: 1.5em; }
 
 /**
  * Base styles; unclassed HTML elements etc.
@@ -918,17 +936,16 @@ ul, ol, dd {
 \*------------------------------------*/
 html {
   font-size: 100%;
-  line-height: 1.5;
-  overflow-y: scroll;
   min-height: 100%; }
 
-html, button, input, select, textarea {
-  font-family: sans-serif, sans-serif;
+html, body, button, input, select, textarea {
+  font-family: sans-serif;
   color: #666666; }
 
 body {
   background-color: #fff;
   font-size: 1em;
+  line-height: 1.5;
   margin: 0; }
 
 /*
@@ -936,12 +953,12 @@ body {
  * These selection declarations have to be separate
  */
 ::-moz-selection {
-  background: #fe57a1;
+  background: #333333;
   color: #fff;
   text-shadow: none; }
 
 ::selection {
-  background: #fe57a1;
+  background: #333333;
   color: #fff;
   text-shadow: none; }
 
@@ -1048,7 +1065,7 @@ hgroup .hN {
  * Inline quotes.
  */
 q {
-  quotes: "\2018" "\2019" "\201C" "\201D"; }
+  quotes: "\2018" "\2019" "\201C " "\201D "; }
   q:before {
     content: "\2018";
     content: open-quote; }
@@ -1063,15 +1080,15 @@ q {
     content: close-quote; }
 
 blockquote {
-  quotes: "\201C" "\201D"; }
+  quotes: "\201C " "\201D "; }
   blockquote p:before {
-    content: "\201C";
+    content: "\201C ";
     content: open-quote; }
   blockquote p:after {
     content: "";
     content: no-close-quote; }
   blockquote p:last-of-type:after {
-    content: "\201D";
+    content: "\201D ";
     content: close-quote; }
   blockquote q:before {
     content: "\2018";
@@ -1186,26 +1203,26 @@ img, embed, object, video {
 /**
  * Rounded images.
  */
-.img--round {
+.img_-round {
   border-radius: 4px; }
 
 /**
  * Image placement variations.
  */
-.img--right {
+.img_-right {
   float: right;
-  margin-bottom: 24px;
-  margin-left: 24px; }
+  margin-bottom: 1.5;
+  margin-left: 1.5; }
 
-.img--left {
+.img_-left {
   float: left;
-  margin-right: 24px;
-  margin-bottom: 24px; }
+  margin-right: 1.5;
+  margin-bottom: 1.5; }
 
-.img--center {
+.img_-center {
   display: block;
   margin-right: auto;
-  margin-bottom: 24px;
+  margin-bottom: 1.5;
   margin-left: auto; }
 
 /**
@@ -1214,14 +1231,14 @@ img, embed, object, video {
  * Please note, these will not work too nicely with fluid images and will
  * distort when resized below a certain width. Use with caution.
  */
-.img--short {
-  height: 120px; }
+.img_-short {
+  height: 7.5; }
 
-.img--medium {
-  height: 240px; }
+.img_-medium {
+  height: 15; }
 
-.img--tall {
-  height: 360px; }
+.img_-tall {
+  height: 22.5; }
 
 /**
  * Images in `figure` elements.
@@ -1237,6 +1254,7 @@ figure > img {
  */
 li > ul,
 li > ol {
+  margin-top: 0;
   margin-bottom: 0; }
 
 /**
@@ -1252,7 +1270,7 @@ li > ol {
 /**
  * We have a lot at our disposal for making very complex table constructs, e.g.:
  *
-   <table class="table--bordered  table--striped  table--data">
+   <table class="table_-bordered  table_-striped  table_-data">
      <colgroup>
        <col class=t10>
        <col class=t10>
@@ -1309,11 +1327,13 @@ table {
 th,
 td {
   padding: 6px;
+  padding: 0.375rem;
   text-align: left; }
   @media screen and (min-width: 480px) {
     th,
     td {
-      padding: 12px; } }
+      padding: 12px;
+      padding: 0.75rem; } }
 
 /**
  * Cell alignments
@@ -1426,28 +1446,28 @@ td {
 /**
  * Bordered tables
  */
-.table--bordered th,
-.table--bordered td {
+.table_-bordered th,
+.table_-bordered td {
   border: 1px solid #666666; }
-  .table--bordered th:empty,
-  .table--bordered td:empty {
+  .table_-bordered th:empty,
+  .table_-bordered td:empty {
     border: none; }
-.table--bordered thead tr:last-child th {
+.table_-bordered thead tr:last-child th {
   border-bottom-width: 2px; }
-.table--bordered tbody tr th:last-of-type {
+.table_-bordered tbody tr th:last-of-type {
   border-right-width: 2px; }
 
 /**
  * Striped tables
  */
-.table--striped tbody tr:nth-of-type(odd) {
+.table_-striped tbody tr:nth-of-type(odd) {
   background-color: #ffc;
   /* Override this color in your theme stylesheet */ }
 
 /**
  * Data table
  */
-.table--data {
+.table_-data {
   font: 12px/1.5 sans-serif; }
 
 /*------------------------------------*\
@@ -1459,7 +1479,7 @@ td {
  *
  */
 fieldset {
-  padding: 24px; }
+  padding: 1.5; }
 
 /**
  * Text inputs
@@ -1539,7 +1559,7 @@ input[type="checkbox"] {
    </li>
  *
  */
-.label--full {
+.label_-full {
   display: block; }
 
 /**
@@ -1658,15 +1678,16 @@ input[type="checkbox"] {
 /**
  * Grid wrapper
  */
-.grid, .grid--rev, .grid--full, .grid--center, .gw {
+.grid, .grid_-rev, .grid_-full, .grid_-center, .gw {
   margin-left: -24px;
+  margin-left: -1.5rem;
   list-style: none;
   margin-bottom: 0; }
 
 /**
  * Very infrequently occuring grid wrappers as children of grid wrappers.
  */
-.grid > .grid, .grid--rev > .grid, .grid--full > .grid, .grid--center > .grid, .gw > .grid, .grid > .grid--rev, .grid--rev > .grid--rev, .grid--full > .grid--rev, .grid--center > .grid--rev, .gw > .grid--rev, .grid > .grid--full, .grid--rev > .grid--full, .grid--full > .grid--full, .grid--center > .grid--full, .gw > .grid--full, .grid > .grid--center, .grid--rev > .grid--center, .grid--full > .grid--center, .grid--center > .grid--center, .gw > .grid--center, .grid > .gw, .grid--rev > .gw, .grid--full > .gw, .grid--center > .gw, .gw > .gw {
+.grid > .grid, .grid_-rev > .grid, .grid_-full > .grid, .grid_-center > .grid, .gw > .grid, .grid > .grid_-rev, .grid_-rev > .grid_-rev, .grid_-full > .grid_-rev, .grid_-center > .grid_-rev, .gw > .grid_-rev, .grid > .grid_-full, .grid_-rev > .grid_-full, .grid_-full > .grid_-full, .grid_-center > .grid_-full, .gw > .grid_-full, .grid > .grid_-center, .grid_-rev > .grid_-center, .grid_-full > .grid_-center, .grid_-center > .grid_-center, .gw > .grid_-center, .grid > .gw, .grid_-rev > .gw, .grid_-full > .gw, .grid_-center > .gw, .gw > .gw {
   margin-left: 0; }
 
 /**
@@ -1676,33 +1697,34 @@ input[type="checkbox"] {
   display: inline-block;
   width: 100%;
   padding-left: 24px;
+  padding-left: 1.5rem;
   vertical-align: top; }
 
 /**
  * Reversed grids
  */
-.grid--rev {
+.grid_-rev {
   direction: rtl;
   text-align: right; }
-  .grid--rev > .grid__item, .grid--rev > .g {
+  .grid_-rev > .grid__item, .grid_-rev > .g {
     direction: ltr;
     text-align: left; }
 
 /**
  * Gutterless grids have all the properties of regular grids, minus any spacing.
  */
-.grid--full {
+.grid_-full {
   margin-left: 0; }
-  .grid--full > .grid__item, .grid--full > .g {
+  .grid_-full > .grid__item, .grid_-full > .g {
     padding-left: 0; }
 
 /**
  * Centered grids align grid items centrally without needing to use push or pull
  * classes.
  */
-.grid--center {
+.grid_-center {
   text-align: center; }
-  .grid--center > .grid__item, .grid--center > .g {
+  .grid_-center > .grid__item, .grid_-center > .g {
     text-align: left; }
 
 /*------------------------------------*\
@@ -2380,17 +2402,41 @@ input[type="checkbox"] {
  * import custom styles
  */
 /*------------------------------------*\
+    $BASE
+\*------------------------------------*/
+/**
+ * This section houses styles for the base elements of the page, generally body and
+ * html
+ */
+/**
+ * get 60fps scrolling by disabling pointer events:
+ * http://www.thecssninja.com/javascript/pointer-events-60fps
+ */
+.disable-hover,
+.disable-hover * {
+  pointer-events: none !important; }
+
+/*------------------------------------*\
+    $IMAGES
+\*------------------------------------*/
+/**
+ * Fix SVG images not scaling proportionately in IE9, IE10, IE11
+ */
+img[src*=svg] {
+  width/*\**/: 100% \9; }
+
+/*------------------------------------*\
     $LINKS
 \*------------------------------------*/
 a {
   color: #333333;
   text-decoration: none;
-  -webkit-transition: all 100ms ease-in-out;
-  -moz-transition: all 100ms ease-in-out;
-  -o-transition: all 100ms ease-in-out;
-  transition: all 100ms ease-in-out;
+  -webkit-transition: all 150ms ease-in-out;
+  -moz-transition: all 150ms ease-in-out;
+  -o-transition: all 150ms ease-in-out;
+  transition: all 150ms ease-in-out;
   outline: 0; }
-  a:hover {
+  a:hover, a:focus {
     color: #8c8c8c; }
   a:active {
     color: #1a1a1a;
@@ -2416,20 +2462,16 @@ a {
 /*input:valid, textarea:valid {}
 input:invalid, textarea:invalid {}*/
 ::-webkit-input-placeholder {
-  color: #666666;
-  text-transform: uppercase; }
+  color: #666666; }
 
 :-moz-placeholder {
-  color: #666666;
-  text-transform: uppercase; }
+  color: #666666; }
 
 :-o-placeholder {
-  color: #666666;
-  text-transform: uppercase; }
+  color: #666666; }
 
 :-ms-placeholder {
-  color: #666666;
-  text-transform: uppercase; }
+  color: #666666; }
 
 label {
   cursor: pointer; }
@@ -2443,29 +2485,14 @@ button, input, select, textarea {
 input, textarea {
   margin-bottom: 16px;
   margin-bottom: 1rem;
+  height: auto;
+  line-height: normal;
   padding: .25em;
   border: 1px solid #666666; }
 
-/*------------------------------------*\
-    $CUSTOM RADIOS & CHECKBOXES
-\*------------------------------------*/
-.radio-custom:before,
-.checkbox-custom:before {
-  margin-bottom: .5em; }
-
-/* .icon-check-empty */
-.radio-custom:before {
-  content: "\e010"; }
-
-.checkbox-custom:before {
-  content: "\e000"; }
-
-/* .icon-check */
-input:checked + label > .radio-custom:before {
-  content: "\e011"; }
-
-input:checked + label > .checkbox-custom:before {
-  content: "\e001"; }
+input[type="checkbox"],
+input[type="radio"] {
+  margin-bottom: 0; }
 
 /*------------------------------------*\
     $FONTS
@@ -2476,7 +2503,6 @@ input:checked + label > .checkbox-custom:before {
   src: url("fnt/base-icon-font/base-icon-font.eot?#iefix") format("embedded-opentype"), url("fnt/base-icon-font/base-icon-font.woff") format("woff"), url("fnt/base-icon-font/base-icon-font.ttf") format("truetype"), url("fnt/base-icon-font/base-icon-font.svg#base-icon-font") format("svg");
   font-weight: normal;
   font-style: normal; }
-
 /*------------------------------------*\
     $MAIN STRUCTURE
 \*------------------------------------*/
@@ -2499,70 +2525,107 @@ input:checked + label > .checkbox-custom:before {
 /*------------------------------------*\
     $NAVIGATION
 \*------------------------------------*/
-.menu-item {
+/**
+ * placeholder for button that toggles nav
+ */
+/**
+ * placeholder for menu container used to hide menus on mobile / tablet
+ */
+.menu {
+  /**
+   * animate menu for mobiles and tablets
+   */ }
+  @media only screen and (max-width: 480px) {
+    .menu {
+      -webkit-transition: all 250ms ease-in-out;
+      -moz-transition: all 250ms ease-in-out;
+      -o-transition: all 250ms ease-in-out;
+      transition: all 250ms ease-in-out;
+      -webkit-transform: translate3d(0, 0, 0);
+      -moz-transform: translate3d(0, 0, 0);
+      -ms-transform: translate3d(0, 0, 0);
+      -o-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0); } }
+
+.menu__item {
   position: relative;
   display: inline-block; }
   @media only screen and (max-width: 480px) {
-    .menu-item {
+    .menu__item {
       display: block; } }
+  .menu__item a {
+    display: block;
+    color: #333333;
+    line-height: 3;
+    padding: 0 1em; }
 
-.menu-item a {
-  display: block;
-  color: #333333;
-  padding: .5em 1em; }
+.menu__item_-current > a, .menu__item_-current > a:hover, .menu__item_-current > a:focus, .menu__item_-current > a:active,
+.menu__item_-current-parent > a,
+.menu__item_-current-parent > a:hover,
+.menu__item_-current-parent > a:focus,
+.menu__item_-current-parent > a:active {
+  cursor: default; }
 
-.sub-menu {
+.menu__sub {
   position: absolute;
-  display: none;
   background-color: #fff;
-  padding-top: 12px;
-  padding-top: 12px;
-  padding-bottom: 12px;
-  padding-bottom: 12px;
   border: 1px solid #666666;
-  z-index: 100; }
+  opacity: 0;
+  z-index: -1;
+  -webkit-transition: z-index 150ms linear 300ms, opacity 150ms ease-in-out;
+  -moz-transition: z-index 150ms linear 300ms, opacity 150ms ease-in-out;
+  -o-transition: z-index 150ms linear 300ms, opacity 150ms ease-in-out;
+  transition: z-index 150ms linear 300ms, opacity 150ms ease-in-out; }
+  .ie8 .menu__sub {
+    display: none; }
   @media only screen and (max-width: 480px) {
-    .sub-menu {
+    .menu__sub {
+      display: block;
       position: relative;
-      border: 0; } }
+      border: 0;
+      opacity: 1;
+      z-index: 0; } }
+  .menu__item a:hover + .menu__sub, .menu__item a:focus + .menu__sub, .menu__sub:hover, .menu__sub:focus {
+    opacity: 1;
+    z-index: 100;
+    -webkit-transition: all 150ms ease-in-out;
+    -moz-transition: all 150ms ease-in-out;
+    -o-transition: all 150ms ease-in-out;
+    transition: all 150ms ease-in-out; }
+    .ie8 .menu__item a:hover + .menu__sub, .ie8 .menu__item a:focus + .menu__sub, .ie8 .menu__sub:hover, .ie8 .menu__sub:focus {
+      display: block; }
+  .menu__sub a {
+    min-width: 225px;
+    white-space: nowrap; }
+    @media only screen and (max-width: 480px) {
+      .menu__sub a {
+        white-space: normal;
+        min-width: auto;
+        padding: 0 1.5em; } }
 
-.sub-menu a {
-  padding-left: 2em; }
-  @media only screen and (min-width: 481px) {
-    .sub-menu a {
-      min-width: 225px;
-      padding-left: 1em;
-      white-space: nowrap; } }
-
-@media only screen and (max-width: 480px) {
-  .sub-menu .sub-menu a {
-    padding-left: 4em; } }
-
-.sub-menu .sub-menu {
+.menu__sub .menu__sub {
   top: 0;
-  top: -18px;
-  top: -18px;
   left: 100%; }
   @media only screen and (max-width: 480px) {
-    .sub-menu .sub-menu {
+    .menu__sub .menu__sub {
       top: auto;
       left: auto; } }
 
-.menu-item a:hover + .sub-menu,
-.sub-menu:hover {
-  display: block; }
+@media only screen and (max-width: 480px) {
+  .menu__sub .menu__sub a {
+    padding-left: 2.5em; } }
 
 /*------------------------------------*\
     $BUTTONS
 \*------------------------------------*/
-.btn, .btn--primary {
+.btn, .btn_-primary {
   color: white; }
 
-.btn--primary {
+.btn_-primary {
   background-color: #333333; }
-  .btn--primary:hover {
+  .btn_-primary:hover, .btn_-primary:focus {
     background-color: #666666; }
-  .btn--primary:active {
+  .btn_-primary:active {
     background-color: #1a1a1a; }
 
 /**
@@ -2601,6 +2664,30 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1; }
 
 /*------------------------------------*\
+		$ICONS
+\*------------------------------------*/
+/*
+ * Enable icons in vars.scss with $use-icons: true;
+ *
+ * Use the Unicode Private Use Area (PUA) to ensure screen readers do not
+ * read off random characters that represent icons
+ */
+/* WEB APPLICATION ICONS U+e0xxx */
+.icon-menu:before {
+  content: "\e000"; }
+
+.icon-grid:before {
+  content: "\e010"; }
+
+.icon-expand:before {
+  content: "\e020"; }
+
+.icon-close:before {
+  content: "\e030"; }
+
+/* DIRECTIONAL ICONS U+e2xxx */
+/* SOCIAL ICONS U+e3xxx */
+/*------------------------------------*\
     $MODIFIERS
 \*------------------------------------*/
 /**
@@ -2613,44 +2700,44 @@ h1, h2, h3, h4, h5, h6 {
  * font-family modifiers
  */
 /**
+ * alignment modifiers
+ */
+.align_left {
+  text-align: left; }
+
+.align_center {
+  text-align: center; }
+
+.align_right {
+  text-align: right; }
+
+img.align-left {
+  float: left;
+  margin-right: 16px;
+  margin-right: 1rem;
+  margin-bottom: 16px;
+  margin-bottom: 1rem; }
+
+img.align-right {
+  float: right;
+  margin-left: 16px;
+  margin-left: 1rem;
+  margin-bottom: 16px;
+  margin-bottom: 1rem; }
+
+img.align_center {
+  display: block;
+  margin: 0 auto; }
+
+/**
  * case modifiers
  */
-.case--upper {
-  text-transform: uppercase; }
-
-.case--lower {
-  text-transform: lowercase; }
-
-.case--normal {
-  text-transform: none; }
-
-.case--capital {
-  text-transform: capitalize; }
-
 /**
  * Font weights
  */
-.weight--light {
-  font-weight: 300; }
-
-.weight--normal {
-  font-weight: 400; }
-
-.weight--semibold {
-  font-weight: 600; }
-
 /**
  * vertical alignment modifiers
  */
-.valign--top {
-  vertical-align: top; }
-
-.valign--middle {
-  vertical-align: middle; }
-
-.valign--bottom {
-  vertical-align: bottom; }
-
 /**
  * Hide from both screenreaders and browsers: h5bp.com/u
  */
@@ -2683,8 +2770,8 @@ h1, h2, h3, h4, h5, h6 {
     overflow: visible; }
 
 @media only screen and (max-width: 480px) {
-  .accessibility--palm,
-  .visuallyhidden--palm {
+  .accessibility_-palm,
+  .visuallyhidden_-palm {
     border: 0;
     clip: rect(0 0 0 0);
     height: 1px;
@@ -2694,8 +2781,8 @@ h1, h2, h3, h4, h5, h6 {
     position: absolute;
     width: 1px; } }
 @media only screen and (min-width: 481px) and (max-width: 1023px) {
-  .accessibility--lap,
-  .visuallyhidden--lap {
+  .accessibility_-lap,
+  .visuallyhidden_-lap {
     border: 0;
     clip: rect(0 0 0 0);
     height: 1px;
@@ -2705,8 +2792,8 @@ h1, h2, h3, h4, h5, h6 {
     position: absolute;
     width: 1px; } }
 @media only screen and (min-width: 481px) {
-  .accessibility--lap-and-up,
-  .visuallyhidden--lap-and-up {
+  .accessibility_-lap-and-up,
+  .visuallyhidden_-lap-and-up {
     border: 0;
     clip: rect(0 0 0 0);
     height: 1px;
@@ -2716,8 +2803,8 @@ h1, h2, h3, h4, h5, h6 {
     position: absolute;
     width: 1px; } }
 @media only screen and (max-width: 1023px) {
-  .accessibility--portable,
-  .visuallyhidden--portable {
+  .accessibility_-portable,
+  .visuallyhidden_-portable {
     border: 0;
     clip: rect(0 0 0 0);
     height: 1px;
@@ -2727,8 +2814,8 @@ h1, h2, h3, h4, h5, h6 {
     position: absolute;
     width: 1px; } }
 @media only screen and (min-width: 1024px) {
-  .accessibility--desk,
-  .visuallyhidden--desk {
+  .accessibility_-desk,
+  .visuallyhidden_-desk {
     border: 0;
     clip: rect(0 0 0 0);
     height: 1px;
@@ -2738,8 +2825,8 @@ h1, h2, h3, h4, h5, h6 {
     position: absolute;
     width: 1px; } }
 @media only screen and (min-width: 1200px) {
-  .accessibility--desk-wide,
-  .visuallyhidden--desk-wide {
+  .accessibility_-desk-wide,
+  .visuallyhidden_-desk-wide {
     border: 0;
     clip: rect(0 0 0 0);
     height: 1px;
@@ -2774,226 +2861,23 @@ h1, h2, h3, h4, h5, h6 {
 /*
  * Display level modifiers
  */
-.display--block {
+.display_-block {
   display: block; }
 
-input.display--block,
-textarea.display--block,
-button.display--block {
+input.display_-block,
+textarea.display_-block,
+button.display_-block {
   width: 100%; }
-
-.display--iblock {
-  display: inline-block; }
-
-.display--table, .display--table-full {
-  display: table; }
-
-.display--itable {
-  display: inline-table; }
-
-.display--table, .display--table-full,
-.display--itable {
-  height: 100%; }
-
-.display--table-full {
-  width: 100%; }
-
-.display--table__inner {
-  display: table-cell;
-  vertical-align: middle; }
 
 /**
  * Add/remove floats
  */
-.float--right {
-  float: right; }
-
-.float--left {
-  float: left; }
-
-.float--none {
-  float: none; }
-
 /**
  * Add/remove margins
  */
-.push {
-  margin: 24px;
-  margin: 24px; }
-
-.push--top {
-  margin-top: 24px;
-  margin-top: 24px; }
-
-.push--right {
-  margin-right: 24px;
-  margin-right: 24px; }
-
-.push--bottom {
-  margin-bottom: 24px;
-  margin-bottom: 24px; }
-
-.push--left {
-  margin-left: 24px;
-  margin-left: 24px; }
-
-.push--ends {
-  margin-top: 24px;
-  margin-top: 24px;
-  margin-bottom: 24px;
-  margin-bottom: 24px; }
-
-.push--sides {
-  margin-right: 24px;
-  margin-right: 24px;
-  margin-left: 24px;
-  margin-left: 24px; }
-
-.push-small {
-  margin: 23.5px;
-  margin: 23.5px; }
-
-.push-small--top {
-  margin-top: 23.5px;
-  margin-top: 23.5px; }
-
-.push-small--right {
-  margin-right: 23.5px;
-  margin-right: 23.5px; }
-
-.push-small--bottom {
-  margin-bottom: 23.5px;
-  margin-bottom: 23.5px; }
-
-.push-small--left {
-  margin-left: 23.5px;
-  margin-left: 23.5px; }
-
-.push-small--ends {
-  margin-top: 23.5px;
-  margin-top: 23.5px;
-  margin-bottom: 23.5px;
-  margin-bottom: 23.5px; }
-
-.push-small--sides {
-  margin-right: 23.5px;
-  margin-right: 23.5px;
-  margin-left: 23.5px;
-  margin-left: 23.5px; }
-
-.flush {
-  margin: 0; }
-
-.flush--top {
-  margin-top: 0; }
-
-.flush--right {
-  margin-right: 0; }
-
-.flush--bottom {
-  margin-bottom: 0; }
-
-.flush--left {
-  margin-left: 0; }
-
-.flush--ends {
-  margin-top: 0;
-  margin-bottom: 0; }
-
-.flush--sides {
-  margin-right: 0;
-  margin-left: 0; }
-
 /**
  * Add/remove paddings
  */
-.soft {
-  padding: 24px;
-  padding: 24px; }
-
-.soft--top {
-  padding-top: 24px;
-  padding-top: 24px; }
-
-.soft--right {
-  padding-right: 24px;
-  padding-right: 24px; }
-
-.soft--bottom {
-  padding-bottom: 24px;
-  padding-bottom: 24px; }
-
-.soft--left {
-  padding-left: 24px;
-  padding-left: 24px; }
-
-.soft--ends {
-  padding-top: 24px;
-  padding-top: 24px;
-  padding-bottom: 24px;
-  padding-bottom: 24px; }
-
-.soft--sides {
-  padding-right: 24px;
-  padding-right: 24px;
-  padding-left: 24px;
-  padding-left: 24px; }
-
-.soft-small {
-  padding: 23.5px;
-  padding: 23.5px; }
-
-.soft-small--top {
-  padding-top: 23.5px;
-  padding-top: 23.5px; }
-
-.soft-small--right {
-  padding-right: 23.5px;
-  padding-right: 23.5px; }
-
-.soft-small--bottom {
-  padding-bottom: 23.5px;
-  padding-bottom: 23.5px; }
-
-.soft-small--left {
-  padding-left: 23.5px;
-  padding-left: 23.5px; }
-
-.soft-small--ends {
-  padding-top: 23.5px;
-  padding-top: 23.5px;
-  padding-bottom: 23.5px;
-  padding-bottom: 23.5px; }
-
-.soft-small--sides {
-  padding-right: 23.5px;
-  padding-right: 23.5px;
-  padding-left: 23.5px;
-  padding-left: 23.5px; }
-
-.hard {
-  padding: 0; }
-
-.hard--top {
-  padding-top: 0; }
-
-.hard--right {
-  padding-right: 0; }
-
-.hard--bottom {
-  padding-bottom: 0; }
-
-.hard--left {
-  padding-left: 0; }
-
-.hard--ends {
-  padding-top: 0;
-  padding-bottom: 0; }
-
-.hard--sides {
-  padding-right: 0;
-  padding-left: 0; }
-
 /**
  * import vendor styles
  */
