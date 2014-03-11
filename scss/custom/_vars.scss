@@ -105,17 +105,21 @@ $font-icon-path     : "fnt/base-icon-font";
 $font-icon-filename : "base-icon-font";
 $font-icon-stack    : $font-icon;
 
-/**
- * Base font face
-  $font-base:           "[font-name]";
-  $font-base-path:      "fnt/[path/to/font]";
-  $font-base-filename:  "[font-file-name-without-extension]";
-  $font-base-stack:     $font-base, Arial, sans-serif;
 
-  $font-base-filename-i:   "[italic-font-file-name-without-extension]"; // italic
-  $font-base-filename-b:   "[bold-font-file-name-without-extension]"; // bold
-  $font-base-filename-bi:  "[bold-italic-font-file-name-without-extension]"; // bold-italic
+/**
+ * Base Font Face
  */
+$font-base:           "[font-name]";
+$font-base-path:      "../fnt/[fon-folder]";
+$font-base-filename:  "[font-file-name-without-extension]";
+$font-base-stack:     $font-base, Arial, sans-serif;
+
+/**
+ * Base Font Variations
+ */
+$font-base-filename-i:   "[italic-font-file-name-without-extension]"; // italic
+$font-base-filename-b:   "[bold-font-file-name-without-extension]"; // bold
+$font-base-filename-bi:  "[bold-italic-font-file-name-without-extension]"; // bold-italic
 
 
 
