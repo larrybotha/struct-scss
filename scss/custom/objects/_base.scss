@@ -10,7 +10,7 @@
 /**
  * Fix fatty fonts in Chrome and Firefox on Mac - http://maximilianhoffmann.com/posts/better-font-rendering-on-osx
  */
-body {
+html, body, button, input, select, textarea {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 
