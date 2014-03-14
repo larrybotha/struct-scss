@@ -29,7 +29,7 @@ input, textarea {
   height: auto;         // don't apply heights set to inputs
   line-height: normal;  // all browsers must use FF's UA !important for consistency
 	@include px-and-rem(margin-bottom, 1);
-	padding: .25em;
+	padding: .5em;
 	border: 1px solid $base-ui-color;
 }
 
