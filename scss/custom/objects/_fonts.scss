@@ -8,3 +8,38 @@
   $weight: normal,
   $style: normal
 );
+
+/**
+ * Base Font Decalrations
+ */
+@include font-face(
+	$font-base,
+	$font-base-filename,
+	$font-base-path,
+	$weight: normal,
+	$style: normal
+);
+
+	@include font-face(
+		$font-base,
+		$font-base-filename-i,
+		$font-base-path,
+		$weight: normal,
+		$style: italic
+	);
+
+	@include font-face(
+		$font-base,
+		$font-base-filename-b,
+		$font-base-path,
+		$weight: bold,
+		$style: normal
+	);
+
+	@include font-face(
+		$font-base,
+		$font-base-filename-bi,
+		$font-base-path,
+		$weight: bold,
+		$style: italic
+	);
