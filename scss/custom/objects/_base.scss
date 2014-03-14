@@ -10,13 +10,17 @@
 /**
  * Fix fatty fonts in Chrome and Firefox on Mac - http://maximilianhoffmann.com/posts/better-font-rendering-on-osx
  */
-html, body, button, input, select, textarea {
+%fix-fatty-fonts {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
 
+html, body, button, input, select, textarea {
+	// @extend %fix-fatty-fonts;
+}
+
 /**
- * Fix IE8 not showing extended headers and footers when overflowing
+ * Fix IE8 not showing extended headers and footers when overflowing horizontally
  */
 body {
 	.ie8 & {
