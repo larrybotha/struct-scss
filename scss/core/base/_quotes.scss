@@ -17,7 +17,7 @@
 /**
  * Inline quotes.
  */
-q{
+q {
     quotes:"\2018" "\2019" "#{$open-quote}" "#{$close-quote}";
 
     &:before{
@@ -39,7 +39,12 @@ q{
     }
 }
 
-blockquote{
+%blockquote_-fancy {
+    /**
+     * .4em is roughly equal to the width of the opening “ that we wish to hang.
+     */
+    text-indent:-0.41em;
+
     quotes:"#{$open-quote}" "#{$close-quote}";
 
     p:before{
@@ -75,12 +80,7 @@ blockquote{
    </blockquote>
  *
  */
-blockquote{
-    /**
-     * .4em is roughly equal to the width of the opening “ that we wish to hang.
-     */
-    text-indent:-0.41em;
-
+blockquote {
     p:first-of-type{
         margin-top:0;
     }
