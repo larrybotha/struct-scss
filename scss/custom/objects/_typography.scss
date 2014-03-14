@@ -85,10 +85,17 @@ $app-icons: (
  */
 .error { color: $clr-danger;}
 
+%fc_-primary {
+	color: $clr-primary;
+}
+
 
 /**
  * font-family modifiers
  */
+%ff_-header {
+	font-family: $font-header-stack;
+}
 
 
 /**

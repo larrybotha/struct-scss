@@ -13,10 +13,12 @@
 html, body, button, input, select, textarea {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+}
 
-	/**
-	 * Fix IE8 not showing extended headers and footers when overflowing
-	 */
+/**
+ * Fix IE8 not showing extended headers and footers when overflowing
+ */
+body {
 	.ie8 & {
 		display: table;
 	}
