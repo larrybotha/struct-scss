@@ -101,6 +101,7 @@
 			@include media-query(palm) {
 				display: block;
 				position: relative;
+				margin-left: 1.5em;
 				border: 0;
 				opacity: 1;
 				z-index: 0;
@@ -140,9 +141,3 @@
           left: auto;
         }
       }
-
-        .menu__sub .menu__sub a {
-          @include media-query(palm) {
-            padding-left: 2.5em;
-          }
-        }
