@@ -15,7 +15,6 @@ blockquote,p,address,
 table,
 fieldset,figure,
 pre {
-    @include px-and-rem(margin-top, $base-spacing-unit);
     @include px-and-rem(margin-bottom, $base-spacing-unit);
 
     .islet &{
@@ -48,7 +47,6 @@ pre {
  * treatment regarding vertical rhythm.
  */
 hr{
-    @include px-and-rem(margin-top, $base-spacing-unit);
     @include px-and-rem(margin-bottom, $base-spacing-unit);
 }
 
