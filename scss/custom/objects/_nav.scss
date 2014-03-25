@@ -26,7 +26,7 @@
   }
 }
 
-.menu {
+%menu {
   @extend %list_-reset;
 
   /**
@@ -44,6 +44,10 @@
       max-height: 50em;
     }
   }
+}
+
+.menu_-primary {
+	@extend %menu;
 }
 
   .menu__item {
@@ -84,6 +88,7 @@
   }
 
     .menu__sub {
+			@extend %list_-reset;
       position: absolute;
       background-color: #fff;
       border: 1px solid $base-ui-color;
