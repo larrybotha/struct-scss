@@ -1,0 +1,3 @@
+@mixin filter($val...) {
+	@include prefixer(filter, $val, $moz: true, $ms: true);
+}
