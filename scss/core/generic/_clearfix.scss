@@ -7,14 +7,12 @@
  * and over in your markup.
  */
 %cf {
-    &:before,
-    &:after{
-        content:"";
-        display:table;
-        clear:both;
-    }
+	&:before,
+	&:after{
+		content:"";
+		display:table;
+		clear:both;
+	}
 }
 
-.cf {
-	@extend %cf;
-}
+.cf { @extend %cf;}
