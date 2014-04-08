@@ -17,11 +17,11 @@
  * Demo: jsfiddle.net/inuitcss/cf4Qs
  *
  */
-.media{
+%media {
     display:block;
     @extend .cf;
 }
-    .media__img{
+		%media__img {
         float:left;
         margin-right:$base-spacing-unit;
 				@include px-and-rem(margin-right, $base-spacing-unit);
@@ -29,21 +29,22 @@
     /**
      * Reversed image location (right instead of left).
      */
-    .media__img_-rev{
+    %media__img_-rev {
         float:right;
 				@include px-and-rem(margin-left, $base-spacing-unit);
     }
 
-        .media__img img,
-        .media__img_-rev img{
+				%media__img img,
+        %media__img_-rev img {
             display:block;
         }
 
-    .media__body{
+    %media__body {
         overflow:hidden;
     }
-        .media__body,
-        .media__body > :last-child{
+
+				%media__body,
+				%media__body > :last-child {
             margin-bottom:0;
         }
 
@@ -51,11 +52,12 @@
     /**
      * `.img`s in `.islet`s need an appropriately sized margin.
      */
-    .islet .media__img{
+    .islet %media__img {
 				@include px-and-rem(margin-left, $base-spacing-unit);
     }
-    .islet .media__img_-rev{
+    .islet %media__img_-rev {
 				@include px-and-rem(margin-right, $base-spacing-unit);
     }
 
 }//endif
+
