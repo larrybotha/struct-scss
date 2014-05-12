@@ -55,12 +55,6 @@ $app-icons: (
 	close:    "\e030"
 );
 
-@each $icon-name, $icon-uni in $app-icons {
-	.icon-#{$icon-name}:before {
-		content: "#{$icon-uni}";
-	}
-}
-
 
 
 
@@ -72,6 +66,22 @@ $app-icons: (
 
 
 /* SOCIAL ICONS U+e3xxx */
+
+
+
+
+
+
+/* MAKE ICONS */
+$icon-sets: $app-icons;
+
+@each $icon-set in $icon-sets {
+	@each $icon-name, $icon-uni in $icon-set {
+		.icon-#{$icon-name}:before {
+			content: "#{$icon-uni}";
+		}
+	}
+}
 
 
 
