@@ -4,7 +4,6 @@
 a {
 	color: $clr-primary;
 	text-decoration: none;
-	@include transition(all 150ms ease-in-out);
 	outline: 0;
 
   &:visited {}
@@ -16,6 +15,21 @@ a {
 
   &:active {
     color: $clr-primary-dk;
-    @include transition(all 0);
   }
+
+	&,
+	&:before,
+	&:after {
+		@include transition(all 150ms ease-in-out);
+	}
+
+	&:active {
+		color: $clr-primary;
+
+		&,
+		&:before,
+		&:after {
+			@include transition(all 0);
+		}
+	}
 }
