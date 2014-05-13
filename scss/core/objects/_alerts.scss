@@ -16,12 +16,14 @@
     border-bottom-width: 1px;
     border-bottom-style: dotted;
 
-    &:hover {
+    &:hover,
+    &:focus {
       border-bottom-style: solid;
     }
 
     &,
     &:hover,
+		&:focus,
     &:active {
       color: inherit;
     }
@@ -50,7 +52,8 @@
     outline: 0;
     @include transition(150ms all ease-in-out);
 
-    &:hover {
+    &:hover,
+		&:focus {
       color: hsla(0, 0%, 0%, .4);
     }
   }
