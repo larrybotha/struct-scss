@@ -50,12 +50,15 @@ might want to share.
     $FONTS
 \*------------------------------------*/
 /**
- * Icon font
+ * Icon Font
  *
  * Dependant on $use-icons being true. These variables are used in the the font-face mixin.
  */
 /**
- * Base font face
+ * Base Font Face
+ */
+/**
+ * Base Font Variations
  */
 /*------------------------------------*\
     $COLORS
@@ -851,7 +854,7 @@ table {
  * Extend the clearfix class with Sass to avoid the `.cf` class appearing over
  * and over in your markup.
  */
-.cf:before, .wrap:before, .cf:after, .wrap:after {
+.cf:before, .cf:after {
   content: "";
   display: table;
   clear: both; }
@@ -873,8 +876,6 @@ blockquote, p, address,
 table,
 fieldset, figure,
 pre {
-  margin-top: 24px;
-  margin-top: 1.5rem;
   margin-bottom: 24px;
   margin-bottom: 1.5rem; }
   .islet h1, .islet h2, .islet h3, .islet h4, .islet h5, .islet h6, .islet hgroup, .islet
@@ -908,8 +909,6 @@ pre {
  * treatment regarding vertical rhythm.
  */
 hr {
-  margin-top: 24px;
-  margin-top: 1.5rem;
   margin-bottom: 24px;
   margin-bottom: 1.5rem; }
 
@@ -931,7 +930,7 @@ html {
   min-height: 100%; }
 
 html, body, button, input, select, textarea {
-  font-family: sans-serif;
+  font-family: "[font-name]", Arial, sans-serif;
   color: #666666; }
 
 body {
@@ -1071,24 +1070,6 @@ q {
     content: "\201D";
     content: close-quote; }
 
-blockquote {
-  quotes: "\201C " "\201D "; }
-  blockquote p:before {
-    content: "\201C ";
-    content: open-quote; }
-  blockquote p:after {
-    content: "";
-    content: no-close-quote; }
-  blockquote p:last-of-type:after {
-    content: "\201D ";
-    content: close-quote; }
-  blockquote q:before {
-    content: "\2018";
-    content: open-quote; }
-  blockquote q:after {
-    content: "\2019";
-    content: close-quote; }
-
 /**
  *
    <blockquote>
@@ -1098,15 +1079,10 @@ blockquote {
    </blockquote>
  *
  */
-blockquote {
-  /**
-   * .4em is roughly equal to the width of the opening “ that we wish to hang.
-   */
-  text-indent: -0.41em; }
-  blockquote p:first-of-type {
-    margin-top: 0; }
-  blockquote p:last-of-type {
-    margin-bottom: 0; }
+blockquote p:first-of-type {
+  margin-top: 0; }
+blockquote p:last-of-type {
+  margin-bottom: 0; }
 
 .source {
   display: block;
@@ -2401,6 +2377,15 @@ input[type="checkbox"] {
  * html
  */
 /**
+ * Fix fatty fonts in Chrome and Firefox on Mac - http://maximilianhoffmann.com/posts/better-font-rendering-on-osx
+ */
+/**
+ * Fix IE8 not showing extended headers and footers when overflowing horizontally
+ */
+.ie8 body {
+  display: table; }
+
+/**
  * get 60fps scrolling by disabling pointer events:
  * http://www.thecssninja.com/javascript/pointer-events-60fps
  */
@@ -2423,27 +2408,34 @@ img[src*=svg] {
 a {
   color: #333333;
   text-decoration: none;
-  -webkit-transition: all 150ms ease-in-out;
-  -moz-transition: all 150ms ease-in-out;
-  -o-transition: all 150ms ease-in-out;
-  transition: all 150ms ease-in-out;
   outline: 0; }
   a:hover, a:focus {
     color: #8c8c8c; }
   a:active {
-    color: #1a1a1a;
-    -webkit-transition: all 0;
-    -moz-transition: all 0;
-    -o-transition: all 0;
-    transition: all 0; }
+    color: #1a1a1a; }
+  a, a:before, a:after {
+    -webkit-transition: all 150ms ease-in-out;
+    -moz-transition: all 150ms ease-in-out;
+    -o-transition: all 150ms ease-in-out;
+    transition: all 150ms ease-in-out; }
+  a:active {
+    color: #333333; }
+    a:active, a:active:before, a:active:after {
+      -webkit-transition: all 0;
+      -moz-transition: all 0;
+      -o-transition: all 0;
+      transition: all 0; }
 
+/*------------------------------------*\
+    $TABLES
+\*------------------------------------*/
 /*------------------------------------*\
     $RULES
 \*------------------------------------*/
 /*------------------------------------*\
     $LISTS
 \*------------------------------------*/
-.menu {
+.menu_-primary, .menu__sub {
   list-style-type: none;
   padding: 0;
   margin: 0; }
@@ -2475,11 +2467,11 @@ button, input, select, textarea {
   vertical-align: baseline; }
 
 input, textarea {
-  margin-bottom: 16px;
-  margin-bottom: 1rem;
   height: auto;
   line-height: normal;
-  padding: .25em;
+  margin-bottom: 16px;
+  margin-bottom: 1rem;
+  padding: .5em;
   border: 1px solid #666666; }
 
 input[type="checkbox"],
@@ -2495,6 +2487,33 @@ input[type="radio"] {
   src: url("fnt/base-icon-font/base-icon-font.eot?#iefix") format("embedded-opentype"), url("fnt/base-icon-font/base-icon-font.woff") format("woff"), url("fnt/base-icon-font/base-icon-font.ttf") format("truetype"), url("fnt/base-icon-font/base-icon-font.svg#base-icon-font") format("svg");
   font-weight: normal;
   font-style: normal; }
+/**
+ * Base Font Decalrations
+ */
+@font-face {
+  font-family: "[font-name]";
+  src: url("../fnt/[fon-folder]/[font-file-name-without-extension].eot");
+  src: url("../fnt/[fon-folder]/[font-file-name-without-extension].eot?#iefix") format("embedded-opentype"), url("../fnt/[fon-folder]/[font-file-name-without-extension].woff") format("woff"), url("../fnt/[fon-folder]/[font-file-name-without-extension].ttf") format("truetype"), url("../fnt/[fon-folder]/[font-file-name-without-extension].svg#[font-file-name-without-extension]") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: "[font-name]";
+  src: url("../fnt/[fon-folder]/[italic-font-file-name-without-extension].eot");
+  src: url("../fnt/[fon-folder]/[italic-font-file-name-without-extension].eot?#iefix") format("embedded-opentype"), url("../fnt/[fon-folder]/[italic-font-file-name-without-extension].woff") format("woff"), url("../fnt/[fon-folder]/[italic-font-file-name-without-extension].ttf") format("truetype"), url("../fnt/[fon-folder]/[italic-font-file-name-without-extension].svg#[italic-font-file-name-without-extension]") format("svg");
+  font-weight: normal;
+  font-style: italic; }
+@font-face {
+  font-family: "[font-name]";
+  src: url("../fnt/[fon-folder]/[bold-font-file-name-without-extension].eot");
+  src: url("../fnt/[fon-folder]/[bold-font-file-name-without-extension].eot?#iefix") format("embedded-opentype"), url("../fnt/[fon-folder]/[bold-font-file-name-without-extension].woff") format("woff"), url("../fnt/[fon-folder]/[bold-font-file-name-without-extension].ttf") format("truetype"), url("../fnt/[fon-folder]/[bold-font-file-name-without-extension].svg#[bold-font-file-name-without-extension]") format("svg");
+  font-weight: bold;
+  font-style: normal; }
+@font-face {
+  font-family: "[font-name]";
+  src: url("../fnt/[fon-folder]/[bold-italic-font-file-name-without-extension].eot");
+  src: url("../fnt/[fon-folder]/[bold-italic-font-file-name-without-extension].eot?#iefix") format("embedded-opentype"), url("../fnt/[fon-folder]/[bold-italic-font-file-name-without-extension].woff") format("woff"), url("../fnt/[fon-folder]/[bold-italic-font-file-name-without-extension].ttf") format("truetype"), url("../fnt/[fon-folder]/[bold-italic-font-file-name-without-extension].svg#[bold-italic-font-file-name-without-extension]") format("svg");
+  font-weight: bold;
+  font-style: italic; }
 /*------------------------------------*\
     $MAIN STRUCTURE
 \*------------------------------------*/
@@ -2523,12 +2542,12 @@ input[type="radio"] {
 /**
  * placeholder for menu container used to hide menus on mobile / tablet
  */
-.menu {
+.menu_-primary {
   /**
    * animate menu for mobiles and tablets
    */ }
   @media only screen and (max-width: 480px) {
-    .menu {
+    .menu_-primary {
       -webkit-transition: all 250ms ease-in-out;
       -moz-transition: all 250ms ease-in-out;
       -o-transition: all 250ms ease-in-out;
@@ -2574,6 +2593,7 @@ input[type="radio"] {
     .menu__sub {
       display: block;
       position: relative;
+      margin-left: 1.5em;
       border: 0;
       opacity: 1;
       z-index: 0; } }
@@ -2602,10 +2622,6 @@ input[type="radio"] {
     .menu__sub .menu__sub {
       top: auto;
       left: auto; } }
-
-@media only screen and (max-width: 480px) {
-  .menu__sub .menu__sub a {
-    padding-left: 2.5em; } }
 
 /*------------------------------------*\
     $BUTTONS
@@ -2665,20 +2681,33 @@ h1, h2, h3, h4, h5, h6 {
  * read off random characters that represent icons
  */
 /* WEB APPLICATION ICONS U+e0xxx */
-.icon-menu:before {
-  content: "\e000"; }
-
-.icon-grid:before {
-  content: "\e010"; }
-
-.icon-expand:before {
-  content: "\e020"; }
-
-.icon-close:before {
-  content: "\e030"; }
-
 /* DIRECTIONAL ICONS U+e2xxx */
 /* SOCIAL ICONS U+e3xxx */
+/* MAKE ICONS */
+.icon-menu:before {
+  content: ""; }
+
+.icon-\e000:before {
+  content: ""; }
+
+.icon-grid:before {
+  content: ""; }
+
+.icon-\e010:before {
+  content: ""; }
+
+.icon-expand:before {
+  content: ""; }
+
+.icon-\e020:before {
+  content: ""; }
+
+.icon-close:before {
+  content: ""; }
+
+.icon-\e030:before {
+  content: ""; }
+
 /*------------------------------------*\
     $MODIFIERS
 \*------------------------------------*/
@@ -2703,17 +2732,17 @@ h1, h2, h3, h4, h5, h6 {
 .align_right {
   text-align: right; }
 
-img.align-left {
+img.align_left {
   float: left;
-  margin-right: 16px;
-  margin-right: 1rem;
+  margin-right: 24px;
+  margin-right: 1.5rem;
   margin-bottom: 16px;
   margin-bottom: 1rem; }
 
-img.align-right {
+img.align_right {
   float: right;
-  margin-left: 16px;
-  margin-left: 1rem;
+  margin-left: 24px;
+  margin-left: 1.5rem;
   margin-bottom: 16px;
   margin-bottom: 1rem; }
 
@@ -2835,7 +2864,8 @@ img.align_center {
 \*------------------------------------*/
 .wrap {
   max-width: 1280px;
-  margin: 0 auto;
+  margin-right: auto;
+  margin-left: auto;
   padding-left: 16px;
   padding-left: 1rem;
   padding-right: 16px;
@@ -2845,7 +2875,7 @@ img.align_center {
     $GRID
 \*------------------------------------*/
 /**
- * vertically align grid items bottom
+ * convenience classes for grid
  */
 /*------------------------------------*\
     $MODIFIERS
@@ -2871,7 +2901,7 @@ button.display_-block {
  * Add/remove paddings
  */
 /**
- * import vendor styles
+ * import plugin styles
  */
 /*------------------------------------*\
     $VENDOR STYLES
@@ -2884,6 +2914,9 @@ button.display_-block {
 \*------------------------------------*/
 /*------------------------------------*\
     $FILE UPLOAD
+\*------------------------------------*/
+/*------------------------------------*\
+    $TOOLTIPS
 \*------------------------------------*/
 /*------------------------------------*\
     $WYSIWYG
