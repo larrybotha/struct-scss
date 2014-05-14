@@ -1,10 +1,11 @@
 /*------------------------------------*\
     $VENDOR STYLES
 \*------------------------------------*/
-$use-autocomplete: false!default;
-$use-datepicker: false!default;
-$use-file-upload: false!default;
-$use-wysiwyg: false!default;
+$use-autocomplete:  false!default;
+$use-datepicker:    false!default;
+$use-file-upload:   false!default;
+$use-tooltips:      false!default;
+$use-wysiwyg:       false!default;
 
 
 
@@ -13,7 +14,7 @@ $use-wysiwyg: false!default;
 /*------------------------------------*\
     $AUTOCOMPLETE
 \*------------------------------------*/
-@import "typeahead";
+@import "autocomplete";
 
 
 
@@ -22,7 +23,7 @@ $use-wysiwyg: false!default;
 /*------------------------------------*\
     $DATEPICKER
 \*------------------------------------*/
-@import "jquery-ui-datepicker";
+@import "datepicker";
 
 
 
@@ -31,7 +32,16 @@ $use-wysiwyg: false!default;
 /*------------------------------------*\
     $FILE UPLOAD
 \*------------------------------------*/
-@import "dropzone";
+@import "file-upload";
+
+
+
+
+
+/*------------------------------------*\
+    $TOOLTIPS
+\*------------------------------------*/
+@import "tooltips";
 
 
 

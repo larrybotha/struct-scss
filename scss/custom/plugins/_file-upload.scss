@@ -13,13 +13,13 @@
 \*------------------------------------*/
 .dropzone {
 	@include px-and-rem(padding, 1.5);
-	border: 3px dashed $clr-alpha-ltst;
+	border: 3px dashed $clr-base-ltst;
 	@include px-and-rem(border-radius, 1);
 }
 
 .dz-clickable { cursor: pointer;}
 
-.dz-drag-hover { border-color: $clr-alpha-ltr;}
+.dz-drag-hover { border-color: $clr-base-ltr;}
 
 .dz-message {	opacity: 1;}
 
@@ -29,7 +29,7 @@
 	position: relative;
 	display: inline-block;
 	background: $clr-ntrl-min;
-	@include px-and-rem(margin, 0, 1, 1);
+	@include px-and-rem(margin, 0 1 1);
 	vertical-align: top;
 	@include px-and-rem(padding, 1);
 }
