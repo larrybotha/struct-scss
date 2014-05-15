@@ -2685,28 +2685,16 @@ h1, h2, h3, h4, h5, h6 {
 /* SOCIAL ICONS U+e3xxx */
 /* MAKE ICONS */
 .icon-menu:before {
-  content: ""; }
-
-.icon-\e000:before {
-  content: ""; }
+  content: "\e000"; }
 
 .icon-grid:before {
-  content: ""; }
-
-.icon-\e010:before {
-  content: ""; }
+  content: "\e010"; }
 
 .icon-expand:before {
-  content: ""; }
-
-.icon-\e020:before {
-  content: ""; }
+  content: "\e020"; }
 
 .icon-close:before {
-  content: ""; }
-
-.icon-\e030:before {
-  content: ""; }
+  content: "\e030"; }
 
 /*------------------------------------*\
     $MODIFIERS

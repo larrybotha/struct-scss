@@ -73,7 +73,7 @@ $app-icons: (
 
 
 /* MAKE ICONS */
-$icon-sets: $app-icons;
+$icon-sets: $app-icons, ();
 
 @each $icon-set in $icon-sets {
 	@each $icon-name, $icon-uni in $icon-set {
