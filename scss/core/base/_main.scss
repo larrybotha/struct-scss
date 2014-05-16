@@ -11,6 +11,14 @@ html, body, button, input, select, textarea {
     color: $base-ui-color;
 }
 
+/**
+ * FireFox on Android adds gradients to these elements
+ * Let's end the tyranny
+ */
+button, input, select, textarea {
+	background-image: none;
+}
+
 body {
     background-color: #fff;
     font-size: 1em;
