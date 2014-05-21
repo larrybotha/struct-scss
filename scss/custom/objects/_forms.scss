@@ -50,23 +50,28 @@ input[type="radio"] {
 /**
  * $use-icons must be set to true for custom radios and checkboxes
  */
-.radio_-custom,
-.checkbox_-custom {
+%custom-radio-false {
   @extend %icon;
 
   &:before {
+		position: relative;
+		content: "\e060";
     line-height: 1;
+		z-index: 10;
   }
 }
 
-/* .icon-check-empty */
-.radio_-custom:before    { content: "\e010";}
-.checkbox_-custom:before { content: "\e000";}
+.radio_-icon,
+.checkbox_-icon { @extend %custom-radio-false;}
 
-/* .icon-check */
 input:checked + label {
-  & > .radio_-custom:before { content: "\e011";}
-  & > .checkbox_-custom:before { content: "\e001";}
+  & > .radio_-icon {
+		&:before { content: "\e061";}
+	}
+
+	& > .checkbox_-icon {
+		&:before { content: "\e070";}
+	}
 }
 
 } // endif
