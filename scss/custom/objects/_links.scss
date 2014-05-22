@@ -1,35 +1,30 @@
 /*------------------------------------*\
     $LINKS
 \*------------------------------------*/
-a {
-	color: $clr-primary;
-	text-decoration: none;
-	outline: 0;
-
-  &:visited {}
-
-  &:hover,
-  &:focus {
-    color: $clr-primary-ltr;
-  }
-
-  &:active {
-    color: $clr-primary-dk;
-  }
-
+%link-transitions {
 	&,
 	&:before,
-	&:after {
-		@include transition(all 150ms ease-in-out);
-	}
+	&:after { @include transition(all 150ms ease-in-out);}
 
 	&:active {
 		color: $clr-primary;
 
 		&,
 		&:before,
-		&:after {
-			@include transition(all 0);
-		}
+		&:after { @include transition(all 0);}
 	}
+}
+
+a {
+	color: $clr-primary;
+	text-decoration: none;
+	outline: 0;
+	@include %link-transitions;
+
+	&:visited {}
+
+	&:hover,
+	&:focus { color: $clr-primary-ltr;}
+
+	&:active { color: $clr-primary-dk;}
 }
