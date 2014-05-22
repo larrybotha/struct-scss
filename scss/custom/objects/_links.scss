@@ -9,27 +9,19 @@ a {
   &:visited {}
 
   &:hover,
-  &:focus {
-    color: $clr-primary-ltr;
-  }
+  &:focus { color: $clr-primary-ltr;}
 
-  &:active {
-    color: $clr-primary-dk;
-  }
+  &:active { color: $clr-primary-dk;}
 
 	&,
 	&:before,
-	&:after {
-		@include transition(all 150ms ease-in-out);
-	}
+	&:after { @include transition(all 150ms ease-in-out);}
 
 	&:active {
 		color: $clr-primary;
 
 		&,
 		&:before,
-		&:after {
-			@include transition(all 0);
-		}
+		&:after { @include transition(all 0);}
 	}
 }
