@@ -16,35 +16,32 @@
 	left: -28000px;
 	top: -28000px;
 	display: none;
+	color: $clr-secondary-lt;
 
 	max-width: 280px;
 	min-width: 50px;
 
-	font-size: 10.5px;
-	line-height: 12px;
-
+	text-align: left;
 	direction: ltr;
 
 	box-shadow: none;
-	padding: 0;
+	padding: 1em 1.5em;
+	border-radius: 1.5em;
 }
+
+	.qtip-tip { position: absolute; }
 
 	.qtip-content {
 		position: relative;
-		padding: 5px 9px;
 		overflow: hidden;
 
-		text-align: left;
 		word-wrap: break-word;
 	}
 
 	.qtip-titlebar {
-		position: relative;
-		padding: 5px 35px 5px 10px;
-		overflow: hidden;
-
-		border-width: 0 0 1px;
-		font-weight: bold;
+		@extend %ff_-alt;
+		@extend .epsilon;
+		line-height: 1;
 	}
 
 	.qtip-titlebar + .qtip-content { border-top-width: 0 !important; }
@@ -106,14 +103,9 @@
 	.qtip-default {
 		border-width: 1px;
 		border-style: solid;
-		border-color: #F1D031;
+		border-color: $clr-ntrl-min;
 
-		background-color: #FFFFA3;
-		color: #555;
-	}
-
-	.qtip-default .qtip-titlebar {
-		background-color: #FFEF93;
+		background-color: $clr-ntrl-min;
 	}
 
 	.qtip-default .qtip-icon {
@@ -126,5 +118,4 @@
 		border-color: #AAA;
 		color: #111;
 	}
-
 } //endif
