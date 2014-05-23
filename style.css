@@ -392,7 +392,7 @@ might want to share.
      }
    }
  *
- * Courtesy of @integralist: twitter.com/integralist/status/260484115315437569
+ * Courtesy of @integralist: https://gist.github.com/Integralist/3931680
  */
 /**
  * Media query mixin.
@@ -932,6 +932,13 @@ html {
 html, body, button, input, select, textarea {
   font-family: "[font-name]", Arial, sans-serif;
   color: #666666; }
+
+/**
+ * FireFox on Android adds gradients to these elements
+ * Let's end the tyranny
+ */
+button, input, select, textarea {
+  background-image: none; }
 
 body {
   background-color: #fff;
@@ -2488,7 +2495,7 @@ input[type="radio"] {
   font-weight: normal;
   font-style: normal; }
 /**
- * Base Font Decalrations
+ * Base Font Declarations
  */
 @font-face {
   font-family: "[font-name]";
@@ -2636,6 +2643,12 @@ input[type="radio"] {
   .btn_-primary:active {
     background-color: #1a1a1a; }
 
+/*------------------------------------*\
+    $PROGRESS BARS
+\*------------------------------------*/
+/**
+ * custom styles for progress bar object
+ */
 /**
  * Modifier styles - these should always be declared after objects / blocks to
  * avoid being overridden.
@@ -2888,6 +2901,9 @@ button.display_-block {
 /**
  * Add/remove paddings
  */
+/*------------------------------------*\
+    $ANIMATIONS
+\*------------------------------------*/
 /**
  * import plugin styles
  */

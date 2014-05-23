@@ -13,7 +13,7 @@
  *
  * Courtesy of @integralist: https://gist.github.com/Integralist/3931680
  */
-@mixin keyframe ($animation-name){
+@mixin keyframes ($animation-name){
   @-webkit-keyframes $animation-name{
     @content;
   }
