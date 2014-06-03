@@ -1,7 +1,14 @@
 /*------------------------------------*\
     $LINKS
 \*------------------------------------*/
+%link-transition {
+	@include transition(all 150ms ease-in-out);
+
+	&:active { @include transition(all 0);}
+}
+
 a {
+	@extend %link-transition;
 	color: $clr-primary;
 	text-decoration: none;
 	outline: 0;
@@ -12,12 +19,4 @@ a {
   &:focus { color: $clr-primary-ltr;}
 
   &:active { color: $clr-primary-dk;}
-
-	& { @include transition(all 150ms ease-in-out);}
-
-	&:active {
-		color: $clr-primary;
-
-		& { @include transition(all 0);}
-	}
 }
