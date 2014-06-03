@@ -13,15 +13,11 @@ a {
 
   &:active { color: $clr-primary-dk;}
 
-	&,
-	&:before,
-	&:after { @include transition(all 150ms ease-in-out);}
+	& { @include transition(all 150ms ease-in-out);}
 
 	&:active {
 		color: $clr-primary;
 
-		&,
-		&:before,
-		&:after { @include transition(all 0);}
+		& { @include transition(all 0);}
 	}
 }
