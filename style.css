@@ -2413,6 +2413,17 @@ img[src*=svg] {
     $LINKS
 \*------------------------------------*/
 a {
+  -webkit-transition: all 150ms ease-in-out;
+  -moz-transition: all 150ms ease-in-out;
+  -o-transition: all 150ms ease-in-out;
+  transition: all 150ms ease-in-out; }
+  a:active {
+    -webkit-transition: all 0;
+    -moz-transition: all 0;
+    -o-transition: all 0;
+    transition: all 0; }
+
+a {
   color: #333333;
   text-decoration: none;
   outline: 0; }
@@ -2420,18 +2431,6 @@ a {
     color: #8c8c8c; }
   a:active {
     color: #1a1a1a; }
-  a, a:before, a:after {
-    -webkit-transition: all 150ms ease-in-out;
-    -moz-transition: all 150ms ease-in-out;
-    -o-transition: all 150ms ease-in-out;
-    transition: all 150ms ease-in-out; }
-  a:active {
-    color: #333333; }
-    a:active, a:active:before, a:active:after {
-      -webkit-transition: all 0;
-      -moz-transition: all 0;
-      -o-transition: all 0;
-      transition: all 0; }
 
 /*------------------------------------*\
     $TABLES
