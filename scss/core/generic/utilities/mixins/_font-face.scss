@@ -5,15 +5,15 @@
 		@if $use-rails == true {
 			src: font-url('#{$file-path}/#{$font-filename}.eot');
 			src: font-url('#{$file-path}/#{$font-filename}.eot?#iefix') format('embedded-opentype'),
-			font-url('#{$file-path}/#{$font-filename}.woff') format('woff'),
-			font-url('#{$file-path}/#{$font-filename}.ttf') format('truetype'),
-			font-url('#{$file-path}/#{$font-filename}.svg##{$font-filename}') format('svg');
+				font-url('#{$file-path}/#{$font-filename}.woff') format('woff'),
+				font-url('#{$file-path}/#{$font-filename}.ttf') format('truetype'),
+				font-url('#{$file-path}/#{$font-filename}.svg##{$font-filename}') format('svg');
 		} @else {
 			src: url('#{$file-path}/#{$font-filename}.eot');
 			src: url('#{$file-path}/#{$font-filename}.eot?#iefix') format('embedded-opentype'),
-			url('#{$file-path}/#{$font-filename}.woff') format('woff'),
-			url('#{$file-path}/#{$font-filename}.ttf') format('truetype'),
-			url('#{$file-path}/#{$font-filename}.svg##{$font-filename}') format('svg');
+				url('#{$file-path}/#{$font-filename}.woff') format('woff'),
+				url('#{$file-path}/#{$font-filename}.ttf') format('truetype'),
+				url('#{$file-path}/#{$font-filename}.svg##{$font-filename}') format('svg');
 		}
 
 		font-weight: $weight;
