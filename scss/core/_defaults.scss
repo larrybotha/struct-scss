@@ -24,6 +24,19 @@ $debug-mode:    false!default;
 
 
 /*------------------------------------*\
+  $RAILS
+\*------------------------------------*/
+/**
+ * Using Rails? You'll need the font-face mixin to behave differently to correctly
+ * load font assets
+ */
+$use-rails:    false!default;
+
+
+
+
+
+/*------------------------------------*\
   $BORDER-BOX
 \*------------------------------------*/
 /**
