@@ -4,7 +4,6 @@
     $ALERTS
 \*------------------------------------*/
 %alert {
-  @include px-and-rem(margin-bottom, $base-spacing-unit);
   @include px-and-rem(padding, $base-spacing-unit);
 	border: 1px solid;
 
