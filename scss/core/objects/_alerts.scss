@@ -7,31 +7,23 @@
   @include px-and-rem(padding, $base-spacing-unit);
 	border: 1px solid;
 
-  .alert__heading {
-    color: inherit;
-  }
+  .alert__heading { color: inherit;}
 
   & a {
     border-bottom-width: 1px;
     border-bottom-style: dotted;
 
     &:hover,
-    &:focus {
-      border-bottom-style: solid;
-    }
+    &:focus { border-bottom-style: solid;}
 
     &,
     &:hover,
 		&:focus,
-    &:active {
-      color: inherit;
-    }
+    &:active { color: inherit;}
   }
 
   & p:last-child,
-  & ul:last-child {
-    margin-bottom: 0;
-  }
+  & ul:last-child { margin-bottom: 0;}
 
   & .close {
     position: absolute;
@@ -52,9 +44,7 @@
     @include transition(150ms all ease-in-out);
 
     &:hover,
-		&:focus {
-      color: hsla(0, 0%, 0%, .4);
-    }
+		&:focus { color: hsla(0, 0%, 0%, .4);}
   }
 }
 
