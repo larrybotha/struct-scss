@@ -18,7 +18,7 @@
 /**
  * Prevent Chrome and Safari from flashing when a user taps on mobile
  */
-if $use-responsive == true {
+@if $use-responsive == true {
 	html { -webkit-tap-highlight-color: transparent;}
 }
 
