@@ -4,10 +4,8 @@
 /**
  * A series of classes for setting tiny type; for use in smallprint etc.
  */
-.smallprint,
-.milli{
-    @include font-size($milli-size, false);
-}
-.micro{
-    @include font-size($micro-size, false);
-}
+%milli { @include font-size($milli-size, false);}
+%micro { @include font-size($micro-size, false);}
+
+.milli { @extend %milli;}
+.micro { @extend %micro;}
