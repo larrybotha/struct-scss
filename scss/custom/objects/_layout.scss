@@ -14,9 +14,7 @@
 	@extend .cf;
 }
 
-.wrap {
-	@extend %wrap;
-}
+.wrap { @extend %wrap;}
 
 
 
@@ -28,13 +26,8 @@
 /**
  * convenience classes for grid
  */
-.gw {
-  @extend .grid;
-}
-
-  .g {
-    @extend .grid__item;
-  }
+.gw { @extend .grid;}
+  .g { @extend .grid__item;}
 
 
 
@@ -46,15 +39,11 @@
 /*
  * Display level modifiers
  */
-.display_-block {
-  display: block;
-}
+%display_-block { display: block;}
 
-input.display_-block,
-textarea.display_-block,
-button.display_-block {
-  width: 100%;
-}
+input%display_-block,
+textarea%display_-block,
+button%display_-block { width: 100%;}
 
 %display_-iblock { display: inline-block;}
 
@@ -63,9 +52,7 @@ button.display_-block {
 %display_-itable {	display: inline-table;}
 
 %display_-table,
-%display_-itable {
-  height: 100%;
-}
+%display_-itable { height: 100%;}
 
 %display_-table-full {
   @extend %display_-table;

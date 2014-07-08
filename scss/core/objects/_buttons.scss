@@ -18,9 +18,7 @@
 
   &,
   &:hover,
-  &:focus {
-    text-decoration: none;
-  }
+  &:focus { text-decoration: none;}
 
   &:active,
   &:focus{
@@ -29,9 +27,7 @@
   }
 
   &[disabled],
-  &:disabled {
-    cursor: default;
-  }
+  &:disabled { cursor: default;}
 }
 
 %btn_-selected {
