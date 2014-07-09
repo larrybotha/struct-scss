@@ -9,22 +9,22 @@
  * heading hierarchy.
  */
 %alpha { @include font-size($h1-size, 0);}
-h1, .alpha{ @extend %alpha;}
+h1, .alpha { @extend %alpha;}
 
 %beta { @include font-size($h2-size, 0);}
-h2,.beta{ @extend %beta;}
+h2,.beta { @extend %beta;}
 
 %gamma { @include font-size($h3-size, 0);}
-h3,.gamma{ @extend %gamma;}
+h3,.gamma { @extend %gamma;}
 
 %delta { @include font-size($h4-size, 0);}
-h4,.delta{ @extend %delta;}
+h4,.delta { @extend %delta;}
 
 %epsilon { @include font-size($h5-size, 0);}
-h5,.epsilon{ @extend %epsilon;}
+h5,.epsilon { @extend %epsilon;}
 
 %zeta { @include font-size($h6-size, 0);}
-h6,.zeta{ @extend %zeta;}
+h6,.zeta { @extend %zeta;}
 
 
 /**
@@ -37,11 +37,8 @@ h6,.zeta{ @extend %zeta;}
    </hgroup>
  *
  */
-.hN{
-}
-hgroup .hN{
-  margin-bottom:0;
-}
+.hN{}
+hgroup .hN { margin-bottom:0;}
 
 
 /**
@@ -49,10 +46,10 @@ hgroup .hN{
  * promos, etc.
  */
 %giga { @include font-size($giga-size, 0);}
-.giga{ @extend %giga;}
+.giga { @extend %giga;}
 
 %mega { @include font-size($mega-size, 0);}
-.mega{ @extend %mega;}
+.mega { @extend %mega;}
 
 %kilo { @include font-size($kilo-size, 0);}
-.kilo{ @extend %kilo;}
+.kilo { @extend %kilo;}
