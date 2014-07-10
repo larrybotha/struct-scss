@@ -3,31 +3,35 @@
 /*------------------------------------*\
     $BUTTONS
 \*------------------------------------*/
-%btn {
+%btn-base {
 	position: relative;
 	display: inline-block;
 	text-align: center;
-  line-height: normal; // let's make all browsers match FF's !important
+	line-height: normal; // let's make all browsers match FF's !important
 	vertical-align: middle;
 	height: auto; // ensure heights set on inputs do not affect submit buttons
-  margin: 0;
+	margin: 0;
 	border: 0;
-  white-space: nowrap;
-	cursor: pointer;
+	white-space: nowrap;
+}
+
+%btn {
+	@extend %btn-base;
 	@include transition(all 150ms ease-in);
+	cursor: pointer;
 
-  &,
-  &:hover,
-  &:focus { text-decoration: none;}
+	&,
+	&:hover,
+	&:focus { text-decoration: none;}
 
-  &:active,
-  &:focus{
-    outline:none;
-    @include transition(0);
-  }
+	&:active,
+	&:focus{
+		outline:none;
+		@include transition(0);
+	}
 
-  &[disabled],
-  &:disabled { cursor: default;}
+	&[disabled],
+	&:disabled { cursor: default;}
 }
 
 %btn_-selected {
