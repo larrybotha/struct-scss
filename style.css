@@ -1627,34 +1627,34 @@ input[type="checkbox"] {
  * Objects and abstractions
  */
 /*------------------------------------*\
-    $GRIDS
+		$GRIDS
 \*------------------------------------*/
 /**
  * Fluid and nestable grid system, e.g.:
  *
-   <div class="grid">
+	 <div class="grid">
 
-       <div class="grid__item  one-third">
-           <p>One third grid</p>
-       </div><!--
+			 <div class="grid__item  one-third">
+					 <p>One third grid</p>
+			 </div><!--
 
-    --><div class="grid__item  two-thirds">
-           <p>Two thirds grid</p>
-       </div><!--
+		--><div class="grid__item  two-thirds">
+					 <p>Two thirds grid</p>
+			 </div><!--
 
-    --><div class="grid__item  one-half">
-           <p>One half grid</p>
-       </div><!--
+		--><div class="grid__item  one-half">
+					 <p>One half grid</p>
+			 </div><!--
 
-    --><div class="grid__item  one-quarter">
-           <p>One quarter grid</p>
-       </div><!--
+		--><div class="grid__item  one-quarter">
+					 <p>One quarter grid</p>
+			 </div><!--
 
-    --><div class="grid__item  one-quarter">
-           <p>One quarter grid</p>
-       </div>
+		--><div class="grid__item  one-quarter">
+					 <p>One quarter grid</p>
+			 </div>
 
-   </div>
+	 </div>
  *
  * Demo: jsfiddle.net/inuitcss/CLYUC
  *
@@ -1669,24 +1669,24 @@ input[type="checkbox"] {
   margin-bottom: 0; }
 
 /**
- * Very infrequently occuring grid wrappers as children of grid wrappers.
+ * very infrequently occuring grid wrappers as children of grid wrappers.
  */
 .grid > .grid, .grid_-rev > .grid, .grid_-full > .grid, .grid_-center > .grid, .gw > .grid, .grid > .grid_-rev, .grid_-rev > .grid_-rev, .grid_-full > .grid_-rev, .grid_-center > .grid_-rev, .gw > .grid_-rev, .grid > .grid_-full, .grid_-rev > .grid_-full, .grid_-full > .grid_-full, .grid_-center > .grid_-full, .gw > .grid_-full, .grid > .grid_-center, .grid_-rev > .grid_-center, .grid_-full > .grid_-center, .grid_-center > .grid_-center, .gw > .grid_-center, .grid > .gw, .grid_-rev > .gw, .grid_-full > .gw, .grid_-center > .gw, .gw > .gw {
   margin-left: 0; }
 
 /**
- * Grid
+ * grid
  */
 .grid__item, .g {
   display: inline-block;
   width: 100%;
+  vertical-align: top;
   padding-left: 24px;
-  padding-left: 1.5rem;
-  vertical-align: top; }
+  padding-left: 1.5rem; }
 
 /**
- * Reversed grids
- */
+* reversed grids
+*/
 .grid_-rev {
   direction: rtl;
   text-align: right; }
@@ -1695,17 +1695,17 @@ input[type="checkbox"] {
     text-align: left; }
 
 /**
- * Gutterless grids have all the properties of regular grids, minus any spacing.
- */
+* gutterless grids have all the properties of regular grids, minus any spacing.
+*/
 .grid_-full {
   margin-left: 0; }
   .grid_-full > .grid__item, .grid_-full > .g {
     padding-left: 0; }
 
 /**
- * Centered grids align grid items centrally without needing to use push or pull
- * classes.
- */
+* centered grids align grid items centrally without needing to use push or pull
+* classes.
+*/
 .grid_-center {
   text-align: center; }
   .grid_-center > .grid__item, .grid_-center > .g {
@@ -1718,7 +1718,7 @@ input[type="checkbox"] {
  * Style trumps; helper and brand classes
  */
 /*------------------------------------*\
-    $WIDTHS
+		$WIDTHS
 \*------------------------------------*/
 /**
  * Sizes in human readable format. These are used in conjunction with other
@@ -1832,7 +1832,7 @@ input[type="checkbox"] {
  * access to these classes. You can define at which breakpoint you’d like an
  * element to be a certain size, e.g.:
  *
- * `<div class="g  one-quarter  lap-one-half  palm-one-whole"> ... </div>`
+ * `<div class="g  one-quarter	lap-one-half	palm-one-whole"> ... </div>`
  *
  * This would create a `div` that, at ‘desktop’ sizes, takes up a quarter of the
  * horizontal space, a half of that space at ‘tablet’ sizes, and goes full width
