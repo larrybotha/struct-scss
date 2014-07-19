@@ -1,4 +1,4 @@
-@if $use-grids == true{
+@if $use-grids == true {
 
 /*------------------------------------*\
     $GRIDS
@@ -38,75 +38,75 @@
 /**
  * Grid wrapper
  */
-.grid{
-    @include px-and-rem(margin-left, -$base-spacing-unit);
-    list-style:none;
-    margin-bottom:0;
+.grid {
+	@include px-and-rem(margin-left, -$base-spacing-unit);
+	list-style:none;
+	margin-bottom:0;
 }
 
 
-    /**
-     * Very infrequently occuring grid wrappers as children of grid wrappers.
-     */
-    .grid > .grid{
-        margin-left:0;
-    }
+	/**
+	 * very infrequently occuring grid wrappers as children of grid wrappers.
+	 */
+	.grid > .grid {
+		margin-left:0;
+	}
 
 
-    /**
-     * Grid
-     */
-    .grid__item{
-        display:inline-block;
-        width:100%;
-        @include px-and-rem(padding-left, $base-spacing-unit);
-        vertical-align:top;
-        @if $global-border-box == false{
-            @include vendor(box-sizing, border-box);
-        }
-    }
+	/**
+	 * grid
+	 */
+	.grid__item {
+		display:inline-block;
+		width:100%;
+		@include px-and-rem(padding-left, $base-spacing-unit);
+		vertical-align:top;
+		@if $global-border-box == false {
+			@include vendor(box-sizing, border-box);
+		}
+	}
 
 
 
 /**
- * Reversed grids
- */
-.grid_-rev{
-    @extend .grid;
-    direction:rtl;
-    text-align:right;
+* reversed grids
+*/
+.grid_-rev {
+	@extend .grid;
+	direction:rtl;
+	text-align:right;
 
-    > .grid__item{
-        direction:ltr;
-        text-align:left;
-    }
+	> .grid__item {
+		direction:ltr;
+		text-align:left;
+	}
 }
 
 
 /**
- * Gutterless grids have all the properties of regular grids, minus any spacing.
- */
-.grid_-full{
-    @extend .grid;
-    margin-left:0;
+* gutterless grids have all the properties of regular grids, minus any spacing.
+*/
+.grid_-full {
+	@extend .grid;
+	margin-left:0;
 
-    > .grid__item{
-        padding-left:0;
-    }
+	> .grid__item {
+		padding-left:0;
+	}
 }
 
 
 /**
- * Centered grids align grid items centrally without needing to use push or pull
- * classes.
- */
-.grid_-center{
-    @extend .grid;
-    text-align:center;
+* centered grids align grid items centrally without needing to use push or pull
+* classes.
+*/
+.grid_-center {
+	@extend .grid;
+	text-align:center;
 
-    > .grid__item{
-        text-align:left;
-    }
+	> .grid__item {
+		text-align:left;
+	}
 }
 
 }//endif
