@@ -43,7 +43,7 @@
 
 
 
-@include keyframe(progress-bar-stripes) {
+@include keyframes(progress-bar-stripes) {
 	0% { background-position: 40px 0;}
 	100% { background-position: 0 0;}
 }
