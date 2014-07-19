@@ -79,7 +79,6 @@
  * FORMS...............
  *
  * GRIDS...............Fluid, proportional and nestable grids
- * FLEXBOX.............Crudely emulate flexbox
  * COLUMNS.............CSS3 columns
  * NAV.................A simple abstraction to put a list in horizontal nav mode
  * OPTIONS.............Grouped nav items
@@ -173,7 +172,6 @@
  * Objects and abstractions
  */
 @import "objects/grids";
-@import "objects/flexbox";
 @import "objects/columns";
 @import "objects/nav";
 @import "objects/options";
