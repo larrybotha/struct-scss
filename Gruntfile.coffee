@@ -68,7 +68,7 @@ module.exports = (grunt) ->
 		#*------------------------------------*/
 		watch:
 			css:
-				files: ['<%= pkg.path.scss %>/**/*.scss'],
+				files: ['scss/**/*.scss'],
 				tasks: ['sass:dist']
 
 
