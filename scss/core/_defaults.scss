@@ -48,6 +48,19 @@ $global-border-box: true!default;
 
 
 
+/*------------------------------------*\
+	$PREFIXES
+\*------------------------------------*/
+// Variable settings for /addons/prefixer.scss
+$prefix-for-webkit:    true !default;
+$prefix-for-mozilla:   true !default;
+$prefix-for-microsoft: true !default;
+$prefix-for-opera:     true !default;
+$prefix-for-spec:      true !default; // required for keyframe mixin
+
+
+
+
 
 /*------------------------------------*\
   $BASE
