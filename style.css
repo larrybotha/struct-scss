@@ -211,6 +211,13 @@ might want to share.
  * in the browser. Set to `true` or `false`.
  */
 /*------------------------------------*\
+  $RAILS
+\*------------------------------------*/
+/**
+ * Using Rails? You'll need the font-face mixin to behave differently to correctly
+ * load font assets
+ */
+/*------------------------------------*\
   $BORDER-BOX
 \*------------------------------------*/
 /**
@@ -805,10 +812,10 @@ input[type="radio"] {
 input[type="search"] {
   -webkit-appearance: textfield;
   /* 1 */
-  -moz-box-sizing: content-box;
-  -webkit-box-sizing: content-box;
+  -moz-box-sizing: padding-box;
+  -webkit-box-sizing: padding-box;
   /* 2 */
-  box-sizing: content-box; }
+  box-sizing: padding-box; }
 
 /*
  * Remove inner padding and search cancel button in Safari 5 and Chrome
@@ -860,7 +867,7 @@ table {
   clear: both; }
 
 /*------------------------------------*\
-    $SHARED
+		$SHARED
 \*------------------------------------*/
 /**
  * Where `margin-bottom` is concerned, this value will be the same as the
@@ -876,6 +883,7 @@ blockquote, p, address,
 table,
 fieldset, figure,
 pre {
+  margin-top: 0;
   margin-bottom: 24px;
   margin-bottom: 1.5rem; }
   .islet h1, .islet h2, .islet h3, .islet h4, .islet h5, .islet h6, .islet hgroup, .islet
@@ -1041,7 +1049,6 @@ hgroup .hN {
 /**
  * A series of classes for setting tiny type; for use in smallprint etc.
  */
-.smallprint,
 .milli {
   font-size: 12px;
   font-size: 0.75rem; }
@@ -2387,6 +2394,12 @@ input[type="checkbox"] {
  * Fix fatty fonts in Chrome and Firefox on Mac - http://maximilianhoffmann.com/posts/better-font-rendering-on-osx
  */
 /**
+ * Prevent Chrome and Safari from flashing when a user taps on mobile
+ */
+html {
+  -webkit-tap-highlight-color: transparent; }
+
+/**
  * Fix IE8 not showing extended headers and footers when overflowing horizontally
  */
 .ie8 body {
@@ -2883,14 +2896,6 @@ img.align_center {
 /*
  * Display level modifiers
  */
-.display_-block {
-  display: block; }
-
-input.display_-block,
-textarea.display_-block,
-button.display_-block {
-  width: 100%; }
-
 /**
  * Add/remove floats
  */
