@@ -26,7 +26,7 @@
 /* image captions */
 .wp-caption { max-width: 100%}
 .wp-caption-text {
-	@include px-and-rem(margin, .5, 0, 1.5);
+	@include px-and-rem(margin, .5 0 1.5);
 	font-style: italic;
 }
 
