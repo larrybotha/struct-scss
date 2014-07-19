@@ -145,7 +145,6 @@ might want to share.
  * FORMS...............
  *
  * GRIDS...............Fluid, proportional and nestable grids
- * FLEXBOX.............Crudely emulate flexbox
  * COLUMNS.............CSS3 columns
  * NAV.................A simple abstraction to put a list in horizontal nav mode
  * OPTIONS.............Grouped nav items
@@ -224,6 +223,9 @@ might want to share.
  * Do you want all elements to adopt `box-sizing:border-box;` as per
  * paulirish.com/2012/box-sizing-border-box-ftw ?
  */
+/*------------------------------------*\
+	$PREFIXES
+\*------------------------------------*/
 /*------------------------------------*\
   $BASE
 \*------------------------------------*/
@@ -2426,12 +2428,10 @@ img[src*=svg] {
     $LINKS
 \*------------------------------------*/
 a {
-  -webkit-transition: all 150ms ease-in-out;
   -moz-transition: all 150ms ease-in-out;
   -o-transition: all 150ms ease-in-out;
   transition: all 150ms ease-in-out; }
   a:active {
-    -webkit-transition: all 0;
     -moz-transition: all 0;
     -o-transition: all 0;
     transition: all 0; }
@@ -2567,14 +2567,12 @@ input[type="radio"] {
    */ }
   @media only screen and (max-width: 480px) {
     .menu_-primary {
-      -webkit-transition: all 250ms ease-in-out;
       -moz-transition: all 250ms ease-in-out;
       -o-transition: all 250ms ease-in-out;
       transition: all 250ms ease-in-out;
-      -webkit-transform: translate3d(0, 0, 0);
       -moz-transform: translate3d(0, 0, 0);
-      -ms-transform: translate3d(0, 0, 0);
       -o-transform: translate3d(0, 0, 0);
+      -ms-transform: translate3d(0, 0, 0);
       transform: translate3d(0, 0, 0); } }
 
 .menu__item {
@@ -2602,7 +2600,6 @@ input[type="radio"] {
   border: 1px solid #666666;
   opacity: 0;
   z-index: -1;
-  -webkit-transition: z-index 150ms linear 300ms, opacity 150ms ease-in-out;
   -moz-transition: z-index 150ms linear 300ms, opacity 150ms ease-in-out;
   -o-transition: z-index 150ms linear 300ms, opacity 150ms ease-in-out;
   transition: z-index 150ms linear 300ms, opacity 150ms ease-in-out; }
@@ -2619,7 +2616,6 @@ input[type="radio"] {
   .menu__item a:hover + .menu__sub, .menu__item a:focus + .menu__sub, .menu__sub:hover, .menu__sub:focus {
     opacity: 1;
     z-index: 100;
-    -webkit-transition: all 150ms ease-in-out;
     -moz-transition: all 150ms ease-in-out;
     -o-transition: all 150ms ease-in-out;
     transition: all 150ms ease-in-out; }
