@@ -6,25 +6,25 @@
 /**
  * Fluid and nestable grid system, e.g.:
  *
-	 <div class="grid">
+	 <div class="gw">
 
-			 <div class="grid__item  one-third">
+			 <div class="g  one-third">
 					 <p>One third grid</p>
 			 </div><!--
 
-		--><div class="grid__item  two-thirds">
+		--><div class="g  two-thirds">
 					 <p>Two thirds grid</p>
 			 </div><!--
 
-		--><div class="grid__item  one-half">
+		--><div class="g  one-half">
 					 <p>One half grid</p>
 			 </div><!--
 
-		--><div class="grid__item  one-quarter">
+		--><div class="g  one-quarter">
 					 <p>One quarter grid</p>
 			 </div><!--
 
-		--><div class="grid__item  one-quarter">
+		--><div class="g  one-quarter">
 					 <p>One quarter grid</p>
 			 </div>
 
@@ -38,47 +38,64 @@
 /**
  * Grid wrapper
  */
-.grid {
+%grid {
 	@include px-and-rem(margin-left, -$base-spacing-unit);
-	list-style:none;
-	margin-bottom:0;
+	list-style: none;
+	margin-bottom: 0;
 }
 
+/**
+ * very infrequently occuring grid wrappers as children of grid wrappers.
+ */
+[class*="gw"] > [class*="gw"] { margin-left: 0;}
 
-	/**
-	 * very infrequently occuring grid wrappers as children of grid wrappers.
-	 */
-	.grid > .grid {
-		margin-left:0;
+%grid, %grid__item {
+	@if $use-flexbox-grid {
+		@include display(flex);
+		@include flex-wrap(wrap);
 	}
+}
+
+.gw { @extend %grid;}
 
 
 	/**
 	 * grid
 	 */
-	.grid__item {
-		display:inline-block;
-		width:100%;
-		vertical-align:top;
+	%grid__item {
+		@if $use-legacy-grid {
+			display: inline-block;
+			width: 100%;
+			vertical-align: top;
+		}
+
+		@if $use-flexbox-grid {
+			@include flex-grow(0);
+			@include flex-shrink(1);
+		}
+
 		@include px-and-rem(padding-left, $base-spacing-unit);
+
 		@if $global-border-box == false {
 			@include vendor(box-sizing, border-box);
 		}
 	}
+
+	.g { @extend %grid__item;}
 
 
 
 /**
 * reversed grids
 */
-.grid_-rev {
-	@extend .grid;
-	direction:rtl;
-	text-align:right;
+.gw_-rev {
+	@extend %grid;
+	direction: rtl;
+	text-align: right;
 
-	> .grid__item {
-		direction:ltr;
-		text-align:left;
+	& > %grid__item {
+		direction: ltr;
+		text-align: left;
 	}
 }
 
@@ -86,13 +103,11 @@
 /**
 * gutterless grids have all the properties of regular grids, minus any spacing.
 */
-.grid_-full {
-	@extend .grid;
-	margin-left:0;
+.gw_-no-guts {
+	@extend %grid;
+	margin-left: 0;
 
-	> .grid__item {
-		padding-left:0;
-	}
+	& > %grid__item { padding-left: 0;}
 }
 
 
@@ -100,13 +115,11 @@
 * centered grids align grid items centrally without needing to use push or pull
 * classes.
 */
-.grid_-center {
-	@extend .grid;
-	text-align:center;
+.gw_-center {
+	@extend %grid;
+	text-align: center;
 
-	> .grid__item {
-		text-align:left;
-	}
+	& > %grid__item { text-align: left;}
 }
 
 }//endif
