@@ -31,7 +31,7 @@ module.exports = (grunt) ->
 				cacheLocation: 'scss/.sass-cache'
 			dist:
 				files:
-					'style.css': 'scss/style.scss'
+					'kss/public/css/style.css': 'scss/style.scss'
 
 
 		#*------------------------------------*\
