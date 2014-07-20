@@ -239,6 +239,12 @@ might want to share.
  * Default colour for objects’ borders etc.
  */
 /*------------------------------------*\
+  $GRIDS
+\*------------------------------------*/
+/**
+ * Use either a flexbox based grid, an inline-block based grid, or both!
+ */
+/*------------------------------------*\
   $RESPONSIVE
 \*------------------------------------*/
 /**
@@ -1632,25 +1638,25 @@ input[type="checkbox"] {
 /**
  * Fluid and nestable grid system, e.g.:
  *
-	 <div class="grid">
+	 <div class="gw">
 
-			 <div class="grid__item  one-third">
+			 <div class="g  one-third">
 					 <p>One third grid</p>
 			 </div><!--
 
-		--><div class="grid__item  two-thirds">
+		--><div class="g  two-thirds">
 					 <p>Two thirds grid</p>
 			 </div><!--
 
-		--><div class="grid__item  one-half">
+		--><div class="g  one-half">
 					 <p>One half grid</p>
 			 </div><!--
 
-		--><div class="grid__item  one-quarter">
+		--><div class="g  one-quarter">
 					 <p>One quarter grid</p>
 			 </div><!--
 
-		--><div class="grid__item  one-quarter">
+		--><div class="g  one-quarter">
 					 <p>One quarter grid</p>
 			 </div>
 
@@ -1662,7 +1668,7 @@ input[type="checkbox"] {
 /**
  * Grid wrapper
  */
-.grid, .grid_-rev, .grid_-full, .grid_-center, .gw {
+.gw, .gw_-rev, .gw_-no-guts, .gw_-center {
   margin-left: -24px;
   margin-left: -1.5rem;
   list-style: none;
@@ -1671,44 +1677,68 @@ input[type="checkbox"] {
 /**
  * very infrequently occuring grid wrappers as children of grid wrappers.
  */
-.grid > .grid, .grid_-rev > .grid, .grid_-full > .grid, .grid_-center > .grid, .gw > .grid, .grid > .grid_-rev, .grid_-rev > .grid_-rev, .grid_-full > .grid_-rev, .grid_-center > .grid_-rev, .gw > .grid_-rev, .grid > .grid_-full, .grid_-rev > .grid_-full, .grid_-full > .grid_-full, .grid_-center > .grid_-full, .gw > .grid_-full, .grid > .grid_-center, .grid_-rev > .grid_-center, .grid_-full > .grid_-center, .grid_-center > .grid_-center, .gw > .grid_-center, .grid > .gw, .grid_-rev > .gw, .grid_-full > .gw, .grid_-center > .gw, .gw > .gw {
+[class*="gw"] > [class*="gw"] {
   margin-left: 0; }
+
+.gw, .gw_-rev, .gw_-no-guts, .gw_-center, .g {
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-lines: multiple;
+  -moz-box-lines: multiple;
+  box-lines: multiple;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap; }
 
 /**
  * grid
  */
-.grid__item, .g {
+.g {
   display: inline-block;
   width: 100%;
   vertical-align: top;
+  -webkit-flex-grow: 0;
+  -moz-flex-grow: 0;
+  flex-grow: 0;
+  -ms-flex-positive: 0;
+  -webkit-flex-shrink: 1;
+  -moz-flex-shrink: 1;
+  flex-shrink: 1;
+  -ms-flex-negative: 1;
   padding-left: 24px;
   padding-left: 1.5rem; }
 
 /**
 * reversed grids
 */
-.grid_-rev {
+.gw_-rev {
   direction: rtl;
   text-align: right; }
-  .grid_-rev > .grid__item, .grid_-rev > .g {
+  .gw_-rev > .g {
     direction: ltr;
     text-align: left; }
 
 /**
 * gutterless grids have all the properties of regular grids, minus any spacing.
 */
-.grid_-full {
+.gw_-no-guts {
   margin-left: 0; }
-  .grid_-full > .grid__item, .grid_-full > .g {
+  .gw_-no-guts > .g {
     padding-left: 0; }
 
 /**
 * centered grids align grid items centrally without needing to use push or pull
 * classes.
 */
-.grid_-center {
+.gw_-center {
   text-align: center; }
-  .grid_-center > .grid__item, .grid_-center > .g {
+  .gw_-center > .g {
     text-align: left; }
 
 /*------------------------------------*\
@@ -1732,100 +1762,196 @@ input[type="checkbox"] {
 * Whole
 */
 .one-whole {
-  width: 100%; }
+  width: 100%;
+  -webkit-flex-basis: 100%;
+  -moz-flex-basis: 100%;
+  flex-basis: 100%;
+  -ms-flex-preferred-size: 100%; }
 
 /**
 * Halves
 */
 .one-half, .two-quarters, .three-sixths, .four-eighths, .five-tenths, .six-twelfths {
-  width: 50%; }
+  width: 50%;
+  -webkit-flex-basis: 50%;
+  -moz-flex-basis: 50%;
+  flex-basis: 50%;
+  -ms-flex-preferred-size: 50%; }
 
 /**
 * Thirds
 */
 .one-third, .two-sixths, .four-twelfths {
-  width: 33.333%; }
+  width: 33.333%;
+  -webkit-flex-basis: 33.333%;
+  -moz-flex-basis: 33.333%;
+  flex-basis: 33.333%;
+  -ms-flex-preferred-size: 33.333%; }
 
 .two-thirds, .four-sixths, .eight-twelfths {
-  width: 66.666%; }
+  width: 66.666%;
+  -webkit-flex-basis: 66.666%;
+  -moz-flex-basis: 66.666%;
+  flex-basis: 66.666%;
+  -ms-flex-preferred-size: 66.666%; }
 
 /**
 * Quarters
 */
 .one-quarter, .two-eighths, .three-twelfths {
-  width: 25%; }
+  width: 25%;
+  -webkit-flex-basis: 25%;
+  -moz-flex-basis: 25%;
+  flex-basis: 25%;
+  -ms-flex-preferred-size: 25%; }
 
 .three-quarters, .six-eighths, .nine-twelfths {
-  width: 75%; }
+  width: 75%;
+  -webkit-flex-basis: 75%;
+  -moz-flex-basis: 75%;
+  flex-basis: 75%;
+  -ms-flex-preferred-size: 75%; }
 
 /**
 * Fifths
 */
 .one-fifth, .two-tenths {
-  width: 20%; }
+  width: 20%;
+  -webkit-flex-basis: 20%;
+  -moz-flex-basis: 20%;
+  flex-basis: 20%;
+  -ms-flex-preferred-size: 20%; }
 
 .two-fifths, .four-tenths {
-  width: 40%; }
+  width: 40%;
+  -webkit-flex-basis: 40%;
+  -moz-flex-basis: 40%;
+  flex-basis: 40%;
+  -ms-flex-preferred-size: 40%; }
 
 .three-fifths, .six-tenths {
-  width: 60%; }
+  width: 60%;
+  -webkit-flex-basis: 60%;
+  -moz-flex-basis: 60%;
+  flex-basis: 60%;
+  -ms-flex-preferred-size: 60%; }
 
 .four-fifths, .eight-tenths {
-  width: 80%; }
+  width: 80%;
+  -webkit-flex-basis: 80%;
+  -moz-flex-basis: 80%;
+  flex-basis: 80%;
+  -ms-flex-preferred-size: 80%; }
 
 /**
 * Sixths
 */
 .one-sixth, .two-twelfths {
-  width: 16.666%; }
+  width: 16.666%;
+  -webkit-flex-basis: 16.666%;
+  -moz-flex-basis: 16.666%;
+  flex-basis: 16.666%;
+  -ms-flex-preferred-size: 16.666%; }
 
 .five-sixths, .ten-twelfths {
-  width: 83.333%; }
+  width: 83.333%;
+  -webkit-flex-basis: 83.333%;
+  -moz-flex-basis: 83.333%;
+  flex-basis: 83.333%;
+  -ms-flex-preferred-size: 83.333%; }
 
 /**
 * Eighths
 */
 .one-eighth {
-  width: 12.5%; }
+  width: 12.5%;
+  -webkit-flex-basis: 12.5%;
+  -moz-flex-basis: 12.5%;
+  flex-basis: 12.5%;
+  -ms-flex-preferred-size: 12.5%; }
 
 .three-eighths {
-  width: 37.5%; }
+  width: 37.5%;
+  -webkit-flex-basis: 37.5%;
+  -moz-flex-basis: 37.5%;
+  flex-basis: 37.5%;
+  -ms-flex-preferred-size: 37.5%; }
 
 .five-eighths {
-  width: 62.5%; }
+  width: 62.5%;
+  -webkit-flex-basis: 62.5%;
+  -moz-flex-basis: 62.5%;
+  flex-basis: 62.5%;
+  -ms-flex-preferred-size: 62.5%; }
 
 .seven-eighths {
-  width: 87.5%; }
+  width: 87.5%;
+  -webkit-flex-basis: 87.5%;
+  -moz-flex-basis: 87.5%;
+  flex-basis: 87.5%;
+  -ms-flex-preferred-size: 87.5%; }
 
 /**
 * Tenths
 */
 .one-tenth {
-  width: 10%; }
+  width: 10%;
+  -webkit-flex-basis: 10%;
+  -moz-flex-basis: 10%;
+  flex-basis: 10%;
+  -ms-flex-preferred-size: 10%; }
 
 .three-tenths {
-  width: 30%; }
+  width: 30%;
+  -webkit-flex-basis: 30%;
+  -moz-flex-basis: 30%;
+  flex-basis: 30%;
+  -ms-flex-preferred-size: 30%; }
 
 .seven-tenths {
-  width: 70%; }
+  width: 70%;
+  -webkit-flex-basis: 70%;
+  -moz-flex-basis: 70%;
+  flex-basis: 70%;
+  -ms-flex-preferred-size: 70%; }
 
 .nine-tenths {
-  width: 90%; }
+  width: 90%;
+  -webkit-flex-basis: 90%;
+  -moz-flex-basis: 90%;
+  flex-basis: 90%;
+  -ms-flex-preferred-size: 90%; }
 
 /**
 * Twelfths
 */
 .one-twelfth {
-  width: 8.333%; }
+  width: 8.333%;
+  -webkit-flex-basis: 8.333%;
+  -moz-flex-basis: 8.333%;
+  flex-basis: 8.333%;
+  -ms-flex-preferred-size: 8.333%; }
 
 .five-twelfths {
-  width: 41.666%; }
+  width: 41.666%;
+  -webkit-flex-basis: 41.666%;
+  -moz-flex-basis: 41.666%;
+  flex-basis: 41.666%;
+  -ms-flex-preferred-size: 41.666%; }
 
 .seven-twelfths {
-  width: 58.333%; }
+  width: 58.333%;
+  -webkit-flex-basis: 58.333%;
+  -moz-flex-basis: 58.333%;
+  flex-basis: 58.333%;
+  -ms-flex-preferred-size: 58.333%; }
 
 .eleven-twelfths {
-  width: 91.666%; }
+  width: 91.666%;
+  -webkit-flex-basis: 91.666%;
+  -moz-flex-basis: 91.666%;
+  flex-basis: 91.666%;
+  -ms-flex-preferred-size: 91.666%; }
 
 /**
  * If you have set `$responsive` to ‘true’ in `_vars.scss` then you now have
@@ -1846,496 +1972,976 @@ input[type="checkbox"] {
   * Whole
   */
   .palm-one-whole {
-    width: 100%; }
+    width: 100%;
+    -webkit-flex-basis: 100%;
+    -moz-flex-basis: 100%;
+    flex-basis: 100%;
+    -ms-flex-preferred-size: 100%; }
 
   /**
   * Halves
   */
   .palm-one-half, .palm-two-quarters, .palm-three-sixths, .palm-four-eighths, .palm-five-tenths, .palm-six-twelfths {
-    width: 50%; }
+    width: 50%;
+    -webkit-flex-basis: 50%;
+    -moz-flex-basis: 50%;
+    flex-basis: 50%;
+    -ms-flex-preferred-size: 50%; }
 
   /**
   * Thirds
   */
   .palm-one-third, .palm-two-sixths, .palm-four-twelfths {
-    width: 33.333%; }
+    width: 33.333%;
+    -webkit-flex-basis: 33.333%;
+    -moz-flex-basis: 33.333%;
+    flex-basis: 33.333%;
+    -ms-flex-preferred-size: 33.333%; }
 
   .palm-two-thirds, .palm-four-sixths, .palm-eight-twelfths {
-    width: 66.666%; }
+    width: 66.666%;
+    -webkit-flex-basis: 66.666%;
+    -moz-flex-basis: 66.666%;
+    flex-basis: 66.666%;
+    -ms-flex-preferred-size: 66.666%; }
 
   /**
   * Quarters
   */
   .palm-one-quarter, .palm-two-eighths, .palm-three-twelfths {
-    width: 25%; }
+    width: 25%;
+    -webkit-flex-basis: 25%;
+    -moz-flex-basis: 25%;
+    flex-basis: 25%;
+    -ms-flex-preferred-size: 25%; }
 
   .palm-three-quarters, .palm-six-eighths, .palm-nine-twelfths {
-    width: 75%; }
+    width: 75%;
+    -webkit-flex-basis: 75%;
+    -moz-flex-basis: 75%;
+    flex-basis: 75%;
+    -ms-flex-preferred-size: 75%; }
 
   /**
   * Fifths
   */
   .palm-one-fifth, .palm-two-tenths {
-    width: 20%; }
+    width: 20%;
+    -webkit-flex-basis: 20%;
+    -moz-flex-basis: 20%;
+    flex-basis: 20%;
+    -ms-flex-preferred-size: 20%; }
 
   .palm-two-fifths, .palm-four-tenths {
-    width: 40%; }
+    width: 40%;
+    -webkit-flex-basis: 40%;
+    -moz-flex-basis: 40%;
+    flex-basis: 40%;
+    -ms-flex-preferred-size: 40%; }
 
   .palm-three-fifths, .palm-six-tenths {
-    width: 60%; }
+    width: 60%;
+    -webkit-flex-basis: 60%;
+    -moz-flex-basis: 60%;
+    flex-basis: 60%;
+    -ms-flex-preferred-size: 60%; }
 
   .palm-four-fifths, .palm-eight-tenths {
-    width: 80%; }
+    width: 80%;
+    -webkit-flex-basis: 80%;
+    -moz-flex-basis: 80%;
+    flex-basis: 80%;
+    -ms-flex-preferred-size: 80%; }
 
   /**
   * Sixths
   */
   .palm-one-sixth, .palm-two-twelfths {
-    width: 16.666%; }
+    width: 16.666%;
+    -webkit-flex-basis: 16.666%;
+    -moz-flex-basis: 16.666%;
+    flex-basis: 16.666%;
+    -ms-flex-preferred-size: 16.666%; }
 
   .palm-five-sixths, .palm-ten-twelfths {
-    width: 83.333%; }
+    width: 83.333%;
+    -webkit-flex-basis: 83.333%;
+    -moz-flex-basis: 83.333%;
+    flex-basis: 83.333%;
+    -ms-flex-preferred-size: 83.333%; }
 
   /**
   * Eighths
   */
   .palm-one-eighth {
-    width: 12.5%; }
+    width: 12.5%;
+    -webkit-flex-basis: 12.5%;
+    -moz-flex-basis: 12.5%;
+    flex-basis: 12.5%;
+    -ms-flex-preferred-size: 12.5%; }
 
   .palm-three-eighths {
-    width: 37.5%; }
+    width: 37.5%;
+    -webkit-flex-basis: 37.5%;
+    -moz-flex-basis: 37.5%;
+    flex-basis: 37.5%;
+    -ms-flex-preferred-size: 37.5%; }
 
   .palm-five-eighths {
-    width: 62.5%; }
+    width: 62.5%;
+    -webkit-flex-basis: 62.5%;
+    -moz-flex-basis: 62.5%;
+    flex-basis: 62.5%;
+    -ms-flex-preferred-size: 62.5%; }
 
   .palm-seven-eighths {
-    width: 87.5%; }
+    width: 87.5%;
+    -webkit-flex-basis: 87.5%;
+    -moz-flex-basis: 87.5%;
+    flex-basis: 87.5%;
+    -ms-flex-preferred-size: 87.5%; }
 
   /**
   * Tenths
   */
   .palm-one-tenth {
-    width: 10%; }
+    width: 10%;
+    -webkit-flex-basis: 10%;
+    -moz-flex-basis: 10%;
+    flex-basis: 10%;
+    -ms-flex-preferred-size: 10%; }
 
   .palm-three-tenths {
-    width: 30%; }
+    width: 30%;
+    -webkit-flex-basis: 30%;
+    -moz-flex-basis: 30%;
+    flex-basis: 30%;
+    -ms-flex-preferred-size: 30%; }
 
   .palm-seven-tenths {
-    width: 70%; }
+    width: 70%;
+    -webkit-flex-basis: 70%;
+    -moz-flex-basis: 70%;
+    flex-basis: 70%;
+    -ms-flex-preferred-size: 70%; }
 
   .palm-nine-tenths {
-    width: 90%; }
+    width: 90%;
+    -webkit-flex-basis: 90%;
+    -moz-flex-basis: 90%;
+    flex-basis: 90%;
+    -ms-flex-preferred-size: 90%; }
 
   /**
   * Twelfths
   */
   .palm-one-twelfth {
-    width: 8.333%; }
+    width: 8.333%;
+    -webkit-flex-basis: 8.333%;
+    -moz-flex-basis: 8.333%;
+    flex-basis: 8.333%;
+    -ms-flex-preferred-size: 8.333%; }
 
   .palm-five-twelfths {
-    width: 41.666%; }
+    width: 41.666%;
+    -webkit-flex-basis: 41.666%;
+    -moz-flex-basis: 41.666%;
+    flex-basis: 41.666%;
+    -ms-flex-preferred-size: 41.666%; }
 
   .palm-seven-twelfths {
-    width: 58.333%; }
+    width: 58.333%;
+    -webkit-flex-basis: 58.333%;
+    -moz-flex-basis: 58.333%;
+    flex-basis: 58.333%;
+    -ms-flex-preferred-size: 58.333%; }
 
   .palm-eleven-twelfths {
-    width: 91.666%; } }
+    width: 91.666%;
+    -webkit-flex-basis: 91.666%;
+    -moz-flex-basis: 91.666%;
+    flex-basis: 91.666%;
+    -ms-flex-preferred-size: 91.666%; } }
 @media only screen and (min-width: 481px) and (max-width: 1023px) {
   /**
   * Whole
   */
   .lap-one-whole {
-    width: 100%; }
+    width: 100%;
+    -webkit-flex-basis: 100%;
+    -moz-flex-basis: 100%;
+    flex-basis: 100%;
+    -ms-flex-preferred-size: 100%; }
 
   /**
   * Halves
   */
   .lap-one-half, .lap-two-quarters, .lap-three-sixths, .lap-four-eighths, .lap-five-tenths, .lap-six-twelfths {
-    width: 50%; }
+    width: 50%;
+    -webkit-flex-basis: 50%;
+    -moz-flex-basis: 50%;
+    flex-basis: 50%;
+    -ms-flex-preferred-size: 50%; }
 
   /**
   * Thirds
   */
   .lap-one-third, .lap-two-sixths, .lap-four-twelfths {
-    width: 33.333%; }
+    width: 33.333%;
+    -webkit-flex-basis: 33.333%;
+    -moz-flex-basis: 33.333%;
+    flex-basis: 33.333%;
+    -ms-flex-preferred-size: 33.333%; }
 
   .lap-two-thirds, .lap-four-sixths, .lap-eight-twelfths {
-    width: 66.666%; }
+    width: 66.666%;
+    -webkit-flex-basis: 66.666%;
+    -moz-flex-basis: 66.666%;
+    flex-basis: 66.666%;
+    -ms-flex-preferred-size: 66.666%; }
 
   /**
   * Quarters
   */
   .lap-one-quarter, .lap-two-eighths, .lap-three-twelfths {
-    width: 25%; }
+    width: 25%;
+    -webkit-flex-basis: 25%;
+    -moz-flex-basis: 25%;
+    flex-basis: 25%;
+    -ms-flex-preferred-size: 25%; }
 
   .lap-three-quarters, .lap-six-eighths, .lap-nine-twelfths {
-    width: 75%; }
+    width: 75%;
+    -webkit-flex-basis: 75%;
+    -moz-flex-basis: 75%;
+    flex-basis: 75%;
+    -ms-flex-preferred-size: 75%; }
 
   /**
   * Fifths
   */
   .lap-one-fifth, .lap-two-tenths {
-    width: 20%; }
+    width: 20%;
+    -webkit-flex-basis: 20%;
+    -moz-flex-basis: 20%;
+    flex-basis: 20%;
+    -ms-flex-preferred-size: 20%; }
 
   .lap-two-fifths, .lap-four-tenths {
-    width: 40%; }
+    width: 40%;
+    -webkit-flex-basis: 40%;
+    -moz-flex-basis: 40%;
+    flex-basis: 40%;
+    -ms-flex-preferred-size: 40%; }
 
   .lap-three-fifths, .lap-six-tenths {
-    width: 60%; }
+    width: 60%;
+    -webkit-flex-basis: 60%;
+    -moz-flex-basis: 60%;
+    flex-basis: 60%;
+    -ms-flex-preferred-size: 60%; }
 
   .lap-four-fifths, .lap-eight-tenths {
-    width: 80%; }
+    width: 80%;
+    -webkit-flex-basis: 80%;
+    -moz-flex-basis: 80%;
+    flex-basis: 80%;
+    -ms-flex-preferred-size: 80%; }
 
   /**
   * Sixths
   */
   .lap-one-sixth, .lap-two-twelfths {
-    width: 16.666%; }
+    width: 16.666%;
+    -webkit-flex-basis: 16.666%;
+    -moz-flex-basis: 16.666%;
+    flex-basis: 16.666%;
+    -ms-flex-preferred-size: 16.666%; }
 
   .lap-five-sixths, .lap-ten-twelfths {
-    width: 83.333%; }
+    width: 83.333%;
+    -webkit-flex-basis: 83.333%;
+    -moz-flex-basis: 83.333%;
+    flex-basis: 83.333%;
+    -ms-flex-preferred-size: 83.333%; }
 
   /**
   * Eighths
   */
   .lap-one-eighth {
-    width: 12.5%; }
+    width: 12.5%;
+    -webkit-flex-basis: 12.5%;
+    -moz-flex-basis: 12.5%;
+    flex-basis: 12.5%;
+    -ms-flex-preferred-size: 12.5%; }
 
   .lap-three-eighths {
-    width: 37.5%; }
+    width: 37.5%;
+    -webkit-flex-basis: 37.5%;
+    -moz-flex-basis: 37.5%;
+    flex-basis: 37.5%;
+    -ms-flex-preferred-size: 37.5%; }
 
   .lap-five-eighths {
-    width: 62.5%; }
+    width: 62.5%;
+    -webkit-flex-basis: 62.5%;
+    -moz-flex-basis: 62.5%;
+    flex-basis: 62.5%;
+    -ms-flex-preferred-size: 62.5%; }
 
   .lap-seven-eighths {
-    width: 87.5%; }
+    width: 87.5%;
+    -webkit-flex-basis: 87.5%;
+    -moz-flex-basis: 87.5%;
+    flex-basis: 87.5%;
+    -ms-flex-preferred-size: 87.5%; }
 
   /**
   * Tenths
   */
   .lap-one-tenth {
-    width: 10%; }
+    width: 10%;
+    -webkit-flex-basis: 10%;
+    -moz-flex-basis: 10%;
+    flex-basis: 10%;
+    -ms-flex-preferred-size: 10%; }
 
   .lap-three-tenths {
-    width: 30%; }
+    width: 30%;
+    -webkit-flex-basis: 30%;
+    -moz-flex-basis: 30%;
+    flex-basis: 30%;
+    -ms-flex-preferred-size: 30%; }
 
   .lap-seven-tenths {
-    width: 70%; }
+    width: 70%;
+    -webkit-flex-basis: 70%;
+    -moz-flex-basis: 70%;
+    flex-basis: 70%;
+    -ms-flex-preferred-size: 70%; }
 
   .lap-nine-tenths {
-    width: 90%; }
+    width: 90%;
+    -webkit-flex-basis: 90%;
+    -moz-flex-basis: 90%;
+    flex-basis: 90%;
+    -ms-flex-preferred-size: 90%; }
 
   /**
   * Twelfths
   */
   .lap-one-twelfth {
-    width: 8.333%; }
+    width: 8.333%;
+    -webkit-flex-basis: 8.333%;
+    -moz-flex-basis: 8.333%;
+    flex-basis: 8.333%;
+    -ms-flex-preferred-size: 8.333%; }
 
   .lap-five-twelfths {
-    width: 41.666%; }
+    width: 41.666%;
+    -webkit-flex-basis: 41.666%;
+    -moz-flex-basis: 41.666%;
+    flex-basis: 41.666%;
+    -ms-flex-preferred-size: 41.666%; }
 
   .lap-seven-twelfths {
-    width: 58.333%; }
+    width: 58.333%;
+    -webkit-flex-basis: 58.333%;
+    -moz-flex-basis: 58.333%;
+    flex-basis: 58.333%;
+    -ms-flex-preferred-size: 58.333%; }
 
   .lap-eleven-twelfths {
-    width: 91.666%; } }
+    width: 91.666%;
+    -webkit-flex-basis: 91.666%;
+    -moz-flex-basis: 91.666%;
+    flex-basis: 91.666%;
+    -ms-flex-preferred-size: 91.666%; } }
 @media only screen and (min-width: 481px) {
   /**
   * Whole
   */
   .lap-and-up-one-whole {
-    width: 100%; }
+    width: 100%;
+    -webkit-flex-basis: 100%;
+    -moz-flex-basis: 100%;
+    flex-basis: 100%;
+    -ms-flex-preferred-size: 100%; }
 
   /**
   * Halves
   */
   .lap-and-up-one-half, .lap-and-up-two-quarters, .lap-and-up-three-sixths, .lap-and-up-four-eighths, .lap-and-up-five-tenths, .lap-and-up-six-twelfths {
-    width: 50%; }
+    width: 50%;
+    -webkit-flex-basis: 50%;
+    -moz-flex-basis: 50%;
+    flex-basis: 50%;
+    -ms-flex-preferred-size: 50%; }
 
   /**
   * Thirds
   */
   .lap-and-up-one-third, .lap-and-up-two-sixths, .lap-and-up-four-twelfths {
-    width: 33.333%; }
+    width: 33.333%;
+    -webkit-flex-basis: 33.333%;
+    -moz-flex-basis: 33.333%;
+    flex-basis: 33.333%;
+    -ms-flex-preferred-size: 33.333%; }
 
   .lap-and-up-two-thirds, .lap-and-up-four-sixths, .lap-and-up-eight-twelfths {
-    width: 66.666%; }
+    width: 66.666%;
+    -webkit-flex-basis: 66.666%;
+    -moz-flex-basis: 66.666%;
+    flex-basis: 66.666%;
+    -ms-flex-preferred-size: 66.666%; }
 
   /**
   * Quarters
   */
   .lap-and-up-one-quarter, .lap-and-up-two-eighths, .lap-and-up-three-twelfths {
-    width: 25%; }
+    width: 25%;
+    -webkit-flex-basis: 25%;
+    -moz-flex-basis: 25%;
+    flex-basis: 25%;
+    -ms-flex-preferred-size: 25%; }
 
   .lap-and-up-three-quarters, .lap-and-up-six-eighths, .lap-and-up-nine-twelfths {
-    width: 75%; }
+    width: 75%;
+    -webkit-flex-basis: 75%;
+    -moz-flex-basis: 75%;
+    flex-basis: 75%;
+    -ms-flex-preferred-size: 75%; }
 
   /**
   * Fifths
   */
   .lap-and-up-one-fifth, .lap-and-up-two-tenths {
-    width: 20%; }
+    width: 20%;
+    -webkit-flex-basis: 20%;
+    -moz-flex-basis: 20%;
+    flex-basis: 20%;
+    -ms-flex-preferred-size: 20%; }
 
   .lap-and-up-two-fifths, .lap-and-up-four-tenths {
-    width: 40%; }
+    width: 40%;
+    -webkit-flex-basis: 40%;
+    -moz-flex-basis: 40%;
+    flex-basis: 40%;
+    -ms-flex-preferred-size: 40%; }
 
   .lap-and-up-three-fifths, .lap-and-up-six-tenths {
-    width: 60%; }
+    width: 60%;
+    -webkit-flex-basis: 60%;
+    -moz-flex-basis: 60%;
+    flex-basis: 60%;
+    -ms-flex-preferred-size: 60%; }
 
   .lap-and-up-four-fifths, .lap-and-up-eight-tenths {
-    width: 80%; }
+    width: 80%;
+    -webkit-flex-basis: 80%;
+    -moz-flex-basis: 80%;
+    flex-basis: 80%;
+    -ms-flex-preferred-size: 80%; }
 
   /**
   * Sixths
   */
   .lap-and-up-one-sixth, .lap-and-up-two-twelfths {
-    width: 16.666%; }
+    width: 16.666%;
+    -webkit-flex-basis: 16.666%;
+    -moz-flex-basis: 16.666%;
+    flex-basis: 16.666%;
+    -ms-flex-preferred-size: 16.666%; }
 
   .lap-and-up-five-sixths, .lap-and-up-ten-twelfths {
-    width: 83.333%; }
+    width: 83.333%;
+    -webkit-flex-basis: 83.333%;
+    -moz-flex-basis: 83.333%;
+    flex-basis: 83.333%;
+    -ms-flex-preferred-size: 83.333%; }
 
   /**
   * Eighths
   */
   .lap-and-up-one-eighth {
-    width: 12.5%; }
+    width: 12.5%;
+    -webkit-flex-basis: 12.5%;
+    -moz-flex-basis: 12.5%;
+    flex-basis: 12.5%;
+    -ms-flex-preferred-size: 12.5%; }
 
   .lap-and-up-three-eighths {
-    width: 37.5%; }
+    width: 37.5%;
+    -webkit-flex-basis: 37.5%;
+    -moz-flex-basis: 37.5%;
+    flex-basis: 37.5%;
+    -ms-flex-preferred-size: 37.5%; }
 
   .lap-and-up-five-eighths {
-    width: 62.5%; }
+    width: 62.5%;
+    -webkit-flex-basis: 62.5%;
+    -moz-flex-basis: 62.5%;
+    flex-basis: 62.5%;
+    -ms-flex-preferred-size: 62.5%; }
 
   .lap-and-up-seven-eighths {
-    width: 87.5%; }
+    width: 87.5%;
+    -webkit-flex-basis: 87.5%;
+    -moz-flex-basis: 87.5%;
+    flex-basis: 87.5%;
+    -ms-flex-preferred-size: 87.5%; }
 
   /**
   * Tenths
   */
   .lap-and-up-one-tenth {
-    width: 10%; }
+    width: 10%;
+    -webkit-flex-basis: 10%;
+    -moz-flex-basis: 10%;
+    flex-basis: 10%;
+    -ms-flex-preferred-size: 10%; }
 
   .lap-and-up-three-tenths {
-    width: 30%; }
+    width: 30%;
+    -webkit-flex-basis: 30%;
+    -moz-flex-basis: 30%;
+    flex-basis: 30%;
+    -ms-flex-preferred-size: 30%; }
 
   .lap-and-up-seven-tenths {
-    width: 70%; }
+    width: 70%;
+    -webkit-flex-basis: 70%;
+    -moz-flex-basis: 70%;
+    flex-basis: 70%;
+    -ms-flex-preferred-size: 70%; }
 
   .lap-and-up-nine-tenths {
-    width: 90%; }
+    width: 90%;
+    -webkit-flex-basis: 90%;
+    -moz-flex-basis: 90%;
+    flex-basis: 90%;
+    -ms-flex-preferred-size: 90%; }
 
   /**
   * Twelfths
   */
   .lap-and-up-one-twelfth {
-    width: 8.333%; }
+    width: 8.333%;
+    -webkit-flex-basis: 8.333%;
+    -moz-flex-basis: 8.333%;
+    flex-basis: 8.333%;
+    -ms-flex-preferred-size: 8.333%; }
 
   .lap-and-up-five-twelfths {
-    width: 41.666%; }
+    width: 41.666%;
+    -webkit-flex-basis: 41.666%;
+    -moz-flex-basis: 41.666%;
+    flex-basis: 41.666%;
+    -ms-flex-preferred-size: 41.666%; }
 
   .lap-and-up-seven-twelfths {
-    width: 58.333%; }
+    width: 58.333%;
+    -webkit-flex-basis: 58.333%;
+    -moz-flex-basis: 58.333%;
+    flex-basis: 58.333%;
+    -ms-flex-preferred-size: 58.333%; }
 
   .lap-and-up-eleven-twelfths {
-    width: 91.666%; } }
+    width: 91.666%;
+    -webkit-flex-basis: 91.666%;
+    -moz-flex-basis: 91.666%;
+    flex-basis: 91.666%;
+    -ms-flex-preferred-size: 91.666%; } }
 @media only screen and (max-width: 1023px) {
   /**
   * Whole
   */
   .portable-one-whole {
-    width: 100%; }
+    width: 100%;
+    -webkit-flex-basis: 100%;
+    -moz-flex-basis: 100%;
+    flex-basis: 100%;
+    -ms-flex-preferred-size: 100%; }
 
   /**
   * Halves
   */
   .portable-one-half, .portable-two-quarters, .portable-three-sixths, .portable-four-eighths, .portable-five-tenths, .portable-six-twelfths {
-    width: 50%; }
+    width: 50%;
+    -webkit-flex-basis: 50%;
+    -moz-flex-basis: 50%;
+    flex-basis: 50%;
+    -ms-flex-preferred-size: 50%; }
 
   /**
   * Thirds
   */
   .portable-one-third, .portable-two-sixths, .portable-four-twelfths {
-    width: 33.333%; }
+    width: 33.333%;
+    -webkit-flex-basis: 33.333%;
+    -moz-flex-basis: 33.333%;
+    flex-basis: 33.333%;
+    -ms-flex-preferred-size: 33.333%; }
 
   .portable-two-thirds, .portable-four-sixths, .portable-eight-twelfths {
-    width: 66.666%; }
+    width: 66.666%;
+    -webkit-flex-basis: 66.666%;
+    -moz-flex-basis: 66.666%;
+    flex-basis: 66.666%;
+    -ms-flex-preferred-size: 66.666%; }
 
   /**
   * Quarters
   */
   .portable-one-quarter, .portable-two-eighths, .portable-three-twelfths {
-    width: 25%; }
+    width: 25%;
+    -webkit-flex-basis: 25%;
+    -moz-flex-basis: 25%;
+    flex-basis: 25%;
+    -ms-flex-preferred-size: 25%; }
 
   .portable-three-quarters, .portable-six-eighths, .portable-nine-twelfths {
-    width: 75%; }
+    width: 75%;
+    -webkit-flex-basis: 75%;
+    -moz-flex-basis: 75%;
+    flex-basis: 75%;
+    -ms-flex-preferred-size: 75%; }
 
   /**
   * Fifths
   */
   .portable-one-fifth, .portable-two-tenths {
-    width: 20%; }
+    width: 20%;
+    -webkit-flex-basis: 20%;
+    -moz-flex-basis: 20%;
+    flex-basis: 20%;
+    -ms-flex-preferred-size: 20%; }
 
   .portable-two-fifths, .portable-four-tenths {
-    width: 40%; }
+    width: 40%;
+    -webkit-flex-basis: 40%;
+    -moz-flex-basis: 40%;
+    flex-basis: 40%;
+    -ms-flex-preferred-size: 40%; }
 
   .portable-three-fifths, .portable-six-tenths {
-    width: 60%; }
+    width: 60%;
+    -webkit-flex-basis: 60%;
+    -moz-flex-basis: 60%;
+    flex-basis: 60%;
+    -ms-flex-preferred-size: 60%; }
 
   .portable-four-fifths, .portable-eight-tenths {
-    width: 80%; }
+    width: 80%;
+    -webkit-flex-basis: 80%;
+    -moz-flex-basis: 80%;
+    flex-basis: 80%;
+    -ms-flex-preferred-size: 80%; }
 
   /**
   * Sixths
   */
   .portable-one-sixth, .portable-two-twelfths {
-    width: 16.666%; }
+    width: 16.666%;
+    -webkit-flex-basis: 16.666%;
+    -moz-flex-basis: 16.666%;
+    flex-basis: 16.666%;
+    -ms-flex-preferred-size: 16.666%; }
 
   .portable-five-sixths, .portable-ten-twelfths {
-    width: 83.333%; }
+    width: 83.333%;
+    -webkit-flex-basis: 83.333%;
+    -moz-flex-basis: 83.333%;
+    flex-basis: 83.333%;
+    -ms-flex-preferred-size: 83.333%; }
 
   /**
   * Eighths
   */
   .portable-one-eighth {
-    width: 12.5%; }
+    width: 12.5%;
+    -webkit-flex-basis: 12.5%;
+    -moz-flex-basis: 12.5%;
+    flex-basis: 12.5%;
+    -ms-flex-preferred-size: 12.5%; }
 
   .portable-three-eighths {
-    width: 37.5%; }
+    width: 37.5%;
+    -webkit-flex-basis: 37.5%;
+    -moz-flex-basis: 37.5%;
+    flex-basis: 37.5%;
+    -ms-flex-preferred-size: 37.5%; }
 
   .portable-five-eighths {
-    width: 62.5%; }
+    width: 62.5%;
+    -webkit-flex-basis: 62.5%;
+    -moz-flex-basis: 62.5%;
+    flex-basis: 62.5%;
+    -ms-flex-preferred-size: 62.5%; }
 
   .portable-seven-eighths {
-    width: 87.5%; }
+    width: 87.5%;
+    -webkit-flex-basis: 87.5%;
+    -moz-flex-basis: 87.5%;
+    flex-basis: 87.5%;
+    -ms-flex-preferred-size: 87.5%; }
 
   /**
   * Tenths
   */
   .portable-one-tenth {
-    width: 10%; }
+    width: 10%;
+    -webkit-flex-basis: 10%;
+    -moz-flex-basis: 10%;
+    flex-basis: 10%;
+    -ms-flex-preferred-size: 10%; }
 
   .portable-three-tenths {
-    width: 30%; }
+    width: 30%;
+    -webkit-flex-basis: 30%;
+    -moz-flex-basis: 30%;
+    flex-basis: 30%;
+    -ms-flex-preferred-size: 30%; }
 
   .portable-seven-tenths {
-    width: 70%; }
+    width: 70%;
+    -webkit-flex-basis: 70%;
+    -moz-flex-basis: 70%;
+    flex-basis: 70%;
+    -ms-flex-preferred-size: 70%; }
 
   .portable-nine-tenths {
-    width: 90%; }
+    width: 90%;
+    -webkit-flex-basis: 90%;
+    -moz-flex-basis: 90%;
+    flex-basis: 90%;
+    -ms-flex-preferred-size: 90%; }
 
   /**
   * Twelfths
   */
   .portable-one-twelfth {
-    width: 8.333%; }
+    width: 8.333%;
+    -webkit-flex-basis: 8.333%;
+    -moz-flex-basis: 8.333%;
+    flex-basis: 8.333%;
+    -ms-flex-preferred-size: 8.333%; }
 
   .portable-five-twelfths {
-    width: 41.666%; }
+    width: 41.666%;
+    -webkit-flex-basis: 41.666%;
+    -moz-flex-basis: 41.666%;
+    flex-basis: 41.666%;
+    -ms-flex-preferred-size: 41.666%; }
 
   .portable-seven-twelfths {
-    width: 58.333%; }
+    width: 58.333%;
+    -webkit-flex-basis: 58.333%;
+    -moz-flex-basis: 58.333%;
+    flex-basis: 58.333%;
+    -ms-flex-preferred-size: 58.333%; }
 
   .portable-eleven-twelfths {
-    width: 91.666%; } }
+    width: 91.666%;
+    -webkit-flex-basis: 91.666%;
+    -moz-flex-basis: 91.666%;
+    flex-basis: 91.666%;
+    -ms-flex-preferred-size: 91.666%; } }
 @media only screen and (min-width: 1024px) {
   /**
   * Whole
   */
   .desk-one-whole {
-    width: 100%; }
+    width: 100%;
+    -webkit-flex-basis: 100%;
+    -moz-flex-basis: 100%;
+    flex-basis: 100%;
+    -ms-flex-preferred-size: 100%; }
 
   /**
   * Halves
   */
   .desk-one-half, .desk-two-quarters, .desk-three-sixths, .desk-four-eighths, .desk-five-tenths, .desk-six-twelfths {
-    width: 50%; }
+    width: 50%;
+    -webkit-flex-basis: 50%;
+    -moz-flex-basis: 50%;
+    flex-basis: 50%;
+    -ms-flex-preferred-size: 50%; }
 
   /**
   * Thirds
   */
   .desk-one-third, .desk-two-sixths, .desk-four-twelfths {
-    width: 33.333%; }
+    width: 33.333%;
+    -webkit-flex-basis: 33.333%;
+    -moz-flex-basis: 33.333%;
+    flex-basis: 33.333%;
+    -ms-flex-preferred-size: 33.333%; }
 
   .desk-two-thirds, .desk-four-sixths, .desk-eight-twelfths {
-    width: 66.666%; }
+    width: 66.666%;
+    -webkit-flex-basis: 66.666%;
+    -moz-flex-basis: 66.666%;
+    flex-basis: 66.666%;
+    -ms-flex-preferred-size: 66.666%; }
 
   /**
   * Quarters
   */
   .desk-one-quarter, .desk-two-eighths, .desk-three-twelfths {
-    width: 25%; }
+    width: 25%;
+    -webkit-flex-basis: 25%;
+    -moz-flex-basis: 25%;
+    flex-basis: 25%;
+    -ms-flex-preferred-size: 25%; }
 
   .desk-three-quarters, .desk-six-eighths, .desk-nine-twelfths {
-    width: 75%; }
+    width: 75%;
+    -webkit-flex-basis: 75%;
+    -moz-flex-basis: 75%;
+    flex-basis: 75%;
+    -ms-flex-preferred-size: 75%; }
 
   /**
   * Fifths
   */
   .desk-one-fifth, .desk-two-tenths {
-    width: 20%; }
+    width: 20%;
+    -webkit-flex-basis: 20%;
+    -moz-flex-basis: 20%;
+    flex-basis: 20%;
+    -ms-flex-preferred-size: 20%; }
 
   .desk-two-fifths, .desk-four-tenths {
-    width: 40%; }
+    width: 40%;
+    -webkit-flex-basis: 40%;
+    -moz-flex-basis: 40%;
+    flex-basis: 40%;
+    -ms-flex-preferred-size: 40%; }
 
   .desk-three-fifths, .desk-six-tenths {
-    width: 60%; }
+    width: 60%;
+    -webkit-flex-basis: 60%;
+    -moz-flex-basis: 60%;
+    flex-basis: 60%;
+    -ms-flex-preferred-size: 60%; }
 
   .desk-four-fifths, .desk-eight-tenths {
-    width: 80%; }
+    width: 80%;
+    -webkit-flex-basis: 80%;
+    -moz-flex-basis: 80%;
+    flex-basis: 80%;
+    -ms-flex-preferred-size: 80%; }
 
   /**
   * Sixths
   */
   .desk-one-sixth, .desk-two-twelfths {
-    width: 16.666%; }
+    width: 16.666%;
+    -webkit-flex-basis: 16.666%;
+    -moz-flex-basis: 16.666%;
+    flex-basis: 16.666%;
+    -ms-flex-preferred-size: 16.666%; }
 
   .desk-five-sixths, .desk-ten-twelfths {
-    width: 83.333%; }
+    width: 83.333%;
+    -webkit-flex-basis: 83.333%;
+    -moz-flex-basis: 83.333%;
+    flex-basis: 83.333%;
+    -ms-flex-preferred-size: 83.333%; }
 
   /**
   * Eighths
   */
   .desk-one-eighth {
-    width: 12.5%; }
+    width: 12.5%;
+    -webkit-flex-basis: 12.5%;
+    -moz-flex-basis: 12.5%;
+    flex-basis: 12.5%;
+    -ms-flex-preferred-size: 12.5%; }
 
   .desk-three-eighths {
-    width: 37.5%; }
+    width: 37.5%;
+    -webkit-flex-basis: 37.5%;
+    -moz-flex-basis: 37.5%;
+    flex-basis: 37.5%;
+    -ms-flex-preferred-size: 37.5%; }
 
   .desk-five-eighths {
-    width: 62.5%; }
+    width: 62.5%;
+    -webkit-flex-basis: 62.5%;
+    -moz-flex-basis: 62.5%;
+    flex-basis: 62.5%;
+    -ms-flex-preferred-size: 62.5%; }
 
   .desk-seven-eighths {
-    width: 87.5%; }
+    width: 87.5%;
+    -webkit-flex-basis: 87.5%;
+    -moz-flex-basis: 87.5%;
+    flex-basis: 87.5%;
+    -ms-flex-preferred-size: 87.5%; }
 
   /**
   * Tenths
   */
   .desk-one-tenth {
-    width: 10%; }
+    width: 10%;
+    -webkit-flex-basis: 10%;
+    -moz-flex-basis: 10%;
+    flex-basis: 10%;
+    -ms-flex-preferred-size: 10%; }
 
   .desk-three-tenths {
-    width: 30%; }
+    width: 30%;
+    -webkit-flex-basis: 30%;
+    -moz-flex-basis: 30%;
+    flex-basis: 30%;
+    -ms-flex-preferred-size: 30%; }
 
   .desk-seven-tenths {
-    width: 70%; }
+    width: 70%;
+    -webkit-flex-basis: 70%;
+    -moz-flex-basis: 70%;
+    flex-basis: 70%;
+    -ms-flex-preferred-size: 70%; }
 
   .desk-nine-tenths {
-    width: 90%; }
+    width: 90%;
+    -webkit-flex-basis: 90%;
+    -moz-flex-basis: 90%;
+    flex-basis: 90%;
+    -ms-flex-preferred-size: 90%; }
 
   /**
   * Twelfths
   */
   .desk-one-twelfth {
-    width: 8.333%; }
+    width: 8.333%;
+    -webkit-flex-basis: 8.333%;
+    -moz-flex-basis: 8.333%;
+    flex-basis: 8.333%;
+    -ms-flex-preferred-size: 8.333%; }
 
   .desk-five-twelfths {
-    width: 41.666%; }
+    width: 41.666%;
+    -webkit-flex-basis: 41.666%;
+    -moz-flex-basis: 41.666%;
+    flex-basis: 41.666%;
+    -ms-flex-preferred-size: 41.666%; }
 
   .desk-seven-twelfths {
-    width: 58.333%; }
+    width: 58.333%;
+    -webkit-flex-basis: 58.333%;
+    -moz-flex-basis: 58.333%;
+    flex-basis: 58.333%;
+    -ms-flex-preferred-size: 58.333%; }
 
   .desk-eleven-twelfths {
-    width: 91.666%; } }
+    width: 91.666%;
+    -webkit-flex-basis: 91.666%;
+    -moz-flex-basis: 91.666%;
+    flex-basis: 91.666%;
+    -ms-flex-preferred-size: 91.666%; } }
 /**
  * If you have set the additional `$responsive-extra` variable to ‘true’ in
  * `_vars.scss` then you now have access to the following class available to
