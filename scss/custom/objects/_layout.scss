@@ -26,8 +26,8 @@
 /**
  * convenience classes for grid
  */
-.gw { @extend .grid;}
-  .g { @extend .grid__item;}
+.gw { @extend %grid;}
+  .g { @extend %grid__item;}
 
 
 
