@@ -135,7 +135,7 @@
 /**
 * gutterless grids have all the properties of regular grids, minus any spacing.
 */
-.gw_-no-guts {
+%gw_-no-guts {
 	@extend %grid;
 	margin-left: 0;
 
@@ -147,7 +147,7 @@
 * centered grids align grid items centrally without needing to use push or pull
 * classes.
 */
-.gw_-center {
+%gw_-center {
 	@extend %grid;
 
 	@if $use-legacy-grid { text-align: center;}
