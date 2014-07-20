@@ -1,7 +1,7 @@
 .DS_STORE
 config.rb
 .sass-cache/
-gh-pages/
+kss/
 
 # ignore grunt files
 node_modules
