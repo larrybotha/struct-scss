@@ -86,6 +86,19 @@ $base-ui-color:   #ccc!default;
 
 
 /*------------------------------------*\
+  $GRIDS
+\*------------------------------------*/
+/**
+ * Use either a flexbox based grid, an inline-block based grid, or both!
+ */
+$use-flexbox-grid: true!default;
+$use-legacy-grid:  true!default;
+
+
+
+
+
+/*------------------------------------*\
   $RESPONSIVE
 \*------------------------------------*/
 /**
