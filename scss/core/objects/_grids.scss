@@ -113,14 +113,21 @@
 /**
 * reversed grids
 */
-.gw_-rev {
+%gw_-rev {
 	@extend %grid;
-	direction: rtl;
-	text-align: right;
+
+	@if $use-legacy-grid {
+		direction: rtl;
+		text-align: right;
+	}
+
+	@if $use-flexbox-grid { @include flex-direction(row-reverse);}
 
 	& > %grid__item {
-		direction: ltr;
-		text-align: left;
+		@if $use-legacy-grid {
+			direction: ltr;
+			text-align: left;
+		}
 	}
 }
 
