@@ -149,9 +149,14 @@
 */
 .gw_-center {
 	@extend %grid;
-	text-align: center;
 
-	& > %grid__item { text-align: left;}
+	@if $use-legacy-grid { text-align: center;}
+
+	@if $use-flexbox-grid { @include justify-content(center);}
+
+	& > %grid__item {
+		@if $use-legacy-grid { text-align: left;}
+	}
 }
 
 }//endif
