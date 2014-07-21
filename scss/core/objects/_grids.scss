@@ -94,7 +94,7 @@
 			 * Child div must have flex: 1; or width: 100%; set to fill horizontal
 			 * space
 			 */
-			@include display(inherit);
+			@include display(flex);
 		}
 	}
 
