@@ -121,16 +121,20 @@
 	@extend %grid;
 
 	@if $use-legacy-grid {
-		direction: rtl;
-		text-align: right;
+		.oldie {
+			direction: rtl;
+			text-align: right;
+		}
 	}
 
 	@if $use-flexbox-grid { @include flex-direction(row-reverse);}
 
 	& > %grid__item {
 		@if $use-legacy-grid {
-			direction: ltr;
-			text-align: left;
+			.oldie {
+				direction: ltr;
+				text-align: left;
+			}
 		}
 	}
 }
@@ -157,6 +161,21 @@
 	@if $use-legacy-grid { text-align: center;}
 
 	@if $use-flexbox-grid { @include justify-content(center);}
+
+	& > %grid__item {
+		@if $use-legacy-grid { text-align: left;}
+	}
+}
+
+/**
+ * right aligned grids
+ */
+%gw_-right {
+	@extend %grid;
+
+	@if $use-legacy-grid { text-align: right;}
+
+	@if $use-legacy-grid { @include justify-content(flex-end);}
 
 	& > %grid__item {
 		@if $use-legacy-grid { text-align: left;}
