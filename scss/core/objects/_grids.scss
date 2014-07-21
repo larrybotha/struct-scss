@@ -113,7 +113,6 @@
 	}
 
 
-
 /**
 * reversed grids
 */
@@ -167,6 +166,7 @@
 	}
 }
 
+
 /**
  * right aligned grids
  */
@@ -181,5 +181,34 @@
 		@if $use-legacy-grid { text-align: left;}
 	}
 }
+
+
+/**
+ * middle aligned grids
+ */
+%gw_-middle {
+	@extend %grid;
+
+	@if $use-legacy-grid { @include align-items(center);}
+
+	& > %grid__item {
+		@if $use-legacy-grid { vertical-align: middle;}
+	}
+}
+
+
+/**
+ * bottom aligned grids
+ */
+%gw_-bottom {
+	@extend %grid;
+
+	@if $use-legacy-grid { @include align-items(flex-end);}
+
+	& > %grid__item {
+		@if $use-legacy-grid { vertical-align: bottom;}
+	}
+}
+
 
 }//endif
