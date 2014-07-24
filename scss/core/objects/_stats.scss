@@ -26,24 +26,29 @@
 * Demo: jsfiddle.net/inuitcss/Bpwu6
 *
 */
-.stat-group{
+%stat-group {
 	@extend %cf;
 	@include px-and-rem(margin-left, -$base-spacing-unit);
 }
+.stat-group { @extend %stat-group;}
 
-	.stat{
+	%stat {
 		float:left;
 		@include px-and-rem(margin-left, $base-spacing-unit);
 		@include display(flex);
 		@include flex-direction(column);
 	}
+	.stat { @extend %stat;}
 
-	.stat__title{ @include order(2);}
+	%stat__title{ @include order(2);}
+	.stat__title{ @extend %stat__title;}
 
-	.stat__value{
+
+	%stat__value {
 		 margin-left:0;
 		 @include order(1);
 	}
+	.stat__value { @extend %stat__value;}
 
 }//endif
 
