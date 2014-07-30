@@ -42,7 +42,6 @@
 	@include px-and-rem(margin-left, -$base-spacing-unit);
 	list-style: none;
 	margin-bottom: 0;
-	max-width: 100%;
 
 	@if $use-flexbox-grid { @include display(flex);}
 }
