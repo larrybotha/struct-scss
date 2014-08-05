@@ -174,7 +174,7 @@
 
 	@if $use-legacy-grid { text-align: right;}
 
-	@if $use-legacy-grid { @include justify-content(flex-end);}
+	@if $use-flexbox-grid { @include justify-content(flex-end);}
 
 	& > %grid__item {
 		@if $use-legacy-grid { text-align: left;}
@@ -188,7 +188,7 @@
 %gw_-middle {
 	@extend %grid;
 
-	@if $use-legacy-grid { @include align-items(center);}
+	@if $use-flexbox-grid { @include align-items(center);}
 
 	& > %grid__item {
 		@if $use-legacy-grid { vertical-align: middle;}
@@ -202,7 +202,7 @@
 %gw_-bottom {
 	@extend %grid;
 
-	@if $use-legacy-grid { @include align-items(flex-end);}
+	@if $use-flexbox-grid { @include align-items(flex-end);}
 
 	& > %grid__item {
 		@if $use-legacy-grid { vertical-align: bottom;}
