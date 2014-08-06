@@ -11,6 +11,30 @@
 
 
 /*------------------------------------*\
+	$BASE
+\*------------------------------------*/
+/**
+ * Base variables. These are included first as they provide a basis for calculations
+ * throughout the framework.
+ */
+$base-font-size:  16px!default;
+$base-line-height:  24px!default;
+
+/**
+ * Base font-family.
+ */
+$base-font-family:  sans-serif!default;
+
+/**
+ * Default colour for objects’ borders etc.
+ */
+$base-ui-color:   #ccc!default;
+
+
+
+
+
+/*------------------------------------*\
 	$FRAMEWORK
 \*------------------------------------*/
 /**
@@ -80,29 +104,6 @@ $prefix-for-spec:      true !default;
 
 
 /*------------------------------------*\
-  $BASE
-\*------------------------------------*/
-/**
- * Base stuff
- */
-$base-font-size:  16px!default;
-$base-line-height:  24px!default;
-
-/**
- * Base font-family.
- */
-$base-font-family:  sans-serif!default;
-
-/**
- * Default colour for objects’ borders etc.
- */
-$base-ui-color:   #ccc!default;
-
-
-
-
-
-/*------------------------------------*\
   $GRIDS
 \*------------------------------------*/
 /**
@@ -111,6 +112,10 @@ $base-ui-color:   #ccc!default;
 $use-flexbox-grid: true!default;
 $use-legacy-grid:  true!default;
 
+/**
+ * A unitless value will output rem units with px fallback for gutters,
+ * otherwise a unit value will output only that value
+ */
 $grid-gutter: $base-spacing-unit!default;
 
 
