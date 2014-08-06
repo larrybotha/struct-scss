@@ -14,9 +14,18 @@ might want to share.
 */
 
 /**
- * Setup
+ * Config
  */
+@import "core/defaults";
 @import "custom/config";
+
+
+
+
+
+/**
+ * Import the rest of the framework, followed by custom styles
+ */
 @import "core/framework";
 @import "custom/custom";
 
