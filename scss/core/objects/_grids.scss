@@ -39,7 +39,7 @@
  * Grid wrapper
  */
 %grid {
-	@include px-and-rem(margin-left, -$base-spacing-unit);
+	@include px-and-rem(margin-left, -$grid-gutter);
 	list-style: none;
 	margin-bottom: 0;
 
@@ -73,7 +73,7 @@
 			@include flex-shrink(1);
 		}
 
-		@include px-and-rem(padding-left, $base-spacing-unit);
+		@include px-and-rem(padding-left, $grid-gutter);
 
 		@if $global-border-box == false {
 			@include vendor(box-sizing, border-box);
