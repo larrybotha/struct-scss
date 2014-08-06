@@ -87,8 +87,7 @@
 
 		@if $use-flexbox-grid {
 			/**
-			 * Allow the content of a column to occupy the full height of the
-			 * column
+			 * Allow the content of a column to occupy the full height of the column
 			 *
 			 * Child div must have flex: 1; or width: 100%; set to fill horizontal
 			 * space
