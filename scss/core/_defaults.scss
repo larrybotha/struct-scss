@@ -11,6 +11,23 @@
 
 
 /*------------------------------------*\
+	$FRAMEWORK
+\*------------------------------------*/
+/**
+ * inuit.css will work these next ones out for use within the framework.
+ *
+ * Assign our `$base-line-height` to a new spacing var for more transparency.
+ */
+$base-spacing-unit: $base-line-height / $base-font-size;
+$half-spacing-unit: $base-spacing-unit / 2!default;
+$line-height-ratio: $base-line-height / $base-font-size;
+
+
+
+
+
+
+/*------------------------------------*\
   $DEBUG
 \*------------------------------------*/
 /**
@@ -56,7 +73,7 @@ $prefix-for-webkit:    true !default;
 $prefix-for-mozilla:   true !default;
 $prefix-for-microsoft: true !default;
 $prefix-for-opera:     true !default;
-$prefix-for-spec:      true !default; // required for keyframe mixin
+$prefix-for-spec:      true !default;
 
 
 
@@ -93,6 +110,8 @@ $base-ui-color:   #ccc!default;
  */
 $use-flexbox-grid: true!default;
 $use-legacy-grid:  true!default;
+
+$grid-gutter: $base-spacing-unit!default;
 
 
 
@@ -270,14 +289,3 @@ $use-wordpress:       false!default;
 
 
 
-/*------------------------------------*\
-  $FRAMEWORK
-\*------------------------------------*/
-/**
- * inuit.css will work these next ones out for use within the framework.
- *
- * Assign our `$base-line-height` to a new spacing var for more transparency.
- */
-$base-spacing-unit: $base-line-height / $base-font-size;
-$half-spacing-unit: $base-spacing-unit / 2!default;
-$line-height-ratio: $base-line-height / $base-font-size;
