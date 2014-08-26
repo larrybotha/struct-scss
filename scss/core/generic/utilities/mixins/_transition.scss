@@ -1,19 +1,19 @@
 @mixin transition($val...) {
-	@include prefixer(transition, $val, moz o spec);
+	@include prefixer(transition, $val, moz webkit o spec);
 }
 
 @mixin transition-property($val...) {
-	@include prefixer(transition-property, $val, moz o spec);
+	@include prefixer(transition-property, $val, moz webkit o spec);
 }
 
 @mixin transition-duration($val...) {
-	@include prefixer(transition-duration, $val, moz o spec);
+	@include prefixer(transition-duration, $val, moz webkit o spec);
 }
 
 @mixin transition-timing-function($val...) {
-	@include prefixer(transition-timing-function, $val, moz o spec);
+	@include prefixer(transition-timing-function, $val, moz webkit o spec);
 }
 
 @mixin transition-delay($val...) {
-	@include prefixer(transition-delay, $val, moz o spec);
+	@include prefixer(transition-delay, $val, moz webkit o spec);
 }
