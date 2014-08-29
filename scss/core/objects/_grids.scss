@@ -110,6 +110,17 @@
 		}
 	}
 
+	/**
+	 * Columns that shrink-wrap around their contents - useful for allowing .g_-auto
+	 * to occupy the remaining space
+	 *
+	 * Can be overridden by viewport specific column widths
+	 */
+	.g_-shrink-wrap {
+		@extend %grid__item;
+		width: auto;
+	}
+
 
 /**
 * reversed grids
