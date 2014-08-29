@@ -82,39 +82,48 @@
 
 	.g { @extend %grid__item;}
 
+	/**
+	 * Allow the content of a column to occupy the full height of the
+	 * column
+	 *
+	 * Child div must have flex: 1; or width: 100%; set to fill horizontal
+	 * space
+	 *
+	 * Does not work for legacy browsers
+	 */
 	.g_-tall {
 		@extend %grid__item;
 
 		@if $use-flexbox-grid {
-			/**
-			 * Allow the content of a column to occupy the full height of the column
-			 *
-			 * Child div must have flex: 1; or width: 100%; set to fill horizontal
-			 * space
-			 */
 			@include display(flex);
 		}
 	}
 
+	/**
+	 * Columns that automatically fill the remaining horizontal space
+	 *
+	 * To be used as is, without column width modifiers. Viewport modifiers will
+	 * not override the effect of auto.
+	 *
+	 * Does not work for legacy browsers
+	 */
 	.g_-auto {
 		@extend %grid__item;
 
 		@if $use-flexbox-grid {
-			/**
-			 * Columns that automatically fill the remaining horizontal space
-			 *
-			 * To be used as is, without column width modifiers
-			 */
 			@include flex-grow(1);
 			@include flex-basis(0);
 		}
 	}
 
 	/**
-	 * Columns that shrink-wrap around their contents - useful for allowing .g_-auto
-	 * to occupy the remaining space
+	 * Columns that shrink wrap around content - ideal for .g_-auto to occupy
+	 * remaining space.
 	 *
-	 * Can be overridden by viewport specific column widths
+	 * To be used as is, without column width modifiers. Viewport modifiers will
+	 * override shrink-wrap effect
+	 *
+	 * Does not work for legacy browsers
 	 */
 	.g_-shrink-wrap {
 		@extend %grid__item;
