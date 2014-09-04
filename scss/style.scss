@@ -15,9 +15,12 @@ might want to share.
 
 /**
  * Config
+ *
+ * Config is defined before defaults so that variables override their !default
+ * counterparts
  */
-@import "core/defaults";
 @import "custom/config";
+@import "core/defaults";
 
 
 
