@@ -67,7 +67,7 @@ td{
   text-align:left;
 }
 
-
+@if $advanced-tables {
 /**
  * Cell alignments
  */
@@ -161,3 +161,4 @@ td{
 .table_-data{
   font:12px/1.5 sans-serif;
 }
+}// endif
