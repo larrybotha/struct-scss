@@ -13,7 +13,15 @@ img, embed, object, video {
   height: auto;
 }
 
+/**
+ * Images in `figure` elements.
+ */
+figure > img{
+	display:block;
+}
 
+
+@if $advanced-images {
 /**
  * Rounded images.
  */
@@ -56,12 +64,4 @@ img, embed, object, video {
 .img_-tall{
     height:15 * $base-spacing-unit;
 }
-
-
-/**
- * Images in `figure` elements.
- */
-figure > img{
-    display:block;
-}
-
+}// endif

@@ -13,7 +13,7 @@ pre{
     color:inherit;
   }
 
-
+@if $advanced-code {
 /**
  * Add comments to your code examples, e.g.:
  *
@@ -61,3 +61,4 @@ pre{
   .line-numbers code{
     white-space:pre;          /* [4] */
   }
+}// endif
