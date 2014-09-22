@@ -132,7 +132,7 @@
 	@extend %grid;
 
 	@if $use-legacy-grid {
-		.oldie {
+		.oldie & {
 			direction: rtl;
 			text-align: right;
 		}
@@ -142,7 +142,7 @@
 
 	& > %grid__item {
 		@if $use-legacy-grid {
-			.oldie {
+			.oldie & {
 				direction: ltr;
 				text-align: left;
 			}
