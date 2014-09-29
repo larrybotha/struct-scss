@@ -4,6 +4,11 @@
 .error { color: $clr-danger;}
 
 %fc_-primary { color: $clr-primary;}
+a%fc_-primary {
+	@extend %fc_-primary;
 
+	&:hover,
+	&:focus { color: $clr-primary-lt;}
 
-
+	&:active { color: $clr-primary-dk;}
+}
