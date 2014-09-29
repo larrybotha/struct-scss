@@ -2,5 +2,17 @@
     $BACKGROUNDS
 \*------------------------------------*/
 %bgc_-primary-dk { background-color: $clr-primary-dk}
-%bgc_-primary		{ background-color: $clr-primary}
+.bgc_-primary-dk { @extend %bgc_-primary-dk;}
+%bgc_-primary    { background-color: $clr-primary}
+.bgc_-primary    { @extend %bgc_-primary;}
 %bgc_-primary-lt { background-color: $clr-primary-lt}
+.bgc_-primary-lt { @extend %bgc_-primary-lt;}
+
+
+
+
+
+/*------------------------------------*\
+		$BACKGROUND LINK STATES
+\*------------------------------------*/
+@import 'background/link-states';
