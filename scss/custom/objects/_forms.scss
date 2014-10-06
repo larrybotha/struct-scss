@@ -12,18 +12,11 @@ input:invalid, textarea:invalid {}*/
 :-o-placeholder { @include placeholder();}
 :-ms-placeholder { @include placeholder();}
 
-label {
-  cursor: pointer;
-}
+label { cursor: pointer;}
 
-textarea {
-  resize: vertical;
-}
+textarea { resize: vertical;}
 
-
-button, input, select, textarea {
-  vertical-align: baseline;
-}
+button, input, select, textarea { vertical-align: baseline;}
 
 input, textarea {
   height: auto;         // don't apply heights set to inputs
@@ -34,9 +27,7 @@ input, textarea {
 }
 
 input[type="checkbox"],
-input[type="radio"] {
-  margin-bottom: 0;
-}
+input[type="radio"] { margin-bottom: 0;}
 
 
 
