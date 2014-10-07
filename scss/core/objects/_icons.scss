@@ -18,15 +18,9 @@
     display: inline-block;
     text-decoration: inherit;
   }
-
-  .btn & {
-    line-height: .5;
-  }
 }
 
-[class*="icon-"] {
-	@extend %icon;
-}
+[class*="icon-"] { @extend %icon;}
 
 }//endif
 
