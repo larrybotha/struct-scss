@@ -40,6 +40,7 @@ $icon-sets: $app-icons, ();
 	@each $icon-name, $icon-uni in $icon-set {
 		%icon-#{$icon-name}:before {
 			@extend %icon;
+
 			&:before { content: "#{$icon-uni}";}
 		}
 		.icon-#{$icon-name}:before { @extend %icon-#{$icon-name}:before;}
