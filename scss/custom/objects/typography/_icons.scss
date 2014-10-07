@@ -43,7 +43,7 @@ $icon-sets: $app-icons, ();
 
 			&:before { content: "#{$icon-uni}";}
 		}
-		.icon-#{$icon-name}:before { @extend %icon-#{$icon-name}:before;}
+		.icon-#{$icon-name} { @extend %icon-#{$icon-name};}
 	}
 }
 
