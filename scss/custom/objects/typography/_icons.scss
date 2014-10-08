@@ -39,7 +39,7 @@ $icon-sets: $app-icons, ();
 @each $icon-set in $icon-sets {
 	@each $icon-name, $icon-uni in $icon-set {
 		%icon-#{$icon-name} {
-			@extend %icon;
+			@extend %icon !optional;
 
 			&:before { content: "#{$icon-uni}";}
 		}
