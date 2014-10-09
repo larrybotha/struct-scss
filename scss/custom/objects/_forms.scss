@@ -39,7 +39,7 @@ input[type="radio"] { margin-bottom: 0;}
     $CUSTOM RADIOS & CHECKBOXES
 \*------------------------------------*/
 /**
- * $use-icons must be set to true for custom radios and checkboxes
+ * $use-icons must be set to true to use custom radios and checkboxes
  */
 %custom-radio-false {
   @extend %icon;
