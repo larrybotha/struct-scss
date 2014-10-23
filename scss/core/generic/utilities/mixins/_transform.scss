@@ -5,3 +5,7 @@
 @mixin transform-origin($val...) {
 	@include prefixer(transform-origin, $val, moz webkit o ms spec);
 }
+
+@mixin transform-style($val...) {
+	@include prefixer(transform-style, $val, moz webkit o ms spec);
+}
