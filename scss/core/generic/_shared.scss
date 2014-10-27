@@ -26,9 +26,7 @@ pre {
  * Objects and abstractions
  */
 %sass-margin-bottom,
-.media,
-.island,
-.islet { @include px-and-rem(margin-bottom, $base-spacing-unit);}
+.media { @include px-and-rem(margin-bottom, $base-spacing-unit);}
 
 
 /**
