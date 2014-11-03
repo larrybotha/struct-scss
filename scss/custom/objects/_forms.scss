@@ -3,9 +3,7 @@
 \*------------------------------------*/
 /*input:valid, textarea:valid {}
 input:invalid, textarea:invalid {}*/
-@mixin placeholder() {
-  color: $base-ui-color;
-}
+@mixin placeholder($clr: $base-ui-color) { color: $clr;}
 
 ::-webkit-input-placeholder { @include placeholder();}
 :-moz-placeholder { @include placeholder();}
