@@ -46,11 +46,7 @@
   }
 }
 
-.menu_-primary {
-	@extend %menu;
-}
-
-  .menu__item {
+  %menu__item {
     position: relative;
     display: inline-block;
 
@@ -74,9 +70,9 @@
       }
     }
   }
+	.menu__item { @extend %menu__item;}
 
-  .menu__item_-current,
-  .menu__item_-current-parent {
+  %menu__item_-current {
     & > a {
       &,
       &:hover,
@@ -86,8 +82,10 @@
       }
     }
   }
+  .menu__item_-current,
+  .menu__item_-current-parent { @extend %menu__item_-current;}
 
-    .menu__sub {
+    %menu__sub {
 			@extend %list_-reset;
       position: absolute;
       background-color: #fff;
@@ -112,8 +110,8 @@
 				z-index: 0;
 			}
 
-      .menu__item a:hover + &,
-			.menu__item a:focus + &,
+      %menu__item a:hover + &,
+			%menu__item a:focus + &,
       &:hover,
 			&:focus {
 				opacity: 1;
@@ -136,8 +134,9 @@
         }
       }
     }
+		.menu__sub { @extend %menu__sub;}
 
-      .menu__sub .menu__sub {
+      %menu__sub %menu__sub {
         top: 0;
         left: 100%;
 
@@ -146,3 +145,13 @@
           left: auto;
         }
       }
+
+
+
+
+
+/*------------------------------------*\
+    $PRIMARY NAVIGATION
+\*------------------------------------*/
+.menu_-primary { @extend %menu;}
+
