@@ -8,11 +8,24 @@
 
 
 /**
- * Fix fatty fonts in Chrome and Firefox on Mac - http://maximilianhoffmann.com/posts/better-font-rendering-on-osx
+ * Fix fatty fonts in Chrome and Firefox on Mac:
+ * http://maximilianhoffmann.com/posts/better-font-rendering-on-osx
  */
 %fix-fatty-fonts {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+}
+
+/**
+ * Use sticky footer:
+ * http://philipwalton.github.io/solved-by-flexbox/demos/sticky-footer/
+ *
+ * requires flex: 1; on primary content
+ */
+%sticky-footer {
+	@include display(flex);
+	@include flex-direction(column);
+	min-height: 100vh;
 }
 
 /**
@@ -30,6 +43,8 @@ html, body, button, input, select, textarea {
  * Fix IE8 not showing extended headers and footers when overflowing horizontally
  */
 body {
+	// @extend %sticky-footer;
+
 	.ie8 & { display: table;}
 }
 
