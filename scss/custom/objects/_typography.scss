@@ -120,8 +120,7 @@ img.align_center {
  * Hide content off-screen without resorting to `display:none;`, also provide
  * breakpoint specific hidden elements.
  */
-.accessibility,
-.visuallyhidden{
+%visuallyhidden {
   @include accessibility;
 
   &.focusable:active, &.focusable:focus {
@@ -132,13 +131,15 @@ img.align_center {
     margin: 0;
     overflow: visible;
  }
-
 }
+.accessibility,
+.visuallyhidden { @extend %visuallyhidden;}
+
 @if $responsive{
-  @each $state in palm, lap, lap-and-up, portable, desk, desk-wide{
-    @include media-query(#{$state}){
+  @each $state in palm, lap, lap-and-up, portable, desk, desk-wide {
+    @include media-query(#{$state}) {
       .accessibility_-#{$state},
-      .visuallyhidden_-#{$state}{
+      .visuallyhidden_-#{$state} {
         @include accessibility;
      }
    }
