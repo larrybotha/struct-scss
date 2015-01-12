@@ -52,6 +52,32 @@
       &:focus {}
 
       &:active {}
+
+      %menu__sub a {
+        min-width: 225px;
+        white-space: nowrap;
+
+				// collapsed styles
+				max-height: 0;
+				overflow: hidden;
+				padding-top: 0;
+				padding-bottom: 0;
+				opacity: 0;
+
+        @include media-query(palm) {
+          white-space: normal;
+          min-width: auto;
+					padding: 0 1.5em;
+        }
+      }
+
+			a:hover + %menu__sub > &,
+			%menu__sub:hover > & {
+				max-height: 8em;
+				padding-top: 1em;
+				padding-bottom: 1em;
+				opacity: 1;
+			}
     }
   }
 	.menu__item { @extend %menu__item;}
@@ -71,15 +97,15 @@
 			@extend %list_-reset;
       position: absolute;
       background-color: #fff;
-      border: 1px solid $base-ui-color;
-			opacity: 0;
-      z-index: -1;
-			@include transition(
-				z-index 150ms linear 300ms,
-				opacity 150ms ease-in-out
-			);
+			height: 0;
+			overflow: hidden;
 
-			.ie8 & { display: none;}
+			a:hover + &,
+			&:hover {
+				height: auto;
+				overflow: visible;
+				border: 1px solid $base-ui-color;
+			}
 
 			@include media-query(palm) {
 				display: block;
@@ -89,28 +115,6 @@
 				opacity: 1;
 				z-index: 0;
 			}
-
-      %menu__item a:hover + &,
-			%menu__item a:focus + &,
-      &:hover,
-			&:focus {
-				opacity: 1;
-				z-index: 100;
-				@include transition(all 150ms ease-in-out);
-
-				.ie8 & { display: block;}
-      }
-
-      & a {
-        min-width: 225px;
-        white-space: nowrap;
-
-        @include media-query(palm) {
-          white-space: normal;
-          min-width: auto;
-					padding: 0 1.5em;
-        }
-      }
     }
 		.menu__sub { @extend %menu__sub;}
 
