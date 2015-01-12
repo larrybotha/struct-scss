@@ -42,7 +42,7 @@
 
     @include media-query(palm) { display: block;}
 
-    & a {
+    & > a {
       display: block;
       color: $clr-primary;
 			line-height: 3;
