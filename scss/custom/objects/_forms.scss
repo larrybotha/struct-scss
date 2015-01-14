@@ -38,28 +38,45 @@ input[type="radio"] { margin-bottom: 0;}
 \*------------------------------------*/
 /**
  * $use-icons must be set to true to use custom radios and checkboxes
+ *
+ * custom checkbox and radio icons should be added to typography/_icons.scss
+ * which these styles will reference
+
+	input[type=[radio|checkbox].visuallyhidden
+	label
+		i.radio_-icon
+		| my custom radio's label text
+
  */
-%custom-radio-false {
+%custom-radio-base {
   @extend %icon;
+	vertical-align: sub;
 
   &:before {
 		position: relative;
-		content: "\e060";
     line-height: 1;
 		z-index: 10;
   }
 }
 
 .radio_-icon,
-.checkbox_-icon { @extend %custom-radio-false;}
+.checkbox_-icon { @extend %custom-radio-base;}
+
+.checkbox_-icon {
+	&:before { @extend %icon-checkbox-false:before;}
+}
+
+.radio_-icon {
+	&:before { @extend %icon-radio-false:before;}
+}
 
 input:checked + label {
   & > .radio_-icon {
-		&:before { content: "\e061";}
+		&:before { @extend %icon-radio-true:before;}
 	}
 
 	& > .checkbox_-icon {
-		&:before { content: "\e070";}
+		&:before { @extend %icon-checkbox-true:before;}
 	}
 }
 
