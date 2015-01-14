@@ -17,8 +17,6 @@ fieldset,figure,
 pre {
 	margin-top: 0;
 	@include px-and-rem(margin-bottom, $base-spacing-unit);
-
-	.islet & { @include px-and-rem(margin-bottom, $base-spacing-unit / 2);}
 }
 
 
