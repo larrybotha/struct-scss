@@ -11,12 +11,14 @@
 	@include px-and-rem(padding-right, 1);
 }
 
-%wrap {
+%wrap-base {
 	@extend %wrap-margin;
 	@extend %wrap-padding;
+}
+.wrap {
+	@extend %wrap;
 	max-width: 1280px;
 }
-.wrap { @extend %wrap;}
 
 %wrap_-cf {
 	@extend %wrap;
