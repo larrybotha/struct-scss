@@ -49,23 +49,6 @@ button%display_-block { width: 100%;}
 
 %display_-iblock { display: inline-block;}
 
-%display_-table { display: table;}
-
-%display_-itable {	display: inline-table;}
-
-%display_-table,
-%display_-itable { height: 100%;}
-
-%display_-table-full {
-	@extend %display_-table;
-	width: 100%;
-}
-
-%display_-table__inner {
-	display: table-cell;
-	vertical-align: middle;
-}
-
 
 /**
  * Add/remove floats
