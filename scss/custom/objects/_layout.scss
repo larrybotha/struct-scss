@@ -1,20 +1,20 @@
 /*------------------------------------*\
 		$LAYOUT
 \*------------------------------------*/
-%wrap {
-	max-width: 1280px;
-	margin-right: auto;
-	margin-left: auto;
-	@include px-and-rem(padding-left, 1);
-	@include px-and-rem(padding-right, 1);
-}
 
-%wrap_-cf {
-	@extend %wrap;
-	@extend .cf;
-}
 
-.wrap { @extend %wrap;}
+
+
+
+/*------------------------------------*\
+		$WRAPS
+\*------------------------------------*/
+@import './layout/wraps';
+
+
+
+
+
 
 
 

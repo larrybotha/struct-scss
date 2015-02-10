@@ -1,0 +1,24 @@
+/*------------------------------------*\
+		$WRAPS
+\*------------------------------------*/
+%wrap-margin {
+	margin-right: auto;
+	margin-left: auto;
+}
+
+%wrap-padding {
+	@include px-and-rem(padding-left, 1);
+	@include px-and-rem(padding-right, 1);
+}
+
+%wrap {
+	@extend %wrap-margin;
+	@extend %wrap-padding;
+	max-width: 1280px;
+}
+.wrap { @extend %wrap;}
+
+%wrap_-cf {
+	@extend %wrap;
+	@extend .cf;
+}
