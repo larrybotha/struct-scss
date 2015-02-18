@@ -15,37 +15,16 @@
 
 
 /*------------------------------------*\
+\*------------------------------------*/
+
+
+
+
+
+/*------------------------------------*\
     $IMPORTS
 \*------------------------------------*/
-/**
- * import custom styles
- */
-@import "objects/base";
-@import "objects/images";
-@import "objects/links";
-@import "objects/tables";
-@import "objects/rules";
-@import "objects/lists";
-@import "objects/forms";
-@import "objects/fonts";
-@import "objects/main-structure";
-@import "objects/menus";
-@import "objects/buttons";
-@import "objects/alerts";
-@import "objects/progress";
-
-
-
-
-
-/**
- * Modifier styles - these should always be declared after objects / blocks to
- * avoid being overridden.
- */
-@import "objects/typography";
-@import "objects/backgrounds";
-@import "objects/layout";
-@import "objects/animations";
+@import "objects/!objects";
 
 
 
