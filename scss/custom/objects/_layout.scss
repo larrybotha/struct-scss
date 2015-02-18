@@ -58,57 +58,63 @@ button%display_-block { width: 100%;}
 %float_-none		{ float:none;}
 
 
-/**
- * Add/remove margins
- */
-%push						{ @include px-and-rem(margin,				 $base-spacing-unit);}
-%push_-top			{ @include px-and-rem(margin-top,		 $base-spacing-unit);}
-%push_-right		{ @include px-and-rem(margin-right,  $base-spacing-unit);}
-%push_-bottom		{ @include px-and-rem(margin-bottom, $base-spacing-unit);}
-%push_-left			{ @include px-and-rem(margin-left,	 $base-spacing-unit);}
-%push_-ends			{ @include px-and-rem(margin-top,		 $base-spacing-unit); @include px-and-rem(margin-bottom, $base-spacing-unit);}
-%push_-sides		{ @include px-and-rem(margin-right,  $base-spacing-unit); @include px-and-rem(margin-left,	$base-spacing-unit);}
-
-%push_-small				 { @include px-and-rem(margin,				$base-spacing-unit - .5);}
-%push_-small_-top		 { @include px-and-rem(margin-top,		$base-spacing-unit - .5);}
-%push_-small_-right  { @include px-and-rem(margin-right,	$base-spacing-unit - .5);}
-%push_-small_-bottom { @include px-and-rem(margin-bottom, $base-spacing-unit - .5);}
-%push_-small_-left	 { @include px-and-rem(margin-left,		$base-spacing-unit - .5);}
-%push_-small_-ends	 { @include px-and-rem(margin-top,		$base-spacing-unit - .5); @include px-and-rem(margin-bottom, $base-spacing-unit - .5);}
-%push_-small_-sides  { @include px-and-rem(margin-right,	$base-spacing-unit - .5); @include px-and-rem(margin-left, $base-spacing-unit - .5);}
-
-%flush					{ margin:				0;}
-%flush_-top			{ margin-top:		0;}
-%flush_-right		{ margin-right: 0;}
-%flush_-bottom	{ margin-bottom:0;}
-%flush_-left		{ margin-left:	0;}
-%flush_-ends		{ margin-top:		0; margin-bottom:0;}
-%flush_-sides		{ margin-right: 0; margin-left:  0;}
 
 
-/**
- * Add/remove paddings
- */
-%soft						{ @include px-and-rem(padding,				$base-spacing-unit);}
-%soft_-top			{ @include px-and-rem(padding-top,		$base-spacing-unit);}
-%soft_-right		{ @include px-and-rem(padding-right,	$base-spacing-unit);}
-%soft_-bottom		{ @include px-and-rem(padding-bottom, $base-spacing-unit);}
-%soft_-left			{ @include px-and-rem(padding-left,		$base-spacing-unit);}
-%soft_-ends			{ @include px-and-rem(padding-top,		$base-spacing-unit); @include px-and-rem(padding-bottom, $base-spacing-unit);}
-%soft_-sides		{ @include px-and-rem(padding-right,	$base-spacing-unit); @include px-and-rem(padding-left,	 $base-spacing-unit);}
 
-%soft_-small				 { @include px-and-rem(padding,				 $base-spacing-unit - .5);}
-%soft_-small_-top		 { @include px-and-rem(padding-top,		 $base-spacing-unit - .5);}
-%soft_-small_-right  { @include px-and-rem(padding-right,  $base-spacing-unit - .5);}
-%soft_-small_-bottom { @include px-and-rem(padding-bottom, $base-spacing-unit - .5);}
-%soft_-small_-left	 { @include px-and-rem(padding-left,	 $base-spacing-unit - .5);}
-%soft_-small_-ends	 { @include px-and-rem(padding-top,		 $base-spacing-unit - .5); @include px-and-rem(padding-bottom, $base-spacing-unit - .5);}
-%soft_-small_-sides  { @include px-and-rem(padding-right,  $base-spacing-unit - .5); @include px-and-rem(padding-left,	 $base-spacing-unit - .5);}
+/*------------------------------------*\
+    $MARGIN
+\*------------------------------------*/
+%push                  { @include push;}
+%push_-top             { @include push_-top;}
+%push_-right           { @include push_-right;}
+%push_-bottom          { @include push_-bottom;}
+%push_-left            { @include push_-left;}
+%push_-ends            { @include push_-ends;}
+%push_-sides           { @include push_-sides;}
 
-%hard						{ padding:			 0;}
-%hard_-top			{ padding-top:	 0;}
-%hard_-right		{ padding-right: 0;}
-%hard_-bottom		{ padding-bottom:0;}
-%hard_-left			{ padding-left:  0;}
-%hard_-ends			{ padding-top:	 0; padding-bottom:0;}
-%hard_-sides		{ padding-right: 0; padding-left:  0;}
+%push_-small           { @include push_-small;}
+%push_-small_-top      { @include push_-small_-top;}
+%push_-small_-right    { @include push_-small_-right;}
+%push_-small_-bottom   { @include push_-small_-bottom;}
+%push_-small_-left     { @include push_-small_-left;}
+%push_-small_-ends     { @include push_-small_-ends;}
+%push_-small_-sides    { @include push_-small_-sides;}
+
+%flush                 { @include flush;}
+%flush_-top            { @include flush_-top;}
+%flush_-right          { @include flush_-right;}
+%flush_-bottom         { @include flush_-bottom;}
+%flush_-left           { @include flush_-left;}
+%flush_-ends           { @include flush_-ends;}
+%flush_-sides          { @include flush_-sides;}
+
+
+
+
+
+/*------------------------------------*\
+    $PADDING
+\*------------------------------------*/
+%soft                  { @include soft;}
+%soft_-top             { @include soft_-top;}
+%soft_-right           { @include soft_-right;}
+%soft_-bottom          { @include soft_-bottom;}
+%soft_-left            { @include soft_-left;}
+%soft_-ends            { @include soft_-ends;}
+%soft_-sides           { @include soft_-sides;}
+
+%soft_-small           { @include soft_-small;}
+%soft_-small_-top      { @include soft_-small_-top;}
+%soft_-small_-right    { @include soft_-small_-right;}
+%soft_-small_-bottom   { @include soft_-small_-bottom;}
+%soft_-small_-left     { @include soft_-small_-left;}
+%soft_-small_-ends     { @include soft_-small_-ends;}
+%soft_-small_-sides    { @include soft_-small_-sides;}
+
+%hard                  { @include hard;}
+%hard_-top             { @include hard_-top;}
+%hard_-right           { @include hard_-right;}
+%hard_-bottom          { @include hard_-bottom;}
+%hard_-left            { @include hard_-left;}
+%hard_-ends            { @include hard_-ends;}
+%hard_-sides           { @include hard_-sides;}

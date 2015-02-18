@@ -1,0 +1,82 @@
+/*------------------------------------*\
+    $MARGIN AND PADDING
+\*------------------------------------*/
+/**
+ * these mixins shouldn't need to be used directly except for in the placeholders
+ * defined in _layouts.scss
+ *
+ * prefer extending those placeholders from your selectors over including these mixins
+ *
+ * this will reduce duplication of the same properties over your stylesheets, while
+ * allowing you to reuse consistent spacing across your stylesheets
+ *
+ * situations on when to rather use an include is if you need to override margin or
+ * padding in a media query when the placeholder has been extended. Due to source
+ * order, you will not always be able to override the placeholders.
+ * Including the relevant mixin will then allow you to override the properties in
+ * your media query.
+ */
+$mp-small: .5;
+
+
+
+
+
+/*------------------------------------*\
+    $MARGIN
+\*------------------------------------*/
+@mixin push           { @include px-and-rem(margin,        $base-spacing-unit);}
+@mixin push_-top      { @include px-and-rem(margin-top,    $base-spacing-unit);}
+@mixin push_-right    { @include px-and-rem(margin-right,  $base-spacing-unit);}
+@mixin push_-bottom   { @include px-and-rem(margin-bottom, $base-spacing-unit);}
+@mixin push_-left     { @include px-and-rem(margin-left,   $base-spacing-unit);}
+@mixin push_-ends     { @include px-and-rem(margin-top,    $base-spacing-unit); @include px-and-rem(margin-bottom, $base-spacing-unit);}
+@mixin push_-sides    { @include px-and-rem(margin-right,  $base-spacing-unit); @include px-and-rem(margin-left,  $base-spacing-unit);}
+
+@mixin push_-small          { @include px-and-rem(margin,        $base-spacing-unit - $mp-small);}
+@mixin push_-small_-top     { @include px-and-rem(margin-top,    $base-spacing-unit - $mp-small);}
+@mixin push_-small_-right   { @include px-and-rem(margin-right,  $base-spacing-unit - $mp-small);}
+@mixin push_-small_-bottom  { @include px-and-rem(margin-bottom, $base-spacing-unit - $mp-small);}
+@mixin push_-small_-left    { @include px-and-rem(margin-left,   $base-spacing-unit - $mp-small);}
+@mixin push_-small_-ends    { @include px-and-rem(margin-top,    $base-spacing-unit - $mp-small); @include px-and-rem(margin-bottom, $base-spacing-unit - $mp-small);}
+@mixin push_-small_-sides   { @include px-and-rem(margin-right,  $base-spacing-unit - $mp-small); @include px-and-rem(margin-left, $base-spacing-unit - $mp-small);}
+
+@mixin flush          { margin:       0;}
+@mixin flush_-top     { margin-top:   0;}
+@mixin flush_-right   { margin-right: 0;}
+@mixin flush_-bottom  { margin-bottom:0;}
+@mixin flush_-left    { margin-left:  0;}
+@mixin flush_-ends    { margin-top:   0; margin-bottom:0;}
+@mixin flush_-sides   { margin-right: 0; margin-left:  0;}
+
+
+
+
+
+
+/*------------------------------------*\
+    $PADDING
+\*------------------------------------*/
+@mixin soft           { @include px-and-rem(padding,        $base-spacing-unit);}
+@mixin soft_-top      { @include px-and-rem(padding-top,    $base-spacing-unit);}
+@mixin soft_-right    { @include px-and-rem(padding-right,  $base-spacing-unit);}
+@mixin soft_-bottom   { @include px-and-rem(padding-bottom, $base-spacing-unit);}
+@mixin soft_-left     { @include px-and-rem(padding-left,   $base-spacing-unit);}
+@mixin soft_-ends     { @include px-and-rem(padding-top,    $base-spacing-unit); @include px-and-rem(padding-bottom, $base-spacing-unit);}
+@mixin soft_-sides    { @include px-and-rem(padding-right,  $base-spacing-unit); @include px-and-rem(padding-left,   $base-spacing-unit);}
+
+@mixin soft_-small           { @include px-and-rem(padding,        $base-spacing-unit - $mp-small);}
+@mixin soft_-small_-top      { @include px-and-rem(padding-top,    $base-spacing-unit - $mp-small);}
+@mixin soft_-small_-right    { @include px-and-rem(padding-right,  $base-spacing-unit - $mp-small);}
+@mixin soft_-small_-bottom   { @include px-and-rem(padding-bottom, $base-spacing-unit - $mp-small);}
+@mixin soft_-small_-left     { @include px-and-rem(padding-left,   $base-spacing-unit - $mp-small);}
+@mixin soft_-small_-ends     { @include px-and-rem(padding-top,    $base-spacing-unit - $mp-small); @include px-and-rem(padding-bottom, $base-spacing-unit - $mp-small);}
+@mixin soft_-small_-sides    { @include px-and-rem(padding-right,  $base-spacing-unit - $mp-small); @include px-and-rem(padding-left,   $base-spacing-unit - $mp-small);}
+
+@mixin hard           { padding:       0;}
+@mixin hard_-top      { padding-top:   0;}
+@mixin hard_-right    { padding-right: 0;}
+@mixin hard_-bottom   { padding-bottom:0;}
+@mixin hard_-left     { padding-left:  0;}
+@mixin hard_-ends     { padding-top:   0; padding-bottom:0;}
+@mixin hard_-sides    { padding-right: 0; padding-left:  0;}
