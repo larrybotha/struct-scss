@@ -16,11 +16,11 @@
 	@extend %wrap-padding;
 }
 .wrap {
-	@extend %wrap;
+	@extend %wrap-base;
 	max-width: 1280px;
 }
 
 %wrap_-cf {
-	@extend %wrap;
+	@extend %wrap-base;
 	@extend .cf;
 }
