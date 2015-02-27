@@ -1,11 +1,8 @@
 /*------------------------------------*\
 		$ISLANDS
 \*------------------------------------*/
-%island_-top { @include px-and-rem(padding-top, 5.5);}
-%island_-bottom { @include px-and-rem(padding-bottom, 5.5);}
+%island_-top { @include island_-top;}
+%island_-bottom { @include island_-bottom;}
 
-%island {
-	@extend %island_-top;
-	@extend %island_-bottom;
-}
+%island { @include island;}
 .island { @extend %island;}

@@ -1,0 +1,12 @@
+/*------------------------------------*\
+    $ISLANDS
+\*------------------------------------*/
+$island-pad: 5.5;
+
+@mixin island_-top { @include px-and-rem(padding-top, $island-pad);}
+@mixin island_-bottom { @include px-and-rem(padding-bottom, $island-pad);}
+
+@mixin island {
+	@include island_-top;
+	@include island_-bottom;
+}
