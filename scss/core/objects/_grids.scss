@@ -1,4 +1,4 @@
-@if $use-grids == true {
+@if $use-grids {
 
 /*------------------------------------*\
 		$GRIDS
@@ -43,6 +43,13 @@
 	list-style: none;
 	margin-bottom: 0;
 
+	@if $use-legacy-grid {
+		.oldie & {
+			display: table;
+			width: 100%;
+		}
+	}
+
 	@if $use-flexbox-grid {
 		@include display(flex);
 		@include flex-wrap(wrap);
@@ -56,7 +63,6 @@
 
 .gw { @extend %grid;}
 
-
 	/**
 	 * grid items
 	 */
@@ -69,9 +75,7 @@
 
 		@include px-and-rem(padding-left, $grid-gutter);
 
-		@if $global-border-box == false {
-			@include vendor(box-sizing, border-box);
-		}
+		@if $global-border-box == false { @include vendor(box-sizing, border-box);}
 	}
 
 	.g { @extend %grid__item;}
@@ -88,9 +92,7 @@
 	.g_-tall {
 		@extend %grid__item;
 
-		@if $use-flexbox-grid {
-			@include display(flex);
-		}
+		@if $use-flexbox-grid { @include display(flex);}
 	}
 
 	/**
@@ -99,14 +101,20 @@
 	 * To be used as is, without column width modifiers. Viewport modifiers will
 	 * not override the effect of auto.
 	 *
-	 * Does not work for legacy browsers
+	 * Works mostly on <= IE9, mostly
+	 * Requires .oldie class on html tag
 	 */
 	.g_-auto {
 		@extend %grid__item;
 
-		@if $use-flexbox-grid {
-			@include flex(1);
+		@if $use-legacy-grid {
+			.oldie & {
+				display: table-cell;
+				width: auto;
+			}
 		}
+
+		@if $use-flexbox-grid { @include flex(1);}
 	}
 
 	/**
@@ -116,7 +124,7 @@
 	 * To be used as is, without column width modifiers. Viewport modifiers will
 	 * override shrink-wrap effect
 	 *
-	 * Does not work for legacy browsers
+	 * Works mostly on <= IE9, mostly
 	 */
 	.g_-shrink-wrap {
 		@extend %grid__item;
@@ -223,4 +231,3 @@
 }
 
 }//endif
-
