@@ -1,7 +1,8 @@
 /*------------------------------------*\
     $BACKGROUND LINK STATES
 \*------------------------------------*/
-a%bgc_-primary {
+a%bgc_-primary,
+button%bgc_-primary {
 	@extend %bgc_-primary;
 
 	&:hover,

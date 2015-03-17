@@ -4,7 +4,8 @@
 .error { color: $clr-danger;}
 
 %fc_-primary { color: $clr-primary;}
-a%fc_-primary {
+a%fc_-primary,
+button%fc_-primary {
 	@extend %fc_-primary;
 
 	&:hover,
