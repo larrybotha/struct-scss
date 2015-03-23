@@ -16,7 +16,7 @@
 	left: -28000px;
 	top: -28000px;
 	display: none;
-	color: $clr-secondary-lt;
+	color: $clr-ntrl-min;
 
 	max-width: 280px;
 	min-width: 50px;
@@ -102,9 +102,9 @@
 	.qtip-default {
 		border-width: 1px;
 		border-style: solid;
-		border-color: $clr-ntrl-min;
+		border-color: $clr-base;
 
-		background-color: $clr-ntrl-min;
+		background-color: $clr-base;
 	}
 
 	.qtip-default .qtip-icon {
