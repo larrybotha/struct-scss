@@ -1,6 +1,8 @@
 /*------------------------------------*\
     $BUTTONS
 \*------------------------------------*/
+button { @extend %link-transition;}
+
 .btn {
   @extend %btn !optional;
   color: $clr-ntrl-min;
