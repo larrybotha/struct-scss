@@ -102,7 +102,7 @@
 /**
  * Not a particularly great selector, but the DRYest way to do things.
  */
-[class*="push_-"]{ position:relative; }
+%grid__item[class*="push_-"] { position:relative; }
 
 @if $palm-push == true{
 
