@@ -5,10 +5,6 @@
  * This section houses styles for areas of content which are generally found on all
  * pages.
  */
-body {
-	@include border-image(url("image.png"));
-@include border-image(linear-gradient(45deg, orange, yellow));
-}
 
 
 
