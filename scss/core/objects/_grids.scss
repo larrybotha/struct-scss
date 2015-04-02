@@ -45,7 +45,7 @@
 
 	@if $use-legacy-grid {
 		.oldie & {
-			display: table;
+			display: inline;
 			width: 100%;
 		}
 	}
