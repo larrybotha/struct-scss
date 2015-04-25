@@ -1,0 +1,27 @@
+/*------------------------------------*\
+    $BASE
+\*------------------------------------*/
+p { hyphens: auto;}
+
+i { font-style: normal;}
+
+blockquote {
+  font-style: italic;
+  @include px-and-rem(margin, 1.5);
+  @include px-and-rem(padding, .25 1.5);
+  border-left: 1px solid $base-ui-color;
+}
+
+kbd {
+  font-size: 85%;
+  padding: .25em .5em;
+  border: 1px solid $clr-ntrl-10;
+  border-radius: 2px;
+  vertical-align: middle;
+}
+
+hr {
+  border-top: 0;
+  border-right: 0;
+  border-left: 0;
+}

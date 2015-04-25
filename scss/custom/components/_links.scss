@@ -9,14 +9,9 @@
 
 a {
 	@extend %link-transition;
-	color: $clr-primary;
+	@extend %fc_-primary;
 	text-decoration: none;
 	outline: 0;
 
   &:visited {}
-
-  &:hover,
-  &:focus { color: $clr-primary-ltr;}
-
-  &:active { color: $clr-primary-dk;}
 }

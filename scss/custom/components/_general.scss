@@ -1,9 +1,9 @@
 /*------------------------------------*\
-    $MAIN STRUCTURE
+    $GENERAL
 \*------------------------------------*/
 /**
- * This section houses styles for areas of content which are generally found on all
- * pages.
+ * This partial holds styles for components that may be more generalised, or not
+ * have an existing structure to add to, or abstract from.
  */
 
 
@@ -12,22 +12,16 @@
 /*------------------------------------*\
     $HEADER
 \*------------------------------------*/
+@import 'general/header';
 
 
 
 
 
 /*------------------------------------*\
-    $PRIMARY CONTENT
+    $CONTENT
 \*------------------------------------*/
-
-
-
-
-
-/*------------------------------------*\
-    $SECONDARY CONTENT
-\*------------------------------------*/
+@import 'general/content';
 
 
 
@@ -36,3 +30,4 @@
 /*------------------------------------*\
     $FOOTER
 \*------------------------------------*/
+@import 'general/footer';
