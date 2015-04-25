@@ -53,9 +53,9 @@ button%display_-block { width: 100%;}
 /**
  * Add/remove floats
  */
-%float_-right    { float:right;}
-%float_-left    { float:left;}
-%float_-none    { float:none;}
+%float_-right { float:right;}
+%float_-left  { float:left;}
+%float_-none  { float:none;}
 
 
 
@@ -64,29 +64,29 @@ button%display_-block { width: 100%;}
 /*------------------------------------*\
     $MARGIN
 \*------------------------------------*/
-%push                  { @include push;}
-%push_-top             { @include push_-top;}
-%push_-right           { @include push_-right;}
-%push_-bottom          { @include push_-bottom;}
-%push_-left            { @include push_-left;}
-%push_-ends            { @include push_-ends;}
-%push_-sides           { @include push_-sides;}
+%push                { @include push;}
+%push_-top           { @include push_-top;}
+%push_-right         { @include push_-right;}
+%push_-bottom        { @include push_-bottom;}
+%push_-left          { @include push_-left;}
+%push_-ends          { @include push_-ends;}
+%push_-sides         { @include push_-sides;}
 
-%push_-small           { @include push_-small;}
-%push_-small_-top      { @include push_-small_-top;}
-%push_-small_-right    { @include push_-small_-right;}
-%push_-small_-bottom   { @include push_-small_-bottom;}
-%push_-small_-left     { @include push_-small_-left;}
-%push_-small_-ends     { @include push_-small_-ends;}
-%push_-small_-sides    { @include push_-small_-sides;}
+%push_-small         { @include push_-small;}
+%push_-small_-top    { @include push_-small_-top;}
+%push_-small_-right  { @include push_-small_-right;}
+%push_-small_-bottom { @include push_-small_-bottom;}
+%push_-small_-left   { @include push_-small_-left;}
+%push_-small_-ends   { @include push_-small_-ends;}
+%push_-small_-sides  { @include push_-small_-sides;}
 
-%flush                 { @include flush;}
-%flush_-top            { @include flush_-top;}
-%flush_-right          { @include flush_-right;}
-%flush_-bottom         { @include flush_-bottom;}
-%flush_-left           { @include flush_-left;}
-%flush_-ends           { @include flush_-ends;}
-%flush_-sides          { @include flush_-sides;}
+%flush               { @include flush;}
+%flush_-top          { @include flush_-top;}
+%flush_-right        { @include flush_-right;}
+%flush_-bottom       { @include flush_-bottom;}
+%flush_-left         { @include flush_-left;}
+%flush_-ends         { @include flush_-ends;}
+%flush_-sides        { @include flush_-sides;}
 
 
 
@@ -95,26 +95,26 @@ button%display_-block { width: 100%;}
 /*------------------------------------*\
     $PADDING
 \*------------------------------------*/
-%soft                  { @include soft;}
-%soft_-top             { @include soft_-top;}
-%soft_-right           { @include soft_-right;}
-%soft_-bottom          { @include soft_-bottom;}
-%soft_-left            { @include soft_-left;}
-%soft_-ends            { @include soft_-ends;}
-%soft_-sides           { @include soft_-sides;}
+%soft                { @include soft;}
+%soft_-top           { @include soft_-top;}
+%soft_-right         { @include soft_-right;}
+%soft_-bottom        { @include soft_-bottom;}
+%soft_-left          { @include soft_-left;}
+%soft_-ends          { @include soft_-ends;}
+%soft_-sides         { @include soft_-sides;}
 
-%soft_-small           { @include soft_-small;}
-%soft_-small_-top      { @include soft_-small_-top;}
-%soft_-small_-right    { @include soft_-small_-right;}
-%soft_-small_-bottom   { @include soft_-small_-bottom;}
-%soft_-small_-left     { @include soft_-small_-left;}
-%soft_-small_-ends     { @include soft_-small_-ends;}
-%soft_-small_-sides    { @include soft_-small_-sides;}
+%soft_-small         { @include soft_-small;}
+%soft_-small_-top    { @include soft_-small_-top;}
+%soft_-small_-right  { @include soft_-small_-right;}
+%soft_-small_-bottom { @include soft_-small_-bottom;}
+%soft_-small_-left   { @include soft_-small_-left;}
+%soft_-small_-ends   { @include soft_-small_-ends;}
+%soft_-small_-sides  { @include soft_-small_-sides;}
 
-%hard                  { @include hard;}
-%hard_-top             { @include hard_-top;}
-%hard_-right           { @include hard_-right;}
-%hard_-bottom          { @include hard_-bottom;}
-%hard_-left            { @include hard_-left;}
-%hard_-ends            { @include hard_-ends;}
-%hard_-sides           { @include hard_-sides;}
+%hard                { @include hard;}
+%hard_-top           { @include hard_-top;}
+%hard_-right         { @include hard_-right;}
+%hard_-bottom        { @include hard_-bottom;}
+%hard_-left          { @include hard_-left;}
+%hard_-ends          { @include hard_-ends;}
+%hard_-sides         { @include hard_-sides;}
