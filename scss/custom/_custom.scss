@@ -17,25 +17,25 @@
 /*------------------------------------*\
     $MIXINS
 \*------------------------------------*/
-@import "mixins/!mixins";
+@import "mixins/!all";
 
 
 
 
 
 /*------------------------------------*\
-    $OBJECTS
+    $COMPONENTS
 \*------------------------------------*/
-@import "objects/!objects";
+@import "components/!all";
 
 
 
 
 
 /*------------------------------------*\
-    $PLUGINS
+    $VENDOR
 \*------------------------------------*/
-@import "plugins/!plugins";
+@import "vendor/!all";
 
 
 
