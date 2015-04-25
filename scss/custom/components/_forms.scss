@@ -19,9 +19,9 @@ button, input, select, textarea { vertical-align: baseline;}
 input, textarea {
   height: auto;         // don't apply heights set to inputs
   line-height: normal;  // all browsers must use FF's UA !important for consistency
-	@include px-and-rem(margin-bottom, 1);
-	padding: .5em;
-	border: 1px solid $base-ui-color;
+  @include px-and-rem(margin-bottom, 1);
+  padding: .5em;
+  border: 1px solid $base-ui-color;
 }
 
 input[type="checkbox"],
@@ -42,20 +42,20 @@ input[type="radio"] { margin-bottom: 0;}
  * custom checkbox and radio icons should be added to typography/_icons.scss
  * which these styles will reference
 
-	input[type=[radio|checkbox].visuallyhidden
-	label
-		i.radio_-icon
-		| my custom radio's label text
+  input[type=[radio|checkbox].visuallyhidden
+  label
+    i.radio_-icon
+    | my custom radio's label text
 
  */
 %custom-radio-base {
   @extend %icon;
-	vertical-align: sub;
+  vertical-align: sub;
 
   &:before {
-		position: relative;
+    position: relative;
     line-height: 1;
-		z-index: 10;
+    z-index: 10;
   }
 }
 
@@ -63,21 +63,21 @@ input[type="radio"] { margin-bottom: 0;}
 .checkbox_-icon { @extend %custom-radio-base;}
 
 .checkbox_-icon {
-	&:before { @extend %icon-checkbox-false:before;}
+  &:before { @extend %icon-checkbox-false:before;}
 }
 
 .radio_-icon {
-	&:before { @extend %icon-radio-false:before;}
+  &:before { @extend %icon-radio-false:before;}
 }
 
 input:checked + label {
   & > .radio_-icon {
-		&:before { @extend %icon-radio-true:before;}
-	}
+    &:before { @extend %icon-radio-true:before;}
+  }
 
-	& > .checkbox_-icon {
-		&:before { @extend %icon-checkbox-true:before;}
-	}
+  & > .checkbox_-icon {
+    &:before { @extend %icon-checkbox-true:before;}
+  }
 }
 
 } // endif

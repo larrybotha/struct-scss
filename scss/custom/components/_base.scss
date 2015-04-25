@@ -12,8 +12,8 @@
  * http://maximilianhoffmann.com/posts/better-font-rendering-on-osx
  */
 %fix-fatty-fonts {
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 /**
@@ -23,29 +23,29 @@
  * requires flex: 1; on primary content
  */
 %sticky-footer {
-	@include display(flex);
-	@include flex-direction(column);
-	min-height: 100vh;
+  @include display(flex);
+  @include flex-direction(column);
+  min-height: 100vh;
 }
 
 /**
  * Prevent Chrome and Safari from flashing when a user taps on mobile
  */
 @if $responsive == true {
-	html { -webkit-tap-highlight-color: transparent;}
+  html { -webkit-tap-highlight-color: transparent;}
 }
 
 html, body, button, input, select, textarea {
-	// @extend %fix-fatty-fonts;
+  // @extend %fix-fatty-fonts;
 }
 
 /**
  * Fix IE8 not showing extended headers and footers when overflowing horizontally
  */
 body {
-	// @extend %sticky-footer;
+  // @extend %sticky-footer;
 
-	.ie8 & { display: table;}
+  .ie8 & { display: table;}
 }
 
 

@@ -7,6 +7,6 @@ $island-pad: 5.5;
 @mixin island_-bottom { @include px-and-rem(padding-bottom, $island-pad);}
 
 @mixin island {
-	@include island_-top;
-	@include island_-bottom;
+  @include island_-top;
+  @include island_-bottom;
 }

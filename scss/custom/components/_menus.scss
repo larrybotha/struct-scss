@@ -7,8 +7,8 @@
 %menu-toggle {
   display: none;
 
-	// prevent firefox from showing a dotted border
-	&:focus { outline:none;}
+  // prevent firefox from showing a dotted border
+  &:focus { outline:none;}
 
   @include media-query(palm) { display: inline-block;}
 }
@@ -45,7 +45,7 @@
     & > a {
       display: block;
       color: $clr-primary;
-			line-height: 3;
+      line-height: 3;
       padding: 0 1em;
 
       &:hover,
@@ -57,36 +57,36 @@
         min-width: 225px;
         white-space: nowrap;
 
-				// collapsed styles
-				max-height: 0;
-				overflow: hidden;
-				padding-top: 0;
-				padding-bottom: 0;
-				opacity: 0;
+        // collapsed styles
+        max-height: 0;
+        overflow: hidden;
+        padding-top: 0;
+        padding-bottom: 0;
+        opacity: 0;
 
         @include media-query(palm) {
           white-space: normal;
           min-width: auto;
-					padding: 0 1.5em;
+          padding: 0 1.5em;
         }
       }
 
-			a:hover + %menu__sub > &,
-			%menu__sub:hover > & {
-				max-height: 8em;
-				padding-top: 1em;
-				padding-bottom: 1em;
-				opacity: 1;
-			}
+      a:hover + %menu__sub > &,
+      %menu__sub:hover > & {
+        max-height: 8em;
+        padding-top: 1em;
+        padding-bottom: 1em;
+        opacity: 1;
+      }
     }
   }
-	.menu__item { @extend %menu__item;}
+  .menu__item { @extend %menu__item;}
 
   %menu__item_-current {
     & > a {
       &,
       &:hover,
-			&:focus,
+      &:focus,
       &:active { cursor: default;}
     }
   }
@@ -94,29 +94,29 @@
   .menu__item_-current-parent { @extend %menu__item_-current;}
 
     %menu__sub {
-			@extend %list_-reset;
+      @extend %list_-reset;
       position: absolute;
       background-color: #fff;
-			height: 0;
-			overflow: hidden;
+      height: 0;
+      overflow: hidden;
 
-			a:hover + &,
-			&:hover {
-				height: auto;
-				overflow: visible;
-				border: 1px solid $base-ui-color;
-			}
+      a:hover + &,
+      &:hover {
+        height: auto;
+        overflow: visible;
+        border: 1px solid $base-ui-color;
+      }
 
-			@include media-query(palm) {
-				display: block;
-				position: relative;
-				margin-left: 1.5em;
-				border: 0;
-				opacity: 1;
-				z-index: 0;
-			}
+      @include media-query(palm) {
+        display: block;
+        position: relative;
+        margin-left: 1.5em;
+        border: 0;
+        opacity: 1;
+        z-index: 0;
+      }
     }
-		.menu__sub { @extend %menu__sub;}
+    .menu__sub { @extend %menu__sub;}
 
       %menu__sub %menu__sub {
         top: 0;

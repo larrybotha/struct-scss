@@ -12,19 +12,19 @@ $alert-types: success, danger, error, info;
 }
 
 .alert_-success {
-	color: $clr-success;
-	border-color: $clr-success-ltr;
+  color: $clr-success;
+  border-color: $clr-success-ltr;
 }
 
 .alert_-danger,
 .alert_-error {
-	color: $clr-danger;
-	border-color: $clr-danger-ltr;
+  color: $clr-danger;
+  border-color: $clr-danger-ltr;
 }
 
 .alert_-info {
-	color: $clr-info;
-	border-color: $clr-info-ltr;
+  color: $clr-info;
+  border-color: $clr-info-ltr;
 }
 
 }//endif

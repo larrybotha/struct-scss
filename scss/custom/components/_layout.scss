@@ -1,5 +1,5 @@
 /*------------------------------------*\
-		$LAYOUT
+    $LAYOUT
 \*------------------------------------*/
 
 
@@ -7,7 +7,7 @@
 
 
 /*------------------------------------*\
-		$WRAPS
+    $WRAPS
 \*------------------------------------*/
 @import 'layout/wraps';
 
@@ -16,7 +16,7 @@
 
 
 /*------------------------------------*\
-		$ISLANDS
+    $ISLANDS
 \*------------------------------------*/
 @import 'layout/islands';
 
@@ -25,7 +25,7 @@
 
 
 /*------------------------------------*\
-		$GRID
+    $GRID
 \*------------------------------------*/
 /**
  * Extend grid modifiers here
@@ -36,7 +36,7 @@
 
 
 /*------------------------------------*\
-		$MODIFIERS
+    $MODIFIERS
 \*------------------------------------*/
 /*
  * Display level modifiers
@@ -53,9 +53,9 @@ button%display_-block { width: 100%;}
 /**
  * Add/remove floats
  */
-%float_-right		{ float:right;}
-%float_-left		{ float:left;}
-%float_-none		{ float:none;}
+%float_-right    { float:right;}
+%float_-left    { float:left;}
+%float_-none    { float:none;}
 
 
 

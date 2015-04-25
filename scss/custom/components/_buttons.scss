@@ -24,11 +24,7 @@ button { @extend %link-transition;}
   background-color: $clr-primary;
 
   &:hover,
-  &:focus {
-    background-color: $clr-primary-lt;
-  }
+  &:focus { background-color: $clr-primary-lt;}
 
-  &:active {
-    background-color: $clr-primary-dk;
-  }
+  &:active { background-color: $clr-primary-dk;}
 }

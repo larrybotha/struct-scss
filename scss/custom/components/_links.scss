@@ -2,16 +2,16 @@
     $LINKS
 \*------------------------------------*/
 %link-transition {
-	@include transition(all 150ms ease-in-out);
+  @include transition(all 150ms ease-in-out);
 
-	&:active { @include transition(all 0);}
+  &:active { @include transition(all 0);}
 }
 
 a {
-	@extend %link-transition;
-	@extend %fc_-primary;
-	text-decoration: none;
-	outline: 0;
+  @extend %link-transition;
+  @extend %fc_-primary;
+  text-decoration: none;
+  outline: 0;
 
   &:visited {}
 }

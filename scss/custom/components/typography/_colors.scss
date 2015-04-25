@@ -6,10 +6,10 @@
 %fc_-primary { color: $clr-primary;}
 a%fc_-primary,
 button%fc_-primary {
-	@extend %fc_-primary;
+  @extend %fc_-primary;
 
-	&:hover,
-	&:focus { color: $clr-primary-lt;}
+  &:hover,
+  &:focus { color: $clr-primary-lt;}
 
-	&:active { color: $clr-primary-dk;}
+  &:active { color: $clr-primary-dk;}
 }
