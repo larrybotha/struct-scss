@@ -11,7 +11,7 @@
 
 
 /*------------------------------------*\
-	$BASE
+  $BASE
 \*------------------------------------*/
 /**
  * Base variables. These are included first as they provide a basis for calculations
@@ -35,7 +35,7 @@ $base-ui-color:   #ccc!default;
 
 
 /*------------------------------------*\
-	$FRAMEWORK
+  $FRAMEWORK
 \*------------------------------------*/
 /**
  * inuit.css will work these next ones out for use within the framework.
@@ -89,8 +89,9 @@ $global-border-box: true!default;
 
 
 
+
 /*------------------------------------*\
-	$PREFIXES
+  $PREFIXES
 \*------------------------------------*/
 // Variable settings for /addons/prefixer.scss
 $prefix-for-webkit:    true !default;
@@ -190,7 +191,7 @@ $h6-size:       14px!default; // .zeta
 
 $milli-size:    12px!default;
 $micro-size:    10px!default;
-$nano-size:			8px!default;
+$nano-size:      8px!default;
 
 
 
@@ -308,15 +309,16 @@ $use-rules:           false!default;
 $use-stats:           false!default;
 $use-greybox:         false!default;
 
+$use-alerts:          false!default;
 $use-buttons:         false!default;
-$use-alerts:          false!default;
-$use-ratio-object:    false!default;
-$use-vertical-center: false!default;
-$use-icons:           false!default;
+$use-ckeditor:        false!default;
 $use-form-affixes:    false!default;
-$use-alerts:          false!default;
+$use-icons:           false!default;
 $use-progress-bars:   false!default;
 $use-print:           false!default;
+$use-ratio-object:    false!default;
+$use-tinymce:         false!default;
+$use-vertical-center: false!default;
 $use-wordpress:       false!default;
 
 
