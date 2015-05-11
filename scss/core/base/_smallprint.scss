@@ -4,10 +4,11 @@
 /**
  * A series of classes for setting tiny type; for use in smallprint etc.
  */
-%milli { @include font-size($milli-size, false);}
-%micro { @include font-size($micro-size, false);}
-%nano	 { @include font-size($nano-size, false);}
+%fs_-milli { @include font-size($milli-size, false);}
+.fs_-milli { @extend %fs_-milli;}
 
-.milli { @extend %milli;}
-.micro { @extend %micro;}
-.nano	 { @extend %nano;}
+%fs_-micro { @include font-size($micro-size, false);}
+.fs_-micro { @extend %fs_-micro;}
+
+%fs_-nano	 { @include font-size($nano-size, false);}
+.fs_-nano	 { @extend %fs_-nano;}
