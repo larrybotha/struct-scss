@@ -30,6 +30,7 @@
 span%ngAnim-fade-in_-down {
 	@extend %ngAnim-fade-in_-down;
 	@extend %link-transition;
+  display: inline-block;
 
 	// ngIf
 	&.ng-enter,
