@@ -9,94 +9,99 @@
  * We have a mixin to generate our widths and their breakpoint-specific
  * variations.
  */
+@if $grid-use-fractions {
+  $grid-unit-delimiter: \/ !global;
+} @else {
+  $grid-unit-delimiter: -of- !global;
+}
 
 @mixin grid-setup($namespace: "") {
 	/**
 	* Whole
 	*/
-	.#{$namespace}one-whole       {  width: 100%;}
+	.g-#{$namespace}1#{$grid-unit-delimiter}1       {  width: 100%;}
 
 
 	/**
 	* Halves
 	*/
-	.#{$namespace}one-half        {  width: 50%;}
+	.g-#{$namespace}1#{$grid-unit-delimiter}2        {  width: 50%;}
 
 
 	/**
 	* Thirds
 	*/
-	.#{$namespace}one-third       {  width: 33.333%;}
-	.#{$namespace}two-thirds      {  width: 66.666%;}
+	.g-#{$namespace}1#{$grid-unit-delimiter}3       {  width: 33.333%;}
+	.g-#{$namespace}2#{$grid-unit-delimiter}3      {  width: 66.666%;}
 
 
 	/**
 	* Quarters
 	*/
-	.#{$namespace}one-quarter     {  width: 25%;}
-	.#{$namespace}two-quarters    {  @extend .#{$namespace}one-half;}
-	.#{$namespace}three-quarters  {  width: 75%;}
+	.g-#{$namespace}1#{$grid-unit-delimiter}4     {  width: 25%;}
+	.g-#{$namespace}2#{$grid-unit-delimiter}4    {  @extend .g-#{$namespace}1#{$grid-unit-delimiter}2;}
+	.g-#{$namespace}3#{$grid-unit-delimiter}4  {  width: 75%;}
 
 
 	/**
 	* Fifths
 	*/
-	.#{$namespace}one-fifth       {  width: 20%;}
-	.#{$namespace}two-fifths      {  width: 40%;}
-	.#{$namespace}three-fifths    {  width: 60%;}
-	.#{$namespace}four-fifths     {  width: 80%;}
+	.g-#{$namespace}1#{$grid-unit-delimiter}5       {  width: 20%;}
+	.g-#{$namespace}2#{$grid-unit-delimiter}5      {  width: 40%;}
+	.g-#{$namespace}3#{$grid-unit-delimiter}5    {  width: 60%;}
+	.g-#{$namespace}4#{$grid-unit-delimiter}5     {  width: 80%;}
 
 
 	/**
 	* Sixths
 	*/
-	.#{$namespace}one-sixth       {  width: 16.666%;}
-	.#{$namespace}two-sixths      {  @extend .#{$namespace}one-third;}
-	.#{$namespace}three-sixths    {  @extend .#{$namespace}one-half;}
-	.#{$namespace}four-sixths     {  @extend .#{$namespace}two-thirds;}
-	.#{$namespace}five-sixths     {  width: 83.333%;}
+	.g-#{$namespace}1#{$grid-unit-delimiter}6       {  width: 16.666%;}
+	.g-#{$namespace}2#{$grid-unit-delimiter}6      {  @extend .g-#{$namespace}1#{$grid-unit-delimiter}3;}
+	.g-#{$namespace}3#{$grid-unit-delimiter}6    {  @extend .g-#{$namespace}1#{$grid-unit-delimiter}2;}
+	.g-#{$namespace}4#{$grid-unit-delimiter}6     {  @extend .g-#{$namespace}2#{$grid-unit-delimiter}3;}
+	.g-#{$namespace}5#{$grid-unit-delimiter}6     {  width: 83.333%;}
 
 
 	/**
 	* Eighths
 	*/
-	.#{$namespace}one-eighth      {  width: 12.5%;}
-	.#{$namespace}two-eighths     {  @extend .#{$namespace}one-quarter;}
-	.#{$namespace}three-eighths   {  width: 37.5%;}
-	.#{$namespace}four-eighths    {  @extend .#{$namespace}one-half;}
-	.#{$namespace}five-eighths    {  width: 62.5%;}
-	.#{$namespace}six-eighths     {  @extend .#{$namespace}three-quarters;}
-	.#{$namespace}seven-eighths   {  width: 87.5%;}
+	.g-#{$namespace}1#{$grid-unit-delimiter}8      {  width: 12.5%;}
+	.g-#{$namespace}2#{$grid-unit-delimiter}8     {  @extend .g-#{$namespace}1#{$grid-unit-delimiter}4;}
+	.g-#{$namespace}3#{$grid-unit-delimiter}8   {  width: 37.5%;}
+	.g-#{$namespace}4#{$grid-unit-delimiter}8    {  @extend .g-#{$namespace}1#{$grid-unit-delimiter}2;}
+	.g-#{$namespace}5#{$grid-unit-delimiter}8    {  width: 62.5%;}
+	.g-#{$namespace}6#{$grid-unit-delimiter}8     {  @extend .g-#{$namespace}3#{$grid-unit-delimiter}4;}
+	.g-#{$namespace}7#{$grid-unit-delimiter}8   {  width: 87.5%;}
 
 
 	/**
 	* Tenths
 	*/
-	.#{$namespace}one-tenth       {  width: 10%;}
-	.#{$namespace}two-tenths      {  @extend .#{$namespace}one-fifth;}
-	.#{$namespace}three-tenths    {  width: 30%;}
-	.#{$namespace}four-tenths     {  @extend .#{$namespace}two-fifths;}
-	.#{$namespace}five-tenths     {  @extend .#{$namespace}one-half;}
-	.#{$namespace}six-tenths      {  @extend .#{$namespace}three-fifths;}
-	.#{$namespace}seven-tenths    {  width: 70%;}
-	.#{$namespace}eight-tenths    {  @extend .#{$namespace}four-fifths;}
-	.#{$namespace}nine-tenths     {  width: 90%;}
+	.g-#{$namespace}1#{$grid-unit-delimiter}10       {  width: 10%;}
+	.g-#{$namespace}2#{$grid-unit-delimiter}10      {  @extend .g-#{$namespace}1#{$grid-unit-delimiter}5;}
+	.g-#{$namespace}3#{$grid-unit-delimiter}10    {  width: 30%;}
+	.g-#{$namespace}4#{$grid-unit-delimiter}10     {  @extend .g-#{$namespace}2#{$grid-unit-delimiter}5;}
+	.g-#{$namespace}5#{$grid-unit-delimiter}10     {  @extend .g-#{$namespace}1#{$grid-unit-delimiter}2;}
+	.g-#{$namespace}6#{$grid-unit-delimiter}10      {  @extend .g-#{$namespace}3#{$grid-unit-delimiter}5;}
+	.g-#{$namespace}7#{$grid-unit-delimiter}10    {  width: 70%;}
+	.g-#{$namespace}8#{$grid-unit-delimiter}10    {  @extend .g-#{$namespace}4#{$grid-unit-delimiter}5;}
+	.g-#{$namespace}9#{$grid-unit-delimiter}10     {  width: 90%;}
 
 
 	/**
 	* Twelfths
 	*/
-	.#{$namespace}one-twelfth     {  width: 8.333%;}
-	.#{$namespace}two-twelfths    {  @extend .#{$namespace}one-sixth;}
-	.#{$namespace}three-twelfths  {  @extend .#{$namespace}one-quarter;}
-	.#{$namespace}four-twelfths   {  @extend .#{$namespace}one-third;}
-	.#{$namespace}five-twelfths   {  width: 41.666%;}
-	.#{$namespace}six-twelfths    {  @extend .#{$namespace}one-half;}
-	.#{$namespace}seven-twelfths  {  width: 58.333%;}
-	.#{$namespace}eight-twelfths  {  @extend .#{$namespace}two-thirds;}
-	.#{$namespace}nine-twelfths   {  @extend .#{$namespace}three-quarters;}
-	.#{$namespace}ten-twelfths    {  @extend .#{$namespace}five-sixths;}
-	.#{$namespace}eleven-twelfths {  width: 91.666%;}
+	.g-#{$namespace}1#{$grid-unit-delimiter}12     {  width: 8.333%;}
+	.g-#{$namespace}2#{$grid-unit-delimiter}12    {  @extend .g-#{$namespace}1#{$grid-unit-delimiter}6;}
+	.g-#{$namespace}3#{$grid-unit-delimiter}12  {  @extend .g-#{$namespace}1#{$grid-unit-delimiter}4;}
+	.g-#{$namespace}4#{$grid-unit-delimiter}12   {  @extend .g-#{$namespace}1#{$grid-unit-delimiter}3;}
+	.g-#{$namespace}5#{$grid-unit-delimiter}12   {  width: 41.666%;}
+	.g-#{$namespace}6#{$grid-unit-delimiter}12    {  @extend .g-#{$namespace}1#{$grid-unit-delimiter}2;}
+	.g-#{$namespace}7#{$grid-unit-delimiter}12  {  width: 58.333%;}
+	.g-#{$namespace}8#{$grid-unit-delimiter}12  {  @extend .g-#{$namespace}2#{$grid-unit-delimiter}3;}
+	.g-#{$namespace}9#{$grid-unit-delimiter}12   {  @extend .g-#{$namespace}3#{$grid-unit-delimiter}4;}
+	.g-#{$namespace}10#{$grid-unit-delimiter}12    {  @extend .g-#{$namespace}5#{$grid-unit-delimiter}6;}
+	.g-#{$namespace}11#{$grid-unit-delimiter}12 {  width: 91.666%;}
 }
 
 @include grid-setup();
@@ -108,10 +113,10 @@
  * access to these classes. You can define at which breakpoint you’d like an
  * element to be a certain size, e.g.:
  *
- * `<div class="g  one-quarter	lap-one-half	palm-one-whole"> ... </div>`
+ * `<div class="g  g-1/4	g-lap-1/2	g-palm-1/1"> ... </div>`
  *
- * This would create a `div` that, at ‘desktop’ sizes, takes up a quarter of the
- * horizontal space, a half of that space at ‘tablet’ sizes, and goes full width
+ * This would create a `div` that, at ‘desktop’ sizes, takes up a of-4 of the
+ * horizontal space, a of-2 of that space at ‘tablet’ sizes, and goes full width
  * at ‘mobile’ sizes.
  *
  * Demo: jsfiddle.net/inuitcss/WS4Ge
