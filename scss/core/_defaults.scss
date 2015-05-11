@@ -42,9 +42,9 @@ $base-ui-color:   #ccc!default;
  *
  * Assign our `$base-line-height` to a new spacing var for more transparency.
  */
-$base-spacing-unit: $base-line-height / $base-font-size;
+$base-spacing-unit: $base-line-height / $base-font-size!default;
 $half-spacing-unit: $base-spacing-unit / 2!default;
-$line-height-ratio: $base-line-height / $base-font-size;
+$line-height-ratio: $base-line-height / $base-font-size!default;
 
 
 
