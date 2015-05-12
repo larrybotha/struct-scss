@@ -46,30 +46,13 @@
       display: block;
       color: $clr-primary;
       line-height: 3;
-      padding: 0 1em;
+      padding-left: 1em;
+      padding-right: 1em;
 
       &:hover,
       &:focus {}
 
       &:active {}
-
-      %menu__sub a {
-        min-width: 225px;
-        white-space: nowrap;
-
-        // collapsed styles
-        max-height: 0;
-        overflow: hidden;
-        padding-top: 0;
-        padding-bottom: 0;
-        opacity: 0;
-
-        @include media-query(palm) {
-          white-space: normal;
-          min-width: auto;
-          padding: 0 1.5em;
-        }
-      }
 
       a:hover + %menu__sub > &,
       %menu__sub:hover > & {
@@ -77,6 +60,24 @@
         padding-top: 1em;
         padding-bottom: 1em;
         opacity: 1;
+      }
+    }
+
+    & %menu__sub a {
+      min-width: 225px;
+      white-space: nowrap;
+
+      // collapsed styles
+      max-height: 0;
+      overflow: hidden;
+      padding-top: 0;
+      padding-bottom: 0;
+      opacity: 0;
+
+      @include media-query(palm) {
+        white-space: normal;
+        min-width: auto;
+        padding: 0 1.5em;
       }
     }
   }
@@ -95,16 +96,17 @@
 
     %menu__sub {
       @extend %list_-reset;
-      position: absolute;
+      @extend %link-transition;
       background-color: #fff;
-      height: 0;
+      max-height: 0;
       overflow: hidden;
+      position: absolute;
 
       a:hover + &,
       &:hover {
-        height: auto;
-        overflow: visible;
         border: 1px solid $base-ui-color;
+        max-height: none;
+        overflow: visible;
       }
 
       @include media-query(palm) {
@@ -136,6 +138,7 @@
     $PRIMARY MENU
 \*------------------------------------*/
 .menu_-primary { @extend %menu;}
+
 
 
 
