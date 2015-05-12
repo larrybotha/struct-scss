@@ -4,7 +4,7 @@
 %link-transition {
   @include transition(all 150ms ease-in-out);
 
-  &:active { @include transition(all 0);}
+  &:active { @include transition(none);}
 }
 
 a {
