@@ -82,6 +82,7 @@ span%ngAnim-fade-in_-down {
 		.ie9 & { -ms-transform: translateX(0);}
 	}
 }
+span%ngAnim-slide-in_-right { display: inline-block;}
 .ngAnim-slide-in_-right { @extend %ngAnim-slide-in_-right;}
 
 
