@@ -19,89 +19,89 @@
 	/**
 	* Whole
 	*/
-	.g-#{$namespace}1#{$grid-unit-delimiter}1       {  width: 100%;}
+	.g-#{$namespace}1#{$grid-unit-delimiter}1    { width: 100%;}
 
 
 	/**
 	* Halves
 	*/
-	.g-#{$namespace}1#{$grid-unit-delimiter}2        {  width: 50%;}
+	.g-#{$namespace}1#{$grid-unit-delimiter}2    { width: 50%;}
 
 
 	/**
 	* Thirds
 	*/
-	.g-#{$namespace}1#{$grid-unit-delimiter}3       {  width: 33.333%;}
-	.g-#{$namespace}2#{$grid-unit-delimiter}3      {  width: 66.666%;}
+	.g-#{$namespace}1#{$grid-unit-delimiter}3    { width: 33.333%;}
+	.g-#{$namespace}2#{$grid-unit-delimiter}3    { width: 66.666%;}
 
 
 	/**
 	* Quarters
 	*/
-	.g-#{$namespace}1#{$grid-unit-delimiter}4     {  width: 25%;}
-	.g-#{$namespace}2#{$grid-unit-delimiter}4    {  @extend .g-#{$namespace}1#{$grid-unit-delimiter}2;}
-	.g-#{$namespace}3#{$grid-unit-delimiter}4  {  width: 75%;}
+	.g-#{$namespace}1#{$grid-unit-delimiter}4    { width: 25%;}
+	.g-#{$namespace}2#{$grid-unit-delimiter}4    { @extend .g-#{$namespace}1#{$grid-unit-delimiter}2;}
+	.g-#{$namespace}3#{$grid-unit-delimiter}4    { width: 75%;}
 
 
 	/**
 	* Fifths
 	*/
-	.g-#{$namespace}1#{$grid-unit-delimiter}5       {  width: 20%;}
-	.g-#{$namespace}2#{$grid-unit-delimiter}5      {  width: 40%;}
-	.g-#{$namespace}3#{$grid-unit-delimiter}5    {  width: 60%;}
-	.g-#{$namespace}4#{$grid-unit-delimiter}5     {  width: 80%;}
+	.g-#{$namespace}1#{$grid-unit-delimiter}5    { width: 20%;}
+	.g-#{$namespace}2#{$grid-unit-delimiter}5    { width: 40%;}
+	.g-#{$namespace}3#{$grid-unit-delimiter}5    { width: 60%;}
+	.g-#{$namespace}4#{$grid-unit-delimiter}5    { width: 80%;}
 
 
 	/**
 	* Sixths
 	*/
-	.g-#{$namespace}1#{$grid-unit-delimiter}6       {  width: 16.666%;}
-	.g-#{$namespace}2#{$grid-unit-delimiter}6      {  @extend .g-#{$namespace}1#{$grid-unit-delimiter}3;}
-	.g-#{$namespace}3#{$grid-unit-delimiter}6    {  @extend .g-#{$namespace}1#{$grid-unit-delimiter}2;}
-	.g-#{$namespace}4#{$grid-unit-delimiter}6     {  @extend .g-#{$namespace}2#{$grid-unit-delimiter}3;}
-	.g-#{$namespace}5#{$grid-unit-delimiter}6     {  width: 83.333%;}
+	.g-#{$namespace}1#{$grid-unit-delimiter}6    { width: 16.666%;}
+	.g-#{$namespace}2#{$grid-unit-delimiter}6    { @extend .g-#{$namespace}1#{$grid-unit-delimiter}3;}
+	.g-#{$namespace}3#{$grid-unit-delimiter}6    { @extend .g-#{$namespace}1#{$grid-unit-delimiter}2;}
+	.g-#{$namespace}4#{$grid-unit-delimiter}6    { @extend .g-#{$namespace}2#{$grid-unit-delimiter}3;}
+	.g-#{$namespace}5#{$grid-unit-delimiter}6    { width: 83.333%;}
 
 
 	/**
 	* Eighths
 	*/
-	.g-#{$namespace}1#{$grid-unit-delimiter}8      {  width: 12.5%;}
-	.g-#{$namespace}2#{$grid-unit-delimiter}8     {  @extend .g-#{$namespace}1#{$grid-unit-delimiter}4;}
-	.g-#{$namespace}3#{$grid-unit-delimiter}8   {  width: 37.5%;}
-	.g-#{$namespace}4#{$grid-unit-delimiter}8    {  @extend .g-#{$namespace}1#{$grid-unit-delimiter}2;}
-	.g-#{$namespace}5#{$grid-unit-delimiter}8    {  width: 62.5%;}
-	.g-#{$namespace}6#{$grid-unit-delimiter}8     {  @extend .g-#{$namespace}3#{$grid-unit-delimiter}4;}
-	.g-#{$namespace}7#{$grid-unit-delimiter}8   {  width: 87.5%;}
+	.g-#{$namespace}1#{$grid-unit-delimiter}8    { width: 12.5%;}
+	.g-#{$namespace}2#{$grid-unit-delimiter}8    { @extend .g-#{$namespace}1#{$grid-unit-delimiter}4;}
+	.g-#{$namespace}3#{$grid-unit-delimiter}8    { width: 37.5%;}
+	.g-#{$namespace}4#{$grid-unit-delimiter}8    { @extend .g-#{$namespace}1#{$grid-unit-delimiter}2;}
+	.g-#{$namespace}5#{$grid-unit-delimiter}8    { width: 62.5%;}
+	.g-#{$namespace}6#{$grid-unit-delimiter}8    { @extend .g-#{$namespace}3#{$grid-unit-delimiter}4;}
+	.g-#{$namespace}7#{$grid-unit-delimiter}8    { width: 87.5%;}
 
 
 	/**
 	* Tenths
 	*/
-	.g-#{$namespace}1#{$grid-unit-delimiter}10       {  width: 10%;}
-	.g-#{$namespace}2#{$grid-unit-delimiter}10      {  @extend .g-#{$namespace}1#{$grid-unit-delimiter}5;}
-	.g-#{$namespace}3#{$grid-unit-delimiter}10    {  width: 30%;}
-	.g-#{$namespace}4#{$grid-unit-delimiter}10     {  @extend .g-#{$namespace}2#{$grid-unit-delimiter}5;}
-	.g-#{$namespace}5#{$grid-unit-delimiter}10     {  @extend .g-#{$namespace}1#{$grid-unit-delimiter}2;}
-	.g-#{$namespace}6#{$grid-unit-delimiter}10      {  @extend .g-#{$namespace}3#{$grid-unit-delimiter}5;}
-	.g-#{$namespace}7#{$grid-unit-delimiter}10    {  width: 70%;}
-	.g-#{$namespace}8#{$grid-unit-delimiter}10    {  @extend .g-#{$namespace}4#{$grid-unit-delimiter}5;}
-	.g-#{$namespace}9#{$grid-unit-delimiter}10     {  width: 90%;}
+	.g-#{$namespace}1#{$grid-unit-delimiter}10   { width: 10%;}
+	.g-#{$namespace}2#{$grid-unit-delimiter}10   { @extend .g-#{$namespace}1#{$grid-unit-delimiter}5;}
+	.g-#{$namespace}3#{$grid-unit-delimiter}10   { width: 30%;}
+	.g-#{$namespace}4#{$grid-unit-delimiter}10   { @extend .g-#{$namespace}2#{$grid-unit-delimiter}5;}
+	.g-#{$namespace}5#{$grid-unit-delimiter}10   { @extend .g-#{$namespace}1#{$grid-unit-delimiter}2;}
+	.g-#{$namespace}6#{$grid-unit-delimiter}10   { @extend .g-#{$namespace}3#{$grid-unit-delimiter}5;}
+	.g-#{$namespace}7#{$grid-unit-delimiter}10   { width: 70%;}
+	.g-#{$namespace}8#{$grid-unit-delimiter}10   { @extend .g-#{$namespace}4#{$grid-unit-delimiter}5;}
+	.g-#{$namespace}9#{$grid-unit-delimiter}10   { width: 90%;}
 
 
 	/**
 	* Twelfths
 	*/
-	.g-#{$namespace}1#{$grid-unit-delimiter}12     {  width: 8.333%;}
-	.g-#{$namespace}2#{$grid-unit-delimiter}12    {  @extend .g-#{$namespace}1#{$grid-unit-delimiter}6;}
-	.g-#{$namespace}3#{$grid-unit-delimiter}12  {  @extend .g-#{$namespace}1#{$grid-unit-delimiter}4;}
-	.g-#{$namespace}4#{$grid-unit-delimiter}12   {  @extend .g-#{$namespace}1#{$grid-unit-delimiter}3;}
-	.g-#{$namespace}5#{$grid-unit-delimiter}12   {  width: 41.666%;}
-	.g-#{$namespace}6#{$grid-unit-delimiter}12    {  @extend .g-#{$namespace}1#{$grid-unit-delimiter}2;}
-	.g-#{$namespace}7#{$grid-unit-delimiter}12  {  width: 58.333%;}
-	.g-#{$namespace}8#{$grid-unit-delimiter}12  {  @extend .g-#{$namespace}2#{$grid-unit-delimiter}3;}
-	.g-#{$namespace}9#{$grid-unit-delimiter}12   {  @extend .g-#{$namespace}3#{$grid-unit-delimiter}4;}
-	.g-#{$namespace}10#{$grid-unit-delimiter}12    {  @extend .g-#{$namespace}5#{$grid-unit-delimiter}6;}
-	.g-#{$namespace}11#{$grid-unit-delimiter}12 {  width: 91.666%;}
+	.g-#{$namespace}1#{$grid-unit-delimiter}12   { width: 8.333%;}
+	.g-#{$namespace}2#{$grid-unit-delimiter}12   { @extend .g-#{$namespace}1#{$grid-unit-delimiter}6;}
+	.g-#{$namespace}3#{$grid-unit-delimiter}12   { @extend .g-#{$namespace}1#{$grid-unit-delimiter}4;}
+	.g-#{$namespace}4#{$grid-unit-delimiter}12   { @extend .g-#{$namespace}1#{$grid-unit-delimiter}3;}
+	.g-#{$namespace}5#{$grid-unit-delimiter}12   { width: 41.666%;}
+	.g-#{$namespace}6#{$grid-unit-delimiter}12   { @extend .g-#{$namespace}1#{$grid-unit-delimiter}2;}
+	.g-#{$namespace}7#{$grid-unit-delimiter}12   { width: 58.333%;}
+	.g-#{$namespace}8#{$grid-unit-delimiter}12   { @extend .g-#{$namespace}2#{$grid-unit-delimiter}3;}
+	.g-#{$namespace}9#{$grid-unit-delimiter}12   { @extend .g-#{$namespace}3#{$grid-unit-delimiter}4;}
+	.g-#{$namespace}10#{$grid-unit-delimiter}12  { @extend .g-#{$namespace}5#{$grid-unit-delimiter}6;}
+	.g-#{$namespace}11#{$grid-unit-delimiter}12  { width: 91.666%;}
 }
 
 @include grid-setup();
