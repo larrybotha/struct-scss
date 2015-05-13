@@ -20,117 +20,113 @@
   @include media-query(palm) { overflow: hidden;}
 }
 
-%menu {
-  @extend %list_-reset;
+  %menu {
+    @extend %list_-reset;
 
-  /**
-   * animate menu for mobiles and tablets
-   */
-  @include media-query(palm) {
-    @include transition(all 250ms ease-in-out);
-    @include transform(translate3d(0,0,0));
+    /**
+     * animate menu for mobiles and tablets
+     */
+    @include media-query(palm) {
+      @include transition(all 250ms ease-in-out);
+      @include transform(translate3d(0,0,0));
 
-    %menu-container > & { max-height: 0;}
+      %menu-container > & { max-height: 0;}
 
-    %menu-container.is-open > & { max-height: 50em;}
-  }
-}
-
-  %menu__item {
-    position: relative;
-    display: inline-block;
-
-    @include media-query(palm) { display: block;}
-
-    & > a {
-      display: block;
-      color: $clr-primary;
-      line-height: 3;
-      padding-left: 1em;
-      padding-right: 1em;
-
-      &:hover,
-      &:focus {}
-
-      &:active {}
-
-      a:hover + %menu__sub > &,
-      %menu__sub:hover > & {
-        max-height: 8em;
-        padding-top: 1em;
-        padding-bottom: 1em;
-        opacity: 1;
-      }
-    }
-
-    & %menu__sub a {
-      min-width: 225px;
-      white-space: nowrap;
-
-      // collapsed styles
-      max-height: 0;
-      overflow: hidden;
-      padding-top: 0;
-      padding-bottom: 0;
-      opacity: 0;
-
-      @include media-query(palm) {
-        white-space: normal;
-        min-width: auto;
-        padding: 0 1.5em;
-      }
-    }
-
-    %menu__sub & { display: block;}
-  }
-  .menu__item { @extend %menu__item;}
-
-  %menu__item_-current {
-    & > a {
-      &,
-      &:hover,
-      &:focus,
-      &:active { cursor: default;}
+      %menu-container.is-open > & { max-height: 50em;}
     }
   }
-  .menu__item_-current,
-  .menu__item_-current-parent { @extend %menu__item_-current;}
 
-    %menu__sub {
-      @extend %list_-reset;
-      @extend %link-transition;
-      background-color: #fff;
-      max-height: 0;
-      overflow: hidden;
-      position: absolute;
+    %menu__item {
+      position: relative;
+      display: inline-block;
 
-      a:hover + &,
-      &:hover {
-        border: 1px solid $base-ui-color;
-        max-height: none;
-        overflow: visible;
-      }
+      @include media-query(palm) { display: block;}
 
-      @include media-query(palm) {
+      & > a {
         display: block;
-        position: relative;
-        margin-left: 1.5em;
-        border: 0;
-        opacity: 1;
-        z-index: 0;
-      }
-    }
-    .menu__sub { @extend %menu__sub;}
+        color: $clr-primary;
+        line-height: 3;
+        padding-left: 1em;
+        padding-right: 1em;
 
-      %menu__sub %menu__sub {
-        top: 0;
-        left: 100%;
+        &:hover,
+        &:focus {}
 
-        @include media-query(palm) {
-          top: auto;
-          left: auto;
+        &:active {}
+
+        a:hover + %menu__sub > &,
+        %menu__sub:hover > & {
+          max-height: 8em;
+          padding-top: 1em;
+          padding-bottom: 1em;
+          opacity: 1;
         }
       }
+
+      & %menu__sub a {
+        min-width: 225px;
+        white-space: nowrap;
+
+        // collapsed styles
+        @include menu-anchor-collapse();
+
+        @include media-query(palm) {
+          white-space: normal;
+          min-width: none;
+          padding: 0 1.5em;
+        }
+      }
+
+      %menu__sub & { display: block;}
+    }
+    .menu__item { @extend %menu__item;}
+
+    %menu__item_-current {
+      & > a {
+        &,
+        &:hover,
+        &:focus,
+        &:active { cursor: default;}
+      }
+    }
+    .menu__item_-current,
+    .menu__item_-current-parent { @extend %menu__item_-current;}
+
+      %menu__sub {
+        @extend %list_-reset;
+        @extend %link-transition;
+        background-color: #fff;
+        max-height: 0;
+        overflow: hidden;
+        position: absolute;
+
+        a:hover + &,
+        &:hover {
+          border: 1px solid $base-ui-color;
+          max-height: none;
+          overflow: visible;
+        }
+
+        @include media-query(palm) {
+          display: block;
+          position: relative;
+          margin-left: 1.5em;
+          border: 0;
+          opacity: 1;
+          z-index: 0;
+        }
+      }
+      .menu__sub { @extend %menu__sub;}
+
+        %menu__sub %menu__sub {
+          top: 0;
+          left: 100%;
+
+          @include media-query(palm) {
+            top: auto;
+            left: auto;
+          }
+        }
 
 
 
@@ -139,7 +135,9 @@
 /*------------------------------------*\
     $PRIMARY MENU
 \*------------------------------------*/
-.menu_-primary { @extend %menu;}
+.menu_-primary-container { @extend %menu-container;}
+
+  .menu_-primary { @extend %menu;}
 
 
 
