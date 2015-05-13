@@ -42,8 +42,6 @@
 
     @include media-query(palm) { display: block;}
 
-    %menu__sub & { display: block;}
-
     & > a {
       display: block;
       color: $clr-primary;
@@ -82,6 +80,8 @@
         padding: 0 1.5em;
       }
     }
+
+    %menu__sub & { display: block;}
   }
   .menu__item { @extend %menu__item;}
 
