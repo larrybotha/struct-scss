@@ -5,6 +5,7 @@ button { @extend %link-transition;}
 
 .btn {
   @extend %btn !optional;
+  @extend %link-transition;
   color: $clr-ntrl-min;
 
   &[disabled],
