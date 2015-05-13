@@ -42,6 +42,8 @@
 
     @include media-query(palm) { display: block;}
 
+    %menu__sub & { display: block;}
+
     & > a {
       display: block;
       color: $clr-primary;
