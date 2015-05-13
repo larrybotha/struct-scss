@@ -45,14 +45,6 @@
 
         &:active {}
 
-        a:hover + %menu__sub > &,
-        %menu__sub:hover > & {
-          max-height: 8em;
-          padding-top: 1em;
-          padding-bottom: 1em;
-          opacity: 1;
-        }
-
         @include media-query(portable) {
           // collapse all links on portable
           @include menu-anchor-collapse();
@@ -64,20 +56,6 @@
             padding-top: .5em;
             padding-bottom: .5em;
           }
-        }
-      }
-
-      & %menu__sub a {
-        min-width: 225px;
-        white-space: nowrap;
-
-        // collapsed styles
-        @include menu-anchor-collapse();
-
-        @include media-query(portable) {
-          white-space: normal;
-          min-width: none;
-          padding: 0 1.5em;
         }
       }
 
@@ -109,6 +87,29 @@
           border: 1px solid $base-ui-color;
           max-height: none;
           overflow: visible;
+        }
+
+        & a {
+          min-width: 225px;
+          white-space: nowrap;
+
+          // collapse menu__sub links
+          @include menu-anchor-collapse();
+
+          @include media-query(portable) {
+            white-space: normal;
+            min-width: none;
+            padding: 0 1.5em;
+          }
+        }
+
+        // uncollapse menu__sub links when grandparents are hovered
+        a:hover + & > %menu__item a,
+        &:hover > %menu__item > a {
+          max-height: 8em;
+          padding-top: 1em;
+          padding-bottom: 1em;
+          opacity: 1;
         }
 
         @include media-query(portable) {
