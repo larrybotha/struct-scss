@@ -3,6 +3,17 @@
 \*------------------------------------*/
 .error { color: $clr-danger;}
 
+%fc_-base { color: $clr-base;}
+a%fc_-base,
+button%fc_-base {
+  @extend %fc_-base;
+
+  &:hover,
+  &:focus { color: $clr-base-lt;}
+
+  &:active { color: $clr-base-dk;}
+}
+
 %fc_-primary { color: $clr-primary;}
 a%fc_-primary,
 button%fc_-primary {
