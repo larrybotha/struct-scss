@@ -108,10 +108,7 @@
 		@extend %grid__item;
 
 		@if $use-legacy-grid {
-			.oldie & {
-				display: table-cell;
-				width: auto;
-			}
+			.oldie & { display: table-cell;}
 		}
 
 		@if $use-flexbox-grid { @include flex(1);}
