@@ -27,6 +27,11 @@
   @include flex-direction(column);
   min-height: 100vh;
 
+  /**
+   * don't use sticky footer on IE10 >=
+   *
+   * just don't bother
+   */
   @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
     display: block;
   }
