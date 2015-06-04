@@ -20,7 +20,7 @@
  * Use sticky footer:
  * http://philipwalton.github.io/solved-by-flexbox/demos/sticky-footer/
  *
- * requires flex: 1; on primary content
+ * requires flex: 1 0 auto; on primary content
  */
 %sticky-footer {
   @include display(flex);
