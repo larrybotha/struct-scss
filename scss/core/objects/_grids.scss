@@ -45,8 +45,9 @@
 
 	@if $use-legacy-grid {
 		.oldie & {
-			display: inline;
-			width: 100%;
+			display: inline-block;
+      width: 100%;
+			width: calc(100% + #{$grid-gutter}em);
 		}
 	}
 
@@ -126,6 +127,10 @@
 	.g_-shrink-wrap {
 		@extend %grid__item;
 		width: auto;
+
+		@if $use-legacy-grid {
+			.oldie & { display: table-cell;}
+		}
 	}
 
 
@@ -228,3 +233,4 @@
 }
 
 }//endif
+
