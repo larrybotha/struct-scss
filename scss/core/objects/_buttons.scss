@@ -31,7 +31,7 @@
 	&:focus { text-decoration: none;}
 
 	&:active,
-	&:focus { @include transition(0);}
+	&:focus { @include transition(none);}
 
 	&[disabled],
 	&:disabled { cursor: default;}
