@@ -2,6 +2,7 @@
     $COLLAPSED ANCHOR
 \*------------------------------------*/
 @mixin menu-anchor-collapse() {
+  border-width: 0;
   max-height: 0;
   opacity: 0;
   overflow: hidden;
