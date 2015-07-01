@@ -33,8 +33,7 @@
    * just don't bother
    */
   @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-    display: table;
-    width: 100%;
+    display: block;
   }
 }
 
