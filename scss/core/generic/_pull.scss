@@ -7,92 +7,92 @@
 
 @mixin pull-setup($namespace: "") {
 
-    /**
-     * Whole
-     */
-    .pull_-#{$namespace}one-whole           { right:100%; }
+	/**
+	 * Whole
+	 */
+	.g_-pull-#{$namespace}1#{$grid-unit-delimiter}1   { right:100%; }
 
 
-    /**
-     * Halves
-     */
-    .pull_-#{$namespace}one-half            { right:50%; }
+	/**
+	 * Halves
+	 */
+	.g_-pull-#{$namespace}1#{$grid-unit-delimiter}2   { right:50%; }
 
 
-    /**
-     * Thirds
-     */
-    .pull_-#{$namespace}one-third           { right:33.333%; }
-    .pull_-#{$namespace}two-thirds          { right:66.666%; }
+	/**
+	 * Thirds
+	 */
+	.g_-pull-#{$namespace}1#{$grid-unit-delimiter}3   { right:33.333%; }
+	.g_-pull-#{$namespace}2#{$grid-unit-delimiter}3   { right:66.666%; }
 
 
-    /**
-     * Quarters
-     */
-    .pull_-#{$namespace}one-quarter         { right:25%; }
-    .pull_-#{$namespace}two-quarters        { @extend .pull_-#{$namespace}one-half; }
-    .pull_-#{$namespace}three-quarters      { right:75%; }
+	/**
+	 * Quarters
+	 */
+	.g_-pull-#{$namespace}1#{$grid-unit-delimiter}4   { right:25%; }
+	.g_-pull-#{$namespace}2#{$grid-unit-delimiter}4   { @extend .g_-pull-#{$namespace}1#{$grid-unit-delimiter}2; }
+	.g_-pull-#{$namespace}3#{$grid-unit-delimiter}4   { right:75%; }
 
 
-    /**
-     * Fifths
-     */
-    .pull_-#{$namespace}one-fifth           { right:20%; }
-    .pull_-#{$namespace}two-fifths          { right:40%; }
-    .pull_-#{$namespace}three-fifths        { right:60%; }
-    .pull_-#{$namespace}four-fifths         { right:80%; }
+	/**
+	 * Fifths
+	 */
+	.g_-pull-#{$namespace}1#{$grid-unit-delimiter}5   { right:20%; }
+	.g_-pull-#{$namespace}2#{$grid-unit-delimiter}5   { right:40%; }
+	.g_-pull-#{$namespace}3#{$grid-unit-delimiter}5   { right:60%; }
+	.g_-pull-#{$namespace}4#{$grid-unit-delimiter}5   { right:80%; }
 
 
-    /**
-     * Sixths
-     */
-    .pull_-#{$namespace}one-sixth           { right:16.666%; }
-    .pull_-#{$namespace}two-sixths          { @extend .pull_-#{$namespace}one-third; }
-    .pull_-#{$namespace}three-sixths        { @extend .pull_-#{$namespace}one-half; }
-    .pull_-#{$namespace}four-sixths         { @extend .pull_-#{$namespace}two-thirds; }
-    .pull_-#{$namespace}five-sixths         { right:83.333%; }
+	/**
+	 * Sixths
+	 */
+	.g_-pull-#{$namespace}1#{$grid-unit-delimiter}6   { right:16.666%; }
+	.g_-pull-#{$namespace}2#{$grid-unit-delimiter}6   { @extend .g_-pull-#{$namespace}1#{$grid-unit-delimiter}3; }
+	.g_-pull-#{$namespace}3#{$grid-unit-delimiter}6   { @extend .g_-pull-#{$namespace}1#{$grid-unit-delimiter}2; }
+	.g_-pull-#{$namespace}4#{$grid-unit-delimiter}6   { @extend .g_-pull-#{$namespace}2#{$grid-unit-delimiter}3; }
+	.g_-pull-#{$namespace}5#{$grid-unit-delimiter}6   { right:83.333%; }
 
 
-    /**
-     * Eighths
-     */
-    .pull_-#{$namespace}one-eighth          { right:12.5%; }
-    .pull_-#{$namespace}two-eighths         { @extend .pull_-#{$namespace}one-quarter; }
-    .pull_-#{$namespace}three-eighths       { right:37.5%; }
-    .pull_-#{$namespace}four-eighths        { @extend .pull_-#{$namespace}one-half; }
-    .pull_-#{$namespace}five-eighths        { right:62.5%; }
-    .pull_-#{$namespace}six-eighths         { @extend .pull_-#{$namespace}three-quarters; }
-    .pull_-#{$namespace}seven-eighths       { right:87.5%; }
+	/**
+	 * Eighths
+	 */
+	.g_-pull-#{$namespace}1#{$grid-unit-delimiter}8   { right:12.5%; }
+	.g_-pull-#{$namespace}2#{$grid-unit-delimiter}8   { @extend .g_-pull-#{$namespace}1#{$grid-unit-delimiter}4; }
+	.g_-pull-#{$namespace}3#{$grid-unit-delimiter}8   { right:37.5%; }
+	.g_-pull-#{$namespace}4#{$grid-unit-delimiter}8   { @extend .g_-pull-#{$namespace}1#{$grid-unit-delimiter}2; }
+	.g_-pull-#{$namespace}5#{$grid-unit-delimiter}8   { right:62.5%; }
+	.g_-pull-#{$namespace}6#{$grid-unit-delimiter}8   { @extend .g_-pull-#{$namespace}3#{$grid-unit-delimiter}4; }
+	.g_-pull-#{$namespace}7#{$grid-unit-delimiter}8   { right:87.5%; }
 
 
-    /**
-     * Tenths
-     */
-    .pull_-#{$namespace}one-tenth           { right:10%; }
-    .pull_-#{$namespace}two-tenths          { @extend .pull_-#{$namespace}one-fifth; }
-    .pull_-#{$namespace}three-tenths        { right:30%; }
-    .pull_-#{$namespace}four-tenths         { @extend .pull_-#{$namespace}two-fifths; }
-    .pull_-#{$namespace}five-tenths         { @extend .pull_-#{$namespace}one-half; }
-    .pull_-#{$namespace}six-tenths          { @extend .pull_-#{$namespace}three-fifths; }
-    .pull_-#{$namespace}seven-tenths        { right:70%; }
-    .pull_-#{$namespace}eight-tenths        { @extend .pull_-#{$namespace}four-fifths; }
-    .pull_-#{$namespace}nine-tenths         { right:90%; }
+	/**
+	 * Tenths
+	 */
+	.g_-pull-#{$namespace}1#{$grid-unit-delimiter}10  { right:10%; }
+	.g_-pull-#{$namespace}2#{$grid-unit-delimiter}10  { @extend .g_-pull-#{$namespace}1#{$grid-unit-delimiter}5; }
+	.g_-pull-#{$namespace}3#{$grid-unit-delimiter}10  { right:30%; }
+	.g_-pull-#{$namespace}4#{$grid-unit-delimiter}10  { @extend .g_-pull-#{$namespace}2#{$grid-unit-delimiter}5; }
+	.g_-pull-#{$namespace}5#{$grid-unit-delimiter}10  { @extend .g_-pull-#{$namespace}1#{$grid-unit-delimiter}2; }
+	.g_-pull-#{$namespace}6#{$grid-unit-delimiter}10  { @extend .g_-pull-#{$namespace}3#{$grid-unit-delimiter}5; }
+	.g_-pull-#{$namespace}7#{$grid-unit-delimiter}10  { right:70%; }
+	.g_-pull-#{$namespace}8#{$grid-unit-delimiter}10  { @extend .g_-pull-#{$namespace}4#{$grid-unit-delimiter}5; }
+	.g_-pull-#{$namespace}9#{$grid-unit-delimiter}10  { right:90%; }
 
 
-    /**
-     * Twelfths
-     */
-    .pull_-#{$namespace}one-twelfth         { right:8.333%; }
-    .pull_-#{$namespace}two-twelfths        { @extend .pull_-#{$namespace}one-sixth; }
-    .pull_-#{$namespace}three-twelfths      { @extend .pull_-#{$namespace}one-quarter; }
-    .pull_-#{$namespace}four-twelfths       { @extend .pull_-#{$namespace}one-third; }
-    .pull_-#{$namespace}five-twelfths       { right:41.666% }
-    .pull_-#{$namespace}six-twelfths        { @extend .pull_-#{$namespace}one-half; }
-    .pull_-#{$namespace}seven-twelfths      { right:58.333%; }
-    .pull_-#{$namespace}eight-twelfths      { @extend .pull_-#{$namespace}two-thirds; }
-    .pull_-#{$namespace}nine-twelfths       { @extend .pull_-#{$namespace}three-quarters; }
-    .pull_-#{$namespace}ten-twelfths        { @extend .pull_-#{$namespace}five-sixths; }
-    .pull_-#{$namespace}eleven-twelfths     { right:91.666%; }
+	/**
+	 * Twelfths
+	 */
+	.g_-pull-#{$namespace}1#{$grid-unit-delimiter}12  { right:8.333%; }
+	.g_-pull-#{$namespace}2#{$grid-unit-delimiter}12  { @extend .g_-pull-#{$namespace}1#{$grid-unit-delimiter}6; }
+	.g_-pull-#{$namespace}3#{$grid-unit-delimiter}12  { @extend .g_-pull-#{$namespace}1#{$grid-unit-delimiter}4; }
+	.g_-pull-#{$namespace}4#{$grid-unit-delimiter}12  { @extend .g_-pull-#{$namespace}1#{$grid-unit-delimiter}3; }
+	.g_-pull-#{$namespace}5#{$grid-unit-delimiter}12  { right:41.666% }
+	.g_-pull-#{$namespace}6#{$grid-unit-delimiter}12  { @extend .g_-pull-#{$namespace}1#{$grid-unit-delimiter}2; }
+	.g_-pull-#{$namespace}7#{$grid-unit-delimiter}12  { right:58.333%; }
+	.g_-pull-#{$namespace}8#{$grid-unit-delimiter}12  { @extend .g_-pull-#{$namespace}2#{$grid-unit-delimiter}3; }
+	.g_-pull-#{$namespace}9#{$grid-unit-delimiter}12  { @extend .g_-pull-#{$namespace}3#{$grid-unit-delimiter}4; }
+	.g_-pull-#{$namespace}10#{$grid-unit-delimiter}12 { @extend .g_-pull-#{$namespace}5#{$grid-unit-delimiter}6; }
+	.g_-pull-#{$namespace}11#{$grid-unit-delimiter}12 { right:91.666%; }
 }
 
 @if $pull == true{
@@ -100,48 +100,39 @@
 /**
  * Not a particularly great selector, but the DRYest way to do things.
  */
-%grid__item[class*="pull_-"]{ position:relative; }
+[class*="g_-pull-"]{ position:relative; }
 
 @include pull-setup();
 
 @if $palm-pull == true{
-
-    @include media-query(palm){
-        @include pull-setup("palm-");
-    }
-
+	@include media-query(palm){
+		@include pull-setup("palm-");
+	}
 }
 
 @if $lap-pull == true{
-
-    @include media-query(lap){
-        @include pull-setup("lap-");
-    }
-
+	@include media-query(lap){
+		@include pull-setup("lap-");
+	}
 }
 
 @if $lap-and-up-pull == true{
-
-    @include media-query(lap-and-up){
-        @include pull-setup("lap-and-up-");
-    }
-
+	@include media-query(lap-and-up){
+		@include pull-setup("lap-and-up-");
+	}
 }
 
 @if $portable-pull == true{
-
-    @include media-query(portable){
-        @include pull-setup("portable-");
-    }
-
+	@include media-query(portable){
+		@include pull-setup("portable-");
+	}
 }
 
 @if $desk-pull == true{
-
-    @include media-query(desk){
-        @include pull-setup("desk-");
-    }
-
+	@include media-query(desk){
+		@include pull-setup("desk-");
+	}
 }
 
 }//endif
+
