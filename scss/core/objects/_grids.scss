@@ -7,27 +7,21 @@
  * Fluid and nestable grid system, e.g.:
  *
    <div class="gw">
-
        <div class="g  one-third">
            <p>One third grid</p>
        </div><!--
-
     --><div class="g  two-thirds">
            <p>Two thirds grid</p>
        </div><!--
-
     --><div class="g  one-half">
            <p>One half grid</p>
        </div><!--
-
     --><div class="g  one-quarter">
            <p>One quarter grid</p>
        </div><!--
-
     --><div class="g  one-quarter">
            <p>One quarter grid</p>
        </div>
-
    </div>
  *
  * Demo: jsfiddle.net/inuitcss/CLYUC
@@ -39,9 +33,9 @@
  * Grid wrapper
  */
 %grid {
-  @include px-and-rem(margin-left, -$grid-gutter);
   list-style: none;
   margin-bottom: 0;
+  @include px-and-rem(margin-left, -$grid-gutter);
 
   @if $use-legacy-grid {
     .oldie & {
@@ -68,13 +62,14 @@
    * grid items
    */
   %grid__item {
-    @if $use-legacy-grid {
-      display: inline-block;
-      width: 100%;
-      vertical-align: top;
-    }
-
     @include px-and-rem(padding-left, $grid-gutter);
+
+    @if $use-legacy-grid {
+      width: 100%;
+      display: inline-block;
+
+      .oldie & { vertical-align: top;}
+    }
 
     @if $global-border-box == false { @include vendor(box-sizing, border-box);}
   }
@@ -179,12 +174,16 @@
 %gw_-center {
   @extend %grid;
 
-  @if $use-legacy-grid { text-align: center;}
+  @if $use-legacy-grid {
+    .oldie & { text-align: center;}
+  }
 
   @if $use-flexbox-grid { @include justify-content(center);}
 
   & > %grid__item {
-    @if $use-legacy-grid { text-align: left;}
+    @if $use-legacy-grid {
+      .oldie & { text-align: left;}
+    }
   }
 }
 
@@ -195,12 +194,16 @@
 %gw_-right {
   @extend %grid;
 
-  @if $use-legacy-grid { text-align: right;}
+  @if $use-legacy-grid {
+    .oldie & { text-align: right;}
+  }
 
   @if $use-flexbox-grid { @include justify-content(flex-end);}
 
   & > %grid__item {
-    @if $use-legacy-grid { text-align: left;}
+    @if $use-legacy-grid {
+      .oldie & { text-align: left;}
+    }
   }
 }
 
@@ -214,7 +217,9 @@
   @if $use-flexbox-grid { @include align-items(center);}
 
   & > %grid__item {
-    @if $use-legacy-grid { vertical-align: middle;}
+    @if $use-legacy-grid {
+      .oldie & { vertical-align: middle;}
+    }
   }
 }
 
@@ -228,7 +233,9 @@
   @if $use-flexbox-grid { @include align-items(flex-end);}
 
   & > %grid__item {
-    @if $use-legacy-grid { vertical-align: bottom;}
+    @if $use-legacy-grid {
+      .oldie & { vertical-align: bottom;}
+    }
   }
 }
 
