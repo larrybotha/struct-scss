@@ -3,7 +3,7 @@
 \*------------------------------------*/
 button { @extend %link-transition;}
 
-.btn {
+%btn {
   @extend %btn !optional;
   @extend %link-transition;
   color: $clr-ntrl-min;
@@ -21,7 +21,7 @@ button { @extend %link-transition;}
 }
 
 .btn_-primary {
-  @extend .btn;
+  @extend %btn;
   background-color: $clr-primary;
 
   &:hover,
