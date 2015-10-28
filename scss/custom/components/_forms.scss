@@ -17,11 +17,10 @@ textarea { resize: vertical;}
 button, input, select, textarea { vertical-align: baseline;}
 
 input, textarea {
+  border: 1px solid $base-ui-color;
   height: auto;         // don't apply heights set to inputs
   line-height: normal;  // all browsers must use FF's UA !important for consistency
-  @include px-and-rem(margin-bottom, 1);
   padding: .5em;
-  border: 1px solid $base-ui-color;
 }
 
 input[type="checkbox"],
