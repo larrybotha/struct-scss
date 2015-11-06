@@ -1,0 +1,10 @@
+/*------------------------------------*\
+    $DISPLAY
+\*------------------------------------*/
+%display_-block { display: block;}
+
+input%display_-block,
+textarea%display_-block,
+button%display_-block { width: 100%;}
+
+%display_-iblock { display: inline-block;}

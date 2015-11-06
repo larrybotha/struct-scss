@@ -1,32 +1,8 @@
 /*------------------------------------*\
     $COMPONENTS
 \*------------------------------------*/
-/**
- * import custom styles
- */
-@import "base";
-@import "images";
-@import "links";
-@import "tables";
-@import "rules";
-@import "lists";
-@import "forms";
-@import "fonts";
-@import "buttons";
-@import "menus";
 @import "alerts";
-@import "progress";
-@import "general";
-
-
-
-
-
-/**
- * Modifier styles - these should always be declared after objects / blocks to
- * avoid being overridden.
- */
-@import "typography";
-@import "backgrounds";
-@import "layout";
-@import "animations";
+@import "buttons";
+@import "icons";
+@import "loaders";
+@import "menus";

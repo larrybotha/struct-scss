@@ -1,0 +1,64 @@
+/*------------------------------------*\
+    $WYSIWYG CLASSES
+\*------------------------------------*/
+
+
+
+
+
+/*------------------------------------*\
+    $TINYMCE
+\*------------------------------------*/
+@if $use-tinymce {
+.align_left    { @extend %text_-left;}
+.align_center  { @extend %text_-center;}
+.align_right   { @extend %text_-right;}
+
+img.align_left {
+  float:left;
+  @include px-and-rem(margin-right, 1.5);
+  @include px-and-rem(margin-bottom, 1);
+}
+
+img.align_right {
+  float:right;
+  @include px-and-rem(margin-left, 1.5);
+  @include px-and-rem(margin-bottom, 1);
+}
+
+img.align_center {
+  display: block;
+  margin: 0 auto;
+}
+}
+
+
+
+
+
+/*------------------------------------*\
+    $CKEDITOR
+\*------------------------------------*/
+@if $use-ckeditor {
+.align_left    { @extend %text_-left;}
+.align_center  { @extend %text_-center;}
+.align_right   { @extend %text_-right;}
+
+img.align_left {
+  float:left;
+  @include px-and-rem(margin-right, 1.5);
+  @include px-and-rem(margin-bottom, 1);
+}
+
+img.align_right {
+  float:right;
+  @include px-and-rem(margin-left, 1.5);
+  @include px-and-rem(margin-bottom, 1);
+}
+
+img.align_center {
+  display: block;
+  margin: 0 auto;
+}
+}
+
