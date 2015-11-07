@@ -4,14 +4,15 @@
 @import "reset";
 @import "normalize";
 
-@import "shared";
-@import "main";
-@import "headings";
-@import "paragraphs";
-@import "smallprint";
-@import "quotes";
+@import "document";
+
 @import "code";
+@import "forms";
+@import "general-typography";
+@import "headings";
 @import "images";
 @import "lists";
+@import "paragraphs";
+@import "quotes";
+@import "smallprint";
 @import "tables";
-@import "forms";
