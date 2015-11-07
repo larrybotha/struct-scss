@@ -1,14 +1,14 @@
 /*------------------------------------*\
-    $MAIN
+  $MAIN
 \*------------------------------------*/
 html{
-    font-size:#{($base-font-size/16px)*100%};
-    min-height:100%;
+  font-size:#{($base-font-size/16px)*100%};
+  min-height:100%;
 }
 
 html, body, button, input, select, textarea {
-    font-family: $font-base-stack;
-    color: $base-ui-color;
+  font-family: $font-base-stack;
+  color: $base-ui-color;
 }
 
 /**
@@ -16,14 +16,14 @@ html, body, button, input, select, textarea {
  * Let's end the tyranny
  */
 button, input, select, textarea {
-	background-image: none;
+  background-image: none;
 }
 
 body {
-    background-color: #fff;
-    font-size: 1em;
-		line-height: $line-height-ratio;
-    margin: 0;
+  background-color: #fff;
+  font-size: 1em;
+  line-height: $line-height-ratio;
+  margin: 0;
 }
 
 /*
@@ -32,12 +32,12 @@ body {
  */
 
 ::-moz-selection {
-    background: $selection-color;
-    color: #fff;
-    text-shadow: none;
+  background: $selection-color;
+  color: #fff;
+  text-shadow: none;
 }
 ::selection {
-    background: $selection-color;
-    color: #fff;
-    text-shadow: none;
+  background: $selection-color;
+  color: #fff;
+  text-shadow: none;
 }
