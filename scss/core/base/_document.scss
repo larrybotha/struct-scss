@@ -2,7 +2,18 @@
   $DOCUMENT
 \*------------------------------------*/
 html{
-  font-size:#{($base-font-size/16px)*100%};
+  /*
+   * Can't use relative units on html due to bug on
+   * Chrome and Safari.
+   * CodePen: http://codepen.io/larrybotha/pen/wKYYXE
+   * Chrome Bug Tracker: https://code.google.com/p/chromium/issues/detail?id=319623#c16
+   */
+  // font-size:#{($base-font-size/16px)*100%};
+
+  /*
+   * TODO: use relative unit once Chrome bug is fixed
+   */
+  font-size: $base-font-size;
   min-height:100%;
 }
 
