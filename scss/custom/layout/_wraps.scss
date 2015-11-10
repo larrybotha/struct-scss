@@ -36,7 +36,8 @@ $wrap-widths: (
   @extend %wrap-padding;
 }
 
-.wrap {
+%wrap {
   @extend %wrap-base;
   @extend %wrap-width;
 }
+.wrap { @extend %wrap;}
