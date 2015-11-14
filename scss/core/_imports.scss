@@ -136,8 +136,8 @@
 /*------------------------------------*\
     $BASE
 \*------------------------------------*/
-@import "utils/functions/!all";
-@import "utils/mixins/!all";
+@import "utilities/functions/!all";
+@import "utilities/mixins/!all";
 
 
 
@@ -173,4 +173,4 @@
 /*------------------------------------*\
     $DEBUG
 \*------------------------------------*/
-@import "utils/debug";
+@import "utilities/debug";
