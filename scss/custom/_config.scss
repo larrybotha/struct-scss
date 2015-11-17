@@ -114,6 +114,8 @@ $selection-color: $brand-color;
  * Icon Font
  *
  * Dependant on $use-icons being true. These variables are used in the the font-face mixin.
+ *
+ * This font is enabled via custom/base/_fonts.scss
  */
 $font-icon          : "base-icon-font";
 $font-icon-path     : "fnt/base-icon-font";
@@ -123,9 +125,11 @@ $font-icon-stack    : $font-icon;
 
 /**
  * Base Font Face
+ *
+ * This font is enabled via custom/base/_fonts.scss
  */
 $font-base          : "[font-name]";
-$font-base-path     : "../fnt/[fon-folder]";
+$font-base-path     : "../fnt/[font-folder]";
 $font-base-filename : "[font-file-name-without-extension]";
 $font-base-stack    : $font-base, Arial, sans-serif;
 
