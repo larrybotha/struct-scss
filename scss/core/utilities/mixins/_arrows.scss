@@ -38,7 +38,7 @@
 
   @if $arrow-edge == top{
 
-    @extend %arrow_-top;
+    @extend %arrow--top;
 
     &:before{
       border-bottom-color:$border-color!important;
@@ -49,22 +49,22 @@
     }
 
     @if $arrow-location == left{
-      @extend %arrow_-left;
+      @extend %arrow--left;
     }
 
     @if $arrow-location == center{
-      @extend %arrow_-center;
+      @extend %arrow--center;
     }
 
     @if $arrow-location == right{
-      @extend %arrow_-right;
+      @extend %arrow--right;
     }
 
   }
 
   @if $arrow-edge == right{
 
-    @extend %arrow_-far;
+    @extend %arrow--far;
 
     &:before{
       border-left-color:$border-color!important;
@@ -75,22 +75,22 @@
     }
 
     @if $arrow-location == top{
-      @extend %arrow_-upper;
+      @extend %arrow--upper;
     }
 
     @if $arrow-location == center{
-      @extend %arrow_-middle;
+      @extend %arrow--middle;
     }
 
     @if $arrow-location == bottom{
-      @extend %arrow_-lower;
+      @extend %arrow--lower;
     }
 
   }
 
   @if $arrow-edge == bottom{
 
-    @extend %arrow_-bottom;
+    @extend %arrow--bottom;
 
     &:before{
       border-top-color:$border-color!important;
@@ -101,22 +101,22 @@
     }
 
     @if $arrow-location == left{
-      @extend %arrow_-left;
+      @extend %arrow--left;
     }
 
     @if $arrow-location == center{
-      @extend %arrow_-center;
+      @extend %arrow--center;
     }
 
     @if $arrow-location == right{
-      @extend %arrow_-right;
+      @extend %arrow--right;
     }
 
   }
 
   @if $arrow-edge == left{
 
-    @extend %arrow_-near;
+    @extend %arrow--near;
 
     &:before{
       border-right-color:$border-color!important;
@@ -127,15 +127,15 @@
     }
 
     @if $arrow-location == top{
-      @extend %arrow_-upper;
+      @extend %arrow--upper;
     }
 
     @if $arrow-location == center{
-      @extend %arrow_-middle;
+      @extend %arrow--middle;
     }
 
     @if $arrow-location == bottom{
-      @extend %arrow_-lower;
+      @extend %arrow--lower;
     }
 
   }

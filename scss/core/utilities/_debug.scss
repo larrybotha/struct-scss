@@ -160,8 +160,8 @@ input[type=submit][value]{
  */
 .gw > :not(.g),
 .grid-wrapper > :not(.grid),
-.gw_-rev > :not(.g),
-.grid-wrapper_-rev > :not(.grid){
+.gw--rev > :not(.g),
+.grid-wrapper--rev > :not(.grid){
 	outline:5px solid red;
 }
 

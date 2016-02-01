@@ -1,12 +1,12 @@
 /*------------------------------------*\
     $BACKGROUND LINK STATES
 \*------------------------------------*/
-a%bgc_-primary,
-button%bgc_-primary {
-  @include bgc_-primary;
+a%bgc--primary,
+button%bgc--primary {
+  @include bgc--primary;
 
   &:hover,
-  &:focus { @include bgc_-primary-lt;}
+  &:focus { @include bgc--primary-lt;}
 
-  &:active { @include bgc_-primary-dk;}
+  &:active { @include bgc--primary-dk;}
 }

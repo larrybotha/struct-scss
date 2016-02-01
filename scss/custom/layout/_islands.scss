@@ -1,8 +1,8 @@
 /*------------------------------------*\
 		$ISLANDS
 \*------------------------------------*/
-%island_-top { @include island_-top;}
-%island_-bottom { @include island_-bottom;}
+%island--top { @include island--top;}
+%island--bottom { @include island--bottom;}
 
 %island { @include island;}
 .island { @extend %island;}

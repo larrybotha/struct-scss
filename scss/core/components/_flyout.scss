@@ -21,7 +21,7 @@
  *
  */
 .flyout,
-.flyout_-alt{
+.flyout--alt{
     position:relative;
     overflow:hidden;
 }
@@ -38,10 +38,10 @@
     /**
      * Bring the flyouts into view when you hover their parents.
      * Two different types of flyout; ‘regular’ (`.flyout`) and ‘alternative’
-     * (`.flyout_-alt`).
+     * (`.flyout--alt`).
      */
     .flyout:hover,
-    .flyout_-alt:hover{
+    .flyout--alt:hover{
         overflow:visible;
     }
 
@@ -55,7 +55,7 @@
     /**
      * Alternative flyouts sit all the way from the left, flush top.
      */
-    .flyout_-alt:hover > .flyout__content{
+    .flyout--alt:hover > .flyout__content{
         top:0;
         left:100%;
     }

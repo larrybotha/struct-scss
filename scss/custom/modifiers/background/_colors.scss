@@ -1,9 +1,9 @@
 /*------------------------------------*\
     $BACKGROUND COLORS
 \*------------------------------------*/
-%bgc_-primary-dk { @include bgc_-primary-dk}
-.bgc_-primary-dk { @extend %bgc_-primary-dk;}
-%bgc_-primary    { @include bgc_-primary}
-.bgc_-primary    { @extend %bgc_-primary;}
-%bgc_-primary-lt { @include bgc_-primary-lt}
-.bgc_-primary-lt { @extend %bgc_-primary-lt;}
+%bgc--primary-dk { @include bgc--primary-dk}
+.bgc--primary-dk { @extend %bgc--primary-dk;}
+%bgc--primary    { @include bgc--primary}
+.bgc--primary    { @extend %bgc--primary;}
+%bgc--primary-lt { @include bgc--primary-lt}
+.bgc--primary-lt { @extend %bgc--primary-lt;}

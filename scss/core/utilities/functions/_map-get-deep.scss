@@ -28,7 +28,7 @@
 
 //     @each $vp in map-keys($viewports) {
 //       @include media-query($vp) {
-//         .bgi_-#{$img-name} {
+//         .bgi--#{$img-name} {
 //           background-image: url('images/#{$img-name}-#{$vp}.svg');
 //           width: map-deep-get($viewports, $vp, width);
 //           height: map-deep-get($viewports, $vp, height);

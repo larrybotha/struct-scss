@@ -9,15 +9,15 @@ $wrap-widths: (
  * Generates placeholders for wrap widths
  * e.g.
 
-  %wrap-width_-large { max-width: 1280px;}
+  %wrap-width--large { max-width: 1280px;}
   %wrap-width        { max-width: 960px;}
-  %wrap-width_-small { max-width: 640px;}
+  %wrap-width--small { max-width: 640px;}
  */
 @each $wrap-name, $wrap-width in $wrap-widths {
   @if $wrap-name == 'base' {
     %wrap-width { max-width: $wrap-width;}
   } @else {
-    %wrap-width_-#{$wrap-name} { max-width: $wrap-width;}
+    %wrap-width--#{$wrap-name} { max-width: $wrap-width;}
   }
 }
 

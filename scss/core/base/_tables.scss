@@ -4,7 +4,7 @@
 /**
  * We have a lot at our disposal for making very complex table constructs, e.g.:
  *
-   <table class="table_-bordered  table_-striped  table_-data">
+   <table class="table--bordered  table--striped  table--data">
      <colgroup>
        <col class=t10>
        <col class=t10>
@@ -123,7 +123,7 @@ td{
 /**
  * Bordered tables
  */
-.table_-bordered{
+.table--bordered{
 
   th,
   td{
@@ -147,7 +147,7 @@ td{
 /**
  * Striped tables
  */
-.table_-striped{
+.table--striped{
 
   tbody tr:nth-of-type(odd){
     background-color:#ffc; /* Override this color in your theme stylesheet */
@@ -158,7 +158,7 @@ td{
 /**
  * Data table
  */
-.table_-data{
+.table--data{
   font:12px/1.5 sans-serif;
 }
 }// endif

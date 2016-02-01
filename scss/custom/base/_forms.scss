@@ -43,7 +43,7 @@ input[type="radio"] { margin-bottom: 0;}
 
   input[type=[radio|checkbox].visuallyhidden
   label
-    i.radio_-icon
+    i.radio--icon
     | my custom radio's label text
 
  */
@@ -58,23 +58,23 @@ input[type="radio"] { margin-bottom: 0;}
   }
 }
 
-.radio_-icon,
-.checkbox_-icon { @extend %custom-radio-base;}
+.radio--icon,
+.checkbox--icon { @extend %custom-radio-base;}
 
-.checkbox_-icon {
+.checkbox--icon {
   &:before { @extend %icon-checkbox-false:before;}
 }
 
-.radio_-icon {
+.radio--icon {
   &:before { @extend %icon-radio-false:before;}
 }
 
 input:checked + label {
-  & > .radio_-icon {
+  & > .radio--icon {
     &:before { @extend %icon-radio-true:before;}
   }
 
-  & > .checkbox_-icon {
+  & > .checkbox--icon {
     &:before { @extend %icon-checkbox-true:before;}
   }
 }

@@ -29,13 +29,13 @@
     /**
      * Reversed image location (right instead of left).
      */
-    %media__img_-rev {
+    %media__img--rev {
 			float:right;
 			@include px-and-rem(margin-left, $base-spacing-unit);
     }
 
 				%media__img img,
-        %media__img_-rev img {
+        %media__img--rev img {
 					display:block;
         }
 
@@ -56,7 +56,7 @@
     .islet %media__img {
 			@include px-and-rem(margin-left, $base-spacing-unit);
     }
-    .islet %media__img_-rev {
+    .islet %media__img--rev {
 			@include px-and-rem(margin-right, $base-spacing-unit);
     }
 

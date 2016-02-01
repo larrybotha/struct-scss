@@ -4,8 +4,8 @@
     $OPTIONS
 \*------------------------------------*/
 /**
- * Link-group nav, used for displaying related options. Extends `.nav_-block`
- * but could also extend `.nav_-fit`. Extend with colours and ‘current states’
+ * Link-group nav, used for displaying related options. Extends `.nav--block`
+ * but could also extend `.nav--fit`. Extend with colours and ‘current states’
  * in your theme stylesheet.
  *
   <ul class="nav  options">
@@ -19,7 +19,7 @@
  *
  */
 .options{
-    @extend .nav_-block;
+    @extend .nav--block;
 
     > li{
 

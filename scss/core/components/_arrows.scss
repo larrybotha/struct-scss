@@ -38,7 +38,7 @@ $arrow:                 $arrow-size - $arrow-border;
 /**
  * Define individual edges so we can combine what we need, when we need.
  */
-%arrow_-top{
+%arrow--top{
     @extend %arrow;
 
     &:before,
@@ -47,7 +47,7 @@ $arrow:                 $arrow-size - $arrow-border;
     }
 }
 
-%arrow_-upper{
+%arrow--upper{
     @extend %arrow;
 
     &:before{
@@ -58,7 +58,7 @@ $arrow:                 $arrow-size - $arrow-border;
     }
 }
 
-%arrow_-middle{
+%arrow--middle{
     @extend %arrow;
 
     &:before,
@@ -71,7 +71,7 @@ $arrow:                 $arrow-size - $arrow-border;
     }
 }
 
-%arrow_-lower{
+%arrow--lower{
     @extend %arrow;
 
     &:before{
@@ -82,7 +82,7 @@ $arrow:                 $arrow-size - $arrow-border;
     }
 }
 
-%arrow_-bottom{
+%arrow--bottom{
     @extend %arrow;
 
     &:before,
@@ -91,7 +91,7 @@ $arrow:                 $arrow-size - $arrow-border;
     }
 }
 
-%arrow_-near{
+%arrow--near{
     @extend %arrow;
 
     &:before,
@@ -100,7 +100,7 @@ $arrow:                 $arrow-size - $arrow-border;
     }
 }
 
-%arrow_-left{
+%arrow--left{
     @extend %arrow;
 
     &:before{
@@ -111,7 +111,7 @@ $arrow:                 $arrow-size - $arrow-border;
     }
 }
 
-%arrow_-center{
+%arrow--center{
     @extend %arrow;
 
     &:before,
@@ -124,7 +124,7 @@ $arrow:                 $arrow-size - $arrow-border;
     }
 }
 
-%arrow_-right{
+%arrow--right{
     @extend %arrow;
 
     &:before{
@@ -135,7 +135,7 @@ $arrow:                 $arrow-size - $arrow-border;
     }
 }
 
-%arrow_-far{
+%arrow--far{
     @extend %arrow;
 
     &:before,

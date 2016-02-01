@@ -87,7 +87,7 @@
    *
    * Does not work for legacy browsers
    */
-  .g_-tall {
+  .g--tall {
     @extend %grid__item;
 
     @if $use-flexbox-grid { @include display(flex);}
@@ -102,7 +102,7 @@
    * Works mostly on <= IE9, mostly
    * Requires .oldie class on html tag
    */
-  .g_-auto {
+  .g--auto {
     @extend %grid__item;
 
     @if $use-legacy-grid {
@@ -113,7 +113,7 @@
   }
 
   /**
-   * Columns that shrink wrap around content - ideal for .g_-auto to occupy
+   * Columns that shrink wrap around content - ideal for .g--auto to occupy
    * remaining space.
    *
    * To be used as is, without column width modifiers. Viewport modifiers will
@@ -121,7 +121,7 @@
    *
    * Works mostly on <= IE9, mostly
    */
-  .g_-shrink-wrap {
+  .g--shrink-wrap {
     @extend %grid__item;
     width: auto;
 
@@ -135,7 +135,7 @@
 /**
 * reversed grids
 */
-%gw_-rev {
+%gw--rev {
   @extend %grid;
 
   @if $use-legacy-grid {
@@ -161,7 +161,7 @@
 /**
 * gutterless grids have all the properties of regular grids, minus any spacing.
 */
-%gw_-no-guts {
+%gw--no-guts {
   @extend %grid;
   margin-left: 0;
 
@@ -173,7 +173,7 @@
 * centered grids align grid items centrally without needing to use push or pull
 * classes.
 */
-%gw_-center {
+%gw--center {
   @extend %grid;
 
   @if $use-legacy-grid {
@@ -193,7 +193,7 @@
 /**
  * right aligned grids
  */
-%gw_-right {
+%gw--right {
   @extend %grid;
 
   @if $use-legacy-grid {
@@ -213,7 +213,7 @@
 /**
  * middle aligned grids
  */
-%gw_-middle {
+%gw--middle {
   @extend %grid;
 
   @if $use-flexbox-grid { @include align-items(center);}
@@ -229,7 +229,7 @@
 /**
  * bottom aligned grids
  */
-%gw_-bottom {
+%gw--bottom {
   @extend %grid;
 
   @if $use-flexbox-grid { @include align-items(flex-end);}

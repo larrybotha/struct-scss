@@ -25,23 +25,23 @@ figure > img{
 /**
  * Rounded images.
  */
-.img_-round { border-radius:$brand-round; }
+.img--round { border-radius:$brand-round; }
 
 
 /**
  * Image placement variations.
  */
-.img_-right{
+.img--right{
     float:right;
     margin-bottom:$base-spacing-unit;
     margin-left:$base-spacing-unit;
 }
-.img_-left{
+.img--left{
     float:left;
     margin-right:$base-spacing-unit;
     margin-bottom:$base-spacing-unit;
 }
-.img_-center{
+.img--center{
     display:block;
     margin-right:auto;
     margin-bottom:$base-spacing-unit;
@@ -55,13 +55,13 @@ figure > img{
  * Please note, these will not work too nicely with fluid images and will
  * distort when resized below a certain width. Use with caution.
  */
-.img_-short{
+.img--short{
     height:5 * $base-spacing-unit;
 }
-.img_-medium{
+.img--medium{
     height:10 * $base-spacing-unit;
 }
-.img_-tall{
+.img--tall{
     height:15 * $base-spacing-unit;
 }
 }// endif

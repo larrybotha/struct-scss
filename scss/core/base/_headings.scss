@@ -8,23 +8,23 @@
  * This allows us to apply, say, `class=alpha` to a `h3`; a double-stranded
  * heading hierarchy.
  */
-%fs_-alpha { @include font-size($h1-size, 0);}
-h1, .fs_-alpha { @extend %fs_-alpha;}
+%fs--alpha { @include font-size($h1-size, 0);}
+h1, .fs--alpha { @extend %fs--alpha;}
 
-%fs_-beta { @include font-size($h2-size, 0);}
-h2,.fs_-beta { @extend %fs_-beta;}
+%fs--beta { @include font-size($h2-size, 0);}
+h2,.fs--beta { @extend %fs--beta;}
 
-%fs_-gamma { @include font-size($h3-size, 0);}
-h3,.fs_-gamma { @extend %fs_-gamma;}
+%fs--gamma { @include font-size($h3-size, 0);}
+h3,.fs--gamma { @extend %fs--gamma;}
 
-%fs_-delta { @include font-size($h4-size, 0);}
-h4,.fs_-delta { @extend %fs_-delta;}
+%fs--delta { @include font-size($h4-size, 0);}
+h4,.fs--delta { @extend %fs--delta;}
 
-%fs_-epsilon { @include font-size($h5-size, 0);}
-h5,.fs_-epsilon { @extend %fs_-epsilon;}
+%fs--epsilon { @include font-size($h5-size, 0);}
+h5,.fs--epsilon { @extend %fs--epsilon;}
 
-%fs_-zeta { @include font-size($h6-size, 0);}
-h6,.fs_-zeta { @extend %fs_-zeta;}
+%fs--zeta { @include font-size($h6-size, 0);}
+h6,.fs--zeta { @extend %fs--zeta;}
 
 
 
@@ -34,11 +34,11 @@ h6,.fs_-zeta { @extend %fs_-zeta;}
  * A series of classes for setting massive type; for use in heroes, mastheads,
  * promos, etc.
  */
-%fs_-giga { @include font-size($giga-size, 0);}
-.fs_-giga { @extend %fs_-giga;}
+%fs--giga { @include font-size($giga-size, 0);}
+.fs--giga { @extend %fs--giga;}
 
-%fs_-mega { @include font-size($mega-size, 0);}
-.fs_-mega { @extend %fs_-mega;}
+%fs--mega { @include font-size($mega-size, 0);}
+.fs--mega { @extend %fs--mega;}
 
-%fs_-kilo { @include font-size($kilo-size, 0);}
-.fs_-kilo { @extend %fs_-kilo;}
+%fs--kilo { @include font-size($kilo-size, 0);}
+.fs--kilo { @extend %fs--kilo;}

@@ -21,7 +21,7 @@
 }
 
   %menu {
-    @extend %list_-reset;
+    @extend %list--reset;
     display: inline-block;
 
     @include media-query(portable) { display: block;}
@@ -63,7 +63,7 @@
     }
     .menu__item { @extend %menu__item;}
 
-    %menu__item_-current {
+    %menu__item--current {
       & > a {
         &,
         &:hover,
@@ -71,11 +71,11 @@
         &:active { cursor: default;}
       }
     }
-    .menu__item_-current,
-    .menu__item_-current-parent { @extend %menu__item_-current;}
+    .menu__item--current,
+    .menu__item--current-parent { @extend %menu__item--current;}
 
       %menu__sub {
-        @extend %list_-reset;
+        @extend %list--reset;
         @extend %link-transition;
         background-color: #fff;
         max-height: 0;
@@ -140,9 +140,9 @@
 /*------------------------------------*\
     $PRIMARY MENU
 \*------------------------------------*/
-.menu_-primary-container { @extend %menu-container;}
+.menu--primary-container { @extend %menu-container;}
 
-  .menu_-primary { @extend %menu;}
+  .menu--primary { @extend %menu;}
 
 
 

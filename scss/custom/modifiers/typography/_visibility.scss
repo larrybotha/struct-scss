@@ -29,8 +29,8 @@
 @if $responsive {
   @each $state in palm, lap, lap-and-up, portable, desk, desk-wide {
     @include media-query(#{$state}) {
-      .accessibility_-#{$state},
-      .visuallyhidden_-#{$state} {
+      .accessibility--#{$state},
+      .visuallyhidden--#{$state} {
         @include accessibility;
      }
    }

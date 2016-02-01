@@ -24,7 +24,7 @@
 /**
  * For denoting a path-like structure, GitHub style, e.g.:
  *
-   <ol class="nav  breadcrumb_-path">
+   <ol class="nav  breadcrumb--path">
        <li class=breadcrumb__root><a href=#>inuit.css</a></li>
        <li><a href=#>inuit.css</a></li>
        <li><a href=#>partials</a></li>
@@ -32,7 +32,7 @@
    </ol>
  *
  */
-.breadcrumb_-path > li + li:before{
+.breadcrumb--path > li + li:before{
     content:"\002F" "\00A0";
 }
 

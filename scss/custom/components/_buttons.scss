@@ -20,7 +20,7 @@ button { @extend %link-transition;}
   }
 }
 
-.btn_-primary {
+.btn--primary {
   @extend %btn;
   background-color: $clr-primary;
 
