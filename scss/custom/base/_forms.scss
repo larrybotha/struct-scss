@@ -18,6 +18,7 @@ button, input, select, textarea { vertical-align: baseline;}
 
 input, textarea {
   border: 1px solid $base-ui-color;
+  border-radius: 0px;
   height: auto;         // don't apply heights set to inputs
   line-height: normal;  // all browsers must use FF's UA !important for consistency
   padding: .5em;
