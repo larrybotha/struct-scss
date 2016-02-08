@@ -1,6 +1,14 @@
 /*------------------------------------*\
     $MARGIN
 \*------------------------------------*/
+%soft--large         { @include soft--large;}
+%soft--large--top    { @include soft--large--top;}
+%soft--large--right  { @include soft--large--right;}
+%soft--large--bottom { @include soft--large--bottom;}
+%soft--large--left   { @include soft--large--left;}
+%soft--large--ends   { @include soft--large--ends;}
+%soft--large--sides  { @include soft--large--sides;}
+
 %push                { @include push;}
 %push--top           { @include push--top;}
 %push--right         { @include push--right;}

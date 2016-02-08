@@ -16,7 +16,8 @@
  * Including the relevant mixin will then allow you to override the properties in
  * your media query.
  */
-$mp-small: .5;
+$mp-large: .5;
+$mp-small: $mp-large;
 
 
 
@@ -25,6 +26,14 @@ $mp-small: .5;
 /*------------------------------------*\
     $MARGIN
 \*------------------------------------*/
+@mixin push--large          { @include px-and-rem(margin,        $base-spacing-unit - $mp-large);}
+@mixin push--large--top     { @include px-and-rem(margin-top,    $base-spacing-unit - $mp-large);}
+@mixin push--large--right   { @include px-and-rem(margin-right,  $base-spacing-unit - $mp-large);}
+@mixin push--large--bottom  { @include px-and-rem(margin-bottom, $base-spacing-unit - $mp-large);}
+@mixin push--large--left    { @include px-and-rem(margin-left,   $base-spacing-unit - $mp-large);}
+@mixin push--large--ends    { @include px-and-rem(margin-top,    $base-spacing-unit - $mp-large); @include px-and-rem(margin-bottom, $base-spacing-unit - $mp-large);}
+@mixin push--large--sides   { @include px-and-rem(margin-right,  $base-spacing-unit - $mp-large); @include px-and-rem(margin-left, $base-spacing-unit - $mp-large);}
+
 @mixin push           { @include px-and-rem(margin,        $base-spacing-unit);}
 @mixin push--top      { @include px-and-rem(margin-top,    $base-spacing-unit);}
 @mixin push--right    { @include px-and-rem(margin-right,  $base-spacing-unit);}
@@ -57,6 +66,14 @@ $mp-small: .5;
 /*------------------------------------*\
     $PADDING
 \*------------------------------------*/
+@mixin soft--large          { @include px-and-rem(margin,        $base-spacing-unit - $mp-large);}
+@mixin soft--large--top     { @include px-and-rem(margin-top,    $base-spacing-unit - $mp-large);}
+@mixin soft--large--right   { @include px-and-rem(margin-right,  $base-spacing-unit - $mp-large);}
+@mixin soft--large--bottom  { @include px-and-rem(margin-bottom, $base-spacing-unit - $mp-large);}
+@mixin soft--large--left    { @include px-and-rem(margin-left,   $base-spacing-unit - $mp-large);}
+@mixin soft--large--ends    { @include px-and-rem(margin-top,    $base-spacing-unit - $mp-large); @include px-and-rem(margin-bottom, $base-spacing-unit - $mp-large);}
+@mixin soft--large--sides   { @include px-and-rem(margin-right,  $base-spacing-unit - $mp-large); @include px-and-rem(margin-left, $base-spacing-unit - $mp-large);}
+
 @mixin soft           { @include px-and-rem(padding,        $base-spacing-unit);}
 @mixin soft--top      { @include px-and-rem(padding-top,    $base-spacing-unit);}
 @mixin soft--right    { @include px-and-rem(padding-right,  $base-spacing-unit);}
