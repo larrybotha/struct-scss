@@ -22,7 +22,14 @@
 	}
 }
 
-%flex-video-widescreen:before { padding-bottom: 57.25%; /* 16:9; */}
-%flex-video-vimeo { padding-top: 0;}
+%flex-video--widescreen {
+  @extend %flex-video;
+
+  &:before { padding-bottom: 57.25%; /* 16:9; */}
+}
+%flex-video--vimeo {
+  @extend %flex-video;
+  padding-top: 0;
+}
 
 }//endif
