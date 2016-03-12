@@ -7,10 +7,7 @@ textarea { resize: vertical;}
 
 button, input, select, textarea { vertical-align: baseline;}
 
-input, input[type='search'], textarea {
-	-webkit-appearance: none;
-  border-radius: 0;
-}
+input, input[type='search'], textarea { border-radius: 0;}
 
 input, textarea {
   border: 1px solid;
