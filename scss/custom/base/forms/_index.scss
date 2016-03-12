@@ -19,8 +19,8 @@ input, textarea {
   padding: .5em;
 }
 
-input[type="password"] { letter-spacing: .3em;}
-input[type="password"]::placeholder{ letter-spacing: 0;}
+input[type="radio"],
+input[type="checkbox"] { width: auto;}
 
 input[type="checkbox"],
 input[type="radio"] { margin-bottom: 0;}
