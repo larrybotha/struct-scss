@@ -7,9 +7,13 @@ textarea { resize: vertical;}
 
 button, input, select, textarea { vertical-align: baseline;}
 
+input, input[type='search'], textarea {
+	-webkit-appearance: none;
+  border-radius: 0;
+}
+
 input, textarea {
   border: 1px solid;
-  border-radius: 0;
   height: auto;         // don't apply heights set to inputs
   line-height: normal;  // all browsers must use FF's UA !important for consistency
   padding: .5em;
