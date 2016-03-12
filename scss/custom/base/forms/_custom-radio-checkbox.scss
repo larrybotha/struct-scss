@@ -1,41 +1,7 @@
 /*------------------------------------*\
-    $FORMS
-\*------------------------------------*/
-/*input:valid, textarea:valid {}
-input:invalid, textarea:invalid {}*/
-@mixin placeholder($clr: $base-ui-color) { color: $clr;}
-
-::-webkit-input-placeholder { @include placeholder();}
-:-moz-placeholder { @include placeholder();}
-:-o-placeholder { @include placeholder();}
-:-ms-placeholder { @include placeholder();}
-
-label { cursor: pointer;}
-
-textarea { resize: vertical;}
-
-button, input, select, textarea { vertical-align: baseline;}
-
-input, textarea {
-  border: 1px solid $base-ui-color;
-  border-radius: 0;
-  height: auto;         // don't apply heights set to inputs
-  line-height: normal;  // all browsers must use FF's UA !important for consistency
-  padding: .5em;
-}
-
-input[type="checkbox"],
-input[type="radio"] { margin-bottom: 0;}
-
-
-
-
-
-@if $use-icons == true {
-
-/*------------------------------------*\
     $CUSTOM RADIOS & CHECKBOXES
 \*------------------------------------*/
+@if $use-icons == true {
 /**
  * $use-icons must be set to true to use custom radios and checkboxes
  *

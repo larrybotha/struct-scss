@@ -1,0 +1,22 @@
+/*------------------------------------*\
+    $FORMS
+\*------------------------------------*/
+label { cursor: pointer;}
+
+textarea { resize: vertical;}
+
+button, input, select, textarea { vertical-align: baseline;}
+
+input, textarea {
+  border: 1px solid $base-ui-color;
+  border-radius: 0;
+  height: auto;         // don't apply heights set to inputs
+  line-height: normal;  // all browsers must use FF's UA !important for consistency
+  padding: .5em;
+}
+
+input[type="password"] { letter-spacing: .3em;}
+input[type="password"]::placeholder{ letter-spacing: 0;}
+
+input[type="checkbox"],
+input[type="radio"] { margin-bottom: 0;}
