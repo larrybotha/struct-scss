@@ -8,7 +8,7 @@ textarea { resize: vertical;}
 button, input, select, textarea { vertical-align: baseline;}
 
 input, textarea {
-  border: 1px solid $base-ui-color;
+  border: 1px solid;
   border-radius: 0;
   height: auto;         // don't apply heights set to inputs
   line-height: normal;  // all browsers must use FF's UA !important for consistency
