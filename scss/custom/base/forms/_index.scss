@@ -22,5 +22,5 @@ input, textarea {
 input[type="radio"],
 input[type="checkbox"] { width: auto;}
 
-input[type="checkbox"],
-input[type="radio"] { margin-bottom: 0;}
+input[type="password"] { letter-spacing: .3em;} // space password to match actual text
+input[type="password"]::placeholder { letter-spacing: 0;}
