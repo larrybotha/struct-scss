@@ -13,9 +13,7 @@
   *{
     &,
     &:before,
-    &:after{
-      @include vendor(box-sizing, border-box);
-    }
+    &:after{ box-sizing: border-box;}
   }
 }
 

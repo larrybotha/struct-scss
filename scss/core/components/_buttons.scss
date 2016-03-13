@@ -23,15 +23,15 @@
 
 %btn {
 	@extend %btn-reset;
-	@include transition(all 150ms ease-in);
 	cursor: pointer;
+  transition: all 150ms ease-in;
 
 	&,
 	&:hover,
 	&:focus { text-decoration: none;}
 
 	&:active,
-	&:focus { @include transition(none);}
+	&:focus { transition: none;}
 
 	&[disabled],
 	&:disabled { cursor: default;}

@@ -2,9 +2,9 @@
     $LINKS
 \*------------------------------------*/
 %link-transition {
-  @include transition(all 150ms ease-in-out);
+  transition: all 150ms ease-in-out;
 
-  &:active { @include transition(none);}
+  &:active { transition: none;}
 }
 
 a {
