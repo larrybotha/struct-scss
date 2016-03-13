@@ -3,7 +3,7 @@
 /*------------------------------------*\
     $BUTTONS
 \*------------------------------------*/
-%btn-reset {
+%btn--reset {
 	position: relative;
 	display: inline-block;
 	background-image: none; // remove gradient from FF on mobile
@@ -22,7 +22,7 @@
 }
 
 %btn {
-	@extend %btn-reset;
+	@extend %btn--reset;
 	cursor: pointer;
   transition: all 150ms ease-in;
 
