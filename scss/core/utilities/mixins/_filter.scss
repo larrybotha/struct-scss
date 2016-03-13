@@ -1,4 +1,0 @@
-@mixin filter($val) {
-	// <filter-function> [<filter-function>]
-	@include prefixer(filter, $val, webkit spec);
-}
