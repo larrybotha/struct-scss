@@ -1,21 +1,6 @@
 /*------------------------------------*\
     $MENU
 \*------------------------------------*/
-/**
- * placeholder for button that toggles menu
- */
-%menu-toggle {
-  display: none;
-
-  &:focus { outline:none;}
-
-  @include media-query(portable) { display: inline-block;}
-}
-.menu-toggle { @extend %menu-toggle;}
-
-/**
- * placeholder for menu container used to hide menus on mobile / tablet
- */
 %menu-container {
   @include media-query(portable) { overflow: hidden;}
 }
@@ -132,20 +117,3 @@
             left: auto;
           }
         }
-
-
-
-
-
-/*------------------------------------*\
-    $PRIMARY MENU
-\*------------------------------------*/
-.menu--primary-container { @extend %menu-container;}
-
-  .menu--primary { @extend %menu;}
-
-
-
-
-
-
