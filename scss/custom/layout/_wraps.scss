@@ -45,6 +45,6 @@ $wrap-widths: (
       @extend %wrap-width;
       @extend %wrap-base;
     }
-    .wrap-width--#{$wrap-name} { @extend %wrap--#{$wrap-name};}
+    .wrap--#{$wrap-name} { @extend %wrap--#{$wrap-name};}
   }
 }
