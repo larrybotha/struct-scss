@@ -24,12 +24,15 @@ $wrap-widths: (
 }
 
 /**
- * Generates placeholders for wrap widths
+ * Generates classes and placeholders for wraps and their widths
  * e.g.
 
   %wrap-width--large { max-width: 1280px;}
+  .wrap--large { ... }
   %wrap-width        { max-width: 960px;}
+  .wrap { ... }
   %wrap-width--small { max-width: 640px;}
+  .wrap--small { ... }
  */
 @each $wrap-name, $wrap-width in $wrap-widths {
   @if $wrap-name == 'base' {
