@@ -2,7 +2,10 @@
     $WRAPS
 \*------------------------------------*/
 $wrap-widths: (
+  large: 1200px,
   base: 1100px,
+  small: 840px,
+  smaller: 720px,
 );
 
 %wrap-margin {
@@ -21,15 +24,12 @@ $wrap-widths: (
 }
 
 /**
- * Generates placeholders and classes for wraps andtheir widths
+ * Generates placeholders for wrap widths
  * e.g.
 
   %wrap-width--large { max-width: 1280px;}
-  .wrap--large { ... }
   %wrap-width        { max-width: 960px;}
-  .wrap { ... }
   %wrap-width--small { max-width: 640px;}
-  .wrap--small { ... }
  */
 @each $wrap-name, $wrap-width in $wrap-widths {
   @if $wrap-name == 'base' {
@@ -42,7 +42,7 @@ $wrap-widths: (
   } @else {
     %wrap-width--#{$wrap-name} { max-width: $wrap-width;}
     %wrap--#{$wrap-name} {
-      @extend %wrap-width;
+      @extend %wrap-width--#{$wrap-name};
       @extend %wrap-base;
     }
     .wrap--#{$wrap-name} { @extend %wrap--#{$wrap-name};}
