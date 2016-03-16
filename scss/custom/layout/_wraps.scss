@@ -2,24 +2,8 @@
     $WRAPS
 \*------------------------------------*/
 $wrap-widths: (
-  base: 1280px
+  base: 1100px,
 );
-
-/**
- * Generates placeholders for wrap widths
- * e.g.
-
-  %wrap-width--large { max-width: 1280px;}
-  %wrap-width        { max-width: 960px;}
-  %wrap-width--small { max-width: 640px;}
- */
-@each $wrap-name, $wrap-width in $wrap-widths {
-  @if $wrap-name == 'base' {
-    %wrap-width { max-width: $wrap-width;}
-  } @else {
-    %wrap-width--#{$wrap-name} { max-width: $wrap-width;}
-  }
-}
 
 %wrap-margin {
   margin-right: auto;
@@ -36,8 +20,28 @@ $wrap-widths: (
   @extend %wrap-padding;
 }
 
-%wrap {
-  @extend %wrap-base;
-  @extend %wrap-width;
+/**
+ * Generates placeholders for wrap widths
+ * e.g.
+
+  %wrap-width--large { max-width: 1280px;}
+  %wrap-width        { max-width: 960px;}
+  %wrap-width--small { max-width: 640px;}
+ */
+@each $wrap-name, $wrap-width in $wrap-widths {
+  @if $wrap-name == 'base' {
+    %wrap-width { max-width: $wrap-width;}
+    %wrap {
+      @extend %wrap-width;
+      @extend %wrap-base;
+    }
+    .wrap { @extend %wrap;}
+  } @else {
+    %wrap-width--#{$wrap-name} { max-width: $wrap-width;}
+    %wrap--#{$wrap-name} {
+      @extend %wrap-width;
+      @extend %wrap-base;
+    }
+    .wrap-width--#{$wrap-name} { @extend %wrap--#{$wrap-name};}
+  }
 }
-.wrap { @extend %wrap;}
