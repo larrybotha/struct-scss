@@ -33,6 +33,7 @@
  * Grid wrapper
  */
 %grid {
+  font-size: 0;
   list-style: none;
   margin-bottom: 0;
   @include px-and-rem(margin-left, -$grid-gutter);
@@ -62,6 +63,7 @@
    * grid items
    */
   %grid__item {
+    font-size: $base-dont-size;
     @include px-and-rem(padding-left, $grid-gutter);
 
     @if $use-legacy-grid {
