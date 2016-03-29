@@ -11,7 +11,9 @@ a {
   @extend %link--transition;
   @extend %fc--primary;
   text-decoration: none;
-  outline: 0;
+
+  &,
+  &:hover { outline: 0;}
 
   &:visited {}
 }
