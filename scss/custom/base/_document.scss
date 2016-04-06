@@ -48,13 +48,8 @@ html, body, button, input, select, textarea {
   // @extend %fix-fatty-fonts;
 }
 
-/**
- * Fix IE8 not showing extended headers and footers when overflowing horizontally
- */
 body {
   // @extend %sticky-footer;
-
-  .ie8 & { display: table;}
 }
 
 
