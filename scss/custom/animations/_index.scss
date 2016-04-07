@@ -1,17 +1,17 @@
 /*------------------------------------*\
     $ANIMATIONS
 \*------------------------------------*/
-// @keyframes fade-in--up {
+// @keyframes fade-in--down {
 //   0% {
 //     opacity: 0;
-//     @include transform(translateY(20px));
+//     transform: translateY(-20px);
 //   }
 
 //   100% {
 //     opacity: 1;
-//     @include transform(translateY(0));
+//     transform: translateY(0);
 //   }
 // }
 
-// %anim-fade-in--up { @include animation(fade-in--up .5s);}
-// .anim-fade-in--up { @extend %anim-fade-in--up;}
+// %anim-fade-in--down { animation: fade-in--down .5s;}
+// .anim-fade-in--down { @extend %anim-fade-in--down;}
