@@ -4,10 +4,9 @@
 i { font-style: normal;}
 
 blockquote {
-  border-left: 1px solid $base-ui-color;
   font-style: italic;
-  @include px-and-rem(margin, 1.5);
-  @include px-and-rem(padding, .25 1.5);
+  @include font-size($h3-size);
+  @include soft;
 }
 
 kbd {
