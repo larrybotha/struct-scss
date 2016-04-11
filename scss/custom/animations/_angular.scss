@@ -1,7 +1,7 @@
 /*------------------------------------*\
     $ANGULAR ANIMATIONS
 \*------------------------------------*/
-%ngAnim-fade-in--down {
+%ngAnim-fade-in--from-top {
 	@extend %link-transition;
 	@include transform(translate3d(0,0,0));
 
@@ -27,8 +27,8 @@
 		opacity: 1;
 	}
 }
-span%ngAnim-fade-in--down {
-	@extend %ngAnim-fade-in--down;
+span%ngAnim-fade-in--from-top {
+	@extend %ngAnim-fade-in--from-top;
 	@extend %link-transition;
   display: inline-block;
 
@@ -51,13 +51,13 @@ span%ngAnim-fade-in--down {
 	&.ng-hide-remove-active
 	{ @include transform(translate3d(0,0,0));}
 }
-.ngAnim-fade-in--down { @extend %ngAnim-fade-in--down;}
+.ngAnim-fade-in--from-top { @extend %ngAnim-fade-in--from-top;}
 
 
 /**
  * slide-in from left
  */
-%ngAnim-slide-in--right {
+%ngAnim-slide-in--from-left {
 	@include transition(all 300ms ease-in-out);
 
 	// ngIf
@@ -82,8 +82,8 @@ span%ngAnim-fade-in--down {
 		.ie9 & { -ms-transform: translateX(0);}
 	}
 }
-span%ngAnim-slide-in--right { display: inline-block;}
-.ngAnim-slide-in--right { @extend %ngAnim-slide-in--right;}
+span%ngAnim-slide-in--from-left { display: inline-block;}
+.ngAnim-slide-in--from-left { @extend %ngAnim-slide-in--from-left;}
 
 
 /**
