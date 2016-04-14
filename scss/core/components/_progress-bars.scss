@@ -4,46 +4,42 @@
     $PROGRESS BARS
 \*------------------------------------*/
 .progress {
+  background-color: #f9f9f9;
 	height: $base-spacing-unit;
+  overflow: hidden;
 	@include px-and-rem(margin-bottom, $base-spacing-unit);
-	overflow: hidden;
-	background-color: #f9f9f9;
 }
 
   .progress__bar {
+    background-color: $clr-primary;
+    box-sizing: border-box;
+    text-align: center;
+    transition: width .6s ease;
     width: 0;
     @include px-and-rem(height, $base-spacing-unit);
-    text-align: center;
-    background-color: $clr-primary;
-    @include box-sizing(border-box);
-    @include transition(width .6s ease);
   }
 
   .progress--anim > .progress__bar {
-    @include animation(progress-bar-stripes 2s linear infinite);
+    animation: progress-bar-stripes 2s linear infinite;
   }
 
   .progress__bar--striped {
     background-color: $clr-primary;
-    @include gradient(background-image, linear-gradient(
-                                          -45deg,
-                                          hsla(0, 0%, 100%, .15) 25%,
-                                          transparent 25%,
-                                          transparent 50%,
-                                          hsla(0, 0%, 100%, .15) 50%,
-                                          hsla(0, 0%, 100%, .15) 75%,
-                                          transparent 75%,
-                                          transparent)
+    background-image: linear-gradient(
+                        -45deg,
+                        hsla(0, 0%, 100%, .15) 25%,
+                        transparent 25%,
+                        transparent 50%,
+                        hsla(0, 0%, 100%, .15) 50%,
+                        hsla(0, 0%, 100%, .15) 75%,
+                        transparent 75%,
+                        transparent
     );
 
-    @include background-size(40px 40px);
+    background-size: 40px 40px;
   }
 
-
-
-
-
-@include keyframes(progress-bar-stripes) {
+@keyframes progress-bar-stripes {
 	0% { background-position: 40px 0;}
 	100% { background-position: 0 0;}
 }
