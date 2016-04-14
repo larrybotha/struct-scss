@@ -16,7 +16,7 @@
  *
  */
 .marginalia{
-    @include font-size($milli-size);
+    @include font-size($fs-milli);
 }
 
 /**
