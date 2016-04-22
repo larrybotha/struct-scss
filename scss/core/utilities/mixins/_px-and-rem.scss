@@ -35,6 +35,19 @@
 //  padding: 1rem 2% 1.5em;
 // }
 
+// Example 3:
+//
+// $fs-base: 16px;
+//
+// .padding { @include px-and-rem(padding, 16px);}
+//
+// becomes
+//
+// .padding {
+//  padding: 16px;
+//  padding: 1rem;
+// }
+
 @function fix8_get_px_and_rem_val($val) {
   $output: ();
 
@@ -49,7 +62,7 @@
     } @else if unitless($val) {
       $output: join($val * $fs-base, $val + rem);
     } @else if str-index(''+$val, 'px') != '' {
-      $output: join($val, $val/$fs-base + rem);
+      $output: join($val, $val / $fs-base + rem);
     } @else {
       $output: join($val, $val);
     }
