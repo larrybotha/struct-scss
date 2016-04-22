@@ -48,6 +48,8 @@
       $output: join(0, 0);
     } @else if unitless($val) {
       $output: join($val * $fs-base, $val + rem);
+    } @else if str-index(''+$val, 'px') != '' {
+      $output: join($val, $val/$fs-base + rem);
     } @else {
       $output: join($val, $val);
     }
