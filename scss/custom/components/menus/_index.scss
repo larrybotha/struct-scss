@@ -62,7 +62,7 @@
 
       %menu__sub {
         @extend %list--reset;
-        @extend %link-transition;
+        @extend %link--transition;
         background-color: #fff;
         max-height: 0;
         overflow: hidden;
