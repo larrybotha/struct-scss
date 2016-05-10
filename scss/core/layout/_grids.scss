@@ -46,8 +46,8 @@
   }
 
   @if $use-flexbox-grid {
-    @include display(flex);
-    @include flex-wrap(wrap);
+    display: flex;
+    flex-wrap: wrap;
   }
 }
 
@@ -90,7 +90,7 @@
   .g--tall {
     @extend %grid__item;
 
-    @if $use-flexbox-grid { @include display(flex);}
+    @if $use-flexbox-grid { display: flex;}
   }
 
   /**
@@ -109,7 +109,7 @@
       .oldie & { display: table-cell;}
     }
 
-    @if $use-flexbox-grid { @include flex(1);}
+    @if $use-flexbox-grid { flex: 1;}
   }
 
   /**
@@ -145,7 +145,7 @@
     }
   }
 
-  @if $use-flexbox-grid { @include flex-direction(row-reverse);}
+  @if $use-flexbox-grid { flex-direction: row-reverse;}
 
   & > %grid__item {
     @if $use-legacy-grid {
@@ -180,7 +180,7 @@
     .oldie & { text-align: center;}
   }
 
-  @if $use-flexbox-grid { @include justify-content(center);}
+  @if $use-flexbox-grid { justify-content: center;}
 
   & > %grid__item {
     @if $use-legacy-grid {
@@ -200,7 +200,7 @@
     .oldie & { text-align: right;}
   }
 
-  @if $use-flexbox-grid { @include justify-content(flex-end);}
+  @if $use-flexbox-grid { justify-content: flex-end;}
 
   & > %grid__item {
     @if $use-legacy-grid {
@@ -216,7 +216,7 @@
 %gw--middle {
   @extend %grid;
 
-  @if $use-flexbox-grid { @include align-items(center);}
+  @if $use-flexbox-grid { align-items: center;}
 
   & > %grid__item {
     @if $use-legacy-grid {
@@ -232,7 +232,7 @@
 %gw--bottom {
   @extend %grid;
 
-  @if $use-flexbox-grid { @include align-items(flex-end);}
+  @if $use-flexbox-grid { align-items: flex-end;}
 
   & > %grid__item {
     @if $use-legacy-grid {

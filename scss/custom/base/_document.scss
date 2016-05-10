@@ -23,8 +23,8 @@
  * requires flex: 1 0 auto; on primary content
  */
 %sticky-footer {
-  @include display(flex);
-  @include flex-direction(column);
+  display: flex;
+  flex-direction: column;
   min-height: 100vh;
 
   /**
