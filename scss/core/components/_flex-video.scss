@@ -8,9 +8,9 @@
  */
 %flex-video {
   @extend %ratio-object;
-	padding-top: 25px;
+  padding-top: 25px;
 
-  &:before { padding-bottom: 67.5%; /* 4:3; */}
+  &:before { padding-bottom: percentage(3/4); /* 4:3; */}
 
   & iframe,
   & object,
@@ -24,8 +24,9 @@
 
 %flex-video--widescreen {
   @extend %flex-video;
+  padding-top: 0;
 
-  &:before { padding-bottom: 57.25%; /* 16:9; */}
+  &:before { padding-bottom: percentage(9/16); /* 16:9; */}
 }
 %flex-video--vimeo {
   @extend %flex-video;
