@@ -16,10 +16,10 @@
   & object,
   & embed,
   & video {
-		@extend %ratio-object__inner;
-		width: 100%;
-		height: 100%;
-	}
+    @extend %ratio-object__inner;
+    width: 100%;
+    height: 100%;
+  }
 }
 
 %flex-video--widescreen {
