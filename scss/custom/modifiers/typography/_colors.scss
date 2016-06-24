@@ -4,21 +4,19 @@
 %fc--base { color: $clr-base;}
 a%fc--base,
 button%fc--base {
-  @extend %fc--base;
-
-  &:hover,
-  &:focus { color: $clr-base-lt;}
-
-  &:active { color: $clr-base-dk;}
+  @include fc--link-states(
+    $clr-base,
+    $clr-base-lt,
+    $clr-base-dk
+  );
 }
 
 %fc--primary { color: $clr-primary;}
 a%fc--primary,
 button%fc--primary {
-  @extend %fc--primary;
-
-  &:hover,
-  &:focus { color: $clr-primary-lt;}
-
-  &:active { color: $clr-primary-dk;}
+  @include fc--link-states(
+    $clr-primary,
+    $clr-primary-lt,
+    $clr-primary-dk
+  );
 }
