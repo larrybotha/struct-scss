@@ -1,0 +1,12 @@
+/*------------------------------------*\
+    $WRAP MIXINS
+\*------------------------------------*/
+@mixin wrap-margin {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@mixin wrap-padding {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}

@@ -18,8 +18,8 @@ $wrap-widths: (
 }
 
 %wrap-base {
-  @extend %wrap-margin;
-  @extend %wrap-padding;
+  @include wrap-margin;
+  @include wrap-padding;
 }
 
 /**
