@@ -1,18 +1,18 @@
 /*------------------------------------*\
     $ISLANDS
 \*------------------------------------*/
-$island-pad: 5.5;
+$island-pad: 5.5rem;
 
-// @mixin island--large--top { @include px-and-rem(padding-top, $island-pad-large);}
-// @mixin island--large--bottom { @include px-and-rem(padding-bottom, $island-pad-large);}
+// @mixin island--large--top { padding-top: $island-pad-large;}
+// @mixin island--large--bottom { padding-bottom: $island-pad-large;}
 
 // @mixin island--large {
 //   @include island--large--top;
 //   @include island--large--bottom;
 // }
 
-@mixin island--top { @include px-and-rem(padding-top, $island-pad);}
-@mixin island--bottom { @include px-and-rem(padding-bottom, $island-pad);}
+@mixin island--top { padding-top: $island-pad;}
+@mixin island--bottom { padding-bottom: $island-pad;}
 
 @mixin island {
   @include island--top;
