@@ -1,9 +1,6 @@
 /*------------------------------------*\
     $BACKGROUND COLORS
 \*------------------------------------*/
-%bgc--primary-dk { @include bgc--primary-dk}
-.bgc--primary-dk { @extend %bgc--primary-dk;}
-%bgc--primary    { @include bgc--primary}
-.bgc--primary    { @extend %bgc--primary;}
-%bgc--primary-lt { @include bgc--primary-lt}
-.bgc--primary-lt { @extend %bgc--primary-lt;}
+.bgc--primary-dk { background-color: $clr-primary-dk;}
+.bgc--primary    { background-color: $clr-primary;}
+.bgc--primary-lt { background-color: $clr-primary-lt;}
