@@ -1,0 +1,11 @@
+/*------------------------------------*\
+    $BACKGROUND LINK STATES MIXIN
+\*------------------------------------*/
+@mixin bgc--link-states($base-clr, $hover-clr, $active-clr) {
+  background-color: $base-clr;
+
+  &:hover,
+  &:focus { background-color: $hover-clr;}
+
+  &:active { background-color: $active-clr;}
+}

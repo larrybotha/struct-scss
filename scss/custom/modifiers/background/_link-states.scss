@@ -3,10 +3,9 @@
 \*------------------------------------*/
 a%bgc--primary,
 button%bgc--primary {
-  @include bgc--primary;
-
-  &:hover,
-  &:focus { @include bgc--primary-lt;}
-
-  &:active { @include bgc--primary-dk;}
+  @include bgc--link-states(
+    $clr-primary,
+    $clr-primary-lt,
+    $clr-primary-dk
+  );
 }
