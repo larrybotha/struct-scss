@@ -7,12 +7,12 @@
 /*
  * inline svg icons
  */
-%icon {
-  width: 1em;
-  height: 1em;
+%inline-svg-icon {
+  color: currentColor;
   display: inline-block;
   fill: currentColor;
-  color: currentColor;
+  height: 1em;
+  width: 1em;
 }
 
 }//endif
