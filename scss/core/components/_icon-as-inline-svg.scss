@@ -1,0 +1,19 @@
+@if $use-icon-as-inline-svg {
+
+/*------------------------------------*\
+    $ICONS
+\*------------------------------------*/
+
+/*
+ * inline svg icons
+ */
+%icon {
+  width: 1em;
+  height: 1em;
+  display: inline-block;
+  fill: currentColor;
+  color: currentColor;
+}
+
+}//endif
+
