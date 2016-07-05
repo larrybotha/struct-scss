@@ -8,20 +8,23 @@
  * inline svg icons
 
   i.icon
-    svg
-      use(xlink:href="my-icon-id")
+    i.icon__inner
+      svg
+        use(xlink:href="my-icon-id")
 
  */
-%inline-svg-icon {
-  display: inline-block;
+%inline-svg-icon { display: inline-block;}
 
-  & svg {
-    color: currentColor;
-    display: block;
-    fill: currentColor;
-    height: 1em;
-    width: 1em;
+  %inline-svg-icon__inner {
+    display: inline;
+
+    & svg {
+      color: currentColor;
+      display: block;
+      fill: currentColor;
+      height: 1em;
+      width: 1em;
+    }
   }
-}
 
 }//endif
