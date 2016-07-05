@@ -6,14 +6,22 @@
 
 /*
  * inline svg icons
+
+    i.icon
+      svg
+        use(xlink:href="my-icon-id")
+
  */
 %inline-svg-icon {
-  color: currentColor;
   display: inline-block;
-  fill: currentColor;
-  height: 1em;
-  width: 1em;
+
+  & svg {
+    color: currentColor;
+    display: block;
+    fill: currentColor;
+    height: 1em;
+    width: 1em;
+  }
 }
 
 }//endif
-
