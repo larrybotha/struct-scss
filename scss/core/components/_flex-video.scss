@@ -15,12 +15,14 @@
   & iframe,
   & object,
   & embed,
-  & video {
+  & video { @extend %flex-video__inner;}
+}
+
+  %flex-video__inner {
     @extend %ratio-object__inner;
     width: 100%;
     height: 100%;
   }
-}
 
 %flex-video--widescreen {
   @extend %flex-video;
