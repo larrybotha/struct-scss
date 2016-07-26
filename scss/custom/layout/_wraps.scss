@@ -7,16 +7,6 @@ $wrap-widths: (
   small: 720px,
 );
 
-%wrap-margin {
-  margin-right: auto;
-  margin-left: auto;
-}
-
-%wrap-padding {
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
-}
-
 %wrap-base {
   @include wrap-margin;
   @include wrap-padding;
