@@ -1,21 +1,6 @@
 /*------------------------------------*\
     $MARGIN AND PADDING
 \*------------------------------------*/
-/**
- * these mixins shouldn't need to be used directly except for in the placeholders
- * defined in _layouts.scss
- *
- * prefer extending those placeholders from your selectors over including these mixins
- *
- * this will reduce duplication of the same properties over your stylesheets, while
- * allowing you to reuse consistent spacing across your stylesheets
- *
- * situations on when to rather use an include is if you need to override margin or
- * padding in a media query when the placeholder has been extended. Due to source
- * order, you will not always be able to override the placeholders.
- * Including the relevant mixin will then allow you to override the properties in
- * your media query.
- */
 $marpad-larger: px-to-rem($base-spacing-unit * $fs-base * 1.5);
 $marpad-large: px-to-rem($base-spacing-unit * $fs-base * 1.25);
 $marpad-base: px-to-rem($base-spacing-unit * $fs-base);
