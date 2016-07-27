@@ -16,8 +16,11 @@
  * Including the relevant mixin will then allow you to override the properties in
  * your media query.
  */
-$mp-large: .5;
-$mp-small: $mp-large;
+$marpad-larger: px-to-rem($base-spacing-unit * $fs-base * 1.5);
+$marpad-large: px-to-rem($base-spacing-unit * $fs-base * 1.25);
+$marpad-base: px-to-rem($base-spacing-unit * $fs-base);
+$marpad-small: px-to-rem($base-spacing-unit * $fs-base * .75);
+$marpad-smaller: px-to-rem($base-spacing-unit * $fs-base * .5);
 
 
 
@@ -26,29 +29,45 @@ $mp-small: $mp-large;
 /*------------------------------------*\
     $MARGIN
 \*------------------------------------*/
-@mixin push--large          { @include px-and-rem(margin,        $base-spacing-unit + $mp-large);}
-@mixin push--large--top     { @include px-and-rem(margin-top,    $base-spacing-unit + $mp-large);}
-@mixin push--large--right   { @include px-and-rem(margin-right,  $base-spacing-unit + $mp-large);}
-@mixin push--large--bottom  { @include px-and-rem(margin-bottom, $base-spacing-unit + $mp-large);}
-@mixin push--large--left    { @include px-and-rem(margin-left,   $base-spacing-unit + $mp-large);}
-@mixin push--large--ends    { @include px-and-rem(margin-top,    $base-spacing-unit + $mp-large); @include px-and-rem(margin-bottom, $base-spacing-unit + $mp-large);}
-@mixin push--large--sides   { @include px-and-rem(margin-right,  $base-spacing-unit + $mp-large); @include px-and-rem(margin-left, $base-spacing-unit + $mp-large);}
+@mixin push--larger          { margin       : $marpad-larger;}
+@mixin push--larger--top     { margin-top   : $marpad-larger;}
+@mixin push--larger--right   { margin-right : $marpad-larger;}
+@mixin push--larger--bottom  { margin-bottom: $marpad-larger;}
+@mixin push--larger--left    { margin-left  : $marpad-larger;}
+@mixin push--larger--ends    { margin-top   : $marpad-larger; margin-bottom: $marpad-larger;}
+@mixin push--larger--sides   { margin-right : $marpad-larger; margin-left: $marpad-larger;}
 
-@mixin push           { @include px-and-rem(margin,        $base-spacing-unit);}
-@mixin push--top      { @include px-and-rem(margin-top,    $base-spacing-unit);}
-@mixin push--right    { @include px-and-rem(margin-right,  $base-spacing-unit);}
-@mixin push--bottom   { @include px-and-rem(margin-bottom, $base-spacing-unit);}
-@mixin push--left     { @include px-and-rem(margin-left,   $base-spacing-unit);}
-@mixin push--ends     { @include px-and-rem(margin-top,    $base-spacing-unit); @include px-and-rem(margin-bottom, $base-spacing-unit);}
-@mixin push--sides    { @include px-and-rem(margin-right,  $base-spacing-unit); @include px-and-rem(margin-left,  $base-spacing-unit);}
+@mixin push--large          { margin      : $marpad-large;}
+@mixin push--large--top     { margin-top  : $marpad-large;}
+@mixin push--large--right   { margin-right: $marpad-large;}
+@mixin push--large--bottom  { margin-bottom: $marpad-large;}
+@mixin push--large--left    { margin-left : $marpad-large;}
+@mixin push--large--ends    { margin-top  : $marpad-large; margin-bottom: $marpad-large;}
+@mixin push--large--sides   { margin-right: $marpad-large; margin-left: $marpad-large;}
 
-@mixin push--small          { @include px-and-rem(margin,        $base-spacing-unit - $mp-small);}
-@mixin push--small--top     { @include px-and-rem(margin-top,    $base-spacing-unit - $mp-small);}
-@mixin push--small--right   { @include px-and-rem(margin-right,  $base-spacing-unit - $mp-small);}
-@mixin push--small--bottom  { @include px-and-rem(margin-bottom, $base-spacing-unit - $mp-small);}
-@mixin push--small--left    { @include px-and-rem(margin-left,   $base-spacing-unit - $mp-small);}
-@mixin push--small--ends    { @include px-and-rem(margin-top,    $base-spacing-unit - $mp-small); @include px-and-rem(margin-bottom, $base-spacing-unit - $mp-small);}
-@mixin push--small--sides   { @include px-and-rem(margin-right,  $base-spacing-unit - $mp-small); @include px-and-rem(margin-left, $base-spacing-unit - $mp-small);}
+@mixin push           { margin      : $marpad-base;}
+@mixin push--top      { margin-top  : $marpad-base;}
+@mixin push--right    { margin-right: $marpad-base;}
+@mixin push--bottom   { margin-bottom: $marpad-base;}
+@mixin push--left     { margin-left : $marpad-base;}
+@mixin push--ends     { margin-top  : $marpad-base; margin-bottom: $marpad-base;}
+@mixin push--sides    { margin-right: $marpad-base; margin-left : $marpad-base;}
+
+@mixin push--small         { margin      : $marpad-small;}
+@mixin push--small--top     { margin-top  : $marpad-small;}
+@mixin push--small--right   { margin-right: $marpad-small;}
+@mixin push--small--bottom  { margin-bottom: $marpad-small;}
+@mixin push--small--left    { margin-left : $marpad-small;}
+@mixin push--small--ends    { margin-top  : $marpad-small; margin-bottom: $marpad-small;}
+@mixin push--small--sides   { margin-right: $marpad-small; margin-left: $marpad-small;}
+
+@mixin push--smaller          { margin      : $marpad-smaller;}
+@mixin push--smaller--top     { margin-top  : $marpad-smaller;}
+@mixin push--smaller--right   { margin-right: $marpad-smaller;}
+@mixin push--smaller--bottom  { margin-bottom: $marpad-smaller;}
+@mixin push--smaller--left    { margin-left : $marpad-smaller;}
+@mixin push--smaller--ends    { margin-top  : $marpad-smaller; margin-bottom: $marpad-smaller;}
+@mixin push--smaller--sides   { margin-right: $marpad-smaller; margin-left: $marpad-smaller;}
 
 @mixin flush          { margin:       0;}
 @mixin flush--top     { margin-top:   0;}
@@ -66,29 +85,45 @@ $mp-small: $mp-large;
 /*------------------------------------*\
     $PADDING
 \*------------------------------------*/
-@mixin soft--large          { @include px-and-rem(padding,        $base-spacing-unit + $mp-large);}
-@mixin soft--large--top     { @include px-and-rem(padding-top,    $base-spacing-unit + $mp-large);}
-@mixin soft--large--right   { @include px-and-rem(padding-right,  $base-spacing-unit + $mp-large);}
-@mixin soft--large--bottom  { @include px-and-rem(padding-bottom, $base-spacing-unit + $mp-large);}
-@mixin soft--large--left    { @include px-and-rem(padding-left,   $base-spacing-unit + $mp-large);}
-@mixin soft--large--ends    { @include px-and-rem(padding-top,    $base-spacing-unit + $mp-large); @include px-and-rem(padding-bottom, $base-spacing-unit + $mp-large);}
-@mixin soft--large--sides   { @include px-and-rem(padding-right,  $base-spacing-unit + $mp-large); @include px-and-rem(padding-left, $base-spacing-unit + $mp-large);}
+@mixin soft--larger          { padding      : $marpad-larger;}
+@mixin soft--larger--top     { padding-top  : $marpad-larger;}
+@mixin soft--larger--right   { padding-right: $marpad-larger;}
+@mixin soft--larger--bottom  { padding-bottom: $marpad-larger;}
+@mixin soft--larger--left    { padding-left : $marpad-larger;}
+@mixin soft--larger--ends    { padding-top  : $marpad-larger; padding-bottom: $marpad-larger;}
+@mixin soft--larger--sides   { padding-right: $marpad-larger; padding-left: $marpad-larger;}
 
-@mixin soft           { @include px-and-rem(padding,        $base-spacing-unit);}
-@mixin soft--top      { @include px-and-rem(padding-top,    $base-spacing-unit);}
-@mixin soft--right    { @include px-and-rem(padding-right,  $base-spacing-unit);}
-@mixin soft--bottom   { @include px-and-rem(padding-bottom, $base-spacing-unit);}
-@mixin soft--left     { @include px-and-rem(padding-left,   $base-spacing-unit);}
-@mixin soft--ends     { @include px-and-rem(padding-top,    $base-spacing-unit); @include px-and-rem(padding-bottom, $base-spacing-unit);}
-@mixin soft--sides    { @include px-and-rem(padding-right,  $base-spacing-unit); @include px-and-rem(padding-left,   $base-spacing-unit);}
+@mixin soft--large          { padding       : $marpad-large;}
+@mixin soft--large--top     { padding-top   : $marpad-large;}
+@mixin soft--large--right   { padding-right : $marpad-large;}
+@mixin soft--large--bottom  { padding-bottom: $marpad-large;}
+@mixin soft--large--left    { padding-left  : $marpad-large;}
+@mixin soft--large--ends    { padding-top   : $marpad-large; padding-bottom: $marpad-large;}
+@mixin soft--large--sides   { padding-right : $marpad-large; padding-left: $marpad-large;}
 
-@mixin soft--small           { @include px-and-rem(padding,        $base-spacing-unit - $mp-small);}
-@mixin soft--small--top      { @include px-and-rem(padding-top,    $base-spacing-unit - $mp-small);}
-@mixin soft--small--right    { @include px-and-rem(padding-right,  $base-spacing-unit - $mp-small);}
-@mixin soft--small--bottom   { @include px-and-rem(padding-bottom, $base-spacing-unit - $mp-small);}
-@mixin soft--small--left     { @include px-and-rem(padding-left,   $base-spacing-unit - $mp-small);}
-@mixin soft--small--ends     { @include px-and-rem(padding-top,    $base-spacing-unit - $mp-small); @include px-and-rem(padding-bottom, $base-spacing-unit - $mp-small);}
-@mixin soft--small--sides    { @include px-and-rem(padding-right,  $base-spacing-unit - $mp-small); @include px-and-rem(padding-left,   $base-spacing-unit - $mp-small);}
+@mixin soft           { padding       : $marpad-base;}
+@mixin soft--top      { padding-top   : $marpad-base;}
+@mixin soft--right    { padding-right : $marpad-base;}
+@mixin soft--bottom   { padding-bottom: $marpad-base;}
+@mixin soft--left     { padding-left  : $marpad-base;}
+@mixin soft--ends     { padding-top   : $marpad-base; padding-bottom: $marpad-base;}
+@mixin soft--sides    { padding-right : $marpad-base; padding-left  : $marpad-base;}
+
+@mixin soft--small           { padding      : $marpad-small;}
+@mixin soft--small--top      { padding-top  : $marpad-small;}
+@mixin soft--small--right    { padding-right: $marpad-small;}
+@mixin soft--small--bottom   { padding-bottom: $marpad-small;}
+@mixin soft--small--left     { padding-left : $marpad-small;}
+@mixin soft--small--ends     { padding-top  : $marpad-small; padding-bottom: $marpad-small;}
+@mixin soft--small--sides    { padding-right: $marpad-small; padding-left  : $marpad-small;}
+
+@mixin soft--smaller           { padding      : $marpad-smaller;}
+@mixin soft--smaller--top      { padding-top  : $marpad-smaller;}
+@mixin soft--smaller--right    { padding-right: $marpad-smaller;}
+@mixin soft--smaller--bottom   { padding-bottom: $marpad-smaller;}
+@mixin soft--smaller--left     { padding-left : $marpad-smaller;}
+@mixin soft--smaller--ends     { padding-top  : $marpad-smaller; padding-bottom: $marpad-smaller;}
+@mixin soft--smaller--sides    { padding-right: $marpad-smaller; padding-left  : $marpad-smaller;}
 
 @mixin hard           { padding:       0;}
 @mixin hard--top      { padding-top:   0;}
