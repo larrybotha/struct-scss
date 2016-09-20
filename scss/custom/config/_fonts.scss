@@ -1,0 +1,32 @@
+/*------------------------------------*\
+    FONTS
+\*------------------------------------*/
+/**
+ * Icon Font
+ *
+ * Dependant on $use-icons being true. These variables are used in the font-face mixin.
+ *
+ * This font is enabled via custom/base/_fonts.scss
+ */
+$font-icon          : "base-icon-font";
+$font-icon-path     : "../fnt/base-icon-font";
+$font-icon-filename : "base-icon-font";
+$font-icon-stack    : $font-icon;
+
+
+/**
+ * Base Font Face
+ *
+ * This font is enabled via custom/base/_fonts.scss
+ */
+$font-base          : "[font-name]";
+$font-base-path     : "../fnt/[font-folder]";
+$font-base-filename : "[font-file-name-without-extension]";
+$font-base-stack    : $font-base, Arial, sans-serif;
+
+/**
+ * Base Font Variations
+ */
+$font-base-filename-i  : "[italic-font-file-name-without-extension]"; // italic
+$font-base-filename-b  : "[bold-font-file-name-without-extension]"; // bold
+$font-base-filename-bi : "[bold-italic-font-file-name-without-extension]"; // bold-italic

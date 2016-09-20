@@ -1,0 +1,44 @@
+/*------------------------------------*\
+    COMPONENTS
+\*------------------------------------*/
+/**
+ * All of this framework's objects and abstractions are initially turned off by
+ * default. This means that you start any project with as little as possible,
+ * and introducing objects and abstractions is as simple as switching the
+ * following variables to `true`.
+ */
+$use-arrows:             false;
+$use-beautons:           false;
+$use-block-list:         false;
+$use-breadcrumb:         false;
+$use-columns:            false;
+$use-flex-video:         false;
+$use-flyout:             false;
+$use-greybox:            false;
+$use-grids:              true;
+$use-icon-text:          false;
+$use-link-complex:       false;
+$use-lozenges:           false;
+$use-marginalia:         false;
+$use-matrix:             false;
+$use-media:              false;
+$use-nav:                false;
+$use-options:            false;
+$use-pagination:         false;
+$use-rules:              false;
+$use-split:              false;
+$use-sprite:             false;
+$use-stats:              false;
+$use-this-or-this:       false;
+
+$use-alerts:             false;
+$use-buttons:            true; // use either these, or beautons, but not both
+$use-ckeditor:           false;
+$use-forms-affixes:      false;
+$use-icon-as-font:       false;
+$use-icon-as-inline-svg: false;
+$use-print:              false;
+$use-progress-bars:      false;
+$use-ratio-object:       false;
+$use-vertical-center:    false;
+$use-tinymce:            false;

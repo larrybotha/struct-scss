@@ -1,0 +1,67 @@
+/*------------------------------------*\
+    COLORS
+\*------------------------------------*/
+$base-ui-color: #666;
+$brand-color: #333;
+$selection-color: $brand-color;
+
+
+
+
+
+/**
+ * The base color for text, borders, etc.
+ */
+$clr-base      : $base-ui-color;
+$clr-base-lt   : lighten($clr-base, 20%);
+$clr-base-ltr  : lighten($clr-base, 35%);
+$clr-base-ltst : lighten($clr-base, 40%);
+$clr-base-dk   : darken($clr-base, 10%);
+
+/**
+ * The primary non-base color
+ */
+$clr-primary      : $brand-color;
+$clr-primary-lt   : lighten($clr-primary, 20%);
+$clr-primary-ltr  : lighten($clr-primary, 35%);
+$clr-primary-ltst : lighten($clr-primary, 40%);
+$clr-primary-dk   : darken($clr-primary, 10%);
+
+// neutrals
+$clr-ntrl-min : #fff;                          // white
+$clr-ntrl-10  : darken($clr-ntrl-min, 10%);
+$clr-ntrl-20  : darken($clr-ntrl-min, 20%);
+$clr-ntrl-50  : darken($clr-ntrl-min, 50%);
+$clr-ntrl-80  : darken($clr-ntrl-min, 80%);
+$clr-ntrl-90  : darken($clr-ntrl-min, 90%);
+$clr-ntrl-max : darken($clr-ntrl-min, 100%);   // black
+
+// success colours
+$clr-success      : #468847;
+$clr-success-lt   : lighten($clr-success, 20%);
+$clr-success-ltr  : lighten($clr-success, 45%);
+$clr-success-ltst : lighten($clr-success, 50%);
+$clr-success-dk   : darken($clr-success, 10%);
+
+// warning colours
+$clr-warning       : #c09853;
+$clr-warning-lt    : lighten($clr-warning, 20%);
+$clr-warning-ltr   : lighten($clr-warning, 35%);
+$clr-warning-ltst  : lighten($clr-warning, 40%);
+$clr-warning-dk    : darken($clr-warning, 10%);
+
+// danger / error / important colours
+$clr-danger      : #b94a48;
+$clr-danger-lt   : lighten($clr-danger, 20%);
+$clr-danger-ltr  : lighten($clr-danger, 35%);
+$clr-danger-ltst : lighten($clr-danger, 40%);
+$clr-danger-dk   : darken($clr-danger, 10%);
+
+// info colours
+$clr-info      : #3a87ad;
+$clr-info-lt   : lighten($clr-info, 20%);
+$clr-info-ltr  : lighten($clr-info, 40%);
+$clr-info-ltst : lighten($clr-info, 45%);
+$clr-info-dk   : darken($clr-info, 10%);
+
+
