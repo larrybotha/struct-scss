@@ -1,7 +1,7 @@
 /*------------------------------------*\
     $ISLAND MIXINS
 \*------------------------------------*/
-$island-pad: px-to-rem(86);
+$island-pad: px-to-rem($base-spacing-unit * $fs-base * 4);
 
 // @mixin island--large--top { padding-top: $island-pad-large;}
 // @mixin island--large--bottom { padding-bottom: $island-pad-large;}
