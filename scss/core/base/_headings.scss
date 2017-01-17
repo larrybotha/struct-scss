@@ -8,23 +8,12 @@
  * This allows us to apply, say, `class=fs--h1` to a `h3`; a double-stranded
  * heading hierarchy.
  */
-%fs--h1 { @include font-size($fs-h1);}
-h1, .fs--h1 { @extend %fs--h1;}
-
-%fs--h2 { @include font-size($fs-h2);}
-h2, .fs--h2 { @extend %fs--h2;}
-
-%fs--h3 { @include font-size($fs-h3);}
-h3, .fs--h3 { @extend %fs--h3;}
-
-%fs--h4 { @include font-size($fs-h4);}
-h4, .fs--h4 { @extend %fs--h4;}
-
-%fs--h5 { @include font-size($fs-h5);}
-h5, .fs--h5 { @extend %fs--h5;}
-
-%fs--h6 { @include font-size($fs-h6);}
-h6, .fs--h6 { @extend %fs--h6;}
+h1, .fs--h1 { font-size: px-to-rem($fs-h1);}
+h2, .fs--h2 { font-size: px-to-rem($fs-h2);}
+h3, .fs--h3 { font-size: px-to-rem($fs-h3);}
+h4, .fs--h4 { font-size: px-to-rem($fs-h4);}
+h5, .fs--h5 { font-size: px-to-rem($fs-h5);}
+h6, .fs--h6 { font-size: px-to-rem($fs-h6);}
 
 
 
@@ -34,11 +23,6 @@ h6, .fs--h6 { @extend %fs--h6;}
  * A series of classes for setting massive type; for use in heroes, mastheads,
  * promos, etc.
  */
-%fs--giga { @include font-size($fs-giga);}
-.fs--giga { @extend %fs--giga;}
-
-%fs--mega { @include font-size($fs-mega);}
-.fs--mega { @extend %fs--mega;}
-
-%fs--kilo { @include font-size($fs-kilo);}
-.fs--kilo { @extend %fs--kilo;}
+.fs--giga { font-size: px-to-rem($fs-giga);}
+.fs--mega { font-size: px-to-rem($fs-mega);}
+.fs--kilo { font-size: px-to-rem($fs-kilo);}

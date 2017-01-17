@@ -9,7 +9,7 @@
  * generate these arbitrarily with a mixin, `@arrow()`.
  */
 
-$arrow-size:            $half-spacing-unit!default;
+$arrow-size:            $base-spacing-unit / 2!default;
 $arrow-border:          1!default;
 $border:                $arrow-size;
 $arrow:                 $arrow-size - $arrow-border;
@@ -18,20 +18,20 @@ $arrow:                 $arrow-size - $arrow-border;
  * Forms the basis for any/all CSS arrows.
  */
 %arrow{
-    position:relative;
+  position:relative;
 
-    &:before,
-    &:after{
-        content:"";
-        position:absolute;
-        border-collapse:separate;
-    }
-    &:before{
-        border:$border solid transparent;
-    }
-    &:after{
-        border:$arrow solid transparent;
-    }
+  &:before,
+  &:after{
+    content:"";
+    position:absolute;
+    border-collapse:separate;
+  }
+  &:before{
+    border:$border solid transparent;
+  }
+  &:after{
+    border:$arrow solid transparent;
+  }
 }
 
 
@@ -39,109 +39,109 @@ $arrow:                 $arrow-size - $arrow-border;
  * Define individual edges so we can combine what we need, when we need.
  */
 %arrow--top{
-    @extend %arrow;
+  @extend %arrow;
 
-    &:before,
-    &:after{
-        bottom:100%;
-    }
+  &:before,
+  &:after{
+    bottom:100%;
+  }
 }
 
 %arrow--upper{
-    @extend %arrow;
+  @extend %arrow;
 
-    &:before{
-        top:$arrow;
-    }
-    &:after{
-        top:$border;
-    }
+  &:before{
+    top:$arrow;
+  }
+  &:after{
+    top:$border;
+  }
 }
 
 %arrow--middle{
-    @extend %arrow;
+  @extend %arrow;
 
-    &:before,
-    &:after{
-        top:50%;
-        margin-top:-$border;
-    }
-    &:after{
-        margin-top:-$arrow;
-    }
+  &:before,
+  &:after{
+    top:50%;
+    margin-top:-$border;
+  }
+  &:after{
+    margin-top:-$arrow;
+  }
 }
 
 %arrow--lower{
-    @extend %arrow;
+  @extend %arrow;
 
-    &:before{
-        bottom:$arrow;
-    }
-    &:after{
-        bottom:$border;
-    }
+  &:before{
+    bottom:$arrow;
+  }
+  &:after{
+    bottom:$border;
+  }
 }
 
 %arrow--bottom{
-    @extend %arrow;
+  @extend %arrow;
 
-    &:before,
-    &:after{
-        top:100%;
-    }
+  &:before,
+  &:after{
+    top:100%;
+  }
 }
 
 %arrow--near{
-    @extend %arrow;
+  @extend %arrow;
 
-    &:before,
-    &:after{
-        right:100%;
-    }
+  &:before,
+  &:after{
+    right:100%;
+  }
 }
 
 %arrow--left{
-    @extend %arrow;
+  @extend %arrow;
 
-    &:before{
-        left:$arrow;
-    }
-    &:after{
-        left:$border;
-    }
+  &:before{
+    left:$arrow;
+  }
+  &:after{
+    left:$border;
+  }
 }
 
 %arrow--center{
-    @extend %arrow;
+  @extend %arrow;
 
-    &:before,
-    &:after{
-        left:50%;
-        margin-left:-$border;
-    }
-    &:after{
-        margin-left:-$arrow;
-    }
+  &:before,
+  &:after{
+    left:50%;
+    margin-left:-$border;
+  }
+  &:after{
+    margin-left:-$arrow;
+  }
 }
 
 %arrow--right{
-    @extend %arrow;
+  @extend %arrow;
 
-    &:before{
-        right:$arrow;
-    }
-    &:after{
-        right:$border;
-    }
+  &:before{
+    right:$arrow;
+  }
+  &:after{
+    right:$border;
+  }
 }
 
 %arrow--far{
-    @extend %arrow;
+  @extend %arrow;
 
-    &:before,
-    &:after{
-        left:100%;
-    }
+  &:before,
+  &:after{
+    left:100%;
+  }
 }
 
 }//endif

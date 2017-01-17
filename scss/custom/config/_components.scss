@@ -20,7 +20,6 @@ $use-icon-text:          false;
 $use-link-complex:       false;
 $use-lozenges:           false;
 $use-marginalia:         false;
-$use-matrix:             false;
 $use-media:              false;
 $use-nav:                false;
 $use-options:            false;
@@ -29,10 +28,9 @@ $use-rules:              false;
 $use-split:              false;
 $use-sprite:             false;
 $use-stats:              false;
-$use-this-or-this:       false;
 
 $use-alerts:             false;
-$use-buttons:            true; // use either these, or beautons, but not both
+$use-buttons:            true;
 $use-ckeditor:           false;
 $use-forms-affixes:      false;
 $use-icon-as-font:       false;
