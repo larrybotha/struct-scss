@@ -11,7 +11,6 @@ input, input[type='search'], textarea { border-radius: 0;}
 
 input, textarea {
   border: 1px solid;
-  display: block;
   height: auto;         // don't apply heights set to inputs
   line-height: normal;  // all browsers must use FF's UA !important for consistency
   padding: .5em;
