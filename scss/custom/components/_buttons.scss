@@ -24,8 +24,8 @@ button { @extend %link--transition;}
   @extend %btn;
 
   @include bgc--link-states(
-    $clr-primary-ltr,
-    $clr-primary-ltr,
-    $clr-primary-primary
+    $clr-primary,
+    $clr-primary-lt,
+    $clr-primary-dk
   );
 }
