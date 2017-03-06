@@ -16,7 +16,7 @@ table,
 fieldset,figure,
 pre {
 	margin-top: 0;
-  margin-bottom: px-to-rem($base-spacing-unit);
+  margin-bottom: px-to-rem($fs-base * $base-spacing-unit);
 }
 
 
@@ -25,7 +25,7 @@ pre {
  * `hr` elements only take up a few pixels, so we need to give them special
  * treatment regarding vertical rhythm.
  */
-hr { margin-bottom: px-to-rem($base-spacing-unit);}
+hr { margin-bottom: px-to-rem($fs-base * $base-spacing-unit);}
 
 
 /**
