@@ -22,10 +22,10 @@ button { @extend %link--transition;}
 
 .btn--primary {
   @extend %btn;
-  background-color: $clr-primary;
 
-  &:hover,
-  &:focus { background-color: $clr-primary-lt;}
-
-  &:active { background-color: $clr-primary-dk;}
+  @include bgc--link-states(
+    $clr-primary-ltr,
+    $clr-primary-ltr,
+    $clr-primary-primary
+  );
 }
