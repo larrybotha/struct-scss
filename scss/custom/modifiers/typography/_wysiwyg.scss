@@ -10,9 +10,9 @@
     $TINYMCE
 \*------------------------------------*/
 @if $use-tinymce {
-.align_left    { @extend %text--left;}
-.align_center  { @extend %text--center;}
-.align_right   { @extend %text--right;}
+.align_left    { text-align: left;}
+.align_center  { text-align: center;}
+.align_right   { text-align: right;}
 
 img.align_left {
   float:left;
@@ -40,9 +40,9 @@ img.align_center {
     $CKEDITOR
 \*------------------------------------*/
 @if $use-ckeditor {
-.align_left    { @extend %text--left;}
-.align_center  { @extend %text--center;}
-.align_right   { @extend %text--right;}
+.align_left    { text-align: left;}
+.align_center  { text-align: center;}
+.align_right   { text-align: right;}
 
 img.align_left {
   float:left;
@@ -61,4 +61,5 @@ img.align_center {
   margin: 0 auto;
 }
 }
+
 
