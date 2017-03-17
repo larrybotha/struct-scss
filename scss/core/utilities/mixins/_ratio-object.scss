@@ -1,0 +1,27 @@
+/*------------------------------------*\
+    $RATIO OBJECT
+\*------------------------------------*/
+/**
+ * An object which scales proportionately
+ *
+ * http://bit.ly/19I8iR8
+ */
+%ratio-object {
+  position: relative;
+  overflow: hidden;
+
+  &:before {
+    content: "";
+    display: block;
+    // extend this with padding-bottom:; in your styles as per your object's required
+    // ratio
+  }
+}
+
+  %ratio-object__inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
