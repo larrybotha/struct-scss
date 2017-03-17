@@ -7,21 +7,6 @@
 
 
 /*------------------------------------*\
-    $ICON FONT
-\*------------------------------------*/
-@include font-face(
-  $font-icon,
-  $font-icon-filename,
-  $font-icon-path,
-  $weight: normal,
-  $style: normal
-);
-
-
-
-
-
-/*------------------------------------*\
     $BASE FONT
 \*------------------------------------*/
 @include font-face(
@@ -55,3 +40,19 @@
     $weight: bold,
     $style: italic
   );
+
+
+
+
+
+/*------------------------------------*\
+    $ALTERNATE FONT
+\*------------------------------------*/
+@include font-face(
+  $font-alt,
+  $font-alt-filename,
+  $font-alt-path,
+  $weight: normal,
+  $style: normal
+);
+
