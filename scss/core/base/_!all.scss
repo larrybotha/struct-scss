@@ -3,7 +3,8 @@
 \*------------------------------------*/
 @import "reset";
 
-@import "normalize"; // normalize.css
+// includePaths: ['node_modules/normalize.css']
+@import "normalize";
 
 @import "document";
 
