@@ -14,7 +14,9 @@ conf = require '../gulpconfig'
 gulp.task 'css', () ->
   gulp.src(["./scss/**/*.{scss,sass}"])
     .pipe sourcemaps.init()
-    .pipe(sass().on('error', sass.logError))
+    .pipe(sass({
+      includePaths: ['node_modules/normalize.css']
+    }).on('error', sass.logError))
     .pipe autoprefixer({browsers: ['last 2 versions']})
     .pipe sourcemaps.write()
     .pipe gulp.dest("#{conf.path.dist}")
