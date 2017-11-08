@@ -1,58 +1,6 @@
 /*------------------------------------*\
     $VENDOR STYLES
 \*------------------------------------*/
-$use-autocomplete:  false!default;
-$use-datepicker:    false!default;
-$use-file-upload:   false!default;
-$use-tooltips:      false!default;
-$use-wysiwyg:       false!default;
+// vendor styles here
 
-
-
-
-
-/*------------------------------------*\
-    $AUTOCOMPLETE
-\*------------------------------------*/
-@import "autocomplete";
-
-
-
-
-
-/*------------------------------------*\
-    $DATEPICKER
-\*------------------------------------*/
-@import "datepicker";
-
-
-
-
-
-/*------------------------------------*\
-    $FILE UPLOAD
-\*------------------------------------*/
-@import "file-upload";
-
-
-
-
-
-/*------------------------------------*\
-    $TOOLTIPS
-\*------------------------------------*/
-@import "tooltips";
-
-
-
-
-
-/*------------------------------------*\
-    $WYSIWYG
-\*------------------------------------*/
-@import "wysiwyg";
-
-
-
-
-
+@import "overrides/!all";

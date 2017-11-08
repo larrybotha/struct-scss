@@ -6,8 +6,8 @@
 }
 
   %menu {
-    @extend %list--reset;
     display: inline-block;
+    @include f8-list--reset;
 
     @include media-query(portable) { display: block;}
   }
@@ -61,12 +61,12 @@
     .menu__item--current-parent { @extend %menu__item--current;}
 
       %menu__sub {
-        @extend %list--reset;
-        @extend %link--transition;
         background-color: #fff;
         max-height: 0;
         overflow: hidden;
         position: absolute;
+        @include f8-list--reset;
+        @include link--transition;
 
         a:hover + &,
         &:hover {

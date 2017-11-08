@@ -1,13 +1,10 @@
-@if $use-icon-as-font {
-
 /*------------------------------------*\
     $ICONS
 \*------------------------------------*/
-
 /*
  * Styling inspired by FontAwesome - http://mopo.ws/ReAOC6
  */
-%font-icon {
+@mixin f8-font-icon {
   display: inline-block;
   text-decoration: inherit;
 
@@ -19,6 +16,3 @@
     text-decoration: inherit;
   }
 }
-
-}//endif
-

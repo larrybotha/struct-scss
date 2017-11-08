@@ -1,88 +1,12 @@
 /*------------------------------------*\
-    CUSTOM.CSS
+    CUSTOM STYLES
 \*------------------------------------*/
-
-
-
-
-
-/*------------------------------------*\
-    $UTILITIES
-\*------------------------------------*/
+// order matters
 @import "utilities/!all";
-
-
-
-
-
-/*------------------------------------*\
-    $BASE
-\*------------------------------------*/
 @import "base/!all";
-
-
-
-
-
-/*------------------------------------*\
-    $COMPONENTS
-\*------------------------------------*/
 @import "components/!all";
-
-
-
-
-
-/*------------------------------------*\
-    $PAGES
-\*------------------------------------*/
 @import "pages/!all";
-
-
-
-
-
-/*------------------------------------*\
-    $VENDOR
-\*------------------------------------*/
 @import "vendor/!all";
-
-
-
-
-
-/*------------------------------------*\
-    $MODIFIERS
-\*------------------------------------*/
-/**
- * modifieres must come last that classes can be applied directly
- * to markup to override styles
- */
 @import "modifiers/!all";
-
-
-
-
-
-/*------------------------------------*\
-    $LAYOUT
-\*------------------------------------*/
-/**
- * layout, as with modifier, must come last that classes can be applied directly
- * to markup as modifiers
- */
 @import "layout/!all";
-
-
-
-
-
-/*------------------------------------*\
-    $ANIMATIONS
-\*------------------------------------*/
 @import "animations/!all";
-
-
-
-
-

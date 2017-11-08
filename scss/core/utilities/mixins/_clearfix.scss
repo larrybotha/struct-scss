@@ -6,7 +6,7 @@
  * Extend the clearfix class with Sass to avoid the `.cf` class appearing over
  * and over in your markup.
  */
-%cf {
+@mixin clearfix {
 	&:before,
 	&:after {
 		content:"";
@@ -14,5 +14,3 @@
 		clear:both;
 	}
 }
-
-.cf { @extend %cf;}

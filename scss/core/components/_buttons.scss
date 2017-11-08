@@ -1,28 +1,26 @@
-@if $use-buttons == true {
-
 /*------------------------------------*\
     $BUTTONS
 \*------------------------------------*/
-%btn--reset {
-	position: relative;
-	display: inline-block;
+@mixin f8-btn--reset {
 	background-image: none; // remove gradient from FF on mobile
 	background-color: transparent;
-	text-align: center;
-	line-height: normal; // let's make all browsers match FF's !important
-	vertical-align: middle;
+  border: 0;
+  display: inline-block;
 	height: auto; // ensure heights set on inputs do not affect submit buttons
+  line-height: normal; // let's make all browsers match FF's !important
 	margin: 0;
 	padding: 0;
-	border: 0;
+  position: relative;
+  text-align: center;
+  vertical-align: middle;
 	white-space: nowrap;
 
 	&:active,
-	&:focus { outline:none;}
+	&:focus { outline: none;}
 }
 
-%btn {
-	@extend %btn--reset;
+@mixin f8-btn {
+	@include f8-btn--reset;
 	cursor: pointer;
   transition: all 150ms ease-in;
 
@@ -37,7 +35,7 @@
 	&:disabled { cursor: default;}
 }
 
-%btn--selected {
+@mixin f8-btn--selected {
   cursor: default;
 
   &:hover,
@@ -47,5 +45,3 @@
     background-color: inherit;
   }
 }
-
-}//endif

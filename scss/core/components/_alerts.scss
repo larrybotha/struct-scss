@@ -1,13 +1,9 @@
-@if $use-alerts {
-
 /*------------------------------------*\
     $ALERTS
 \*------------------------------------*/
-%alert {
+@mixin f8-alert {
   border: 1px solid;
   @include px-and-rem(padding, $base-spacing-unit);
-
-  .alert__heading { color: inherit;}
 
   & a {
     border-bottom-style: dotted;
@@ -26,7 +22,7 @@
   & ul:last-child { margin-bottom: 0;}
 }
 
-  .alert__close {
+  @mixin f8-alert__close {
     background-color: transparent;
     background-image: none;
     border: 0;
@@ -47,4 +43,3 @@
     &:hover,
     &:focus { color: hsla(0, 0%, 0%, .4);}
   }
-}//endif

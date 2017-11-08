@@ -1,9 +1,6 @@
-@if $use-icon-as-inline-svg {
 /*------------------------------------*\
     $ICONS
 \*------------------------------------*/
-.icon { @extend %inline-svg-icon;}
+.icon { @include f8-inline-svg-icon;}
 
-  .icon__inner { @extend %inline-svg-icon__inner;}
-
-}//endif
+  .icon__inner { @include f8-inline-svg-icon__inner;}

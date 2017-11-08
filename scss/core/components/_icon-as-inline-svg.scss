@@ -1,7 +1,5 @@
-@if $use-icon-as-inline-svg {
-
 /*------------------------------------*\
-    $ICONS
+    $INLINE SVG ICONS
 \*------------------------------------*/
 
 /*
@@ -13,9 +11,9 @@
         use(xlink:href="my-icon-id")
 
  */
-%inline-svg-icon { display: inline-block;}
+@mixin f8-inline-svg-icon { display: inline-block;}
 
-  %inline-svg-icon__inner {
+  @mixin f8-inline-svg-icon__inner {
     display: inline;
 
     & svg {
@@ -26,5 +24,3 @@
       width: 1em;
     }
   }
-
-}//endif

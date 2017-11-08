@@ -1,38 +1,27 @@
-@if $use-flex-video == true {
-
 /*------------------------------------*\
     $FLEX VIDEO
 \*------------------------------------*/
-/**
- * Requires $use-ratio-object to be true
- */
-%flex-video {
-  @extend %ratio-object;
+@mixin f8-flex-video {
+  @include ratio-object(percentage(3/4));
   padding-top: 25px;
-
-  &:before { padding-bottom: percentage(3/4); /* 4:3; */}
 
   & iframe,
   & object,
   & embed,
-  & video { @extend %flex-video__inner;}
+  & video { @include f8-flex-video__inner;}
 }
 
-  %flex-video__inner {
-    @extend %ratio-object__inner;
+  @mixin f8-flex-video__inner {
+    @include ratio-object__inner;
     width: 100%;
     height: 100%;
   }
 
-%flex-video--widescreen {
-  @extend %flex-video;
+@mixin f8-flex-video--widescreen {
   padding-top: 0;
 
   &:before { padding-bottom: percentage(9/16); /* 16:9; */}
 }
-%flex-video--vimeo {
-  @extend %flex-video;
+@mixin f8-flex-video--vimeo {
   padding-top: 0;
 }
-
-}//endif

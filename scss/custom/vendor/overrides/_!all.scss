@@ -1,8 +1,4 @@
-@if $use-wysiwyg == true {
-
 /*------------------------------------*\
-    $WYSIWYG
+    $VENDOR STYLE OVERRIDES
 \*------------------------------------*/
-
-}//endif
-
+@import "wysiwyg";

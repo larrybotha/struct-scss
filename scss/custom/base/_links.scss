@@ -1,14 +1,8 @@
 /*------------------------------------*\
     $LINKS
 \*------------------------------------*/
-%link--transition {
-  transition: all 150ms ease-in-out;
-
-  &:active { transition: none;}
-}
-
 a {
-  @extend %link--transition;
+  @include link--transition;
   @extend %fc--primary;
   text-decoration: none;
 

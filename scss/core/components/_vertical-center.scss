@@ -1,5 +1,3 @@
-@if $use-vertical-center == true {
-
 /*------------------------------------*\
     $VERTICAL CENTER OBJECT
 \*------------------------------------*/
@@ -8,16 +6,13 @@
  *
  * http://www.hughlashbrooke.com/two-methods-for-vertical-centering-in-css/
  */
-%vertical-center-object {
+@mixin f8-vertical-center {
 	display: table;
 	width: 100%;
 	height: 100%; // can be any value
 }
 
-  %vertical-center-object__inner {
+  @mixin f8-vertical-center__inner {
 		display: table-cell;
 		vertical-align: middle;
   }
-
-}//endif
-

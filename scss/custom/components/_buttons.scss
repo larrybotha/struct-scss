@@ -1,11 +1,11 @@
 /*------------------------------------*\
     $BUTTONS
 \*------------------------------------*/
-button { @extend %link--transition;}
+button { @include link--transition;}
 
 %btn {
-  @extend %btn !optional;
-  @extend %link--transition;
+  @include f8-btn;
+  @include link--transition;
   color: $clr-ntrl-min;
 
   &[disabled],
