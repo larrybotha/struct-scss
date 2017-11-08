@@ -5,6 +5,7 @@
     "update": "./node_modules/.bin/updtr"
   },
   "devDependencies": {
+    "browser-sync": "^2.12.10",
     "coffee-script": "^1.10.0",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.0",
@@ -15,6 +16,6 @@
     "updtr": "^0.1.15"
   },
   "dependencies": {
-    "browser-sync": "^2.12.10"
+    "normalize.css": "^7.0.0"
   }
 }
