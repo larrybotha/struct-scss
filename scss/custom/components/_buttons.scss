@@ -1,11 +1,11 @@
 /*------------------------------------*\
     $BUTTONS
 \*------------------------------------*/
-button { @include link--transition;}
+button { @include u-link-transition;}
 
 %btn {
   @include f8-btn;
-  @include link--transition;
+  @include u-link-transition;
   color: $clr-ntrl-min;
 
   &[disabled],
@@ -23,7 +23,7 @@ button { @include link--transition;}
 .btn--primary {
   @extend %btn;
 
-  @include bgc--link-states(
+  @include u-bgc--link-states(
     $clr-primary,
     $clr-primary-lt,
     $clr-primary-dk

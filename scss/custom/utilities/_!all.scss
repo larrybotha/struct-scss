@@ -1,13 +1,8 @@
 /*------------------------------------*\
-    $FUNCTIONS
+    UTILITIES
 \*------------------------------------*/
-@import 'functions/!all';
-
-
-
-
-
-/*------------------------------------*\
-    $MIXINS
-\*------------------------------------*/
-@import 'mixins/!all';
+@import 'background/!all';
+@import 'display';
+@import 'margin';
+@import 'padding';
+@import 'typography/!all';

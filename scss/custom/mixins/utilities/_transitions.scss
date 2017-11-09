@@ -1,0 +1,8 @@
+/*------------------------------------*\
+    TRANSITION MODIFIERS
+\*------------------------------------*/
+@mixin u-link-transition {
+  transition: all 150ms ease-in-out;
+
+  &:active { transition: none;}
+}

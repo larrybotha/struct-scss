@@ -2,8 +2,12 @@
     $LINKS
 \*------------------------------------*/
 a {
-  @include link--transition;
-  @extend %fc--primary;
+  @include u-link-transition;
+  @include u-fc--link-states(
+    $clr-primary,
+    $clr-primary-lt,
+    $clr-primary-dk
+  );
   text-decoration: none;
 
   &,

@@ -66,7 +66,7 @@
         overflow: hidden;
         position: absolute;
         @include f8-list--reset;
-        @include link--transition;
+        @include u-link-transition;
 
         a:hover + &,
         &:hover {
