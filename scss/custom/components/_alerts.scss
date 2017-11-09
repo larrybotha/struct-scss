@@ -2,9 +2,8 @@
     $ALERTS
 \*------------------------------------*/
 $alert-types: success, danger, error, info;
-$use-alerts: false;
 
-@if $use-alerts {
+@if false {
   @each $alert-type in $alert-types {
     .alert--#{$alert-type} {
       @include f8-alert;
