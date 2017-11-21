@@ -12,8 +12,7 @@
   border: none;
   border-bottom-width: 1px;
   border-bottom-style: solid;
-  margin-bottom: $base-spacing-unit - 1px;
-  margin-bottom: (($base-spacing-unit - 1px) / $fs-base)*1rem;
+  margin-bottom: #{$base-spacing-unit}rem;
 }
 
 

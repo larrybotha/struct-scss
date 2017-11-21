@@ -5,15 +5,15 @@
  * As per: csswizardry.com/2012/02/pragmatic-practical-font-sizing-in-css
  *
  * When we define a heading we also define a corresponding class to go with it.
- * This allows us to apply, say, `class=fs--h1` to a `h3`; a double-stranded
+ * This allows us to apply, say, `class=u-fs--h1` to a `h3`; a double-stranded
  * heading hierarchy.
  */
-h1, .fs--h1 { font-size: px-to-rem($fs-h1);}
-h2, .fs--h2 { font-size: px-to-rem($fs-h2);}
-h3, .fs--h3 { font-size: px-to-rem($fs-h3);}
-h4, .fs--h4 { font-size: px-to-rem($fs-h4);}
-h5, .fs--h5 { font-size: px-to-rem($fs-h5);}
-h6, .fs--h6 { font-size: px-to-rem($fs-h6);}
+h1, .u-fs--h1 { font-size: px-to-rem($fs-h1);}
+h2, .u-fs--h2 { font-size: px-to-rem($fs-h2);}
+h3, .u-fs--h3 { font-size: px-to-rem($fs-h3);}
+h4, .u-fs--h4 { font-size: px-to-rem($fs-h4);}
+h5, .u-fs--h5 { font-size: px-to-rem($fs-h5);}
+h6, .u-fs--h6 { font-size: px-to-rem($fs-h6);}
 
 
 
@@ -23,6 +23,6 @@ h6, .fs--h6 { font-size: px-to-rem($fs-h6);}
  * A series of classes for setting massive type; for use in heroes, mastheads,
  * promos, etc.
  */
-.fs--giga { font-size: px-to-rem($fs-giga);}
-.fs--mega { font-size: px-to-rem($fs-mega);}
-.fs--kilo { font-size: px-to-rem($fs-kilo);}
+.u-fs--giga { font-size: px-to-rem($fs-giga);}
+.u-fs--mega { font-size: px-to-rem($fs-mega);}
+.u-fs--kilo { font-size: px-to-rem($fs-kilo);}
