@@ -5,6 +5,7 @@
 	background-image: none; // remove gradient from FF on mobile
 	background-color: transparent;
   border: 0;
+  border-radius: 0;
   display: inline-block;
 	height: auto; // ensure heights set on inputs do not affect submit buttons
   line-height: normal; // let's make all browsers match FF's !important
