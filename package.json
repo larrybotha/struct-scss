@@ -15,7 +15,7 @@
     "require-dir": "^0.3.0",
     "updtr": "^0.1.15"
   },
-  "dependencies": {
+  "peerDependencies": {
     "normalize.css": "^7.0.0"
   }
 }
