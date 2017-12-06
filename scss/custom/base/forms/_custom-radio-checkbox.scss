@@ -1,7 +1,7 @@
 /*------------------------------------*\
     $CUSTOM RADIOS & CHECKBOXES
 \*------------------------------------*/
-@if $use-icon-as-inline-svg {
+@if false {
 /**
  * $use-icon-as-inline-svg must be set to true to use custom radios and checkboxes
 
@@ -28,7 +28,7 @@
 .custom-check-radio { @extend %custom-check-radio;}
 
   %custom-check-radio__icon {
-    @extend %inline-svg-icon;
+    @include f8-inline-svg-icon;
     transition: opacity .15s ease-in-out;
     vertical-align: top;
   }
@@ -43,7 +43,7 @@
   }
   .custom-check-radio__icon--true { @extend %custom-check-radio__icon--true;}
 
-    %custom-check-radio__icon__inner { @extend %inline-svg-icon__inner;}
+    %custom-check-radio__icon__inner { @include f8-inline-svg-icon__inner;}
     .custom-check-radio__icon__inner { @extend %custom-check-radio__icon__inner;}
 
 input:checked + label %custom-check-radio {
@@ -51,5 +51,4 @@ input:checked + label %custom-check-radio {
     opacity: 1;
   }
 }
-
 } //endif
