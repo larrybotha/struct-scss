@@ -5,19 +5,6 @@
   border: 1px solid;
   @include px-and-rem(padding, $base-spacing-unit);
 
-  & a {
-    border-bottom-style: dotted;
-    border-bottom-width: 1px;
-
-    &:hover,
-    &:focus { border-bottom-style: solid;}
-
-    &,
-    &:hover,
-    &:focus,
-    &:active { color: inherit;}
-  }
-
   & p:last-child,
   & ul:last-child { margin-bottom: 0;}
 }
