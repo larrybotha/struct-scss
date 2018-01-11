@@ -18,6 +18,8 @@ $wrap-widths: (
 }
 
 @mixin wrap-base {
+  display: table;
+  width: 100%;
   @include wrap-margin;
   @include wrap-padding;
 }
