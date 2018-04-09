@@ -1,5 +1,6 @@
 @mixin font-face($font-family, $font-filename, $file-path, $weight: normal, $style: normal ) {
 	@font-face {
+    font-display: optional;
 		font-family: $font-family;
 
 		@if $use-rails {
