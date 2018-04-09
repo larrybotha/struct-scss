@@ -12,7 +12,7 @@
  * breakpoint specific hidden elements.
  */
 @if false {
-  %visuallyhidden {
+  %visually-hidden {
     @include accessibility;
 
     &.focusable:active, &.focusable:focus {
@@ -25,13 +25,13 @@
     }
   }
   .u-accessibility,
-  .u-visuallyhidden { @extend %visuallyhidden;}
+  .u-visually-hidden { @extend %visually-hidden;}
 
   @if $responsive {
     @each $state in palm, lap, lap-and-up, portable, desk, desk-wide {
       @include media-query(#{$state}) {
         .u-accessibility--#{$state},
-        .u-visuallyhidden--#{$state} {
+        .u-visually-hidden--#{$state} {
           @include accessibility;
         }
       }
