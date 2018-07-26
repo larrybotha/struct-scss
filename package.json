@@ -2,20 +2,21 @@
   "name": "styleguide",
   "version": "0.1.0",
   "scripts": {
-    "update": "./node_modules/.bin/updtr"
+    "dev": "gulp",
+    "update": "$(npm bin)/updtr"
   },
   "devDependencies": {
     "browser-sync": "^2.12.10",
-    "coffee-script": "^1.10.0",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.0",
     "gulp-sass": "^3.1.0",
     "gulp-sourcemaps": "^1.6.0",
     "gulp-watch": "^4.3.6",
     "require-dir": "^0.3.0",
-    "updtr": "^0.1.15"
+    "updtr": "^0.1.15",
+    "normalize.css": "^7.0.0"
   },
   "peerDependencies": {
-    "normalize.css": "^7.0.0"
+    "normalize.css": "*"
   }
 }
