@@ -34,12 +34,12 @@ body {
  * These selection declarations have to be separate
  */
 ::-moz-selection {
-  background: $selection-color;
+  background: $clr-selection;
   color: #fff;
   text-shadow: none;
 }
 ::selection {
-  background: $selection-color;
+  background: $clr-selection;
   color: #fff;
   text-shadow: none;
 }

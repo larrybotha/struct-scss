@@ -1,9 +1,9 @@
 /*------------------------------------*\
     COLORS
 \*------------------------------------*/
-$base-ui-color: #666;
-$brand-color: #333;
-$selection-color: $brand-color;
+$clr-base-ui: #666;
+$clr-brand: #333;
+$clr-selection: $clr-brand;
 
 
 
@@ -12,7 +12,7 @@ $selection-color: $brand-color;
 /**
  * The base color for text, borders, etc.
  */
-$clr-base      : $base-ui-color;
+$clr-base      : $clr-base-ui;
 $clr-base-lt   : lighten($clr-base, 20%);
 $clr-base-ltr  : lighten($clr-base, 35%);
 $clr-base-ltst : lighten($clr-base, 40%);
@@ -21,7 +21,7 @@ $clr-base-dk   : darken($clr-base, 10%);
 /**
  * The primary non-base color
  */
-$clr-primary      : $brand-color;
+$clr-primary      : $clr-brand;
 $clr-primary-lt   : lighten($clr-primary, 20%);
 $clr-primary-ltr  : lighten($clr-primary, 35%);
 $clr-primary-ltst : lighten($clr-primary, 40%);

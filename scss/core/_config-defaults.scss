@@ -214,33 +214,6 @@ $close-quote:   null;
 
 
 /*------------------------------------*\
-  $BRAND
-\*------------------------------------*/
-/**
- * Brand stuff
- */
-$brand-color:     #4a8ec2!default;
-$brand-face:    "Helvetica Neue", sans-serif!default;
-
-/**
- * How big would you like round corners to be by default?
- */
-$brand-round:    4px!default;
-
-
-
-
-
-/*------------------------------------*\
-  $COLORS
-\*------------------------------------*/
-$selection-color: $brand-color!default;
-
-
-
-
-
-/*------------------------------------*\
   $OBJECTS AND ABSTRACTIONS
 \*------------------------------------*/
 /**
@@ -250,8 +223,3 @@ $use-grids:              false!default;
 $use-ckeditor:           false!default;
 $use-print:              false!default;
 $use-tinymce:            false!default;
-
-
-
-
-
