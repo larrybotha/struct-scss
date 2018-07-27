@@ -70,7 +70,7 @@
 
         a:hover + &,
         &:hover {
-          border: 1px solid $clr-base-ui;
+          border: 1px solid $clr-base;
           max-height: none;
           overflow: visible;
         }
