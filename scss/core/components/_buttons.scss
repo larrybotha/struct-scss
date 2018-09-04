@@ -19,6 +19,8 @@
 
 	&:active,
 	&:focus { outline: none;}
+
+  &[type="button"] { -webkit-appearance: none;}
 }
 
 @mixin f8-btn {
