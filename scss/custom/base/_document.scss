@@ -17,27 +17,6 @@
 }
 
 /**
- * Use sticky footer:
- * http://philipwalton.github.io/solved-by-flexbox/demos/sticky-footer/
- *
- * requires flex: 1 0 auto; on primary content
- */
-%sticky-footer {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-
-  /**
-   * don't use sticky footer on IE10 >=
-   *
-   * just don't bother
-   */
-  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-    display: block;
-  }
-}
-
-/**
  * Prevent Chrome and Safari from flashing when a user taps on mobile
  */
 @if $responsive {
@@ -48,9 +27,7 @@ html, body, button, input, select, textarea {
   // @extend %fix-fatty-fonts;
 }
 
-body {
-  // @extend %sticky-footer;
-}
+body {}
 
 
 
