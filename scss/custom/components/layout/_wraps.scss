@@ -12,12 +12,12 @@
 @each $wrap-name, $wrap-width in $wrap-widths {
   @if $wrap-name == 'base' {
     .wrap {
-      @include wrap-width($wrap-name)
+      @include wrap-width($wrap-name);
       @include wrap-base;
     }
   } @else {
     .wrap--#{$wrap-name} {
-      @include wrap-width($wrap-name)
+      @include wrap-width($wrap-name);
       @include wrap-base;
     }
   }
