@@ -9,10 +9,10 @@
  * We have a mixin to generate our widths and their breakpoint-specific
  * variations.
  */
+$grid-unit-delimiter: -of-;
+
 @if $grid-use-fractions {
-  $grid-unit-delimiter: \/ !global;
-} @else {
-  $grid-unit-delimiter: -of- !global;
+  $grid-unit-delimiter: \/;
 }
 
 @mixin grid-setup($namespace: "") {
