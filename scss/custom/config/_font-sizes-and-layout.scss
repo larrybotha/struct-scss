@@ -12,7 +12,7 @@
 /**
  * Place any of your own variables that sit on top of core _defaults.scss here.
  */
-$fs-base: px-to-rem(16px);
+// $fs-base: 16px;
 // $base-line-height:  24px;
 // $base-spacing-unit: 1.5;
 
@@ -25,17 +25,17 @@ $fs-base: px-to-rem(16px);
 /*------------------------------------*\
     FONT SIZES
 \*------------------------------------*/
-$fs-giga:  px-to-rem(96px)!default; // .fs--giga
-$fs-mega:  px-to-rem(72px)!default; // .fs--mega
-$fs-kilo:  px-to-rem(48px)!default; // .fs--kilo
+$fs-giga:  96px!default; // .fs--giga
+$fs-mega:  72px!default; // .fs--mega
+$fs-kilo:  48px!default; // .fs--kilo
 
-$fs-h1:    px-to-rem(36px)!default; // .fs--alpha
-$fs-h2:    px-to-rem(30px)!default; // .fs--beta
-$fs-h3:    px-to-rem(24px)!default; // .fs--gamma
-$fs-h4:    px-to-rem(20px)!default; // .fs--delta
-$fs-h5:    px-to-rem(16px)!default; // .fs--epsilon
-$fs-h6:    px-to-rem(14px)!default; // .fs--zeta
+$fs-h1:    36px!default; // .fs--alpha
+$fs-h2:    30px!default; // .fs--beta
+$fs-h3:    24px!default; // .fs--gamma
+$fs-h4:    20px!default; // .fs--delta
+$fs-h5:    16px!default; // .fs--epsilon
+$fs-h6:    14px!default; // .fs--zeta
 
-$fs-milli: px-to-rem(12px)!default; // .fs--milli
-$fs-micro: px-to-rem(10px)!default; // .fs--micro
-$fs-nano:  px-to-rem(8px)!default; // .fs--nano
+$fs-milli: 12px!default; // .fs--milli
+$fs-micro: 10px!default; // .fs--micro
+$fs-nano:   8px!default; // .fs--nano
