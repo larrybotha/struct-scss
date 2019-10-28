@@ -5,7 +5,7 @@ i { font-style: normal;}
 
 blockquote {
   font-style: italic;
-  @include font-size($fs-h3);
+  font-size: $fs-h3;
   @include u-padding;
 }
 

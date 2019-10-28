@@ -28,5 +28,5 @@
   $val: if(unitless($val), $val * 1px, $val);
   $divisor: if(global-variable-exists(fs-base), $fs-base, $root-val);
 
-  @return $val / $divisor + rem;
+  @return $val / $divisor * 1rem;
 }
