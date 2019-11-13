@@ -109,7 +109,10 @@
       .oldie & { display: table-cell;}
     }
 
-    @if $use-flexbox-grid { flex: 1;}
+    @if $use-flexbox-grid {
+      display: flex;
+      flex: 1;
+    }
   }
 
   /**
@@ -128,6 +131,9 @@
     @if $use-legacy-grid {
       .oldie & { display: table-cell;}
     }
+
+
+    @if $use-flexbox-grid { display: flex;}
   }
 
 
