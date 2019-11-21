@@ -110,8 +110,6 @@
     }
 
     @if $use-flexbox-grid {
-      display: flex;
-      flex-direction: column;
       flex: 1;
     }
   }
@@ -134,10 +132,7 @@
     }
 
 
-    @if $use-flexbox-grid {
-      display: flex;
-      flex-direction: column;
-    }
+    @if $use-flexbox-grid {}
   }
 
 
