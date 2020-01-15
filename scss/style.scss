@@ -6,6 +6,7 @@
  * Config is defined before defaults so that variables override their !default
  * counterparts
  */
+@import "custom/variables";
 @import "custom/config";
 @import "core/config-defaults";
 

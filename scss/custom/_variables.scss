@@ -1,0 +1,14 @@
+/**
+ * The path, relative to your built CSS file, where assets are referenced
+ *
+ * Useful when importing style.scss into multiple locations in your project and
+ * paths differ
+ *
+ * e.g. referencing an img from the app, and from a design system
+ * // app/assets/css/style.scss
+ * $assets-path: '..';
+ *
+ * // storybook/assets/style.scss
+ * $assets-path: '../../app/assets
+ */
+$assets-path: '..'!default;
