@@ -5,17 +5,17 @@
 /**
  * $use-icon-as-inline-svg must be set to true to use custom radios and checkboxes
 
-  input[type=[radio|checkbox].visuallyhidden
+  input[type=[radio|checkbox].u-visually-hidden
   label
     i.custom-check-radio
       i.custom-check-radio__icon--false
         i.custom-check-radio__icon__inner
-          svg
-            use(xlink:href="c-icon-checkbox-false")
+          svg[role=image]
+            use(xlink:href="#icon-checkbox-false")
       i.custom-check-radio__icon--true
         i.custom-check-radio__icon__inner
           svg
-            use(xlink:href="c-icon-checkbox-true")
+            use(xlink:href="#icon-checkbox-true")
     | my custom radio's label text
 
  */
