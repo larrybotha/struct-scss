@@ -1,11 +1,11 @@
 /*------------------------------------*\
     $MARGIN AND PADDING
 \*------------------------------------*/
-$marpad-larger: px-to-rem($base-spacing-unit * $fs-base * 1.5);
-$marpad-large: px-to-rem($base-spacing-unit * $fs-base * 1.25);
-$marpad-base: px-to-rem($base-spacing-unit * $fs-base);
-$marpad-small: px-to-rem($base-spacing-unit * $fs-base * .75);
-$marpad-smaller: px-to-rem($base-spacing-unit * $fs-base * .5);
+$marpad-larger: px-to-rem($spacing-scalar * $fs-base * 1.5);
+$marpad-large: px-to-rem($spacing-scalar * $fs-base * 1.25);
+$marpad-base: px-to-rem($spacing-scalar * $fs-base);
+$marpad-small: px-to-rem($spacing-scalar * $fs-base * .75);
+$marpad-smaller: px-to-rem($spacing-scalar * $fs-base * .5);
 
 
 

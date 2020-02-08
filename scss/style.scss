@@ -1,30 +1,5 @@
 @charset "UTF-8";
 
-/**
- * Config
- *
- * Config is defined before defaults so that variables override their !default
- * counterparts
- */
-@import "custom/variables";
-@import "custom/config";
-@import "core/config-defaults";
-
-
-
-
-
-/**
- * Import the rest of the framework, followed by custom styles
- */
-@import "core/imports";
-@import "custom/imports";
-
-
-
-
-
-/**
- * import print styles
- */
-@import "core/print";
+@import "support";
+@import "global";
+@import "custom/app";

@@ -1,0 +1,25 @@
+@mixin font-face($user-options) {
+  $default-options: (weight: normal, style: normal);
+  $options: map-merge($default-options, $user-options);
+  $family: map-get($options, 'family');
+  $file-path: map-get($options, 'file-path');
+  $filename: map-get($options, 'file-name');
+  $weight: map-get($options, 'weight');
+  $style: map-get($options, 'style');
+
+	@font-face {
+    font-display: optional;
+		font-family: $family;
+
+		@if $use-rails {
+			src: font-url('#{$file-path}/#{$filename}.woff2') format('woff2'),
+				font-url('#{$file-path}/#{$filename}.woff') format('woff'),
+		} @else {
+			src: url('#{$file-path}/#{$filename}.woff2') format('woff2'),
+				url('#{$file-path}/#{$filename}.woff') format('woff'),
+		}
+
+		font-weight: $weight;
+		font-style: $style;
+	}
+}

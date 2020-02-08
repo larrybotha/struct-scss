@@ -1,0 +1,16 @@
+/*------------------------------------*\
+    CLEARFIX
+\*------------------------------------*/
+/**
+ * Micro clearfix, as per: css-101.org/articles/clearfix/latest-new-clearfix-so-far.php
+ * Include the clearfix in your class with Sass to avoid the `.cf` class appearing over
+ * and over in your markup.
+ */
+@mixin clearfix {
+	&:before,
+	&:after {
+		content:"";
+		display:table;
+		clear:both;
+	}
+}

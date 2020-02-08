@@ -1,0 +1,32 @@
+/*------------------------------------*\
+    $ALERTS
+\*------------------------------------*/
+@mixin f8-alert {
+  border: 1px solid;
+  @include px-to-rem(padding, $spacing-scalar * $fs-base);
+
+  & p:last-child,
+  & ul:last-child { margin-bottom: 0;}
+}
+
+  @mixin f8-alert__close {
+    background-color: transparent;
+    background-image: none;
+    border: 0;
+    color: hsla(0, 0%, 0%, .2);
+    cursor: pointer;
+    display: inline-block;
+    font-size: 1em;
+    font-weight: bold;
+    line-height: normal;
+    outline: 0;
+    padding: .5em;
+    position: absolute;
+    right: 1.5em;
+    text-align: center;
+    top: 1em;
+    transition: .15s ease-in-out;
+
+    &:hover,
+    &:focus { color: hsla(0, 0%, 0%, .4);}
+  }

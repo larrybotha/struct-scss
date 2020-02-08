@@ -1,0 +1,17 @@
+/*------------------------------------*\
+    PATH VARIABLES
+\*------------------------------------*/
+/**
+ * The path, relative to your built CSS file, where asset are referenced
+ *
+ * Useful when importing style.scss into multiple locations in your project and
+ * paths differ
+ *
+ * e.g. referencing an img from the app, and from a design system
+ * // app/asset/css/style.scss
+ * $asset-path: '..';
+ *
+ * // storybook/asset/style.scss
+ * $asset-path: '../../app/asset
+ */
+$asset-path: '..'!default;

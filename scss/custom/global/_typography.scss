@@ -1,0 +1,23 @@
+/*------------------------------------*\
+    TYPOGRAPHY
+\*------------------------------------*/
+i { font-style: normal;}
+
+blockquote {
+  font-style: italic;
+  @include font-size($fs-h3);
+  @include u-padding;
+}
+
+kbd {
+  border: 1px solid;
+  border-radius: 2px;
+  font-size: 85%;
+  padding: .25em .5em;
+  vertical-align: middle;
+}
+
+hr {
+  border: 0;
+  border-bottom: 1px solid;
+}

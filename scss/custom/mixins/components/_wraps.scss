@@ -1,0 +1,40 @@
+/*------------------------------------*\
+    WRAP MIXINS
+\*------------------------------------*/
+$wrap-widths: (
+  large: 1200px,
+  base: 960px,
+  small: 720px,
+);
+
+@mixin wrap-margin {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@mixin wrap-padding {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+@mixin wrap-base {
+  display: table;
+  width: 100%;
+  @include wrap-margin;
+  @include wrap-padding;
+}
+
+@mixin wrap-width($name){
+  $has-key: map-has-key($wrap-widths, $name);
+
+  @if $has-key == true {
+    max-width: map-get($wrap-widths, $name);
+  } @else {
+    @error "no key #{$name} in #{$wrap-widths}";
+  }
+}
+
+@mixin wrap($name) {
+  @include wrap-base;
+  @include wrap-width($name);
+}

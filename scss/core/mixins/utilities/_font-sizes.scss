@@ -1,0 +1,48 @@
+/*------------------------------------*\
+    FONT SIZE UTILITY MIXINS
+\*------------------------------------*/
+/**
+ * A series of classes for setting massive type; for use in heroes, mastheads,
+ * promos, etc.
+ */
+@mixin u-fs--giga { font-size: px-to-rem($fs-giga);}
+@mixin u-fs--mega { font-size: px-to-rem($fs-mega);}
+@mixin u-fs--kilo { font-size: px-to-rem($fs-kilo);}
+
+/**
+ * As per: csswizardry.com/2012/02/pragmatic-practical-font-sizing-in-css
+ *
+ * When we define a heading we also define a corresponding class to go with it.
+ * This allows us to apply, say, `class=u-fs--h1` to a `h3`; a double-stranded
+ * heading hierarchy.
+ */
+@mixin u-fs--h1 { font-size: px-to-rem($fs-h1);}
+@mixin u-fs--h2 { font-size: px-to-rem($fs-h2);}
+@mixin u-fs--h3 { font-size: px-to-rem($fs-h3);}
+@mixin u-fs--h4 { font-size: px-to-rem($fs-h4);}
+@mixin u-fs--h5 { font-size: px-to-rem($fs-h5);}
+@mixin u-fs--h6 { font-size: px-to-rem($fs-h6);}
+
+/**
+ * A series of classes for setting tiny type; for use in smallprint etc.
+ */
+@mixin u-fs--milli { font-size: px-to-rem($fs-milli);}
+@mixin u-fs--micro { font-size: px-to-rem($fs-micro);}
+@mixin u-fs--nano	 { font-size: px-to-rem($fs-nano);}
+
+@mixin u-fs--classes {
+  .u-fs--giga { @include u-fs--giga;}
+  .u-fs--mega { @include u-fs--mega;}
+  .u-fs--kilo { @include u-fs--kilo;}
+
+  .u-fs--h1 { @include u-fs--h1;}
+  .u-fs--h2 { @include u-fs--h2;}
+  .u-fs--h3 { @include u-fs--h3;}
+  .u-fs--h4 { @include u-fs--h4;}
+  .u-fs--h5 { @include u-fs--h5;}
+  .u-fs--h6 { @include u-fs--h6;}
+
+  .u-fs--milli { @include u-fs--milli;}
+  .u-fs--micro { @include u-fs--micro;}
+  .u-fs--nano	 { @include u-fs--nano;}
+}

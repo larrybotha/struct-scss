@@ -1,0 +1,44 @@
+/*------------------------------------*\
+    DOCUMENT
+\*------------------------------------*/
+html {
+  /*
+   * Can't use relative units on html due to bug on
+   * Chrome and Safari.
+   * CodePen: http://codepen.io/larrybotha/pen/wKYYXE
+   * Chrome Bug Tracker: https://code.google.com/p/chromium/issues/detail?id=319623#c16
+   */
+  font-size: $fs-base;
+  min-height: 100%;
+}
+
+html, body, button, input, select, textarea {
+  color: $clr-base;
+}
+
+/**
+ * FireFox on Android adds gradients to these elements
+ */
+button, input, select, textarea { background-image: none;}
+
+body {
+  background-color: #fff;
+  font-size: 1em;
+  line-height: $line-height-base;
+  margin: 0;
+}
+
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection declarations have to be separate
+ */
+::-moz-selection {
+  background: $clr-selection;
+  color: #fff;
+  text-shadow: none;
+}
+::selection {
+  background: $clr-selection;
+  color: #fff;
+  text-shadow: none;
+}

@@ -1,0 +1,15 @@
+/**
+ * Config
+ *
+ * Config is defined before defaults so that variables override their !default
+ * counterparts
+ */
+@import "core/variables";
+@import "custom/variables";
+
+/**
+ * Import the rest of the framework, followed by custom styles
+ */
+@import "core/support";
+@import "custom/functions";
+@import "custom/mixins";

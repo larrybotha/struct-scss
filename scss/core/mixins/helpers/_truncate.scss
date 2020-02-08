@@ -1,0 +1,13 @@
+/**
+ * Force overly long spans of text to truncate, e.g.:
+ *
+   `@include u-truncate(100%);`
+ *
+ * Where `$truncation-boundary` is a united measurement.
+ */
+@mixin u-truncate($truncation-boundary: 100%){
+  max-width: $truncation-boundary;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

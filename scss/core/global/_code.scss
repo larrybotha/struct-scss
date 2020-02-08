@@ -1,0 +1,14 @@
+/*------------------------------------*\
+    CODE
+\*------------------------------------*/
+/**
+ * Note: an explicit font stack should be applied to pre to ensure browsers render
+ * correct `line-height`.
+ */
+pre { overflow:auto;}
+
+  pre mark {
+    background: none;
+    border-bottom: 1px solid;
+    color: inherit;
+  }

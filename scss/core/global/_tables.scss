@@ -1,0 +1,13 @@
+/*------------------------------------*\
+    TABLES
+\*------------------------------------*/
+table { width: 100%;}
+
+th, td {
+  text-align: left;
+  padding: #{$spacing-scalar / 2}rem;
+
+  @include media-query(palm){
+    padding: #{$spacing-scalar / 4}rem;
+  }
+}

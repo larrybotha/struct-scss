@@ -1,0 +1,54 @@
+/*------------------------------------*\
+    CUSTOM RADIOS & CHECKBOXES
+\*------------------------------------*/
+@if false {
+/**
+ * $use-icon-as-inline-svg must be set to true to use custom radios and checkboxes
+
+  input[type=[radio|checkbox].u-visually-hidden
+  label
+    i.custom-check-radio
+      i.custom-check-radio__icon--false
+        i.custom-check-radio__icon__inner
+          svg[role=image]
+            use(xlink:href="#icon-checkbox-false")
+      i.custom-check-radio__icon--true
+        i.custom-check-radio__icon__inner
+          svg
+            use(xlink:href="#icon-checkbox-true")
+    | my custom radio's label text
+
+ */
+%custom-check-radio {
+  display: inline-block;
+  line-height: 1;
+  position: relative;
+  vertical-align: middle;
+}
+.custom-check-radio { @extend %custom-check-radio;}
+
+  %custom-check-radio__icon {
+    @include f8-inline-svg-icon;
+    transition: opacity .15s ease-in-out;
+    vertical-align: top;
+  }
+  %custom-check-radio__icon--false { @extend %custom-check-radio__icon;}
+  .custom-check-radio__icon--false { @extend %custom-check-radio__icon--false;}
+  %custom-check-radio__icon--true {
+    @extend %custom-check-radio__icon;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+  }
+  .custom-check-radio__icon--true { @extend %custom-check-radio__icon--true;}
+
+    %custom-check-radio__icon__inner { @include f8-inline-svg-icon__inner;}
+    .custom-check-radio__icon__inner { @extend %custom-check-radio__icon__inner;}
+
+input:checked + label %custom-check-radio {
+  & > %custom-check-radio__icon--true {
+    opacity: 1;
+  }
+}
+} //endif
