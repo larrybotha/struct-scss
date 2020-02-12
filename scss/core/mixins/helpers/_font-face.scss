@@ -1,6 +1,7 @@
 @mixin font-face($user-options) {
-  $default-options: (weight: normal, style: normal);
+  $default-options: (weight: normal, style: normal, font-display: swap);
   $options: map-merge($default-options, $user-options);
+  $fnot-display: map-get($options, 'font-display');
   $family: map-get($options, 'family');
   $file-path: map-get($options, 'file-path');
   $filename: map-get($options, 'file-name');
@@ -8,7 +9,7 @@
   $style: map-get($options, 'style');
 
 	@font-face {
-    font-display: optional;
+    font-display: $font-display;
 		font-family: $family;
 
 		@if $use-rails {
