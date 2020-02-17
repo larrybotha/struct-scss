@@ -2,20 +2,14 @@
   "name": "styleguide",
   "version": "0.1.0",
   "scripts": {
-    "dev": "gulp",
-    "update": "$(npm bin)/updtr"
+    "test": "jest",
+    "test:watch": "npm test -- --watch"
   },
   "devDependencies": {
-    "browser-sync": "^2.12.10",
-    "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^3.1.0",
-    "gulp-sass": "^3.1.0",
-    "gulp-sourcemaps": "^1.6.0",
-    "gulp-watch": "^4.3.6",
-    "natives": "^1.1.6",
+    "jest": "^25.1.0",
+    "node-sass": "^4.13.1",
     "normalize.css": "^7.0.0",
-    "require-dir": "^0.3.0",
-    "updtr": "^0.1.15"
+    "sass": "^1.25.0"
   },
   "peerDependencies": {
     "normalize.css": "*"
