@@ -5,59 +5,10 @@
 /*------------------------------------*\
     BASE FONT
 \*------------------------------------*/
-//$font-base-config: (
-  //family: $font-base,
-  //file-name: $font-base-filename,
-  //file-path: $font-base-path,
-//);
-
-/**
- * regular
- */
-//@include font-face($font-base-config);
-
-  /**
-   * italic
-   */
-  //@include font-face(map-merge(
-    //$font-base-config, (
-      //file-name: $font-base-filename-italic,
-      //style: italic
-    //)
-  //));
-
-  /**
-   * bold
-   */
-  //@include font-face(map-merge(
-    //$font-base-config, (
-      //file-name: $font-base-filename-bold,
-      //weight: bold,
-    //)
-  //));
-
-  /**
-   * bold italic
-   */
-  //@include font-face(map-merge(
-    //$font-base-config, (
-      //file-name: $font-base-filename-bold-italic,
-      //style: italic,
-      //weight: bold,
-    //)
-  //));
+@include generate-font-faces($font-base, $font-base-filenames);
 
 
 /*------------------------------------*\
     ALTERNATE FONT
 \*------------------------------------*/
-//$font-alt-config: (
-  //family: $font-alt,
-  //file-name: $font-alt-filename,
-  //file-path: $font-alt-path,
-//);
-
-/**
- * regular
- */
-//@include font-face($font-alt-config);
+//@include generate-font-faces($font-base, $font-base-filenames);

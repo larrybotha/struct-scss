@@ -6,30 +6,24 @@
 /*------------------------------------*\
     BASE FONT
 \*------------------------------------*/
-//$font-base          : "[font-name]";
-//$font-base-path     : "#{$asset-path}/fnt/[font-folder]";
-//$font-base-filename : "[font-file-name-without-extension]";
-//$font-base-stack    : $font-base, Arial, sans-serif;
+$font-base: (
+  family: "font-name",
+  path: "#{$asset-path}/fnt/font-name",
+);
+$font-base-filenames:   (
+ regular:     "filename-without-extension",
+ bold:        "bold-filename-without-extension",
+ bold-italic: "bold-italic-filename-without-extension",
+ italic:      "italic-filename-without-extension",
+);
+$font-base-stack: map-get($font-base, 'family'), Arial, sans-serif;
 
-/**
- * Base Font Variations
- */
-//$font-base-filename-italic  : "[italic-font-file-name-without-extension]"; // italic
-//$font-base-filename-bold: "[bold-font-file-name-without-extension]"; // bold
-//$font-base-filename-bold-italic : "[bold-italic-font-file-name-without-extension]"; // bold-italic
-
-
-//[>------------------------------------*\
-    //ALTERNATE FONT
-//\*------------------------------------*/
-//$font-alt          : "[font-name]";
-//$font-alt-path     : "#{$asset-path}/fnt/[font-folder]";
-//$font-alt-filename : "[font-file-name-without-extension]";
-//$font-alt-stack    : $font-alt, Arial, sans-serif;
-
-/**
- * Alternate Font Variations
- */
-//$font-alt-filename-italic  : "[italic-font-file-name-without-extension]"; // italic
-//$font-alt-filename-bold: "[bold-font-file-name-without-extension]"; // bold
-//$font-alt-filename-bold-italic : "[bold-italic-font-file-name-without-extension]"; // bold-italic
+/*------------------------------------*\
+    ALTERNATE FONT
+\*------------------------------------*/
+//$font-alt: (
+  //family: "alt-font-name",
+  //path: "#{$asset-path}/fnt/alt-font-name",
+//);
+//$font-alt-filenames: (regular: "filename-without-extension");
+//$font-alt-stack: map-get($font-alt, 'family'), Arial, sans-serif;
