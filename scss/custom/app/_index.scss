@@ -1,15 +1,15 @@
 /*------------------------------------*\
     APP
 \*------------------------------------*/
-@import 'animations';
-@import 'components';
-@import 'routes';
-@import 'vendor';
+@import 'animations/index';
+@import 'components/index';
+@import 'routes/index';
+@import 'vendor/index';
 
 
 /**
  * Utilities must come last in order to override component styles
  */
-@import 'utilities';
+@import 'utilities/index';
 
 //@include print;

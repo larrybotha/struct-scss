@@ -2,7 +2,7 @@
     CUSTOM STYLES
 \*------------------------------------*/
 // order matters
-@import "functions";
-@import "mixins";
-@import "global";
-@import "app";
+@import "functions/index";
+@import "mixins/index";
+@import "global/index";
+@import "app/index";
