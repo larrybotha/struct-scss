@@ -1,12 +1,34 @@
 @charset "UTF-8";
 
+/*------------------------------------*\
+  GLOBAL STYLES
+\*------------------------------------*/
+/**
+ * Import only global styles
+ *
+ * This is useful in scenarios where you may want to import styles common across
+ * your app, but without any styles specific to any particular component
+ *
+ * e.g.
+ * - rendering critical css
+ * - apps that use CSS-in-JS for components
+ */
+
 /**
  *  import functions and mixins
  */
 @import "support";
 
 /**
- * Import global styles
+ * Import resets
+ *
+ * normalize.css requires `includePaths: ['node_modules/normalize.css']` in your Sass config
+ */
+@import "core/reset";
+@import "normalize";
+
+/**
+ * import global styles
  */
 @import "core/global/index";
 @import "custom/global/index";

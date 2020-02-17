@@ -29,13 +29,13 @@
 %grid-wrap {
   list-style: none;
   margin-bottom: 0;
-  @include px-and-rem(margin-left, -$grid-item-gutter);
+  margin-left: -$grid-item-gutter;
 
   @if $use-legacy-grid {
     .oldie & {
       display: inline-block;
       width: 100%;
-      width: calc(100% + #{$grid-item-gutter}em);
+      width: calc(100% + #{$grid-item-gutter} * 1em);
     }
   }
 

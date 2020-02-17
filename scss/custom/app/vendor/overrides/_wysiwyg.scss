@@ -1,7 +1,6 @@
 /*------------------------------------*\
     WYSIWYG
 \*------------------------------------*/
-@if false {
 .align_left    { text-align: left;}
 .align_center  { text-align: center;}
 .align_right   { text-align: right;}
@@ -21,5 +20,4 @@ img.align_right {
 img.align_center {
   display: block;
   margin: 0 auto;
-}
 }

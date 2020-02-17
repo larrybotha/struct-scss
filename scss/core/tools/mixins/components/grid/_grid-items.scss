@@ -5,7 +5,7 @@
  * Base styles for a column in the grid
  */
 %grid__item {
-  @include px-and-rem(padding-left, $grid-item-gutter);
+  padding-left: $grid-item-gutter;
   box-sizing: border-box;
 
   @if $use-legacy-grid {
