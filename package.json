@@ -2,6 +2,10 @@
   "name": "styleguide",
   "version": "0.1.0",
   "scripts": {
+    "clean": "rm -rf build && mkdir build",
+    "prebuild": "npm run clean",
+    "build": "sass scss/style.scss --load-path=node_modules/normalize.css > build/style.css",
+    "build:watch": "nodemon -e scss --exec 'npm run build'",
     "test": "jest",
     "test:watch": "npm test -- --watch"
   },
