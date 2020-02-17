@@ -1,0 +1,14 @@
+[
+  {
+    "action": "remove",
+    "files": [
+      ".editorconfig",
+      ".gitignore",
+      "README.md",
+      "jest.config.js",
+      "package-lock.json",
+      "test/**",
+      "travis.yml"
+    ]
+  }
+]
