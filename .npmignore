@@ -1,0 +1,9 @@
+node_modules/
+.sass-cache
+
+tests
+jest.config.js
+
+build
+.editorconfig
+.travis.yml
