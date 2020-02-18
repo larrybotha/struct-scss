@@ -1,8 +1,8 @@
-# SCSS Framework
+# Struct SCSS
 
-This is a SCSS framework inspired largely by [inuit.css](http://inuitcss.com/).
+An opinionated SCSS framework that takes the best from BEM, ITCSS, SMACSS, and SUIT.
 
+## Todo
 
-# Dependencies
-
-To run/build this framework you must be running at least node version 6.9.1 (tested)
+- [ ] add docs
+- [ ] add commitizen
