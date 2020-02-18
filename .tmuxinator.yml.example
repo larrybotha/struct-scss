@@ -7,4 +7,4 @@ windows:
       panes:
         - vim
         - npm run build:watch
-        - npm test:watch
+        - npm run test:watch
