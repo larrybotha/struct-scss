@@ -1,5 +1,7 @@
 # Struct SCSS
 
+[![Build Status](https://travis-ci.org/larrybotha/struct-scss.svg?branch=master)](https://travis-ci.org/larrybotha/struct-scss)
+
 An opinionated SCSS framework that takes the best from BEM, ITCSS, SMACSS, and SUIT.
 
 ## Installation
