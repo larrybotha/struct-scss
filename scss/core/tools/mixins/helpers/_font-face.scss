@@ -56,18 +56,18 @@
  * )
  */
 @mixin generate-font-faces($font-config, $filenames) {
-  @each $k, $v in $filenames {
+  @each $key, $filename in $filenames {
     $config: (
       family: map-get($font-config, 'family'),
       path: map-get($font-config, 'path'),
-      filename: map-get($font-config, map-get($filenames, 'regular')),
+      filename: $filename,
     );
 
-    @if ($k == 'italic') or ($k == 'bold-italic') {
+    @if ($key == 'italic') or ($key == 'bold-italic') {
       $config: map-merge($config, (style: italic));
     }
 
-    @if ($k == 'bold') or ($k == 'bold-italic') {
+    @if ($key == 'bold') or ($key == 'bold-italic') {
       $config: map-merge($config, (weight: bold));
     }
 
