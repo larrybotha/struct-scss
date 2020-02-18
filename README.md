@@ -15,4 +15,3 @@ $ npx degit github.com/larrybotha/struct-scss
 ## Todo
 
 - [ ] add docs
-- [ ] add commitizen
