@@ -1,0 +1,23 @@
+/*------------------------------------*\
+    WYSIWYG
+\*------------------------------------*/
+.align_left    { text-align: left;}
+.align_center  { text-align: center;}
+.align_right   { text-align: right;}
+
+img.align_left {
+  float:left;
+  @include push--right;
+  @include push--bottom;
+}
+
+img.align_right {
+  float:right;
+  @include push--left;
+  @include push--bottom;
+}
+
+img.align_center {
+  display: block;
+  margin: 0 auto;
+}

@@ -1,0 +1,41 @@
+/*------------------------------------*\
+    DOCUMENT
+\*------------------------------------*/
+/**
+ * This section houses styles for the base elements of the page, generally body and
+ * html
+ */
+
+
+/**
+ * Fix fatty fonts in Chrome and Firefox on Mac:
+ * http://maximilianhoffmann.com/posts/better-font-rendering-on-osx
+ */
+%fix-fatty-fonts {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/**
+ * Prevent Chrome and Safari from flashing when a user taps on mobile
+ */
+@if $responsive {
+  html { -webkit-tap-highlight-color: transparent;}
+}
+
+html, body, button, input, select, textarea {
+  @extend %fix-fatty-fonts;
+}
+
+body {
+  font-family: $font-base-stack;
+}
+
+
+
+/**
+ * get 60fps scrolling by disabling pointer events:
+ * http://www.thecssninja.com/javascript/pointer-events-60fps
+ */
+.disable-hover,
+.disable-hover * { pointer-events: none !important;}

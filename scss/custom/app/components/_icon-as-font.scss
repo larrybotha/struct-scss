@@ -1,0 +1,55 @@
+@if $use-icon-as-font {
+/*------------------------------------*\
+    $ICONS
+\*------------------------------------*/
+/*
+ * Enable icons in vars.scss with $use-icons: true;
+ *
+ * Use the Unicode Private Use Area (PUA) to ensure screen readers do not
+ * read off random characters that represent icons
+ */
+
+/* WEB APPLICATION ICONS U+e0xxx */
+$app-icons: (
+  menu:     "\e000",
+  grid:     "\e010",
+  expand:   "\e020",
+  close:    "\e030",
+  checkbox-true: "\e040",
+  checkbox-false: "\e041",
+  radio-true: "\e050",
+  radio-false: "\e051",
+);
+
+
+
+
+
+/* DIRECTIONAL ICONS U+e2xxx */
+
+
+
+
+
+/* SOCIAL ICONS U+e3xxx */
+
+
+
+
+
+
+/* MAKE ICONS */
+$icon-sets: $app-icons, ();
+
+@each $icon-set in $icon-sets {
+  @each $icon-name, $icon-uni in $icon-set {
+    %icon-#{$icon-name} {
+      @extend %font-icon;
+
+      &:before { content: "#{$icon-uni}";}
+    }
+    .icon-#{$icon-name} { @extend %icon-#{$icon-name};}
+  }
+}
+
+}//endif

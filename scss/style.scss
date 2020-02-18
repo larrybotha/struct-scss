@@ -1,0 +1,12 @@
+/**
+ * Import everything:
+ *
+ * - tools
+ * - global styles
+ * - app styles
+ *
+ * This will be the most common entry point for your app's styles.
+ */
+@import "support";
+@import "global";
+@import "custom/app/index";

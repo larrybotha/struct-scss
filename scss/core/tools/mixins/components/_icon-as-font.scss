@@ -1,0 +1,18 @@
+/*------------------------------------*\
+    $ICONS
+\*------------------------------------*/
+/*
+ * Styling inspired by FontAwesome - http://mopo.ws/ReAOC6
+ */
+@mixin f8-font-icon {
+  display: inline-block;
+  text-decoration: inherit;
+
+  &:before {
+    font-family: $font-icon-stack;
+    font-weight: normal;
+    font-style: normal;
+    display: inline-block;
+    text-decoration: inherit;
+  }
+}

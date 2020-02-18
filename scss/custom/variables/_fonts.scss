@@ -1,0 +1,29 @@
+/*------------------------------------*\
+    FONT VARIABLES
+\*------------------------------------*/
+
+
+/*------------------------------------*\
+    BASE FONT
+\*------------------------------------*/
+$font-base: (
+  family: "font-name",
+  path: "#{$asset-path}/fnt/font-name",
+);
+$font-base-filenames:   (
+ regular:     "filename-without-extension",
+ bold:        "bold-filename-without-extension",
+ bold-italic: "bold-italic-filename-without-extension",
+ italic:      "italic-filename-without-extension",
+);
+$font-base-stack: map-get($font-base, 'family'), Arial, sans-serif;
+
+/*------------------------------------*\
+    ALTERNATE FONT
+\*------------------------------------*/
+//$font-alt: (
+  //family: "alt-font-name",
+  //path: "#{$asset-path}/fnt/alt-font-name",
+//);
+//$font-alt-filenames: (regular: "filename-without-extension");
+//$font-alt-stack: map-get($font-alt, 'family'), Arial, sans-serif;

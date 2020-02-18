@@ -1,0 +1,21 @@
+/*------------------------------------*\
+    FORMS
+\*------------------------------------*/
+/**
+ *
+ * Demo: jsfiddle.net/inuitcss/MhHHU
+ *
+ */
+fieldset { padding: #{$spacing-scalar}rem;}
+
+
+/**
+ * Radios and Checkboxes
+ *
+ * Make radios and checkboxes appear clickable
+ */
+input[type="radio"],
+input[type="checkbox"] {
+  border: none;
+	cursor: pointer;
+}

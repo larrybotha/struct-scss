@@ -1,3 +1,0 @@
-@mixin box-shadow($val...) {
-	@include prefixer(box-shadow, $val);
-}

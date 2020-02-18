@@ -1,0 +1,27 @@
+/*------------------------------------*\
+    $FLEX VIDEO
+\*------------------------------------*/
+@mixin f8-flex-video {
+  @include ratio-object(percentage(3/4));
+  padding-top: 25px;
+
+  & iframe,
+  & object,
+  & embed,
+  & video { @include f8-flex-video__inner;}
+}
+
+  @mixin f8-flex-video__inner {
+    @include ratio-object__inner;
+    width: 100%;
+    height: 100%;
+  }
+
+@mixin f8-flex-video--widescreen {
+  padding-top: 0;
+
+  &:before { padding-bottom: percentage(9/16); /* 16:9; */}
+}
+@mixin f8-flex-video--vimeo {
+  padding-top: 0;
+}

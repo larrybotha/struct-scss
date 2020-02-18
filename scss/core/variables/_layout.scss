@@ -1,0 +1,37 @@
+/*------------------------------------*\
+    LAYOUT VARIABLES
+\*------------------------------------*/
+/**
+ * The base unit from which padding and margin values are determined
+ * Margins on element selectors, i.e. p, ul, ol, etc. use this value
+ *
+ * By default this value is the product of the base line-height (in pixels) and the
+ * base font size
+ *
+ * Must be unitless
+ */
+$spacing-scalar: $line-height-base!default;
+
+/**
+ * Do you want all elements to adopt `box-sizing:border-box;` as per
+ * paulirish.com/2012/box-sizing-border-box-ftw ?
+ */
+$global-border-box: true!default;
+
+/**
+ * Responsiveness?
+ */
+$responsive: true!default;
+
+/**
+ * Responsiveness for widescreen/high resolution desktop monitors and beyond?
+ * Note: `$responsive` variable above must be set to true before enabling this.
+ */
+$responsive-extra:  false!default;
+
+/**
+ * Define breakpoints used by the @media-query mixin
+ */
+$breakpoint-lap-start:       481px!default;
+$breakpoint-desk-start:      880px!default;
+$breakpoint-desk-wide-start: 1280px!default;

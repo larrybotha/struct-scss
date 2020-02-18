@@ -1,9 +1,5 @@
 .DS_STORE
-config.rb
-.sass-cache/
-projects/
-gh-pages/
-
-# ignore grunt files
 node_modules
 npm-debug.log
+build
+.tmuxinator.yml

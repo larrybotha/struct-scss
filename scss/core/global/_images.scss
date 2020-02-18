@@ -1,0 +1,19 @@
+/*------------------------------------*\
+    IMAGES
+\*------------------------------------*/
+/**
+ * Demo: jsfiddle.net/inuitcss/yMtur
+ */
+/*
+ * Prevent images and embeds from exceeding width of containing element
+ * width:; and height:; above apply
+ */
+img, embed, object, video {
+  height: auto;
+  max-width: 100%;
+}
+
+/**
+ * Images in `figure` elements.
+ */
+figure > img { display:block;}

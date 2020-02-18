@@ -1,0 +1,9 @@
+/*------------------------------------*\
+    IMAGES
+\*------------------------------------*/
+/**
+ * Fix SVG images not scaling proportionately in IE9, IE10, IE11
+ */
+// img[src*=svg] {
+//   width/*\**/: 100%\9;
+// }

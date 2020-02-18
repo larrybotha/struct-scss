@@ -1,0 +1,14 @@
+/*------------------------------------*\
+    $BACKGROUND LINK STATES MIXIN
+\*------------------------------------*/
+@mixin u-bgc--link-states($base-clr, $hover-clr, $active-clr) {
+  background-color: $base-clr;
+
+  &:hover { background-color: $hover-clr;}
+
+  @media (hover) {
+    &:focus { background-color: $hover-clr;}
+  }
+
+  &:active { background-color: $active-clr;}
+}

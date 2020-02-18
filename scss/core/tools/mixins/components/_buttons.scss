@@ -1,0 +1,51 @@
+/*------------------------------------*\
+    $BUTTONS
+\*------------------------------------*/
+@mixin f8-btn--reset {
+	background-image: none; // remove gradient from FF on mobile
+	background-color: transparent;
+  border: 0;
+  border-radius: 0;
+  display: inline-block;
+	height: auto; // ensure heights set on inputs do not affect submit buttons
+  line-height: normal; // let's make all browsers match FF's !important
+	margin: 0;
+	padding: 0;
+  position: relative;
+  text-align: center;
+  vertical-align: middle;
+	white-space: nowrap;
+  width: auto;
+
+	&:active,
+	&:focus { outline: none;}
+
+  &[type="button"] { -webkit-appearance: none;}
+}
+
+@mixin f8-btn {
+	@include f8-btn--reset;
+	cursor: pointer;
+  transition: all 150ms ease-in;
+
+	&,
+	&:hover,
+	&:focus { text-decoration: none;}
+
+	&:active,
+	&:focus { transition: none;}
+
+	&[disabled],
+	&:disabled { cursor: default;}
+}
+
+@mixin f8-btn--selected {
+  cursor: default;
+
+  &:hover,
+  &:active,
+  &:focus {
+    color: inherit;
+    background-color: inherit;
+  }
+}

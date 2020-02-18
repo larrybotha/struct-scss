@@ -1,0 +1,14 @@
+/*------------------------------------*\
+    $TYPOGRAPHIC LINK STATES MIXIN
+\*------------------------------------*/
+@mixin u-fc--link-states($base-clr, $hover-clr, $active-clr) {
+  color: $base-clr;
+
+  &:hover { color: $hover-clr;}
+
+  @media (hover) {
+    &:focus { color: $hover-clr;}
+  }
+
+  &:active { color: $active-clr;}
+}

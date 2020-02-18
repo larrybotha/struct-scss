@@ -1,0 +1,11 @@
+/*------------------------------------*\
+    $MENU TOGGLE
+\*------------------------------------*/
+%menu-toggle {
+  display: none;
+
+  &:focus { outline:none;}
+
+  @include media-query(portable) { display: inline-block;}
+}
+.menu-toggle { @extend %menu-toggle;}

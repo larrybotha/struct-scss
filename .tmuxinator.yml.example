@@ -1,0 +1,10 @@
+name: styleguide
+root: <%= Dir.pwd %>
+
+windows:
+  - editor:
+      layout: main-vertical
+      panes:
+        - vim
+        - npm run build:watch
+        - npm test:watch

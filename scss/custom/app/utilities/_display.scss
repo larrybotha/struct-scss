@@ -1,0 +1,10 @@
+/*------------------------------------*\
+    DISPLAY UTILITIES
+\*------------------------------------*/
+%display--block { display: block;}
+
+input%display--block,
+textarea%display--block,
+button%display--block { width: 100%;}
+
+%display--iblock { display: inline-block;}

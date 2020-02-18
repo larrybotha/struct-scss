@@ -1,0 +1,22 @@
+/*------------------------------------*\
+    QUOTE VARIABLES
+\*------------------------------------*/
+/**
+ * English quote marks?
+ */
+$english-quotes:  true!default;
+
+/**
+ * If you want English quotes then please do not edit these; they’re only here
+ * because Sass needs them.
+ */
+$open-quote:  null;
+$close-quote: null;
+
+/**
+ * If you need non-English quotes, please alter the following values accordingly:
+ */
+@if $english-quotes != true {
+  $open-quote:  \00AB;
+  $close-quote: \00BB;
+}

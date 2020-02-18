@@ -1,0 +1,170 @@
+/*------------------------------------*\
+    GRID WRAPS
+\*------------------------------------*/
+/**
+ * Fluid and nestable grid system, e.g.:
+ *
+   <div class="gw">
+       <div class="g  g-1-of-3">
+           <p>One third grid</p>
+       </div>
+       <div class="g  g-2-of-3">
+           <p>Two thirds grid</p>
+       </div>
+       <div class="g  g-1-of-2">
+           <p>One half grid</p>
+       </div>
+       <div class="g  g-1-of-4">
+           <p>One quarter grid</p>
+       </div>
+       <div class="g  g-1-of-4">
+           <p>One quarter grid</p>
+       </div>
+   </div>
+ *
+ * Demo: jsfiddle.net/inuitcss/CLYUC
+ *
+ */
+
+%grid-wrap {
+  list-style: none;
+  margin-bottom: 0;
+  margin-left: -$grid-item-gutter;
+
+  @if $use-legacy-grid {
+    .oldie & {
+      display: inline-block;
+      width: 100%;
+      width: calc(100% + #{$grid-item-gutter} * 1em);
+    }
+  }
+
+  @if $use-flexbox-grid {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+@mixin grid-wrap($classname: $grid-wrap-classname) {
+  .#{$classname} { @extend %grid-wrap;}
+}
+
+@mixin grid-wrap--reverse($classname: $grid-wrap-classname) {
+  /**
+  * reversed grids
+  */
+  .#{$classname}--reverse {
+    @extend %grid-wrap;
+
+    @if $use-legacy-grid {
+      .oldie & {
+        direction: rtl;
+        text-align: right;
+      }
+    }
+
+    @if $use-flexbox-grid { flex-direction: row-reverse;}
+
+    & > %grid__item {
+      @if $use-legacy-grid {
+        .oldie & {
+          direction: ltr;
+          text-align: left;
+        }
+      }
+    }
+  }
+}
+
+
+@mixin grid-wrap--no-gutter($classname: $grid-wrap-classname) {
+  /**
+  * gutterless grids have all the properties of regular grids, minus any spacing.
+  */
+  .#{$classname}--no-gutter {
+    @extend %grid-wrap;
+    margin-left: 0;
+
+    & > %grid__item { padding-left: 0;}
+  }
+}
+
+
+@mixin grid-wrap--center($classname: $grid-wrap-classname) {
+  /**
+  * centered grids align grid items centrally without needing to use push or pull
+  * classes.
+  */
+  %gw--center {
+    @extend %grid-wrap;
+
+    @if $use-legacy-grid {
+      .oldie & { text-align: center;}
+    }
+
+    @if $use-flexbox-grid { justify-content: center;}
+
+    & > %grid__item {
+      @if $use-legacy-grid {
+        .oldie & { text-align: left;}
+      }
+    }
+  }
+}
+
+@mixin grid-wrap--right($classname: $grid-wrap-classname) {
+  /**
+   * right aligned grids
+   */
+  .#{$classname}--right {
+    @extend %grid-wrap;
+
+    @if $use-legacy-grid {
+      .oldie & { text-align: right;}
+    }
+
+    @if $use-flexbox-grid { justify-content: flex-end;}
+
+    & > %grid__item {
+      @if $use-legacy-grid {
+        .oldie & { text-align: left;}
+      }
+    }
+  }
+}
+
+
+@mixin grid-wrap--middle($classname: $grid-wrap-classname) {
+  /**
+   * middle aligned grids
+   */
+  .#{$classname}--middle {
+    @extend %grid-wrap;
+
+    @if $use-flexbox-grid { align-items: center;}
+
+    & > %grid__item {
+      @if $use-legacy-grid {
+        .oldie & { vertical-align: middle;}
+      }
+    }
+  }
+}
+
+
+@mixin grid-wrap--bottom($classname: $grid-wrap-classname) {
+  /**
+   * bottom aligned grids
+   */
+  .#{$classname}--bottom {
+    @extend %grid-wrap;
+
+    @if $use-flexbox-grid { align-items: flex-end;}
+
+    & > %grid__item {
+      @if $use-legacy-grid {
+        .oldie & { vertical-align: bottom;}
+      }
+    }
+  }
+}

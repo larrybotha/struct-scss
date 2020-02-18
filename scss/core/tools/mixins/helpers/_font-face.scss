@@ -1,0 +1,76 @@
+/**
+ * Create a font face declaration
+ *
+ * Expects a map with the following shape:
+ *
+ * $options: (
+ *  family:        string // font name
+ *  path:          string // path to font, relative to built css
+ *  weight?:       string // font-weight value
+ *  style?:        string // font-weight value
+ *  font-display?: string // font-display value
+ * )
+ */
+@mixin font-face($custom-options) {
+  $default-options: (weight: normal, style: normal, font-display: swap);
+  $options: map-merge($default-options, $custom-options);
+  $font-display: map-get($options, 'font-display');
+  $family: map-get($options, 'family');
+  $path: map-get($options, 'path');
+  $filename: map-get($options, 'filename');
+  $weight: map-get($options, 'weight');
+  $style: map-get($options, 'style');
+
+	@font-face {
+    font-display: $font-display;
+		font-family: $family;
+
+		@if $use-rails {
+			src: font-url('#{$path}/#{$filename}.woff2') format('woff2'),
+				font-url('#{$path}/#{$filename}.woff') format('woff'),
+		} @else {
+			src: url('#{$path}/#{$filename}.woff2') format('woff2'),
+				url('#{$path}/#{$filename}.woff') format('woff'),
+		}
+
+		font-weight: $weight;
+		font-style: $style;
+	}
+}
+
+/**
+ * Generate font faces
+ *
+ * Expects two maps with the following shape:
+ *
+ * $font-config: (
+ *  family: string , // font name
+ *  path:   string // path to font, relative to built css
+ * )
+ *
+ * $filenames: (
+ *  regular:      string // filename of the regular font, without file extension
+ *  italic?:      string // filename of the italic font, without file extension
+ *  bold?:        string // filename of the bold font, without file extension
+ *  bold-italic?: string // filename of the bold-italic font, without file extension
+ * )
+ */
+@mixin generate-font-faces($font-config, $filenames) {
+  @each $key, $filename in $filenames {
+    $config: (
+      family: map-get($font-config, 'family'),
+      path: map-get($font-config, 'path'),
+      filename: $filename,
+    );
+
+    @if ($key == 'italic') or ($key == 'bold-italic') {
+      $config: map-merge($config, (style: italic));
+    }
+
+    @if ($key == 'bold') or ($key == 'bold-italic') {
+      $config: map-merge($config, (weight: bold));
+    }
+
+    @include font-face($config);
+  }
+}

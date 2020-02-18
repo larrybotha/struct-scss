@@ -1,0 +1,18 @@
+/*------------------------------------*\
+    VARIABLES
+\*------------------------------------*/
+/**
+ * Any variables you find set in this framework's `core/_config-defaults.scss` that you do not wish to
+ * keep, simply redefine here. This means that if this framework, for example, sets
+ * your `$fs-base` at 16px and you wish it to be 14px, simply redeclare
+ * that variable in font-sizes-and-layout file. this framework ignores its own variables in favour of
+ * using your own, so you can completely modify how this framework works without ever
+ * having to alter the framework itself.
+ */
+@import 'paths';
+@import 'colors';
+@import 'font-sizes';
+@import 'fonts';
+@import 'grid';
+@import 'layout';
+@import 'typography';

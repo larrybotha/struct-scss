@@ -1,0 +1,26 @@
+/*------------------------------------*\
+    $INLINE SVG ICONS
+\*------------------------------------*/
+
+/*
+ * inline svg icons
+
+  i.icon
+    i.icon__inner
+      svg
+        use(xlink:href="my-icon-id")
+
+ */
+@mixin f8-inline-svg-icon { display: inline-block;}
+
+  @mixin f8-inline-svg-icon__inner {
+    display: inline;
+
+    & svg {
+      color: currentColor;
+      display: block;
+      fill: currentColor;
+      height: 1em;
+      width: 1em;
+    }
+  }

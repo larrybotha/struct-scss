@@ -1,0 +1,60 @@
+/*------------------------------------*\
+    $MAP GET DEEP
+\*------------------------------------*/
+//
+// Get values out of nested maps - https://gist.github.com/jlong/8760275
+//
+
+// $bg-imgs: (
+//   'first-image': (
+//     desk: ('height': 106, 'width': 123),
+//     lap: ('height': 106, 'width': 234),
+//     palm: ('height': 106, 'width': 345),
+//   ),
+//   'second-image': (
+//     desk: ('height': 106, 'width': 123),
+//     lap: ('height': 106, 'width': 234),
+//     palm: ('height': 106, 'width': 345),
+//   ),
+//   'third-image': (
+//     desk: ('height': 106, 'width': 123),
+//     lap: ('height': 106, 'width': 234),
+//     palm: ('height': 106, 'width': 345),
+//   ),
+// );
+
+// @mixin bg-img-ratio-responsive-do($imgs) {
+//   @each $img-name, $viewports in $imgs {
+
+//     @each $vp in map-keys($viewports) {
+//       @include media-query($vp) {
+//         .bgi--#{$img-name} {
+//           background-image: url('images/#{$img-name}-#{$vp}.svg');
+//           width: map-deep-get($viewports, $vp, width);
+//           height: map-deep-get($viewports, $vp, height);
+//         }
+//       }
+//     }
+//   }
+// }
+
+// @include bg-img-ratio-responsive-do($bg-imgs);
+
+// /* or simply */
+// .first-image-width-desk {
+//   width: map-deep-get($bg-imgs, 'first-image', desk, width);
+// }
+
+// /* in general */
+// .class {
+//   [property]: map-deep-get($map, key1, key2, ..., keyn);
+// }
+
+@function map-deep-get($map, $keys...) {
+  $value: $map;
+
+  @each $key in $keys { $value: map-get($value, $key);}
+
+  @return $value;
+}
+

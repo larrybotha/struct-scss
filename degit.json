@@ -1,0 +1,15 @@
+[
+  {
+    "action": "remove",
+    "files": [
+      ".editorconfig",
+      ".gitignore",
+      "README.md",
+      "jest.config.js",
+      "package-lock.json",
+      "test/index.test.js",
+      "tmuxinator.yml.example",
+      "travis.yml"
+    ]
+  }
+]

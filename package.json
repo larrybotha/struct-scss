@@ -1,12 +1,21 @@
 {
   "name": "styleguide",
   "version": "0.1.0",
+  "scripts": {
+    "clean": "rm -rf build && mkdir build",
+    "prebuild": "npm run clean",
+    "build": "sass scss/style.scss --load-path=node_modules/normalize.css > build/style.css",
+    "build:watch": "nodemon -e scss --exec 'npm run build'",
+    "test": "jest",
+    "test:watch": "npm test -- --watch"
+  },
   "devDependencies": {
-    "grunt": "~0.4.1",
-    "grunt-contrib-sass": "~0.4.1",
-    "grunt-contrib-watch": "~0.5.1",
-    "grunt-contrib-jshint": "~0.6.0",
-    "grunt-contrib-connect": "~0.3.0",
-    "grunt-shell": "~0.3.1"
+    "jest": "^25.1.0",
+    "node-sass": "^4.13.1",
+    "normalize.css": "^7.0.0",
+    "sass": "^1.25.0"
+  },
+  "peerDependencies": {
+    "normalize.css": "*"
   }
 }

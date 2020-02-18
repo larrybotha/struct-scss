@@ -1,0 +1,56 @@
+/*------------------------------------*\
+    QUOTES
+\*------------------------------------*/
+/**
+ * If English quotes are set in `_vars.scss`, define them here.
+ */
+@if $english-quotes {
+  $open-quote:    \201C !global;
+  $close-quote:   \201D !global;
+}
+
+
+/**
+ * Big up @boblet: html5doctor.com/blockquote-q-cite
+ */
+
+/**
+ * Inline quotes.
+ */
+q {
+  quotes:"\2018" "\2019" "#{$open-quote}" "#{$close-quote}";
+
+  &:before{
+    content:"\2018";
+    content:open-quote;
+  }
+  &:after{
+    content:"\2019";
+    content:close-quote;
+  }
+
+  q:before{
+    content:"\201C";
+    content:open-quote;
+  }
+  q:after{
+    content:"\201D";
+    content:close-quote;
+  }
+}
+
+
+/**
+ *
+   <blockquote>
+       <p>Insanity: doing the same thing over and over again and expecting
+       different results.</p>
+       <b class=source>Albert Einstein</b>
+   </blockquote>
+ *
+ */
+blockquote {
+  p:first-of-type{ margin-top:0;}
+
+  p:last-of-type{ margin-bottom:0;}
+}

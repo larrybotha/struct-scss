@@ -1,0 +1,85 @@
+/*------------------------------------*\
+    GRID ITEMS
+\*------------------------------------*/
+/**
+ * Base styles for a column in the grid
+ */
+%grid__item {
+  padding-left: $grid-item-gutter;
+  box-sizing: border-box;
+
+  @if $use-legacy-grid {
+    width: 100%;
+
+    .oldie & {
+      display: inline-block;
+      vertical-align: top;
+    }
+  }
+}
+
+@mixin grid__item($classname: $grid-wrap-item-classname) {
+  .#{$classname} { @extend %grid__item;}
+}
+
+@mixin grid__item--tall($classname: $grid-wrap-item-classname) {
+  /**
+   * Allow the content of a column to occupy the full height of the
+   * column
+   *
+   * Child div must have flex: 1; or width: 100%; set to fill horizontal
+   * space
+   *
+   * Does not work for legacy browsers
+   */
+  .#{$classname}--tall {
+    @extend %grid__item;
+
+    @if $use-flexbox-grid { display: flex;}
+  }
+}
+
+@mixin grid__item--auto($classname: $grid-wrap-item-classname) {
+  /**
+   * Columns that automatically fill the remaining horizontal space
+   *
+   * To be used as is, without column width modifiers. Viewport modifiers will
+   * not override the effect of auto.
+   *
+   * Works mostly on <= IE9, mostly
+   * Requires .oldie class on html tag
+   */
+  .#{$classname}--auto {
+    @extend %grid__item;
+
+    @if $use-legacy-grid {
+      .oldie & { display: table-cell;}
+    }
+
+    @if $use-flexbox-grid {
+      flex: 1;
+    }
+  }
+}
+
+@mixin grid__item--shrink-wrap($classname: $grid-wrap-item-classname) {
+  /**
+   * Columns that shrink wrap around content - ideal for .g--auto to occupy
+   * remaining space.
+   *
+   * To be used as is, without column width modifiers. Viewport modifiers will
+   * override shrink-wrap effect
+   *
+   * Works mostly on <= IE9, mostly
+   */
+  .#{$classname}--shrink-wrap {
+    @extend %grid__item;
+    width: auto;
+
+    @if $use-legacy-grid {
+      .oldie & { display: table-cell;}
+    }
+
+    @if $use-flexbox-grid {}
+  }
+}

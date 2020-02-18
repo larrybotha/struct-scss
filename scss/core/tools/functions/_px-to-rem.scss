@@ -1,0 +1,32 @@
+/*------------------------------------*\
+    $PX TO REM
+\*------------------------------------*/
+/*
+ * Convert a px value to the equivalent rem value.
+ *
+ * Takes both px values, and unitless values.
+ *
+ * Will use $fs-base if it exists, otherwise takes a second parameter, defaulted to
+ * 16px.
+ *
+ * Value provided should be same as pixel value on html tag
+ *
+ * Example:
+
+  .my-class {
+    font-size: px-to-rem(24px); // => 1.5rem
+  }
+
+  // or
+
+  .my-class {
+    font-size: px-to-rem(24); // => 1.5rem
+  }
+ */
+
+@function px-to-rem($val, $root-val: 16px) {
+  $val: if(unitless($val), $val * 1px, $val);
+  $divisor: if(global-variable-exists(fs-base), $fs-base, $root-val);
+
+  @return $val / $divisor + rem;
+}
