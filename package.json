@@ -1,21 +1,35 @@
 {
   "name": "struct-scss",
-  "version": "1.0.0",
+  "version": "0.0.0-semantically-released",
   "scripts": {
+    "changelog": "conventional-changelog --infile CHANGELOG.md --same-file --release-count 0 --preset angular",
+    "commit": "git-cz",
     "clean": "rm -rf build && mkdir build",
     "prebuild": "npm run clean",
     "build": "sass scss/style.scss --load-path=node_modules/normalize.css > build/style.css",
     "build:watch": "nodemon -e scss --exec 'npm run build'",
     "test": "jest",
-    "test:watch": "npm test -- --watch"
+    "test:watch": "npm test -- --watch",
+    "travis-deploy-once": "travis-deploy-once"
   },
   "devDependencies": {
+    "commitizen": "^4.0.3",
+    "conventional-changelog": "^3.1.18",
+    "conventional-changelog-cli": "^2.0.31",
+    "cz-conventional-changelog": "^3.1.0",
     "jest": "^25.1.0",
     "node-sass": "^4.13.1",
     "normalize.css": "^7.0.0",
-    "sass": "^1.25.0"
+    "sass": "^1.25.0",
+    "semantic-release": "^17.0.4",
+    "travis-deploy-once": "^5.0.11"
   },
   "peerDependencies": {
     "normalize.css": "*"
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-conventional-changelog"
+    }
   }
 }
