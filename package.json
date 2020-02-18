@@ -1,9 +1,9 @@
 {
   "name": "struct-scss",
-  "version": "0.0.0-semantically-released",
+  "version": "0.0.0-development",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/larrybotha/struct-scss.git"
+    "url": "https://github.com/larrybotha/struct-scss.git"
   },
   "keywords": [
     "bem",
@@ -27,7 +27,8 @@
     "build:watch": "nodemon -e scss --exec 'npm run build'",
     "test": "jest",
     "test:watch": "npm test -- --watch",
-    "travis-deploy-once": "travis-deploy-once"
+    "travis-deploy-once": "travis-deploy-once",
+    "semantic-release": "semantic-release"
   },
   "devDependencies": {
     "commitizen": "^4.0.3",
@@ -37,7 +38,8 @@
     "jest": "^25.1.0",
     "node-sass": "^4.13.1",
     "normalize.css": "^7.0.0",
-    "sass": "^1.25.0"
+    "sass": "^1.25.0",
+    "semantic-release": "^17.0.4"
   },
   "peerDependencies": {
     "normalize.css": "*"
