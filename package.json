@@ -1,6 +1,6 @@
 {
-  "name": "styleguide",
-  "version": "0.1.0",
+  "name": "struct-scss",
+  "version": "1.0.0",
   "scripts": {
     "clean": "rm -rf build && mkdir build",
     "prebuild": "npm run clean",
