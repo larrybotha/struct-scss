@@ -5,7 +5,14 @@
     "type": "git",
     "url": "git+https://github.com/larrybotha/struct-scss.git"
   },
-  "keywords": ["bem", "css", "itcss", "sass", "scss", "smacss"],
+  "keywords": [
+    "bem",
+    "css",
+    "itcss",
+    "sass",
+    "scss",
+    "smacss"
+  ],
   "author": "Larry Botha",
   "license": "MIT",
   "bugs": {
@@ -30,9 +37,7 @@
     "jest": "^25.1.0",
     "node-sass": "^4.13.1",
     "normalize.css": "^7.0.0",
-    "sass": "^1.25.0",
-    "semantic-release": "^17.0.4",
-    "travis-deploy-once": "^5.0.11"
+    "sass": "^1.25.0"
   },
   "peerDependencies": {
     "normalize.css": "*"
