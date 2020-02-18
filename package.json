@@ -1,19 +1,12 @@
 {
   "name": "struct-scss",
   "version": "0.0.0-development",
+  "author": "Larry Botha",
   "repository": {
     "type": "git",
     "url": "https://github.com/larrybotha/struct-scss.git"
   },
-  "keywords": [
-    "bem",
-    "css",
-    "itcss",
-    "sass",
-    "scss",
-    "smacss"
-  ],
-  "author": "Larry Botha",
+  "keywords": ["bem", "css", "itcss", "sass", "scss", "smacss"],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/larrybotha/struct-scss/issues"
