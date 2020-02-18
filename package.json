@@ -1,6 +1,16 @@
 {
   "name": "struct-scss",
   "version": "0.0.0-semantically-released",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/larrybotha/struct-scss.git"
+  },
+  "keywords": ["bem", "css", "itcss", "sass", "scss", "smacss"],
+  "author": "Larry Botha",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/larrybotha/struct-scss/issues"
+  },
   "scripts": {
     "changelog": "conventional-changelog --infile CHANGELOG.md --same-file --release-count 0 --preset angular",
     "commit": "git-cz",
