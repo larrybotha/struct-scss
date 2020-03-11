@@ -1,7 +1,10 @@
 /*------------------------------------*\
-    $ACCESSIBILITY
+    ACCESSIBILITY
 \*------------------------------------*/
-@mixin accessibility {
+/**
+ * Accessibily content off-screen without resorting to `display:none;`
+ */
+@mixin hide-accessibly {
   border: 0;
   clip: rect(0 0 0 0);
   height: 1px;

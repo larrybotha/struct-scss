@@ -1,0 +1,38 @@
+/*------------------------------------*\
+    ACCESSIBILITY UTILITY MIXINS
+\*------------------------------------*/
+@mixin u-accessibly-hidden {
+  @include hide-accessibly;
+}
+
+/**
+ * Allow focusable accessibly hidden content
+ */
+@mixin u-accessibly-hidden--focusable {
+  @include u-accessibly-hidden;
+
+  &[data-css-state=accessibly-focusable]:active,
+  &[data-css-state=accessibly-focusable]:focus {
+    position: static;
+    clip: auto;
+    width: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+  }
+}
+
+/**
+ * Generate responsive accessibiliy utilities
+ */
+@mixin create-accessibly-hidden-responsive-utility($bp-name, $focusable: false) {
+  @include media-query(#{$bp-name}) {
+    .u-accessibly-hidden--#{$bp-name} {
+      @if $focusable {
+        @include u-accessibly-hidden--focusable;
+      } @else {
+        @include u-accessibly-hidden;
+      }
+    }
+  }
+}
