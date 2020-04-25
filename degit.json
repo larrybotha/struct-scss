@@ -4,13 +4,13 @@
     "files": [
       ".editorconfig",
       ".gitignore",
+      ".tmuxinator.yml.example",
       ".travis.yml",
       "LICENCE",
       "README.md",
       "jest.config.js",
       "package-lock.json",
-      "test/index.test.js",
-      "tmuxinator.yml.example"
+      "test/index.test.js"
     ]
   }
 ]
