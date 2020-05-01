@@ -15,13 +15,14 @@
 /**
  * Grid column widths
  */
-//@include grid-item-widths-global;
-//@include grid-item-widths-palm;
-//@include grid-item-widths-lap;
-//@include grid-item-widths-portable;
-//@include grid-item-widths-lap-and-up;
-//@include grid-item-widths-desk;
-//@include grid-item-widths-desk-wide;
+//@include grid__item;
+//@include grid__item-widths-global;
+//@include grid__item-widths-palm;
+//@include grid__item-widths-lap;
+//@include grid__item-widths-portable;
+//@include grid__item-widths-lap-and-up;
+//@include grid__item-widths-desk;
+//@include grid__item-widths-desk-wide;
 
 /**
  * Grid column modifiers
@@ -33,21 +34,21 @@
 /**
  * Grid column push
  */
-//@include grid-item-push-global;
-//@include grid-item-push-palm;
-//@include grid-item-push-lap;
-//@include grid-item-push-portable;
-//@include grid-item-push-lap-and-up;
-//@include grid-item-push-desk;
-//@include grid-item-push-desk-wide;
+//@include grid__item-push-global;
+//@include grid__item-push-palm;
+//@include grid__item-push-lap;
+//@include grid__item-push-portable;
+//@include grid__item-push-lap-and-up;
+//@include grid__item-push-desk;
+//@include grid__item-push-desk-wide;
 
 /**
  * Grid column pull
  */
-//@include grid-item-pull-global;
-//@include grid-item-pull-palm;
-//@include grid-item-pull-lap;
-//@include grid-item-pull-portable;
-//@include grid-item-pull-lap-and-up;
-//@include grid-item-pull-desk;
-//@include grid-item-pull-desk-wide;
+//@include grid__item-pull-global;
+//@include grid__item-pull-palm;
+//@include grid__item-pull-lap;
+//@include grid__item-pull-portable;
+//@include grid__item-pull-lap-and-up;
+//@include grid__item-pull-desk;
+//@include grid__item-pull-desk-wide;

@@ -15,7 +15,7 @@
  * Demo: jsfiddle.net/inuitcss/WS4Ge
  *
  */
-@mixin grid-item-widths-generate($namespace: "", $base-classname: $grid-wrap-item-classname) {
+@mixin grid__item-widths-generate($namespace: "", $base-classname: $grid-wrap-item-classname) {
   /**
   * Whole
   */
@@ -104,41 +104,41 @@
   .#{$base-classname}--#{$namespace}11#{$grid-item-unit-delimiter}12  { width: 91.666%;}
 }
 
-@mixin grid-item-widths-global {
+@mixin grid__item-widths-global {
   @include grid-item-widths-generate();
 }
 
-@mixin grid-item-widths-palm {
+@mixin grid__item-widths-palm {
   @include media-query(palm) {
     @include grid-item-widths-generate("palm-");
   }
 }
 
-@mixin grid-item-widths-lap {
+@mixin grid__item-widths-lap {
   @include media-query(lap) {
     @include grid-item-widths-generate("lap-");
   }
 }
 
-@mixin grid-item-widths-lap-and-up {
+@mixin grid__item-widths-lap-and-up {
   @include media-query(lap-and-up) {
     @include grid-item-widths-generate("lap-and-up-");
   }
 }
 
-@mixin grid-item-widths-portable {
+@mixin grid__item-widths-portable {
   @include media-query(portable) {
     @include grid-item-widths-generate("portable-");
   }
 }
 
-@mixin grid-item-widths-desk {
+@mixin grid__item-widths-desk {
   @include media-query(desk) {
     @include grid-item-widths-generate("desk-");
   }
 }
 
-@mixin grid-item-widths-desk-wide {
+@mixin grid__item-widths-desk-wide {
   @include media-query(desk-wide) {
     @include grid-item-widths-generate("desk-wide-");
   }

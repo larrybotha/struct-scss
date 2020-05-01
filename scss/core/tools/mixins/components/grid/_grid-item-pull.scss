@@ -5,7 +5,7 @@
  * Pull classes, to move grid items over to the right by certain amounts.
  */
 
-@mixin grid-item-pull-generate($namespace: "", $base-classname: $grid-wrap-item-classname) {
+@mixin grid__item-pull-generate($namespace: "", $base-classname: $grid-wrap-item-classname) {
   /**
    * Not a particularly great selector, but the DRYest way to do things.
    */
@@ -93,41 +93,41 @@
 }
 
 
-@mixin grid-item-pull-global {
+@mixin grid__item-pull-global {
   @include grid-item-pull-generate();
 }
 
-@mixin grid-item-pull-palm {
+@mixin grid__item-pull-palm {
   @include media-query(palm) {
     @include grid-item-pull-generate("palm-");
   }
 }
 
-@mixin grid-item-pull-lap {
+@mixin grid__item-pull-lap {
   @include media-query(lap) {
     @include grid-item-pull-generate("lap-");
   }
 }
 
-@mixin grid-item-pull-lap-and-up {
+@mixin grid__item-pull-lap-and-up {
   @include media-query(lap-and-up) {
     @include grid-item-pull-generate("lap-and-up-");
   }
 }
 
-@mixin grid-item-pull-portable {
+@mixin grid__item-pull-portable {
   @include media-query(portable) {
     @include grid-item-pull-generate("portable-");
   }
 }
 
-@mixin grid-item-pull-desk {
+@mixin grid__item-pull-desk {
   @include media-query(desk) {
     @include grid-item-pull-generate("desk-");
   }
 }
 
-@mixin grid-item-pull-desk-wide {
+@mixin grid__item-pull-desk-wide {
   @include media-query(desk-wide) {
     @include grid-item-pull-generate("desk-wide-");
   }
