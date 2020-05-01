@@ -100,41 +100,41 @@
 }
 
 @mixin grid__item-push-global {
-  @include grid-item-push-generate();
+  @include grid__item-push-generate();
 }
 
 @mixin grid__item-push-palm {
   @include media-query(palm) {
-    @include grid-item-push-generate("palm-");
+    @include grid__item-push-generate("palm-");
   }
 }
 
 @mixin grid__item-push-lap {
   @include media-query(lap) {
-    @include grid-item-push-generate("lap-");
+    @include grid__item-push-generate("lap-");
   }
 }
 
 @mixin grid__item-push-lap-and-up {
   @include media-query(lap-and-up) {
-    @include grid-item-push-generate("lap-and-up-");
+    @include grid__item-push-generate("lap-and-up-");
   }
 }
 
 @mixin grid__item-push-portable {
   @include media-query(portable) {
-    @include grid-item-push-generate("portable-");
+    @include grid__item-push-generate("portable-");
   }
 }
 
 @mixin grid__item-push-desk {
   @include media-query(desk) {
-    @include grid-item-push-generate("desk-");
+    @include grid__item-push-generate("desk-");
   }
 }
 
 @mixin grid__item-push-desk-wide {
   @include media-query(desk-wide) {
-    @include grid-item-push-generate("desk-wide-");
+    @include grid__item-push-generate("desk-wide-");
   }
 }
