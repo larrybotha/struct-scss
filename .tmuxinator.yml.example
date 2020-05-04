@@ -8,3 +8,4 @@ windows:
         - vim
         - npm run build:watch
         - npm run test:watch
+        -
