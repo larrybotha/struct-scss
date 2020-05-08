@@ -1,4 +1,4 @@
-name: styleguide
+name: struct-scss
 root: <%= Dir.pwd %>
 
 windows:
