@@ -45,6 +45,12 @@
   }
 }
 
+@mixin create-grid-wrap-modifier($modifier, $classname: $grid-wrap-classname) {
+  .#{$classname}--#{$modifier} {
+    @content;
+  }
+}
+
 @mixin grid-wrap($classname: $grid-wrap-classname) {
   .#{$classname} { @extend %grid-wrap;}
 }
