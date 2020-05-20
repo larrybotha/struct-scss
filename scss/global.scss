@@ -24,8 +24,8 @@
  *
  * normalize.css requires `includePaths: ['node_modules/normalize.css']` in your Sass config
  */
-@import "core/reset";
 @import "normalize";
+@import "core/reset";
 
 /**
  * import global styles
