@@ -3,7 +3,8 @@
 \*------------------------------------*/
 @mixin f8-alert {
   border: 1px solid;
-  @include px-to-rem(padding, $spacing-scalar * $fs-base);
+  padding: px-to-rem($spacing-scalar * $fs-base);
+
 
   & p:last-child,
   & ul:last-child { margin-bottom: 0;}
