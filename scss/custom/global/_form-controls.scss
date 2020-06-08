@@ -22,5 +22,3 @@ input[type="checkbox"] { width: auto;}
 
 input[type="password"] { letter-spacing: .3em;} // space password to match actual text
 input[type="password"]::placeholder { letter-spacing: 0;}
-
-.field { @include u-margin--bottom;}
