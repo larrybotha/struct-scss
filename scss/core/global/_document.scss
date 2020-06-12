@@ -1,6 +1,12 @@
 /*------------------------------------*\
     DOCUMENT
 \*------------------------------------*/
+:root {
+  --#{$custom-properties-prefix}clr-background: #{$clr-background};
+  --#{$custom-properties-prefix}clr-base: #{$clr-base};
+  --#{$custom-properties-prefix}clr-selection: #{$clr-selection};
+}
+
 html {
   /*
    * Can't use relative units on html due to bug on
@@ -13,7 +19,7 @@ html {
 }
 
 html, body, button, input, select, textarea {
-  color: $clr-base;
+  color: var(--#{$custom-properties-prefix}clr-base);
 }
 
 /**
@@ -22,7 +28,7 @@ html, body, button, input, select, textarea {
 button, input, select, textarea { background-image: none;}
 
 body {
-  background-color: #fff;
+  background-color: var(--#{$custom-properties-prefix}clr-background);
   font-size: 1em;
   line-height: $line-height-base;
   margin: 0;
@@ -33,12 +39,12 @@ body {
  * These selection declarations have to be separate
  */
 ::-moz-selection {
-  background: $clr-selection;
+  background: var(--#{$custom-properties-prefix}clr-selection);
   color: #fff;
   text-shadow: none;
 }
 ::selection {
-  background: $clr-selection;
+  background: var(--#{$custom-properties-prefix}clr-selection);
   color: #fff;
   text-shadow: none;
 }

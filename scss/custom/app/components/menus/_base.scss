@@ -20,7 +20,7 @@
 
       & > a {
         display: block;
-        color: $clr-primary;
+        color: var(--s-clr-primary);
         line-height: 3;
         outline: 0;
         padding-left: 1em;

@@ -5,6 +5,11 @@
  * This section houses styles for the base elements of the page, generally body and
  * html
  */
+:root {
+  --s-clr-primary-dk: #{$clr-primary-dk};
+  --s-clr-primary: #{$clr-primary};
+  --s-clr-primary-lt: #{$clr-primary-lt};
+}
 
 
 /**

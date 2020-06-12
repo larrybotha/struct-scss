@@ -8,7 +8,7 @@
  *
  */
 @mixin f8-rule {
-  color: $clr-base;
+  color: var(--#{$custom-properties-prefix}clr-base);
   border: none;
   border-bottom-width: 1px;
   border-bottom-style: solid;

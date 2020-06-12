@@ -1,8 +1,7 @@
 /*------------------------------------*\
     COLOR VARIABLES
 \*------------------------------------*/
-$clr-brand: #333;
-$clr-selection: $clr-brand;
+$clr-selection: #333;
 
 
 
@@ -20,7 +19,7 @@ $clr-base-dk   : darken($clr-base, 10%);
 /**
  * The primary non-base color
  */
-$clr-primary      : $clr-brand;
+$clr-primary      : skyblue;
 $clr-primary-lt   : lighten($clr-primary, 20%);
 $clr-primary-ltr  : lighten($clr-primary, 35%);
 $clr-primary-ltst : lighten($clr-primary, 40%);
