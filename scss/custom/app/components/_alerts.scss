@@ -4,25 +4,18 @@
 $alert-types: success, danger, error, info;
 
 @if false {
+  %alert {
+    @include f8-alert;
+  }
+
   @each $alert-type in $alert-types {
     .alert--#{$alert-type} {
-      @include f8-alert;
+      @extend %alert;
     }
   }
 
   .alert--success {
-    color: $clr-success;
-    border-color: $clr-success-ltr;
-  }
-
-  .alert--danger,
-  .alert--error {
-    color: $clr-danger;
-    border-color: $clr-danger-ltr;
-  }
-
-  .alert--info {
-    color: $clr-info;
-    border-color: $clr-info-ltr;
+    color: $clr-ntrl-min;
+    border-color: $clr-success-dk
   }
 }
