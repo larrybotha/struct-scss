@@ -6,7 +6,14 @@
     "type": "git",
     "url": "https://github.com/larrybotha/struct-scss.git"
   },
-  "keywords": ["bem", "css", "itcss", "sass", "scss", "smacss"],
+  "keywords": [
+    "bem",
+    "css",
+    "itcss",
+    "sass",
+    "scss",
+    "smacss"
+  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/larrybotha/struct-scss/issues"
