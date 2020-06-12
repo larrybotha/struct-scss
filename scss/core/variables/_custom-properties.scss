@@ -1,0 +1,11 @@
+/*------------------------------------*\
+    CUSTOM PROPERTIES
+\*------------------------------------*/
+/**
+ * This allows custom properties to be defined in core without forcing the user
+ * into any specific choice of prefix
+ *
+ * Custom properties defined in core can be easily given a different prefix, or use
+ * no prefix if this variable is set to ''
+ */
+$custom-properties-prefix: s-;
