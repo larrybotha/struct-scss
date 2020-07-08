@@ -22,6 +22,14 @@
   .#{$classname} { @extend %grid__item;}
 }
 
+@mixin create-grid-col-modifier($modifier, $classname: $grid-wrap-item-classname) {
+  .#{$classname}--#{$modifier} {
+    @extend %grid__item;
+
+    @content;
+  }
+}
+
 @mixin grid__item--tall($classname: $grid-wrap-item-classname) {
   /**
    * Allow the content of a column to occupy the full height of the
@@ -32,10 +40,11 @@
    *
    * Does not work for legacy browsers
    */
-  .#{$classname}--tall {
-    @extend %grid__item;
 
-    @if $use-flexbox-grid { display: flex;}
+  @include create-grid-col-modifier('tall') {
+    @if $use-flexbox-grid {
+      display: flex;
+    }
   }
 }
 
@@ -49,9 +58,7 @@
    * Works mostly on <= IE9, mostly
    * Requires .oldie class on html tag
    */
-  .#{$classname}--auto {
-    @extend %grid__item;
-
+  @include create-grid-col-modifier('auto') {
     @if $use-legacy-grid {
       .oldie & { display: table-cell;}
     }
@@ -72,8 +79,7 @@
    *
    * Works mostly on <= IE9, mostly
    */
-  .#{$classname}--shrink-wrap {
-    @extend %grid__item;
+  @include create-grid-col-modifier('shrink-wrap') {
     width: auto;
 
     @if $use-legacy-grid {
@@ -83,3 +89,4 @@
     @if $use-flexbox-grid {}
   }
 }
+
