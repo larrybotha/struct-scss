@@ -8,10 +8,13 @@
   i.icon
     i.icon__inner
       svg
-        use(xlink:href="my-icon-id")
+        use(href="my-icon-id")
 
  */
-@mixin f8-inline-svg-icon { display: inline-block;}
+@mixin f8-inline-svg-icon {
+  display: inline-block;
+  vertical-align: middle;
+}
 
   @mixin f8-inline-svg-icon__inner {
     display: inline;
