@@ -102,7 +102,7 @@
   * centered grids align grid items centrally without needing to use push or pull
   * classes.
   */
-  %gw--center {
+  .#{$classname}--right {
     @extend %grid-wrap;
 
     @if $use-legacy-grid {
