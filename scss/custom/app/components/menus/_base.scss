@@ -20,7 +20,7 @@
 
       & > a {
         display: block;
-        color: var(--s-clr-primary);
+        color: var(--struct-clr-primary);
         line-height: 3;
         outline: 0;
         padding-inline-start: 1em;
@@ -70,7 +70,7 @@
 
         a:hover + &,
         &:hover {
-          border: 1px solid $clr-base;
+          border: 1px solid var(--struct-clr-base);
           max-height: none;
           overflow: visible;
         }

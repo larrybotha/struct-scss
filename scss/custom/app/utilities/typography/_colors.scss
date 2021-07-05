@@ -1,22 +1,22 @@
 /*------------------------------------*\
     FONT COLOR UTILITIES
 \*------------------------------------*/
- //.u-fc--base { color: var(--s-clr-base);}
+ //.u-fc--base { color: var(--struct-clr-base);}
  //a.u-fc--base,
  //button.u-fc--base {
    //@include u-fc--link-states(
-     //var(--s-clr-base),
-     //var(--s-clr-base-lt),
-     //var(--s-clr-base-dk)
+     //var(--struct-clr-base),
+     //var(--struct-clr-base-lt),
+     //var(--struct-clr-base-dk)
    //);
  //}
 
-//.u-fc--primary { color: var(--s-clr-primary);}
+//.u-fc--primary { color: var(--struct-clr-primary);}
  //a.u-fc--primary,
  //button.u-fc--primary {
    //@include u-fc--link-states(
-     //var(--s-clr-primary),
-     //var(--s-clr-primary-lt),
-     //var(--s-clr-primary-dk)
+     //var(--struct-clr-primary),
+     //var(--struct-clr-primary-lt),
+     //var(--struct-clr-primary-dk)
    //);
  //}
