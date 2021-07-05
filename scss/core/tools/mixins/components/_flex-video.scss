@@ -3,7 +3,7 @@
 \*------------------------------------*/
 @mixin f8-flex-video {
   @include f8-ratio-object(percentage(3/4));
-  padding-top: 25px;
+  padding-block-start: 25px;
 
   & iframe,
   & object,
@@ -18,10 +18,10 @@
   }
 
 @mixin f8-flex-video--widescreen {
-  padding-top: 0;
+  padding-block-start: 0;
 
-  &:before { padding-bottom: percentage(9/16); /* 16:9; */}
+  &:before { padding-block-end: percentage(9/16); /* 16:9; */}
 }
 @mixin f8-flex-video--vimeo {
-  padding-top: 0;
+  padding-block-start: 0;
 }

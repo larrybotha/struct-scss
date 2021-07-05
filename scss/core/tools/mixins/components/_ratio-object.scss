@@ -6,21 +6,21 @@
  *
  * http://bit.ly/19I8iR8
  */
-@mixin f8-ratio-object($padBottom: 100%) {
+@mixin f8-ratio-object($pad_block_end: 100%) {
   position: relative;
   overflow: hidden;
 
   &:before {
     content: "";
     display: block;
-    padding-bottom: $padBottom;
+    padding-block-end: $pad_block_end;
   }
 }
 
   @mixin f8-ratio-object__inner {
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    inset-block-start: 0;
+    inset-inline-start: 0;
+    inset-inline-end: 0;
+    inset-block-end: 0;
   }

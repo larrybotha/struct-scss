@@ -1,7 +1,7 @@
 /*------------------------------------*\
     ANIMATIONS
 \*------------------------------------*/
-// @keyframes fade-in--from-top {
+// @keyframes fade-in--from-block-start {
 //   0% {
 //     opacity: 0;
 //     transform: translateY(-20px);
@@ -13,5 +13,5 @@
 //   }
 // }
 
-// %anim-fade-in--from-top { animation-name: fade-in--from-top;}
-// .anim-fade-in--from-top { @extend %anim-fade-in--from-top;}
+// %anim-fade-in--from-block-start { animation-name: fade-in--from-block-start;}
+// .anim-fade-in--from-block-start { @extend %anim-fade-in--from-block-start;}

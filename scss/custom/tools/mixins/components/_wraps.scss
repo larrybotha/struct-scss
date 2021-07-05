@@ -8,13 +8,13 @@ $wrap-widths: (
 );
 
 @mixin wrap-margin {
-  margin-right: auto;
-  margin-left: auto;
+  margin-inline-end: auto;
+  margin-inline-start: auto;
 }
 
 @mixin wrap-padding {
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
+  padding-inline-start: 1.5rem;
+  padding-inline-end: 1.5rem;
 }
 
 @mixin wrap-base {

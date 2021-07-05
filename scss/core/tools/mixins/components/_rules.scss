@@ -10,9 +10,9 @@
 @mixin f8-rule {
   color: var(--#{$custom-properties-prefix}clr-base);
   border: none;
-  border-bottom-width: 1px;
-  border-bottom-style: solid;
-  margin-bottom: #{$spacing-scalar}rem;
+  border-block-end-width: 1px;
+  border-block-end-style: solid;
+  margin-block-end: #{$spacing-scalar}rem;
 }
 
 
@@ -20,7 +20,7 @@
  * Dotted rules
  */
 @mixin f8-rule--dotted {
-  border-bottom-style: dotted;
+  border-block-end-style: dotted;
 }
 
 
@@ -28,7 +28,7 @@
  * Dashed rules
  */
 @mixin f8-rule--dashed {
-  border-bottom-style: dashed;
+  border-block-end-style: dashed;
 }
 
 
@@ -41,9 +41,9 @@
   &:after {
     content: "\00A7";
     position: absolute;
-    top:   0;
-    right: 0;
-    left:  0;
+    inset-block-start:   0;
+    inset-inline-end: 0;
+    inset-inline-start:  0;
     line-height: 0;
     text-align: center;
   }
