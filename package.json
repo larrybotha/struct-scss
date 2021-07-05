@@ -31,15 +31,15 @@
     "semantic-release": "semantic-release"
   },
   "devDependencies": {
-    "commitizen": "^4.0.3",
-    "conventional-changelog": "^3.1.18",
-    "conventional-changelog-cli": "^2.0.31",
-    "cz-conventional-changelog": "^3.1.0",
-    "jest": "^25.1.0",
-    "node-sass": "^4.13.1",
+    "commitizen": "^4.2.4",
+    "conventional-changelog": "^3.1.24",
+    "conventional-changelog-cli": "^2.1.1",
+    "cz-conventional-changelog": "^3.3.0",
+    "jest": "^27.0.6",
+    "node-sass": "^6.0.1",
     "normalize.css": "^7.0.0",
-    "sass": "^1.25.0",
-    "semantic-release": "^17.0.4"
+    "sass": "^1.35.1",
+    "semantic-release": "^17.4.4"
   },
   "peerDependencies": {
     "normalize.css": "*"
