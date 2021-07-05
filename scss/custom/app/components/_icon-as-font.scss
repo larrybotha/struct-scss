@@ -1,4 +1,4 @@
-@if $use-icon-as-font {
+@if global-variable-exists('use-icon-as-font') and $use-icon-as-font {
 /*------------------------------------*\
     $ICONS
 \*------------------------------------*/
