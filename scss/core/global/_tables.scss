@@ -1,3 +1,4 @@
+@use "sass:math";
 /*------------------------------------*\
     TABLES
 \*------------------------------------*/
@@ -5,9 +6,9 @@ table { width: 100%;}
 
 th, td {
   text-align: start;
-  padding: #{$spacing-scalar / 2}rem;
+  padding: #{math.div($spacing-scalar, 2)}rem;
 
   @include media-query(palm){
-    padding: #{$spacing-scalar / 4}rem;
+    padding: #{math.div($spacing-scalar, 4)}rem;
   }
 }
