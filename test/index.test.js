@@ -14,6 +14,8 @@ const entryPoints = [
   "core/_support.scss",
   "core/_reset.scss",
   "core/tools/mixins/components/grid/_index.scss",
+
+  '../test/test.scss'
 ].map((p) => `../scss/${p}`);
 
 describe.each`
