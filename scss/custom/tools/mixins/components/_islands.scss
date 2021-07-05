@@ -3,26 +3,26 @@
 \*------------------------------------*/
 $island-pad: px-to-rem($spacing-scalar * $fs-base * 4);
 
-// @mixin island--large--top { padding-top: $island-pad-large;}
-// @mixin island--large--bottom { padding-bottom: $island-pad-large;}
+// @mixin island--large--block-start { padding-block-start: $island-pad-large;}
+// @mixin island--large--block-end { padding-block-end: $island-pad-large;}
 
 // @mixin island--large {
-//   @include island--large--top;
-//   @include island--large--bottom;
+//   @include island--large--block-start;
+//   @include island--large--block-end;
 // }
 
-@mixin island--top { padding-top: $island-pad;}
-@mixin island--bottom { padding-bottom: $island-pad;}
+@mixin island--block-start { padding-block-start: $island-pad;}
+@mixin island--block-end { padding-block-end: $island-pad;}
 
 @mixin island {
-  @include island--top;
-  @include island--bottom;
+  @include island--block-start;
+  @include island--block-end;
 }
 
-// @mixin island--small--top { padding-top: $island-pad-small;}
-// @mixin island--small--bottom { padding-bottom: $island-pad-small;}
+// @mixin island--small--block-start { padding-block-start: $island-pad-small;}
+// @mixin island--small--block-end { padding-block-end: $island-pad-small;}
 
 // @mixin island--small {
-//   @include island--small--top;
-//   @include island--small--bottom;
+//   @include island--small--block-start;
+//   @include island--small--block-end;
 // }

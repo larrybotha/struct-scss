@@ -2,94 +2,94 @@
     $PULL
 \*------------------------------------*/
 /**
- * Pull classes, to move grid items over to the right by certain amounts.
+ * Pull classes, to move grid items over to the inset-inline-end by certain amounts.
  */
 
 @mixin grid__item-pull-generate($namespace: "", $base-classname: $grid-wrap-item-classname) {
   /**
    * Not a particularly great selector, but the DRYest way to do things.
    */
-  [class*="#{$base-classname}--pull-"]{ position:relative; }
+  [class*="#{$base-classname}--pull-"] { position:relative; }
 
 
   /**
    * Whole
    */
-  .#{$base-classname}--pull-#{$namespace}1#{$grid-item-unit-delimiter}1   { right:100%; }
+  .#{$base-classname}--pull-#{$namespace}1#{$grid-item-unit-delimiter}1   { inset-inline-end: 100%; }
 
   /**
    * Halves
    */
-  .#{$base-classname}--pull-#{$namespace}1#{$grid-item-unit-delimiter}2   { right:50%; }
+  .#{$base-classname}--pull-#{$namespace}1#{$grid-item-unit-delimiter}2   { inset-inline-end: 50%; }
 
   /**
    * Thirds
    */
-  .#{$base-classname}--pull-#{$namespace}1#{$grid-item-unit-delimiter}3   { right:33.333%; }
-  .#{$base-classname}--pull-#{$namespace}2#{$grid-item-unit-delimiter}3   { right:66.666%; }
+  .#{$base-classname}--pull-#{$namespace}1#{$grid-item-unit-delimiter}3   { inset-inline-end: 33.333%; }
+  .#{$base-classname}--pull-#{$namespace}2#{$grid-item-unit-delimiter}3   { inset-inline-end: 66.666%; }
 
   /**
    * Quarters
    */
-  .#{$base-classname}--pull-#{$namespace}1#{$grid-item-unit-delimiter}4   { right:25%; }
+  .#{$base-classname}--pull-#{$namespace}1#{$grid-item-unit-delimiter}4   { inset-inline-end: 25%; }
   .#{$base-classname}--pull-#{$namespace}2#{$grid-item-unit-delimiter}4   { @extend .#{$base-classname}--pull-#{$namespace}1#{$grid-item-unit-delimiter}2; }
-  .#{$base-classname}--pull-#{$namespace}3#{$grid-item-unit-delimiter}4   { right:75%; }
+  .#{$base-classname}--pull-#{$namespace}3#{$grid-item-unit-delimiter}4   { inset-inline-end: 75%; }
 
   /**
    * Fifths
    */
-  .#{$base-classname}--pull-#{$namespace}1#{$grid-item-unit-delimiter}5   { right:20%; }
-  .#{$base-classname}--pull-#{$namespace}2#{$grid-item-unit-delimiter}5   { right:40%; }
-  .#{$base-classname}--pull-#{$namespace}3#{$grid-item-unit-delimiter}5   { right:60%; }
-  .#{$base-classname}--pull-#{$namespace}4#{$grid-item-unit-delimiter}5   { right:80%; }
+  .#{$base-classname}--pull-#{$namespace}1#{$grid-item-unit-delimiter}5   { inset-inline-end: 20%; }
+  .#{$base-classname}--pull-#{$namespace}2#{$grid-item-unit-delimiter}5   { inset-inline-end: 40%; }
+  .#{$base-classname}--pull-#{$namespace}3#{$grid-item-unit-delimiter}5   { inset-inline-end: 60%; }
+  .#{$base-classname}--pull-#{$namespace}4#{$grid-item-unit-delimiter}5   { inset-inline-end: 80%; }
 
   /**
    * Sixths
    */
-  .#{$base-classname}--pull-#{$namespace}1#{$grid-item-unit-delimiter}6   { right:16.666%; }
+  .#{$base-classname}--pull-#{$namespace}1#{$grid-item-unit-delimiter}6   { inset-inline-end: 16.666%; }
   .#{$base-classname}--pull-#{$namespace}2#{$grid-item-unit-delimiter}6   { @extend .#{$base-classname}--pull-#{$namespace}1#{$grid-item-unit-delimiter}3; }
   .#{$base-classname}--pull-#{$namespace}3#{$grid-item-unit-delimiter}6   { @extend .#{$base-classname}--pull-#{$namespace}1#{$grid-item-unit-delimiter}2; }
   .#{$base-classname}--pull-#{$namespace}4#{$grid-item-unit-delimiter}6   { @extend .#{$base-classname}--pull-#{$namespace}2#{$grid-item-unit-delimiter}3; }
-  .#{$base-classname}--pull-#{$namespace}5#{$grid-item-unit-delimiter}6   { right:83.333%; }
+  .#{$base-classname}--pull-#{$namespace}5#{$grid-item-unit-delimiter}6   { inset-inline-end: 83.333%; }
 
   /**
    * Eighths
    */
-  .#{$base-classname}--pull-#{$namespace}1#{$grid-item-unit-delimiter}8   { right:12.5%; }
+  .#{$base-classname}--pull-#{$namespace}1#{$grid-item-unit-delimiter}8   { inset-inline-end: 12.5%; }
   .#{$base-classname}--pull-#{$namespace}2#{$grid-item-unit-delimiter}8   { @extend .#{$base-classname}--pull-#{$namespace}1#{$grid-item-unit-delimiter}4; }
-  .#{$base-classname}--pull-#{$namespace}3#{$grid-item-unit-delimiter}8   { right:37.5%; }
+  .#{$base-classname}--pull-#{$namespace}3#{$grid-item-unit-delimiter}8   { inset-inline-end: 37.5%; }
   .#{$base-classname}--pull-#{$namespace}4#{$grid-item-unit-delimiter}8   { @extend .#{$base-classname}--pull-#{$namespace}1#{$grid-item-unit-delimiter}2; }
-  .#{$base-classname}--pull-#{$namespace}5#{$grid-item-unit-delimiter}8   { right:62.5%; }
+  .#{$base-classname}--pull-#{$namespace}5#{$grid-item-unit-delimiter}8   { inset-inline-end: 62.5%; }
   .#{$base-classname}--pull-#{$namespace}6#{$grid-item-unit-delimiter}8   { @extend .#{$base-classname}--pull-#{$namespace}3#{$grid-item-unit-delimiter}4; }
-  .#{$base-classname}--pull-#{$namespace}7#{$grid-item-unit-delimiter}8   { right:87.5%; }
+  .#{$base-classname}--pull-#{$namespace}7#{$grid-item-unit-delimiter}8   { inset-inline-end: 87.5%; }
 
   /**
    * Tenths
    */
-  .#{$base-classname}--pull-#{$namespace}1#{$grid-item-unit-delimiter}10  { right:10%; }
+  .#{$base-classname}--pull-#{$namespace}1#{$grid-item-unit-delimiter}10  { inset-inline-end: 10%; }
   .#{$base-classname}--pull-#{$namespace}2#{$grid-item-unit-delimiter}10  { @extend .#{$base-classname}--pull-#{$namespace}1#{$grid-item-unit-delimiter}5; }
-  .#{$base-classname}--pull-#{$namespace}3#{$grid-item-unit-delimiter}10  { right:30%; }
+  .#{$base-classname}--pull-#{$namespace}3#{$grid-item-unit-delimiter}10  { inset-inline-end: 30%; }
   .#{$base-classname}--pull-#{$namespace}4#{$grid-item-unit-delimiter}10  { @extend .#{$base-classname}--pull-#{$namespace}2#{$grid-item-unit-delimiter}5; }
   .#{$base-classname}--pull-#{$namespace}5#{$grid-item-unit-delimiter}10  { @extend .#{$base-classname}--pull-#{$namespace}1#{$grid-item-unit-delimiter}2; }
   .#{$base-classname}--pull-#{$namespace}6#{$grid-item-unit-delimiter}10  { @extend .#{$base-classname}--pull-#{$namespace}3#{$grid-item-unit-delimiter}5; }
-  .#{$base-classname}--pull-#{$namespace}7#{$grid-item-unit-delimiter}10  { right:70%; }
+  .#{$base-classname}--pull-#{$namespace}7#{$grid-item-unit-delimiter}10  { inset-inline-end: 70%; }
   .#{$base-classname}--pull-#{$namespace}8#{$grid-item-unit-delimiter}10  { @extend .#{$base-classname}--pull-#{$namespace}4#{$grid-item-unit-delimiter}5; }
-  .#{$base-classname}--pull-#{$namespace}9#{$grid-item-unit-delimiter}10  { right:90%; }
+  .#{$base-classname}--pull-#{$namespace}9#{$grid-item-unit-delimiter}10  { inset-inline-end: 90%; }
 
   /**
    * Twelfths
    */
-  .#{$base-classname}--pull-#{$namespace}1#{$grid-item-unit-delimiter}12  { right:8.333%; }
+  .#{$base-classname}--pull-#{$namespace}1#{$grid-item-unit-delimiter}12  { inset-inline-end: 8.333%; }
   .#{$base-classname}--pull-#{$namespace}2#{$grid-item-unit-delimiter}12  { @extend .#{$base-classname}--pull-#{$namespace}1#{$grid-item-unit-delimiter}6; }
   .#{$base-classname}--pull-#{$namespace}3#{$grid-item-unit-delimiter}12  { @extend .#{$base-classname}--pull-#{$namespace}1#{$grid-item-unit-delimiter}4; }
   .#{$base-classname}--pull-#{$namespace}4#{$grid-item-unit-delimiter}12  { @extend .#{$base-classname}--pull-#{$namespace}1#{$grid-item-unit-delimiter}3; }
-  .#{$base-classname}--pull-#{$namespace}5#{$grid-item-unit-delimiter}12  { right:41.666% }
+  .#{$base-classname}--pull-#{$namespace}5#{$grid-item-unit-delimiter}12  { inset-inline-end: 41.666% }
   .#{$base-classname}--pull-#{$namespace}6#{$grid-item-unit-delimiter}12  { @extend .#{$base-classname}--pull-#{$namespace}1#{$grid-item-unit-delimiter}2; }
-  .#{$base-classname}--pull-#{$namespace}7#{$grid-item-unit-delimiter}12  { right:58.333%; }
+  .#{$base-classname}--pull-#{$namespace}7#{$grid-item-unit-delimiter}12  { inset-inline-end: 58.333%; }
   .#{$base-classname}--pull-#{$namespace}8#{$grid-item-unit-delimiter}12  { @extend .#{$base-classname}--pull-#{$namespace}2#{$grid-item-unit-delimiter}3; }
   .#{$base-classname}--pull-#{$namespace}9#{$grid-item-unit-delimiter}12  { @extend .#{$base-classname}--pull-#{$namespace}3#{$grid-item-unit-delimiter}4; }
   .#{$base-classname}--pull-#{$namespace}10#{$grid-item-unit-delimiter}12 { @extend .#{$base-classname}--pull-#{$namespace}5#{$grid-item-unit-delimiter}6; }
-  .#{$base-classname}--pull-#{$namespace}11#{$grid-item-unit-delimiter}12 { right:91.666%; }
+  .#{$base-classname}--pull-#{$namespace}11#{$grid-item-unit-delimiter}12 { inset-inline-end: 91.666%; }
 }
 
 

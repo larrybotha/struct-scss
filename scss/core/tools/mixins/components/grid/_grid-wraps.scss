@@ -28,8 +28,8 @@
 
 %grid-wrap {
   list-style: none;
-  margin-bottom: 0;
-  margin-left: -$grid-item-gutter;
+  margin-block-end: 0;
+  margin-inline-start: -$grid-item-gutter;
 
   @if $use-legacy-grid {
     .oldie & {
@@ -66,7 +66,7 @@
     @if $use-legacy-grid {
       .oldie & {
         direction: rtl;
-        text-align: right;
+        text-align: end;
       }
     }
 
@@ -76,7 +76,7 @@
       @if $use-legacy-grid {
         .oldie & {
           direction: ltr;
-          text-align: left;
+          text-align: start;
         }
       }
     }
@@ -90,9 +90,9 @@
   */
   .#{$classname}--no-gutter {
     @extend %grid-wrap;
-    margin-left: 0;
+    margin-inline-start: 0;
 
-    & > %grid__item { padding-left: 0;}
+    & > %grid__item { padding-inline-start: 0;}
   }
 }
 
@@ -102,7 +102,7 @@
   * centered grids align grid items centrally without needing to use push or pull
   * classes.
   */
-  .#{$classname}--right {
+  .#{$classname}--center {
     @extend %grid-wrap;
 
     @if $use-legacy-grid {
@@ -113,28 +113,28 @@
 
     & > %grid__item {
       @if $use-legacy-grid {
-        .oldie & { text-align: left;}
+        .oldie & { text-align: start;}
       }
     }
   }
 }
 
-@mixin grid-wrap--right($classname: $grid-wrap-classname) {
+@mixin grid-wrap--inline-end($classname: $grid-wrap-classname) {
   /**
-   * right aligned grids
+   * inline-end aligned grids (right-aligned in ltr layouts, else left-aligned)
    */
-  .#{$classname}--right {
+  .#{$classname}--inline-end {
     @extend %grid-wrap;
 
     @if $use-legacy-grid {
-      .oldie & { text-align: right;}
+      .oldie & { text-align: end;}
     }
 
     @if $use-flexbox-grid { justify-content: flex-end;}
 
     & > %grid__item {
       @if $use-legacy-grid {
-        .oldie & { text-align: left;}
+        .oldie & { text-align: start;}
       }
     }
   }
@@ -159,11 +159,11 @@
 }
 
 
-@mixin grid-wrap--bottom($classname: $grid-wrap-classname) {
+@mixin grid-wrap--block-end($classname: $grid-wrap-classname) {
   /**
    * bottom aligned grids
    */
-  .#{$classname}--bottom {
+  .#{$classname}--block-end {
     @extend %grid-wrap;
 
     @if $use-flexbox-grid { align-items: flex-end;}

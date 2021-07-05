@@ -7,24 +7,26 @@
 }
 
     @mixin f8-media-object__img {
-      float: left;
-      margin-right: #{$spacing-scalar}rem;
+      float: inline-start;
+      margin-inline-end: #{$spacing-scalar}rem;
 
       & img { display: block;}
     }
 
     /**
-     * Reversed image location (right instead of left).
+     * Reversed image location
+     * - right instead of left on ltr
+     * - left instead of right on rtl
      */
     @mixin f8-media-object__img--rev {
       @include f8-media-object__img;
-      float: right;
-      margin-left: #{$spacing-scalar}rem;
+      float: inline-end;
+      margin-inline-start: #{$spacing-scalar}rem;
     }
 
     @mixin f8-media-object__body {
       display: block;
       overflow: hidden;
 
-      &, & > :last-child { margin-bottom: 0;}
+      &, & > :last-child { margin-block-end: 0;}
     }

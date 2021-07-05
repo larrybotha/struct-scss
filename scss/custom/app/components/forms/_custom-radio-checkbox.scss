@@ -37,8 +37,8 @@
   %custom-check-radio__icon--true {
     @extend %custom-check-radio__icon;
     position: absolute;
-    top: 0;
-    left: 0;
+    inset-block-start: 0;
+    inset-inline-start: 0;
     opacity: 0;
   }
   .custom-check-radio__icon--true { @extend %custom-check-radio__icon--true;}

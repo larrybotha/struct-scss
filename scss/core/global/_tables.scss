@@ -4,7 +4,7 @@
 table { width: 100%;}
 
 th, td {
-  text-align: left;
+  text-align: start;
   padding: #{$spacing-scalar / 2}rem;
 
   @include media-query(palm){
