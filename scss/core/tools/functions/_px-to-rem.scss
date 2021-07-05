@@ -1,3 +1,4 @@
+@use "sass:math";
 /*------------------------------------*\
     $PX TO REM
 \*------------------------------------*/
@@ -25,9 +26,18 @@
  */
 
 @function px-to-rem($val, $root-val: 16px) {
-  $val: if(unitless($val), $val * 1px, $val);
-  $divisor: if(global-variable-exists(fs-base), $fs-base, $root-val);
+  $unit: math.unit($val);
 
-  @return $val / $divisor + rem;
+  @if ($unit != '' and $unit != 'px') {
+    @error("px-to-rem can only accept px or unitless values, got #{$val}");
+
+    @return $val;
+  } @else {
+    $val: if(math.is-unitless($val), $val * 1px, $val);
+    // TODO: remove reference to global value - allow user to configure function
+    // with @use
+    $divisor: if(global-variable-exists(fs-base), $fs-base, $root-val);
+
     @return #{math.div($val, $divisor)}rem;
+  }
 }
