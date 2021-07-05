@@ -41,7 +41,7 @@ describe("dart-sass", () => {
       let result;
 
       try {
-        result = nodeSass.renderSync({ ...options, file });
+        result = dartSass.renderSync({ ...options, file });
       } catch (err) {
         result = err;
         console.error(result.formatted);
