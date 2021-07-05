@@ -1,4 +1,3 @@
-const nodeSass = require("node-sass");
 const dartSass = require("sass");
 const path = require("path");
 
@@ -20,7 +19,6 @@ const entryPoints = [
 
 describe.each`
   name          | preprocessor
-  ${"nodeSass"} | ${nodeSass}
   ${"dartSass"} | ${dartSass}
 `(`compiling with $name`, ({ preprocessor }) => {
   entryPoints.map((f) => {
