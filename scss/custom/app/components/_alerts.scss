@@ -15,7 +15,7 @@ $alert-types: success, danger, error, info;
   }
 
   .alert--success {
-    color: $clr-ntrl-min;
-    border-color: $clr-success-dk
+    color: var(--struct-clr-ntrl-min);
+    border-color: var(--struct-clr-success);
   }
 }

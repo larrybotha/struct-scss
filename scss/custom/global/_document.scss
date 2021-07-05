@@ -6,9 +6,14 @@
  * html
  */
 :root {
-  --s-clr-primary-dk: #{$clr-primary-dk};
-  --s-clr-primary: #{$clr-primary};
-  --s-clr-primary-lt: #{$clr-primary-lt};
+  --struct-clr-base: #{$clr-base};
+
+  --struct-clr-ntrl-min: #{$clr-ntrl-min};
+  --struct-clr-ntrl-max: #{$clr-ntrl-max};
+
+  --struct-clr-primary-dk: #{$clr-primary-dk};
+  --struct-clr-primary: #{$clr-primary};
+  --struct-clr-primary-lt: #{$clr-primary-lt};
 }
 
 

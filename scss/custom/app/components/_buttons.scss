@@ -24,8 +24,8 @@ button { @include u-link-transition;}
   //@extend %btn;
 
   //@include u-bgc--link-states(
-    //$clr-primary,
-    //$clr-primary-lt,
-    //$clr-primary-dk
+    //var(--struct-clr-primary),
+    //var(--struct-clr-primary-lt),
+    //var(--struct-clr-primary-dk)
   //);
 //}

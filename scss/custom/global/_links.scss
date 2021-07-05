@@ -4,9 +4,9 @@
 a {
   @include u-link-transition;
   @include u-fc--link-states(
-    var(--s-clr-primary),
-    var(--s-clr-primary-lt),
-    var(--s-clr-primary-dk)
+    var(--struct-clr-primary),
+    var(--struct-clr-primary-lt),
+    var(--struct-clr-primary-dk)
   );
   text-decoration: none;
 
