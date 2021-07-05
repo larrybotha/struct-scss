@@ -29,4 +29,5 @@
   $divisor: if(global-variable-exists(fs-base), $fs-base, $root-val);
 
   @return $val / $divisor + rem;
+    @return #{math.div($val, $divisor)}rem;
 }
