@@ -1,0 +1,39 @@
+/*------------------------------------*\
+    FOCUS UTILITIES
+\*------------------------------------*/
+/**
+ * Allow for focusing content only when interacted with with the keyboard
+ *
+ * e.g.
+ *
+ * # sass
+ * button {
+ *  @include keyboard-focus-only() {
+ *    background-color: red;
+ *  }
+ * }
+ *
+ * # css output for supporting browsers
+ * button:focus-visible {
+ *   background-color: red;
+ * }
+ *
+ * # css output for non-supporting browsers
+ * button:focus {
+ *   background-color: red;
+ * }
+ */
+@mixin keyboard-focus-only() {
+  @supports selector(:focus-visible) {
+    &:focus-visible {
+      @content;
+    }
+  }
+
+  @supports not selector(:focus-visible) {
+    &:focus {
+      @content;
+    }
+  }
+}
+
