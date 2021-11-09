@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 /*------------------------------------*\
-  GLOBAL STYLES
+  GLOBAL ONLY STYLES ENTRYPOINT
 \*------------------------------------*/
 /**
  * Import only global styles
@@ -15,20 +15,18 @@
  */
 
 /**
- *  import functions and mixins
- */
-@import "support";
-
-/**
  * Import resets
- *
- * normalize.css requires `includePaths: ['node_modules/normalize.css']` in your Sass config
  */
-@import "normalize";
-@import "core/reset";
+@import "reset";
 
 /**
- * import global styles
+ *  Import functions and mixins
  */
-@import "core/global/index";
-@import "custom/global/index";
+@import "core/support";
+@import "custom/support";
+
+/**
+ * Import global styles
+ */
+@import "core/global";
+@import "custom/global";

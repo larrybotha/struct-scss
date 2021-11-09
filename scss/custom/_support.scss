@@ -1,0 +1,10 @@
+/*------------------------------------*\
+  CUSTOM SUPPORT SCSS
+\*------------------------------------*/
+/**
+ * This file should be imported after any core support files to ensure
+ * that variables, mixins, and functions defined here override core
+ * equivalents
+ */
+@import "variables";
+@import "tools";
