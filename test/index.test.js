@@ -3,12 +3,12 @@ const path = require("path");
 
 const options = {
   ...require("./options"),
-  file: path.resolve(__dirname, "../scss/global.scss"),
+  file: path.resolve(__dirname, "../scss/global-only.scss"),
 };
 const entryPoints = [
   "style.scss",
-  "global.scss",
-  "_support.scss",
+  "global-only.scss",
+  "_reset.scss",
   "core/_global.scss",
   "core/_support.scss",
   "core/_reset.scss",
