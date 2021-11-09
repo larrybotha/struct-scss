@@ -1,12 +1,20 @@
+@charset "UTF-8";
+
+/*------------------------------------*\
+  STYLES ENTRYPOINT
+\*------------------------------------*/
 /**
- * Import everything:
- *
- * - tools
- * - global styles
- * - app styles
- *
- * This will be the most common entry point for your app's styles.
+ * Import resets
  */
-@import "support";
-@import "global";
-@import "custom/app/index";
+@import "reset";
+
+/**
+ * Import core support files and globals
+ */
+@import "core/support";
+@import "core/global";
+
+/**
+ * Import custom styles to override core
+ */
+@import "custom";

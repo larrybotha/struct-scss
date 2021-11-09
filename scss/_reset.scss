@@ -1,0 +1,11 @@
+/*------------------------------------*\
+  RESET STYLES
+\*------------------------------------*/
+/**
+ * Import resets
+ *
+ * normalize.css requires `includePaths: ['node_modules/normalize.css']` in
+ * your Sass config
+ */
+@import "normalize";
+@import "core/reset";
