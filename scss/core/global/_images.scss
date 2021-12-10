@@ -9,8 +9,11 @@
  * width:; and height:; above apply
  */
 img, embed, object, video {
-  height: auto;
   max-width: 100%;
+
+  &:not([height]) {
+    height: auto;
+  }
 }
 
 /**
