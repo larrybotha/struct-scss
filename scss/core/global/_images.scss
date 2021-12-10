@@ -10,10 +10,7 @@
  */
 img, embed, object, video {
   max-width: 100%;
-
-  &:not([height]) {
-    height: auto;
-  }
+  height: auto;
 }
 
 /**
