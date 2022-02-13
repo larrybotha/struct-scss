@@ -15,14 +15,10 @@
  */
 
 /**
- * Import resets
- */
-@import "reset";
-
-/**
  *  Import functions and mixins
  */
 @import "core/support";
+@import "reset";
 @import "custom/support";
 
 /**
