@@ -4,14 +4,10 @@
   STYLES ENTRYPOINT
 \*------------------------------------*/
 /**
- * Import resets
- */
-@import "reset";
-
-/**
  * Import core support files and globals
  */
 @import "core/support";
+@import "reset";
 @import "core/global";
 
 /**
