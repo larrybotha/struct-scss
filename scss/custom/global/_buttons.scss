@@ -1,0 +1,9 @@
+/*------------------------------------*\
+    BUTTONS
+\*------------------------------------*/
+buttons {
+  @include keyboard-focus-only() {
+    outline: 1px dotted;
+    outline-color: inherit;
+  }
+}

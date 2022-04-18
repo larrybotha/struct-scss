@@ -10,8 +10,8 @@ a {
   );
   text-decoration: none;
 
-  &,
-  &:hover { outline: 0;}
-
-  &:visited {}
+  @include keyboard-focus-only() {
+    outline: 1px dotted;
+    outline-color: inherit;
+  }
 }

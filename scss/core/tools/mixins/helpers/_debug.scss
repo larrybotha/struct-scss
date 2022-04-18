@@ -19,7 +19,7 @@
    * Are there any empty elements in your page?
    */
   :empty{
-    outline:5px solid yellow;
+    outline: 5px solid yellow;
   }
 
 
@@ -28,13 +28,13 @@
    * double-checked, no `alt` is bad and is flagged red.
    */
   img{
-    outline:5px solid red;
+    outline: 5px solid red;
   }
   img[alt]{
-    outline:none;
+    outline: none;
   }
   img[alt=""]{
-    outline:5px solid yellow;
+    outline: 5px solid yellow;
   }
 
 
@@ -43,10 +43,10 @@
    * without are never invalid but it’s a good idea to check.
    */
   a{
-    outline:5px solid yellow;
+    outline: 5px solid yellow;
   }
   a[title]{
-    outline:none;
+    outline: none;
   }
 
 
@@ -55,7 +55,7 @@
    */
   a[href="#"],
   a[href*="javascript"]{
-    outline:5px solid yellow;
+    outline: 5px solid yellow;
   }
 
 
@@ -63,7 +63,7 @@
    * The `target` attribute ain’t too nice...
    */
   a[target]{
-    outline:5px solid yellow;
+    outline: 5px solid yellow;
   }
 
 
@@ -72,8 +72,8 @@
    */
   ul,
   ol{
-    > *:not(li){
-      outline:5px solid red;
+    > *: not(li){
+      outline: 5px solid red;
     }
   }
 
@@ -82,10 +82,10 @@
    * It’s always nice to give `th`s `scope` attributes.
    */
   th{
-    outline:5px solid yellow;
+    outline: 5px solid yellow;
   }
   th[scope]{
-    outline:none;
+    outline: none;
   }
 
 
@@ -93,7 +93,7 @@
    * `tr`s as children of `table`s ain’t great, did you need a `thead`/`tbody`?
    */
   table > tr{
-    outline:5px solid yellow;
+    outline: 5px solid yellow;
   }
 
 
@@ -101,7 +101,7 @@
    * `tfoot` needs to come *before* `tbody`.
    */
   tbody + tfoot{
-    outline:5px solid yellow;
+    outline: 5px solid yellow;
   }
 
 
@@ -109,10 +109,10 @@
    * Forms require `action` attributes
    */
   form{
-    outline:5px solid red;
+    outline: 5px solid red;
   }
   form[action]{
-    outline:none;
+    outline: none;
   }
 
 
@@ -123,19 +123,19 @@
    */
   textarea,
   input{
-    outline:5px solid red;
+    outline: 5px solid red;
   }
   input[type]{
-    outline:none;
+    outline: none;
   }
   textarea[rows][cols]{
-    outline:none;
+    outline: none;
   }
   input[type=submit]{
-    outline:5px solid red;
+    outline: 5px solid red;
   }
   input[type=submit][value]{
-    outline:none;
+    outline: none;
   }
 
 
@@ -143,7 +143,7 @@
    * Avoid inline styles where possible.
    */
   [style]{
-    outline:5px solid yellow;
+    outline: 5px solid yellow;
   }
 
 
@@ -151,7 +151,7 @@
    * You should avoid using IDs for CSS, is this doing any styling?
    */
   [id]{
-    outline:5px solid yellow;
+    outline: 5px solid yellow;
   }
 
 
@@ -162,6 +162,6 @@
   .grid-wrapper > :not(.grid),
   .gw--rev > :not(.g),
   .grid-wrapper--rev > :not(.grid){
-    outline:5px solid red;
+    outline: 5px solid red;
   }
 }

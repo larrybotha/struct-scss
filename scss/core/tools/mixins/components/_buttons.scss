@@ -17,8 +17,7 @@
 	white-space: nowrap;
   width: auto;
 
-	&:active,
-	&:focus { outline: none;}
+	&:active { outline: none;}
 
   &[type="button"] { -webkit-appearance: none;}
 }
