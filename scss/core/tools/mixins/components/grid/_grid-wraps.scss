@@ -84,19 +84,6 @@
 }
 
 
-@mixin grid-wrap--no-gutter($classname: $grid-wrap-classname) {
-  /**
-  * gutterless grids have all the properties of regular grids, minus any spacing.
-  */
-  .#{$classname}--no-gutter {
-    @extend %grid-wrap;
-    margin-inline-start: 0;
-
-    & > %grid__item { padding-inline-start: 0;}
-  }
-}
-
-
 @mixin grid-wrap--center($classname: $grid-wrap-classname) {
   /**
   * centered grids align grid items centrally without needing to use push or pull
@@ -182,4 +169,11 @@
 
     & > %grid__item { padding-inline-start: $size;}
   }
+}
+
+@mixin grid-wrap--no-gutter($classname: $grid-wrap-classname) {
+  /**
+   * gutterless grids have all the properties of regular grids, minus any spacing.
+   */
+  @include grid-wrap-gutter-modifier('no-gutter', 0);
 }
