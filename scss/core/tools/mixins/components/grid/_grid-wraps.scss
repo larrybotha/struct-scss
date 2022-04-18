@@ -46,21 +46,21 @@
   }
 }
 
-@mixin create-grid-wrap-modifier($modifier, $classname: $grid-wrap-classname) {
+@mixin grid-wrap($classname: $grid-wrap-classname) {
+  .#{$classname} { @extend %grid-wrap;}
+}
+
+@mixin grid-wrap-modifier($modifier, $classname: $grid-wrap-classname) {
   .#{$classname}--#{$modifier} {
     @content;
   }
-}
-
-@mixin grid-wrap($classname: $grid-wrap-classname) {
-  .#{$classname} { @extend %grid-wrap;}
 }
 
 @mixin grid-wrap--reverse($classname: $grid-wrap-classname) {
   /**
   * reversed grids
   */
-  .#{$classname}--reverse {
+  @include grid-wrap-modifier(reverse) {
     @extend %grid-wrap;
 
     @if $use-legacy-grid {
@@ -84,25 +84,12 @@
 }
 
 
-@mixin grid-wrap--no-gutter($classname: $grid-wrap-classname) {
-  /**
-  * gutterless grids have all the properties of regular grids, minus any spacing.
-  */
-  .#{$classname}--no-gutter {
-    @extend %grid-wrap;
-    margin-inline-start: 0;
-
-    & > %grid__item { padding-inline-start: 0;}
-  }
-}
-
-
 @mixin grid-wrap--center($classname: $grid-wrap-classname) {
   /**
   * centered grids align grid items centrally without needing to use push or pull
   * classes.
   */
-  .#{$classname}--center {
+  @include grid-wrap-modifier(center) {
     @extend %grid-wrap;
 
     @if $use-legacy-grid {
@@ -123,7 +110,7 @@
   /**
    * inline-end aligned grids (right-aligned in ltr layouts, else left-aligned)
    */
-  .#{$classname}--inline-end {
+  @include grid-wrap-modifier(inline-end) {
     @extend %grid-wrap;
 
     @if $use-legacy-grid {
@@ -145,7 +132,7 @@
   /**
    * middle aligned grids
    */
-  .#{$classname}--middle {
+  @include grid-wrap-modifier(middle) {
     @extend %grid-wrap;
 
     @if $use-flexbox-grid { align-items: center;}
@@ -163,7 +150,7 @@
   /**
    * bottom aligned grids
    */
-  .#{$classname}--block-end {
+  @include grid-wrap-modifier(block-end) {
     @extend %grid-wrap;
 
     @if $use-flexbox-grid { align-items: flex-end;}
@@ -175,3 +162,21 @@
     }
   }
 }
+
+
+@mixin grid-wrap-gutter-modifier($modifier, $size, $classname: $grid-wrap-classname) {
+  @include grid-wrap-modifier($modifier, $classname: $grid-wrap-classname) {
+    @extend %grid-wrap;
+    margin-inline-start: -#{$size};
+
+    & > %grid__item { padding-inline-start: $size;}
+  }
+}
+
+@mixin grid-wrap--no-gutter($classname: $grid-wrap-classname) {
+  /**
+   * gutterless grids have all the properties of regular grids, minus any spacing.
+   */
+  @include grid-wrap-gutter-modifier('no-gutter', 0);
+}
+
