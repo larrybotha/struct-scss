@@ -1,6 +1,7 @@
 /*------------------------------------*\
     WRAPS
 \*------------------------------------*/
+@use "sass:map";
 /**
  * Generates classes for wraps defined in mixins/components/layout/_wraps.scss
  * e.g.
@@ -9,16 +10,19 @@
   .wrap { ... }
   .wrap--small { ... }
  */
-@each $wrap-name, $wrap-width in $wrap-widths {
-  @if $wrap-name == 'base' {
-    .wrap {
-      @include wrap-width($wrap-name);
-      @include wrap-base;
-    }
-  } @else {
-    .wrap--#{$wrap-name} {
-      @include wrap-width($wrap-name);
-      @include wrap-base;
-    }
+
+@each $config in $wrap-base-configs {
+  .wrap {
+    @include wrap-base;
+    max-width: map-get($config, 'width');
+  }
+}
+
+@each $config in $wrap-modifier-configs {
+  $name: map-get($config, 'name');
+  $width: map-get($config, 'width');
+
+  .wrap--#{$name} {
+    max-width: $width;
   }
 }
