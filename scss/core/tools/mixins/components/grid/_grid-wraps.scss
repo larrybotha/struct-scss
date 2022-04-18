@@ -175,3 +175,11 @@
     }
   }
 }
+@mixin grid-wrap-gutter-modifier($modifier, $size, $classname: $grid-wrap-classname) {
+  @include grid-wrap-modifier($modifier, $classname: $grid-wrap-classname) {
+    @extend %grid-wrap;
+    margin-inline-start: -#{$size};
+
+    & > %grid__item { padding-inline-start: $size;}
+  }
+}
