@@ -6,7 +6,7 @@
  * As per: csswizardry.com/2011/10/reset-restarted
  */
 
-@if variable-exists("global-border-box") and $global-border-box == true {
+@if global-variable-exists("global-border-box") and $global-border-box == true {
   /**
    * Let’s make the box model all nice, shall we...?
    */
