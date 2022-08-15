@@ -4,11 +4,15 @@
   STYLES ENTRYPOINT
 \*------------------------------------*/
 /**
- * Import core support files and globals
+ * Import core files, overriding each with custom styles
  */
 @import "core/support";
+@import "custom/support";
+
 @import "reset";
+
 @import "core/global";
+@import "custom/global";
 
 /**
  * Import custom styles to override core
