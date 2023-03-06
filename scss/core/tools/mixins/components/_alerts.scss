@@ -6,8 +6,8 @@
   padding: px-to-rem($spacing-scalar * $fs-base);
 
 
-  & p:last-child,
-  & ul:last-child { margin-block-end: 0;}
+  & > p:last-child,
+  & > ul:last-child { margin-block-end: 0;}
 }
 
   @mixin f8-alert__close {
